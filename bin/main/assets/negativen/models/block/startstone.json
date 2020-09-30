@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/end_stone",
+    "particle": "negativen:blocks/end_stone"
+  }
+}

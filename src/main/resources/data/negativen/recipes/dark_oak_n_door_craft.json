@@ -1,0 +1,33 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    "45"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:darkoakplanks_n"
+    },
+    "1": {
+      "item": "negativen:darkoakplanks_n"
+    },
+    "2": {
+      "item": "negativen:darkoakplanks_n"
+    },
+    "3": {
+      "item": "negativen:darkoakplanks_n"
+    },
+    "4": {
+      "item": "negativen:darkoakplanks_n"
+    },
+    "5": {
+      "item": "negativen:darkoakplanks_n"
+    }
+  },
+  "result": {
+    "item": "negativen:dark_oak_n_door",
+    "count": 3
+  }
+}

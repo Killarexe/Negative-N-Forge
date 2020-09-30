@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/warped_stem_n_top",
+    "up": "negativen:blocks/warped_stem_n_top",
+    "north": "negativen:blocks/warped_n_stem",
+    "east": "negativen:blocks/warped_n_stem",
+    "south": "negativen:blocks/warped_n_stem",
+    "west": "negativen:blocks/warped_n_stem",
+    "particle": "negativen:blocks/warped_stem_n_top"
+  }
+}

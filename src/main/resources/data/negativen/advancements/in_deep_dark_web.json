@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "negativen:netherite_n_scrap"
+    },
+    "title": {
+      "translate": "advancements.in_deep_dark_web.title"
+    },
+    "description": {
+      "translate": "advancements.in_deep_dark_web.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "in_deep_dark_web": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "negativen:netherite_n_scrap",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 3
+  },
+  "parent": "negativen:inverseinfini"
+}

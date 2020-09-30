@@ -1,0 +1,11 @@
+{
+  "_fv": 10,
+  "_type": "tab",
+  "definition": {
+    "name": "Negative-N Weapons",
+    "icon": {
+      "value": "CUSTOM:EpeeenDiamantN"
+    },
+    "showSearch": false
+  }
+}

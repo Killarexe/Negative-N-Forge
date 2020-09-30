@@ -1,0 +1,33 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:spruce_planks_n"
+    },
+    "3": {
+      "item": "negativen:spruce_planks_n"
+    },
+    "4": {
+      "item": "negativen:spruce_planks_n"
+    },
+    "6": {
+      "item": "negativen:spruce_planks_n"
+    },
+    "7": {
+      "item": "negativen:spruce_planks_n"
+    },
+    "8": {
+      "item": "negativen:spruce_planks_n"
+    }
+  },
+  "result": {
+    "item": "negativen:spruce_stairs_n",
+    "count": 4
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:diamantinverse"
+    },
+    "1": {
+      "item": "negativen:diamantinverse"
+    },
+    "2": {
+      "item": "negativen:diamantinverse"
+    },
+    "3": {
+      "item": "negativen:diamantinverse"
+    }
+  },
+  "result": {
+    "item": "negativen:portalblock",
+    "count": 2
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "negativen:oak_logn",
+    "negativen:acacialogn",
+    "negativen:birchlogn",
+    "negativen:dark_oak_log_n",
+    "negativen:jungle_log_n",
+    "negativen:spruce_log_n",
+    "negativen:oak_log_n_stripped",
+    "negativen:acacia_log_n_stripped",
+    "negativen:birch_log_n_stripped",
+    "negativen:dark_oak_log_n_stripped",
+    "negativen:jungle_log_n_stripped",
+    "negativen:spruce_log_n_stripped",
+    "negativen:crimson_n_stem",
+    "negativen:warped_n_stem"
+  ]
+}

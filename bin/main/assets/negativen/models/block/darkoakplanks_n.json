@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/dark_oak_planksn",
+    "particle": "negativen:blocks/dark_oak_planksn"
+  }
+}

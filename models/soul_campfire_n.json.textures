@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "lit_log": "soul_campfire_n_log_lit",
+        "log": "campfire_n_log",
+        "fire": "soul_campfire_n_fire"
+      },
+      "name": "default"
+    }
+  }
+}

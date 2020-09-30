@@ -1,0 +1,37 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:PlanchedeboisN"
+      },
+      {
+        "value": "CUSTOM:Acaciaplanksn"
+      },
+      {
+        "value": "CUSTOM:Birchplanksn"
+      },
+      {
+        "value": "CUSTOM:DarkoakplanksN"
+      },
+      {
+        "value": "CUSTOM:JunglePlanksN"
+      },
+      {
+        "value": "CUSTOM:SprucePlanksN"
+      },
+      {
+        "value": "CUSTOM:CrimsonPlanksN"
+      },
+      {
+        "value": "CUSTOM:WarpedPlanksN"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "tag_planksn",
+    "namespace": "minecraft"
+  }
+}

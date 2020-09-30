@@ -1,0 +1,37 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:diamantinverse"
+    },
+    {
+      "item": "negativen:diamantinverse"
+    },
+    {
+      "item": "negativen:diamantinverse"
+    },
+    {
+      "item": "negativen:diamantinverse"
+    },
+    {
+      "item": "negativen:diamantinverse"
+    },
+    {
+      "item": "negativen:diamantinverse"
+    },
+    {
+      "item": "negativen:diamantinverse"
+    },
+    {
+      "item": "negativen:diamantinverse"
+    },
+    {
+      "item": "negativen:diamantinverse"
+    }
+  ],
+  "result": {
+    "item": "negativen:blockdediamantinverse",
+    "count": 1
+  }
+}

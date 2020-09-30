@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "end-framen_side",
+        "1": "end-framen_top",
+        "2": "end_stone"
+      },
+      "name": "default"
+    }
+  }
+}

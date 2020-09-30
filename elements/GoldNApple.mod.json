@@ -1,0 +1,25 @@
+{
+  "_fv": 10,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "golden_n_apple",
+    "customModelName": "Normal",
+    "name": "Gold-N Apple",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNFood"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 20,
+    "saturation": 1.0,
+    "eatingSpeed": 64,
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": true,
+    "onEaten": {
+      "name": "GoldNAppleFoodEaten"
+    }
+  }
+}

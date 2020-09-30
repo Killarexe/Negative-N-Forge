@@ -1,0 +1,8 @@
+{
+  "parent": "negativen:custom/create",
+  "textures": {
+    "all": "negativen:blocks/barrel_side",
+    "particle": "negativen:blocks/barrel_side",
+    "0": "negativen:blocks/barrel_side"
+  }
+}

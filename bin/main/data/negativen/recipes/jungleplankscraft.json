@@ -1,0 +1,13 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:jungle_log_n"
+    }
+  ],
+  "result": {
+    "item": "negativen:jungle_planks_n",
+    "count": 4
+  }
+}

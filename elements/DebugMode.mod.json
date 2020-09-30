@@ -1,0 +1,12 @@
+{
+  "_fv": 10,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "F10",
+    "keyBindingName": "Debug Mode",
+    "keyBindingCategoryKey": "negativen",
+    "onKeyPressed": {
+      "name": "DebugModeOnKeyPressed"
+    }
+  }
+}

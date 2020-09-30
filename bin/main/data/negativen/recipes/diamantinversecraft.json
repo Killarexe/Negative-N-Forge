@@ -1,0 +1,13 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:diamond_block_n"
+    }
+  ],
+  "result": {
+    "item": "negativen:diamond_n",
+    "count": 9
+  }
+}

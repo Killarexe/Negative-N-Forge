@@ -1,0 +1,24 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:iron_ningot"
+    },
+    "1": {
+      "item": "negativen:sickn"
+    },
+    "2": {
+      "item": "negativen:sickn"
+    }
+  },
+  "result": {
+    "item": "negativen:iron_nshovel",
+    "count": 1
+  }
+}

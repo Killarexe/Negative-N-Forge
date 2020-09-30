@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "negativen:blocks/acacia_planksn",
+    "particle": "negativen:blocks/acacia_planksn"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/beehive_n_end",
+    "up": "negativen:blocks/beehive_n_end",
+    "north": "negativen:blocks/bee_n_hive_front_honey",
+    "east": "negativen:blocks/beehive_n_side",
+    "south": "negativen:blocks/beehive_n_side",
+    "west": "negativen:blocks/beehive_n_side",
+    "particle": "negativen:blocks/beehive_n_end"
+  }
+}

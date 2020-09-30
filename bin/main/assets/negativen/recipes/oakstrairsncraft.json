@@ -1,0 +1,33 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:planksn"
+    },
+    "3": {
+      "item": "negativen:planksn"
+    },
+    "4": {
+      "item": "negativen:planksn"
+    },
+    "6": {
+      "item": "negativen:planksn"
+    },
+    "7": {
+      "item": "negativen:planksn"
+    },
+    "8": {
+      "item": "negativen:planksn"
+    }
+  },
+  "result": {
+    "item": "negativen:oakstrairsn",
+    "count": 1
+  }
+}

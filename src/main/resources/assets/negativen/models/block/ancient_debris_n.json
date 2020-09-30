@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/ancient_debris_n_top",
+    "up": "negativen:blocks/ancient_debris_n_top",
+    "north": "negativen:blocks/ancient_debris_n_side",
+    "east": "negativen:blocks/ancient_debris_n_side",
+    "south": "negativen:blocks/ancient_debris_n_side",
+    "west": "negativen:blocks/ancient_debris_n_side",
+    "particle": "negativen:blocks/ancient_debris_n_top"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "crop": "wheatn_stage0"
+      },
+      "name": "default"
+    },
+    "stage1": {
+      "map": {
+        "crop": "wheatn_stage1"
+      },
+      "name": "stage1"
+    },
+    "stage2": {
+      "map": {
+        "crop": "wheatn_stage2"
+      },
+      "name": "stage2"
+    },
+    "stage3": {
+      "map": {
+        "crop": "wheatn_stage3"
+      },
+      "name": "stage3"
+    },
+    "stage4": {
+      "map": {
+        "crop": "wheatn_stage4"
+      },
+      "name": "stage4"
+    },
+    "stage5": {
+      "map": {
+        "crop": "wheatn_stage5"
+      },
+      "name": "stage5"
+    },
+    "stage6": {
+      "map": {
+        "crop": "wheatn_stage6"
+      },
+      "name": "stage6"
+    },
+    "stage7": {
+      "map": {
+        "crop": "wheatn_stage7"
+      },
+      "name": "stage7"
+    }
+  }
+}

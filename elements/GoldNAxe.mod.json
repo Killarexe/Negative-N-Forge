@@ -1,0 +1,33 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "golden_n_axe",
+    "customModelName": "Normal",
+    "name": "Gold-N Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 4,
+    "efficiency": 20.0,
+    "attackSpeed": 1.0,
+    "enchantability": 44,
+    "damageVsEntity": 6.0,
+    "usageCount": 55,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:GoldNIngot"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "PoisonusProcced"
+    }
+  }
+}

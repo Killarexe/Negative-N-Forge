@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "negativen:stonen",
+    "negativen:andesite_n",
+    "negativen:granite_n",
+    "negativen:diorite_n",
+    "negativen:classic_stone",
+    "negativen:classic_stone_n"
+  ]
+}

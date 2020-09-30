@@ -1,0 +1,22 @@
+{
+  "_fv": 10,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "honey_n_bottle",
+    "customModelName": "Normal",
+    "name": "Honey-N Bottle",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNRessoures"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 8,
+    "saturation": 0.4,
+    "eatingSpeed": 42,
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "drink",
+    "hasGlow": true
+  }
+}

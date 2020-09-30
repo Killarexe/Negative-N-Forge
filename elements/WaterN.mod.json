@@ -1,0 +1,21 @@
+{
+  "_fv": 10,
+  "_type": "fluid",
+  "definition": {
+    "name": "WaterN",
+    "textureStill": "ater",
+    "textureFlowing": "wn",
+    "luminosity": 5,
+    "density": 1000,
+    "viscosity": 1000,
+    "isGas": false,
+    "type": "LAVA",
+    "generateBucket": true,
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "spawnWorldTypes": [
+      "CUSTOM:Nega"
+    ]
+  }
+}

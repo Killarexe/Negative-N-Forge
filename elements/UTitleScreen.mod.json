@@ -1,0 +1,17 @@
+{
+  "_fv": 10,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "ester_egg",
+    "name": "Easter egg",
+    "description": "Easter egg",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "music": {
+      "value": "CUSTOM:easter_egg"
+    },
+    "specialInfo": [],
+    "hasGlow": true
+  }
+}

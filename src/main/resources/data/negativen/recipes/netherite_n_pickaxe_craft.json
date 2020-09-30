@@ -1,0 +1,30 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:netherite_n"
+    },
+    "1": {
+      "item": "negativen:netherite_n"
+    },
+    "2": {
+      "item": "negativen:netherite_n"
+    },
+    "4": {
+      "item": "negativen:dimensionstick"
+    },
+    "7": {
+      "item": "negativen:stick_n"
+    }
+  },
+  "result": {
+    "item": "negativen:netherite_n_pickaxe",
+    "count": 1
+  }
+}

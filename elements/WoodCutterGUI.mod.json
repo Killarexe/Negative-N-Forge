@@ -1,0 +1,115 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 420,
+    "height": 400,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 228,
+          "y": 132
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 570,
+          "y": 186
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "WoodCutter (StoneCutter-N)",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "WoodCutter (StoneCutter-N)",
+          "x": 228,
+          "y": 42
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 570,
+          "y": 132
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 570,
+          "y": 78
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Cut/Stripped",
+          "onClick": {
+            "name": "CutProcced"
+          },
+          "width": 240,
+          "height": 40,
+          "name": "Cut/Stripped",
+          "x": 318,
+          "y": 186
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Stairs",
+          "onClick": {
+            "name": "StairsProcced"
+          },
+          "width": 120,
+          "height": 40,
+          "name": "Stairs",
+          "x": 444,
+          "y": 132
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Fence",
+          "onClick": {
+            "name": "FenceProcced"
+          },
+          "width": 100,
+          "height": 40,
+          "name": "Fence",
+          "x": 462,
+          "y": 78
+        }
+      }
+    ]
+  }
+}

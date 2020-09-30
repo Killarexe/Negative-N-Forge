@@ -1,0 +1,30 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "netherite_n_shovel",
+    "customModelName": "Normal",
+    "name": "Netherite-N Spade",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 9,
+    "efficiency": 24.0,
+    "attackSpeed": 1.0,
+    "enchantability": 30,
+    "damageVsEntity": 4.0,
+    "usageCount": 4683,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:NetheriteN"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

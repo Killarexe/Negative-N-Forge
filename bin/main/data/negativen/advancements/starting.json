@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "negativen:starteye"
+    },
+    "title": {
+      "translate": "advancements.starting.title"
+    },
+    "description": {
+      "translate": "advancements.starting.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "starting": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:start"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "negativen:waterlava"
+}

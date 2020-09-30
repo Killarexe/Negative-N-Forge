@@ -1,0 +1,21 @@
+{
+  "_fv": 10,
+  "_type": "fluid",
+  "definition": {
+    "name": "ClassicWater",
+    "textureStill": "water_c",
+    "textureFlowing": "water_c",
+    "luminosity": 0,
+    "density": 1000,
+    "viscosity": 1000,
+    "isGas": false,
+    "type": "WATER",
+    "generateBucket": false,
+    "creativeTab": {
+      "value": "CUSTOM:ClassicBlocks"
+    },
+    "spawnWorldTypes": [
+      "CUSTOM:ClassicDim"
+    ]
+  }
+}

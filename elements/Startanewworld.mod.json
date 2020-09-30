@@ -1,0 +1,7 @@
+{
+  "_fv": 10,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">player_log_in</field><next><block type=\"controls_if\"><mutation else=\"1\"/><value name=\"IF0\"><block type=\"entity_has_achievement\"><field name=\"achievement\">CUSTOM:WTNN</field><value name=\"entity\"><block type=\"entity_from_deps\"/></value></block></value><statement name=\"DO0\"><block type=\"entity_clearpotions\"><value name=\"entity\"><block type=\"entity_from_deps\"/></value></block></statement><statement name=\"ELSE\"><block type=\"entity_add_achievement\"><field name=\"achievement\">CUSTOM:WTNN</field><value name=\"entity\"><block type=\"entity_from_deps\"/></value><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"world_data_isremote\"/></value><statement name=\"DO0\"><block type=\"world_send_chat\"><value name=\"text\"><block type=\"text\"><field name=\"TEXT\">Hello and Thank You for download Negative-N 1.2</field></block></value><next><block type=\"world_send_chat\"><value name=\"text\"><block type=\"text\"><field name=\"TEXT\">If you want to see the Wiki: https://negativenmod.blogspot.com/p/welcome-to-negative-n-wiki.html</field></block></value></block></next></block></statement></block></next></block></statement></block></next></block></xml>"
+  }
+}

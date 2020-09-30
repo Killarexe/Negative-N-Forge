@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "item": "negativen:iron_ningot"
+    },
+    "title": {
+      "translate": "advancements.better_iron.title"
+    },
+    "description": {
+      "translate": "advancements.better_iron.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "better_iron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "negativen:iron_ningot",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "negativen:iron_noreblockrecipe",
+      "negativen:iron_nswordrecipe",
+      "negativen:iron_naxerecipe",
+      "negativen:iron_nswordrecipe",
+      "negativen:iron_nshovelrecipe",
+      "negativen:iron_nhoerecipe",
+      "negativen:iron_narmorhelmetrecipe",
+      "negativen:iron_narmorbodyrecipe",
+      "negativen:iron_narmorleggingsrecipe",
+      "negativen:iron_narmorbootsrecipe"
+    ]
+  },
+  "parent": "negativen:anewcoal"
+}

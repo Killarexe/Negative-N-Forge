@@ -1,0 +1,24 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:diamond_n"
+    },
+    "1": {
+      "item": "negativen:diamond_n"
+    },
+    "2": {
+      "item": "negativen:stick_n"
+    }
+  },
+  "result": {
+    "item": "negativen:diamond_n_sword",
+    "count": 1
+  }
+}

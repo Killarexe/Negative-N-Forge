@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "negativen:diamond_n"
+    },
+    "title": {
+      "translate": "advancements.inverseinfini.title"
+    },
+    "description": {
+      "translate": "advancements.inverseinfini.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "inverseinfini": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "negativen:diamond_n",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  },
+  "parent": "negativen:better_iron"
+}

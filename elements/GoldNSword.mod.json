@@ -1,0 +1,33 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "golden_n_sword",
+    "customModelName": "Normal",
+    "name": "Gold-N Sword",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNCombat"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 4,
+    "efficiency": 20.0,
+    "attackSpeed": 1.0,
+    "enchantability": 44,
+    "damageVsEntity": 2.0,
+    "usageCount": 64,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:GoldNIngot"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "PoisonusProcced"
+    }
+  }
+}

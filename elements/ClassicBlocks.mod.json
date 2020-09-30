@@ -1,0 +1,11 @@
+{
+  "_fv": 10,
+  "_type": "tab",
+  "definition": {
+    "name": "Classic Blocks",
+    "icon": {
+      "value": "CUSTOM:ClassicGrass"
+    },
+    "showSearch": false
+  }
+}

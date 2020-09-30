@@ -1,0 +1,74 @@
+{
+  "_fv": 10,
+  "_type": "dimension",
+  "definition": {
+    "portalFrame": {
+      "value": "CUSTOM:Portalblock"
+    },
+    "portalParticles": {
+      "value": "ENCHANTMENT_TABLE"
+    },
+    "portalLuminance": 1.0,
+    "portalSound": {
+      "value": "ambient.cave"
+    },
+    "igniterName": "Portal Igniter Tier 1",
+    "igniterTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "texture": "fint_nega",
+    "portalTexture": "ega_portal",
+    "enablePortal": true,
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:Negative"
+      },
+      {
+        "value": "CUSTOM:DesertN"
+      },
+      {
+        "value": "CUSTOM:OakNforest"
+      },
+      {
+        "value": "CUSTOM:BirchNForest"
+      },
+      {
+        "value": "CUSTOM:PlainsN"
+      },
+      {
+        "value": "CUSTOM:DarkOakNForest"
+      },
+      {
+        "value": "CUSTOM:JungleN"
+      },
+      {
+        "value": "CUSTOM:SpruceForestN"
+      },
+      {
+        "value": "CUSTOM:ClassicBiomeN"
+      },
+      {
+        "value": "CUSTOM:MontainsN"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "CUSTOM:StoneN"
+    },
+    "fluidBlock": {
+      "value": "CUSTOM:WaterN"
+    },
+    "airColor": {
+      "value": -16751002,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": false,
+    "hasWeather": false,
+    "isDark": true,
+    "doesWaterVaporize": true,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": true,
+    "imitateOverworldBehaviour": false
+  }
+}

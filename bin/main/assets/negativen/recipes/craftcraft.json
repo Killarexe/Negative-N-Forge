@@ -1,0 +1,26 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:planksn"
+    },
+    "1": {
+      "item": "negativen:planksn"
+    },
+    "2": {
+      "item": "negativen:planksn"
+    },
+    "3": {
+      "item": "negativen:planksn"
+    }
+  },
+  "result": {
+    "item": "minecraft:crafting_table",
+    "count": 1
+  }
+}

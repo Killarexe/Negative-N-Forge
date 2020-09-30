@@ -1,0 +1,13 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:acacialogn"
+    }
+  ],
+  "result": {
+    "item": "negativen:acaciaplanksn",
+    "count": 4
+  }
+}

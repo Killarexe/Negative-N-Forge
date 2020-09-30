@@ -1,0 +1,33 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    "45"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:birchplanksn"
+    },
+    "1": {
+      "item": "negativen:birchplanksn"
+    },
+    "2": {
+      "item": "negativen:birchplanksn"
+    },
+    "3": {
+      "item": "negativen:birchplanksn"
+    },
+    "4": {
+      "item": "negativen:birchplanksn"
+    },
+    "5": {
+      "item": "negativen:birchplanksn"
+    }
+  },
+  "result": {
+    "item": "negativen:birch_n_door",
+    "count": 3
+  }
+}

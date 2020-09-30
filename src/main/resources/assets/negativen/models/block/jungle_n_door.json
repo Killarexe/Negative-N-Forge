@@ -1,0 +1,9 @@
+{
+  "parent": "negativen:custom/jungle_n_door",
+  "textures": {
+    "all": "negativen:blocks/jungle_n_door_top",
+    "particle": "negativen:blocks/jungle_n_door_top",
+    "0": "negativen:blocks/jungle_n_door_bottom",
+    "1": "negativen:blocks/jungle_n_door_top"
+  }
+}

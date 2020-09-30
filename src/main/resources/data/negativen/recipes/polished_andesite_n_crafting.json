@@ -1,0 +1,26 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:andesite_n"
+    },
+    "1": {
+      "item": "negativen:andesite_n"
+    },
+    "2": {
+      "item": "negativen:andesite_n"
+    },
+    "3": {
+      "item": "negativen:andesite_n"
+    }
+  },
+  "result": {
+    "item": "negativen:polished_andesite_n",
+    "count": 4
+  }
+}

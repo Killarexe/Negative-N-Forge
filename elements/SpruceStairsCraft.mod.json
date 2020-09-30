@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:SprucePlanksN"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SprucePlanksN"
+      },
+      {
+        "value": "CUSTOM:SprucePlanksN"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SprucePlanksN"
+      },
+      {
+        "value": "CUSTOM:SprucePlanksN"
+      },
+      {
+        "value": "CUSTOM:SprucePlanksN"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SpruceStrairsN"
+    },
+    "name": "spruce_stairs_craft",
+    "namespace": "mod"
+  }
+}

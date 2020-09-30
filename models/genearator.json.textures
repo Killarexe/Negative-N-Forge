@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "grindstone_round",
+        "1": "pied"
+      },
+      "name": "default"
+    }
+  }
+}

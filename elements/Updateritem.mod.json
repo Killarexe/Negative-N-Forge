@@ -1,0 +1,28 @@
+{
+  "_fv": 10,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "upgrade",
+    "customModelName": "Normal",
+    "name": "Updater",
+    "creativeTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "stackSize": 64,
+    "enchantability": 0,
+    "useDuration": 5,
+    "toolType": 1.0,
+    "damageCount": 5,
+    "destroyAnyBlock": false,
+    "stayInGridWhenCrafting": true,
+    "damageOnCrafting": true,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [],
+    "hasGlow": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64
+  }
+}

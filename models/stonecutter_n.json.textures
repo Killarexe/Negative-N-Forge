@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "stonecutter_n_side",
+        "top": "stonecutter_n_top",
+        "bottom": "stonecutter_n_bottom",
+        "saw": "stonecutter_n_saw"
+      },
+      "name": "default"
+    }
+  }
+}

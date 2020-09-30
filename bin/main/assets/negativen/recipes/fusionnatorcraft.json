@@ -1,0 +1,19 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:updateritem"
+    },
+    {
+      "item": "minecraft:furnace"
+    },
+    {
+      "item": "negativen:diamantinverse"
+    }
+  ],
+  "result": {
+    "item": "negativen:fusonator",
+    "count": 1
+  }
+}

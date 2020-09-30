@@ -1,0 +1,39 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "redstone_n_dust_dot_stage0",
+        "line": "redstone_dust_line0_stage0"
+      },
+      "name": "default"
+    },
+    "stage3": {
+      "map": {
+        "1": "redstone_n_dust_dot_stage3",
+        "line": "redstone_dust_line0_stage3"
+      },
+      "name": "stage3"
+    },
+    "stage2": {
+      "map": {
+        "1": "redstone_n_dust_dot_stage2",
+        "line": "redstone_dust_line0_stage2"
+      },
+      "name": "stage2"
+    },
+    "stage4": {
+      "map": {
+        "1": "redstone_n_dust_dot_stage4",
+        "line": "redstone_dust_line0_stage4"
+      },
+      "name": "stage4"
+    },
+    "stage1": {
+      "map": {
+        "1": "redstone_n_dust_dot_stage0",
+        "line": "redstone_dust_line0_stage1"
+      },
+      "name": "stage1"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "_fv": 10,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "golden_n_helmet",
+    "enableBody": true,
+    "textureBody": "golden_n_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "golden_n_leggings",
+    "enableBoots": true,
+    "textureBoots": "golden_n_boots",
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNCombat"
+    },
+    "armorTextureFile": "gold_n_",
+    "helmetName": "Gold-N Helmet",
+    "bodyName": "Gold-N Chestplate",
+    "leggingsName": "Gold-N Leggings",
+    "bootsName": "Gold-N Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 250,
+    "damageValueHelmet": 1,
+    "damageValueBody": 3,
+    "damageValueLeggings": 4,
+    "damageValueBoots": 1,
+    "enchantability": 14,
+    "toughness": 1.0,
+    "equipSound": {
+      "value": "item.armor.equip_gold"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:GoldNIngot"
+      }
+    ]
+  }
+}

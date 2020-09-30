@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/acacia_planksn",
+    "particle": "negativen:blocks/acacia_planksn"
+  }
+}

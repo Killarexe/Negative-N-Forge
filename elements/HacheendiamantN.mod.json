@@ -1,0 +1,33 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "hachedi",
+    "customModelName": "Normal",
+    "name": "Diamond-N Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 6,
+    "efficiency": 16.0,
+    "attackSpeed": 3.0,
+    "enchantability": 20,
+    "damageVsEntity": 23.0,
+    "usageCount": 3122,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Diamantinverse"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "PoisonusProcced"
+    }
+  }
+}

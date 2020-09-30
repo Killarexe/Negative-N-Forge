@@ -1,0 +1,8 @@
+{
+  "parent": "negativen:custom/wheat_n_stage_0",
+  "textures": {
+    "all": "negativen:blocks/wheatn_stage3",
+    "particle": "negativen:blocks/wheatn_stage3",
+    "crop": "negativen:blocks/wheatn_stage3"
+  }
+}

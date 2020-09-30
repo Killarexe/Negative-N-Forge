@@ -1,0 +1,27 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    " 3",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:cobblestonen"
+    },
+    "1": {
+      "item": "negativen:cobblestonen"
+    },
+    "3": {
+      "item": "negativen:sickn"
+    },
+    "5": {
+      "item": "negativen:sickn"
+    }
+  },
+  "result": {
+    "item": "negativen:cobblestonehoe",
+    "count": 1
+  }
+}

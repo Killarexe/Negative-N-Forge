@@ -1,0 +1,27 @@
+{
+  "_fv": 10,
+  "_type": "structure",
+  "definition": {
+    "structure": "abandonned_portal_classicdim",
+    "randomlyRotateStructure": true,
+    "surfaceDetectionType": "First motion blocking block",
+    "spawnProbability": 750,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 1,
+    "spawnLocation": "Ground",
+    "spawnHeightOffset": 0,
+    "spawnWorldTypes": [
+      "Surface",
+      "End",
+      "CUSTOM:Nega",
+      "CUSTOM:MineingDim",
+      "CUSTOM:StartDim",
+      "CUSTOM:NoneDim",
+      "CUSTOM:ClassicDim",
+      "CUSTOM:ClassicNDim"
+    ],
+    "restrictionBlocks": [],
+    "restrictionBiomes": [],
+    "ignoreBlocks": "STRUCTURE_BLOCK"
+  }
+}

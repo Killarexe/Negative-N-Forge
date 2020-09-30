@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/warped_wart_n_block",
+    "particle": "negativen:blocks/warped_wart_n_block"
+  }
+}

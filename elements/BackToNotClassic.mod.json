@@ -1,0 +1,25 @@
+{
+  "_fv": 10,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Go To New",
+    "achievementDescription": "Go to Classic-N Dimension",
+    "achievementIcon": {
+      "value": "CUSTOM:ClassicGrassN"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardFunction": "No function",
+    "rewardXP": 8,
+    "achievementType": "task",
+    "parent": {
+      "value": "CUSTOM:BackToNotClassic"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"biome_entered\" x=\"89\" y=\"92\"><field name=\"biome\">CUSTOM:ClassicBiomeN</field><next><block type=\"advancement_trigger\" deletable=\"false\"/></next></block></xml>"
+  }
+}

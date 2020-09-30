@@ -1,0 +1,11 @@
+{
+  "_fv": 10,
+  "_type": "tab",
+  "definition": {
+    "name": "Negative-N Food",
+    "icon": {
+      "value": "CUSTOM:PorkchopcookedN"
+    },
+    "showSearch": false
+  }
+}

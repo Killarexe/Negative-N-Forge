@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/jungle_logn_top",
+    "up": "negativen:blocks/jungle_logn_top",
+    "north": "negativen:blocks/junglen_log",
+    "east": "negativen:blocks/junglen_log",
+    "south": "negativen:blocks/junglen_log",
+    "west": "negativen:blocks/junglen_log",
+    "particle": "negativen:blocks/jungle_logn_top"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_fv": 10,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Poisonus",
+    "type": "WEAPON",
+    "rarity": "VERY_RARE",
+    "minLevel": 1,
+    "maxLevel": 2,
+    "damageModifier": 0,
+    "compatibleEnchantments": [],
+    "compatibleItems": [
+      {
+        "value": "CUSTOM:EpeeenDiamantN"
+      },
+      {
+        "value": "CUSTOM:HacheendiamantN"
+      },
+      {
+        "value": "CUSTOM:Iron_NAxe"
+      },
+      {
+        "value": "CUSTOM:Iron_NSword"
+      },
+      {
+        "value": "CUSTOM:PlanchedeboisAxe"
+      },
+      {
+        "value": "CUSTOM:PlanchedeboisSword"
+      },
+      {
+        "value": "CUSTOM:CobblestoneAxe"
+      },
+      {
+        "value": "CUSTOM:CobblestoneSword"
+      }
+    ],
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "isAllowedOnBooks": true
+  }
+}

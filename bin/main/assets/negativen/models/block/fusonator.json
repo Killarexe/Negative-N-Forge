@@ -1,0 +1,12 @@
+{
+  "parent": "negativen:custom/fusonator",
+  "textures": {
+    "all": "negativen:blocks/furnace_front_off",
+    "particle": "negativen:blocks/furnace_front_off",
+    "0": "negativen:blocks/furnace_front_off",
+    "1": "negativen:blocks/furnace_side",
+    "2": "negativen:blocks/furnace_top",
+    "3": "negativen:blocks/nput",
+    "missing": "negativen:blocks/nput"
+  }
+}

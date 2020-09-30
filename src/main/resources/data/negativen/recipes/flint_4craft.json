@@ -1,0 +1,19 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:starteye"
+    },
+    {
+      "item": "negativen:updater"
+    },
+    {
+      "item": "negativen:netherndim"
+    }
+  ],
+  "result": {
+    "item": "negativen:startdim",
+    "count": 1
+  }
+}

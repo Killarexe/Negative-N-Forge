@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "grassn_path_side",
+        "1": "grassn_path_top",
+        "2": "dn"
+      },
+      "name": "default"
+    }
+  }
+}

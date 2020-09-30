@@ -1,0 +1,9 @@
+{
+  "group": "negativen",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "negativen:cobblestonen"
+  },
+  "result": "negativen:cobblestone_n_wall"
+}

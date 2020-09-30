@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "sign2": "sign2",
+        "sign1": "sign1",
+        "exterior": "jodie_slab",
+        "lamp": "lamp",
+        "window": "windows"
+      },
+      "name": "default"
+    }
+  }
+}

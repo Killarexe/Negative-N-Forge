@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "birch_n_door_bottom",
+        "1": "birch_n_door_top"
+      },
+      "name": "default"
+    }
+  }
+}

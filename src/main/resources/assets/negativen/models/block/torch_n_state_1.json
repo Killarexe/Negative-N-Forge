@@ -1,0 +1,8 @@
+{
+  "parent": "negativen:custom/torchnstate1",
+  "textures": {
+    "all": "negativen:blocks/torch_n",
+    "particle": "negativen:blocks/torch_n",
+    "0": "negativen:blocks/torch_n"
+  }
+}

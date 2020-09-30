@@ -1,0 +1,28 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "carrots_n_stage0"
+      },
+      "name": "default"
+    },
+    "stage1": {
+      "map": {
+        "1": "carrots_n_stage1"
+      },
+      "name": "stage1"
+    },
+    "stage2": {
+      "map": {
+        "1": "carrots_n_stage2"
+      },
+      "name": "stage2"
+    },
+    "stage3": {
+      "map": {
+        "1": "carrots_n_stage3"
+      },
+      "name": "stage3"
+    }
+  }
+}

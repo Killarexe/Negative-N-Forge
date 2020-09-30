@@ -1,0 +1,25 @@
+{
+  "_fv": 10,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "rotten_flesh",
+    "customModelName": "Normal",
+    "name": "Rotten flesh-N",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNRessoures"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatingSpeed": 32,
+    "forDogs": true,
+    "isAlwaysEdible": false,
+    "animation": "eat",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "RottenfleshNFoodEaten"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/portalblock",
+    "up": "negativen:blocks/portalblock",
+    "north": "negativen:blocks/portalblock",
+    "east": "negativen:blocks/pb",
+    "south": "negativen:blocks/pb",
+    "west": "negativen:blocks/portalblock",
+    "particle": "negativen:blocks/portalblock"
+  }
+}

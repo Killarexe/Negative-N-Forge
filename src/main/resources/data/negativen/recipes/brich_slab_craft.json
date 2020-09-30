@@ -1,0 +1,22 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:birchplanksn"
+    },
+    "1": {
+      "item": "negativen:birchplanksn"
+    },
+    "2": {
+      "item": "negativen:birchplanksn"
+    }
+  },
+  "result": {
+    "item": "negativen:birch_slab_n",
+    "count": 6
+  }
+}

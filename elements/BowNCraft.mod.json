@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:StringN"
+      },
+      {
+        "value": "CUSTOM:SickN"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:StringN"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SickN"
+      },
+      {
+        "value": "CUSTOM:StringN"
+      },
+      {
+        "value": "CUSTOM:SickN"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BowN"
+    },
+    "name": "bow_n_craft",
+    "namespace": "mod"
+  }
+}

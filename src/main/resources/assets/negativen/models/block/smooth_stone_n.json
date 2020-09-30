@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/smooth_stone_n",
+    "particle": "negativen:blocks/smooth_stone_n"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "negativen:block/dark_oak_log_n"
+    },
+    "facing=north": {
+      "model": "negativen:block/dark_oak_log_n"
+    },
+    "facing=east": {
+      "model": "negativen:block/dark_oak_log_n",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "negativen:block/dark_oak_log_n",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "negativen:block/dark_oak_log_n",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "negativen:block/dark_oak_log_n",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

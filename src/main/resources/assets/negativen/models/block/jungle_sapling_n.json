@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "negativen:blocks/jungle_saplingn",
+    "particle": "negativen:blocks/jungle_saplingn"
+  }
+}

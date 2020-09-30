@@ -1,0 +1,39 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:iron_ningot"
+    },
+    "2": {
+      "item": "negativen:iron_ningot"
+    },
+    "3": {
+      "item": "negativen:iron_ningot"
+    },
+    "4": {
+      "item": "negativen:iron_ningot"
+    },
+    "5": {
+      "item": "negativen:iron_ningot"
+    },
+    "6": {
+      "item": "negativen:iron_ningot"
+    },
+    "7": {
+      "item": "negativen:iron_ningot"
+    },
+    "8": {
+      "item": "negativen:iron_ningot"
+    }
+  },
+  "result": {
+    "item": "negativen:iron_narmor_chestplate",
+    "count": 1
+  }
+}

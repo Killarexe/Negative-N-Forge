@@ -1,0 +1,16 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:oak_logn"
+    }
+  },
+  "result": {
+    "item": "negativen:oak_planksn",
+    "count": 4
+  }
+}

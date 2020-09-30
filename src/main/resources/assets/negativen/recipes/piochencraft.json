@@ -1,0 +1,30 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:diamantinverse"
+    },
+    "1": {
+      "item": "negativen:diamantinverse"
+    },
+    "2": {
+      "item": "negativen:diamantinverse"
+    },
+    "4": {
+      "item": "negativen:sickn"
+    },
+    "7": {
+      "item": "negativen:sickn"
+    }
+  },
+  "result": {
+    "item": "negativen:piocheendiamantn",
+    "count": 1
+  }
+}

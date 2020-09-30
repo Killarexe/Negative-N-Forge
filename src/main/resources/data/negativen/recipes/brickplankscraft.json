@@ -1,0 +1,13 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:birchlogn"
+    }
+  ],
+  "result": {
+    "item": "negativen:birchplanksn",
+    "count": 4
+  }
+}

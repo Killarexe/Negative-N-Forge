@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "negativen:block/nonedim_portal_ew"
+    },
+    "axis=x": {
+      "model": "negativen:block/nonedim_portal_ns"
+    }
+  }
+}

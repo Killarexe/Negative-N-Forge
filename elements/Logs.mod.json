@@ -1,0 +1,55 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:BoisN"
+      },
+      {
+        "value": "CUSTOM:Acacialogn"
+      },
+      {
+        "value": "CUSTOM:Birchlogn"
+      },
+      {
+        "value": "CUSTOM:DarkOakLogN"
+      },
+      {
+        "value": "CUSTOM:JungleLogN"
+      },
+      {
+        "value": "CUSTOM:SpruceLogN"
+      },
+      {
+        "value": "CUSTOM:OakLogNStripped"
+      },
+      {
+        "value": "CUSTOM:AcaciaLogNStripped"
+      },
+      {
+        "value": "CUSTOM:BirchLogNStripped"
+      },
+      {
+        "value": "CUSTOM:DarkOakLogNStripped"
+      },
+      {
+        "value": "CUSTOM:JungleLogNStripped"
+      },
+      {
+        "value": "CUSTOM:SpruceLogNStripped"
+      },
+      {
+        "value": "CUSTOM:CrimsonNStem"
+      },
+      {
+        "value": "CUSTOM:WarpedNStem"
+      }
+    ],
+    "functions": [],
+    "name": "logs",
+    "namespace": "minecraft"
+  }
+}

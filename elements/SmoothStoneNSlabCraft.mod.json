@@ -1,0 +1,20 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Stone cutting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "stoneCuttingInputStack": {
+      "value": "CUSTOM:SmoothStoneN"
+    },
+    "stoneCuttingReturnStack": {
+      "value": "CUSTOM:SmoothStoneNSlab"
+    },
+    "name": "smooth_stone_n_slab_craft",
+    "namespace": "mod"
+  }
+}

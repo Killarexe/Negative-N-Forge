@@ -1,0 +1,33 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:acaciaplanksn"
+    },
+    "3": {
+      "item": "negativen:acaciaplanksn"
+    },
+    "4": {
+      "item": "negativen:acaciaplanksn"
+    },
+    "6": {
+      "item": "negativen:acaciaplanksn"
+    },
+    "7": {
+      "item": "negativen:acaciaplanksn"
+    },
+    "8": {
+      "item": "negativen:acaciaplanksn"
+    }
+  },
+  "result": {
+    "item": "negativen:acacia_stairs_n",
+    "count": 4
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "negativen:items/stone_n_sword"
+  }
+}

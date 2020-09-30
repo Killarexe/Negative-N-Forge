@@ -1,0 +1,26 @@
+{
+  "_fv": 10,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Negative-N 1.2.1 DEV_VERSION",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Negative-N 1.2.1 DEV_VERSION",
+          "x": 12,
+          "y": 6
+        }
+      }
+    ],
+    "baseTexture": "",
+    "displayCondition": {
+      "name": "NegativeNVersionDEVDisplayOverlayIngame"
+    }
+  }
+}

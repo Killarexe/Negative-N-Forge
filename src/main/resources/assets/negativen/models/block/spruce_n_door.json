@@ -1,0 +1,9 @@
+{
+  "parent": "negativen:custom/spruce_n_door",
+  "textures": {
+    "all": "negativen:blocks/spruce_n_door_top",
+    "particle": "negativen:blocks/spruce_n_door_top",
+    "0": "negativen:blocks/spruce_n_door_bottom",
+    "1": "negativen:blocks/spruce_n_door_top"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "negativen:custom/vine-n",
+  "textures": {
+    "all": "negativen:blocks/vine_n",
+    "particle": "negativen:blocks/vine_n",
+    "0": "negativen:blocks/vine_n",
+    "missing": "negativen:blocks/"
+  }
+}

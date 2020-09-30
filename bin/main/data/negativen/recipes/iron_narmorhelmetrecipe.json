@@ -1,0 +1,29 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:iron_ningot"
+    },
+    "1": {
+      "item": "negativen:iron_ningot"
+    },
+    "2": {
+      "item": "negativen:iron_ningot"
+    },
+    "3": {
+      "item": "negativen:iron_ningot"
+    },
+    "5": {
+      "item": "negativen:iron_ningot"
+    }
+  },
+  "result": {
+    "item": "negativen:iron_narmor_helmet",
+    "count": 1
+  }
+}

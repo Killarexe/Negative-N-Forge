@@ -1,0 +1,33 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "netherite_n_axe",
+    "customModelName": "Normal",
+    "name": "Netherite-N Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 9,
+    "efficiency": 24.0,
+    "attackSpeed": 3.0,
+    "enchantability": 30,
+    "damageVsEntity": 33.0,
+    "usageCount": 3122,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:Diamantinverse"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "PoisonusProcced"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_glass_pane_side",
+  "textures": {
+    "edge": "negativen:blocks/vine_n",
+    "pane": "negativen:blocks/vine_n"
+  }
+}

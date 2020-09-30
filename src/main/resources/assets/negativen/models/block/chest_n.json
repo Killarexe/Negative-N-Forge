@@ -1,0 +1,8 @@
+{
+  "parent": "negativen:custom/chest_n",
+  "textures": {
+    "all": "negativen:blocks/chest_n",
+    "particle": "negativen:blocks/chest_n",
+    "0": "negativen:blocks/chest_n"
+  }
+}

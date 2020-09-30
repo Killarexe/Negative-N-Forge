@@ -1,0 +1,36 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:diamantinverse"
+    },
+    "1": {
+      "item": "negativen:diamantinverse"
+    },
+    "2": {
+      "item": "negativen:diamantinverse"
+    },
+    "3": {
+      "item": "negativen:diamantinverse"
+    },
+    "5": {
+      "item": "negativen:diamantinverse"
+    },
+    "6": {
+      "item": "negativen:diamantinverse"
+    },
+    "8": {
+      "item": "negativen:diamantinverse"
+    }
+  },
+  "result": {
+    "item": "negativen:arnurendiamantinverselegs",
+    "count": 1
+  }
+}

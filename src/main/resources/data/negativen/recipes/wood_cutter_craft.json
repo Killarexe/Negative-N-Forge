@@ -1,0 +1,26 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345"
+  ],
+  "key": {
+    "1": {
+      "item": "negativen:iron_ningot"
+    },
+    "3": {
+      "tag": "minecraft:stone_n"
+    },
+    "4": {
+      "tag": "minecraft:stone_n"
+    },
+    "5": {
+      "tag": "minecraft:stone_n"
+    }
+  },
+  "result": {
+    "item": "negativen:wood_cutter",
+    "count": 1
+  }
+}

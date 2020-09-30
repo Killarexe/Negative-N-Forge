@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "negativen:block/dark_oak_slab_n"
+    },
+    "type=top": {
+      "model": "negativen:block/dark_oak_slab_n_top"
+    },
+    "type=double": {
+      "model": "negativen:block/dark_oak_slab_n_full"
+    }
+  }
+}

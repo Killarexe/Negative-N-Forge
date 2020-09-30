@@ -1,0 +1,45 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "wnp",
+    "customModelName": "Normal",
+    "name": "Wooden Pickaxe-N",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 1,
+    "efficiency": 2.0,
+    "attackSpeed": 1.0,
+    "enchantability": 14,
+    "damageVsEntity": 1.0,
+    "usageCount": 118,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:PlanchedeboisN"
+      },
+      {
+        "value": "CUSTOM:Acaciaplanksn"
+      },
+      {
+        "value": "CUSTOM:Birchplanksn"
+      },
+      {
+        "value": "CUSTOM:DarkoakplanksN"
+      },
+      {
+        "value": "CUSTOM:JunglePlanksN"
+      },
+      {
+        "value": "CUSTOM:SprucePlanksN"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "netherite_n_sword",
+    "customModelName": "Normal",
+    "name": "Netherite-N Sword",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNCombat"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 9,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 30,
+    "damageVsEntity": 30.0,
+    "usageCount": 4683,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:NetheriteN"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "PoisonusProcced"
+    }
+  }
+}

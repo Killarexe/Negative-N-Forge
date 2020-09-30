@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/ingerb",
+    "up": "negativen:blocks/ingert",
+    "north": "negativen:blocks/ingerf",
+    "east": "negativen:blocks/ingers",
+    "south": "negativen:blocks/ingers",
+    "west": "negativen:blocks/ingers",
+    "particle": "negativen:blocks/ingerb"
+  }
+}

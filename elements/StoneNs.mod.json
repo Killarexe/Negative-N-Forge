@@ -1,0 +1,31 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:StoneN"
+      },
+      {
+        "value": "CUSTOM:AndesiteN"
+      },
+      {
+        "value": "CUSTOM:GraniteN"
+      },
+      {
+        "value": "CUSTOM:DroiteN"
+      },
+      {
+        "value": "CUSTOM:ClassicStone"
+      },
+      {
+        "value": "CUSTOM:ClassicStoneN"
+      }
+    ],
+    "functions": [],
+    "name": "stone_n",
+    "namespace": "minecraft"
+  }
+}

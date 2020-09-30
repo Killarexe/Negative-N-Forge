@@ -1,0 +1,36 @@
+{
+  "_fv": 10,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "bow_n",
+    "customModelName": "Normal",
+    "name": "Bow-N",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNCombat"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "CUSTOM:ArrowN"
+    },
+    "shootConstantly": false,
+    "usageCount": 768,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 1.1,
+    "bulletDamage": 3.5,
+    "bulletKnockback": 2,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:ArrowN"
+    },
+    "bulletModel": "Modelarrow_n",
+    "customBulletModelTexture": "arrow_n_entity.png"
+  }
+}

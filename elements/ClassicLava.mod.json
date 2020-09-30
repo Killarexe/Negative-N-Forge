@@ -1,0 +1,21 @@
+{
+  "_fv": 10,
+  "_type": "fluid",
+  "definition": {
+    "name": "ClassicLava",
+    "textureStill": "lava_c",
+    "textureFlowing": "lava_c",
+    "luminosity": 0,
+    "density": 1000,
+    "viscosity": 1000,
+    "isGas": false,
+    "type": "LAVA",
+    "generateBucket": false,
+    "creativeTab": {
+      "value": "CUSTOM:ClassicBlocks"
+    },
+    "spawnWorldTypes": [
+      "CUSTOM:ClassicDim"
+    ]
+  }
+}

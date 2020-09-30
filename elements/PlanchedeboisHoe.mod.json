@@ -1,0 +1,48 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "wnh",
+    "customModelName": "Normal",
+    "name": "Wooden Hoe-N",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 30,
+    "damageVsEntity": 1.4,
+    "usageCount": 118,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:PlanchedeboisN"
+      },
+      {
+        "value": "CUSTOM:Acaciaplanksn"
+      },
+      {
+        "value": "CUSTOM:Birchplanksn"
+      },
+      {
+        "value": "CUSTOM:DarkoakplanksN"
+      },
+      {
+        "value": "CUSTOM:JunglePlanksN"
+      },
+      {
+        "value": "CUSTOM:SprucePlanksN"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "HoeNRightClickOnDirt"
+    }
+  }
+}

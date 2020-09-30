@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "bottom": "negativen:blocks/oak_n_door_bottom",
+    "top": "negativen:blocks/oak_n_door_top"
+  }
+}

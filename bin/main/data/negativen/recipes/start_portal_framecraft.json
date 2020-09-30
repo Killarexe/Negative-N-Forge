@@ -1,0 +1,19 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:starteye"
+    },
+    {
+      "item": "negativen:portalblock"
+    },
+    {
+      "item": "negativen:updateritem"
+    }
+  ],
+  "result": {
+    "item": "negativen:startportalframe",
+    "count": 1
+  }
+}

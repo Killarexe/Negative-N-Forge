@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:GraniteN"
+      },
+      {
+        "value": "CUSTOM:GraniteN"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:GraniteN"
+      },
+      {
+        "value": "CUSTOM:GraniteN"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:PolishedGraniteN"
+    },
+    "name": "polished_granite_n_crafting",
+    "namespace": "mod"
+  }
+}

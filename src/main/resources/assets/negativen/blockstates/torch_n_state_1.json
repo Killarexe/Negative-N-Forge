@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "negativen:block/torch_n_state_1"
+    },
+    "facing=east": {
+      "model": "negativen:block/torch_n_state_1",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "negativen:block/torch_n_state_1",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "negativen:block/torch_n_state_1",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Diamantinverse"
+      },
+      {
+        "value": "CUSTOM:Diamantinverse"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Diamantinverse"
+      },
+      {
+        "value": "CUSTOM:SickN"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SickN"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:HacheendiamantN"
+    },
+    "name": "hachediamantncraft",
+    "namespace": "mod"
+  }
+}

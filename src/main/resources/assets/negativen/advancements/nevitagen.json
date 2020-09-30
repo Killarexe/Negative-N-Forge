@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "negativen:diamantinverse"
+    },
+    "title": {
+      "translate": "advancements.nevitagen.title"
+    },
+    "description": {
+      "translate": "advancements.nevitagen.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "nevitagen": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:negative"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "negativen:batonncraft",
+      "negativen:createncraft"
+    ]
+  },
+  "parent": "negativen:inverseinfini"
+}

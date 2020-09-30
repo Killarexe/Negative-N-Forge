@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "negativen:classic_grass"
+    },
+    "title": {
+      "translate": "advancements.back_to_classic.title"
+    },
+    "description": {
+      "translate": "advancements.back_to_classic.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "back_to_classic": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:classic_biome"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0
+  },
+  "parent": "negativen:starting"
+}

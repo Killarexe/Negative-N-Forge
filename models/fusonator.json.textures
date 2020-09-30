@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "furnace_front_off",
+        "1": "furnace_side",
+        "2": "furnace_top",
+        "3": "nput",
+        "missing": "nput"
+      },
+      "name": "default"
+    }
+  }
+}

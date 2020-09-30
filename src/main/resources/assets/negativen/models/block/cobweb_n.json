@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "negativen:blocks/cobweb_n",
+    "particle": "negativen:blocks/cobweb_n"
+  }
+}

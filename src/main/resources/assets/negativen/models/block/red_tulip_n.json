@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "negativen:blocks/red_tulip_n",
+    "particle": "negativen:blocks/red_tulip_n"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_fv": 10,
+  "_type": "tab",
+  "definition": {
+    "name": "Negative-N Decoration Blocks",
+    "icon": {
+      "value": "CUSTOM:TorchNState2"
+    },
+    "showSearch": false
+  }
+}

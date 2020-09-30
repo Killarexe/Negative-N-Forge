@@ -1,0 +1,64 @@
+{
+  "_fv": 10,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "diamond_n_helmet",
+    "enableBody": true,
+    "textureBody": "diamond_n_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "diamond_n_leggings",
+    "enableBoots": true,
+    "textureBoots": "diamond_n_boots",
+    "onHelmetTick": {
+      "name": "ArnurendiamantinverseHelmetTickEvent"
+    },
+    "onBodyTick": {
+      "name": "ArnurendiamantinverseBodyTickEvent"
+    },
+    "onBootsTick": {
+      "name": "ArnurendiamantinverseBootsTickEvent"
+    },
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNCombat"
+    },
+    "armorTextureFile": "diamond_n_",
+    "helmetName": "Diamond-N Helmet",
+    "bodyName": "Diamond-N Chestplate",
+    "leggingsName": "Diamond-N Leggings",
+    "bootsName": "Diamond-N Bottes",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 500,
+    "damageValueHelmet": 10,
+    "damageValueBody": 10,
+    "damageValueLeggings": 10,
+    "damageValueBoots": 10,
+    "enchantability": 20,
+    "toughness": 4.0,
+    "equipSound": {
+      "value": "entity.armorstand.place"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:Diamantinverse"
+      }
+    ]
+  }
+}

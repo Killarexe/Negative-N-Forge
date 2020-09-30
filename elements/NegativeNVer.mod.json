@@ -1,0 +1,26 @@
+{
+  "_fv": 10,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Negative-N 1.2.1",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Negative-N 1.2.1",
+          "x": 12,
+          "y": 6
+        }
+      }
+    ],
+    "baseTexture": "",
+    "displayCondition": {
+      "name": "NegativeNVerShow"
+    }
+  }
+}

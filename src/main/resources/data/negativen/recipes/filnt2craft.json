@@ -1,0 +1,16 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:updater"
+    },
+    {
+      "item": "negativen:nega"
+    }
+  ],
+  "result": {
+    "item": "negativen:mineingdim",
+    "count": 1
+  }
+}

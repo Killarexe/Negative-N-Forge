@@ -1,0 +1,10 @@
+{
+  "parent": "negativen:custom/start_portal_frame",
+  "textures": {
+    "all": "negativen:blocks/end-framen_side",
+    "particle": "negativen:blocks/end-framen_side",
+    "0": "negativen:blocks/end-framen_side",
+    "1": "negativen:blocks/end-framen_top",
+    "2": "negativen:blocks/end_stone"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "negativen:block/wood_cutter"
+    },
+    "facing=east": {
+      "model": "negativen:block/wood_cutter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "negativen:block/wood_cutter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "negativen:block/wood_cutter",
+      "y": 270
+    }
+  }
+}

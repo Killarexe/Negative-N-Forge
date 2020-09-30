@@ -1,0 +1,9 @@
+{
+  "group": "negativen",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "negativen:andesite_n"
+  },
+  "result": "negativen:polished_andesite_n"
+}

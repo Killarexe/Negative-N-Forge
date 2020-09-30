@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "Element": "tardis_"
+      },
+      "name": "default"
+    }
+  }
+}

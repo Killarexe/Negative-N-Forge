@@ -1,0 +1,9 @@
+{
+  "parent": "negativen:custom/acacia_n_door",
+  "textures": {
+    "all": "negativen:blocks/acacia_n_door_top",
+    "particle": "negativen:blocks/acacia_n_door_top",
+    "0": "negativen:blocks/acacia_n_door_bottom",
+    "1": "negativen:blocks/acacia_n_door_top"
+  }
+}

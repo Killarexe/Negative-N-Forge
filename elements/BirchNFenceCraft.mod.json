@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 6,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Birchplanksn"
+      },
+      {
+        "value": "CUSTOM:SickN"
+      },
+      {
+        "value": "CUSTOM:Birchplanksn"
+      },
+      {
+        "value": "CUSTOM:Birchplanksn"
+      },
+      {
+        "value": "CUSTOM:SickN"
+      },
+      {
+        "value": "CUSTOM:Birchplanksn"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BirchNFence"
+    },
+    "name": "birch_n_fence_craft",
+    "namespace": "mod"
+  }
+}

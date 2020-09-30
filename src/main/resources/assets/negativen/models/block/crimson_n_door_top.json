@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "bottom": "negativen:blocks/crimson_door_n_bottom",
+    "top": "negativen:blocks/crimson_door_n_top"
+  }
+}

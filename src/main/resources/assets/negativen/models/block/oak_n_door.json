@@ -1,0 +1,9 @@
+{
+  "parent": "negativen:custom/oak_n_door",
+  "textures": {
+    "all": "negativen:blocks/oak_n_door_top",
+    "particle": "negativen:blocks/oak_n_door_top",
+    "0": "negativen:blocks/oak_n_door_bottom",
+    "1": "negativen:blocks/oak_n_door_top"
+  }
+}

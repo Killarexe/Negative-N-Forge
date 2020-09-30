@@ -1,0 +1,56 @@
+{
+  "_fv": 10,
+  "_type": "dimension",
+  "definition": {
+    "portalFrame": {
+      "value": "CUSTOM:Portalblock"
+    },
+    "portalParticles": {
+      "value": "CLOUD"
+    },
+    "portalLuminance": 0.0,
+    "portalSound": {
+      "value": "ambient.cave"
+    },
+    "igniterName": "Portal Igniter Tier 3",
+    "igniterTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "texture": "fint_nega",
+    "portalTexture": "nnp",
+    "enablePortal": true,
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:NetherN"
+      },
+      {
+        "value": "CUSTOM:SoulSandDesertN"
+      },
+      {
+        "value": "CUSTOM:NetherNWarpedBiome"
+      },
+      {
+        "value": "CUSTOM:NetherNCrimsonBiome"
+      }
+    ],
+    "worldGenType": "Nether like gen",
+    "mainFillerBlock": {
+      "value": "CUSTOM:NetherrackN"
+    },
+    "fluidBlock": {
+      "value": "CUSTOM:LavaN"
+    },
+    "airColor": {
+      "value": -16750849,
+      "falpha": 0.0
+    },
+    "canRespawnHere": false,
+    "hasFog": true,
+    "hasWeather": true,
+    "isDark": true,
+    "doesWaterVaporize": false,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": false,
+    "imitateOverworldBehaviour": false
+  }
+}

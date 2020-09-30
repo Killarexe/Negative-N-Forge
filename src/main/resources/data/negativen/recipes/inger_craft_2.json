@@ -1,0 +1,19 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:fusonator"
+    },
+    {
+      "item": "negativen:updater"
+    },
+    {
+      "item": "minecraft:smithing_table"
+    }
+  ],
+  "result": {
+    "item": "negativen:inger",
+    "count": 1
+  }
+}

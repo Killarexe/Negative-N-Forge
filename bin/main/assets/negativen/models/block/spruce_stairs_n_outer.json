@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "negativen:blocks/spruce_planksn",
+    "top": "negativen:blocks/spruce_planksn",
+    "side": "negativen:blocks/spruce_planksn"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:stick_n"
+    },
+    "1": {
+      "item": "negativen:spruce_planks_n"
+    },
+    "2": {
+      "item": "negativen:stick_n"
+    },
+    "3": {
+      "item": "negativen:stick_n"
+    },
+    "4": {
+      "item": "negativen:darkoakplanks_n"
+    },
+    "5": {
+      "item": "negativen:stick_n"
+    }
+  },
+  "result": {
+    "item": "negativen:spruce_n_fence_gate",
+    "count": 1
+  }
+}

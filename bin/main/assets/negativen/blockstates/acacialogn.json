@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "negativen:block/acacialogn"
+    },
+    "facing=north": {
+      "model": "negativen:block/acacialogn"
+    },
+    "facing=east": {
+      "model": "negativen:block/acacialogn",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "negativen:block/acacialogn",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "negativen:block/acacialogn",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "negativen:block/acacialogn",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/birch_log_topn",
+    "up": "negativen:blocks/birch_log_topn",
+    "north": "negativen:blocks/birch_logn",
+    "east": "negativen:blocks/birch_logn",
+    "south": "negativen:blocks/birch_logn",
+    "west": "negativen:blocks/birch_logn",
+    "particle": "negativen:blocks/birch_log_topn"
+  }
+}

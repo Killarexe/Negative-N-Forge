@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/leave_c_n",
+    "particle": "negativen:blocks/leave_c_n"
+  }
+}

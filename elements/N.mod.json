@@ -1,0 +1,17 @@
+{
+  "_fv": 10,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "n",
+    "name": "N",
+    "description": "N",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "music": {
+      "value": "CUSTOM:n-music_8bit"
+    },
+    "specialInfo": [],
+    "hasGlow": true
+  }
+}

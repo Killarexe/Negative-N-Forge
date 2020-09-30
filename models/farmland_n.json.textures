@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "top": "farmlandn_moist",
+        "dirt": "dn"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/coal_c_ore",
+    "particle": "negativen:blocks/coal_c_ore"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:warped_n_stem"
+    }
+  ],
+  "result": {
+    "item": "negativen:warped_planks_n",
+    "count": 4
+  }
+}

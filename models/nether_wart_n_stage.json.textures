@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "crop": "nether_wart_n_stage0"
+      },
+      "name": "default"
+    },
+    "stage1": {
+      "map": {
+        "crop": "nether_wart_n_stage1"
+      },
+      "name": "stage1"
+    },
+    "stage2": {
+      "map": {
+        "crop": "nether_wart_n_stage2"
+      },
+      "name": "stage2"
+    }
+  }
+}

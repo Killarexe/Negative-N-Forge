@@ -1,0 +1,19 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:negativedust"
+    },
+    {
+      "item": "negativen:fusonator"
+    },
+    {
+      "item": "negativen:updateritem"
+    }
+  ],
+  "result": {
+    "item": "negativen:decompositor",
+    "count": 1
+  }
+}

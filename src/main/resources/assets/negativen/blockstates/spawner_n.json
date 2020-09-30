@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "negativen:block/spawner_n"
+    }
+  }
+}

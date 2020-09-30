@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/gold_c_n_block_bottom",
+    "up": "negativen:blocks/gold_c_n_block_top",
+    "north": "negativen:blocks/gold_c_n_block_side",
+    "east": "negativen:blocks/gold_c_n_block_side",
+    "south": "negativen:blocks/gold_c_n_block_side",
+    "west": "negativen:blocks/gold_c_n_block_side",
+    "particle": "negativen:blocks/gold_c_n_block_bottom"
+  }
+}
