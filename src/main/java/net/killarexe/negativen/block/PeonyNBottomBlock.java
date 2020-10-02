@@ -23,8 +23,8 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.procedures.PeonyNBottomBlockAddedProcedure;
-import net.killarexe.negativen.procedures.PeonyNBlockDestroyedProcedure;
+import net.killarexe.negativen.procedures.DoubleFlowersDestroyProcedure;
+import net.killarexe.negativen.procedures.DoubleFlowersBlockAddedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.NegativenModElements;
 
@@ -96,7 +96,7 @@ public class PeonyNBottomBlock extends NegativenModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PeonyNBottomBlockAddedProcedure.executeProcedure($_dependencies);
+				DoubleFlowersBlockAddedProcedure.executeProcedure($_dependencies);
 			}
 		}
 
@@ -112,7 +112,7 @@ public class PeonyNBottomBlock extends NegativenModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PeonyNBlockDestroyedProcedure.executeProcedure($_dependencies);
+				DoubleFlowersDestroyProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
@@ -129,7 +129,7 @@ public class PeonyNBottomBlock extends NegativenModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PeonyNBlockDestroyedProcedure.executeProcedure($_dependencies);
+				DoubleFlowersDestroyProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

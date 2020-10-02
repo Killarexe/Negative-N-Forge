@@ -28,6 +28,7 @@ import net.killarexe.negativen.item.NetherWartNItem;
 import net.killarexe.negativen.item.CarrotsNItem;
 import net.killarexe.negativen.item.BeetrootSeedItem;
 import net.killarexe.negativen.block.WheatNStage0Block;
+import net.killarexe.negativen.block.TerreNBlock;
 import net.killarexe.negativen.block.SweetBerryNBushStage0Block;
 import net.killarexe.negativen.block.SoulSoilNBlock;
 import net.killarexe.negativen.block.SoulSandBlock;
@@ -36,6 +37,7 @@ import net.killarexe.negativen.block.NetherWartNStage0Block;
 import net.killarexe.negativen.block.FarmlandNMoistBlock;
 import net.killarexe.negativen.block.FarmlandNBlock;
 import net.killarexe.negativen.block.CarrotNStage0Block;
+import net.killarexe.negativen.block.BlockherbeNBlock;
 import net.killarexe.negativen.block.BeetrootsNStage0Block;
 import net.killarexe.negativen.NegativenModElements;
 
@@ -202,31 +204,35 @@ public class SeedRightClickOnBlockProcedure extends NegativenModElements.ModElem
 			}
 		} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(SweetBerryNItem.block, (int) (1)).getItem())) {
-			world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), SweetBerryNBushStage0Block.block.getDefaultState(), 3);
-			if (!world.getWorld().isRemote) {
-				world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sweet_berry_bush.place")),
-						SoundCategory.NEUTRAL, (float) 1, (float) 1);
-			} else {
-				world.getWorld().playSound(x, y, z,
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sweet_berry_bush.place")),
-						SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-			}
-			if ((new Object() {
-				public boolean checkGamemode(Entity _ent) {
-					if (_ent instanceof ServerPlayerEntity) {
-						return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
-					} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
-						NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
-								.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
-						return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
-					}
-					return false;
+			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BlockherbeNBlock.block.getDefaultState().getBlock())
+					|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TerreNBlock.block.getDefaultState()
+							.getBlock()))) {
+				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), SweetBerryNBushStage0Block.block.getDefaultState(), 3);
+				if (!world.getWorld().isRemote) {
+					world.playSound(null, new BlockPos((int) x, (int) y, (int) z), (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+							.getValue(new ResourceLocation("block.sweet_berry_bush.place")), SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					world.getWorld().playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+									.getValue(new ResourceLocation("block.sweet_berry_bush.place")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
-			}.checkGamemode(entity))) {
-				if (entity instanceof PlayerEntity)
-					((PlayerEntity) entity).inventory
-							.clearMatchingItems(p -> new ItemStack(SweetBerryNItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
+				if ((new Object() {
+					public boolean checkGamemode(Entity _ent) {
+						if (_ent instanceof ServerPlayerEntity) {
+							return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
+						} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+							NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
+									.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
+							return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
+						}
+						return false;
+					}
+				}.checkGamemode(entity))) {
+					if (entity instanceof PlayerEntity)
+						((PlayerEntity) entity).inventory
+								.clearMatchingItems(p -> new ItemStack(SweetBerryNItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
+				}
 			}
 		}
 	}

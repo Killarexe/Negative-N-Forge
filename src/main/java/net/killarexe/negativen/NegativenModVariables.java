@@ -21,7 +21,7 @@ public class NegativenModVariables {
 				WorldSavedDataSyncMessage::handler);
 	}
 	public static double global_timer = 0;
-	public static boolean DevVerson = false;
+	public static boolean DevVerson = true;
 	public static boolean ShowVersion = true;
 	@SubscribeEvent
 	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {

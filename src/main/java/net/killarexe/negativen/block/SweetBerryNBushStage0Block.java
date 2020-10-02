@@ -53,8 +53,8 @@ public class SweetBerryNBushStage0Block extends NegativenModElements.ModElement 
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.PLANT).hardnessAndResistance(0f, 0f).lightValue(0).notSolid()
-					.tickRandomly());
+			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.PLANT).hardnessAndResistance(0f, 0f).lightValue(0).doesNotBlockMovement()
+					.notSolid().tickRandomly());
 			setRegistryName("sweet_berry_n_bush_stage_0");
 		}
 

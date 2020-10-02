@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "negativen:blocks/rose_bush_n_bottom",
+    "particle": "negativen:blocks/rose_bush_n_bottom"
+  }
+}

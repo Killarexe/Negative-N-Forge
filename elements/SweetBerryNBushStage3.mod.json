@@ -57,7 +57,7 @@
     "isLadder": false,
     "slipperiness": 0.6,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": false,
+    "isNotColidable": true,
     "soundOnStep": {
       "value": "PLANT"
     },
@@ -88,6 +88,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "SweetBerryBushRightClick"
+    },
     "onTickUpdate": {
       "name": "CropsGrow"
     },

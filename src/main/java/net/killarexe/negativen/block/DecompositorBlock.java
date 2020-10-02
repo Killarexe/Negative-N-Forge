@@ -20,9 +20,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
@@ -119,23 +116,6 @@ public class DecompositorBlock extends NegativenModElements.ModElement {
 		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
-		}
-
-		@Override
-		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			switch ((Direction) state.get(FACING)) {
-				case UP :
-				case DOWN :
-				case SOUTH :
-				default :
-					return VoxelShapes.create(1D, 0D, 1D, -1D, 1D, -1D);
-				case NORTH :
-					return VoxelShapes.create(0D, 0D, 0D, 2D, 1D, 2D);
-				case WEST :
-					return VoxelShapes.create(0D, 0D, 1D, 2D, 1D, -1D);
-				case EAST :
-					return VoxelShapes.create(1D, 0D, 0D, -1D, 1D, 2D);
-			}
 		}
 
 		@Override

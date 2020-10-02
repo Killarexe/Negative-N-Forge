@@ -92,13 +92,13 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onBlockAdded": {
-      "name": "PeonyNBottomBlockAdded"
+      "name": "DoubleFlowersBlockAdded"
     },
     "onDestroyedByPlayer": {
-      "name": "PeonyNBlockDestroyed"
+      "name": "DoubleFlowersDestroy"
     },
     "onDestroyedByExplosion": {
-      "name": "PeonyNBlockDestroyed"
+      "name": "DoubleFlowersDestroy"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

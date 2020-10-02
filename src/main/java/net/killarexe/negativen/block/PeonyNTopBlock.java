@@ -10,7 +10,6 @@ import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.Explosion;
-import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.item.ItemStack;
@@ -26,9 +25,9 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.procedures.PeonyNTopBlockAddedProcedure;
 import net.killarexe.negativen.procedures.PeonyNBottomParticleSpawningConditionProcedure;
-import net.killarexe.negativen.procedures.PeonyNBlockDestroyedProcedure;
+import net.killarexe.negativen.procedures.DoubleFlowersDestroyProcedure;
+import net.killarexe.negativen.procedures.DoubleFlowersBlockAddedProcedure;
 import net.killarexe.negativen.NegativenModElements;
 
 import java.util.Random;
@@ -82,16 +81,11 @@ public class PeonyNTopBlock extends NegativenModElements.ModElement {
 		}
 
 		@Override
-		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
-			return new ItemStack(PeonyNBottomBlock.block, (int) (1));
-		}
-
-		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(PeonyNBottomBlock.block, (int) (1)));
+			return Collections.singletonList(new ItemStack(this, 0));
 		}
 
 		@Override
@@ -106,7 +100,7 @@ public class PeonyNTopBlock extends NegativenModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PeonyNTopBlockAddedProcedure.executeProcedure($_dependencies);
+				DoubleFlowersBlockAddedProcedure.executeProcedure($_dependencies);
 			}
 		}
 
@@ -143,7 +137,7 @@ public class PeonyNTopBlock extends NegativenModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PeonyNBlockDestroyedProcedure.executeProcedure($_dependencies);
+				DoubleFlowersDestroyProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
@@ -160,7 +154,7 @@ public class PeonyNTopBlock extends NegativenModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PeonyNBlockDestroyedProcedure.executeProcedure($_dependencies);
+				DoubleFlowersDestroyProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}
