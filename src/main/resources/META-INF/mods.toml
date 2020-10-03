@@ -3,14 +3,14 @@ loaderVersion="[31,)"
 
 [[mods]]
 modId="negativen"
-version="1.2 Release"
+version="1.2.1 Release"
 displayName="Negative-N"
 credits="The Mod made by Killar.exe"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/negative-n"
 logoFile="logo.png"
-authors="Killar.exe"
+authors="Killar.exe, Fuzy"
 description='''
-A mod create by Killar.exe with new things to discover!
+A mod create by Killar.exe and Fuzy with new things to discover!
 '''
 
 [[dependencies.negativen]]

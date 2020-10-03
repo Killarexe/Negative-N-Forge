@@ -1,8 +1,8 @@
 {
   "id_map": {
-    "GUI": 8,
+    "ENTITY": 21,
     "DIMENSION": 5,
-    "ENTITY": 21
+    "GUI": 8
   },
   "mod_elements": [
     {
@@ -3693,8 +3693,20 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -3755,8 +3767,20 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -3826,8 +3850,20 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -9438,9 +9474,9 @@
   "workspaceSettings": {
     "modid": "negativen",
     "modName": "Negative-N",
-    "version": "1.2 Release",
-    "description": "A mod create by Killar.exe with new things to discover!",
-    "author": "Killar.exe",
+    "version": "1.2.1 Release",
+    "description": "A mod create by Killar.exe and Fuzy with new things to discover!",
+    "author": "Killar.exe, Fuzy",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/negative-n",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,

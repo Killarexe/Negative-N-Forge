@@ -469,21 +469,30 @@ public class WoodCutterGUIGui extends NegativenModElements.ModElement {
 		if (buttonID == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				CutProccedProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 1) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				StairsProccedProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 2) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				FenceProccedProcedure.executeProcedure($_dependencies);
 			}
 		}
