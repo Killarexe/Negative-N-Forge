@@ -3,6 +3,8 @@ package net.killarexe.negativen.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
@@ -41,6 +43,12 @@ public class NetherrackNBlock extends NegativenModElements.ModElement {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2f, 12f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("netherrackn");
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		@Override
+		public boolean isEmissiveRendering(BlockState blockState) {
+			return true;
 		}
 
 		@Override

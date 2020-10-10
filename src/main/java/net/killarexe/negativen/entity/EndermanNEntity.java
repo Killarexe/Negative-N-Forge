@@ -41,7 +41,7 @@ import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;
 import net.minecraft.client.renderer.entity.BipedRenderer;
 
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
-import net.killarexe.negativen.item.StarteyeItem;
+import net.killarexe.negativen.item.StartPearlItem;
 import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
@@ -127,7 +127,7 @@ public class EndermanNEntity extends NegativenModElements.ModElement {
 
 		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
 			super.dropSpecialItems(source, looting, recentlyHitIn);
-			this.entityDropItem(new ItemStack(StarteyeItem.block, (int) (1)));
+			this.entityDropItem(new ItemStack(StartPearlItem.block, (int) (1)));
 		}
 
 		@Override

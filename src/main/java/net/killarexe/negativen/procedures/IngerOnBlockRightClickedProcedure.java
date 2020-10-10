@@ -12,6 +12,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
+import net.killarexe.negativen.item.EmeraldNItem;
+import net.killarexe.negativen.item.EmeraldNIngotItem;
 import net.killarexe.negativen.item.DiamondningotItem;
 import net.killarexe.negativen.item.DiamantinverseItem;
 import net.killarexe.negativen.NegativenModElements;
@@ -69,6 +71,30 @@ public class IngerOnBlockRightClickedProcedure extends NegativenModElements.ModE
 				}
 				if (entity instanceof PlayerEntity) {
 					ItemStack _setstack = new ItemStack(DiamondningotItem.block, (int) (1));
+					_setstack.setCount((int) 1);
+					ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+				}
+			}
+		}
+		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == new ItemStack(EmeraldNItem.block, (int) (1)).getItem())) {
+			if ((!(world.getWorld().isRemote))) {
+				if ((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false))) {
+					if (entity instanceof PlayerEntity)
+						((PlayerEntity) entity).inventory
+								.clearMatchingItems(p -> new ItemStack(EmeraldNItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
+				}
+				if (!world.getWorld().isRemote) {
+					world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.use")),
+							SoundCategory.NEUTRAL, (float) 0.5, (float) 1);
+				} else {
+					world.getWorld().playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.use")),
+							SoundCategory.NEUTRAL, (float) 0.5, (float) 1, false);
+				}
+				if (entity instanceof PlayerEntity) {
+					ItemStack _setstack = new ItemStack(EmeraldNIngotItem.block, (int) (1));
 					_setstack.setCount((int) 1);
 					ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 				}

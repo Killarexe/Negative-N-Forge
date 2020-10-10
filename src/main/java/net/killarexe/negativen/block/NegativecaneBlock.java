@@ -39,7 +39,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.world.dimension.NegaDimension;
-import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
 import net.killarexe.negativen.item.SugarCaneNItem;
 import net.killarexe.negativen.NegativenModElements;
 
@@ -58,8 +57,7 @@ public class NegativecaneBlock extends NegativenModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new BlockCustomFlower());
-		elements.items.add(
-				() -> new BlockItem(block, new Item.Properties().group(NegativeNRessouresItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override

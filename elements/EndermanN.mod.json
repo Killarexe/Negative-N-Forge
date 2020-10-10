@@ -70,7 +70,7 @@
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "mobDrop": {
-      "value": "CUSTOM:Starteye"
+      "value": "CUSTOM:StartPearl"
     },
     "livingSound": {
       "value": "entity.endermen.ambient"

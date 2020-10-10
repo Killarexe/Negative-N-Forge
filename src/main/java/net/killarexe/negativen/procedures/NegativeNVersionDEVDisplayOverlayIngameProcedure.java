@@ -1,5 +1,7 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraft.entity.Entity;
+
 import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
 
@@ -12,6 +14,12 @@ public class NegativeNVersionDEVDisplayOverlayIngameProcedure extends NegativenM
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
-		return ((NegativenModVariables.DevVerson) == (true));
+		if (dependencies.get("entity") == null) {
+			System.err.println("Failed to load dependency entity for procedure NegativeNVersionDEVDisplayOverlayIngame!");
+			return false;
+		}
+		Entity entity = (Entity) dependencies.get("entity");
+		return (((entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new NegativenModVariables.PlayerVariables())).DevVerson) == (true));
 	}
 }

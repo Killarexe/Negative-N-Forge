@@ -1,0 +1,29 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "negativen:acaciaplanksn"
+    },
+    "2": {
+      "item": "negativen:acaciaplanksn"
+    },
+    "3": {
+      "item": "negativen:acaciaplanksn"
+    },
+    "4": {
+      "item": "negativen:acaciaplanksn"
+    },
+    "5": {
+      "item": "negativen:acaciaplanksn"
+    }
+  },
+  "result": {
+    "item": "negativen:acacia_n_boat_item",
+    "count": 1
+  }
+}

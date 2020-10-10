@@ -58,8 +58,8 @@ public class SmeltEnchantmentProceedProcedure extends NegativenModElements.ModEl
 		boolean removeBlock = false;
 		if (((EnchantmentHelper.getEnchantmentLevel(SmeltingEnchantment.enchantment,
 				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY))) > 0)) {
-			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem()
-					.canHarvestBlock((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))))) {
+			if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem()
+					.canHarvestBlock((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))))) == (true))) {
 				if ((!((world.getWorld().getRecipeManager()
 						.getRecipe(IRecipeType.SMELTING,
 								new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))),

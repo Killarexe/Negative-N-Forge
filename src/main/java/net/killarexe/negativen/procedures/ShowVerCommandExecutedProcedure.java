@@ -1,5 +1,7 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraft.entity.Entity;
+
 import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
 
@@ -12,10 +14,29 @@ public class ShowVerCommandExecutedProcedure extends NegativenModElements.ModEle
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (((NegativenModVariables.ShowVersion) == (true))) {
-			NegativenModVariables.ShowVersion = (boolean) (false);
-		} else if (((NegativenModVariables.ShowVersion) == (false))) {
-			NegativenModVariables.ShowVersion = (boolean) (true);
+		if (dependencies.get("entity") == null) {
+			System.err.println("Failed to load dependency entity for procedure ShowVerCommandExecuted!");
+			return;
+		}
+		Entity entity = (Entity) dependencies.get("entity");
+		if ((((entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new NegativenModVariables.PlayerVariables())).ShowVersion) == (true))) {
+			{
+				boolean _setval = (boolean) (false);
+				entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ShowVersion = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		} else if ((((entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new NegativenModVariables.PlayerVariables())).ShowVersion) == (false))) {
+			{
+				boolean _setval = (boolean) (true);
+				entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ShowVersion = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

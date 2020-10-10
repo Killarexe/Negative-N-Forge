@@ -51,22 +51,23 @@ public class DespawnMobsOnKeyPressedProcedure extends NegativenModElements.ModEl
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((NegativenModVariables.MapVariables.get(world).Debug) == (true))) {
-			if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
-				if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-					world.getWorld().getServer().getCommandManager()
-							.handleCommand(
-									new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-											new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
-									"kill @e[type=!player]");
-				}
-				{
-					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-					if (mcserv != null)
-						mcserv.getPlayerList().sendMessage(new StringTextComponent("Every Mobs Has been kill"));
-				}
-			} else {
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You are Not in creative mod!"), (true));
+			if ((entity.hasPermissionLevel((int) 4))) {
+				if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
+					if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
+						world.getWorld().getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+								"kill @e[type=!player]");
+					}
+					{
+						MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+						if (mcserv != null)
+							mcserv.getPlayerList().sendMessage(new StringTextComponent("Every Mobs Has been kill"));
+					}
+				} else {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You are Not in creative mod!"), (true));
+					}
 				}
 			}
 		} else {

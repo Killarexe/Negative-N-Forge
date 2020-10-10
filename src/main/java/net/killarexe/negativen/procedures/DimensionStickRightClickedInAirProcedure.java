@@ -55,28 +55,30 @@ public class DimensionStickRightClickedInAirProcedure extends NegativenModElemen
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((NegativenModVariables.MapVariables.get(world).Debug) == (true))) {
-			if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
-				{
-					Entity _ent = entity;
-					if (_ent instanceof ServerPlayerEntity) {
-						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
-						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-							@Override
-							public ITextComponent getDisplayName() {
-								return new StringTextComponent("DimensionStickGUI");
-							}
+			if ((entity.hasPermissionLevel((int) 4))) {
+				if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
+					{
+						Entity _ent = entity;
+						if (_ent instanceof ServerPlayerEntity) {
+							BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+							NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+								@Override
+								public ITextComponent getDisplayName() {
+									return new StringTextComponent("DimensionStickGUI");
+								}
 
-							@Override
-							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-								return new DimensionStickGUIGui.GuiContainerMod(id, inventory,
-										new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
+								@Override
+								public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+									return new DimensionStickGUIGui.GuiContainerMod(id, inventory,
+											new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+								}
+							}, _bpos);
+						}
 					}
-				}
-			} else {
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You are not in creative mod!"), (true));
+				} else {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You are not in creative mod!"), (true));
+					}
 				}
 			}
 		} else {

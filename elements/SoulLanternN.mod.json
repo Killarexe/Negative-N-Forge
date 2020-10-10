@@ -12,7 +12,7 @@
     "customModelName": "soul_lantern_n:default",
     "rotationMode": 0,
     "emissiveRendering": true,
-    "itemTexture": "",
+    "itemTexture": "soul_lantern_n",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "negativen:blocks/crimson_fungus_n",
+    "particle": "negativen:blocks/crimson_fungus_n"
+  }
+}

@@ -3,10 +3,10 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "negativen:negativedust"
+      "item": "negativen:diamond_n"
     },
     {
-      "item": "negativen:fusonator"
+      "item": "minecraft:stonecutter"
     },
     {
       "item": "negativen:updater"

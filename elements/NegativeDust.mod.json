@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "negative_dust",
+    "texture": "powder_n",
     "customModelName": "Normal",
     "name": "Negative Dust",
     "creativeTab": {
@@ -21,6 +21,7 @@
     "damageVsEntity": 0.0,
     "specialInfo": [],
     "hasGlow": false,
+    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64
   }

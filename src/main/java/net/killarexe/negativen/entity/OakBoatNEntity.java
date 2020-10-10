@@ -25,7 +25,6 @@ import net.minecraft.pathfinding.SwimmerPathNavigator;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.controller.MovementController;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.LivingEntity;
@@ -56,8 +55,8 @@ public class OakBoatNEntity extends NegativenModElements.ModElement {
 	@Override
 	public void initElements() {
 		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.6f, 1.8f))
-						.build("oak_boat_n").setRegistryName("oak_boat_n");
+				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.6f, 0.2f))
+						.build("oak_n_boat").setRegistryName("oak_n_boat");
 		elements.entities.add(() -> entity);
 	}
 
@@ -65,10 +64,10 @@ public class OakBoatNEntity extends NegativenModElements.ModElement {
 	@OnlyIn(Dist.CLIENT)
 	public void registerModels(ModelRegistryEvent event) {
 		RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
-			return new MobRenderer(renderManager, new ModelOak_Boat_N(), 0.5f) {
+			return new MobRenderer(renderManager, new Modeloak_n_boat(), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("negativen:textures/-.png");
+					return new ResourceLocation("negativen:textures/oak_n_boat.png");
 				}
 			};
 		});
@@ -115,7 +114,6 @@ public class OakBoatNEntity extends NegativenModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new SwimGoal(this));
 		}
 
 		@Override
@@ -206,7 +204,7 @@ public class OakBoatNEntity extends NegativenModElements.ModElement {
 				if (entity instanceof LivingEntity) {
 					this.setAIMoveSpeed((float) this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getValue());
 					float forward = ((LivingEntity) entity).moveForward;
-					float strafe = ((LivingEntity) entity).moveStrafing;
+					float strafe = 0;
 					super.travel(new Vec3d(strafe, 0, forward));
 				}
 				this.prevLimbSwingAmount = this.limbSwingAmount;
@@ -225,47 +223,36 @@ public class OakBoatNEntity extends NegativenModElements.ModElement {
 		}
 	}
 
-	// Made with Blockbench 3.6.5
+	// Made with Blockbench 3.6.6
 	// Exported for Minecraft version 1.15
 	// Paste this class into your mod and generate all required imports
-	public static class ModelOak_Boat_N extends EntityModel<Entity> {
+	public static class Modeloak_n_boat extends EntityModel<Entity> {
 		private final ModelRenderer bottom;
 		private final ModelRenderer front;
 		private final ModelRenderer back;
 		private final ModelRenderer right;
 		private final ModelRenderer left;
-		private final ModelRenderer paddle_left;
-		private final ModelRenderer paddle_right;
-		public ModelOak_Boat_N() {
+		public Modeloak_n_boat() {
 			textureWidth = 128;
 			textureHeight = 64;
 			bottom = new ModelRenderer(this);
-			bottom.setRotationPoint(0.0F, 6.0F, 0.0F);
-			setRotationAngle(bottom, 1.5708F, 0.0F, 0.0F);
+			bottom.setRotationPoint(0.0F, 24.0F, 0.0F);
+			setRotationAngle(bottom, 1.5708F, 1.5708F, 0.0F);
 			bottom.setTextureOffset(0, 0).addBox(-14.0F, -8.0F, 0.0F, 28.0F, 16.0F, 3.0F, 0.0F, true);
 			front = new ModelRenderer(this);
-			front.setRotationPoint(15.0F, 0.0F, 0.0F);
-			setRotationAngle(front, 0.0F, 1.5708F, 0.0F);
-			front.setTextureOffset(0, 27).addBox(-8.0F, -3.0F, -1.0F, 16.0F, 6.0F, 2.0F, 0.0F, true);
+			front.setRotationPoint(7.0F, 24.0F, 0.0F);
+			front.setTextureOffset(0, 27).addBox(-15.0F, -9.0F, -16.0F, 16.0F, 6.0F, 2.0F, 0.0F, true);
 			back = new ModelRenderer(this);
-			back.setRotationPoint(-15.0F, 0.0F, 0.0F);
-			setRotationAngle(back, 0.0F, -1.5708F, 0.0F);
-			back.setTextureOffset(0, 19).addBox(-9.0F, -3.0F, -1.0F, 18.0F, 6.0F, 2.0F, 0.0F, true);
+			back.setRotationPoint(8.0F, 21.0F, 13.0F);
+			back.setTextureOffset(0, 19).addBox(-16.0F, -6.0F, 0.0F, 16.0F, 6.0F, 2.0F, 0.0F, true);
 			right = new ModelRenderer(this);
-			right.setRotationPoint(0.0F, 0.0F, -9.0F);
-			setRotationAngle(right, 0.0F, -3.1416F, 0.0F);
-			right.setTextureOffset(0, 35).addBox(-14.0F, -3.0F, -1.0F, 28.0F, 6.0F, 2.0F, 0.0F, true);
+			right.setRotationPoint(0.0F, 24.0F, 0.0F);
+			setRotationAngle(right, 0.0F, -1.5708F, 0.0F);
+			right.setTextureOffset(0, 35).addBox(-14.0F, -9.0F, -10.0F, 28.0F, 6.0F, 2.0F, 0.0F, true);
 			left = new ModelRenderer(this);
-			left.setRotationPoint(0.0F, 0.0F, 9.0F);
-			left.setTextureOffset(0, 43).addBox(-14.0F, -3.0F, -1.0F, 28.0F, 6.0F, 2.0F, 0.0F, true);
-			paddle_left = new ModelRenderer(this);
-			paddle_left.setRotationPoint(-2.5F, -4.0F, 9.0F);
-			paddle_left.setTextureOffset(62, 0).addBox(-1.0F, -1.0F, -5.5F, 2.0F, 2.0F, 18.0F, 0.0F, true);
-			paddle_left.setTextureOffset(62, 0).addBox(-0.01F, -4.0F, 8.5F, 1.0F, 6.0F, 7.0F, 0.0F, true);
-			paddle_right = new ModelRenderer(this);
-			paddle_right.setRotationPoint(-2.5F, -4.0F, -9.0F);
-			paddle_right.setTextureOffset(62, 20).addBox(-1.0F, -1.0F, -5.5F, 2.0F, 2.0F, 18.0F, 0.0F, true);
-			paddle_right.setTextureOffset(62, 20).addBox(-0.99F, -4.0F, 8.5F, 1.0F, 6.0F, 7.0F, 0.0F, true);
+			left.setRotationPoint(0.0F, 42.0F, 0.0F);
+			setRotationAngle(left, 0.0F, -1.5708F, 0.0F);
+			left.setTextureOffset(0, 43).addBox(-14.0F, -27.0F, 8.0F, 28.0F, 6.0F, 2.0F, 0.0F, true);
 		}
 
 		@Override
@@ -276,8 +263,6 @@ public class OakBoatNEntity extends NegativenModElements.ModElement {
 			back.render(matrixStack, buffer, packedLight, packedOverlay);
 			right.render(matrixStack, buffer, packedLight, packedOverlay);
 			left.render(matrixStack, buffer, packedLight, packedOverlay);
-			paddle_left.render(matrixStack, buffer, packedLight, packedOverlay);
-			paddle_right.render(matrixStack, buffer, packedLight, packedOverlay);
 		}
 
 		public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
@@ -287,8 +272,6 @@ public class OakBoatNEntity extends NegativenModElements.ModElement {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
-			this.paddle_right.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
-			this.paddle_left.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1;
 		}
 	}
 }

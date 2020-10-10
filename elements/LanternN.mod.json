@@ -12,7 +12,7 @@
     "customModelName": "lantern_n:default",
     "rotationMode": 0,
     "emissiveRendering": true,
-    "itemTexture": "",
+    "itemTexture": "lantern_n",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",

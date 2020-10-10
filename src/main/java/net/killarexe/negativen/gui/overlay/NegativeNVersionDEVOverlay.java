@@ -39,7 +39,7 @@ public class NegativeNVersionDEVOverlay extends NegativenModElements.ModElement 
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			if (NegativeNVersionDEVDisplayOverlayIngameProcedure.executeProcedure(ImmutableMap.of())) {
+			if (NegativeNVersionDEVDisplayOverlayIngameProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				Minecraft.getInstance().fontRenderer.drawString("Negative-N 1.2.1 DEV_VERSION", posX + -207, posY + -117, -1);
 			}
 		}

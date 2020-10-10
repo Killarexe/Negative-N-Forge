@@ -25,9 +25,22 @@ public class DevShowCommandExecutedProcedure extends NegativenModElements.ModEle
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((NegativenModVariables.DevVerson) == (false))) {
-			NegativenModVariables.DevVerson = (boolean) (true);
-			NegativenModVariables.ShowVersion = (boolean) (false);
+		if ((((entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new NegativenModVariables.PlayerVariables())).DevVerson) == (false))) {
+			{
+				boolean _setval = (boolean) (true);
+				entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.DevVerson = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = (boolean) (false);
+				entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ShowVersion = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			if (entity instanceof ServerPlayerEntity) {
 				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 						.getAdvancement(new ResourceLocation("negativen:dev_overlay"));
@@ -40,9 +53,22 @@ public class DevShowCommandExecutedProcedure extends NegativenModElements.ModEle
 					}
 				}
 			}
-		} else if (((NegativenModVariables.DevVerson) == (true))) {
-			NegativenModVariables.DevVerson = (boolean) (false);
-			NegativenModVariables.ShowVersion = (boolean) (true);
+		} else if ((((entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new NegativenModVariables.PlayerVariables())).DevVerson) == (true))) {
+			{
+				boolean _setval = (boolean) (false);
+				entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.DevVerson = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = (boolean) (true);
+				entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ShowVersion = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

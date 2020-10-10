@@ -5,6 +5,18 @@
         "0": "torch_n"
       },
       "name": "default"
+    },
+    "redstone": {
+      "map": {
+        "0": "redstone_torch_n_off"
+      },
+      "name": "redstone"
+    },
+    "redstoneactif": {
+      "map": {
+        "0": "redstone_torch_n"
+      },
+      "name": "redstoneactif"
     }
   }
 }

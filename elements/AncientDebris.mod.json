@@ -11,7 +11,7 @@
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
-    "emissiveRendering": true,
+    "emissiveRendering": false,
     "itemTexture": "",
     "hasTransparency": false,
     "connectedSides": false,
@@ -89,25 +89,19 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "spawnWorldTypes": [
-      "CUSTOM:NetherNDim"
+      "CUSTOM:NetherNDim",
+      "CUSTOM:Nega"
     ],
-    "restrictionBiomes": [
-      {
-        "value": "CUSTOM:NetherN"
-      },
-      {
-        "value": "CUSTOM:SoulSandDesertN"
-      },
-      {
-        "value": "CUSTOM:NetherNWarpedBiome"
-      },
-      {
-        "value": "CUSTOM:NetherNCrimsonBiome"
-      }
-    ],
+    "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "CUSTOM:NetherrackN"
+      },
+      {
+        "value": "CUSTOM:StoneN"
+      },
+      {
+        "value": "CUSTOM:Startstone"
       }
     ],
     "frequencyPerChunks": 2,

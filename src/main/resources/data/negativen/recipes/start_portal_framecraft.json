@@ -3,17 +3,20 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "negativen:starteye"
+      "item": "negativen:emerald_n_ingot"
     },
     {
-      "item": "negativen:portalblock"
+      "item": "negativen:emerald_n_ingot"
     },
     {
-      "item": "negativen:updater"
+      "item": "negativen:blaze_ingot"
+    },
+    {
+      "item": "negativen:blaze_ingot"
     }
   ],
   "result": {
     "item": "negativen:startportalframe",
-    "count": 1
+    "count": 3
   }
 }

@@ -1,0 +1,16 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:gold_n_ingot"
+    },
+    {
+      "item": "negativen:blazenpowder"
+    }
+  ],
+  "result": {
+    "item": "negativen:blaze_ingot",
+    "count": 1
+  }
+}

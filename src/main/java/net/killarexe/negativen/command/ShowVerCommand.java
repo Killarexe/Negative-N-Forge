@@ -53,6 +53,7 @@ public class ShowVerCommand extends NegativenModElements.ModElement {
 		});
 		{
 			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("entity", entity);
 			ShowVerCommandExecutedProcedure.executeProcedure($_dependencies);
 		}
 		return 0;

@@ -15,7 +15,7 @@
     "rewardLoot": [],
     "rewardRecipes": [],
     "rewardFunction": "No function",
-    "rewardXP": 8,
+    "rewardXP": 0,
     "achievementType": "task",
     "parent": {
       "value": "CUSTOM:BackToNotClassic"

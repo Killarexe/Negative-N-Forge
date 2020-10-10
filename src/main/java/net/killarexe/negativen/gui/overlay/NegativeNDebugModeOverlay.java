@@ -39,7 +39,7 @@ public class NegativeNDebugModeOverlay extends NegativenModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			if (NegativeNDebugModeDisplayOverlayIngameProcedure.executeProcedure(ImmutableMap.of("world", world))) {
+			if (NegativeNDebugModeDisplayOverlayIngameProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world))) {
 				Minecraft.getInstance().fontRenderer.drawString("Negative-N DEBUG_MODE", posX + -207, posY + -117, -1);
 			}
 		}
