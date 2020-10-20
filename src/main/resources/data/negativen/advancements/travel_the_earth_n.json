@@ -1,0 +1,124 @@
+{
+  "display": {
+    "icon": {
+      "item": "negativen:fusonator_recipies_book"
+    },
+    "title": {
+      "translate": "advancements.travel_the_earth_n.title"
+    },
+    "description": {
+      "translate": "advancements.travel_the_earth_n.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "negativen:negative": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:negative",
+      }
+    },
+    "negativen:desert_n": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:desert_n",
+      }
+    },
+    "negativen:oak_nforest": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:oak_nforest",
+      }
+    },
+    "negativen:birch_n_forest": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:birch_n_forest",
+      }
+    },
+    "negativen:plains_n": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:plains_n",
+      }
+    },
+    "negativen:dark_oak_n_forest": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "dark_oak_n_forest",
+      }
+    },
+    "negativen:jungle_n": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:jungle_n",
+      }
+    },
+    "negativen:spruce_forest_n": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:spruce_forest_n",
+      }
+    },
+    "negativen:classic_biome_n": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:classic_biome_n",
+      }
+    },
+    "negativen:montains_n": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "montains_n",
+      }
+    },
+    "negativen:acacia_n_biome": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negativen:acacia_n_biome",
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "requirements": [
+  	[
+  		"negativen:negative"
+  	],
+  	[
+  		"negativen:desert_n"
+  	],
+  	[
+  		"negativen:oak_nforest"
+  	],
+  	[
+  		"negativen:birch_n_forest"
+  	],
+  	[
+  		"negativen:plains_n"
+  	],
+  	[
+  		"negativen:dark_oak_n_forest"
+  	],
+  	[
+  		"negativen:jungle_n"
+  	],
+  	[
+  		"negativen:spruce_forest_n"
+  	],
+  	[
+  		"negativen:classic_biome_n"
+  	],
+  	[
+  		"negativen:montains_n"
+  	],
+  	[
+  		"negativen:acacia_n_biome"
+  	]
+  ],
+  "parent": "negativen:nevitagen"
+}

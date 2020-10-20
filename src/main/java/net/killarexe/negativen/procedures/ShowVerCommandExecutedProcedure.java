@@ -10,7 +10,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class ShowVerCommandExecutedProcedure extends NegativenModElements.ModElement {
 	public ShowVerCommandExecutedProcedure(NegativenModElements instance) {
-		super(instance, 564);
+		super(instance, 640);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

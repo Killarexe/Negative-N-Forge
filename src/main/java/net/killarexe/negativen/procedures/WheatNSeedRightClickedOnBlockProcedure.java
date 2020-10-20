@@ -18,7 +18,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class WheatNSeedRightClickedOnBlockProcedure extends NegativenModElements.ModElement {
 	public WheatNSeedRightClickedOnBlockProcedure(NegativenModElements instance) {
-		super(instance, 576);
+		super(instance, 652);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

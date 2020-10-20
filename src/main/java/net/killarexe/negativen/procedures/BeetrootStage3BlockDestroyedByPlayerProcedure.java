@@ -12,7 +12,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class BeetrootStage3BlockDestroyedByPlayerProcedure extends NegativenModElements.ModElement {
 	public BeetrootStage3BlockDestroyedByPlayerProcedure(NegativenModElements instance) {
-		super(instance, 610);
+		super(instance, 679);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -16,7 +16,7 @@ public class AppleNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:apple_n")
 	public static final Item block = null;
 	public AppleNItem(NegativenModElements instance) {
-		super(instance, 226);
+		super(instance, 285);
 	}
 
 	@Override

@@ -9,13 +9,10 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.Mirror;
-import net.minecraft.util.Hand;
 import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.particles.ParticleTypes;
@@ -33,7 +30,7 @@ import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.procedures.TorchNState2OnBlockRightClickedProcedure;
+import net.killarexe.negativen.procedures.TorchNState2BlockAddedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.NegativenModElements;
 
@@ -48,7 +45,7 @@ public class TorchNState2Block extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:torch_n_state_2")
 	public static final Block block = null;
 	public TorchNState2Block(NegativenModElements instance) {
-		super(instance, 52);
+		super(instance, 68);
 	}
 
 	@Override
@@ -108,6 +105,22 @@ public class TorchNState2Block extends NegativenModElements.ModElement {
 			return Collections.singletonList(new ItemStack(this, 1));
 		}
 
+		@Override
+		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(state, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				TorchNState2BlockAddedProcedure.executeProcedure($_dependencies);
+			}
+		}
+
 		@OnlyIn(Dist.CLIENT)
 		@Override
 		public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
@@ -123,26 +136,6 @@ public class TorchNState2Block extends NegativenModElements.ModElement {
 					double d2 = (double) ((float) z + 0.5) + (double) (random.nextFloat() - 0.5) * 0.5D;
 					world.addParticle(ParticleTypes.SMOKE, d0, d1, d2, 0, 0, 0);
 				}
-		}
-
-		@Override
-		public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity entity, Hand hand,
-				BlockRayTraceResult hit) {
-			super.onBlockActivated(state, world, pos, entity, hand, hit);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			Direction direction = hit.getFace();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("direction", direction);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				TorchNState2OnBlockRightClickedProcedure.executeProcedure($_dependencies);
-			}
-			return ActionResultType.SUCCESS;
 		}
 	}
 }

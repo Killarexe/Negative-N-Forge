@@ -8,8 +8,8 @@
     "textureFront": "fire_n",
     "textureRight": "fire_n",
     "textureBack": "fire_n",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "renderType": 2,
+    "customModelName": "template_fire_floor:default",
     "rotationMode": 0,
     "emissiveRendering": true,
     "itemTexture": "",
@@ -39,7 +39,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 255,
+    "lightOpacity": 0,
     "material": {
       "value": "FIRE"
     },

@@ -41,7 +41,7 @@ public class TorchNState1Block extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:torch_n_state_1")
 	public static final Block block = null;
 	public TorchNState1Block(NegativenModElements instance) {
-		super(instance, 445);
+		super(instance, 523);
 	}
 
 	@Override

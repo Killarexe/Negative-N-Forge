@@ -27,7 +27,7 @@ public class NetherNBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:nethern")
 	public static final CustomBiome biome = null;
 	public NetherNBiome(NegativenModElements instance) {
-		super(instance, 328);
+		super(instance, 406);
 	}
 
 	@Override

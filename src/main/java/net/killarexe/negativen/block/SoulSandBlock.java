@@ -30,7 +30,7 @@ public class SoulSandBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:soul_sand_n")
 	public static final Block block = null;
 	public SoulSandBlock(NegativenModElements instance) {
-		super(instance, 174);
+		super(instance, 205);
 	}
 
 	@Override

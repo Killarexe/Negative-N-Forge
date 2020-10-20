@@ -1,12 +1,8 @@
 {
-  "parent": "block/cube",
+  "parent": "negativen:custom/template_fire_floor",
   "textures": {
-    "down": "negativen:blocks/fire_n",
-    "up": "negativen:blocks/transparent",
-    "north": "negativen:blocks/fire_n",
-    "east": "negativen:blocks/fire_n",
-    "south": "negativen:blocks/fire_n",
-    "west": "negativen:blocks/fire_n",
-    "particle": "negativen:blocks/fire_n"
+    "all": "negativen:blocks/fire_n",
+    "particle": "negativen:blocks/fire_n",
+    "fire": "negativen:blocks/fire_n"
   }
 }

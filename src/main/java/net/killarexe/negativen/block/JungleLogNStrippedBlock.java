@@ -30,7 +30,7 @@ public class JungleLogNStrippedBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:jungle_log_n_stripped")
 	public static final Block block = null;
 	public JungleLogNStrippedBlock(NegativenModElements instance) {
-		super(instance, 64);
+		super(instance, 80);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ import io.netty.buffer.Unpooled;
 @NegativenModElements.ModElement.Tag
 public class DecompositorOnBlockRightClickedProcedure extends NegativenModElements.ModElement {
 	public DecompositorOnBlockRightClickedProcedure(NegativenModElements instance) {
-		super(instance, 306);
+		super(instance, 384);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

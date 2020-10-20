@@ -15,7 +15,7 @@ public class QuartzNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:quartz_n")
 	public static final Item block = null;
 	public QuartzNItem(NegativenModElements instance) {
-		super(instance, 649);
+		super(instance, 41);
 	}
 
 	@Override

@@ -34,7 +34,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 	public AnvilNProccedProcedure(NegativenModElements instance) {
-		super(instance, 756);
+		super(instance, 766);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

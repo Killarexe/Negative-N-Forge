@@ -100,7 +100,7 @@ public class NoneDimDimension extends NegativenModElements.ModElement {
 	public static DimensionType type = null;
 	private static Biome[] dimensionBiomes;
 	public NoneDimDimension(NegativenModElements instance) {
-		super(instance, 348);
+		super(instance, 426);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

@@ -35,7 +35,7 @@ public class DarkOakSaplingNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:dark_oak_sapling_n")
 	public static final Block block = null;
 	public DarkOakSaplingNBlock(NegativenModElements instance) {
-		super(instance, 47);
+		super(instance, 63);
 	}
 
 	@Override

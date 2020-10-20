@@ -15,7 +15,7 @@ public class BookNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:book_n")
 	public static final Item block = null;
 	public BookNItem(NegativenModElements instance) {
-		super(instance, 17);
+		super(instance, 21);
 	}
 
 	@Override

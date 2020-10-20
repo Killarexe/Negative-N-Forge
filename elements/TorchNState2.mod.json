@@ -88,8 +88,8 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "TorchNState2OnBlockRightClicked"
+    "onBlockAdded": {
+      "name": "TorchNState2BlockAdded"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

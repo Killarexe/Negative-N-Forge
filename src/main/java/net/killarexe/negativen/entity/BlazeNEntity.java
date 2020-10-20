@@ -46,7 +46,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class BlazeNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public BlazeNEntity(NegativenModElements instance) {
-		super(instance, 39);
+		super(instance, 52);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

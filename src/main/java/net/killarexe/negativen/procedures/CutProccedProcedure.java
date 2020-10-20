@@ -41,7 +41,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class CutProccedProcedure extends NegativenModElements.ModElement {
 	public CutProccedProcedure(NegativenModElements instance) {
-		super(instance, 455);
+		super(instance, 533);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

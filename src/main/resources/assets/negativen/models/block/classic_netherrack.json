@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/netherrack",
+    "particle": "negativen:blocks/netherrack"
+  }
+}

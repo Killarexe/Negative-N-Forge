@@ -15,7 +15,7 @@ public class EmeraldNIngotItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:emerald_n_ingot")
 	public static final Item block = null;
 	public EmeraldNIngotItem(NegativenModElements instance) {
-		super(instance, 779);
+		super(instance, 3);
 	}
 
 	@Override

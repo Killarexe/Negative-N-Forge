@@ -17,7 +17,7 @@ import java.util.Iterator;
 @NegativenModElements.ModElement.Tag
 public class ArmorDNAProcedure extends NegativenModElements.ModElement {
 	public ArmorDNAProcedure(NegativenModElements instance) {
-		super(instance, 395);
+		super(instance, 473);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

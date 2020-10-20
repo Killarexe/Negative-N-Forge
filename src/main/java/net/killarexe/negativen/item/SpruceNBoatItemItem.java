@@ -25,7 +25,7 @@ public class SpruceNBoatItemItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:spruce_n_boat_item")
 	public static final Item block = null;
 	public SpruceNBoatItemItem(NegativenModElements instance) {
-		super(instance, 763);
+		super(instance, 333);
 	}
 
 	@Override

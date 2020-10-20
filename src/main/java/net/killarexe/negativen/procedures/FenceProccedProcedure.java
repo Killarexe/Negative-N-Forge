@@ -29,7 +29,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class FenceProccedProcedure extends NegativenModElements.ModElement {
 	public FenceProccedProcedure(NegativenModElements instance) {
-		super(instance, 457);
+		super(instance, 535);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

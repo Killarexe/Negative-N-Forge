@@ -22,7 +22,7 @@ public class CobblestoneCaveGameBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:cobblestone_cave_game")
 	public static final Block block = null;
 	public CobblestoneCaveGameBlock(NegativenModElements instance) {
-		super(instance, 593);
+		super(instance, 666);
 	}
 
 	@Override

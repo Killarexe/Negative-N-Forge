@@ -13,7 +13,7 @@ import net.killarexe.negativen.NegativenModElements;
 @NegativenModElements.ModElement.Tag
 public class NegativeNTransportItemGroup extends NegativenModElements.ModElement {
 	public NegativeNTransportItemGroup(NegativenModElements instance) {
-		super(instance, 757);
+		super(instance, 768);
 	}
 
 	@Override
@@ -27,9 +27,9 @@ public class NegativeNTransportItemGroup extends NegativenModElements.ModElement
 
 			@OnlyIn(Dist.CLIENT)
 			public boolean hasSearchBar() {
-				return true;
+				return false;
 			}
-		}.setBackgroundImageName("item_search.png");
+		};
 	}
 	public static ItemGroup tab;
 }

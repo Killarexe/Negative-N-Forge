@@ -105,7 +105,7 @@ public class NegaDimension extends NegativenModElements.ModElement {
 	public static DimensionType type = null;
 	private static Biome[] dimensionBiomes;
 	public NegaDimension(NegativenModElements instance) {
-		super(instance, 208);
+		super(instance, 269);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

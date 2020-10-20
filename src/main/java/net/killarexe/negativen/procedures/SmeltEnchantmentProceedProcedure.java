@@ -25,7 +25,7 @@ import java.util.HashMap;
 @NegativenModElements.ModElement.Tag
 public class SmeltEnchantmentProceedProcedure extends NegativenModElements.ModElement {
 	public SmeltEnchantmentProceedProcedure(NegativenModElements instance) {
-		super(instance, 741);
+		super(instance, 754);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

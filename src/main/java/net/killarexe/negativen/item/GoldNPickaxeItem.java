@@ -17,7 +17,7 @@ public class GoldNPickaxeItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:gold_n_pickaxe")
 	public static final Item block = null;
 	public GoldNPickaxeItem(NegativenModElements instance) {
-		super(instance, 213);
+		super(instance, 264);
 	}
 
 	@Override

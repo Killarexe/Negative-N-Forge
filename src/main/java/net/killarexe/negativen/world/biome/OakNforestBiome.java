@@ -50,7 +50,7 @@ public class OakNforestBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:oak_nforest")
 	public static final CustomBiome biome = null;
 	public OakNforestBiome(NegativenModElements instance) {
-		super(instance, 408);
+		super(instance, 486);
 	}
 
 	@Override

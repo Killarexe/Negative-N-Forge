@@ -31,7 +31,7 @@ public class WarpedNTrapDoorBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:warped_n_trap_door")
 	public static final Block block = null;
 	public WarpedNTrapDoorBlock(NegativenModElements instance) {
-		super(instance, 628);
+		super(instance, 211);
 	}
 
 	@Override

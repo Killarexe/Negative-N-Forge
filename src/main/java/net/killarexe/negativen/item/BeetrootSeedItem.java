@@ -15,7 +15,7 @@ public class BeetrootSeedItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:beetroot_seed")
 	public static final Item block = null;
 	public BeetrootSeedItem(NegativenModElements instance) {
-		super(instance, 602);
+		super(instance, 38);
 	}
 
 	@Override

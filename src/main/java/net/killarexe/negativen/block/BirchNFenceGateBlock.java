@@ -32,7 +32,7 @@ public class BirchNFenceGateBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:birch_n_fence_gate")
 	public static final Block block = null;
 	public BirchNFenceGateBlock(NegativenModElements instance) {
-		super(instance, 89);
+		super(instance, 106);
 	}
 
 	@Override

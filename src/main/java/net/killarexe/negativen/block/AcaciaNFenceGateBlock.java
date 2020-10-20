@@ -32,7 +32,7 @@ public class AcaciaNFenceGateBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:acacia_n_fence_gate")
 	public static final Block block = null;
 	public AcaciaNFenceGateBlock(NegativenModElements instance) {
-		super(instance, 88);
+		super(instance, 105);
 	}
 
 	@Override

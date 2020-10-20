@@ -50,7 +50,7 @@ public class RedMushroomNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:red_mushroom_n")
 	public static final Block block = null;
 	public RedMushroomNBlock(NegativenModElements instance) {
-		super(instance, 723);
+		super(instance, 113);
 	}
 
 	@Override

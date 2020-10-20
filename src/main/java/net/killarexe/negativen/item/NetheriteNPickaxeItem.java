@@ -17,7 +17,7 @@ public class NetheriteNPickaxeItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:netherite_n_pickaxe")
 	public static final Item block = null;
 	public NetheriteNPickaxeItem(NegativenModElements instance) {
-		super(instance, 188);
+		super(instance, 244);
 	}
 
 	@Override

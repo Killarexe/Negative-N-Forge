@@ -17,7 +17,7 @@ public class CoalNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:coaln")
 	public static final Item block = null;
 	public CoalNItem(NegativenModElements instance) {
-		super(instance, 5);
+		super(instance, 8);
 	}
 
 	@Override

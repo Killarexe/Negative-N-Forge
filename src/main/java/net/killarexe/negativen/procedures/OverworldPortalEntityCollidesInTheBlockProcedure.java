@@ -20,7 +20,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class OverworldPortalEntityCollidesInTheBlockProcedure extends NegativenModElements.ModElement {
 	public OverworldPortalEntityCollidesInTheBlockProcedure(NegativenModElements instance) {
-		super(instance, 527);
+		super(instance, 605);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

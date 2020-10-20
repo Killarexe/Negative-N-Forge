@@ -48,7 +48,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class CowNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public CowNEntity(NegativenModElements instance) {
-		super(instance, 41);
+		super(instance, 54);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -51,7 +51,7 @@ public class ClassicRoseNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:classic_rose_n")
 	public static final Block block = null;
 	public ClassicRoseNBlock(NegativenModElements instance) {
-		super(instance, 243);
+		super(instance, 308);
 	}
 
 	@Override

@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class DebugModeOnKeyPressedProcedure extends NegativenModElements.ModElement {
 	public DebugModeOnKeyPressedProcedure(NegativenModElements instance) {
-		super(instance, 374);
+		super(instance, 452);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -35,6 +35,13 @@ public class DebugModeOnKeyPressedProcedure extends NegativenModElements.ModElem
 					}
 					NegativenModVariables.MapVariables.get(world).Debug = (boolean) (false);
 					NegativenModVariables.MapVariables.get(world).syncData(world);
+					{
+						boolean _setval = (boolean) (true);
+						entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.ShowVersion = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				} else {
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You are not in Creative Mod!"), (true));
@@ -49,6 +56,13 @@ public class DebugModeOnKeyPressedProcedure extends NegativenModElements.ModElem
 					}
 					NegativenModVariables.MapVariables.get(world).Debug = (boolean) (true);
 					NegativenModVariables.MapVariables.get(world).syncData(world);
+					{
+						boolean _setval = (boolean) (false);
+						entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.ShowVersion = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				} else {
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You are not in Creative Mod!"), (true));

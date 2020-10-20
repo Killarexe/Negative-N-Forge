@@ -35,7 +35,7 @@ public class JungleSaplingNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:jungle_sapling_n")
 	public static final Block block = null;
 	public JungleSaplingNBlock(NegativenModElements instance) {
-		super(instance, 50);
+		super(instance, 66);
 	}
 
 	@Override

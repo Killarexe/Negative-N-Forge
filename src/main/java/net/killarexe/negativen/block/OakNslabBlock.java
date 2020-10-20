@@ -33,7 +33,7 @@ public class OakNslabBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:oak_n_slab")
 	public static final Block block = null;
 	public OakNslabBlock(NegativenModElements instance) {
-		super(instance, 104);
+		super(instance, 135);
 	}
 
 	@Override

@@ -26,7 +26,7 @@ public class StartstoneBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:startstone")
 	public static final Block block = null;
 	public StartstoneBlock(NegativenModElements instance) {
-		super(instance, 146);
+		super(instance, 177);
 	}
 
 	@Override

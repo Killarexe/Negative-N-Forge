@@ -46,7 +46,7 @@ public class SweetBerryNBushStage2Block extends NegativenModElements.ModElement 
 	@ObjectHolder("negativen:sweet_berry_n_bush_stage_2")
 	public static final Block block = null;
 	public SweetBerryNBushStage2Block(NegativenModElements instance) {
-		super(instance, 728);
+		super(instance, 744);
 	}
 
 	@Override

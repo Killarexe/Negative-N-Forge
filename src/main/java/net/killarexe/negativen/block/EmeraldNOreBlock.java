@@ -41,7 +41,7 @@ public class EmeraldNOreBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:emerald_n_ore")
 	public static final Block block = null;
 	public EmeraldNOreBlock(NegativenModElements instance) {
-		super(instance, 131);
+		super(instance, 162);
 	}
 
 	@Override

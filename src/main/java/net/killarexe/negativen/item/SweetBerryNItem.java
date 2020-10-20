@@ -18,7 +18,7 @@ public class SweetBerryNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:sweet_berry_n")
 	public static final Item block = null;
 	public SweetBerryNItem(NegativenModElements instance) {
-		super(instance, 725);
+		super(instance, 292);
 	}
 
 	@Override

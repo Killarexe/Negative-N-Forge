@@ -13,7 +13,7 @@ import java.util.HashMap;
 @NegativenModElements.ModElement.Tag
 public class RedstoneStageLineProcedure extends NegativenModElements.ModElement {
 	public RedstoneStageLineProcedure(NegativenModElements instance) {
-		super(instance, 637);
+		super(instance, 691);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

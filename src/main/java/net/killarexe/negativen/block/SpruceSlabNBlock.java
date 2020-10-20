@@ -26,7 +26,7 @@ public class SpruceSlabNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:spruce_slab_n")
 	public static final Block block = null;
 	public SpruceSlabNBlock(NegativenModElements instance) {
-		super(instance, 124);
+		super(instance, 155);
 	}
 
 	@Override

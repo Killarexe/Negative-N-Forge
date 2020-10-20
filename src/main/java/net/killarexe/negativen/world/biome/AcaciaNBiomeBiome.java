@@ -28,7 +28,7 @@ public class AcaciaNBiomeBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:acacia_n_biome")
 	public static final CustomBiome biome = null;
 	public AcaciaNBiomeBiome(NegativenModElements instance) {
-		super(instance, 550);
+		super(instance, 627);
 	}
 
 	@Override

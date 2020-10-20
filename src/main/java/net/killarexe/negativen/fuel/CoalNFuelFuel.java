@@ -13,7 +13,7 @@ import net.killarexe.negativen.NegativenModElements;
 @NegativenModElements.ModElement.Tag
 public class CoalNFuelFuel extends NegativenModElements.ModElement {
 	public CoalNFuelFuel(NegativenModElements instance) {
-		super(instance, 301);
+		super(instance, 379);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

@@ -48,7 +48,7 @@ public class ClassicWaterNBlock extends NegativenModElements.ModElement {
 	public static FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 	public ClassicWaterNBlock(NegativenModElements instance) {
-		super(instance, 237);
+		super(instance, 302);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

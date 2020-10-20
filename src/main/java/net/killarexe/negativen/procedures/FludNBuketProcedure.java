@@ -15,7 +15,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class FludNBuketProcedure extends NegativenModElements.ModElement {
 	public FludNBuketProcedure(NegativenModElements instance) {
-		super(instance, 398);
+		super(instance, 476);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

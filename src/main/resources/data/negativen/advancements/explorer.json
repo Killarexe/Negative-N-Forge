@@ -1,0 +1,97 @@
+{
+  "display": {
+    "icon": {
+      "item": "negativen:paper_n"
+    },
+    "title": {
+      "translate": "advancements.explorer.title"
+    },
+    "description": {
+      "translate": "advancements.explorer.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "negativen:underworld": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "negativen:nega"
+      }
+    },
+    "negativen:mineingdim": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "negativen:mineingdim"
+      }
+    },
+    "negativen:netherndim": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "negativen:netherndim"
+      }
+    },
+    "negativen:startdim": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "negativen:startdim"
+      }
+    },
+    "negativen:classic_dim": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "negativen:classic_dim"
+      }
+    },
+    "negativen:classic_n_dim": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "negativen:classic_n_dim"
+      }
+    },
+    "negativen:classic_nether_n": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "negativen:netherndim"
+      }
+    },
+    "negativen:classic_nether_dim": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "negativen:classic_nether_dim"
+      }
+    }
+  },
+  "requirements": [
+  	[
+  		"negativen:nega"
+  	],
+  	[
+  		"negativen:mineingdim"
+  	],
+  	[
+  		"negativen:netherndim"
+  	],
+  	[
+  		"negativen:startdim"
+  	],
+  	[
+  		"negativen:classic_dim"
+  	],
+  	[
+  		"negativen:classic_n_dim"
+  	],
+  	[
+  		"negativen:netherndim"
+  	],
+  	[
+  		"negativen:classic_nether_dim"
+  	]
+  ],
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "negativen:starting"
+}

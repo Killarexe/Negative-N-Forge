@@ -50,7 +50,7 @@ import java.util.EnumSet;
 public class GhastNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public GhastNEntity(NegativenModElements instance) {
-		super(instance, 43);
+		super(instance, 56);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

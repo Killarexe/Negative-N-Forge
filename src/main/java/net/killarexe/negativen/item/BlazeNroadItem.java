@@ -17,7 +17,7 @@ public class BlazeNroadItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:blazenroad")
 	public static final Item block = null;
 	public BlazeNroadItem(NegativenModElements instance) {
-		super(instance, 10);
+		super(instance, 11);
 	}
 
 	@Override

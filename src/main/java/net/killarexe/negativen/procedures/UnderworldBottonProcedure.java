@@ -21,7 +21,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class UnderworldBottonProcedure extends NegativenModElements.ModElement {
 	public UnderworldBottonProcedure(NegativenModElements instance) {
-		super(instance, 354);
+		super(instance, 432);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

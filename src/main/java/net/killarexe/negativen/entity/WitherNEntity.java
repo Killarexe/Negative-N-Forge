@@ -64,7 +64,7 @@ public class WitherNEntity extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:entitybulletwither_n")
 	public static final EntityType arrow = null;
 	public WitherNEntity(NegativenModElements instance) {
-		super(instance, 598);
+		super(instance, 670);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

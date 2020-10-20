@@ -1,0 +1,13 @@
+{
+  "group": "negativen",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negativen:iron_ningot"
+    }
+  ],
+  "result": {
+    "item": "negativen:iron_n_nugget",
+    "count": 9
+  }
+}

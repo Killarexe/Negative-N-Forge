@@ -22,7 +22,7 @@ import java.util.HashMap;
 @NegativenModElements.ModElement.Tag
 public class BurnProtectionEffectProcedure extends NegativenModElements.ModElement {
 	public BurnProtectionEffectProcedure(NegativenModElements instance) {
-		super(instance, 558);
+		super(instance, 635);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

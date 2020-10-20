@@ -50,7 +50,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class PigNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public PigNEntity(NegativenModElements instance) {
-		super(instance, 35);
+		super(instance, 48);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

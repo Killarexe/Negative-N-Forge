@@ -32,7 +32,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class NetherFNStructure extends NegativenModElements.ModElement {
 	public NetherFNStructure(NegativenModElements instance) {
-		super(instance, 387);
+		super(instance, 465);
 	}
 
 	@Override

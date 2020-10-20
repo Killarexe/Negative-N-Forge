@@ -19,6 +19,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.RedstoneStageLineProcedure;
+import net.killarexe.negativen.procedures.GetRedstoneNProcedure;
 import net.killarexe.negativen.NegativenModElements;
 
 import java.util.Map;
@@ -31,7 +32,7 @@ public class RedstoneLampNOnBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:redstone_lamp_n_on")
 	public static final Block block = null;
 	public RedstoneLampNOnBlock(NegativenModElements instance) {
-		super(instance, 644);
+		super(instance, 692);
 	}
 
 	@Override
@@ -63,6 +64,22 @@ public class RedstoneLampNOnBlock extends NegativenModElements.ModElement {
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
+		}
+
+		@Override
+		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(state, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				GetRedstoneNProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override

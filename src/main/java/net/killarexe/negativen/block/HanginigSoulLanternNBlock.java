@@ -41,7 +41,7 @@ public class HanginigSoulLanternNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:hanginig_soul_lantern_n")
 	public static final Block block = null;
 	public HanginigSoulLanternNBlock(NegativenModElements instance) {
-		super(instance, 751);
+		super(instance, 761);
 	}
 
 	@Override

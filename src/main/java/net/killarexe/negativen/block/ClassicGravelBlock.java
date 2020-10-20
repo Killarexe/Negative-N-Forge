@@ -38,7 +38,7 @@ public class ClassicGravelBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:classic_gravel")
 	public static final Block block = null;
 	public ClassicGravelBlock(NegativenModElements instance) {
-		super(instance, 254);
+		super(instance, 319);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public class DimensionStickItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:dimensionstick")
 	public static final Item block = null;
 	public DimensionStickItem(NegativenModElements instance) {
-		super(instance, 324);
+		super(instance, 402);
 	}
 
 	@Override

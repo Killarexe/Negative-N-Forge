@@ -21,7 +21,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class BucketNLivingEntityIsHitWithItemProcedure extends NegativenModElements.ModElement {
 	public BucketNLivingEntityIsHitWithItemProcedure(NegativenModElements instance) {
-		super(instance, 674);
+		super(instance, 703);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

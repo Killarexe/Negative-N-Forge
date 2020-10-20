@@ -17,7 +17,7 @@ public class SlimeBallNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:slime_ball_n")
 	public static final Item block = null;
 	public SlimeBallNItem(NegativenModElements instance) {
-		super(instance, 22);
+		super(instance, 26);
 	}
 
 	@Override

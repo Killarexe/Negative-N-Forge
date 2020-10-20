@@ -31,7 +31,7 @@ public class GrassBlockNSnowBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:grass_block_n_snow")
 	public static final Block block = null;
 	public GrassBlockNSnowBlock(NegativenModElements instance) {
-		super(instance, 157);
+		super(instance, 188);
 	}
 
 	@Override

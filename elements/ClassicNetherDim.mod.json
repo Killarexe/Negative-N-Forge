@@ -1,0 +1,53 @@
+{
+  "_fv": 10,
+  "_type": "dimension",
+  "definition": {
+    "portalFrame": {
+      "value": "Blocks.OBSIDIAN"
+    },
+    "portalParticles": {
+      "value": "PORTAL"
+    },
+    "portalLuminance": 0.5,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Classic Nether Key",
+    "igniterTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "texture": "fint_nega",
+    "portalTexture": "nethern_portal",
+    "enablePortal": true,
+    "portalMakeCondition": {
+      "name": "ClassicNethersCanTravel"
+    },
+    "portalUseCondition": {
+      "name": "ClassicNethersCanTravel"
+    },
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:ClassicNether"
+      }
+    ],
+    "worldGenType": "End like gen",
+    "mainFillerBlock": {
+      "value": "CUSTOM:ClassicNetherrack"
+    },
+    "fluidBlock": {
+      "value": "CUSTOM:ClassicLavaN"
+    },
+    "airColor": {
+      "value": -65536,
+      "falpha": 0.0
+    },
+    "canRespawnHere": false,
+    "hasFog": true,
+    "hasWeather": false,
+    "isDark": true,
+    "doesWaterVaporize": true,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": false,
+    "imitateOverworldBehaviour": false
+  }
+}

@@ -36,7 +36,7 @@ public class OverworldPortalBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:overworld_portal")
 	public static final Block block = null;
 	public OverworldPortalBlock(NegativenModElements instance) {
-		super(instance, 528);
+		super(instance, 606);
 	}
 
 	@Override

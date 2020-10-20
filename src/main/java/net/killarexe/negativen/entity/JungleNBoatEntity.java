@@ -48,7 +48,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class JungleNBoatEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public JungleNBoatEntity(NegativenModElements instance) {
-		super(instance, 768);
+		super(instance, 45);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

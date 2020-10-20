@@ -29,7 +29,7 @@ public class Iron_NArmorItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:iron_narmor_boots")
 	public static final Item boots = null;
 	public Iron_NArmorItem(NegativenModElements instance) {
-		super(instance, 179);
+		super(instance, 235);
 	}
 
 	@Override

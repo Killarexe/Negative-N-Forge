@@ -50,7 +50,7 @@ public class NegativeBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:negative")
 	public static final CustomBiome biome = null;
 	public NegativeBiome(NegativenModElements instance) {
-		super(instance, 276);
+		super(instance, 354);
 	}
 
 	@Override

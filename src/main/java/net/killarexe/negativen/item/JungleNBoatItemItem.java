@@ -25,7 +25,7 @@ public class JungleNBoatItemItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:jungle_n_boat_item")
 	public static final Item block = null;
 	public JungleNBoatItemItem(NegativenModElements instance) {
-		super(instance, 762);
+		super(instance, 332);
 	}
 
 	@Override

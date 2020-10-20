@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class IronAndFlintRightClickedOnBlockProcedure extends NegativenModElements.ModElement {
 	public IronAndFlintRightClickedOnBlockProcedure(NegativenModElements instance) {
-		super(instance, 492);
+		super(instance, 570);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

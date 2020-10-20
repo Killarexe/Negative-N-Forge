@@ -31,7 +31,7 @@ public class OakNTrapDoorBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:oak_n_trap_door")
 	public static final Block block = null;
 	public OakNTrapDoorBlock(NegativenModElements instance) {
-		super(instance, 164);
+		super(instance, 195);
 	}
 
 	@Override

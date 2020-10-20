@@ -50,7 +50,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class ChickenNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public ChickenNEntity(NegativenModElements instance) {
-		super(instance, 42);
+		super(instance, 55);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

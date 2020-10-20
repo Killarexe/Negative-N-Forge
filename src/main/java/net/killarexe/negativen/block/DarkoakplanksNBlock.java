@@ -24,7 +24,7 @@ public class DarkoakplanksNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:darkoakplanks_n")
 	public static final Block block = null;
 	public DarkoakplanksNBlock(NegativenModElements instance) {
-		super(instance, 114);
+		super(instance, 145);
 	}
 
 	@Override

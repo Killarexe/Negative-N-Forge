@@ -43,7 +43,7 @@ public class DesertNBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:desert_n")
 	public static final CustomBiome biome = null;
 	public DesertNBiome(NegativenModElements instance) {
-		super(instance, 407);
+		super(instance, 485);
 	}
 
 	@Override

@@ -38,7 +38,7 @@ public class PeonyNBottomBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:peony_n_bottom")
 	public static final Block block = null;
 	public PeonyNBottomBlock(NegativenModElements instance) {
-		super(instance, 731);
+		super(instance, 114);
 	}
 
 	@Override

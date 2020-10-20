@@ -38,7 +38,7 @@ public class FireNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:fire_n")
 	public static final Block block = null;
 	public FireNBlock(NegativenModElements instance) {
-		super(instance, 491);
+		super(instance, 569);
 	}
 
 	@Override
@@ -68,6 +68,11 @@ public class FireNBlock extends NegativenModElements.ModElement {
 		@Override
 		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
 			return false;
+		}
+
+		@Override
+		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
+			return true;
 		}
 
 		@Override

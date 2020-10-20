@@ -24,7 +24,7 @@ public class SoulSandDesertNBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:soul_sand_desert_n")
 	public static final CustomBiome biome = null;
 	public SoulSandDesertNBiome(NegativenModElements instance) {
-		super(instance, 636);
+		super(instance, 690);
 	}
 
 	@Override

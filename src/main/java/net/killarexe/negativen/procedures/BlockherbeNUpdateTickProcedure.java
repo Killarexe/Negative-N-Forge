@@ -14,7 +14,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class BlockherbeNUpdateTickProcedure extends NegativenModElements.ModElement {
 	public BlockherbeNUpdateTickProcedure(NegativenModElements instance) {
-		super(instance, 436);
+		super(instance, 514);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

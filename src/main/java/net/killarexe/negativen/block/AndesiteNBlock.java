@@ -38,7 +38,7 @@ public class AndesiteNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:andesite_n")
 	public static final Block block = null;
 	public AndesiteNBlock(NegativenModElements instance) {
-		super(instance, 170);
+		super(instance, 201);
 	}
 
 	@Override

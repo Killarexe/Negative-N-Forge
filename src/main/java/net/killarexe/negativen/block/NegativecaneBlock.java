@@ -51,7 +51,7 @@ public class NegativecaneBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:negativecane")
 	public static final Block block = null;
 	public NegativecaneBlock(NegativenModElements instance) {
-		super(instance, 12);
+		super(instance, 456);
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class NetheriteNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:netherite_n")
 	public static final Item block = null;
 	public NetheriteNItem(NegativenModElements instance) {
-		super(instance, 34);
+		super(instance, 36);
 	}
 
 	@Override

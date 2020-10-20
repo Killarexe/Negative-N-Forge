@@ -27,7 +27,7 @@ public class SugarCaneNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:sugar_cane_n")
 	public static final Item block = null;
 	public SugarCaneNItem(NegativenModElements instance) {
-		super(instance, 618);
+		super(instance, 39);
 	}
 
 	@Override
@@ -74,6 +74,7 @@ public class SugarCaneNItem extends NegativenModElements.ModElement {
 			ItemStack itemstack = context.getItem();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

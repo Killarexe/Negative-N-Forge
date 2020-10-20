@@ -33,7 +33,7 @@ public class ClassicWoodBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:classic_wood")
 	public static final Block block = null;
 	public ClassicWoodBlock(NegativenModElements instance) {
-		super(instance, 234);
+		super(instance, 299);
 	}
 
 	@Override

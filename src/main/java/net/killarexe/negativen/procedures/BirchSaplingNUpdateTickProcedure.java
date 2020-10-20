@@ -16,7 +16,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class BirchSaplingNUpdateTickProcedure extends NegativenModElements.ModElement {
 	public BirchSaplingNUpdateTickProcedure(NegativenModElements instance) {
-		super(instance, 438);
+		super(instance, 516);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

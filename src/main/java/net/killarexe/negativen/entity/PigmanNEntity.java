@@ -50,7 +50,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class PigmanNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public PigmanNEntity(NegativenModElements instance) {
-		super(instance, 671);
+		super(instance, 60);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

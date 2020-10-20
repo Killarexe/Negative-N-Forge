@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "si",
+    "texture": "debug_stick",
     "customModelName": "Normal",
     "name": "Dimension Stick",
     "creativeTab": {
@@ -21,6 +21,7 @@
     "damageVsEntity": 0.0,
     "specialInfo": [],
     "hasGlow": true,
+    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {

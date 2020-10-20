@@ -20,7 +20,7 @@ import com.google.common.collect.ImmutableMap;
 @NegativenModElements.ModElement.Tag
 public class NegativeNDebugModeOverlay extends NegativenModElements.ModElement {
 	public NegativeNDebugModeOverlay(NegativenModElements instance) {
-		super(instance, 480);
+		super(instance, 558);
 	}
 
 	@Override

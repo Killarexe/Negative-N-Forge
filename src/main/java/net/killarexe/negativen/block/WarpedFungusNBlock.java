@@ -50,7 +50,7 @@ public class WarpedFungusNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:warped_fungus_n")
 	public static final Block block = null;
 	public WarpedFungusNBlock(NegativenModElements instance) {
-		super(instance, 782);
+		super(instance, 120);
 	}
 
 	@Override

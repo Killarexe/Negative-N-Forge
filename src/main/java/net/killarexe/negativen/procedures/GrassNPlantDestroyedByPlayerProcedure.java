@@ -14,7 +14,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class GrassNPlantDestroyedByPlayerProcedure extends NegativenModElements.ModElement {
 	public GrassNPlantDestroyedByPlayerProcedure(NegativenModElements instance) {
-		super(instance, 690);
+		super(instance, 709);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

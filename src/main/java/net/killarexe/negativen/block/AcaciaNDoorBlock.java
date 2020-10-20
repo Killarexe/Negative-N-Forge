@@ -34,7 +34,7 @@ public class AcaciaNDoorBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:acacia_n_door")
 	public static final Block block = null;
 	public AcaciaNDoorBlock(NegativenModElements instance) {
-		super(instance, 159);
+		super(instance, 190);
 	}
 
 	@Override

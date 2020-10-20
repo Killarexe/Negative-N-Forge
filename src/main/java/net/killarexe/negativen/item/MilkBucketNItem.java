@@ -18,7 +18,7 @@ public class MilkBucketNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:milk_bucket_n")
 	public static final Item block = null;
 	public MilkBucketNItem(NegativenModElements instance) {
-		super(instance, 673);
+		super(instance, 20);
 	}
 
 	@Override

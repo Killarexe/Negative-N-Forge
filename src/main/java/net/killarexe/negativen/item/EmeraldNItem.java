@@ -15,7 +15,7 @@ public class EmeraldNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:emerald_n")
 	public static final Item block = null;
 	public EmeraldNItem(NegativenModElements instance) {
-		super(instance, 32);
+		super(instance, 4);
 	}
 
 	@Override

@@ -16,7 +16,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.procedures.RedstoneStageLineProcedure;
+import net.killarexe.negativen.procedures.GetRedstoneNProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNRedstoneNItemGroup;
 import net.killarexe.negativen.NegativenModElements;
 
@@ -30,7 +30,7 @@ public class RedstoneLampNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:redstone_lamp_n")
 	public static final Block block = null;
 	public RedstoneLampNBlock(NegativenModElements instance) {
-		super(instance, 643);
+		super(instance, 327);
 	}
 
 	@Override
@@ -60,6 +60,22 @@ public class RedstoneLampNBlock extends NegativenModElements.ModElement {
 		}
 
 		@Override
+		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(state, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				GetRedstoneNProcedure.executeProcedure($_dependencies);
+			}
+		}
+
+		@Override
 		public void neighborChanged(BlockState state, World world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
 			super.neighborChanged(state, world, pos, neighborBlock, fromPos, moving);
 			int x = pos.getX();
@@ -74,7 +90,7 @@ public class RedstoneLampNBlock extends NegativenModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				RedstoneStageLineProcedure.executeProcedure($_dependencies);
+				GetRedstoneNProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

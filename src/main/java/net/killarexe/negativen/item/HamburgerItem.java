@@ -22,7 +22,7 @@ public class HamburgerItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:hamburger")
 	public static final Item block = null;
 	public HamburgerItem(NegativenModElements instance) {
-		super(instance, 224);
+		super(instance, 283);
 	}
 
 	@Override

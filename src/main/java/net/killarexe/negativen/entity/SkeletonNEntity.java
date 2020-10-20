@@ -57,7 +57,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class SkeletonNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public SkeletonNEntity(NegativenModElements instance) {
-		super(instance, 45);
+		super(instance, 58);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -90,8 +90,6 @@ public class SkeletonNEntity extends NegativenModElements.ModElement {
 			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:jungle_n")))
 				biomeCriteria = true;
 			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:spruce_forest_n")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:spruce_n_forest")))
 				biomeCriteria = true;
 			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:montains_n")))
 				biomeCriteria = true;

@@ -15,7 +15,7 @@ public class GoldNIngotItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:gold_n_ingot")
 	public static final Item block = null;
 	public GoldNIngotItem(NegativenModElements instance) {
-		super(instance, 3);
+		super(instance, 6);
 	}
 
 	@Override

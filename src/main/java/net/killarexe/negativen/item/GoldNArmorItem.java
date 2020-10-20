@@ -29,7 +29,7 @@ public class GoldNArmorItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:gold_n_armor_boots")
 	public static final Item boots = null;
 	public GoldNArmorItem(NegativenModElements instance) {
-		super(instance, 178);
+		super(instance, 234);
 	}
 
 	@Override

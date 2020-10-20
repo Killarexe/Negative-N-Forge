@@ -4,7 +4,7 @@
   "experience": 1,
   "cookingtime": 200,
   "ingredient": {
-    "item": "negativen:ancient_debris_n"
+    "item": "negativen:unknown_element"
   },
   "result": {
     "item": "negativen:netherite_n_scrap"

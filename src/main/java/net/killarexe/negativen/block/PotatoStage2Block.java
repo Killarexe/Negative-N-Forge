@@ -40,7 +40,7 @@ public class PotatoStage2Block extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:potato_stage_2")
 	public static final Block block = null;
 	public PotatoStage2Block(NegativenModElements instance) {
-		super(instance, 622);
+		super(instance, 687);
 	}
 
 	@Override

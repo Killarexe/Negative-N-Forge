@@ -43,7 +43,7 @@ public class StartBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:start")
 	public static final CustomBiome biome = null;
 	public StartBiome(NegativenModElements instance) {
-		super(instance, 345);
+		super(instance, 423);
 	}
 
 	@Override

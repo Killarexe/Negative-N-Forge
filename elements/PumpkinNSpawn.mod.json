@@ -1,0 +1,26 @@
+{
+  "_fv": 10,
+  "_type": "structure",
+  "definition": {
+    "structure": "pumpkin_n",
+    "randomlyRotateStructure": true,
+    "surfaceDetectionType": "First motion blocking block",
+    "spawnProbability": 7500,
+    "minCountPerChunk": 5,
+    "maxCountPerChunk": 10,
+    "spawnLocation": "Ground",
+    "spawnHeightOffset": 0,
+    "spawnWorldTypes": [
+      "CUSTOM:Nega",
+      "CUSTOM:MineingDim",
+      "CUSTOM:NetherNDim",
+      "CUSTOM:ClassicDim",
+      "CUSTOM:ClassicNDim",
+      "CUSTOM:ClassicNetherN",
+      "CUSTOM:ClassicNetherDim"
+    ],
+    "restrictionBlocks": [],
+    "restrictionBiomes": [],
+    "ignoreBlocks": "STRUCTURE_BLOCK"
+  }
+}

@@ -23,7 +23,7 @@ public class CobblestoneSwordItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:cobblestone_n_sword")
 	public static final Item block = null;
 	public CobblestoneSwordItem(NegativenModElements instance) {
-		super(instance, 184);
+		super(instance, 240);
 	}
 
 	@Override

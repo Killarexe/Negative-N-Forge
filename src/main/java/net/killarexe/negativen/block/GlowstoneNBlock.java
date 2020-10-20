@@ -46,7 +46,7 @@ public class GlowstoneNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:glowstonen")
 	public static final Block block = null;
 	public GlowstoneNBlock(NegativenModElements instance) {
-		super(instance, 140);
+		super(instance, 171);
 	}
 
 	@Override

@@ -11,7 +11,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class NegativeNVerShowProcedure extends NegativenModElements.ModElement {
 	public NegativeNVerShowProcedure(NegativenModElements instance) {
-		super(instance, 566);
+		super(instance, 642);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
@@ -25,8 +25,8 @@ public class NegativeNVerShowProcedure extends NegativenModElements.ModElement {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
-		return (((NegativenModVariables.MapVariables.get(world).Debug) == (false))
-				&& (((entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new NegativenModVariables.PlayerVariables())).ShowVersion) == (true)));
+		return ((((entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new NegativenModVariables.PlayerVariables())).ShowVersion) == (true))
+				&& ((NegativenModVariables.MapVariables.get(world).Debug) == (false)));
 	}
 }

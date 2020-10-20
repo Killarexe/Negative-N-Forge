@@ -48,7 +48,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class BirchNBoatEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public BirchNBoatEntity(NegativenModElements instance) {
-		super(instance, 767);
+		super(instance, 44);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

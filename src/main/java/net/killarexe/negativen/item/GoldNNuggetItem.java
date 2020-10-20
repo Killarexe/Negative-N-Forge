@@ -15,7 +15,7 @@ public class GoldNNuggetItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:gold_n_nugget")
 	public static final Item block = null;
 	public GoldNNuggetItem(NegativenModElements instance) {
-		super(instance, 26);
+		super(instance, 30);
 	}
 
 	@Override

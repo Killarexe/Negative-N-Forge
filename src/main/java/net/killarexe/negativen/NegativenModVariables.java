@@ -42,7 +42,10 @@ public class NegativenModVariables {
 	private void init(FMLCommonSetupEvent event) {
 		CapabilityManager.INSTANCE.register(PlayerVariables.class, new PlayerVariablesStorage(), PlayerVariables::new);
 	}
+	public static boolean IsHalloween = false;
+	public static boolean IsChistmas = false;
 	public static double global_timer = 0;
+	public static boolean IsAnniversary = false;
 	@SubscribeEvent
 	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		if (!event.getPlayer().world.isRemote) {
@@ -68,9 +71,9 @@ public class NegativenModVariables {
 	}
 	public static class WorldVariables extends WorldSavedData {
 		public static final String DATA_NAME = "negativen_worldvars";
-		public double X = 0;
-		public double Y = 0;
 		public double Z = 0;
+		public double Y = 0;
+		public double X = 0;
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
@@ -81,16 +84,16 @@ public class NegativenModVariables {
 
 		@Override
 		public void read(CompoundNBT nbt) {
-			X = nbt.getDouble("X");
-			Y = nbt.getDouble("Y");
 			Z = nbt.getDouble("Z");
+			Y = nbt.getDouble("Y");
+			X = nbt.getDouble("X");
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
-			nbt.putDouble("X", X);
-			nbt.putDouble("Y", Y);
 			nbt.putDouble("Z", Z);
+			nbt.putDouble("Y", Y);
+			nbt.putDouble("X", X);
 			return nbt;
 		}
 
@@ -210,22 +213,22 @@ public class NegativenModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
-			nbt.putBoolean("DevVerson", instance.DevVerson);
 			nbt.putBoolean("ShowVersion", instance.ShowVersion);
+			nbt.putBoolean("DevVerson", instance.DevVerson);
 			return nbt;
 		}
 
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
-			instance.DevVerson = nbt.getBoolean("DevVerson");
 			instance.ShowVersion = nbt.getBoolean("ShowVersion");
+			instance.DevVerson = nbt.getBoolean("DevVerson");
 		}
 	}
 
 	public static class PlayerVariables {
-		public boolean DevVerson = false;
 		public boolean ShowVersion = true;
+		public boolean DevVerson = false;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				NegativenMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -260,8 +263,8 @@ public class NegativenModVariables {
 					.orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PlayerVariables()));
-			clone.DevVerson = original.DevVerson;
 			clone.ShowVersion = original.ShowVersion;
+			clone.DevVerson = original.DevVerson;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -285,8 +288,8 @@ public class NegativenModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
-					variables.DevVerson = message.data.DevVerson;
 					variables.ShowVersion = message.data.ShowVersion;
+					variables.DevVerson = message.data.DevVerson;
 				}
 			});
 			context.setPacketHandled(true);

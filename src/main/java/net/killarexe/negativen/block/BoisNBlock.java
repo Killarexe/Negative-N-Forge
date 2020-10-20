@@ -33,7 +33,7 @@ public class BoisNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:oak_logn")
 	public static final Block block = null;
 	public BoisNBlock(NegativenModElements instance) {
-		super(instance, 101);
+		super(instance, 132);
 	}
 
 	@Override

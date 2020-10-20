@@ -16,7 +16,7 @@ import java.util.Iterator;
 @NegativenModElements.ModElement.Tag
 public class DevShowCommandExecutedProcedure extends NegativenModElements.ModElement {
 	public DevShowCommandExecutedProcedure(NegativenModElements instance) {
-		super(instance, 567);
+		super(instance, 643);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -39,7 +39,7 @@ public class CobblestoneNWallBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:cobblestone_n_wall")
 	public static final Block block = null;
 	public CobblestoneNWallBlock(NegativenModElements instance) {
-		super(instance, 86);
+		super(instance, 103);
 	}
 
 	@Override

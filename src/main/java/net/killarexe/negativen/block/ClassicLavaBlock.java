@@ -48,7 +48,7 @@ public class ClassicLavaBlock extends NegativenModElements.ModElement {
 	public static FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 	public ClassicLavaBlock(NegativenModElements instance) {
-		super(instance, 238);
+		super(instance, 303);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

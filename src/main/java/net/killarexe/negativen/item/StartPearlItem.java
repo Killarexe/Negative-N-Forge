@@ -15,7 +15,7 @@ public class StartPearlItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:start_pearl")
 	public static final Item block = null;
 	public StartPearlItem(NegativenModElements instance) {
-		super(instance, 777);
+		super(instance, 15);
 	}
 
 	@Override

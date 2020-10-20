@@ -15,7 +15,7 @@ public class SickNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:stick_n")
 	public static final Item block = null;
 	public SickNItem(NegativenModElements instance) {
-		super(instance, 7);
+		super(instance, 10);
 	}
 
 	@Override

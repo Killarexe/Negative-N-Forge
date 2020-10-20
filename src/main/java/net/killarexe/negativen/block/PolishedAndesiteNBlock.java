@@ -24,7 +24,7 @@ public class PolishedAndesiteNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:polished_andesite_n")
 	public static final Block block = null;
 	public PolishedAndesiteNBlock(NegativenModElements instance) {
-		super(instance, 75);
+		super(instance, 92);
 	}
 
 	@Override

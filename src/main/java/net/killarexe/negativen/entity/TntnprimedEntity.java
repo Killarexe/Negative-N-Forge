@@ -43,7 +43,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class TntnprimedEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public TntnprimedEntity(NegativenModElements instance) {
-		super(instance, 319);
+		super(instance, 397);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

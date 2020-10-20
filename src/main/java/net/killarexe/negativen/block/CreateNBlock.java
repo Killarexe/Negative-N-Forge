@@ -74,7 +74,7 @@ public class CreateNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:createn")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public CreateNBlock(NegativenModElements instance) {
-		super(instance, 144);
+		super(instance, 175);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

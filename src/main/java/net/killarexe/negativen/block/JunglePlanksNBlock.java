@@ -24,7 +24,7 @@ public class JunglePlanksNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:jungle_planks_n")
 	public static final Block block = null;
 	public JunglePlanksNBlock(NegativenModElements instance) {
-		super(instance, 118);
+		super(instance, 149);
 	}
 
 	@Override

@@ -48,7 +48,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class DarkOakNBoatEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public DarkOakNBoatEntity(NegativenModElements instance) {
-		super(instance, 766);
+		super(instance, 43);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

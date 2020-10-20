@@ -17,7 +17,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class DoorNOnBlockRightClickedProcedure extends NegativenModElements.ModElement {
 	public DoorNOnBlockRightClickedProcedure(NegativenModElements instance) {
-		super(instance, 463);
+		super(instance, 541);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

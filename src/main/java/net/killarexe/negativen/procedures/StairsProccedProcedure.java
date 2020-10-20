@@ -29,7 +29,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class StairsProccedProcedure extends NegativenModElements.ModElement {
 	public StairsProccedProcedure(NegativenModElements instance) {
-		super(instance, 456);
+		super(instance, 534);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

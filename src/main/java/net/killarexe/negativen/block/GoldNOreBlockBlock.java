@@ -28,7 +28,7 @@ public class GoldNOreBlockBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:gold_n_ore_block")
 	public static final Block block = null;
 	public GoldNOreBlockBlock(NegativenModElements instance) {
-		super(instance, 96);
+		super(instance, 127);
 	}
 
 	@Override

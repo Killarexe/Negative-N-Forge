@@ -50,7 +50,7 @@ public class CrimsonFungusNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:crimson_fungus_n")
 	public static final Block block = null;
 	public CrimsonFungusNBlock(NegativenModElements instance) {
-		super(instance, 783);
+		super(instance, 121);
 	}
 
 	@Override

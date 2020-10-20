@@ -23,7 +23,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class SpawnerNUpdateTickProcedure extends NegativenModElements.ModElement {
 	public SpawnerNUpdateTickProcedure(NegativenModElements instance) {
-		super(instance, 737);
+		super(instance, 750);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

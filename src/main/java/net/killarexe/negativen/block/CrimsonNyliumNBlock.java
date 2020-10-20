@@ -30,7 +30,7 @@ public class CrimsonNyliumNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:crimson_nylium_n")
 	public static final Block block = null;
 	public CrimsonNyliumNBlock(NegativenModElements instance) {
-		super(instance, 658);
+		super(instance, 222);
 	}
 
 	@Override

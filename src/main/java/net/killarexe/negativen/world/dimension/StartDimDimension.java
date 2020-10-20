@@ -100,7 +100,7 @@ public class StartDimDimension extends NegativenModElements.ModElement {
 	public static DimensionType type = null;
 	private static Biome[] dimensionBiomes;
 	public StartDimDimension(NegativenModElements instance) {
-		super(instance, 211);
+		super(instance, 272);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

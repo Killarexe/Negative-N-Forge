@@ -23,7 +23,7 @@ public class FusonatorRecipiesBookItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:fusonator_recipies_book")
 	public static final Item block = null;
 	public FusonatorRecipiesBookItem(NegativenModElements instance) {
-		super(instance, 21);
+		super(instance, 25);
 	}
 
 	@Override

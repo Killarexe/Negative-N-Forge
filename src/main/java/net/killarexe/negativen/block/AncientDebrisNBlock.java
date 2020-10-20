@@ -26,7 +26,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.world.dimension.NetherNDimDimension;
-import net.killarexe.negativen.world.dimension.NegaDimension;
+import net.killarexe.negativen.world.dimension.MineingDimDimension;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.NegativenModElements;
 
@@ -35,11 +35,11 @@ import java.util.List;
 import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
-public class AncientDebrisBlock extends NegativenModElements.ModElement {
+public class AncientDebrisNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:ancient_debris_n")
 	public static final Block block = null;
-	public AncientDebrisBlock(NegativenModElements instance) {
-		super(instance, 129);
+	public AncientDebrisNBlock(NegativenModElements instance) {
+		super(instance, 160);
 	}
 
 	@Override
@@ -50,7 +50,7 @@ public class AncientDebrisBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.GLASS).sound(SoundType.GLASS).hardnessAndResistance(50f, 90f).lightValue(0).harvestLevel(4)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 50f).lightValue(0).harvestLevel(6)
 					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("ancient_debris_n");
 		}
@@ -73,7 +73,9 @@ public class AncientDebrisBlock extends NegativenModElements.ModElement {
 					boolean dimensionCriteria = false;
 					if (dimensionType == NetherNDimDimension.type)
 						dimensionCriteria = true;
-					if (dimensionType == NegaDimension.type)
+					if (dimensionType == MineingDimDimension.type)
+						dimensionCriteria = true;
+					if (dimensionType == DimensionType.OVERWORLD)
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
@@ -81,14 +83,12 @@ public class AncientDebrisBlock extends NegativenModElements.ModElement {
 				}
 			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("ancient_debris_n", "ancient_debris_n", blockAt -> {
 				boolean blockCriteria = false;
-				if (blockAt.getBlock() == NetherrackNBlock.block.getDefaultState().getBlock())
-					blockCriteria = true;
 				if (blockAt.getBlock() == StoneNBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
-				if (blockAt.getBlock() == StartstoneBlock.block.getDefaultState().getBlock())
+				if (blockAt.getBlock() == NetherrackNBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 2)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(2, 1, 1, 15))));
+			}), block.getDefaultState(), 2)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(2, 0, 0, 17))));
 		}
 	}
 }

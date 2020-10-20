@@ -30,7 +30,7 @@ public class CrimsonNStemBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:crimson_n_stem")
 	public static final Block block = null;
 	public CrimsonNStemBlock(NegativenModElements instance) {
-		super(instance, 629);
+		super(instance, 212);
 	}
 
 	@Override

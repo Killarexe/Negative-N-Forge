@@ -32,7 +32,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class SpruceNTreeStructure extends NegativenModElements.ModElement {
 	public SpruceNTreeStructure(NegativenModElements instance) {
-		super(instance, 547);
+		super(instance, 624);
 	}
 
 	@Override

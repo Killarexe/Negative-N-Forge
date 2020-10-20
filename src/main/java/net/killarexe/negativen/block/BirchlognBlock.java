@@ -30,7 +30,7 @@ public class BirchlognBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:birchlogn")
 	public static final Block block = null;
 	public BirchlognBlock(NegativenModElements instance) {
-		super(instance, 109);
+		super(instance, 140);
 	}
 
 	@Override

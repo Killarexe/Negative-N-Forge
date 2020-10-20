@@ -20,7 +20,7 @@ import com.google.common.collect.ImmutableMap;
 @NegativenModElements.ModElement.Tag
 public class NegativeNVerOverlay extends NegativenModElements.ModElement {
 	public NegativeNVerOverlay(NegativenModElements instance) {
-		super(instance, 563);
+		super(instance, 639);
 	}
 
 	@Override
@@ -39,8 +39,8 @@ public class NegativeNVerOverlay extends NegativenModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			if (NegativeNVerShowProcedure.executeProcedure(ImmutableMap.of("world", world))) {
-				Minecraft.getInstance().fontRenderer.drawString("Negative-N 1.2.1", posX + -207, posY + -117, -1);
+			if (NegativeNVerShowProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world))) {
+				Minecraft.getInstance().fontRenderer.drawString("Negative-N 1.2.2", posX + -207, posY + -117, -1);
 			}
 		}
 	}

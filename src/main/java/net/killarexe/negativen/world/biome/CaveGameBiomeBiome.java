@@ -18,7 +18,7 @@ public class CaveGameBiomeBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:cave_game_biome")
 	public static final CustomBiome biome = null;
 	public CaveGameBiomeBiome(NegativenModElements instance) {
-		super(instance, 594);
+		super(instance, 667);
 	}
 
 	@Override

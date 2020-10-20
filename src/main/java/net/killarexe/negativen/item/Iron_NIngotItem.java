@@ -23,7 +23,7 @@ public class Iron_NIngotItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:iron_ningot")
 	public static final Item block = null;
 	public Iron_NIngotItem(NegativenModElements instance) {
-		super(instance, 4);
+		super(instance, 7);
 	}
 
 	@Override

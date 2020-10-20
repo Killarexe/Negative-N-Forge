@@ -16,7 +16,7 @@ public class BeefcookedNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:beefcookedn")
 	public static final Item block = null;
 	public BeefcookedNItem(NegativenModElements instance) {
-		super(instance, 221);
+		super(instance, 280);
 	}
 
 	@Override

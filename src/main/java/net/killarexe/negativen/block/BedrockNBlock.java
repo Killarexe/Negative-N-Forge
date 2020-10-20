@@ -41,7 +41,7 @@ public class BedrockNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:bedrock_n")
 	public static final Block block = null;
 	public BedrockNBlock(NegativenModElements instance) {
-		super(instance, 724);
+		super(instance, 231);
 	}
 
 	@Override

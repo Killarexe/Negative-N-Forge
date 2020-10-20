@@ -16,7 +16,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class DarkOakSaplingNUpdateTickProcedure extends NegativenModElements.ModElement {
 	public DarkOakSaplingNUpdateTickProcedure(NegativenModElements instance) {
-		super(instance, 430);
+		super(instance, 508);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

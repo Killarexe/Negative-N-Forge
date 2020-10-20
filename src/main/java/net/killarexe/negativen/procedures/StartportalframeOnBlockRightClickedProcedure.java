@@ -20,7 +20,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class StartportalframeOnBlockRightClickedProcedure extends NegativenModElements.ModElement {
 	public StartportalframeOnBlockRightClickedProcedure(NegativenModElements instance) {
-		super(instance, 347);
+		super(instance, 425);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

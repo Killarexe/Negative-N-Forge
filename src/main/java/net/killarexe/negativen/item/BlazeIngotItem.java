@@ -15,7 +15,7 @@ public class BlazeIngotItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:blaze_ingot")
 	public static final Item block = null;
 	public BlazeIngotItem(NegativenModElements instance) {
-		super(instance, 778);
+		super(instance, 5);
 	}
 
 	@Override

@@ -23,7 +23,7 @@ public class Iron_NAxeItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:iron_naxe")
 	public static final Item block = null;
 	public Iron_NAxeItem(NegativenModElements instance) {
-		super(instance, 197);
+		super(instance, 253);
 	}
 
 	@Override

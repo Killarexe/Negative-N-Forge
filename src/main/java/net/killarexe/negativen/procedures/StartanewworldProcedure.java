@@ -1,80 +1,64 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraftforge.fml.server.ServerLifecycleHooks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
+import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
 
 import java.util.Map;
 import java.util.Iterator;
 import java.util.HashMap;
+import java.util.Date;
 
 @NegativenModElements.ModElement.Tag
 public class StartanewworldProcedure extends NegativenModElements.ModElement {
 	public StartanewworldProcedure(NegativenModElements instance) {
-		super(instance, 315);
+		super(instance, 388);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
+	public static void executeProcedure(Map<String, Object> dependencies){
+		if(dependencies.get("entity") == null){
 			System.err.println("Failed to load dependency entity for procedure Startanewworld!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure Startanewworld!");
-			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
-		IWorld world = (IWorld) dependencies.get("world");
-		if ((((entity instanceof ServerPlayerEntity) && (entity.world instanceof ServerWorld))
-				? ((ServerPlayerEntity) entity).getAdvancements()
-						.getProgress(((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
-								.getAdvancement(new ResourceLocation("negativen:wtnn")))
-						.isDone()
-				: false)) {
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).clearActivePotions();
-		} else {
-			if (entity instanceof ServerPlayerEntity) {
-				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
-						.getAdvancement(new ResourceLocation("negativen:wtnn"));
-				AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
-				if (!_ap.isDone()) {
-					Iterator _iterator = _ap.getRemaningCriteria().iterator();
-					while (_iterator.hasNext()) {
-						String _criterion = (String) _iterator.next();
-						((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
-					}
-				}
-			}
-			if ((world.getWorld().isRemote)) {
-				{
-					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-					if (mcserv != null)
-						mcserv.getPlayerList().sendMessage(new StringTextComponent("Hello and Thank You for download Negative-N 1.2"));
-				}
-				{
-					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-					if (mcserv != null)
-						mcserv.getPlayerList().sendMessage(new StringTextComponent(
-								"If you want to see the Wiki: https://negativenmod.blogspot.com/p/welcome-to-negative-n-wiki.html"));
-				}
-			}
-		}
+				Entity entity = (Entity) dependencies.get("entity");
+
+
+Date special = new Date();
+if (((special.getDay())
+==31)) {if (((special.getMonth())
+==10)) {        NegativenModVariables.IsHalloween =(boolean)(true);
+if(entity instanceof ServerPlayerEntity) {
+	Advancement _adv = ((MinecraftServer)((ServerPlayerEntity)entity).server).getAdvancementManager()
+        .getAdvancement(new ResourceLocation("negativen:happy_halloween"));
+    AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
+    if (!_ap.isDone()) {
+        Iterator _iterator = _ap.getRemaningCriteria().iterator();
+        while(_iterator.hasNext()) {
+            String _criterion = (String)_iterator.next();
+            ((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+        }
+    }
+}}}else if (((special.getDay())
+==(24|25))) {if (((special.getMonth())
+==12)) {        NegativenModVariables.IsChistmas =(boolean)(true);
+}}else if (((special.getMonth())
+==3)) {if (((special.getDay())
+==17)) {        NegativenModVariables.IsAnniversary =(boolean)(true);
+}}else{        NegativenModVariables.IsAnniversary =(boolean)(false);
+        NegativenModVariables.IsHalloween =(boolean)(false);
+        NegativenModVariables.IsChistmas =(boolean)(false);
+}
 	}
 
 	@SubscribeEvent
