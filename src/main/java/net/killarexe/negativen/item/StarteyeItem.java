@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
 public class StarteyeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:starteye")
+	@ObjectHolder("negativen:start_eye")
 	public static final Item block = null;
 	public StarteyeItem(NegativenModElements instance) {
 		super(instance, 14);
@@ -25,7 +25,7 @@ public class StarteyeItem extends NegativenModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
-			setRegistryName("starteye");
+			setRegistryName("start_eye");
 		}
 
 		@Override

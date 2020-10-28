@@ -21,7 +21,7 @@ import java.util.HashMap;
 
 @NegativenModElements.ModElement.Tag
 public class DimensionStickItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:dimensionstick")
+	@ObjectHolder("negativen:dimension_stick")
 	public static final Item block = null;
 	public DimensionStickItem(NegativenModElements instance) {
 		super(instance, 402);
@@ -34,7 +34,7 @@ public class DimensionStickItem extends NegativenModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(null).maxStackSize(1));
-			setRegistryName("dimensionstick");
+			setRegistryName("dimension_stick");
 		}
 
 		@Override

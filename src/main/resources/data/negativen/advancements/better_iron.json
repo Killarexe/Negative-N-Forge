@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "negativen:iron_ningot"
+      "item": "negativen:iron_n_ingot"
     },
     "title": {
       "translate": "advancements.better_iron.title"
@@ -20,7 +20,7 @@
       "conditions": {
         "items": [
           {
-            "item": "negativen:iron_ningot",
+            "item": "negativen:iron_n_ingot",
             "count": {
               "min": 1,
               "max": 64

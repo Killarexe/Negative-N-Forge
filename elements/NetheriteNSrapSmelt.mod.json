@@ -9,7 +9,7 @@
     "group": "",
     "recipeShapeless": false,
     "smeltingInputStack": {
-      "value": "CUSTOM:AncientDebris"
+      "value": "CUSTOM:AncientDebrisN"
     },
     "smeltingReturnStack": {
       "value": "CUSTOM:NetheriteNScrap"

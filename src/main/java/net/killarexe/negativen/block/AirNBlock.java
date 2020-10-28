@@ -28,7 +28,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class AirNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:airn")
+	@ObjectHolder("negativen:air_n")
 	public static final Block block = null;
 	public AirNBlock(NegativenModElements instance) {
 		super(instance, 168);
@@ -43,7 +43,7 @@ public class AirNBlock extends NegativenModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).lightValue(0).doesNotBlockMovement());
-			setRegistryName("airn");
+			setRegistryName("air_n");
 		}
 
 		@Override

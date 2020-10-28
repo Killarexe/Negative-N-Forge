@@ -24,7 +24,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class PlanchedeboisNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:oak_planksn")
+	@ObjectHolder("negativen:oak_planks_n")
 	public static final Block block = null;
 	public PlanchedeboisNBlock(NegativenModElements instance) {
 		super(instance, 133);
@@ -40,7 +40,7 @@ public class PlanchedeboisNBlock extends NegativenModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 12f).lightValue(0).harvestLevel(0)
 					.harvestTool(ToolType.AXE));
-			setRegistryName("oak_planksn");
+			setRegistryName("oak_planks_n");
 		}
 
 		@Override

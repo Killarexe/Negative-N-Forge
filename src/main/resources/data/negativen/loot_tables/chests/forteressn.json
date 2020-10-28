@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "negativen:starteye",
+          "name": "negativen:start_eye",
           "weight": 1
         }
       ]

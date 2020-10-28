@@ -21,7 +21,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class BirchplanksnBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:birchplanksn")
+	@ObjectHolder("negativen:birch_planks_n")
 	public static final Block block = null;
 	public BirchplanksnBlock(NegativenModElements instance) {
 		super(instance, 141);
@@ -37,7 +37,7 @@ public class BirchplanksnBlock extends NegativenModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 10f).lightValue(0).harvestLevel(0)
 					.harvestTool(ToolType.AXE));
-			setRegistryName("birchplanksn");
+			setRegistryName("birch_planks_n");
 		}
 
 		@Override

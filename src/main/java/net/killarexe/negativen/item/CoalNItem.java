@@ -14,7 +14,7 @@ import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
 public class CoalNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:coaln")
+	@ObjectHolder("negativen:coal_n")
 	public static final Item block = null;
 	public CoalNItem(NegativenModElements instance) {
 		super(instance, 8);
@@ -27,7 +27,7 @@ public class CoalNItem extends NegativenModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
-			setRegistryName("coaln");
+			setRegistryName("coal_n");
 		}
 
 		@Override

@@ -7,12 +7,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Negative-N 1.2.2 DEV_VERSION",
+          "text": "Negative-N 1.2.3 DEV_VERSION",
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "name": "Negative-N 1.2.2 DEV_VERSION",
+          "name": "Negative-N 1.2.3 DEV_VERSION",
           "x": 12,
           "y": 6
         }

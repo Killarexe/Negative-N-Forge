@@ -24,7 +24,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class CoalBlockBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:coalblock")
+	@ObjectHolder("negativen:coal_n_block")
 	public static final Block block = null;
 	public CoalBlockBlock(NegativenModElements instance) {
 		super(instance, 166);
@@ -40,7 +40,7 @@ public class CoalBlockBlock extends NegativenModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(50f, 10f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE));
-			setRegistryName("coalblock");
+			setRegistryName("coal_n_block");
 		}
 
 		@Override

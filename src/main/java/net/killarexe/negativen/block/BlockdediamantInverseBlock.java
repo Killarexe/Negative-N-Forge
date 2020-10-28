@@ -70,9 +70,9 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class BlockdediamantInverseBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:diamond_block_n")
+	@ObjectHolder("negativen:diamond_n_block")
 	public static final Block block = null;
-	@ObjectHolder("negativen:diamond_block_n")
+	@ObjectHolder("negativen:diamond_n_block")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BlockdediamantInverseBlock(NegativenModElements instance) {
 		super(instance, 125);
@@ -88,13 +88,13 @@ public class BlockdediamantInverseBlock extends NegativenModElements.ModElement 
 
 	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("diamond_block_n"));
+		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("diamond_n_block"));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.STONE).hardnessAndResistance(5f, 19f).lightValue(0).harvestLevel(6)
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 19f).lightValue(0).harvestLevel(6)
 					.harvestTool(ToolType.PICKAXE));
-			setRegistryName("diamond_block_n");
+			setRegistryName("diamond_n_block");
 		}
 
 		@Override
@@ -224,7 +224,7 @@ public class BlockdediamantInverseBlock extends NegativenModElements.ModElement 
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("diamond_block_n");
+			return new StringTextComponent("diamond_n_block");
 		}
 
 		@Override
@@ -300,7 +300,7 @@ public class BlockdediamantInverseBlock extends NegativenModElements.ModElement 
 						return false;
 					return super.place(world, generator, rand, pos, config);
 				}
-			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("diamond_block_n", "diamond_block_n", blockAt -> {
+			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("diamond_n_block", "diamond_n_block", blockAt -> {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
 					blockCriteria = true;

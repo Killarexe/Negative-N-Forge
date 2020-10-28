@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "negativen:iron_ningot"
+      "item": "negativen:iron_n_ingot"
     }
   ],
   "result": {

@@ -27,7 +27,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class AcacialognBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:acacialogn")
+	@ObjectHolder("negativen:acacia_log_n")
 	public static final Block block = null;
 	public AcacialognBlock(NegativenModElements instance) {
 		super(instance, 136);
@@ -45,7 +45,7 @@ public class AcacialognBlock extends NegativenModElements.ModElement {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 10f).lightValue(0).harvestLevel(0)
 					.harvestTool(ToolType.AXE));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.SOUTH));
-			setRegistryName("acacialogn");
+			setRegistryName("acacia_log_n");
 		}
 
 		@Override

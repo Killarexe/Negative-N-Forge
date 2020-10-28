@@ -1,34 +1,32 @@
 {
   "group": "negativen",
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " 12",
-    "345",
-    "67 "
-  ],
-  "key": {
-    "1": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "negativen:netherite_n_scrap"
     },
-    "2": {
+    {
       "item": "negativen:netherite_n_scrap"
     },
-    "3": {
+    {
       "item": "negativen:netherite_n_scrap"
     },
-    "4": {
+    {
       "item": "negativen:netherite_n_scrap"
     },
-    "5": {
+    {
       "item": "negativen:gold_n_ingot"
     },
-    "6": {
+    {
       "item": "negativen:gold_n_ingot"
     },
-    "7": {
+    {
+      "item": "negativen:gold_n_ingot"
+    },
+    {
       "item": "negativen:gold_n_ingot"
     }
-  },
+  ],
   "result": {
     "item": "negativen:netherite_n",
     "count": 1

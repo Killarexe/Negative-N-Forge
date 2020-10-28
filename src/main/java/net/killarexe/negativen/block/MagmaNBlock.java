@@ -42,7 +42,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class MagmaNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:magman")
+	@ObjectHolder("negativen:magma_n")
 	public static final Block block = null;
 	public MagmaNBlock(NegativenModElements instance) {
 		super(instance, 172);
@@ -64,7 +64,7 @@ public class MagmaNBlock extends NegativenModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1.3f, 10f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE).notSolid());
-			setRegistryName("magman");
+			setRegistryName("magma_n");
 		}
 
 		@Override
@@ -104,7 +104,7 @@ public class MagmaNBlock extends NegativenModElements.ModElement {
 						return false;
 					return super.place(world, generator, rand, pos, config);
 				}
-			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("magman", "magman", blockAt -> {
+			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("magma_n", "magma_n", blockAt -> {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == NetherrackNBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;

@@ -30,7 +30,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class PortalblockBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:portalblock")
+	@ObjectHolder("negativen:portal_block")
 	public static final Block block = null;
 	public PortalblockBlock(NegativenModElements instance) {
 		super(instance, 167);
@@ -48,7 +48,7 @@ public class PortalblockBlock extends NegativenModElements.ModElement {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3f, 500f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.SOUTH));
-			setRegistryName("portalblock");
+			setRegistryName("portal_block");
 		}
 
 		@Override

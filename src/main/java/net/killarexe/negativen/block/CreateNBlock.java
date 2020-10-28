@@ -69,9 +69,9 @@ import io.netty.buffer.Unpooled;
 
 @NegativenModElements.ModElement.Tag
 public class CreateNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:createn")
+	@ObjectHolder("negativen:create_n")
 	public static final Block block = null;
-	@ObjectHolder("negativen:createn")
+	@ObjectHolder("negativen:create_n")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public CreateNBlock(NegativenModElements instance) {
 		super(instance, 175);
@@ -87,7 +87,7 @@ public class CreateNBlock extends NegativenModElements.ModElement {
 
 	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("createn"));
+		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("create_n"));
 	}
 
 	@Override
@@ -98,7 +98,7 @@ public class CreateNBlock extends NegativenModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1.25f, 10f).lightValue(0).notSolid());
-			setRegistryName("createn");
+			setRegistryName("create_n");
 		}
 
 		@Override
@@ -267,7 +267,7 @@ public class CreateNBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("createn");
+			return new StringTextComponent("create_n");
 		}
 
 		@Override

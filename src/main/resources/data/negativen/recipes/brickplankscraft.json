@@ -3,11 +3,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "negativen:birchlogn"
+      "item": "negativen:birch_log_n"
     }
   ],
   "result": {
-    "item": "negativen:birchplanksn",
+    "item": "negativen:birch_planks_n",
     "count": 4
   }
 }

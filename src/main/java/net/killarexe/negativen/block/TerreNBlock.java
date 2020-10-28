@@ -32,7 +32,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class TerreNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:terren")
+	@ObjectHolder("negativen:dirt_n")
 	public static final Block block = null;
 	public TerreNBlock(NegativenModElements instance) {
 		super(instance, 157);
@@ -48,7 +48,7 @@ public class TerreNBlock extends NegativenModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(0.6f, 10f).lightValue(0).harvestLevel(0)
 					.harvestTool(ToolType.SHOVEL).tickRandomly());
-			setRegistryName("terren");
+			setRegistryName("dirt_n");
 		}
 
 		@Override

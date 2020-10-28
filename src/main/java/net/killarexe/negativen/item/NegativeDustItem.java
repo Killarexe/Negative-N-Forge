@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
 public class NegativeDustItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:negativedust")
+	@ObjectHolder("negativen:negative_dust")
 	public static final Item block = null;
 	public NegativeDustItem(NegativenModElements instance) {
 		super(instance, 9);
@@ -25,7 +25,7 @@ public class NegativeDustItem extends NegativenModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
-			setRegistryName("negativedust");
+			setRegistryName("negative_dust");
 		}
 
 		@Override

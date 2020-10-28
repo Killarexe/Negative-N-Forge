@@ -26,7 +26,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class NetherrackNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:netherrackn")
+	@ObjectHolder("negativen:netherrack_n")
 	public static final Block block = null;
 	public NetherrackNBlock(NegativenModElements instance) {
 		super(instance, 170);
@@ -42,7 +42,7 @@ public class NetherrackNBlock extends NegativenModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(2f, 12f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE));
-			setRegistryName("netherrackn");
+			setRegistryName("netherrack_n");
 		}
 
 		@OnlyIn(Dist.CLIENT)

@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
 public class DiamondningotItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:diamondningot")
+	@ObjectHolder("negativen:diamond_n_ingot")
 	public static final Item block = null;
 	public DiamondningotItem(NegativenModElements instance) {
 		super(instance, 1);
@@ -25,7 +25,7 @@ public class DiamondningotItem extends NegativenModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
-			setRegistryName("diamondningot");
+			setRegistryName("diamond_n_ingot");
 		}
 
 		@Override

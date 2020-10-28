@@ -43,7 +43,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class GlowstoneNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:glowstonen")
+	@ObjectHolder("negativen:glowstone_n")
 	public static final Block block = null;
 	public GlowstoneNBlock(NegativenModElements instance) {
 		super(instance, 171);
@@ -59,7 +59,7 @@ public class GlowstoneNBlock extends NegativenModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.REDSTONE_LIGHT).sound(SoundType.GLASS).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(5)
 					.harvestTool(ToolType.PICKAXE));
-			setRegistryName("glowstonen");
+			setRegistryName("glowstone_n");
 		}
 
 		@Override
@@ -110,7 +110,7 @@ public class GlowstoneNBlock extends NegativenModElements.ModElement {
 						return false;
 					return super.place(world, generator, rand, pos, config);
 				}
-			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("glowstonen", "glowstonen", blockAt -> {
+			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("glowstone_n", "glowstone_n", blockAt -> {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == NetherrackNBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;

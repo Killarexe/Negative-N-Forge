@@ -6,11 +6,11 @@
       "item": "negativen:start_pearl"
     },
     {
-      "item": "negativen:blazenpowder"
+      "item": "negativen:blaze_n_powder"
     }
   ],
   "result": {
-    "item": "negativen:starteye",
+    "item": "negativen:start_eye",
     "count": 1
   }
 }

@@ -20,7 +20,7 @@ import java.util.List;
 
 @NegativenModElements.ModElement.Tag
 public class Iron_NIngotItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:iron_ningot")
+	@ObjectHolder("negativen:iron_n_ingot")
 	public static final Item block = null;
 	public Iron_NIngotItem(NegativenModElements instance) {
 		super(instance, 7);
@@ -33,7 +33,7 @@ public class Iron_NIngotItem extends NegativenModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
-			setRegistryName("iron_ningot");
+			setRegistryName("iron_n_ingot");
 		}
 
 		@Override

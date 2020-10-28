@@ -7,20 +7,20 @@
   ],
   "key": {
     "0": {
-      "item": "negativen:diamondningot"
+      "item": "negativen:diamond_n_ingot"
     },
     "1": {
-      "item": "negativen:diamondningot"
+      "item": "negativen:diamond_n_ingot"
     },
     "2": {
-      "item": "negativen:diamondningot"
+      "item": "negativen:diamond_n_ingot"
     },
     "3": {
-      "item": "negativen:diamondningot"
+      "item": "negativen:diamond_n_ingot"
     }
   },
   "result": {
-    "item": "negativen:portalblock",
+    "item": "negativen:portal_block",
     "count": 2
   }
 }

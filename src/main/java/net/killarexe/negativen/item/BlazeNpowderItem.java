@@ -14,7 +14,7 @@ import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
 public class BlazeNpowderItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:blazenpowder")
+	@ObjectHolder("negativen:blaze_n_powder")
 	public static final Item block = null;
 	public BlazeNpowderItem(NegativenModElements instance) {
 		super(instance, 12);
@@ -27,7 +27,7 @@ public class BlazeNpowderItem extends NegativenModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
-			setRegistryName("blazenpowder");
+			setRegistryName("blaze_n_powder");
 		}
 
 		@Override

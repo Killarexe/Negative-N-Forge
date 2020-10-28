@@ -27,7 +27,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class BirchlognBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:birchlogn")
+	@ObjectHolder("negativen:birch_log_n")
 	public static final Block block = null;
 	public BirchlognBlock(NegativenModElements instance) {
 		super(instance, 140);
@@ -45,7 +45,7 @@ public class BirchlognBlock extends NegativenModElements.ModElement {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 10f).lightValue(0).harvestLevel(0)
 					.harvestTool(ToolType.AXE));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.SOUTH));
-			setRegistryName("birchlogn");
+			setRegistryName("birch_log_n");
 		}
 
 		@Override

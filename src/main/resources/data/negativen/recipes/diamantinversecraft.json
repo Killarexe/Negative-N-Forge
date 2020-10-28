@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "negativen:diamond_block_n"
+      "item": "negativen:diamond_n_block"
     }
   ],
   "result": {

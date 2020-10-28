@@ -32,7 +32,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class TNTNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:tntn")
+	@ObjectHolder("negativen:tnt_n")
 	public static final Block block = null;
 	public TNTNBlock(NegativenModElements instance) {
 		super(instance, 169);
@@ -47,7 +47,7 @@ public class TNTNBlock extends NegativenModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).lightValue(0));
-			setRegistryName("tntn");
+			setRegistryName("tnt_n");
 		}
 
 		@Override

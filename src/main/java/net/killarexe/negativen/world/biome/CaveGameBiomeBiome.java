@@ -35,11 +35,8 @@ public class CaveGameBiomeBiome extends NegativenModElements.ModElement {
 					.category(Biome.Category.NONE).waterColor(4159204).waterFogColor(329011)
 					.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(GrassBlockCaveGameBlock.block.getDefaultState(),
 							CobblestoneCaveGameBlock.block.getDefaultState(), CobblestoneCaveGameBlock.block.getDefaultState())));
-			setRegistryName("cave_game_biome");
-			DefaultBiomeFeatures.addCarvers(this);
+			setRegistryName("cave_game_biome");
 			DefaultBiomeFeatures.addStructures(this);
-			DefaultBiomeFeatures.addMonsterRooms(this);
-			DefaultBiomeFeatures.addOres(this);
 		}
 	}
 }

@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "negativen:oak_logn",
-    "negativen:acacialogn",
-    "negativen:birchlogn",
+    "negativen:oak_log_n",
+    "negativen:acacia_log_n",
+    "negativen:birch_log_n",
     "negativen:dark_oak_log_n",
     "negativen:jungle_log_n",
     "negativen:spruce_log_n",

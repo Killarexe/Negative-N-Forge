@@ -40,7 +40,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class CoalNoreBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:coalnore")
+	@ObjectHolder("negativen:coal_n_ore")
 	public static final Block block = null;
 	public CoalNoreBlock(NegativenModElements instance) {
 		super(instance, 165);
@@ -56,7 +56,7 @@ public class CoalNoreBlock extends NegativenModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 10f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE));
-			setRegistryName("coalnore");
+			setRegistryName("coal_n_ore");
 		}
 
 		@Override
@@ -95,7 +95,7 @@ public class CoalNoreBlock extends NegativenModElements.ModElement {
 						return false;
 					return super.place(world, generator, rand, pos, config);
 				}
-			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("coalnore", "coalnore", blockAt -> {
+			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("coal_n_ore", "coal_n_ore", blockAt -> {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
 					blockCriteria = true;

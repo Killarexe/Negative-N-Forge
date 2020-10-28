@@ -14,7 +14,7 @@ import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
 public class BlazeNroadItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:blazenroad")
+	@ObjectHolder("negativen:blaze_n_road")
 	public static final Item block = null;
 	public BlazeNroadItem(NegativenModElements instance) {
 		super(instance, 11);
@@ -27,7 +27,7 @@ public class BlazeNroadItem extends NegativenModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
-			setRegistryName("blazenroad");
+			setRegistryName("blaze_n_road");
 		}
 
 		@Override

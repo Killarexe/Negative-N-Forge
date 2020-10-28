@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "negativen:diamond_block_n"
+      "item": "negativen:diamond_n_block"
     },
     "title": {
       "translate": "advancements.dev_overlay.title"

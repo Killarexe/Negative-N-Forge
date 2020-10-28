@@ -3,11 +3,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "negativen:blazenroad"
+      "item": "negativen:blaze_n_road"
     }
   ],
   "result": {
-    "item": "negativen:blazenpowder",
+    "item": "negativen:blaze_n_powder",
     "count": 2
   }
 }

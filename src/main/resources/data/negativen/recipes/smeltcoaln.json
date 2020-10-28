@@ -4,9 +4,9 @@
   "experience": 1,
   "cookingtime": 200,
   "ingredient": {
-    "item": "negativen:coalnore"
+    "item": "negativen:coal_n_ore"
   },
   "result": {
-    "item": "negativen:coaln"
+    "item": "negativen:coal_n"
   }
 }

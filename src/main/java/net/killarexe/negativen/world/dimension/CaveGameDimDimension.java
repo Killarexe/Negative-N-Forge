@@ -189,7 +189,7 @@ public class CaveGameDimDimension extends NegativenModElements.ModElement {
 				}
 
 				public BlockState getDefaultFluid() {
-					return Blocks.AIR.getDefaultState();
+					return null;
 				}
 			});
 			this.randomSeed.skip(5349);

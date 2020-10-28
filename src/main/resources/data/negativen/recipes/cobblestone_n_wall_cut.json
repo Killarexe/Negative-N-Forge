@@ -3,7 +3,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "negativen:cobblestonen"
+    "item": "negativen:cobblestone_n"
   },
   "result": "negativen:cobblestone_n_wall"
 }

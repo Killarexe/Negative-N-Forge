@@ -21,7 +21,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class AcaciaplanksnBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:acaciaplanksn")
+	@ObjectHolder("negativen:acacia_planks_n")
 	public static final Block block = null;
 	public AcaciaplanksnBlock(NegativenModElements instance) {
 		super(instance, 137);
@@ -37,7 +37,7 @@ public class AcaciaplanksnBlock extends NegativenModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 10f).lightValue(0).harvestLevel(0)
 					.harvestTool(ToolType.AXE));
-			setRegistryName("acaciaplanksn");
+			setRegistryName("acacia_planks_n");
 		}
 
 		@Override

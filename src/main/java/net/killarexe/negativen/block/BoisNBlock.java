@@ -30,7 +30,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class BoisNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:oak_logn")
+	@ObjectHolder("negativen:oak_log_n")
 	public static final Block block = null;
 	public BoisNBlock(NegativenModElements instance) {
 		super(instance, 132);
@@ -48,7 +48,7 @@ public class BoisNBlock extends NegativenModElements.ModElement {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1.9999999999999998f, 12f).lightValue(0)
 					.harvestLevel(0).harvestTool(ToolType.AXE));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.SOUTH));
-			setRegistryName("oak_logn");
+			setRegistryName("oak_log_n");
 		}
 
 		@Override

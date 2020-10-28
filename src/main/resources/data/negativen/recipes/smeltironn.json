@@ -4,9 +4,9 @@
   "experience": 0,
   "cookingtime": 200,
   "ingredient": {
-    "item": "negativen:iron_nore"
+    "item": "negativen:iron_n_ore"
   },
   "result": {
-    "item": "negativen:iron_ningot"
+    "item": "negativen:iron_n_ingot"
   }
 }
