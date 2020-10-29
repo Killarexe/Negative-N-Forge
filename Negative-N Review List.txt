@@ -1,0 +1,112 @@
+Negative-N Forge 1.1:
+Add a WoodCutter x
+Add Snow-N x
+New Structures x
+Add Gold-N x
+Add a Boss (In Negative-N 1.2)
+Add mobs x
+Add a chest x
+Add Fences for Woods and stones x
+Add stones
+Add a Slime-N
+Add Doors x
+Add Trap Doors x
+Add Stripped Woods x
+Add custom Leaves Drops x
+Add a Bow-N	x
+Add a Boat x
+Add Honey-N Not Possible for Bee-N (Negative-N 1.2)
+Add flowers-N x
+Add a Camp Fire-N x
+Add Fire-N x
+Add Minecraft Classic x
+Add Negative-N Classic x
+Add GravelN, Classic Gravel, Classic GravelN X
+Add Skeleton-N x
+Add Honey-N later 
+-------------------------------------------------------------------------
+
+Negative-N Forge 1.2.x:
+Add Crops (Weat, Carrot, Potato etc) x (1.2)
+Remake WoodCutter Crafts x (1.2.1)
+Patch Classic Leaves-N x (1.2)
+Patch Skeleton-N x (1.2)
+Patch Bow-N x (1.2)
+Patch Some Crafts x (1.2.1)
+Patch Torch-N x (1.2.2)
+Add Nether Update x (1.2)
+Add RedstoneN x (1.2)
+Add Cave Game Dim x (1.2)
+Add Double Flowers x (1.2.1)
+Add some Crafts x (1.2.x)
+Finish a boss x (1.2)
+Add Lanterns-N x (1.2.1)
+Add Anvil-N x (1.2.1)
+Add Redstone-N Torch (1.2.2)
+Add Mushroums-N x (1.2.1)
+Add Boat-N x (1.2.1)
+Add Classic Nether-N x(1.2.2)
+Add Classic Nether x (1.2.2)
+Add new easter eggs x (1.2.2)
+Add Pumkins-N x (1.2.2)
+Update Fire-N Model x (1.2.2)
+Add Pumpkins-N Fontionality x (1.2.2)
+Add Shares-N x (1.2.2)
+Improve Glowstone and Cobblestone textures x (1.2.2)
+Patch/Add Crafts x (1.2.3 Patch)
+Patch Pigmans-N (1.2.3 Patch)
+Patch ID x (1.2.3 Patch)
+-------------------------------------------------------------------------
+
+Negative-N Fabric Alpha 0.1 Test Build:
+Add Diamond-N (ores, armors, tools, weapons, blocks, etc) x
+Add Woods-N x
+Add Leaves-N x
+Add Biomes and Dimensions (Not Possible For the Dimensions) x
+-------------------------------------------------------------------------
+
+Negative-N Fabric Alpha 0.3:
+Add Client x
+Add Custom Title x
+Add Advancements x
+Add Crafts
+Remake Oak-N Forest Biome x
+Add Types of Woods
+-------------------------------------------------------------------------
+
+Negative-N Forge Alpha 0.1 1.16.3 Test Build:
+
+Update Theme: Forge 1.16.3
+
+Add Diamond-N (ores, armors, tools, weapons, blocks, etc) 
+Add Woods-N x
+Add Leaves-N x
+-------------------------------------------------------------------------
+
+Negative-N Forge 1.3.x:
+
+Update Theme: Boss Update
+
+Add Melon-N (1.3)
+Add Plants for Melon-N and Pumpkin-Negative-N (1.3)
+Improve 3d Models (1.3)
+Add Crafting Table-N/Furnaace-N (1.3)
+Add easter eggs (1.3)
+Wither-N Boss Summonable (1.3)
+Update to 2020.5 (1.3.x)
+Add heads (1.3)
+Add Mobs: Wither Skeleton-N, etc (1.3)
+Improve Effects (1.3)
+Add Color Map in Blocks (1.3)
+Add Guide (1.3)
+Make a complete Wiki (Github 1.3.x)
+Improve some Textures (1.3.x)
+Update Dimensions Stick (1.3)
+-------------------------------------------------------------------------
+
+Negative-N Forge 1.4.x/ 1.5.x?:
+Update to 1.16
+
+
+
+
