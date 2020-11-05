@@ -69,9 +69,9 @@ Negative-N Fabric Alpha 0.3:
 Add Client x
 Add Custom Title x
 Add Advancements x
-Add Crafts
+Add Crafts x
 Remake Oak-N Forest Biome x
-Add Types of Woods
+Add Types of Woods x
 -------------------------------------------------------------------------
 
 Negative-N Forge Alpha 0.1 1.16.3 Test Build:
@@ -85,12 +85,12 @@ Add Leaves-N x
 
 Negative-N Forge 1.3.x:
 
-Update Theme: Boss Update
+Update Theme: 1.17 Update
 
 Add Melon-N (1.3)
 Add Plants for Melon-N and Pumpkin-Negative-N (1.3)
 Improve 3d Models (1.3)
-Add Crafting Table-N/Furnaace-N (1.3)
+Add Crafting Table-N/Furnace-N (1.3)
 Add easter eggs (1.3)
 Wither-N Boss Summonable (1.3)
 Update to 2020.5 (1.3.x)
@@ -102,6 +102,26 @@ Add Guide (1.3)
 Make a complete Wiki (Github 1.3.x)
 Improve some Textures (1.3.x)
 Update Dimensions Stick (1.3)
+Add Copper-N (1.3)
+Add Crafts (1.3.x)
+Add Cauldron-N (1.3)
+Add Double Chest-N (1.3)
+Add Barril-N (1.3)
+Add Ices-N (1.3)
+Add Red Sand-N (1.3)
+Add new Biomes (1.3)
+Add Basalt-N and BlackStone-N (1.3)
+Add Lapis-N (1.3)
+Improve Ores/Blocks Generation (1.3)
+Add Quartz Blocks (1.3)
+Able to summon the Whiter-N in suvival (1.3)
+Add Wither Skeleton-N (1.3)
+Add Lever-N/Buttons-N/Solar Panel-N (1.3.x)
+Add Cake-N (1.3.x)
+Add Eggs (1.3)
+Add Walls (1.3.x)
+Add Missing Types of Blocks (1.3.x) 
+Reat TNT-N to Redstone-N (1.3)
 -------------------------------------------------------------------------
 
 Negative-N Forge 1.4.x/ 1.5.x?:
