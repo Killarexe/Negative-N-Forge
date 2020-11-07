@@ -24,7 +24,7 @@ import java.util.HashMap;
 
 @NegativenModElements.ModElement.Tag
 public class Iron_NHoeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:iron_nhoe")
+	@ObjectHolder("negativen:iron_n_hoe")
 	public static final Item block = null;
 	public Iron_NHoeItem(NegativenModElements instance) {
 		super(instance, 255);
@@ -79,6 +79,6 @@ public class Iron_NHoeItem extends NegativenModElements.ModElement {
 				}
 				return retval;
 			}
-		}.setRegistryName("iron_nhoe"));
+		}.setRegistryName("iron_n_hoe"));
 	}
 }

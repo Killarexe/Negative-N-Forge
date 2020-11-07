@@ -49,5 +49,12 @@
 				"west": {"uv": [11, 10, 14, 12], "texture": "#lantern"}
 			}
 		}
-	]
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, -1.5, -0.75],
+			"scale": [0.375, 0.375, 0.375]
+		}
+	}
 }

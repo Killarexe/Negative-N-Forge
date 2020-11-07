@@ -23,7 +23,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class NetherBrickBlockNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:nether_brick_block_n")
+	@ObjectHolder("negativen:netherbrick_block_n")
 	public static final Block block = null;
 	public NetherBrickBlockNBlock(NegativenModElements instance) {
 		super(instance, 179);
@@ -38,7 +38,7 @@ public class NetherBrickBlockNBlock extends NegativenModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1.5f, 10f).lightValue(0));
-			setRegistryName("nether_brick_block_n");
+			setRegistryName("netherbrick_block_n");
 		}
 
 		@Override

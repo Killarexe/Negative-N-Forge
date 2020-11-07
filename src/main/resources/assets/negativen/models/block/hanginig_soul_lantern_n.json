@@ -1,5 +1,5 @@
 {
-  "parent": "negativen:custom/hanging_soul_lantern_n",
+  "parent": "negativen:custom/hanging_lantern_n",
   "textures": {
     "all": "negativen:blocks/soul_lantern_n",
     "particle": "negativen:blocks/soul_lantern_n",

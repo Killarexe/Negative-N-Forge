@@ -14,7 +14,7 @@ import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
 public class Iron_NPickaxeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:iron_npickaxe")
+	@ObjectHolder("negativen:iron_n_pickaxe")
 	public static final Item block = null;
 	public Iron_NPickaxeItem(NegativenModElements instance) {
 		super(instance, 252);
@@ -47,6 +47,6 @@ public class Iron_NPickaxeItem extends NegativenModElements.ModElement {
 				return Ingredient.fromStacks(new ItemStack(Iron_NIngotItem.block, (int) (1)));
 			}
 		}, 1, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
-		}.setRegistryName("iron_npickaxe"));
+		}.setRegistryName("iron_n_pickaxe"));
 	}
 }

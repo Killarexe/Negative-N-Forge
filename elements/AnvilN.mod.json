@@ -12,7 +12,7 @@
     "customModelName": "anvil_n:default",
     "rotationMode": 1,
     "emissiveRendering": false,
-    "itemTexture": "anvil_n",
+    "itemTexture": "",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "SOLID",

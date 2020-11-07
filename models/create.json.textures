@@ -5,6 +5,12 @@
         "0": "barrel_side"
       },
       "name": "default"
+    },
+    "n": {
+      "map": {
+        "0": "barrieln_side"
+      },
+      "name": "n"
     }
   }
 }

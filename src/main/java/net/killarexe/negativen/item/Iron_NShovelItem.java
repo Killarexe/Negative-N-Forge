@@ -14,7 +14,7 @@ import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
 public class Iron_NShovelItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:iron_nshovel")
+	@ObjectHolder("negativen:iron_n_shovel")
 	public static final Item block = null;
 	public Iron_NShovelItem(NegativenModElements instance) {
 		super(instance, 254);
@@ -47,6 +47,6 @@ public class Iron_NShovelItem extends NegativenModElements.ModElement {
 				return Ingredient.fromStacks(new ItemStack(Iron_NIngotItem.block, (int) (1)));
 			}
 		}, 1, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
-		}.setRegistryName("iron_nshovel"));
+		}.setRegistryName("iron_n_shovel"));
 	}
 }

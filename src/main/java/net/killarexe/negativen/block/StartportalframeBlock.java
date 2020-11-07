@@ -38,7 +38,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class StartportalframeBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:startportalframe")
+	@ObjectHolder("negativen:start_portal_frame")
 	public static final Block block = null;
 	public StartportalframeBlock(NegativenModElements instance) {
 		super(instance, 178);
@@ -59,7 +59,7 @@ public class StartportalframeBlock extends NegativenModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.GLASS).sound(SoundType.GLASS).hardnessAndResistance(1f, 10f).lightValue(0).notSolid());
-			setRegistryName("startportalframe");
+			setRegistryName("start_portal_frame");
 		}
 
 		@Override

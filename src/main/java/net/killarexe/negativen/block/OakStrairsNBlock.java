@@ -29,7 +29,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class OakStrairsNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:oakstrairsn")
+	@ObjectHolder("negativen:oak_n_stairs")
 	public static final Block block = null;
 	public OakStrairsNBlock(NegativenModElements instance) {
 		super(instance, 134);
@@ -51,7 +51,7 @@ public class OakStrairsNBlock extends NegativenModElements.ModElement {
 		public CustomBlock() {
 			super(new Block(Block.Properties.create(Material.ROCK)).getDefaultState(),
 					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).lightValue(0).notSolid());
-			setRegistryName("oakstrairsn");
+			setRegistryName("oak_n_stairs");
 		}
 
 		@Override

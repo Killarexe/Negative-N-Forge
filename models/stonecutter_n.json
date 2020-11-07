@@ -1,13 +1,6 @@
 {
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
-	"textures": {
-		"particle": "negativen:blocks/stonecutter_n_bottom",
-		"bottom": "negativen:blocks/stonecutter_n_bottom",
-		"top": "negativen:blocks/stonecutter_n_top",
-		"side": "negativen:blocks/stonecutter_n_side",
-		"saw": "negativen:blocks/stonecutter_n_saw"
-	},
 	"elements": [
 		{
 			"from": [0, 0, 0],
@@ -29,5 +22,12 @@
 				"south": {"uv": [1, 9, 15, 16], "texture": "#saw", "tintindex": 0}
 			}
 		}
-	]
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		}
+	}
 }

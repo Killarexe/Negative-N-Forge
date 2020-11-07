@@ -5,6 +5,12 @@
         "lantern": "lantern_n"
       },
       "name": "default"
+    },
+    "soul": {
+      "map": {
+        "lantern": "soul_lantern_n"
+      },
+      "name": "soul"
     }
   }
 }

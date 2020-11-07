@@ -23,7 +23,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class StoneNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:stonen")
+	@ObjectHolder("negativen:stone_n")
 	public static final Block block = null;
 	public StoneNBlock(NegativenModElements instance) {
 		super(instance, 159);
@@ -38,7 +38,7 @@ public class StoneNBlock extends NegativenModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1.3f, 10f).lightValue(0));
-			setRegistryName("stonen");
+			setRegistryName("stone_n");
 		}
 
 		@Override

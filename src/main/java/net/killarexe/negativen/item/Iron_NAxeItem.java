@@ -20,7 +20,7 @@ import java.util.HashMap;
 
 @NegativenModElements.ModElement.Tag
 public class Iron_NAxeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:iron_naxe")
+	@ObjectHolder("negativen:iron_n_axe")
 	public static final Item block = null;
 	public Iron_NAxeItem(NegativenModElements instance) {
 		super(instance, 253);
@@ -68,6 +68,6 @@ public class Iron_NAxeItem extends NegativenModElements.ModElement {
 				}
 				return retval;
 			}
-		}.setRegistryName("iron_naxe"));
+		}.setRegistryName("iron_n_axe"));
 	}
 }

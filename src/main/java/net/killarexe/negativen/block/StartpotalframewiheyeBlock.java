@@ -29,7 +29,7 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class StartpotalframewiheyeBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:startpotalframewiheye")
+	@ObjectHolder("negativen:start_potal_frame_with_eye")
 	public static final Block block = null;
 	public StartpotalframewiheyeBlock(NegativenModElements instance) {
 		super(instance, 424);
@@ -49,7 +49,7 @@ public class StartpotalframewiheyeBlock extends NegativenModElements.ModElement 
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.GLASS).sound(SoundType.GLASS).hardnessAndResistance(1f, 10f).lightValue(0).notSolid());
-			setRegistryName("startpotalframewiheye");
+			setRegistryName("start_potal_frame_with_eye");
 		}
 
 		@Override
