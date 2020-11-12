@@ -25,7 +25,7 @@ import io.netty.buffer.Unpooled;
 @NegativenModElements.ModElement.Tag
 public class DimensionStickRightClickedInAirProcedure extends NegativenModElements.ModElement {
 	public DimensionStickRightClickedInAirProcedure(NegativenModElements instance) {
-		super(instance, 428);
+		super(instance, 438);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

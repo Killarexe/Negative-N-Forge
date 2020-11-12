@@ -34,7 +34,7 @@ public class OakNFenceBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:oak_n_fence")
 	public static final Block block = null;
 	public OakNFenceBlock(NegativenModElements instance) {
-		super(instance, 83);
+		super(instance, 84);
 	}
 
 	@Override

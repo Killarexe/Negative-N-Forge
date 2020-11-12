@@ -10,7 +10,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class NegativeNVersionDEVDisplayOverlayIngameProcedure extends NegativenModElements.ModElement {
 	public NegativeNVersionDEVDisplayOverlayIngameProcedure(NegativenModElements instance) {
-		super(instance, 555);
+		super(instance, 565);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

@@ -37,7 +37,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class AbandonnedPortalClassicDimStructure extends NegativenModElements.ModElement {
 	public AbandonnedPortalClassicDimStructure(NegativenModElements instance) {
-		super(instance, 617);
+		super(instance, 627);
 	}
 
 	@Override

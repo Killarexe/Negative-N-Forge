@@ -38,7 +38,7 @@ public class ShroomlightNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:shroomlight_n")
 	public static final Block block = null;
 	public ShroomlightNBlock(NegativenModElements instance) {
-		super(instance, 229);
+		super(instance, 230);
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class FeatherNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:feather_n")
 	public static final Item block = null;
 	public FeatherNItem(NegativenModElements instance) {
-		super(instance, 32);
+		super(instance, 33);
 	}
 
 	@Override

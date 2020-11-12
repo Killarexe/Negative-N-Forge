@@ -11,7 +11,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class WikiCommandExecutedProcedure extends NegativenModElements.ModElement {
 	public WikiCommandExecutedProcedure(NegativenModElements instance) {
-		super(instance, 663);
+		super(instance, 673);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

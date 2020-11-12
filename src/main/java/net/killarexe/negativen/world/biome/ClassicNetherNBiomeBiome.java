@@ -19,7 +19,7 @@ public class ClassicNetherNBiomeBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:classic_nether_n_biome")
 	public static final CustomBiome biome = null;
 	public ClassicNetherNBiomeBiome(NegativenModElements instance) {
-		super(instance, 778);
+		super(instance, 788);
 	}
 
 	@Override

@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class DebugModeOnKeyPressedProcedure extends NegativenModElements.ModElement {
 	public DebugModeOnKeyPressedProcedure(NegativenModElements instance) {
-		super(instance, 452);
+		super(instance, 462);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

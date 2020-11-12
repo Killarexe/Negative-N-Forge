@@ -24,7 +24,7 @@ public class ClassicMossyCobblestoneBlock extends NegativenModElements.ModElemen
 	@ObjectHolder("negativen:classic_mossy_cobblestone")
 	public static final Block block = null;
 	public ClassicMossyCobblestoneBlock(NegativenModElements instance) {
-		super(instance, 321);
+		super(instance, 331);
 	}
 
 	@Override

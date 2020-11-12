@@ -12,7 +12,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class BeefrawNFoodEatenProcedure extends NegativenModElements.ModElement {
 	public BeefrawNFoodEatenProcedure(NegativenModElements instance) {
-		super(instance, 389);
+		super(instance, 399);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

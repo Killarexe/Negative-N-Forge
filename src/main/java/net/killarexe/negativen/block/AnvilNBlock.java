@@ -81,7 +81,7 @@ public class AnvilNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:anvil_n")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public AnvilNBlock(NegativenModElements instance) {
-		super(instance, 118);
+		super(instance, 119);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -11,7 +11,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class NegativeNVerShowProcedure extends NegativenModElements.ModElement {
 	public NegativeNVerShowProcedure(NegativenModElements instance) {
-		super(instance, 642);
+		super(instance, 652);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

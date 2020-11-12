@@ -43,7 +43,7 @@ public class CoalNoreBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:coal_n_ore")
 	public static final Block block = null;
 	public CoalNoreBlock(NegativenModElements instance) {
-		super(instance, 165);
+		super(instance, 166);
 	}
 
 	@Override

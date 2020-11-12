@@ -23,7 +23,7 @@ public class GoldNSwordItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:gold_n_sword")
 	public static final Item block = null;
 	public GoldNSwordItem(NegativenModElements instance) {
-		super(instance, 238);
+		super(instance, 248);
 	}
 
 	@Override

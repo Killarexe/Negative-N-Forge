@@ -49,7 +49,7 @@ public class OxeyeDaisyNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:oxeye_daisy_n")
 	public static final Block block = null;
 	public OxeyeDaisyNBlock(NegativenModElements instance) {
-		super(instance, 97);
+		super(instance, 98);
 	}
 
 	@Override

@@ -57,7 +57,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class SkeletonNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public SkeletonNEntity(NegativenModElements instance) {
-		super(instance, 58);
+		super(instance, 59);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

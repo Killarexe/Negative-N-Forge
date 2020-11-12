@@ -45,7 +45,7 @@ public class MagmaNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:magma_n")
 	public static final Block block = null;
 	public MagmaNBlock(NegativenModElements instance) {
-		super(instance, 172);
+		super(instance, 173);
 	}
 
 	@Override

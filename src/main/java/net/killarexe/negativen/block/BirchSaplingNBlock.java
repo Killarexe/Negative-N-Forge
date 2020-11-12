@@ -35,7 +35,7 @@ public class BirchSaplingNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:birch_sapling_n")
 	public static final Block block = null;
 	public BirchSaplingNBlock(NegativenModElements instance) {
-		super(instance, 64);
+		super(instance, 65);
 	}
 
 	@Override

@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:SemiWeatheredCopperNBlock"
+      },
+      {
+        "value": "CUSTOM:SemiWeatheredCopperNBlock"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SemiWeatheredCopperNBlock"
+      },
+      {
+        "value": "CUSTOM:SemiWeatheredCopperNBlock"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SemiWeatheredCutCopperNBlock"
+    },
+    "name": "semi_weathered_cut_copper_n_craft",
+    "namespace": "mod"
+  }
+}

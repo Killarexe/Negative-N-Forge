@@ -32,7 +32,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class CirmsonTreeNStructure extends NegativenModElements.ModElement {
 	public CirmsonTreeNStructure(NegativenModElements instance) {
-		super(instance, 698);
+		super(instance, 708);
 	}
 
 	@Override

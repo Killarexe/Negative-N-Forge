@@ -46,7 +46,7 @@ public class VineNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:vine_n")
 	public static final Block block = null;
 	public VineNBlock(NegativenModElements instance) {
-		super(instance, 75);
+		super(instance, 76);
 	}
 
 	@Override

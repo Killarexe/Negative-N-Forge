@@ -38,7 +38,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class PumpkinNSpawnStructure extends NegativenModElements.ModElement {
 	public PumpkinNSpawnStructure(NegativenModElements instance) {
-		super(instance, 791);
+		super(instance, 801);
 	}
 
 	@Override

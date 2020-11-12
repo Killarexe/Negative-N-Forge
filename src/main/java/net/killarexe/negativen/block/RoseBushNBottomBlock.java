@@ -38,7 +38,7 @@ public class RoseBushNBottomBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:rose_bush_n_bottom")
 	public static final Block block = null;
 	public RoseBushNBottomBlock(NegativenModElements instance) {
-		super(instance, 117);
+		super(instance, 118);
 	}
 
 	@Override

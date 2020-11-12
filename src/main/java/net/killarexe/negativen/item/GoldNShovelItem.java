@@ -17,7 +17,7 @@ public class GoldNShovelItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:gold_n_shovel")
 	public static final Item block = null;
 	public GoldNShovelItem(NegativenModElements instance) {
-		super(instance, 266);
+		super(instance, 276);
 	}
 
 	@Override

@@ -44,7 +44,7 @@ public class NetherNCrimsonBiomeBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:nether_n_crimson_biome")
 	public static final CustomBiome biome = null;
 	public NetherNCrimsonBiomeBiome(NegativenModElements instance) {
-		super(instance, 696);
+		super(instance, 706);
 	}
 
 	@Override

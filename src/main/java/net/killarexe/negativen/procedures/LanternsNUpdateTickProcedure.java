@@ -15,7 +15,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class LanternsNUpdateTickProcedure extends NegativenModElements.ModElement {
 	public LanternsNUpdateTickProcedure(NegativenModElements instance) {
-		super(instance, 762);
+		super(instance, 772);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

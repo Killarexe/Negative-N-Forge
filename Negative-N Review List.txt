@@ -85,11 +85,11 @@ Add Leaves-N x
 
 Negative-N Forge 1.3.x:
 
-Update Theme: 1.17 Update
+Update Theme: 1.17/Copper Update
 
 Add Melon-N (1.3)
 Add Plants for Melon-N and Pumpkin-Negative-N (1.3)
-Improve 3d Models (1.3)
+Improve 3d Models (1.3) Fait
 Add Crafting Table-N/Furnace-N (1.3)
 Add easter eggs (1.3)
 Wither-N Boss Summonable (1.3)
@@ -98,11 +98,12 @@ Add heads (1.3)
 Add Mobs: Wither Skeleton-N, etc (1.3)
 Improve Effects (1.3)
 Add Color Map in Blocks (1.3)
-Add Guide (1.3)
+Add Guide (1.3) Debut
+Add Amethist-N (1.3) Fait
 Make a complete Wiki (Github 1.3.x)
 Improve some Textures (1.3.x)
 Update Dimensions Stick (1.3)
-Add Copper-N (1.3)
+Add Copper-N (1.3) presque Fait
 Add Crafts (1.3.x)
 Add Cauldron-N (1.3)
 Add Double Chest-N (1.3)
@@ -111,17 +112,16 @@ Add Ices-N (1.3)
 Add Red Sand-N (1.3)
 Add new Biomes (1.3)
 Add Basalt-N and BlackStone-N (1.3)
-Add Lapis-N (1.3)
+Add Lapis-N (1.3) Fait
 Improve Ores/Blocks Generation (1.3)
 Add Quartz Blocks (1.3)
-Able to summon the Whiter-N in suvival (1.3)
 Add Wither Skeleton-N (1.3)
 Add Lever-N/Buttons-N/Solar Panel-N (1.3.x)
 Add Cake-N (1.3.x)
 Add Eggs (1.3)
 Add Walls (1.3.x)
 Add Missing Types of Blocks (1.3.x) 
-Reat TNT-N to Redstone-N (1.3)
+React TNT-N to Redstone-N (1.3)
 -------------------------------------------------------------------------
 
 Negative-N Forge 1.4.x/ 1.5.x?:

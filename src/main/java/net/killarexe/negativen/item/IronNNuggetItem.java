@@ -15,7 +15,7 @@ public class IronNNuggetItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:iron_n_nugget")
 	public static final Item block = null;
 	public IronNNuggetItem(NegativenModElements instance) {
-		super(instance, 31);
+		super(instance, 32);
 	}
 
 	@Override

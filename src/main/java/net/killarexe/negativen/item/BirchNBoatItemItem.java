@@ -25,7 +25,7 @@ public class BirchNBoatItemItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:birch_n_boat_item")
 	public static final Item block = null;
 	public BirchNBoatItemItem(NegativenModElements instance) {
-		super(instance, 334);
+		super(instance, 344);
 	}
 
 	@Override

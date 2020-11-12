@@ -48,7 +48,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class SpruceNBoatEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public SpruceNBoatEntity(NegativenModElements instance) {
-		super(instance, 46);
+		super(instance, 47);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

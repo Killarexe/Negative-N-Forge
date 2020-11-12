@@ -23,7 +23,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 @NegativenModElements.ModElement.Tag
 public class DevShowCommand extends NegativenModElements.ModElement {
 	public DevShowCommand(NegativenModElements instance) {
-		super(instance, 644);
+		super(instance, 654);
 	}
 
 	@Override

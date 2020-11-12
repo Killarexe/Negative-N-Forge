@@ -37,7 +37,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class AbandonnedPortalNetherNStructure extends NegativenModElements.ModElement {
 	public AbandonnedPortalNetherNStructure(NegativenModElements instance) {
-		super(instance, 611);
+		super(instance, 621);
 	}
 
 	@Override

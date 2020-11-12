@@ -18,7 +18,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class PumpkinsNRightClickProcedure extends NegativenModElements.ModElement {
 	public PumpkinsNRightClickProcedure(NegativenModElements instance) {
-		super(instance, 787);
+		super(instance, 797);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

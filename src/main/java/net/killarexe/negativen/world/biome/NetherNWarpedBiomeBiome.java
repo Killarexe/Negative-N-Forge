@@ -44,7 +44,7 @@ public class NetherNWarpedBiomeBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:nether_n_warped_biome")
 	public static final CustomBiome biome = null;
 	public NetherNWarpedBiomeBiome(NegativenModElements instance) {
-		super(instance, 695);
+		super(instance, 705);
 	}
 
 	@Override

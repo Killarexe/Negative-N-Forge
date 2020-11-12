@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/weathered_cut_copper_n",
+    "particle": "negativen:blocks/weathered_cut_copper_n"
+  }
+}

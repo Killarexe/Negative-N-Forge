@@ -33,7 +33,7 @@ public class JackOLanternNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:jack_o_lantern_n")
 	public static final Block block = null;
 	public JackOLanternNBlock(NegativenModElements instance) {
-		super(instance, 123);
+		super(instance, 124);
 	}
 
 	@Override

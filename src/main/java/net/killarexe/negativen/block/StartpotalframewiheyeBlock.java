@@ -32,7 +32,7 @@ public class StartpotalframewiheyeBlock extends NegativenModElements.ModElement 
 	@ObjectHolder("negativen:start_potal_frame_with_eye")
 	public static final Block block = null;
 	public StartpotalframewiheyeBlock(NegativenModElements instance) {
-		super(instance, 424);
+		super(instance, 434);
 	}
 
 	@Override

@@ -37,7 +37,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class AncientDebrisSpawnStructure extends NegativenModElements.ModElement {
 	public AncientDebrisSpawnStructure(NegativenModElements instance) {
-		super(instance, 793);
+		super(instance, 803);
 	}
 
 	@Override
@@ -63,7 +63,7 @@ public class AncientDebrisSpawnStructure extends NegativenModElements.ModElement
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
-				if ((random.nextInt(1000000) + 1) <= 25000) {
+				if ((random.nextInt(1000000) + 1) <= 10000) {
 					int count = random.nextInt(1) + 1;
 					for (int a = 0; a < count; a++) {
 						int i = ci + random.nextInt(16);

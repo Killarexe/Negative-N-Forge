@@ -35,7 +35,7 @@ public class TNTNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:tnt_n")
 	public static final Block block = null;
 	public TNTNBlock(NegativenModElements instance) {
-		super(instance, 169);
+		super(instance, 170);
 	}
 
 	@Override

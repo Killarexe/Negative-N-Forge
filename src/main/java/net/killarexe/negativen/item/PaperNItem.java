@@ -15,7 +15,7 @@ public class PaperNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:paper_n")
 	public static final Item block = null;
 	public PaperNItem(NegativenModElements instance) {
-		super(instance, 23);
+		super(instance, 24);
 	}
 
 	@Override

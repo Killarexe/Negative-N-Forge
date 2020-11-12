@@ -1,5 +1,7 @@
 package net.killarexe.negativen;
 
+import org.lwjgl.Version;
+
 import net.minecraftforge.fml.network.PacketDistributor;
 import net.minecraftforge.fml.network.NetworkEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -46,6 +48,7 @@ public class NegativenModVariables {
 	public static boolean IsChistmas = false;
 	public static double global_timer = 0;
 	public static boolean IsAnniversary = false;
+	public static double Version = 1.3;
 	@SubscribeEvent
 	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		if (!event.getPlayer().world.isRemote) {

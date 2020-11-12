@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class GetRedstoneNProcedure extends NegativenModElements.ModElement {
 	public GetRedstoneNProcedure(NegativenModElements instance) {
-		super(instance, 693);
+		super(instance, 703);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

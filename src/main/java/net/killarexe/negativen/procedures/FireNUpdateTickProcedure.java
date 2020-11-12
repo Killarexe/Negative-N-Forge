@@ -14,7 +14,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class FireNUpdateTickProcedure extends NegativenModElements.ModElement {
 	public FireNUpdateTickProcedure(NegativenModElements instance) {
-		super(instance, 622);
+		super(instance, 632);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

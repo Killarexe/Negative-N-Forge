@@ -41,7 +41,7 @@ public class StartportalframeBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:start_portal_frame")
 	public static final Block block = null;
 	public StartportalframeBlock(NegativenModElements instance) {
-		super(instance, 178);
+		super(instance, 179);
 	}
 
 	@Override

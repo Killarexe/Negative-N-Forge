@@ -28,7 +28,7 @@ public class MontainsNBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:montains_n")
 	public static final CustomBiome biome = null;
 	public MontainsNBiome(NegativenModElements instance) {
-		super(instance, 625);
+		super(instance, 635);
 	}
 
 	@Override

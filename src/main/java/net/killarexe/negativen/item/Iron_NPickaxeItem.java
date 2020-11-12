@@ -17,7 +17,7 @@ public class Iron_NPickaxeItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:iron_n_pickaxe")
 	public static final Item block = null;
 	public Iron_NPickaxeItem(NegativenModElements instance) {
-		super(instance, 252);
+		super(instance, 262);
 	}
 
 	@Override

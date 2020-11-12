@@ -12,7 +12,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class TerreNUpdateTickProcedure extends NegativenModElements.ModElement {
 	public TerreNUpdateTickProcedure(NegativenModElements instance) {
-		super(instance, 360);
+		super(instance, 370);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

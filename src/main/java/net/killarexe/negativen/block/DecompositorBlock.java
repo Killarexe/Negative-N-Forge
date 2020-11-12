@@ -78,7 +78,7 @@ public class DecompositorBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:decompositor")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public DecompositorBlock(NegativenModElements instance) {
-		super(instance, 129);
+		super(instance, 130);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

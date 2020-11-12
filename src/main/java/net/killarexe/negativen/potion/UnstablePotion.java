@@ -24,7 +24,7 @@ public class UnstablePotion extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:unstable")
 	public static final Effect potion = null;
 	public UnstablePotion(NegativenModElements instance) {
-		super(instance, 475);
+		super(instance, 485);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

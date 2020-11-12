@@ -11,7 +11,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class ExplosiveArrowBulletHitsBlockProcedure extends NegativenModElements.ModElement {
 	public ExplosiveArrowBulletHitsBlockProcedure(NegativenModElements instance) {
-		super(instance, 439);
+		super(instance, 449);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

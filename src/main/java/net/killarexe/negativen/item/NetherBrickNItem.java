@@ -15,7 +15,7 @@ public class NetherBrickNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:nether_brick_n")
 	public static final Item block = null;
 	public NetherBrickNItem(NegativenModElements instance) {
-		super(instance, 16);
+		super(instance, 17);
 	}
 
 	@Override

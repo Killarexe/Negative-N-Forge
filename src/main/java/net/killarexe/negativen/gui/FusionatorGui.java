@@ -48,7 +48,7 @@ public class FusionatorGui extends NegativenModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public FusionatorGui(NegativenModElements instance) {
-		super(instance, 343);
+		super(instance, 353);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -125,7 +125,7 @@ public class FusionatorGui extends NegativenModElements.ModElement {
 			}));
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 115, 12) {
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 79, 57) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 83, 53) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -340,7 +340,7 @@ public class FusionatorGui extends NegativenModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Fusionnator", 7, 65, -1);
+			this.font.drawString("Fusionnator", 7, 65, -16777216);
 		}
 
 		@Override

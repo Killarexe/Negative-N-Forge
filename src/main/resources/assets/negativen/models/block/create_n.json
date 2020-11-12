@@ -1,5 +1,5 @@
 {
-  "parent": "negativen:custom/createn",
+  "parent": "negativen:custom/create",
   "textures": {
     "all": "negativen:blocks/barrieln_side",
     "particle": "negativen:blocks/barrieln_side",

@@ -16,7 +16,7 @@ public class BurnProtectionEnchantment extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:burn_protection")
 	public static final Enchantment enchantment = null;
 	public BurnProtectionEnchantment(NegativenModElements instance) {
-		super(instance, 634);
+		super(instance, 644);
 	}
 
 	@Override

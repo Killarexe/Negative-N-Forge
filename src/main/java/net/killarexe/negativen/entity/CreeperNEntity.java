@@ -47,7 +47,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class CreeperNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public CreeperNEntity(NegativenModElements instance) {
-		super(instance, 49);
+		super(instance, 50);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

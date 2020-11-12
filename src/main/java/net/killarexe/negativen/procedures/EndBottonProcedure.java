@@ -20,7 +20,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class EndBottonProcedure extends NegativenModElements.ModElement {
 	public EndBottonProcedure(NegativenModElements instance) {
-		super(instance, 431);
+		super(instance, 441);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

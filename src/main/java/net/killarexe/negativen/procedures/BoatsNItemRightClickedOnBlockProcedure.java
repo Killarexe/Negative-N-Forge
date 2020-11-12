@@ -29,7 +29,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class BoatsNItemRightClickedOnBlockProcedure extends NegativenModElements.ModElement {
 	public BoatsNItemRightClickedOnBlockProcedure(NegativenModElements instance) {
-		super(instance, 769);
+		super(instance, 779);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

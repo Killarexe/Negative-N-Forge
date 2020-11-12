@@ -17,7 +17,7 @@ public class UpdateritemItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:updater")
 	public static final Item block = null;
 	public UpdateritemItem(NegativenModElements instance) {
-		super(instance, 277);
+		super(instance, 287);
 	}
 
 	@Override

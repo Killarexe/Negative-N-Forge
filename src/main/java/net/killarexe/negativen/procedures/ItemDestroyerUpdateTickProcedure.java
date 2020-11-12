@@ -15,7 +15,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class ItemDestroyerUpdateTickProcedure extends NegativenModElements.ModElement {
 	public ItemDestroyerUpdateTickProcedure(NegativenModElements instance) {
-		super(instance, 448);
+		super(instance, 458);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

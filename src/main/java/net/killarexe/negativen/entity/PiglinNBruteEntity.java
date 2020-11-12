@@ -54,7 +54,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class PiglinNBruteEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public PiglinNBruteEntity(NegativenModElements instance) {
-		super(instance, 61);
+		super(instance, 62);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

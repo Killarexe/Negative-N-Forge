@@ -24,7 +24,7 @@ public class NetherWartNBlockBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:nether_wart_n_block")
 	public static final Block block = null;
 	public NetherWartNBlockBlock(NegativenModElements instance) {
-		super(instance, 221);
+		super(instance, 222);
 	}
 
 	@Override

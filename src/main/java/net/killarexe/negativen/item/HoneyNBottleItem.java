@@ -18,7 +18,7 @@ public class HoneyNBottleItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:honey_n_bottle")
 	public static final Item block = null;
 	public HoneyNBottleItem(NegativenModElements instance) {
-		super(instance, 34);
+		super(instance, 35);
 	}
 
 	@Override

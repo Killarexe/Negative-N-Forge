@@ -105,7 +105,7 @@ public class ClassicNetherNDimension extends NegativenModElements.ModElement {
 	public static DimensionType type = null;
 	private static Biome[] dimensionBiomes;
 	public ClassicNetherNDimension(NegativenModElements instance) {
-		super(instance, 275);
+		super(instance, 285);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

@@ -24,7 +24,7 @@ public class AcaciaStrairsNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:acacia_stairs_n")
 	public static final Block block = null;
 	public AcaciaStrairsNBlock(NegativenModElements instance) {
-		super(instance, 138);
+		super(instance, 139);
 	}
 
 	@Override

@@ -18,7 +18,7 @@ public class UTitleScreenItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:ester_egg")
 	public static final Item block = null;
 	public UTitleScreenItem(NegativenModElements instance) {
-		super(instance, 385);
+		super(instance, 395);
 	}
 
 	@Override

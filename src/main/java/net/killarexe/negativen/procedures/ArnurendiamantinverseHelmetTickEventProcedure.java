@@ -12,7 +12,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class ArnurendiamantinverseHelmetTickEventProcedure extends NegativenModElements.ModElement {
 	public ArnurendiamantinverseHelmetTickEventProcedure(NegativenModElements instance) {
-		super(instance, 361);
+		super(instance, 371);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

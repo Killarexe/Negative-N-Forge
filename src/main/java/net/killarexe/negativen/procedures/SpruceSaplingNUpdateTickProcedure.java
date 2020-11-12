@@ -16,7 +16,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class SpruceSaplingNUpdateTickProcedure extends NegativenModElements.ModElement {
 	public SpruceSaplingNUpdateTickProcedure(NegativenModElements instance) {
-		super(instance, 520);
+		super(instance, 530);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

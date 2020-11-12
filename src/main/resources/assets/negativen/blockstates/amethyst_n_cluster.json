@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "negativen:block/amethyst_n_cluster"
+    },
+    "facing=east": {
+      "model": "negativen:block/amethyst_n_cluster",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "negativen:block/amethyst_n_cluster",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "negativen:block/amethyst_n_cluster",
+      "y": 270
+    }
+  }
+}

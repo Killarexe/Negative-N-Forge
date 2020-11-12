@@ -16,7 +16,7 @@ public class BakedPotatoNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:baked_potato_n")
 	public static final Item block = null;
 	public BakedPotatoNItem(NegativenModElements instance) {
-		super(instance, 291);
+		super(instance, 301);
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class NetheriteNScrapItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:netherite_n_scrap")
 	public static final Item block = null;
 	public NetheriteNScrapItem(NegativenModElements instance) {
-		super(instance, 35);
+		super(instance, 36);
 	}
 
 	@Override

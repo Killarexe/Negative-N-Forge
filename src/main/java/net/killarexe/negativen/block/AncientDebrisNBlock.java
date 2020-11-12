@@ -39,7 +39,7 @@ public class AncientDebrisNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:ancient_debris_n")
 	public static final Block block = null;
 	public AncientDebrisNBlock(NegativenModElements instance) {
-		super(instance, 160);
+		super(instance, 161);
 	}
 
 	@Override

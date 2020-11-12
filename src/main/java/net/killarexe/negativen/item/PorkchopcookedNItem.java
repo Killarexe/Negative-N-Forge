@@ -16,7 +16,7 @@ public class PorkchopcookedNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:porkchopcookedn")
 	public static final Item block = null;
 	public PorkchopcookedNItem(NegativenModElements instance) {
-		super(instance, 282);
+		super(instance, 292);
 	}
 
 	@Override

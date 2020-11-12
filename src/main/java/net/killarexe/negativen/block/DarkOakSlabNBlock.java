@@ -26,7 +26,7 @@ public class DarkOakSlabNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:dark_oak_slab_n")
 	public static final Block block = null;
 	public DarkOakSlabNBlock(NegativenModElements instance) {
-		super(instance, 147);
+		super(instance, 148);
 	}
 
 	@Override

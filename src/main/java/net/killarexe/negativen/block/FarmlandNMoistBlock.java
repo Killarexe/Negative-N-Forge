@@ -40,7 +40,7 @@ public class FarmlandNMoistBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:farmland_n_moist")
 	public static final Block block = null;
 	public FarmlandNMoistBlock(NegativenModElements instance) {
-		super(instance, 481);
+		super(instance, 491);
 	}
 
 	@Override

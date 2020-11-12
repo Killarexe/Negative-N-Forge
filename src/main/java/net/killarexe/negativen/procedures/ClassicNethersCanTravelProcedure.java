@@ -8,7 +8,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class ClassicNethersCanTravelProcedure extends NegativenModElements.ModElement {
 	public ClassicNethersCanTravelProcedure(NegativenModElements instance) {
-		super(instance, 779);
+		super(instance, 789);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

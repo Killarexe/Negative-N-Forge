@@ -32,7 +32,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class DarkOakNTreeStructure extends NegativenModElements.ModElement {
 	public DarkOakNTreeStructure(NegativenModElements instance) {
-		super(instance, 521);
+		super(instance, 531);
 	}
 
 	@Override

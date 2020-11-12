@@ -12,7 +12,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class GoldNAppleFoodEatenProcedure extends NegativenModElements.ModElement {
 	public GoldNAppleFoodEatenProcedure(NegativenModElements instance) {
-		super(instance, 560);
+		super(instance, 570);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

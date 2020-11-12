@@ -24,7 +24,7 @@ public class GoldNAppleItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:gold_n_apple")
 	public static final Item block = null;
 	public GoldNAppleItem(NegativenModElements instance) {
-		super(instance, 284);
+		super(instance, 294);
 	}
 
 	@Override

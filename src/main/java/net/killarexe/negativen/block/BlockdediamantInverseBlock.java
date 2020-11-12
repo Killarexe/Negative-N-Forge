@@ -75,7 +75,7 @@ public class BlockdediamantInverseBlock extends NegativenModElements.ModElement 
 	@ObjectHolder("negativen:diamond_n_block")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BlockdediamantInverseBlock(NegativenModElements instance) {
-		super(instance, 125);
+		super(instance, 126);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

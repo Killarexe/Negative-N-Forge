@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "negativen:block/small_amethyst_n_bud"
+    },
+    "facing=east": {
+      "model": "negativen:block/small_amethyst_n_bud",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "negativen:block/small_amethyst_n_bud",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "negativen:block/small_amethyst_n_bud",
+      "y": 270
+    }
+  }
+}

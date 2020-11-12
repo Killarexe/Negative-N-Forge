@@ -9,7 +9,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class PeonyNBottomParticleSpawningConditionProcedure extends NegativenModElements.ModElement {
 	public PeonyNBottomParticleSpawningConditionProcedure(NegativenModElements instance) {
-		super(instance, 747);
+		super(instance, 757);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

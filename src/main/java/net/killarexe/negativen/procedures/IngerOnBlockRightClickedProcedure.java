@@ -23,7 +23,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class IngerOnBlockRightClickedProcedure extends NegativenModElements.ModElement {
 	public IngerOnBlockRightClickedProcedure(NegativenModElements instance) {
-		super(instance, 469);
+		super(instance, 479);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

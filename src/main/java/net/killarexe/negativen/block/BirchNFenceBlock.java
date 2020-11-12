@@ -34,7 +34,7 @@ public class BirchNFenceBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:birch_n_fence")
 	public static final Block block = null;
 	public BirchNFenceBlock(NegativenModElements instance) {
-		super(instance, 85);
+		super(instance, 86);
 	}
 
 	@Override

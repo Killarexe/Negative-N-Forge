@@ -33,7 +33,7 @@ public class PlanchedeboisHoeItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:wood_n_hoe")
 	public static final Item block = null;
 	public PlanchedeboisHoeItem(NegativenModElements instance) {
-		super(instance, 259);
+		super(instance, 269);
 	}
 
 	@Override

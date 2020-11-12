@@ -23,8 +23,11 @@
       "Fusonator Resipes Book!"
     ],
     "hasGlow": true,
-    "guiBoundTo": "<NONE>",
+    "guiBoundTo": "IngerRecipesGUI",
     "inventorySize": 9,
-    "inventoryStackSize": 64
+    "inventoryStackSize": 64,
+    "onRightClickedOnBlock": {
+      "name": "RecipeBooksRightClick"
+    }
   }
 }

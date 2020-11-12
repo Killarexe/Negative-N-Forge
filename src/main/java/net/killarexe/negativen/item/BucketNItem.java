@@ -27,7 +27,7 @@ public class BucketNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:bucket_n")
 	public static final Item block = null;
 	public BucketNItem(NegativenModElements instance) {
-		super(instance, 17);
+		super(instance, 18);
 	}
 
 	@Override

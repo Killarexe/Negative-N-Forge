@@ -32,7 +32,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class WarpedTreeNStructure extends NegativenModElements.ModElement {
 	public WarpedTreeNStructure(NegativenModElements instance) {
-		super(instance, 697);
+		super(instance, 707);
 	}
 
 	@Override

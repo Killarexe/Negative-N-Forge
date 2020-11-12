@@ -41,7 +41,7 @@ public class SnowNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:snow_n")
 	public static final Block block = null;
 	public SnowNBlock(NegativenModElements instance) {
-		super(instance, 89);
+		super(instance, 90);
 	}
 
 	@Override

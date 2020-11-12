@@ -16,7 +16,7 @@ public class ChickenNFoodItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:chicken_n_food")
 	public static final Item block = null;
 	public ChickenNFoodItem(NegativenModElements instance) {
-		super(instance, 286);
+		super(instance, 296);
 	}
 
 	@Override

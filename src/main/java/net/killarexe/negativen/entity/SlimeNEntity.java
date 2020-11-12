@@ -46,7 +46,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class SlimeNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public SlimeNEntity(NegativenModElements instance) {
-		super(instance, 57);
+		super(instance, 58);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

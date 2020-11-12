@@ -15,7 +15,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class PoisonusProccedProcedure extends NegativenModElements.ModElement {
 	public PoisonusProccedProcedure(NegativenModElements instance) {
-		super(instance, 636);
+		super(instance, 646);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

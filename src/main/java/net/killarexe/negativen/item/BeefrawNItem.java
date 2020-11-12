@@ -22,7 +22,7 @@ public class BeefrawNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:beefrawn")
 	public static final Item block = null;
 	public BeefrawNItem(NegativenModElements instance) {
-		super(instance, 279);
+		super(instance, 289);
 	}
 
 	@Override

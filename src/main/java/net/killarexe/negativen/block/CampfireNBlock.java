@@ -40,7 +40,7 @@ public class CampfireNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:campfire_n")
 	public static final Block block = null;
 	public CampfireNBlock(NegativenModElements instance) {
-		super(instance, 90);
+		super(instance, 91);
 	}
 
 	@Override

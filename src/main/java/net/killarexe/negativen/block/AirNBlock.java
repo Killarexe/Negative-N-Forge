@@ -31,7 +31,7 @@ public class AirNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:air_n")
 	public static final Block block = null;
 	public AirNBlock(NegativenModElements instance) {
-		super(instance, 168);
+		super(instance, 169);
 	}
 
 	@Override

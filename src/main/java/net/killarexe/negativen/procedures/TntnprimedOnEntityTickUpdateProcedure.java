@@ -22,7 +22,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class TntnprimedOnEntityTickUpdateProcedure extends NegativenModElements.ModElement {
 	public TntnprimedOnEntityTickUpdateProcedure(NegativenModElements instance) {
-		super(instance, 401);
+		super(instance, 411);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

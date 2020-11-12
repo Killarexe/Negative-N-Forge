@@ -59,7 +59,7 @@ public class EnderDragonNEntity extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:entitybulletender_dragon_n")
 	public static final EntityType arrow = null;
 	public EnderDragonNEntity(NegativenModElements instance) {
-		super(instance, 632);
+		super(instance, 642);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

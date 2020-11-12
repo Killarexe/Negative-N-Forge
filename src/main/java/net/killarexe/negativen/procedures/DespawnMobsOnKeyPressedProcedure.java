@@ -21,7 +21,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class DespawnMobsOnKeyPressedProcedure extends NegativenModElements.ModElement {
 	public DespawnMobsOnKeyPressedProcedure(NegativenModElements instance) {
-		super(instance, 454);
+		super(instance, 464);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

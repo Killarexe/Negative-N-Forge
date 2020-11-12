@@ -48,7 +48,7 @@ public class SpruceForestNBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:spruce_forest_n")
 	public static final CustomBiome biome = null;
 	public SpruceForestNBiome(NegativenModElements instance) {
-		super(instance, 525);
+		super(instance, 535);
 	}
 
 	@Override

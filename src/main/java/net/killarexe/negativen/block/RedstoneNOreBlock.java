@@ -27,7 +27,7 @@ public class RedstoneNOreBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:redstone_n_ore")
 	public static final Block block = null;
 	public RedstoneNOreBlock(NegativenModElements instance) {
-		super(instance, 216);
+		super(instance, 217);
 	}
 
 	@Override

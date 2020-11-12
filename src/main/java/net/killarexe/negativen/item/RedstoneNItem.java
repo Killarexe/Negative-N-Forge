@@ -15,7 +15,7 @@ public class RedstoneNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:redstone_n")
 	public static final Item block = null;
 	public RedstoneNItem(NegativenModElements instance) {
-		super(instance, 328);
+		super(instance, 338);
 	}
 
 	@Override

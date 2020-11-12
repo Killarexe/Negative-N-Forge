@@ -34,7 +34,7 @@ public class JungleNDoorBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:jungle_n_door")
 	public static final Block block = null;
 	public JungleNDoorBlock(NegativenModElements instance) {
-		super(instance, 193);
+		super(instance, 194);
 	}
 
 	@Override

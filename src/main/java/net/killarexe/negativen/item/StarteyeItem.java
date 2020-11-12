@@ -15,7 +15,7 @@ public class StarteyeItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:start_eye")
 	public static final Item block = null;
 	public StarteyeItem(NegativenModElements instance) {
-		super(instance, 14);
+		super(instance, 15);
 	}
 
 	@Override

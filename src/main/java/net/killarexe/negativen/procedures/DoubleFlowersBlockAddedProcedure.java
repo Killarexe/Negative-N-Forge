@@ -15,7 +15,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class DoubleFlowersBlockAddedProcedure extends NegativenModElements.ModElement {
 	public DoubleFlowersBlockAddedProcedure(NegativenModElements instance) {
-		super(instance, 765);
+		super(instance, 775);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

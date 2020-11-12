@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:RedstoneLampN"
+      "value": "CUSTOM:NetherWartNBlock"
     },
     "name": "nether_wart_n_block_craft",
     "namespace": "mod"

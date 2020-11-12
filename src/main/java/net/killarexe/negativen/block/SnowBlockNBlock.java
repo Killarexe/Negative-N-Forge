@@ -30,7 +30,7 @@ public class SnowBlockNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:snow_block_n")
 	public static final Block block = null;
 	public SnowBlockNBlock(NegativenModElements instance) {
-		super(instance, 187);
+		super(instance, 188);
 	}
 
 	@Override

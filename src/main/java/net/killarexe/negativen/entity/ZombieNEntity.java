@@ -51,7 +51,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class ZombieNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public ZombieNEntity(NegativenModElements instance) {
-		super(instance, 53);
+		super(instance, 54);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

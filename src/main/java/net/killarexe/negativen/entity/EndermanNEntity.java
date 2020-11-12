@@ -48,7 +48,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class EndermanNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public EndermanNEntity(NegativenModElements instance) {
-		super(instance, 51);
+		super(instance, 52);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

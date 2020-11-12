@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:IronNNugget"
+      },
+      {
+        "value": "CUSTOM:IronNNugget"
+      },
+      {
+        "value": "CUSTOM:IronNNugget"
+      },
+      {
+        "value": "CUSTOM:IronNNugget"
+      },
+      {
+        "value": "CUSTOM:SoulSand"
+      },
+      {
+        "value": "CUSTOM:IronNNugget"
+      },
+      {
+        "value": "CUSTOM:IronNNugget"
+      },
+      {
+        "value": "CUSTOM:IronNNugget"
+      },
+      {
+        "value": "CUSTOM:IronNNugget"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SoulLanternN"
+    },
+    "name": "soul_lantern_n_craft",
+    "namespace": "mod"
+  }
+}

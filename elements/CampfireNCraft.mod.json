@@ -1,0 +1,46 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SickN"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SickN"
+      },
+      {
+        "value": "CUSTOM:CoalN"
+      },
+      {
+        "value": "CUSTOM:SickN"
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:CampfireN"
+    },
+    "name": "campfire_n_craft",
+    "namespace": "mod"
+  }
+}

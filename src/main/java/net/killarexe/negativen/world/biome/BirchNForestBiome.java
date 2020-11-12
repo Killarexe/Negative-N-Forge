@@ -48,7 +48,7 @@ public class BirchNForestBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:birch_n_forest")
 	public static final CustomBiome biome = null;
 	public BirchNForestBiome(NegativenModElements instance) {
-		super(instance, 487);
+		super(instance, 497);
 	}
 
 	@Override

@@ -15,7 +15,7 @@ public class BoneNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:bone_n")
 	public static final Item block = null;
 	public BoneNItem(NegativenModElements instance) {
-		super(instance, 40);
+		super(instance, 41);
 	}
 
 	@Override

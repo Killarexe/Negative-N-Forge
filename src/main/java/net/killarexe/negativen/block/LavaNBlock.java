@@ -50,7 +50,7 @@ public class LavaNBlock extends NegativenModElements.ModElement {
 	public static FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 	public LavaNBlock(NegativenModElements instance) {
-		super(instance, 405);
+		super(instance, 415);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

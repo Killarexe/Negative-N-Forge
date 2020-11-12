@@ -30,7 +30,7 @@ public class DarkOakLogNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:dark_oak_log_n")
 	public static final Block block = null;
 	public DarkOakLogNBlock(NegativenModElements instance) {
-		super(instance, 144);
+		super(instance, 145);
 	}
 
 	@Override

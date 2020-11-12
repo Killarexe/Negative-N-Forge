@@ -13,7 +13,7 @@ import net.killarexe.negativen.NegativenModElements;
 @NegativenModElements.ModElement.Tag
 public class NegativeNRedstoneNItemGroup extends NegativenModElements.ModElement {
 	public NegativeNRedstoneNItemGroup(NegativenModElements instance) {
-		super(instance, 689);
+		super(instance, 699);
 	}
 
 	@Override

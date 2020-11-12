@@ -19,7 +19,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class TorchNState2OnBlockRightClickedProcedure extends NegativenModElements.ModElement {
 	public TorchNState2OnBlockRightClickedProcedure(NegativenModElements instance) {
-		super(instance, 648);
+		super(instance, 658);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

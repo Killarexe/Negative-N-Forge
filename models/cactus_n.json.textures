@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "cactusn_side",
+        "top": "cactusn_top",
+        "bottom": "cactus_n_bottom"
+      },
+      "name": "default"
+    }
+  }
+}

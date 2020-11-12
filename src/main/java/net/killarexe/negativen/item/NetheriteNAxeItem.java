@@ -23,7 +23,7 @@ public class NetheriteNAxeItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:netherite_n_axe")
 	public static final Item block = null;
 	public NetheriteNAxeItem(NegativenModElements instance) {
-		super(instance, 245);
+		super(instance, 255);
 	}
 
 	@Override

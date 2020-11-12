@@ -14,7 +14,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class ChestNOnBlockRightClickedProcedure extends NegativenModElements.ModElement {
 	public ChestNOnBlockRightClickedProcedure(NegativenModElements instance) {
-		super(instance, 540);
+		super(instance, 550);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -46,7 +46,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class SpiderNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public SpiderNEntity(NegativenModElements instance) {
-		super(instance, 50);
+		super(instance, 51);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

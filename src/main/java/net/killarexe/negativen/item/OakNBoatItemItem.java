@@ -25,7 +25,7 @@ public class OakNBoatItemItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:oak_n_boat_item")
 	public static final Item block = null;
 	public OakNBoatItemItem(NegativenModElements instance) {
-		super(instance, 329);
+		super(instance, 339);
 	}
 
 	@Override

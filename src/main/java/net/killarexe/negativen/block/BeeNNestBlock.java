@@ -26,7 +26,7 @@ public class BeeNNestBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:bee_n_nest")
 	public static final Block block = null;
 	public BeeNNestBlock(NegativenModElements instance) {
-		super(instance, 226);
+		super(instance, 227);
 	}
 
 	@Override

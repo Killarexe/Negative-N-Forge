@@ -29,7 +29,7 @@ public class NetheriteNArmorItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:netherite_n_armor_boots")
 	public static final Item boots = null;
 	public NetheriteNArmorItem(NegativenModElements instance) {
-		super(instance, 232);
+		super(instance, 242);
 	}
 
 	@Override

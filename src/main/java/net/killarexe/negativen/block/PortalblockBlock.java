@@ -33,7 +33,7 @@ public class PortalblockBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:portal_block")
 	public static final Block block = null;
 	public PortalblockBlock(NegativenModElements instance) {
-		super(instance, 167);
+		super(instance, 168);
 	}
 
 	@Override

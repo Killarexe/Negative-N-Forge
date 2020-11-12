@@ -10,7 +10,7 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class UnstablePotionStartedappliedProcedure extends NegativenModElements.ModElement {
 	public UnstablePotionStartedappliedProcedure(NegativenModElements instance) {
-		super(instance, 474);
+		super(instance, 484);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -20,7 +20,7 @@ public class UnstablePotionStartedappliedProcedure extends NegativenModElements.
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		for (int index0 = 0; index0 < (int) (10); index0++) {
-			entity.attackEntityFrom(DamageSource.GENERIC, (float) 1);
+			entity.attackEntityFrom(DamageSource.MAGIC, (float) 1);
 		}
 	}
 }

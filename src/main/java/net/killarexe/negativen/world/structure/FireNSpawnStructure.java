@@ -33,7 +33,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class FireNSpawnStructure extends NegativenModElements.ModElement {
 	public FireNSpawnStructure(NegativenModElements instance) {
-		super(instance, 792);
+		super(instance, 802);
 	}
 
 	@Override

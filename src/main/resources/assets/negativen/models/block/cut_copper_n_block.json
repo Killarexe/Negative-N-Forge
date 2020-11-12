@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/cut_copper_n",
+    "particle": "negativen:blocks/cut_copper_n"
+  }
+}

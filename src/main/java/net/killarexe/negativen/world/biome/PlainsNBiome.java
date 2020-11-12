@@ -49,7 +49,7 @@ public class PlainsNBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:plains_n")
 	public static final CustomBiome biome = null;
 	public PlainsNBiome(NegativenModElements instance) {
-		super(instance, 488);
+		super(instance, 498);
 	}
 
 	@Override

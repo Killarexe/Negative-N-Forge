@@ -19,7 +19,7 @@ public class MineingBiomeBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:mineingbiome")
 	public static final CustomBiome biome = null;
 	public MineingBiomeBiome(NegativenModElements instance) {
-		super(instance, 394);
+		super(instance, 404);
 	}
 
 	@Override

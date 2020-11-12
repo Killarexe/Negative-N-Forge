@@ -24,7 +24,7 @@ public class ClassicIronBlockBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:classic_iron_block")
 	public static final Block block = null;
 	public ClassicIronBlockBlock(NegativenModElements instance) {
-		super(instance, 315);
+		super(instance, 325);
 	}
 
 	@Override

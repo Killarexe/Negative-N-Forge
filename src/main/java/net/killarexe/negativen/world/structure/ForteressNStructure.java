@@ -32,7 +32,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class ForteressNStructure extends NegativenModElements.ModElement {
 	public ForteressNStructure(NegativenModElements instance) {
-		super(instance, 421);
+		super(instance, 431);
 	}
 
 	@Override
