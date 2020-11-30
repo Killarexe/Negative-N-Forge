@@ -9,6 +9,7 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -27,7 +28,7 @@ public class IngerRecipeGuideItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:inger_recipe_guide")
 	public static final Item block = null;
 	public IngerRecipeGuideItem(NegativenModElements instance) {
-		super(instance, 822);
+		super(instance, 32);
 	}
 
 	@Override
@@ -36,7 +37,7 @@ public class IngerRecipeGuideItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(1));
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON));
 			setRegistryName("inger_recipe_guide");
 		}
 

@@ -1,10 +1,9 @@
 {
-  "parent": "negativen:custom/grass_path-n",
+  "parent": "negativen:custom/farmland_n",
   "textures": {
     "all": "negativen:blocks/dn",
     "particle": "negativen:blocks/dn",
-    "0": "negativen:blocks/grassn_path_side",
-    "1": "negativen:blocks/grassn_path_top",
-    "2": "negativen:blocks/dn"
+    "top": "negativen:blocks/grassn_path_top",
+    "dirt": "negativen:blocks/grassn_path_side"
   }
 }

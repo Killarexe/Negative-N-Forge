@@ -9,6 +9,10 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
+import net.minecraft.world.gen.feature.structure.MineshaftStructure;
+import net.minecraft.world.gen.feature.structure.MineshaftConfig;
+import net.minecraft.world.gen.feature.IFeatureConfig;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.AbstractTreeFeature;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
@@ -41,7 +45,7 @@ public class ClassicBiomeBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:classic_biome")
 	public static final CustomBiome biome = null;
 	public ClassicBiomeBiome(NegativenModElements instance) {
-		super(instance, 576);
+		super(instance, 595);
 	}
 
 	@Override
@@ -62,9 +66,13 @@ public class ClassicBiomeBiome extends NegativenModElements.ModElement {
 							ClassicStoneBlock.block.getDefaultState(), ClassicStoneBlock.block.getDefaultState())));
 			setRegistryName("classic_biome");
 			DefaultBiomeFeatures.addCarvers(this);
-			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addMonsterRooms(this);
+			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addOres(this);
+			DefaultBiomeFeatures.addLakes(this);
+			this.addStructure(Feature.STRONGHOLD.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+			this.addStructure(Feature.MINESHAFT.withConfiguration(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
+			this.addStructure(Feature.PILLAGER_OUTPOST.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
 			addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, new CustomTreeFeature()
 					.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(ClassicWoodBlock.block.getDefaultState()),
 							new SimpleBlockStateProvider(ClassicLeavesBlock.block.getDefaultState()))).baseHeight(5)

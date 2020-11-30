@@ -10,12 +10,13 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class UnstablePotionStartedappliedProcedure extends NegativenModElements.ModElement {
 	public UnstablePotionStartedappliedProcedure(NegativenModElements instance) {
-		super(instance, 484);
+		super(instance, 504);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure UnstablePotionStartedapplied!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure UnstablePotionStartedapplied!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

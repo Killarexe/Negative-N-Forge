@@ -18,7 +18,7 @@ public class NItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:n")
 	public static final Item block = null;
 	public NItem(NegativenModElements instance) {
-		super(instance, 522);
+		super(instance, 541);
 	}
 
 	@Override

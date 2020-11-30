@@ -12,12 +12,13 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class FireNEntityWalksOnTheBlockProcedure extends NegativenModElements.ModElement {
 	public FireNEntityWalksOnTheBlockProcedure(NegativenModElements instance) {
-		super(instance, 578);
+		super(instance, 597);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure FireNEntityWalksOnTheBlock!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure FireNEntityWalksOnTheBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

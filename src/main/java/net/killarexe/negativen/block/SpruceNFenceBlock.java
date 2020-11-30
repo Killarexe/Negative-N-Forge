@@ -34,7 +34,7 @@ public class SpruceNFenceBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:spruce_n_fence")
 	public static final Block block = null;
 	public SpruceNFenceBlock(NegativenModElements instance) {
-		super(instance, 89);
+		super(instance, 97);
 	}
 
 	@Override

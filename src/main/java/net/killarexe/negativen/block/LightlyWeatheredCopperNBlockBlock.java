@@ -38,7 +38,7 @@ public class LightlyWeatheredCopperNBlockBlock extends NegativenModElements.ModE
 	@ObjectHolder("negativen:lightly_weathered_copper_n_block")
 	public static final Block block = null;
 	public LightlyWeatheredCopperNBlockBlock(NegativenModElements instance) {
-		super(instance, 235);
+		super(instance, 244);
 	}
 
 	@Override

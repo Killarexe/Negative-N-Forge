@@ -27,7 +27,7 @@ public class GoldNHoeItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:gold_n_hoe")
 	public static final Item block = null;
 	public GoldNHoeItem(NegativenModElements instance) {
-		super(instance, 277);
+		super(instance, 299);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.HorizontalBlock;
+import net.minecraft.block.DirectionalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -42,7 +42,7 @@ public class LargeAmethystNBudBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:large_amethyst_n_bud")
 	public static final Block block = null;
 	public LargeAmethystNBudBlock(NegativenModElements instance) {
-		super(instance, 834);
+		super(instance, 841);
 	}
 
 	@Override
@@ -54,10 +54,10 @@ public class LargeAmethystNBudBlock extends NegativenModElements.ModElement {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void clientLoad(FMLClientSetupEvent event) {
-		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
 	public static class CustomBlock extends Block {
-		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
+		public static final DirectionProperty FACING = DirectionalBlock.FACING;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.GLASS).hardnessAndResistance(0.05f, 10f).lightValue(0).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE).notSolid().tickRandomly());
@@ -96,9 +96,8 @@ public class LargeAmethystNBudBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
-			if (context.getFace() == Direction.UP || context.getFace() == Direction.DOWN)
-				return this.getDefaultState().with(FACING, Direction.NORTH);
-			return this.getDefaultState().with(FACING, context.getFace());
+			;
+			return this.getDefaultState().with(FACING, context.getNearestLookingDirection().getOpposite());
 		}
 
 		@Override

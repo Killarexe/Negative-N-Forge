@@ -15,28 +15,33 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class HoeNRightClickOnDirtProcedure extends NegativenModElements.ModElement {
 	public HoeNRightClickOnDirtProcedure(NegativenModElements instance) {
-		super(instance, 660);
+		super(instance, 679);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("itemstack") == null) {
-			System.err.println("Failed to load dependency itemstack for procedure HoeNRightClickOnDirt!");
+			if (!dependencies.containsKey("itemstack"))
+				System.err.println("Failed to load dependency itemstack for procedure HoeNRightClickOnDirt!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure HoeNRightClickOnDirt!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure HoeNRightClickOnDirt!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure HoeNRightClickOnDirt!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure HoeNRightClickOnDirt!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure HoeNRightClickOnDirt!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure HoeNRightClickOnDirt!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure HoeNRightClickOnDirt!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure HoeNRightClickOnDirt!");
 			return;
 		}
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");

@@ -59,7 +59,7 @@ public class EnderDragonNEntity extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:entitybulletender_dragon_n")
 	public static final EntityType arrow = null;
 	public EnderDragonNEntity(NegativenModElements instance) {
-		super(instance, 642);
+		super(instance, 661);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -131,10 +131,6 @@ public class EnderDragonNEntity extends NegativenModElements.ModElement {
 		@Override
 		public boolean canDespawn(double distanceToClosestPlayer) {
 			return false;
-		}
-
-		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
-			super.dropSpecialItems(source, looting, recentlyHitIn);
 		}
 
 		@Override

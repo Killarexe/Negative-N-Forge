@@ -17,12 +17,13 @@ import java.util.Iterator;
 @NegativenModElements.ModElement.Tag
 public class DNArmorAProcedure extends NegativenModElements.ModElement {
 	public DNArmorAProcedure(NegativenModElements instance) {
-		super(instance, 564);
+		super(instance, 583);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure DNArmorA!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure DNArmorA!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

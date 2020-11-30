@@ -39,7 +39,7 @@ public class QuartzNOreBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:quartz_n_ore")
 	public static final Block block = null;
 	public QuartzNOreBlock(NegativenModElements instance) {
-		super(instance, 218);
+		super(instance, 227);
 	}
 
 	@Override

@@ -14,7 +14,7 @@ public class SmeltingEnchantment extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:smelting")
 	public static final Enchantment enchantment = null;
 	public SmeltingEnchantment(NegativenModElements instance) {
-		super(instance, 763);
+		super(instance, 781);
 	}
 
 	@Override

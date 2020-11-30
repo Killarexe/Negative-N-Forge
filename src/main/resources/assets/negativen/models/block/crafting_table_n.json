@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/oak_planksn",
+    "up": "negativen:blocks/crafting_table_n_top",
+    "north": "negativen:blocks/crafting_table_n_front",
+    "east": "negativen:blocks/crafting_table_n_side",
+    "south": "negativen:blocks/crafting_table_n_side",
+    "west": "negativen:blocks/crafting_table_n_side",
+    "particle": "negativen:blocks/oak_planksn"
+  }
+}

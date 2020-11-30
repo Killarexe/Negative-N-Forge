@@ -82,7 +82,7 @@ public class FusonatorBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:fusonator")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public FusonatorBlock(NegativenModElements instance) {
-		super(instance, 131);
+		super(instance, 159);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -131,6 +131,7 @@ public class FusonatorBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
 			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
 		}
 

@@ -33,7 +33,7 @@ public class BoisNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:oak_log_n")
 	public static final Block block = null;
 	public BoisNBlock(NegativenModElements instance) {
-		super(instance, 133);
+		super(instance, 161);
 	}
 
 	@Override
@@ -76,7 +76,7 @@ public class BoisNBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

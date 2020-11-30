@@ -39,7 +39,7 @@ public class NetherGoldNOreBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:nether_gold_n_ore")
 	public static final Block block = null;
 	public NetherGoldNOreBlock(NegativenModElements instance) {
-		super(instance, 219);
+		super(instance, 228);
 	}
 
 	@Override

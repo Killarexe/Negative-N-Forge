@@ -30,7 +30,7 @@ public class ClassicLeavesBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:classic_leaves")
 	public static final Block block = null;
 	public ClassicLeavesBlock(NegativenModElements instance) {
-		super(instance, 315);
+		super(instance, 337);
 	}
 
 	@Override

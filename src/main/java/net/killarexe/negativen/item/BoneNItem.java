@@ -3,6 +3,7 @@ package net.killarexe.negativen.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
@@ -15,7 +16,7 @@ public class BoneNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:bone_n")
 	public static final Item block = null;
 	public BoneNItem(NegativenModElements instance) {
-		super(instance, 41);
+		super(instance, 44);
 	}
 
 	@Override
@@ -24,7 +25,7 @@ public class BoneNItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("bone_n");
 		}
 

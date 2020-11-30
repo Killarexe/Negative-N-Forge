@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/quartz_n_pillar_top",
+    "up": "negativen:blocks/quartz_n_pillar_top",
+    "north": "negativen:blocks/quartz_n_pillar",
+    "east": "negativen:blocks/quartz_n_pillar",
+    "south": "negativen:blocks/quartz_n_pillar",
+    "west": "negativen:blocks/quartz_n_pillar",
+    "particle": "negativen:blocks/quartz_n_pillar_top"
+  }
+}

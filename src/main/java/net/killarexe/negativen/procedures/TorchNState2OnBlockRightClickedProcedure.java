@@ -19,28 +19,33 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class TorchNState2OnBlockRightClickedProcedure extends NegativenModElements.ModElement {
 	public TorchNState2OnBlockRightClickedProcedure(NegativenModElements instance) {
-		super(instance, 658);
+		super(instance, 677);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("direction") == null) {
-			System.err.println("Failed to load dependency direction for procedure TorchNState2OnBlockRightClicked!");
+			if (!dependencies.containsKey("direction"))
+				System.err.println("Failed to load dependency direction for procedure TorchNState2OnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure TorchNState2OnBlockRightClicked!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure TorchNState2OnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure TorchNState2OnBlockRightClicked!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure TorchNState2OnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure TorchNState2OnBlockRightClicked!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure TorchNState2OnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure TorchNState2OnBlockRightClicked!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure TorchNState2OnBlockRightClicked!");
 			return;
 		}
 		Direction direction = (Direction) dependencies.get("direction");

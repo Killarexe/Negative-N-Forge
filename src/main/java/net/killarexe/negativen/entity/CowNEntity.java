@@ -48,7 +48,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class CowNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public CowNEntity(NegativenModElements instance) {
-		super(instance, 55);
+		super(instance, 58);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -58,7 +58,8 @@ public class CowNEntity extends NegativenModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.9f, 1.4f)).build("cown")
 						.setRegistryName("cown");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("cown"));
+		elements.items.add(
+				() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("cown_spawn_egg"));
 	}
 
 	@Override

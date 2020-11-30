@@ -32,7 +32,7 @@ public class OakStrairsNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:oak_n_stairs")
 	public static final Block block = null;
 	public OakStrairsNBlock(NegativenModElements instance) {
-		super(instance, 135);
+		super(instance, 163);
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class OakStrairsNBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
-			super(new Block(Block.Properties.create(Material.ROCK)).getDefaultState(),
+			super(new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1f, 10f)).getDefaultState(),
 					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).lightValue(0).notSolid());
 			setRegistryName("oak_n_stairs");
 		}

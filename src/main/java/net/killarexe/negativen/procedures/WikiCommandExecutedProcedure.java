@@ -11,12 +11,13 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class WikiCommandExecutedProcedure extends NegativenModElements.ModElement {
 	public WikiCommandExecutedProcedure(NegativenModElements instance) {
-		super(instance, 673);
+		super(instance, 692);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure WikiCommandExecuted!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure WikiCommandExecuted!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

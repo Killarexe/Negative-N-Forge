@@ -16,12 +16,13 @@ import java.util.Iterator;
 @NegativenModElements.ModElement.Tag
 public class DevShowCommandExecutedProcedure extends NegativenModElements.ModElement {
 	public DevShowCommandExecutedProcedure(NegativenModElements instance) {
-		super(instance, 653);
+		super(instance, 672);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure DevShowCommandExecuted!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure DevShowCommandExecuted!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

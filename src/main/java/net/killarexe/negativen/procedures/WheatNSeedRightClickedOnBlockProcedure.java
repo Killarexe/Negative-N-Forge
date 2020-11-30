@@ -18,28 +18,33 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class WheatNSeedRightClickedOnBlockProcedure extends NegativenModElements.ModElement {
 	public WheatNSeedRightClickedOnBlockProcedure(NegativenModElements instance) {
-		super(instance, 662);
+		super(instance, 681);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure WheatNSeedRightClickedOnBlock!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure WheatNSeedRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure WheatNSeedRightClickedOnBlock!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure WheatNSeedRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure WheatNSeedRightClickedOnBlock!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure WheatNSeedRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure WheatNSeedRightClickedOnBlock!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure WheatNSeedRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure WheatNSeedRightClickedOnBlock!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure WheatNSeedRightClickedOnBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -54,9 +59,10 @@ public class WheatNSeedRightClickedOnBlockProcedure extends NegativenModElements
 			world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), Blocks.AIR.getDefaultState(), 3);
 			world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), WheatNStage0Block.block.getDefaultState(), 3);
 			if ((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false))) {
-				if (entity instanceof PlayerEntity)
-					((PlayerEntity) entity).inventory.clearMatchingItems(p -> new ItemStack(WheatNSeedItem.block, (int) (1)).getItem() == p.getItem(),
-							(int) 1);
+				if (entity instanceof PlayerEntity) {
+					ItemStack _stktoremove = new ItemStack(WheatNSeedItem.block, (int) (1));
+					((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+				}
 			}
 		}
 	}

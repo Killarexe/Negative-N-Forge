@@ -23,7 +23,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 @NegativenModElements.ModElement.Tag
 public class WikiCommand extends NegativenModElements.ModElement {
 	public WikiCommand(NegativenModElements instance) {
-		super(instance, 674);
+		super(instance, 693);
 	}
 
 	@Override

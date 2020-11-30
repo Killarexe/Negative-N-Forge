@@ -31,7 +31,7 @@ public class SmoothStoneNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:smooth_stone_n")
 	public static final Block block = null;
 	public SmoothStoneNBlock(NegativenModElements instance) {
-		super(instance, 102);
+		super(instance, 110);
 	}
 
 	@Override

@@ -12,12 +12,13 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class RottenfleshNFoodEatenProcedure extends NegativenModElements.ModElement {
 	public RottenfleshNFoodEatenProcedure(NegativenModElements instance) {
-		super(instance, 393);
+		super(instance, 413);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure RottenfleshNFoodEaten!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure RottenfleshNFoodEaten!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

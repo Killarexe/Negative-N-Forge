@@ -12,12 +12,13 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class ArnurendiamantinverseBodyTickEventProcedure extends NegativenModElements.ModElement {
 	public ArnurendiamantinverseBodyTickEventProcedure(NegativenModElements instance) {
-		super(instance, 633);
+		super(instance, 652);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure ArnurendiamantinverseBodyTickEvent!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure ArnurendiamantinverseBodyTickEvent!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

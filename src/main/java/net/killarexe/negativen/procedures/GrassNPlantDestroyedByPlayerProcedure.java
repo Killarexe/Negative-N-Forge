@@ -14,24 +14,28 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class GrassNPlantDestroyedByPlayerProcedure extends NegativenModElements.ModElement {
 	public GrassNPlantDestroyedByPlayerProcedure(NegativenModElements instance) {
-		super(instance, 719);
+		super(instance, 738);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure GrassNPlantDestroyedByPlayer!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure GrassNPlantDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure GrassNPlantDestroyedByPlayer!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure GrassNPlantDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure GrassNPlantDestroyedByPlayer!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure GrassNPlantDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure GrassNPlantDestroyedByPlayer!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure GrassNPlantDestroyedByPlayer!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -43,13 +47,13 @@ public class GrassNPlantDestroyedByPlayerProcedure extends NegativenModElements.
 		if (((Random) <= 0.66)) {
 			if (!world.getWorld().isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(WheatNSeedItem.block, (int) (1)));
-				entityToSpawn.setPickupDelay(10);
+				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}
 		} else if (((Random) <= 0.33)) {
 			if (!world.getWorld().isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BeetrootSeedItem.block, (int) (1)));
-				entityToSpawn.setPickupDelay(10);
+				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}
 		}

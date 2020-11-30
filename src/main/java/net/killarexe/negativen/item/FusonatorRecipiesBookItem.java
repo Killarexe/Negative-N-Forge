@@ -5,10 +5,13 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.ICapabilitySerializable;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -22,6 +25,7 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ActionResult;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -31,6 +35,7 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.client.Minecraft;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.procedures.RecipeBooksRightClickProcedure;
@@ -52,7 +57,18 @@ public class FusonatorRecipiesBookItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:fusonator_recipies_book")
 	public static final Item block = null;
 	public FusonatorRecipiesBookItem(NegativenModElements instance) {
-		super(instance, 26);
+		super(instance, 31);
+		MinecraftForge.EVENT_BUS.register(this);
+	}
+
+	@SubscribeEvent
+	@OnlyIn(Dist.CLIENT)
+	public void onItemDropped(ItemTossEvent event) {
+		if (event.getEntityItem().getItem().getItem() == block) {
+			if (Minecraft.getInstance().currentScreen instanceof IngerRecipesGUIGui.GuiWindow) {
+				Minecraft.getInstance().player.closeScreen();
+			}
+		}
 	}
 
 	@Override
@@ -61,7 +77,7 @@ public class FusonatorRecipiesBookItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(1));
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON));
 			setRegistryName("fusonator_recipies_book");
 		}
 

@@ -15,16 +15,18 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class PoisonusProccedProcedure extends NegativenModElements.ModElement {
 	public PoisonusProccedProcedure(NegativenModElements instance) {
-		super(instance, 646);
+		super(instance, 665);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure PoisonusProcced!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure PoisonusProcced!");
 			return;
 		}
 		if (dependencies.get("itemstack") == null) {
-			System.err.println("Failed to load dependency itemstack for procedure PoisonusProcced!");
+			if (!dependencies.containsKey("itemstack"))
+				System.err.println("Failed to load dependency itemstack for procedure PoisonusProcced!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

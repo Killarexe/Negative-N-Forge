@@ -37,7 +37,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class AbandonnedPortalClassicDimStructure extends NegativenModElements.ModElement {
 	public AbandonnedPortalClassicDimStructure(NegativenModElements instance) {
-		super(instance, 627);
+		super(instance, 646);
 	}
 
 	@Override
@@ -76,7 +76,7 @@ public class AbandonnedPortalClassicDimStructure extends NegativenModElements.Mo
 						j -= 1;
 						Rotation rotation = Rotation.values()[random.nextInt(3)];
 						Mirror mirror = Mirror.values()[random.nextInt(2)];
-						BlockPos spawnTo = new BlockPos(i, j + 0, k);
+						BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
 						int x = spawnTo.getX();
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();

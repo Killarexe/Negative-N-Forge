@@ -13,6 +13,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -40,7 +41,7 @@ public class SoulCampfireNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:soul_campfire_n")
 	public static final Block block = null;
 	public SoulCampfireNBlock(NegativenModElements instance) {
-		super(instance, 92);
+		super(instance, 100);
 	}
 
 	@Override
@@ -80,7 +81,8 @@ public class SoulCampfireNBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			return VoxelShapes.create(0D, 0D, 0D, 1D, 0.5D, 1D);
+			Vec3d offset = state.getOffset(world, pos);
+			return VoxelShapes.create(0D, 0D, 0D, 1D, 0.5D, 1D).withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override

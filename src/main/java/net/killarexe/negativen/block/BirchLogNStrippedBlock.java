@@ -30,7 +30,7 @@ public class BirchLogNStrippedBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:birch_log_n_stripped")
 	public static final Block block = null;
 	public BirchLogNStrippedBlock(NegativenModElements instance) {
-		super(instance, 79);
+		super(instance, 87);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class BirchLogNStrippedBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

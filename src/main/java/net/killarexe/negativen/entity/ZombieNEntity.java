@@ -51,7 +51,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class ZombieNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public ZombieNEntity(NegativenModElements instance) {
-		super(instance, 54);
+		super(instance, 57);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -61,8 +61,8 @@ public class ZombieNEntity extends NegativenModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.95f)).build("zombien")
 						.setRegistryName("zombien");
 		elements.entities.add(() -> entity);
-		elements.items.add(
-				() -> new SpawnEggItem(entity, -52429, -39169, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("zombien"));
+		elements.items.add(() -> new SpawnEggItem(entity, -52429, -39169, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+				.setRegistryName("zombien_spawn_egg"));
 	}
 
 	@Override

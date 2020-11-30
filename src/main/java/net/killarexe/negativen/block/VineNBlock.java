@@ -46,7 +46,7 @@ public class VineNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:vine_n")
 	public static final Block block = null;
 	public VineNBlock(NegativenModElements instance) {
-		super(instance, 76);
+		super(instance, 84);
 	}
 
 	@Override
@@ -95,6 +95,7 @@ public class VineNBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
 			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
 		}
 

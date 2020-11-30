@@ -35,7 +35,7 @@ public class IngerBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:inger")
 	public static final Block block = null;
 	public IngerBlock(NegativenModElements instance) {
-		super(instance, 182);
+		super(instance, 207);
 	}
 
 	@Override

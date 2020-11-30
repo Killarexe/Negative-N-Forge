@@ -13,6 +13,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
@@ -41,7 +42,7 @@ public class WheatNStage2Block extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:wheat_n_stage_2")
 	public static final Block block = null;
 	public WheatNStage2Block(NegativenModElements instance) {
-		super(instance, 667);
+		super(instance, 686);
 	}
 
 	@Override
@@ -80,7 +81,8 @@ public class WheatNStage2Block extends NegativenModElements.ModElement {
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			return VoxelShapes.create(0D, 0D, 0D, 1D, 0.4D, 1D);
+			Vec3d offset = state.getOffset(world, pos);
+			return VoxelShapes.create(0D, 0D, 0D, 1D, 0.4D, 1D).withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override

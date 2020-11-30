@@ -32,7 +32,7 @@ public class SemiWeatheredCutCopperNBlockBlock extends NegativenModElements.ModE
 	@ObjectHolder("negativen:semi_weathered_cut_copper_n_block")
 	public static final Block block = null;
 	public SemiWeatheredCutCopperNBlockBlock(NegativenModElements instance) {
-		super(instance, 240);
+		super(instance, 249);
 	}
 
 	@Override

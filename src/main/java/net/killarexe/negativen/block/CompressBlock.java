@@ -29,7 +29,7 @@ public class CompressBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:compress")
 	public static final Block block = null;
 	public CompressBlock(NegativenModElements instance) {
-		super(instance, 657);
+		super(instance, 676);
 	}
 
 	@Override

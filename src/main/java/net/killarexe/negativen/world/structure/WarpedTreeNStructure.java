@@ -32,7 +32,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class WarpedTreeNStructure extends NegativenModElements.ModElement {
 	public WarpedTreeNStructure(NegativenModElements instance) {
-		super(instance, 707);
+		super(instance, 726);
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class WarpedTreeNStructure extends NegativenModElements.ModElement {
 						j = Math.abs(random.nextInt(Math.max(1, j)) - 24);
 						Rotation rotation = Rotation.values()[random.nextInt(3)];
 						Mirror mirror = Mirror.values()[random.nextInt(2)];
-						BlockPos spawnTo = new BlockPos(i, j + 0, k);
+						BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
 						int x = spawnTo.getX();
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();

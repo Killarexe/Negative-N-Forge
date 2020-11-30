@@ -23,7 +23,7 @@ public class ShearsNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:shears_n")
 	public static final Item block = null;
 	public ShearsNItem(NegativenModElements instance) {
-		super(instance, 288);
+		super(instance, 310);
 	}
 
 	@Override

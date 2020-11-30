@@ -28,7 +28,7 @@ public class PoisonNPotion extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:poison_n")
 	public static final Potion potionType = null;
 	public PoisonNPotion(NegativenModElements instance) {
-		super(instance, 829);
+		super(instance, 839);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

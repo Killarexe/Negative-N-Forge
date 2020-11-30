@@ -36,7 +36,7 @@ public class ItemDestroyerBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:itemdestroyer")
 	public static final Block block = null;
 	public ItemDestroyerBlock(NegativenModElements instance) {
-		super(instance, 459);
+		super(instance, 479);
 	}
 
 	@Override

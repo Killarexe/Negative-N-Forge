@@ -1,5 +1,5 @@
 {
-  "_fv": 10,
+  "_fv": 13,
   "_type": "block",
   "definition": {
     "texture": "50ff6ff37be60dba",
@@ -8,11 +8,13 @@
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 3,
-    "customModelName": "devstatue:default",
-    "rotationMode": 0,
+    "renderType": 2,
+    "customModelName": "dev_statue:default",
+    "rotationMode": 1,
     "emissiveRendering": false,
+    "displayFluidOverlay": false,
     "itemTexture": "pdp",
+    "particleTexture": "",
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",
@@ -27,6 +29,7 @@
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
+    "isWaterloggable": false,
     "creativeTab": {
       "value": "No creative tab entry"
     },
@@ -35,6 +38,7 @@
       "value": ""
     },
     "dropAmount": 1,
+    "useLootTableForDrops": false,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,

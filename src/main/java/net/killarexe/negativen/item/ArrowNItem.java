@@ -3,6 +3,7 @@ package net.killarexe.negativen.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
@@ -15,7 +16,7 @@ public class ArrowNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:arrow_n")
 	public static final Item block = null;
 	public ArrowNItem(NegativenModElements instance) {
-		super(instance, 253);
+		super(instance, 275);
 	}
 
 	@Override
@@ -24,7 +25,7 @@ public class ArrowNItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNCombatItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(NegativeNCombatItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("arrow_n");
 		}
 

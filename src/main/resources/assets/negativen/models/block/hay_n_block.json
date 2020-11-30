@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/hay_n_block_top",
+    "up": "negativen:blocks/hay_n_block_top",
+    "north": "negativen:blocks/hay_n_block_side",
+    "east": "negativen:blocks/hay_n_block_side",
+    "south": "negativen:blocks/hay_n_block_side",
+    "west": "negativen:blocks/hay_n_block_side",
+    "particle": "negativen:blocks/hay_n_block_top"
+  }
+}

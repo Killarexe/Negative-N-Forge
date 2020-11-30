@@ -30,7 +30,7 @@ public class RedstoneLampNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:redstone_lamp_n")
 	public static final Block block = null;
 	public RedstoneLampNBlock(NegativenModElements instance) {
-		super(instance, 337);
+		super(instance, 151);
 	}
 
 	@Override

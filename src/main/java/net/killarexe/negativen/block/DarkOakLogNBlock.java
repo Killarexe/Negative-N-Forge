@@ -30,7 +30,7 @@ public class DarkOakLogNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:dark_oak_log_n")
 	public static final Block block = null;
 	public DarkOakLogNBlock(NegativenModElements instance) {
-		super(instance, 145);
+		super(instance, 173);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class DarkOakLogNBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

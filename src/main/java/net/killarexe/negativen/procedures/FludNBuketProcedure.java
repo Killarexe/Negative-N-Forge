@@ -15,12 +15,13 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class FludNBuketProcedure extends NegativenModElements.ModElement {
 	public FludNBuketProcedure(NegativenModElements instance) {
-		super(instance, 486);
+		super(instance, 506);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure FludNBuket!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure FludNBuket!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

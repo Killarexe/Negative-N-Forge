@@ -8,6 +8,10 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.gen.feature.structure.MineshaftStructure;
+import net.minecraft.world.gen.feature.structure.MineshaftConfig;
+import net.minecraft.world.gen.feature.IFeatureConfig;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.Biome;
 
@@ -19,7 +23,7 @@ public class ClassicNetherNBiomeBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:classic_nether_n_biome")
 	public static final CustomBiome biome = null;
 	public ClassicNetherNBiomeBiome(NegativenModElements instance) {
-		super(instance, 788);
+		super(instance, 803);
 	}
 
 	@Override
@@ -38,9 +42,13 @@ public class ClassicNetherNBiomeBiome extends NegativenModElements.ModElement {
 							ClassicNetherrackNBlock.block.getDefaultState(), ClassicNetherrackNBlock.block.getDefaultState())));
 			setRegistryName("classic_nether_n_biome");
 			DefaultBiomeFeatures.addCarvers(this);
-			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addMonsterRooms(this);
+			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addOres(this);
+			DefaultBiomeFeatures.addLakes(this);
+			this.addStructure(Feature.STRONGHOLD.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+			this.addStructure(Feature.MINESHAFT.withConfiguration(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
+			this.addStructure(Feature.PILLAGER_OUTPOST.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
 		}
 
 		@OnlyIn(Dist.CLIENT)

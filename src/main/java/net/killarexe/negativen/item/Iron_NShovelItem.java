@@ -17,7 +17,7 @@ public class Iron_NShovelItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:iron_n_shovel")
 	public static final Item block = null;
 	public Iron_NShovelItem(NegativenModElements instance) {
-		super(instance, 264);
+		super(instance, 286);
 	}
 
 	@Override

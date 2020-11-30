@@ -1,11 +1,12 @@
 {
-  "_fv": 10,
+  "_fv": 13,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "amethyst_n_shard",
     "customModelName": "Normal",
     "name": "Amethyst-N Shard",
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:NegativeNRessoures"
     },

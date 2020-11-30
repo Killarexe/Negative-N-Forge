@@ -1,10 +1,12 @@
 {
-  "_fv": 10,
+  "_fv": 13,
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 420,
-    "height": 400,
+    "width": 210,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
@@ -18,8 +20,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #0",
-          "x": 228,
-          "y": 132
+          "x": 114,
+          "y": 66
         }
       },
       {
@@ -29,8 +31,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
-          "x": 570,
-          "y": 186
+          "x": 285,
+          "y": 93
         }
       },
       {
@@ -42,8 +44,8 @@
             "falpha": 0.0
           },
           "name": "WoodCutter (StoneCutter-N)",
-          "x": 228,
-          "y": 42
+          "x": 114,
+          "y": 21
         }
       },
       {
@@ -53,8 +55,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
-          "x": 570,
-          "y": 132
+          "x": 285,
+          "y": 66
         }
       },
       {
@@ -64,8 +66,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #3",
-          "x": 570,
-          "y": 78
+          "x": 285,
+          "y": 39
         }
       },
       {
@@ -75,11 +77,11 @@
           "onClick": {
             "name": "CutProcced"
           },
-          "width": 240,
-          "height": 40,
+          "width": 120,
+          "height": 20,
           "name": "Cut/Stripped",
-          "x": 318,
-          "y": 186
+          "x": 159,
+          "y": 93
         }
       },
       {
@@ -89,11 +91,11 @@
           "onClick": {
             "name": "StairsProcced"
           },
-          "width": 120,
-          "height": 40,
+          "width": 60,
+          "height": 20,
           "name": "Stairs",
-          "x": 444,
-          "y": 132
+          "x": 222,
+          "y": 66
         }
       },
       {
@@ -103,11 +105,11 @@
           "onClick": {
             "name": "FenceProcced"
           },
-          "width": 100,
-          "height": 40,
+          "width": 50,
+          "height": 20,
           "name": "Fence",
-          "x": 462,
-          "y": 78
+          "x": 231,
+          "y": 39
         }
       }
     ]

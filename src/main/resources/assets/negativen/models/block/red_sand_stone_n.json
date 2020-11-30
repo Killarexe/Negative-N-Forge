@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/red_sandstone_n_bottom",
+    "up": "negativen:blocks/red_sandstone_n_top",
+    "north": "negativen:blocks/red_sandstone_n",
+    "east": "negativen:blocks/red_sandstone_n",
+    "south": "negativen:blocks/red_sandstone_n",
+    "west": "negativen:blocks/red_sandstone_n",
+    "particle": "negativen:blocks/red_sandstone_n_bottom"
+  }
+}

@@ -5,6 +5,7 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
@@ -17,7 +18,7 @@ public class CoalNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:coal_n")
 	public static final Item block = null;
 	public CoalNItem(NegativenModElements instance) {
-		super(instance, 9);
+		super(instance, 14);
 	}
 
 	@Override
@@ -26,7 +27,7 @@ public class CoalNItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("coal_n");
 		}
 

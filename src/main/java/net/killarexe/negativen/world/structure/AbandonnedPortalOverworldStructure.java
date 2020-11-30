@@ -37,7 +37,7 @@ import java.util.Random;
 @NegativenModElements.ModElement.Tag
 public class AbandonnedPortalOverworldStructure extends NegativenModElements.ModElement {
 	public AbandonnedPortalOverworldStructure(NegativenModElements instance) {
-		super(instance, 619);
+		super(instance, 638);
 	}
 
 	@Override
@@ -76,7 +76,7 @@ public class AbandonnedPortalOverworldStructure extends NegativenModElements.Mod
 						j -= 1;
 						Rotation rotation = Rotation.values()[random.nextInt(3)];
 						Mirror mirror = Mirror.values()[random.nextInt(2)];
-						BlockPos spawnTo = new BlockPos(i, j + 0, k);
+						BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
 						int x = spawnTo.getX();
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();

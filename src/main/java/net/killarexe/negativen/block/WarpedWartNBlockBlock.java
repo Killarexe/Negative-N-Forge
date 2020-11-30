@@ -31,7 +31,7 @@ public class WarpedWartNBlockBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:warped_wart_n_block")
 	public static final Block block = null;
 	public WarpedWartNBlockBlock(NegativenModElements instance) {
-		super(instance, 221);
+		super(instance, 230);
 	}
 
 	@Override

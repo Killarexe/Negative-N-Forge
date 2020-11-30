@@ -18,28 +18,33 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class DespawnOnKeyPressedProcedure extends NegativenModElements.ModElement {
 	public DespawnOnKeyPressedProcedure(NegativenModElements instance) {
-		super(instance, 460);
+		super(instance, 480);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure DespawnOnKeyPressed!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure DespawnOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure DespawnOnKeyPressed!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure DespawnOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure DespawnOnKeyPressed!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure DespawnOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure DespawnOnKeyPressed!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure DespawnOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure DespawnOnKeyPressed!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure DespawnOnKeyPressed!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -23,7 +23,7 @@ import net.minecraft.block.DoorBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
+import net.killarexe.negativen.itemgroup.NegativeNRedstoneNItemGroup;
 import net.killarexe.negativen.NegativenModElements;
 
 import java.util.List;
@@ -34,14 +34,14 @@ public class SpruceNDoorBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:spruce_n_door")
 	public static final Block block = null;
 	public SpruceNDoorBlock(NegativenModElements instance) {
-		super(instance, 195);
+		super(instance, 139);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNBlocksItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(
+				() -> new BlockItem(block, new Item.Properties().group(NegativeNRedstoneNItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override

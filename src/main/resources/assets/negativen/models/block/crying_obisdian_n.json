@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/crying_obsidian_n",
+    "particle": "negativen:blocks/crying_obsidian_n"
+  }
+}

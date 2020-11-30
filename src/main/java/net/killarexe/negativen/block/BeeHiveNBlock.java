@@ -24,7 +24,7 @@ public class BeeHiveNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:bee_hive_n")
 	public static final Block block = null;
 	public BeeHiveNBlock(NegativenModElements instance) {
-		super(instance, 228);
+		super(instance, 237);
 	}
 
 	@Override

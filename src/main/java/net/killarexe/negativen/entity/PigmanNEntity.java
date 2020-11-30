@@ -50,7 +50,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class PigmanNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public PigmanNEntity(NegativenModElements instance) {
-		super(instance, 61);
+		super(instance, 64);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -60,8 +60,8 @@ public class PigmanNEntity extends NegativenModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("pigman_n")
 						.setRegistryName("pigman_n");
 		elements.entities.add(() -> entity);
-		elements.items
-				.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("pigman_n"));
+		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+				.setRegistryName("pigman_n_spawn_egg"));
 	}
 
 	@Override
@@ -125,10 +125,6 @@ public class PigmanNEntity extends NegativenModElements.ModElement {
 		@Override
 		public CreatureAttribute getCreatureAttribute() {
 			return CreatureAttribute.UNDEFINED;
-		}
-
-		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
-			super.dropSpecialItems(source, looting, recentlyHitIn);
 		}
 
 		@Override

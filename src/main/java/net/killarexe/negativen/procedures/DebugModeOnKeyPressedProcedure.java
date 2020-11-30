@@ -13,16 +13,18 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class DebugModeOnKeyPressedProcedure extends NegativenModElements.ModElement {
 	public DebugModeOnKeyPressedProcedure(NegativenModElements instance) {
-		super(instance, 462);
+		super(instance, 482);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure DebugModeOnKeyPressed!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure DebugModeOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure DebugModeOnKeyPressed!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure DebugModeOnKeyPressed!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

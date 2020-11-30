@@ -3,6 +3,7 @@ package net.killarexe.negativen.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
@@ -15,7 +16,7 @@ public class QuartzNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:quartz_n")
 	public static final Item block = null;
 	public QuartzNItem(NegativenModElements instance) {
-		super(instance, 42);
+		super(instance, 8);
 	}
 
 	@Override
@@ -24,7 +25,7 @@ public class QuartzNItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("quartz_n");
 		}
 

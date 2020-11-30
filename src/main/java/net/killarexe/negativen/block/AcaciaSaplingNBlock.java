@@ -35,7 +35,7 @@ public class AcaciaSaplingNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:acacia_sapling_n")
 	public static final Block block = null;
 	public AcaciaSaplingNBlock(NegativenModElements instance) {
-		super(instance, 66);
+		super(instance, 69);
 	}
 
 	@Override

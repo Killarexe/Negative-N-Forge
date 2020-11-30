@@ -1,5 +1,5 @@
 {
-  "_fv": 10,
+  "_fv": 13,
   "_type": "block",
   "definition": {
     "texture": "large_amethyst_n_bud",
@@ -8,14 +8,16 @@
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 12,
-    "customModelName": "Cross model",
-    "rotationMode": 3,
+    "renderType": 2,
+    "customModelName": "amethyst_cluster:stage3",
+    "rotationMode": 2,
     "emissiveRendering": true,
+    "displayFluidOverlay": false,
     "itemTexture": "",
+    "particleTexture": "",
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT_MIPPED",
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,
@@ -27,6 +29,7 @@
     "hardness": 0.05,
     "resistance": 10.0,
     "hasGravity": false,
+    "isWaterloggable": false,
     "creativeTab": {
       "value": "No creative tab entry"
     },
@@ -35,6 +38,7 @@
       "value": ""
     },
     "dropAmount": 0,
+    "useLootTableForDrops": false,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,

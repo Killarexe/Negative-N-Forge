@@ -27,24 +27,28 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class DecompProccedProcedure extends NegativenModElements.ModElement {
 	public DecompProccedProcedure(NegativenModElements instance) {
-		super(instance, 372);
+		super(instance, 392);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure DecompProcced!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure DecompProcced!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure DecompProcced!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure DecompProcced!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure DecompProcced!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure DecompProcced!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure DecompProcced!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure DecompProcced!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

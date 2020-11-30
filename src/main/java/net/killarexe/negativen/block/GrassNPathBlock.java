@@ -12,6 +12,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
@@ -25,6 +26,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.NegativenModElements;
 
 import java.util.List;
@@ -35,13 +37,14 @@ public class GrassNPathBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:grass_n_path")
 	public static final Block block = null;
 	public GrassNPathBlock(NegativenModElements instance) {
-		super(instance, 493);
+		super(instance, 125);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNDecorationBlocksItemGroup.tab))
+				.setRegistryName(block.getRegistryName()));
 	}
 
 	@Override
@@ -68,7 +71,8 @@ public class GrassNPathBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			return VoxelShapes.create(0D, 0D, 0D, 1D, 0.9D, 1D);
+			Vec3d offset = state.getOffset(world, pos);
+			return VoxelShapes.create(0D, 0D, 0D, 1D, 0.9D, 1D).withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override

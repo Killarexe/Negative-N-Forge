@@ -11,16 +11,18 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class NegativeNDebugModeDisplayOverlayIngameProcedure extends NegativenModElements.ModElement {
 	public NegativeNDebugModeDisplayOverlayIngameProcedure(NegativenModElements instance) {
-		super(instance, 567);
+		super(instance, 586);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure NegativeNDebugModeDisplayOverlayIngame!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure NegativeNDebugModeDisplayOverlayIngame!");
 			return false;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure NegativeNDebugModeDisplayOverlayIngame!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure NegativeNDebugModeDisplayOverlayIngame!");
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -30,7 +30,7 @@ public class JungleLogNStrippedBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:jungle_log_n_stripped")
 	public static final Block block = null;
 	public JungleLogNStrippedBlock(NegativenModElements instance) {
-		super(instance, 81);
+		super(instance, 89);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class JungleLogNStrippedBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

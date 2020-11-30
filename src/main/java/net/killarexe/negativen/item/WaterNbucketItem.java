@@ -7,6 +7,7 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -25,7 +26,7 @@ public class WaterNbucketItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:water_nbucket")
 	public static final Item block = null;
 	public WaterNbucketItem(NegativenModElements instance) {
-		super(instance, 20);
+		super(instance, 26);
 	}
 
 	@Override
@@ -34,7 +35,7 @@ public class WaterNbucketItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(1));
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON));
 			setRegistryName("water_nbucket");
 		}
 

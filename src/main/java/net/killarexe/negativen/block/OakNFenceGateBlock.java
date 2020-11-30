@@ -21,7 +21,7 @@ import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
+import net.killarexe.negativen.itemgroup.NegativeNRedstoneNItemGroup;
 import net.killarexe.negativen.NegativenModElements;
 
 import java.util.List;
@@ -32,14 +32,14 @@ public class OakNFenceGateBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:oak_n_fence_gate")
 	public static final Block block = null;
 	public OakNFenceGateBlock(NegativenModElements instance) {
-		super(instance, 105);
+		super(instance, 128);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNDecorationBlocksItemGroup.tab))
-				.setRegistryName(block.getRegistryName()));
+		elements.items.add(
+				() -> new BlockItem(block, new Item.Properties().group(NegativeNRedstoneNItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override

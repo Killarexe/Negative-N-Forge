@@ -66,7 +66,7 @@ public class CaveGameDimDimension extends NegativenModElements.ModElement {
 	public static DimensionType type = null;
 	private static Biome[] dimensionBiomes;
 	public CaveGameDimDimension(NegativenModElements instance) {
-		super(instance, 325);
+		super(instance, 357);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
@@ -189,7 +189,7 @@ public class CaveGameDimDimension extends NegativenModElements.ModElement {
 				}
 
 				public BlockState getDefaultFluid() {
-					return null;
+					return Blocks.AIR.getDefaultState();
 				}
 			});
 			this.randomSeed.skip(5349);

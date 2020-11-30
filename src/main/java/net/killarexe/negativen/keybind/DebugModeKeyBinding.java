@@ -31,7 +31,7 @@ public class DebugModeKeyBinding extends NegativenModElements.ModElement {
 	@OnlyIn(Dist.CLIENT)
 	private KeyBinding keys;
 	public DebugModeKeyBinding(NegativenModElements instance) {
-		super(instance, 463);
+		super(instance, 483);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
 				KeyBindingPressedMessage::handler);
 	}

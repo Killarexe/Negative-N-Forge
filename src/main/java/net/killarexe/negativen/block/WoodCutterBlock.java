@@ -77,7 +77,7 @@ public class WoodCutterBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:wood_cutter")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public WoodCutterBlock(NegativenModElements instance) {
-		super(instance, 132);
+		super(instance, 160);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -132,6 +132,7 @@ public class WoodCutterBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
 			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
 		}
 

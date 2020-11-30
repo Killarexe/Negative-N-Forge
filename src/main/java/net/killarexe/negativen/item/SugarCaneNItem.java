@@ -9,6 +9,7 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -24,10 +25,10 @@ import java.util.HashMap;
 
 @NegativenModElements.ModElement.Tag
 public class SugarCaneNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:sugar_cane_n")
+	@ObjectHolder("negativen:sugar_cane_n_item")
 	public static final Item block = null;
 	public SugarCaneNItem(NegativenModElements instance) {
-		super(instance, 40);
+		super(instance, 43);
 	}
 
 	@Override
@@ -36,8 +37,8 @@ public class SugarCaneNItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
-			setRegistryName("sugar_cane_n");
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			setRegistryName("sugar_cane_n_item");
 		}
 
 		@Override

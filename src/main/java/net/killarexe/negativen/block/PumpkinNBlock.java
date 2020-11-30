@@ -36,7 +36,7 @@ public class PumpkinNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:pumpkin_n")
 	public static final Block block = null;
 	public PumpkinNBlock(NegativenModElements instance) {
-		super(instance, 231);
+		super(instance, 240);
 	}
 
 	@Override

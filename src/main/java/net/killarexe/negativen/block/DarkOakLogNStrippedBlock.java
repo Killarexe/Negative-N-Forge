@@ -30,7 +30,7 @@ public class DarkOakLogNStrippedBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:dark_oak_log_n_stripped")
 	public static final Block block = null;
 	public DarkOakLogNStrippedBlock(NegativenModElements instance) {
-		super(instance, 80);
+		super(instance, 88);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class DarkOakLogNStrippedBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

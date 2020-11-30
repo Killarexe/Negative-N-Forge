@@ -36,7 +36,7 @@ public class TardisBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:tardis")
 	public static final Block block = null;
 	public TardisBlock(NegativenModElements instance) {
-		super(instance, 418);
+		super(instance, 438);
 	}
 
 	@Override
@@ -83,6 +83,7 @@ public class TardisBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
 			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
 		}
 

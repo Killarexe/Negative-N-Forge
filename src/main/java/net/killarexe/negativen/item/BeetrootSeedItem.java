@@ -3,6 +3,7 @@ package net.killarexe.negativen.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
@@ -15,7 +16,7 @@ public class BeetrootSeedItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:beetroot_seed")
 	public static final Item block = null;
 	public BeetrootSeedItem(NegativenModElements instance) {
-		super(instance, 39);
+		super(instance, 42);
 	}
 
 	@Override
@@ -24,7 +25,7 @@ public class BeetrootSeedItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("beetroot_seed");
 		}
 

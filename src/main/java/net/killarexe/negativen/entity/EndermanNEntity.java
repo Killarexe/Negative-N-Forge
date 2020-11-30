@@ -48,7 +48,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class EndermanNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public EndermanNEntity(NegativenModElements instance) {
-		super(instance, 52);
+		super(instance, 55);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -58,8 +58,8 @@ public class EndermanNEntity extends NegativenModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("endermann")
 						.setRegistryName("endermann");
 		elements.entities.add(() -> entity);
-		elements.items
-				.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("endermann"));
+		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+				.setRegistryName("endermann_spawn_egg"));
 	}
 
 	@Override

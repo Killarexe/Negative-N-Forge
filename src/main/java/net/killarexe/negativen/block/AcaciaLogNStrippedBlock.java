@@ -30,7 +30,7 @@ public class AcaciaLogNStrippedBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:acacia_log_n_stripped")
 	public static final Block block = null;
 	public AcaciaLogNStrippedBlock(NegativenModElements instance) {
-		super(instance, 78);
+		super(instance, 86);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class AcaciaLogNStrippedBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

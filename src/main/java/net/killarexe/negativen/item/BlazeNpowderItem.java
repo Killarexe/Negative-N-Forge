@@ -5,6 +5,7 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
@@ -17,7 +18,7 @@ public class BlazeNpowderItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:blaze_n_powder")
 	public static final Item block = null;
 	public BlazeNpowderItem(NegativenModElements instance) {
-		super(instance, 13);
+		super(instance, 18);
 	}
 
 	@Override
@@ -26,7 +27,7 @@ public class BlazeNpowderItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("blaze_n_powder");
 		}
 

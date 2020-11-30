@@ -88,18 +88,18 @@ Negative-N Forge 1.3.x:
 Update Theme: 1.17/Copper Update
 
 Add Melon-N (1.3)
-Add Plants for Melon-N and Pumpkin-Negative-N (1.3)
+Add Plants for Melon-N and Pumpkin-N (1.3)
 Improve 3d Models (1.3) Fait
 Add Crafting Table-N/Furnace-N (1.3)
 Add easter eggs (1.3)
 Wither-N Boss Summonable (1.3)
-Update to 2020.5 (1.3.x)
+Update to 2020.5 (1.3.x) Fait
 Add heads (1.3)
 Add Mobs: Wither Skeleton-N, etc (1.3)
 Improve Effects (1.3)
 Add Color Map in Blocks (1.3)
-Add Guide (1.3) Debut
-Add Amethist-N (1.3) Fait
+Add Guide (1.3)
+Add Amethist-N (1.3) Fait
 Make a complete Wiki (Github 1.3.x)
 Improve some Textures (1.3.x)
 Update Dimensions Stick (1.3)

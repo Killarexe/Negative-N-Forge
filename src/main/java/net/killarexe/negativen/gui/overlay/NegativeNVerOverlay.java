@@ -20,7 +20,7 @@ import com.google.common.collect.ImmutableMap;
 @NegativenModElements.ModElement.Tag
 public class NegativeNVerOverlay extends NegativenModElements.ModElement {
 	public NegativeNVerOverlay(NegativenModElements instance) {
-		super(instance, 649);
+		super(instance, 668);
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class NegativeNVerOverlay extends NegativenModElements.ModElement {
 	}
 
 	@OnlyIn(Dist.CLIENT)
-	@SubscribeEvent(priority = EventPriority.NORMAL)
+	@SubscribeEvent(priority = EventPriority.LOW)
 	public void eventHandler(RenderGameOverlayEvent event) {
 		if (!event.isCancelable() && event.getType() == RenderGameOverlayEvent.ElementType.HELMET) {
 			int posX = (event.getWindow().getScaledWidth()) / 2;

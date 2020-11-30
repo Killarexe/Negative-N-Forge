@@ -43,7 +43,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class TntnprimedEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public TntnprimedEntity(NegativenModElements instance) {
-		super(instance, 407);
+		super(instance, 427);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -97,10 +97,6 @@ public class TntnprimedEntity extends NegativenModElements.ModElement {
 		@Override
 		public boolean canDespawn(double distanceToClosestPlayer) {
 			return false;
-		}
-
-		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
-			super.dropSpecialItems(source, looting, recentlyHitIn);
 		}
 
 		@Override

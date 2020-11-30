@@ -30,7 +30,7 @@ public class JungleLogNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:jungle_log_n")
 	public static final Block block = null;
 	public JungleLogNBlock(NegativenModElements instance) {
-		super(instance, 149);
+		super(instance, 177);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class JungleLogNBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

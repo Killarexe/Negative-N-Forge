@@ -24,6 +24,7 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
@@ -123,18 +124,19 @@ public class AnvilNBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
+			Vec3d offset = state.getOffset(world, pos);
 			switch ((Direction) state.get(FACING)) {
 				case UP :
 				case DOWN :
 				case SOUTH :
 				default :
-					return VoxelShapes.create(1D, 0D, 1D, 0.2D, 1D, 0.2D);
+					return VoxelShapes.create(1D, 0D, 1D, 0.2D, 1D, 0.2D).withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
-					return VoxelShapes.create(0D, 0D, 0D, 0.8D, 1D, 0.8D);
+					return VoxelShapes.create(0D, 0D, 0D, 0.8D, 1D, 0.8D).withOffset(offset.x, offset.y, offset.z);
 				case WEST :
-					return VoxelShapes.create(0D, 0D, 1D, 0.8D, 1D, 0.2D);
+					return VoxelShapes.create(0D, 0D, 1D, 0.8D, 1D, 0.2D).withOffset(offset.x, offset.y, offset.z);
 				case EAST :
-					return VoxelShapes.create(1D, 0D, 0D, 0.2D, 1D, 0.8D);
+					return VoxelShapes.create(1D, 0D, 0D, 0.2D, 1D, 0.8D).withOffset(offset.x, offset.y, offset.z);
 			}
 		}
 
@@ -153,6 +155,7 @@ public class AnvilNBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
 			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
 		}
 

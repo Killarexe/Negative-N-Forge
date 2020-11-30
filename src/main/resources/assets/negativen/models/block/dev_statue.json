@@ -1,17 +1,8 @@
 {
-  "parent": "forge:item/default",
-  "loader": "forge:composite",
-  "parts": {
-    "part1": {
-      "loader": "forge:obj",
-      "model": "negativen:models/item/devstatue.obj",
-      "ambientToFullbright": true,
-      "textures": {
-        "#m_0": "negativen:blocks/50ff6ff37be60dba"
-      }
-    }
-  },
+  "parent": "negativen:custom/dev_statue",
   "textures": {
-    "particle": "negativen:blocks/50ff6ff37be60dba"
+    "all": "negativen:blocks/50ff6ff37be60dba",
+    "particle": "negativen:blocks/50ff6ff37be60dba",
+    "0": "negativen:blocks/50ff6ff37be60dba"
   }
 }

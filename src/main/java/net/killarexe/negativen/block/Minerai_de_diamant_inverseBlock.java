@@ -43,7 +43,7 @@ public class Minerai_de_diamant_inverseBlock extends NegativenModElements.ModEle
 	@ObjectHolder("negativen:diamond_n_ore")
 	public static final Block block = null;
 	public Minerai_de_diamant_inverseBlock(NegativenModElements instance) {
-		super(instance, 162);
+		super(instance, 190);
 	}
 
 	@Override

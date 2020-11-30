@@ -6,6 +6,20 @@
         "dirt": "dn"
       },
       "name": "default"
+    },
+    "path": {
+      "map": {
+        "top": "grassn_path_top",
+        "dirt": "grassn_path_side"
+      },
+      "name": "path"
+    },
+    "moist": {
+      "map": {
+        "top": "farmlandn_moist",
+        "dirt": "dn"
+      },
+      "name": "moist"
     }
   }
 }

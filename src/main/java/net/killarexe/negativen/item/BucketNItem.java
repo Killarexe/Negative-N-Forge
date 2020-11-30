@@ -7,6 +7,7 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -27,7 +28,7 @@ public class BucketNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:bucket_n")
 	public static final Item block = null;
 	public BucketNItem(NegativenModElements instance) {
-		super(instance, 18);
+		super(instance, 24);
 	}
 
 	@Override
@@ -36,7 +37,7 @@ public class BucketNItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("bucket_n");
 		}
 

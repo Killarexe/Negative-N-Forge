@@ -23,28 +23,33 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class IngerOnBlockRightClickedProcedure extends NegativenModElements.ModElement {
 	public IngerOnBlockRightClickedProcedure(NegativenModElements instance) {
-		super(instance, 479);
+		super(instance, 499);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure IngerOnBlockRightClicked!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure IngerOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure IngerOnBlockRightClicked!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure IngerOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure IngerOnBlockRightClicked!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure IngerOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure IngerOnBlockRightClicked!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure IngerOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure IngerOnBlockRightClicked!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure IngerOnBlockRightClicked!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -56,9 +61,10 @@ public class IngerOnBlockRightClickedProcedure extends NegativenModElements.ModE
 				.getItem() == new ItemStack(DiamantinverseItem.block, (int) (1)).getItem())) {
 			if ((!(world.getWorld().isRemote))) {
 				if ((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false))) {
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).inventory
-								.clearMatchingItems(p -> new ItemStack(DiamantinverseItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(DiamantinverseItem.block, (int) (1));
+						((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+					}
 				}
 				if (!world.getWorld().isRemote) {
 					world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
@@ -80,9 +86,10 @@ public class IngerOnBlockRightClickedProcedure extends NegativenModElements.ModE
 				.getItem() == new ItemStack(EmeraldNItem.block, (int) (1)).getItem())) {
 			if ((!(world.getWorld().isRemote))) {
 				if ((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false))) {
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).inventory
-								.clearMatchingItems(p -> new ItemStack(EmeraldNItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(EmeraldNItem.block, (int) (1));
+						((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+					}
 				}
 				if (!world.getWorld().isRemote) {
 					world.playSound(null, new BlockPos((int) x, (int) y, (int) z),

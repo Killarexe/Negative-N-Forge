@@ -15,7 +15,7 @@ import java.util.HashMap;
 @NegativenModElements.ModElement.Tag
 public class TimerProcedure extends NegativenModElements.ModElement {
 	public TimerProcedure(NegativenModElements instance) {
-		super(instance, 409);
+		super(instance, 429);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

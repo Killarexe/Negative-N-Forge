@@ -29,7 +29,7 @@ public class LeatherNArmorItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:leather_n_armor_boots")
 	public static final Item boots = null;
 	public LeatherNArmorItem(NegativenModElements instance) {
-		super(instance, 828);
+		super(instance, 267);
 	}
 
 	@Override

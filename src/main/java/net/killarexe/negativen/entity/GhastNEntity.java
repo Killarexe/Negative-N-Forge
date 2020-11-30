@@ -50,7 +50,7 @@ import java.util.EnumSet;
 public class GhastNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public GhastNEntity(NegativenModElements instance) {
-		super(instance, 57);
+		super(instance, 60);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -60,8 +60,8 @@ public class GhastNEntity extends NegativenModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(1f, 1f)).build("ghast_n")
 						.setRegistryName("ghast_n");
 		elements.entities.add(() -> entity);
-		elements.items
-				.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("ghast_n"));
+		elements.items.add(
+				() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("ghast_n_spawn_egg"));
 	}
 
 	@Override
@@ -157,10 +157,6 @@ public class GhastNEntity extends NegativenModElements.ModElement {
 		@Override
 		public CreatureAttribute getCreatureAttribute() {
 			return CreatureAttribute.UNDEFINED;
-		}
-
-		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
-			super.dropSpecialItems(source, looting, recentlyHitIn);
 		}
 
 		@Override

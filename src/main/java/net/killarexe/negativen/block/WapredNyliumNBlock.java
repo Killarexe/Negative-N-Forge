@@ -30,7 +30,7 @@ public class WapredNyliumNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:wapred_nylium_n")
 	public static final Block block = null;
 	public WapredNyliumNBlock(NegativenModElements instance) {
-		super(instance, 220);
+		super(instance, 229);
 	}
 
 	@Override

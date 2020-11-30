@@ -25,7 +25,7 @@ public class DarkOakStrairsNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:dark_oak_stairs_n")
 	public static final Block block = null;
 	public DarkOakStrairsNBlock(NegativenModElements instance) {
-		super(instance, 147);
+		super(instance, 175);
 	}
 
 	@Override
@@ -36,8 +36,9 @@ public class DarkOakStrairsNBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
-			super(new Block(Block.Properties.create(Material.ROCK)).getDefaultState(), Block.Properties.create(Material.WOOD).sound(SoundType.WOOD)
-					.hardnessAndResistance(2f, 10f).lightValue(0).harvestLevel(0).harvestTool(ToolType.AXE));
+			super(new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2f, 10f)).getDefaultState(),
+					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 10f).lightValue(0).harvestLevel(0)
+							.harvestTool(ToolType.AXE));
 			setRegistryName("dark_oak_stairs_n");
 		}
 

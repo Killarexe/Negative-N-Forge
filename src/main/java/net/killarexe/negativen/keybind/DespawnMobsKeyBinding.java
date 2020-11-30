@@ -31,7 +31,7 @@ public class DespawnMobsKeyBinding extends NegativenModElements.ModElement {
 	@OnlyIn(Dist.CLIENT)
 	private KeyBinding keys;
 	public DespawnMobsKeyBinding(NegativenModElements instance) {
-		super(instance, 465);
+		super(instance, 485);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
 				KeyBindingPressedMessage::handler);
 	}

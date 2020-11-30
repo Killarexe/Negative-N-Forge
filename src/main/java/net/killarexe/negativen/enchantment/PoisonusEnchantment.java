@@ -23,7 +23,7 @@ public class PoisonusEnchantment extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:poisonus")
 	public static final Enchantment enchantment = null;
 	public PoisonusEnchantment(NegativenModElements instance) {
-		super(instance, 643);
+		super(instance, 662);
 	}
 
 	@Override

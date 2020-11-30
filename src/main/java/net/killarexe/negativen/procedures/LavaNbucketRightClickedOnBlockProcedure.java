@@ -21,28 +21,33 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class LavaNbucketRightClickedOnBlockProcedure extends NegativenModElements.ModElement {
 	public LavaNbucketRightClickedOnBlockProcedure(NegativenModElements instance) {
-		super(instance, 506);
+		super(instance, 525);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure LavaNbucketRightClickedOnBlock!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure LavaNbucketRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure LavaNbucketRightClickedOnBlock!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure LavaNbucketRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure LavaNbucketRightClickedOnBlock!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure LavaNbucketRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure LavaNbucketRightClickedOnBlock!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure LavaNbucketRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure LavaNbucketRightClickedOnBlock!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure LavaNbucketRightClickedOnBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -50,9 +55,10 @@ public class LavaNbucketRightClickedOnBlockProcedure extends NegativenModElement
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (entity instanceof PlayerEntity)
-			((PlayerEntity) entity).inventory.clearMatchingItems(p -> new ItemStack(LavaNbucketItem.block, (int) (1)).getItem() == p.getItem(),
-					(int) 1);
+		if (entity instanceof PlayerEntity) {
+			ItemStack _stktoremove = new ItemStack(LavaNbucketItem.block, (int) (1));
+			((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+		}
 		world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), LavaNBlock.block.getDefaultState(), 3);
 		if (!world.getWorld().isRemote) {
 			world.playSound(null, new BlockPos((int) x, (int) y, (int) z),

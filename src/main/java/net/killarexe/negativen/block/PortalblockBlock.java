@@ -33,7 +33,7 @@ public class PortalblockBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:portal_block")
 	public static final Block block = null;
 	public PortalblockBlock(NegativenModElements instance) {
-		super(instance, 168);
+		super(instance, 196);
 	}
 
 	@Override
@@ -76,7 +76,7 @@ public class PortalblockBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

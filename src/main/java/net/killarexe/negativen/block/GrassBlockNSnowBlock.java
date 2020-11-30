@@ -17,7 +17,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.GrassBlockNSnowUpdateTickProcedure;
-import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.NegativenModElements;
 
 import java.util.Random;
@@ -31,14 +30,13 @@ public class GrassBlockNSnowBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:grass_block_n_snow")
 	public static final Block block = null;
 	public GrassBlockNSnowBlock(NegativenModElements instance) {
-		super(instance, 189);
+		super(instance, 214);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNBlocksItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {

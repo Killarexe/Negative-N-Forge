@@ -20,7 +20,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
+import net.killarexe.negativen.itemgroup.NegativeNRedstoneNItemGroup;
 import net.killarexe.negativen.NegativenModElements;
 
 import java.util.List;
@@ -31,14 +31,14 @@ public class WarpedNTrapDoorBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:warped_n_trap_door")
 	public static final Block block = null;
 	public WarpedNTrapDoorBlock(NegativenModElements instance) {
-		super(instance, 212);
+		super(instance, 149);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNBlocksItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(
+				() -> new BlockItem(block, new Item.Properties().group(NegativeNRedstoneNItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override

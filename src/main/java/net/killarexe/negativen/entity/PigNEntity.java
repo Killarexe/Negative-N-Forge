@@ -50,7 +50,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class PigNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public PigNEntity(NegativenModElements instance) {
-		super(instance, 49);
+		super(instance, 52);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -60,7 +60,8 @@ public class PigNEntity extends NegativenModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.9f, 0.9f)).build("pign")
 						.setRegistryName("pign");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("pign"));
+		elements.items.add(
+				() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("pign_spawn_egg"));
 	}
 
 	@Override

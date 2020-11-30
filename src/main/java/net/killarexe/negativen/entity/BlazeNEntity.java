@@ -46,7 +46,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class BlazeNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public BlazeNEntity(NegativenModElements instance) {
-		super(instance, 53);
+		super(instance, 56);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -56,7 +56,8 @@ public class BlazeNEntity extends NegativenModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("blazen")
 						.setRegistryName("blazen");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("blazen"));
+		elements.items.add(
+				() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("blazen_spawn_egg"));
 	}
 
 	@SubscribeEvent

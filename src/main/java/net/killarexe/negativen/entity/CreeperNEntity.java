@@ -47,7 +47,7 @@ import net.killarexe.negativen.NegativenModElements;
 public class CreeperNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public CreeperNEntity(NegativenModElements instance) {
-		super(instance, 50);
+		super(instance, 53);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -57,8 +57,8 @@ public class CreeperNEntity extends NegativenModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.7f)).build("creepern")
 						.setRegistryName("creepern");
 		elements.entities.add(() -> entity);
-		elements.items
-				.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("creepern"));
+		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+				.setRegistryName("creepern_spawn_egg"));
 	}
 
 	@Override

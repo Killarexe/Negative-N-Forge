@@ -8,6 +8,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.client.util.ITooltipFlag;
@@ -23,7 +24,7 @@ public class Iron_NIngotItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:iron_n_ingot")
 	public static final Item block = null;
 	public Iron_NIngotItem(NegativenModElements instance) {
-		super(instance, 8);
+		super(instance, 13);
 	}
 
 	@Override
@@ -32,7 +33,7 @@ public class Iron_NIngotItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("iron_n_ingot");
 		}
 

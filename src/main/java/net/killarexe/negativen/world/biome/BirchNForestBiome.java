@@ -10,6 +10,10 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
+import net.minecraft.world.gen.feature.structure.MineshaftStructure;
+import net.minecraft.world.gen.feature.structure.MineshaftConfig;
+import net.minecraft.world.gen.feature.IFeatureConfig;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.AbstractTreeFeature;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
@@ -48,7 +52,7 @@ public class BirchNForestBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:birch_n_forest")
 	public static final CustomBiome biome = null;
 	public BirchNForestBiome(NegativenModElements instance) {
-		super(instance, 497);
+		super(instance, 516);
 	}
 
 	@Override
@@ -67,9 +71,13 @@ public class BirchNForestBiome extends NegativenModElements.ModElement {
 							TerreNBlock.block.getDefaultState(), TerreNBlock.block.getDefaultState())));
 			setRegistryName("birch_n_forest");
 			DefaultBiomeFeatures.addCarvers(this);
-			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addMonsterRooms(this);
+			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addOres(this);
+			DefaultBiomeFeatures.addLakes(this);
+			this.addStructure(Feature.STRONGHOLD.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+			this.addStructure(Feature.MINESHAFT.withConfiguration(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
+			this.addStructure(Feature.PILLAGER_OUTPOST.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
 			addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, new CustomTreeFeature()
 					.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(BirchlognBlock.block.getDefaultState()),
 							new SimpleBlockStateProvider(BirchLeavesNBlock.block.getDefaultState()))).baseHeight(7)

@@ -48,10 +48,10 @@ import java.util.Collections;
 
 @NegativenModElements.ModElement.Tag
 public class NegativecaneBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:negativecane")
+	@ObjectHolder("negativen:sugar_cane_n")
 	public static final Block block = null;
 	public NegativecaneBlock(NegativenModElements instance) {
-		super(instance, 466);
+		super(instance, 486);
 	}
 
 	@Override
@@ -112,7 +112,7 @@ public class NegativecaneBlock extends NegativenModElements.ModElement {
 		public BlockCustomFlower() {
 			super(Block.Properties.create(Material.PLANTS).tickRandomly().doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0f, 0f)
 					.lightValue(0));
-			setRegistryName("negativecane");
+			setRegistryName("sugar_cane_n");
 		}
 
 		@OnlyIn(Dist.CLIENT)

@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "negativen:amethyst_n_shard"
+    },
+    "title": {
+      "translate": "advancements.dev_statue_emblem.title"
+    },
+    "description": {
+      "translate": "advancements.dev_statue_emblem.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "dev_statue_emblem": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "item": {
+          "item": "negativen:dev_statue"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "negativen:inverseinfini"
+}

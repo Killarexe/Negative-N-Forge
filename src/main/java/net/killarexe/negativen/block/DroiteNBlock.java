@@ -37,7 +37,7 @@ public class DroiteNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:diorite_n")
 	public static final Block block = null;
 	public DroiteNBlock(NegativenModElements instance) {
-		super(instance, 204);
+		super(instance, 217);
 	}
 
 	@Override

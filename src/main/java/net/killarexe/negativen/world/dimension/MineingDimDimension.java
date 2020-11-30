@@ -103,7 +103,7 @@ public class MineingDimDimension extends NegativenModElements.ModElement {
 	public static DimensionType type = null;
 	private static Biome[] dimensionBiomes;
 	public MineingDimDimension(NegativenModElements instance) {
-		super(instance, 280);
+		super(instance, 302);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

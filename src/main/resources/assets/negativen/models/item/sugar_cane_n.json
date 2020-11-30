@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "negativen:items/sugar_cane_n"
+    "layer0": "negativen:blocks/reeds"
   }
 }

@@ -30,7 +30,7 @@ public class BirchlognBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:birch_log_n")
 	public static final Block block = null;
 	public BirchlognBlock(NegativenModElements instance) {
-		super(instance, 141);
+		super(instance, 169);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class BirchlognBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

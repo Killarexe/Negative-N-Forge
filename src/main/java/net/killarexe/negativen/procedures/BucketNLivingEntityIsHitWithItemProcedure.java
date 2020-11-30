@@ -21,12 +21,13 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class BucketNLivingEntityIsHitWithItemProcedure extends NegativenModElements.ModElement {
 	public BucketNLivingEntityIsHitWithItemProcedure(NegativenModElements instance) {
-		super(instance, 713);
+		super(instance, 732);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure BucketNLivingEntityIsHitWithItem!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure BucketNLivingEntityIsHitWithItem!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -48,9 +49,10 @@ public class BucketNLivingEntityIsHitWithItemProcedure extends NegativenModEleme
 					return false;
 				}
 			}.checkGamemode(entity))) {
-				if (entity instanceof PlayerEntity)
-					((PlayerEntity) entity).inventory.clearMatchingItems(p -> new ItemStack(BucketNItem.block, (int) (1)).getItem() == p.getItem(),
-							(int) 1);
+				if (entity instanceof PlayerEntity) {
+					ItemStack _stktoremove = new ItemStack(BucketNItem.block, (int) (1));
+					((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+				}
 			}
 		}
 	}

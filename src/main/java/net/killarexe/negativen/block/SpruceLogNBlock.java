@@ -30,7 +30,7 @@ public class SpruceLogNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:spruce_log_n")
 	public static final Block block = null;
 	public SpruceLogNBlock(NegativenModElements instance) {
-		super(instance, 153);
+		super(instance, 181);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class SpruceLogNBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

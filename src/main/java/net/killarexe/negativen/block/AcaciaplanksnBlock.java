@@ -24,7 +24,7 @@ public class AcaciaplanksnBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:acacia_planks_n")
 	public static final Block block = null;
 	public AcaciaplanksnBlock(NegativenModElements instance) {
-		super(instance, 138);
+		super(instance, 166);
 	}
 
 	@Override

@@ -50,7 +50,7 @@ public class WoodCutterGUIGui extends NegativenModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public WoodCutterGUIGui(NegativenModElements instance) {
-		super(instance, 542);
+		super(instance, 561);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -329,11 +329,11 @@ public class WoodCutterGUIGui extends NegativenModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize);
+			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 		}
 
 		@Override
@@ -352,7 +352,7 @@ public class WoodCutterGUIGui extends NegativenModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("WoodCutter (StoneCutter-N)", 6, 1, -16777216);
+			this.font.drawString("WoodCutter (StoneCutter-N)", 5, 1, -16777216);
 		}
 
 		@Override
@@ -365,15 +365,15 @@ public class WoodCutterGUIGui extends NegativenModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 51, this.guiTop + 73, 120, 20, "Cut/Stripped", e -> {
+			this.addButton(new Button(this.guiLeft + 50, this.guiTop + 73, 120, 20, "Cut/Stripped", e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 114, this.guiTop + 46, 60, 20, "Stairs", e -> {
+			this.addButton(new Button(this.guiLeft + 113, this.guiTop + 46, 60, 20, "Stairs", e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 123, this.guiTop + 19, 50, 20, "Fence", e -> {
+			this.addButton(new Button(this.guiLeft + 122, this.guiTop + 19, 50, 20, "Fence", e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
 				handleButtonAction(entity, 2, x, y, z);
 			}));

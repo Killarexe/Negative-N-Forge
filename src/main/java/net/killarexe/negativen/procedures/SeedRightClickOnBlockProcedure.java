@@ -47,29 +47,34 @@ import java.util.HashMap;
 @NegativenModElements.ModElement.Tag
 public class SeedRightClickOnBlockProcedure extends NegativenModElements.ModElement {
 	public SeedRightClickOnBlockProcedure(NegativenModElements instance) {
-		super(instance, 682);
+		super(instance, 701);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure SeedRightClickOnBlock!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure SeedRightClickOnBlock!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure SeedRightClickOnBlock!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure SeedRightClickOnBlock!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure SeedRightClickOnBlock!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure SeedRightClickOnBlock!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure SeedRightClickOnBlock!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure SeedRightClickOnBlock!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure SeedRightClickOnBlock!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure SeedRightClickOnBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -97,9 +102,10 @@ public class SeedRightClickOnBlockProcedure extends NegativenModElements.ModElem
 						return false;
 					}
 				}.checkGamemode(entity))) {
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).inventory
-								.clearMatchingItems(p -> new ItemStack(WheatNSeedItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(WheatNSeedItem.block, (int) (1));
+						((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+					}
 				}
 			}
 		} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
@@ -122,9 +128,10 @@ public class SeedRightClickOnBlockProcedure extends NegativenModElements.ModElem
 						return false;
 					}
 				}.checkGamemode(entity))) {
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).inventory
-								.clearMatchingItems(p -> new ItemStack(BeetrootSeedItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(BeetrootSeedItem.block, (int) (1));
+						((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+					}
 				}
 			}
 		} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
@@ -147,9 +154,10 @@ public class SeedRightClickOnBlockProcedure extends NegativenModElements.ModElem
 						return false;
 					}
 				}.checkGamemode(entity))) {
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).inventory
-								.clearMatchingItems(p -> new ItemStack(PotatoNItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(PotatoNItem.block, (int) (1));
+						((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+					}
 				}
 			}
 		} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
@@ -172,9 +180,10 @@ public class SeedRightClickOnBlockProcedure extends NegativenModElements.ModElem
 						return false;
 					}
 				}.checkGamemode(entity))) {
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).inventory
-								.clearMatchingItems(p -> new ItemStack(CarrotsNItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(CarrotsNItem.block, (int) (1));
+						((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+					}
 				}
 			}
 		} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
@@ -197,9 +206,10 @@ public class SeedRightClickOnBlockProcedure extends NegativenModElements.ModElem
 						return false;
 					}
 				}.checkGamemode(entity))) {
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).inventory
-								.clearMatchingItems(p -> new ItemStack(NetherWartNItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(NetherWartNItem.block, (int) (1));
+						((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+					}
 				}
 			}
 		} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
@@ -229,9 +239,10 @@ public class SeedRightClickOnBlockProcedure extends NegativenModElements.ModElem
 						return false;
 					}
 				}.checkGamemode(entity))) {
-					if (entity instanceof PlayerEntity)
-						((PlayerEntity) entity).inventory
-								.clearMatchingItems(p -> new ItemStack(SweetBerryNItem.block, (int) (1)).getItem() == p.getItem(), (int) 1);
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = new ItemStack(SweetBerryNItem.block, (int) (1));
+						((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+					}
 				}
 			}
 		}

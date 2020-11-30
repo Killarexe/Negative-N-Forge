@@ -49,7 +49,7 @@ public class AlliumNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:allium_n")
 	public static final Block block = null;
 	public AlliumNBlock(NegativenModElements instance) {
-		super(instance, 96);
+		super(instance, 104);
 	}
 
 	@Override

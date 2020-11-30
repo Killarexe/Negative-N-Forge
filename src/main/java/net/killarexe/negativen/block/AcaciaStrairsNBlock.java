@@ -24,7 +24,7 @@ public class AcaciaStrairsNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:acacia_stairs_n")
 	public static final Block block = null;
 	public AcaciaStrairsNBlock(NegativenModElements instance) {
-		super(instance, 139);
+		super(instance, 167);
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class AcaciaStrairsNBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
-			super(new Block(Block.Properties.create(Material.ROCK)).getDefaultState(),
+			super(new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2f, 10f)).getDefaultState(),
 					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 10f).lightValue(0));
 			setRegistryName("acacia_stairs_n");
 		}

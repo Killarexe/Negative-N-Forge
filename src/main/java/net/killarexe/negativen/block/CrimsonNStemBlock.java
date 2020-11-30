@@ -30,7 +30,7 @@ public class CrimsonNStemBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:crimson_n_stem")
 	public static final Block block = null;
 	public CrimsonNStemBlock(NegativenModElements instance) {
-		super(instance, 213);
+		super(instance, 222);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class CrimsonNStemBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

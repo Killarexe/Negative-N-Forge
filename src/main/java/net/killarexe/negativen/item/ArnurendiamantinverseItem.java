@@ -37,7 +37,7 @@ public class ArnurendiamantinverseItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:diamond_n_armor_boots")
 	public static final Item boots = null;
 	public ArnurendiamantinverseItem(NegativenModElements instance) {
-		super(instance, 243);
+		super(instance, 264);
 	}
 
 	@Override

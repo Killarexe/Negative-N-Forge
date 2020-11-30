@@ -3,6 +3,7 @@ package net.killarexe.negativen.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
@@ -15,7 +16,7 @@ public class RedstoneNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:redstone_n")
 	public static final Item block = null;
 	public RedstoneNItem(NegativenModElements instance) {
-		super(instance, 338);
+		super(instance, 152);
 	}
 
 	@Override
@@ -24,7 +25,7 @@ public class RedstoneNItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRedstoneNItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(NegativeNRedstoneNItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("redstone_n");
 		}
 

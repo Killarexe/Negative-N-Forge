@@ -6,6 +6,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.item.UseAction;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
@@ -18,7 +19,7 @@ public class HoneyNBottleItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:honey_n_bottle")
 	public static final Item block = null;
 	public HoneyNBottleItem(NegativenModElements instance) {
-		super(instance, 35);
+		super(instance, 20);
 	}
 
 	@Override
@@ -27,7 +28,7 @@ public class HoneyNBottleItem extends NegativenModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64)
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(8).saturation(0.4f).setAlwaysEdible().build()));
 			setRegistryName("honey_n_bottle");
 		}
@@ -44,7 +45,7 @@ public class HoneyNBottleItem extends NegativenModElements.ModElement {
 		}
 
 		@Override
-		public UseAction getUseAction(ItemStack par1ItemStack) {
+		public UseAction getUseAction(ItemStack itemstack) {
 			return UseAction.DRINK;
 		}
 

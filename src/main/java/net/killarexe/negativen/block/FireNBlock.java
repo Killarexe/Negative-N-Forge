@@ -38,7 +38,7 @@ public class FireNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:fire_n")
 	public static final Block block = null;
 	public FireNBlock(NegativenModElements instance) {
-		super(instance, 579);
+		super(instance, 598);
 	}
 
 	@Override

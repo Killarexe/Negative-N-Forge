@@ -6,6 +6,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.item.UseAction;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
@@ -18,7 +19,7 @@ public class SweetBerryNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:sweet_berry_n")
 	public static final Item block = null;
 	public SweetBerryNItem(NegativenModElements instance) {
-		super(instance, 302);
+		super(instance, 324);
 	}
 
 	@Override
@@ -27,7 +28,7 @@ public class SweetBerryNItem extends NegativenModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(NegativeNFoodItemGroup.tab).maxStackSize(64)
+			super(new Item.Properties().group(NegativeNFoodItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(3).saturation(0.1f).build()));
 			setRegistryName("sweet_berry_n");
 		}
@@ -44,7 +45,7 @@ public class SweetBerryNItem extends NegativenModElements.ModElement {
 		}
 
 		@Override
-		public UseAction getUseAction(ItemStack par1ItemStack) {
+		public UseAction getUseAction(ItemStack itemstack) {
 			return UseAction.EAT;
 		}
 	}

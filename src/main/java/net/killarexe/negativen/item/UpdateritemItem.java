@@ -5,6 +5,7 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
@@ -17,7 +18,7 @@ public class UpdateritemItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:updater")
 	public static final Item block = null;
 	public UpdateritemItem(NegativenModElements instance) {
-		super(instance, 287);
+		super(instance, 309);
 	}
 
 	@Override
@@ -26,7 +27,7 @@ public class UpdateritemItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).maxDamage(5));
+			super(new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).maxDamage(5).rarity(Rarity.COMMON));
 			setRegistryName("updater");
 		}
 

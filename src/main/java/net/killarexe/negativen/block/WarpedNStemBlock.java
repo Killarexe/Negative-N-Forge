@@ -30,7 +30,7 @@ public class WarpedNStemBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:warped_n_stem")
 	public static final Block block = null;
 	public WarpedNStemBlock(NegativenModElements instance) {
-		super(instance, 214);
+		super(instance, 223);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class WarpedNStemBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

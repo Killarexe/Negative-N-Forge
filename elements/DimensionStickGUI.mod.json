@@ -1,10 +1,12 @@
 {
-  "_fv": 10,
+  "_fv": 13,
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 500,
-    "height": 400,
+    "width": 250,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
@@ -15,11 +17,11 @@
           "onClick": {
             "name": "Overworldbotton"
           },
-          "width": 180,
-          "height": 40,
+          "width": 90,
+          "height": 20,
           "name": "Owerworld",
-          "x": 192,
-          "y": 78
+          "x": 96,
+          "y": 39
         }
       },
       {
@@ -29,11 +31,11 @@
           "onClick": {
             "name": "Netherbotton"
           },
-          "width": 120,
-          "height": 40,
+          "width": 60,
+          "height": 20,
           "name": "Nether",
-          "x": 192,
-          "y": 132
+          "x": 96,
+          "y": 66
         }
       },
       {
@@ -43,11 +45,11 @@
           "onClick": {
             "name": "EndBotton"
           },
-          "width": 60,
-          "height": 40,
+          "width": 30,
+          "height": 20,
           "name": "End",
-          "x": 192,
-          "y": 186
+          "x": 96,
+          "y": 93
         }
       },
       {
@@ -57,11 +59,11 @@
           "onClick": {
             "name": "UnderworldBotton"
           },
-          "width": 200,
-          "height": 40,
+          "width": 100,
+          "height": 20,
           "name": "Underworld",
-          "x": 192,
-          "y": 240
+          "x": 96,
+          "y": 120
         }
       },
       {
@@ -71,11 +73,11 @@
           "onClick": {
             "name": "NetherNBotton"
           },
-          "width": 160,
-          "height": 40,
+          "width": 80,
+          "height": 20,
           "name": "Nether-N",
-          "x": 192,
-          "y": 294
+          "x": 96,
+          "y": 147
         }
       },
       {
@@ -85,11 +87,11 @@
           "onClick": {
             "name": "StartBotton"
           },
-          "width": 100,
-          "height": 40,
+          "width": 50,
+          "height": 20,
           "name": "Start",
-          "x": 192,
-          "y": 348
+          "x": 96,
+          "y": 174
         }
       },
       {
@@ -99,11 +101,11 @@
           "onClick": {
             "name": "NoneBotton"
           },
-          "width": 80,
-          "height": 40,
+          "width": 40,
+          "height": 20,
           "name": "None",
-          "x": 408,
-          "y": 132
+          "x": 204,
+          "y": 66
         }
       },
       {
@@ -115,8 +117,8 @@
             "falpha": 0.0
           },
           "name": "Choose your Dimension",
-          "x": 318,
-          "y": 42
+          "x": 159,
+          "y": 21
         }
       },
       {
@@ -126,11 +128,11 @@
           "onClick": {
             "name": "MineindDimBotton"
           },
-          "width": 200,
-          "height": 40,
+          "width": 100,
+          "height": 20,
           "name": "MineingDim",
-          "x": 408,
-          "y": 78
+          "x": 204,
+          "y": 39
         }
       },
       {
@@ -140,11 +142,11 @@
           "onClick": {
             "name": "ClassicDimButton"
           },
-          "width": 200,
-          "height": 40,
+          "width": 100,
+          "height": 20,
           "name": "ClassicDim",
-          "x": 408,
-          "y": 186
+          "x": 204,
+          "y": 93
         }
       },
       {
@@ -154,24 +156,52 @@
           "onClick": {
             "name": "ClassicNDimButton"
           },
-          "width": 220,
-          "height": 40,
+          "width": 110,
+          "height": 20,
           "name": "ClassicNDim",
-          "x": 408,
-          "y": 240
+          "x": 204,
+          "y": 120
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "DimStick Ver 1.1",
+          "text": "DimStick Ver 1.2",
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "name": "DimStick Ver 1.1",
-          "x": 498,
-          "y": 384
+          "name": "DimStick Ver 1.2",
+          "x": 249,
+          "y": 202
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Classic Nether",
+          "onClick": {
+            "name": "ClassicNetherButton"
+          },
+          "width": 95,
+          "height": 20,
+          "name": "Classic Nether",
+          "x": 205,
+          "y": 147
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Classic Nether-N",
+          "onClick": {
+            "name": "ClassicNetherNButton"
+          },
+          "width": 105,
+          "height": 20,
+          "name": "Classic Nether-N",
+          "x": 204,
+          "y": 175
         }
       }
     ]

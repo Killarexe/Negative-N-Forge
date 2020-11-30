@@ -6,7 +6,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
-import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.Biome;
 
 import net.killarexe.negativen.block.GrassBlockCaveGameBlock;
@@ -18,7 +17,7 @@ public class CaveGameBiomeBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:cave_game_biome")
 	public static final CustomBiome biome = null;
 	public CaveGameBiomeBiome(NegativenModElements instance) {
-		super(instance, 667);
+		super(instance, 696);
 	}
 
 	@Override
@@ -35,8 +34,7 @@ public class CaveGameBiomeBiome extends NegativenModElements.ModElement {
 					.category(Biome.Category.NONE).waterColor(4159204).waterFogColor(329011)
 					.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(GrassBlockCaveGameBlock.block.getDefaultState(),
 							CobblestoneCaveGameBlock.block.getDefaultState(), CobblestoneCaveGameBlock.block.getDefaultState())));
-			setRegistryName("cave_game_biome");
-			DefaultBiomeFeatures.addStructures(this);
+			setRegistryName("cave_game_biome");
 		}
 	}
 }

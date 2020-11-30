@@ -10,12 +10,13 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class ShowVerCommandExecutedProcedure extends NegativenModElements.ModElement {
 	public ShowVerCommandExecutedProcedure(NegativenModElements instance) {
-		super(instance, 650);
+		super(instance, 669);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure ShowVerCommandExecuted!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure ShowVerCommandExecuted!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

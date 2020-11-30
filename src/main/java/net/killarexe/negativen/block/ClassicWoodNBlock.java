@@ -33,7 +33,7 @@ public class ClassicWoodNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:classic_wood_n")
 	public static final Block block = null;
 	public ClassicWoodNBlock(NegativenModElements instance) {
-		super(instance, 310);
+		super(instance, 332);
 	}
 
 	@Override
@@ -76,7 +76,7 @@ public class ClassicWoodNBlock extends NegativenModElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

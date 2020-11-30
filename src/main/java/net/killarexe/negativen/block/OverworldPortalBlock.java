@@ -36,7 +36,7 @@ public class OverworldPortalBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:overworld_portal")
 	public static final Block block = null;
 	public OverworldPortalBlock(NegativenModElements instance) {
-		super(instance, 616);
+		super(instance, 635);
 	}
 
 	@Override
@@ -83,7 +83,10 @@ public class OverworldPortalBlock extends NegativenModElements.ModElement {
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				OverworldPortalEntityCollidesInTheBlockProcedure.executeProcedure($_dependencies);
 			}
 		}

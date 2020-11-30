@@ -17,7 +17,7 @@ public class PelleenDiamantNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:diamond_n_shovel")
 	public static final Item block = null;
 	public PelleenDiamantNItem(NegativenModElements instance) {
-		super(instance, 260);
+		super(instance, 282);
 	}
 
 	@Override

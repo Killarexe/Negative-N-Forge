@@ -13,24 +13,28 @@ import java.util.Map;
 @NegativenModElements.ModElement.Tag
 public class FarmlandNMoistUpdateTickProcedure extends NegativenModElements.ModElement {
 	public FarmlandNMoistUpdateTickProcedure(NegativenModElements instance) {
-		super(instance, 659);
+		super(instance, 678);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure FarmlandNMoistUpdateTick!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure FarmlandNMoistUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure FarmlandNMoistUpdateTick!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure FarmlandNMoistUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure FarmlandNMoistUpdateTick!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure FarmlandNMoistUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure FarmlandNMoistUpdateTick!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure FarmlandNMoistUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

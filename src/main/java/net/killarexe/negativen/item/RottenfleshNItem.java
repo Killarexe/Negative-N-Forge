@@ -5,6 +5,7 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.World;
 import net.minecraft.item.UseAction;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
@@ -22,7 +23,7 @@ public class RottenfleshNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:rottenfleshn")
 	public static final Item block = null;
 	public RottenfleshNItem(NegativenModElements instance) {
-		super(instance, 14);
+		super(instance, 19);
 	}
 
 	@Override
@@ -31,19 +32,19 @@ public class RottenfleshNItem extends NegativenModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64)
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(4).saturation(0.3f).meat().build()));
 			setRegistryName("rottenfleshn");
 		}
 
 		@Override
-		public UseAction getUseAction(ItemStack par1ItemStack) {
+		public UseAction getUseAction(ItemStack itemstack) {
 			return UseAction.EAT;
 		}
 
 		@Override
-		public ItemStack onItemUseFinish(ItemStack itemStack, World world, LivingEntity entity) {
-			ItemStack retval = super.onItemUseFinish(itemStack, world, entity);
+		public ItemStack onItemUseFinish(ItemStack itemstack, World world, LivingEntity entity) {
+			ItemStack retval = super.onItemUseFinish(itemstack, world, entity);
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();

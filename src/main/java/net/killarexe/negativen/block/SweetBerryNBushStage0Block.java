@@ -12,6 +12,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
@@ -40,7 +41,7 @@ public class SweetBerryNBushStage0Block extends NegativenModElements.ModElement 
 	@ObjectHolder("negativen:sweet_berry_n_bush_stage_0")
 	public static final Block block = null;
 	public SweetBerryNBushStage0Block(NegativenModElements instance) {
-		super(instance, 752);
+		super(instance, 771);
 	}
 
 	@Override
@@ -79,7 +80,8 @@ public class SweetBerryNBushStage0Block extends NegativenModElements.ModElement 
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			return VoxelShapes.create(0D, 0D, 0D, 0.5D, 0.5D, 0.5D);
+			Vec3d offset = state.getOffset(world, pos);
+			return VoxelShapes.create(0D, 0D, 0D, 0.5D, 0.5D, 0.5D).withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override

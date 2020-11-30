@@ -25,29 +25,34 @@ import java.util.HashMap;
 @NegativenModElements.ModElement.Tag
 public class SmeltEnchantmentProceedProcedure extends NegativenModElements.ModElement {
 	public SmeltEnchantmentProceedProcedure(NegativenModElements instance) {
-		super(instance, 764);
+		super(instance, 782);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure SmeltEnchantmentProceed!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure SmeltEnchantmentProceed!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure SmeltEnchantmentProceed!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure SmeltEnchantmentProceed!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure SmeltEnchantmentProceed!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure SmeltEnchantmentProceed!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure SmeltEnchantmentProceed!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure SmeltEnchantmentProceed!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure SmeltEnchantmentProceed!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure SmeltEnchantmentProceed!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -81,7 +86,7 @@ public class SmeltEnchantmentProceedProcedure extends NegativenModElements.ModEl
 														(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))),
 														world.getWorld()).get().getRecipeOutput().copy()
 												: ItemStack.EMPTY));
-						entityToSpawn.setPickupDelay(10);
+						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}
 					removeBlock = (boolean) (true);

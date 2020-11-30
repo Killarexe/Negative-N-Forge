@@ -27,11 +27,11 @@ import net.minecraft.world.gen.layer.Layer;
 import net.minecraft.world.gen.layer.IslandLayer;
 import net.minecraft.world.gen.area.LazyArea;
 import net.minecraft.world.gen.area.IAreaFactory;
+import net.minecraft.world.gen.NetherGenSettings;
+import net.minecraft.world.gen.NetherChunkGenerator;
 import net.minecraft.world.gen.LazyAreaLayerContext;
 import net.minecraft.world.gen.INoiseRandom;
 import net.minecraft.world.gen.IExtendedNoiseRandom;
-import net.minecraft.world.gen.EndGenerationSettings;
-import net.minecraft.world.gen.EndChunkGenerator;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.dimension.Dimension;
@@ -56,6 +56,7 @@ import net.minecraft.util.CachedBlockInfo;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
@@ -103,7 +104,7 @@ public class ClassicNetherDimDimension extends NegativenModElements.ModElement {
 	public static DimensionType type = null;
 	private static Biome[] dimensionBiomes;
 	public ClassicNetherDimDimension(NegativenModElements instance) {
-		super(instance, 286);
+		super(instance, 308);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
@@ -670,7 +671,7 @@ public class ClassicNetherDimDimension extends NegativenModElements.ModElement {
 		private BiomeProviderCustom biomeProviderCustom = null;
 		public CustomDimension(World world, DimensionType type) {
 			super(world, type, 0);
-			this.nether = false;
+			this.nether = true;
 		}
 
 		@Override
@@ -752,9 +753,9 @@ public class ClassicNetherDimDimension extends NegativenModElements.ModElement {
 		}
 	}
 
-	public static class ChunkProviderModded extends EndChunkGenerator {
-		public ChunkProviderModded(IWorld world, BiomeProvider provider) {
-			super(world, provider, new EndGenerationSettings() {
+	public static class ChunkProviderModded extends NetherChunkGenerator {
+		public ChunkProviderModded(World world, BiomeProvider provider) {
+			super(world, provider, new NetherGenSettings() {
 				public BlockState getDefaultBlock() {
 					return ClassicNetherrackBlock.block.getDefaultState();
 				}
@@ -763,7 +764,12 @@ public class ClassicNetherDimDimension extends NegativenModElements.ModElement {
 					return ClassicLavaNBlock.block.getDefaultState();
 				}
 			});
-			this.randomSeed.skip(3946);
+			this.randomSeed.skip(9716);
+		}
+
+		@Override
+		public List<Biome.SpawnListEntry> getPossibleCreatures(EntityClassification creatureType, BlockPos pos) {
+			return this.world.getBiome(pos).getSpawns(creatureType);
 		}
 	}
 

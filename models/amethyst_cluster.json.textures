@@ -1,0 +1,34 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": ""
+      },
+      "name": "default"
+    },
+    "stage3": {
+      "map": {
+        "0": "large_amethyst_n_bud"
+      },
+      "name": "stage3"
+    },
+    "stage2": {
+      "map": {
+        "0": "medium_amethyst_n_bud"
+      },
+      "name": "stage2"
+    },
+    "stage4": {
+      "map": {
+        "0": "amethyst_n_cluster"
+      },
+      "name": "stage4"
+    },
+    "stage1": {
+      "map": {
+        "0": "small_amethyst_n_bud"
+      },
+      "name": "stage1"
+    }
+  }
+}

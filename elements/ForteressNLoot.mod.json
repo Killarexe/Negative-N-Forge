@@ -1,5 +1,5 @@
 {
-  "_fv": 10,
+  "_fv": 13,
   "_type": "loottable",
   "definition": {
     "type": "Chest",
@@ -16,7 +16,14 @@
             "item": {
               "value": "CUSTOM:Starteye"
             },
-            "weight": 1
+            "weight": 1,
+            "minCount": 1,
+            "maxCount": 1,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
           }
         ]
       }

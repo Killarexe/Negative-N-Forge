@@ -78,7 +78,7 @@ public class DecompositorBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:decompositor")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public DecompositorBlock(NegativenModElements instance) {
-		super(instance, 130);
+		super(instance, 158);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -133,6 +133,7 @@ public class DecompositorBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
 			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
 		}
 

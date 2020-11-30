@@ -45,7 +45,7 @@ public class TorchNState2Block extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:torch_n_state_2")
 	public static final Block block = null;
 	public TorchNState2Block(NegativenModElements instance) {
-		super(instance, 69);
+		super(instance, 72);
 	}
 
 	@Override
@@ -94,6 +94,7 @@ public class TorchNState2Block extends NegativenModElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
 			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
 		}
 

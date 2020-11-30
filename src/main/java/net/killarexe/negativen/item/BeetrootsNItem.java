@@ -4,6 +4,7 @@ package net.killarexe.negativen.item;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.item.UseAction;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
@@ -16,7 +17,7 @@ public class BeetrootsNItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:beetroots_n")
 	public static final Item block = null;
 	public BeetrootsNItem(NegativenModElements instance) {
-		super(instance, 297);
+		super(instance, 319);
 	}
 
 	@Override
@@ -25,13 +26,13 @@ public class BeetrootsNItem extends NegativenModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(NegativeNFoodItemGroup.tab).maxStackSize(64)
+			super(new Item.Properties().group(NegativeNFoodItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(2).saturation(0.1f).build()));
 			setRegistryName("beetroots_n");
 		}
 
 		@Override
-		public UseAction getUseAction(ItemStack par1ItemStack) {
+		public UseAction getUseAction(ItemStack itemstack) {
 			return UseAction.EAT;
 		}
 	}

@@ -49,7 +49,7 @@ public class OrangeTulipNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:orange_tulip_n")
 	public static final Block block = null;
 	public OrangeTulipNBlock(NegativenModElements instance) {
-		super(instance, 97);
+		super(instance, 105);
 	}
 
 	@Override

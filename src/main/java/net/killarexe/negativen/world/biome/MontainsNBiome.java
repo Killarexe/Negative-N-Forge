@@ -8,6 +8,10 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.gen.feature.structure.MineshaftStructure;
+import net.minecraft.world.gen.feature.structure.MineshaftConfig;
+import net.minecraft.world.gen.feature.IFeatureConfig;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.entity.EntityClassification;
@@ -28,7 +32,7 @@ public class MontainsNBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:montains_n")
 	public static final CustomBiome biome = null;
 	public MontainsNBiome(NegativenModElements instance) {
-		super(instance, 635);
+		super(instance, 654);
 	}
 
 	@Override
@@ -47,9 +51,13 @@ public class MontainsNBiome extends NegativenModElements.ModElement {
 							StoneNBlock.block.getDefaultState(), StoneNBlock.block.getDefaultState())));
 			setRegistryName("montains_n");
 			DefaultBiomeFeatures.addCarvers(this);
-			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addMonsterRooms(this);
+			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addOres(this);
+			DefaultBiomeFeatures.addLakes(this);
+			this.addStructure(Feature.STRONGHOLD.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+			this.addStructure(Feature.MINESHAFT.withConfiguration(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
+			this.addStructure(Feature.PILLAGER_OUTPOST.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
 			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(ZombieNEntity.entity, 20, 1, 4));
 			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(CreeperNEntity.entity, 20, 1, 4));
 			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(SpiderNEntity.entity, 20, 1, 4));

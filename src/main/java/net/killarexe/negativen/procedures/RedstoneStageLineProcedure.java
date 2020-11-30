@@ -13,24 +13,28 @@ import java.util.HashMap;
 @NegativenModElements.ModElement.Tag
 public class RedstoneStageLineProcedure extends NegativenModElements.ModElement {
 	public RedstoneStageLineProcedure(NegativenModElements instance) {
-		super(instance, 701);
+		super(instance, 720);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure RedstoneStageLine!");
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure RedstoneStageLine!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure RedstoneStageLine!");
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure RedstoneStageLine!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure RedstoneStageLine!");
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure RedstoneStageLine!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure RedstoneStageLine!");
+			if (!dependencies.containsKey("world"))
+				System.err.println("Failed to load dependency world for procedure RedstoneStageLine!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

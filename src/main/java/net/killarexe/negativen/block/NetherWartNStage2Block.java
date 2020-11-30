@@ -37,7 +37,7 @@ public class NetherWartNStage2Block extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:nether_wart_n_stage_2")
 	public static final Block block = null;
 	public NetherWartNStage2Block(NegativenModElements instance) {
-		super(instance, 711);
+		super(instance, 730);
 	}
 
 	@Override

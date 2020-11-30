@@ -8,6 +8,10 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.gen.feature.structure.MineshaftStructure;
+import net.minecraft.world.gen.feature.structure.MineshaftConfig;
+import net.minecraft.world.gen.feature.IFeatureConfig;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.block.Blocks;
@@ -19,7 +23,7 @@ public class MineingBiomeBiome extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:mineingbiome")
 	public static final CustomBiome biome = null;
 	public MineingBiomeBiome(NegativenModElements instance) {
-		super(instance, 404);
+		super(instance, 424);
 	}
 
 	@Override
@@ -38,9 +42,13 @@ public class MineingBiomeBiome extends NegativenModElements.ModElement {
 							Blocks.STONE.getDefaultState())));
 			setRegistryName("mineingbiome");
 			DefaultBiomeFeatures.addCarvers(this);
-			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addMonsterRooms(this);
+			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addOres(this);
+			DefaultBiomeFeatures.addLakes(this);
+			this.addStructure(Feature.STRONGHOLD.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+			this.addStructure(Feature.MINESHAFT.withConfiguration(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
+			this.addStructure(Feature.PILLAGER_OUTPOST.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
 		}
 
 		@OnlyIn(Dist.CLIENT)

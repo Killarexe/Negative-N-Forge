@@ -53,7 +53,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.CreateOnBlockRightClickedProcedure;
-import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
+import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.gui.CreateinvGui;
 import net.killarexe.negativen.NegativenModElements;
 
@@ -74,15 +74,15 @@ public class CreateBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:create")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public CreateBlock(NegativenModElements instance) {
-		super(instance, 175);
+		super(instance, 75);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items
-				.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNBlocksItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNDecorationBlocksItemGroup.tab))
+				.setRegistryName(block.getRegistryName()));
 	}
 
 	@SubscribeEvent

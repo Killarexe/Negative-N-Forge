@@ -13,7 +13,7 @@ import net.killarexe.negativen.NegativenModElements;
 @NegativenModElements.ModElement.Tag
 public class NeagtiveNOuilsItemGroup extends NegativenModElements.ModElement {
 	public NeagtiveNOuilsItemGroup(NegativenModElements instance) {
-		super(instance, 359);
+		super(instance, 379);
 	}
 
 	@Override

@@ -8,6 +8,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.World;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ActionResult;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
@@ -24,7 +25,7 @@ public class DimensionStickItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:dimension_stick")
 	public static final Item block = null;
 	public DimensionStickItem(NegativenModElements instance) {
-		super(instance, 412);
+		super(instance, 432);
 	}
 
 	@Override
@@ -33,7 +34,7 @@ public class DimensionStickItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(null).maxStackSize(1));
+			super(new Item.Properties().group(null).maxStackSize(1).rarity(Rarity.COMMON));
 			setRegistryName("dimension_stick");
 		}
 

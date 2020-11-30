@@ -35,7 +35,7 @@ public class TerreNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:dirt_n")
 	public static final Block block = null;
 	public TerreNBlock(NegativenModElements instance) {
-		super(instance, 158);
+		super(instance, 186);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public class ClassicCobblestoneNBlock extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:classic_cobblestone_n")
 	public static final Block block = null;
 	public ClassicCobblestoneNBlock(NegativenModElements instance) {
-		super(instance, 306);
+		super(instance, 328);
 	}
 
 	@Override

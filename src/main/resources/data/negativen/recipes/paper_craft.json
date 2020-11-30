@@ -3,13 +3,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "negativen:sugar_cane_n"
+      "item": "negativen:sugar_cane_n_item"
     },
     {
-      "item": "negativen:sugar_cane_n"
+      "item": "negativen:sugar_cane_n_item"
     },
     {
-      "item": "negativen:sugar_cane_n"
+      "item": "negativen:sugar_cane_n_item"
     }
   ],
   "result": {

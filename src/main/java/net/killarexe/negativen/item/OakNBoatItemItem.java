@@ -7,6 +7,7 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -25,7 +26,7 @@ public class OakNBoatItemItem extends NegativenModElements.ModElement {
 	@ObjectHolder("negativen:oak_n_boat_item")
 	public static final Item block = null;
 	public OakNBoatItemItem(NegativenModElements instance) {
-		super(instance, 339);
+		super(instance, 358);
 	}
 
 	@Override
@@ -34,7 +35,7 @@ public class OakNBoatItemItem extends NegativenModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNTransportItemGroup.tab).maxStackSize(1));
+			super(new Item.Properties().group(NegativeNTransportItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON));
 			setRegistryName("oak_n_boat_item");
 		}
 

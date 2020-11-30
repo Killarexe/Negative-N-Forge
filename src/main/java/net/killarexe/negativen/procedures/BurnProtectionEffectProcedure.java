@@ -22,19 +22,20 @@ import java.util.HashMap;
 @NegativenModElements.ModElement.Tag
 public class BurnProtectionEffectProcedure extends NegativenModElements.ModElement {
 	public BurnProtectionEffectProcedure(NegativenModElements instance) {
-		super(instance, 645);
+		super(instance, 664);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure BurnProtectionEffect!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure BurnProtectionEffect!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((entity.isBurning())) {
 			if (((EnchantmentHelper.getEnchantmentLevel(BurnProtectionEnchantment.enchantment,
-					((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get(2) : ItemStack.EMPTY))) > 0)) {
+					((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 2) : ItemStack.EMPTY))) > 0)) {
 				if (entity instanceof LivingEntity)
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 1024, (int) 1));
 			}

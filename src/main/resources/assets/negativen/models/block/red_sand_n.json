@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "negativen:blocks/red_sand_n",
+    "particle": "negativen:blocks/red_sand_n"
+  }
+}
