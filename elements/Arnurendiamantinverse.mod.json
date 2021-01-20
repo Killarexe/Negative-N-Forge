@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -10,12 +10,6 @@
     "textureLeggings": "diamond_n_leggings",
     "enableBoots": true,
     "textureBoots": "diamond_n_boots",
-    "onHelmetTick": {
-      "name": "ArnurendiamantinverseHelmetTickEvent"
-    },
-    "onBodyTick": {
-      "name": "ArnurendiamantinverseBodyTickEvent"
-    },
     "onBootsTick": {
       "name": "ArnurendiamantinverseBootsTickEvent"
     },
@@ -52,6 +46,7 @@
     "damageValueBoots": 10,
     "enchantability": 20,
     "toughness": 4.0,
+    "knockbackResistance": 0.0,
     "equipSound": {
       "value": "entity.armorstand.place"
     },

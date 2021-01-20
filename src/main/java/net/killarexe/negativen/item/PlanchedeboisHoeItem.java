@@ -64,7 +64,7 @@ public class PlanchedeboisHoeItem extends NegativenModElements.ModElement {
 						new ItemStack(BirchplanksnBlock.block, (int) (1)), new ItemStack(DarkoakplanksNBlock.block, (int) (1)),
 						new ItemStack(JunglePlanksNBlock.block, (int) (1)), new ItemStack(SprucePlanksNBlock.block, (int) (1)));
 			}
-		}, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
+		}, 0, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
 			@Override
 			public ActionResultType onItemUse(ItemUseContext context) {
 				ActionResultType retval = super.onItemUse(context);

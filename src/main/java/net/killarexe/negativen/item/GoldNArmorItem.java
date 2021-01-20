@@ -35,33 +35,45 @@ public class GoldNArmorItem extends NegativenModElements.ModElement {
 	@Override
 	public void initElements() {
 		IArmorMaterial armormaterial = new IArmorMaterial() {
+			@Override
 			public int getDurability(EquipmentSlotType slot) {
 				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 250;
 			}
 
+			@Override
 			public int getDamageReductionAmount(EquipmentSlotType slot) {
 				return new int[]{1, 4, 3, 1}[slot.getIndex()];
 			}
 
+			@Override
 			public int getEnchantability() {
 				return 14;
 			}
 
+			@Override
 			public net.minecraft.util.SoundEvent getSoundEvent() {
 				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.armor.equip_gold"));
 			}
 
+			@Override
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(GoldNIngotItem.block, (int) (1)));
 			}
 
 			@OnlyIn(Dist.CLIENT)
+			@Override
 			public String getName() {
 				return "gold_n_armor";
 			}
 
+			@Override
 			public float getToughness() {
 				return 1f;
+			}
+
+			@Override
+			public float getKnockbackResistance() {
+				return 0f;
 			}
 		};
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {

@@ -7,16 +7,15 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
-import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -59,20 +58,10 @@ public class LanternNBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(0.2f, 10f).lightValue(14).harvestLevel(0)
-					.harvestTool(ToolType.PICKAXE).notSolid());
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(0.2f, 10f).setLightLevel(s -> 13)
+					.harvestLevel(0).harvestTool(ToolType.PICKAXE).notSolid().setNeedsPostProcessing((bs, br, bp) -> true)
+					.setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
 			setRegistryName("lantern_n");
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public boolean isEmissiveRendering(BlockState blockState) {
-			return true;
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
 		}
 
 		@Override
@@ -82,13 +71,8 @@ public class LanternNBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			Vec3d offset = state.getOffset(world, pos);
+			Vector3d offset = state.getOffset(world, pos);
 			return VoxelShapes.create(0D, 0D, 0D, 0.5D, 0.5D, 0.5D).withOffset(offset.x, offset.y, offset.z);
-		}
-
-		@Override
-		public int tickRate(IWorldReader world) {
-			return 1;
 		}
 
 		@Override
@@ -105,7 +89,7 @@ public class LanternNBlock extends NegativenModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1);
 		}
 
 		@Override
@@ -122,7 +106,7 @@ public class LanternNBlock extends NegativenModElements.ModElement {
 				$_dependencies.put("world", world);
 				LanternsNUpdateTickProcedure.executeProcedure($_dependencies);
 			}
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1);
 		}
 	}
 }

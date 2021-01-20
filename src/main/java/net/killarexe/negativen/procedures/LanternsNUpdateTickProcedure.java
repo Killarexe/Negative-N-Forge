@@ -9,6 +9,7 @@ import net.killarexe.negativen.block.LanternNBlock;
 import net.killarexe.negativen.block.HanginigSoulLanternNBlock;
 import net.killarexe.negativen.block.HangingLanternNBlock;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -21,22 +22,22 @@ public class LanternsNUpdateTickProcedure extends NegativenModElements.ModElemen
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure LanternsNUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure LanternsNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure LanternsNUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure LanternsNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure LanternsNUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure LanternsNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure LanternsNUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure LanternsNUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

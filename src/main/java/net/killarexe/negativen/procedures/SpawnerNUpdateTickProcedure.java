@@ -17,6 +17,7 @@ import net.killarexe.negativen.entity.SpiderNEntity;
 import net.killarexe.negativen.entity.EndermanNEntity;
 import net.killarexe.negativen.entity.CreeperNEntity;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -29,22 +30,22 @@ public class SpawnerNUpdateTickProcedure extends NegativenModElements.ModElement
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure SpawnerNUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure SpawnerNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure SpawnerNUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure SpawnerNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure SpawnerNUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure SpawnerNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure SpawnerNUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure SpawnerNUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -65,11 +66,11 @@ public class SpawnerNUpdateTickProcedure extends NegativenModElements.ModElement
 			if ((((world.getBlockState(new BlockPos((int) (x + 2), (int) y, (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
 					&& ((world.getBlockState(new BlockPos((int) (x + 2), (int) (y + 1), (int) z))).getBlock() == Blocks.AIR.getDefaultState()
 							.getBlock()))) {
-				if (world instanceof World && !world.getWorld().isRemote) {
-					Entity entityToSpawn = new ZombieNEntity.CustomEntity(ZombieNEntity.entity, world.getWorld());
+				if (world instanceof ServerWorld) {
+					Entity entityToSpawn = new ZombieNEntity.CustomEntity(ZombieNEntity.entity, (World) world);
 					entityToSpawn.setLocationAndAngles((x + 2), y, z, world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof MobEntity)
-						((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
+						((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
 								SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
 					world.addEntity(entityToSpawn);
 				}
@@ -77,11 +78,11 @@ public class SpawnerNUpdateTickProcedure extends NegativenModElements.ModElement
 			if ((((world.getBlockState(new BlockPos((int) (x - 2), (int) y, (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
 					&& ((world.getBlockState(new BlockPos((int) (x - 2), (int) (y + 1), (int) z))).getBlock() == Blocks.AIR.getDefaultState()
 							.getBlock()))) {
-				if (world instanceof World && !world.getWorld().isRemote) {
-					Entity entityToSpawn = new CreeperNEntity.CustomEntity(CreeperNEntity.entity, world.getWorld());
+				if (world instanceof ServerWorld) {
+					Entity entityToSpawn = new CreeperNEntity.CustomEntity(CreeperNEntity.entity, (World) world);
 					entityToSpawn.setLocationAndAngles((x - 2), y, z, world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof MobEntity)
-						((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
+						((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
 								SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
 					world.addEntity(entityToSpawn);
 				}
@@ -89,11 +90,11 @@ public class SpawnerNUpdateTickProcedure extends NegativenModElements.ModElement
 			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 2)))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
 					&& ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 2)))).getBlock() == Blocks.AIR.getDefaultState()
 							.getBlock()))) {
-				if (world instanceof World && !world.getWorld().isRemote) {
-					Entity entityToSpawn = new SpiderNEntity.CustomEntity(SpiderNEntity.entity, world.getWorld());
+				if (world instanceof ServerWorld) {
+					Entity entityToSpawn = new SpiderNEntity.CustomEntity(SpiderNEntity.entity, (World) world);
 					entityToSpawn.setLocationAndAngles(x, y, (z + 2), world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof MobEntity)
-						((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
+						((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
 								SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
 					world.addEntity(entityToSpawn);
 				}
@@ -101,11 +102,11 @@ public class SpawnerNUpdateTickProcedure extends NegativenModElements.ModElement
 			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 2)))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
 					&& ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 2)))).getBlock() == Blocks.AIR.getDefaultState()
 							.getBlock()))) {
-				if (world instanceof World && !world.getWorld().isRemote) {
-					Entity entityToSpawn = new EndermanNEntity.CustomEntity(EndermanNEntity.entity, world.getWorld());
+				if (world instanceof ServerWorld) {
+					Entity entityToSpawn = new EndermanNEntity.CustomEntity(EndermanNEntity.entity, (World) world);
 					entityToSpawn.setLocationAndAngles(x, y, (z - 2), world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof MobEntity)
-						((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
+						((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
 								SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
 					world.addEntity(entityToSpawn);
 				}

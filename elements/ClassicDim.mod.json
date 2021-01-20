@@ -1,24 +1,7 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "dimension",
   "definition": {
-    "portalFrame": {
-      "value": "CUSTOM:Portalblock"
-    },
-    "portalParticles": {
-      "value": "PORTAL"
-    },
-    "portalLuminance": 0.0,
-    "portalSound": {
-      "value": "block.portal.ambient"
-    },
-    "igniterName": "Classic Dimension Portal Igniter",
-    "igniterTab": {
-      "value": "CUSTOM:NeagtiveNOuils"
-    },
-    "texture": "fint_nega",
-    "portalTexture": "debugblockn",
-    "enablePortal": true,
     "biomesInDimension": [
       {
         "value": "CUSTOM:ClassicBiome"
@@ -47,11 +30,27 @@
     },
     "canRespawnHere": true,
     "hasFog": false,
-    "hasWeather": true,
     "isDark": false,
     "doesWaterVaporize": false,
     "sleepResult": "ALLOW",
     "hasSkyLight": true,
-    "imitateOverworldBehaviour": true
+    "imitateOverworldBehaviour": true,
+    "portalFrame": {
+      "value": "CUSTOM:Portalblock"
+    },
+    "portalParticles": {
+      "value": "PORTAL"
+    },
+    "portalLuminance": 0,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Classic Dimension Portal Igniter",
+    "igniterTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "texture": "fint_nega",
+    "portalTexture": "debugblockn",
+    "enablePortal": true
   }
 }

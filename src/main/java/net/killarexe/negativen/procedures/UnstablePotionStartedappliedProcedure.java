@@ -4,6 +4,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.entity.Entity;
 
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -16,7 +17,7 @@ public class UnstablePotionStartedappliedProcedure extends NegativenModElements.
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure UnstablePotionStartedapplied!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure UnstablePotionStartedapplied!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -33,7 +33,14 @@ public class MineingEnchantment extends NegativenModElements.ModElement {
 
 		@Override
 		public int getMaxLevel() {
-			return 2;
+			return 1;
+		}
+
+		@Override
+		protected boolean canApplyTogether(Enchantment ench) {
+			if (ench == SmeltingEnchantment.enchantment)
+				return true;
+			return false;
 		}
 
 		@Override

@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "mob",
   "definition": {
     "mobName": "Skeleton-N",
@@ -27,7 +27,7 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": ""
+      "value": "CUSTOM:BowN"
     },
     "equipmentOffHand": {
       "value": ""
@@ -134,9 +134,6 @@
       },
       {
         "value": "CUSTOM:SpruceForestN"
-      },
-      {
-        "value": "CUSTOM:SpruceNForest"
       },
       {
         "value": "CUSTOM:MontainsN"

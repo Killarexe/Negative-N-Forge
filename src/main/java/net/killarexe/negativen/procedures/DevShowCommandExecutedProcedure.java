@@ -9,6 +9,7 @@ import net.minecraft.advancements.Advancement;
 
 import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 import java.util.Iterator;
@@ -22,7 +23,7 @@ public class DevShowCommandExecutedProcedure extends NegativenModElements.ModEle
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure DevShowCommandExecuted!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure DevShowCommandExecuted!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

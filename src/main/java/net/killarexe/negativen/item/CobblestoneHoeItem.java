@@ -56,7 +56,7 @@ public class CobblestoneHoeItem extends NegativenModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
-		}, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
+		}, 0, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
 			@Override
 			public ActionResultType onItemUse(ItemUseContext context) {
 				ActionResultType retval = super.onItemUse(context);

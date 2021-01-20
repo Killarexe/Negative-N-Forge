@@ -2,30 +2,34 @@
 package net.killarexe.negativen.block;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.common.PlantType;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.NoiseDependant;
 import net.minecraft.world.gen.feature.RandomPatchFeature;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockplacer.DoublePlantBlockPlacer;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.ISeedReader;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Direction;
 import net.minecraft.state.properties.DoubleBlockHalf;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.TallBlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
@@ -50,6 +54,7 @@ public class TallGrassNBlock extends NegativenModElements.ModElement {
 	public static final Block block = null;
 	public TallGrassNBlock(NegativenModElements instance) {
 		super(instance, 364);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
@@ -65,30 +70,30 @@ public class TallGrassNBlock extends NegativenModElements.ModElement {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
 
-	@Override
-	public void init(FMLCommonSetupEvent event) {
-		RandomPatchFeature feature = new RandomPatchFeature(BlockClusterFeatureConfig::deserialize) {
+	@SubscribeEvent
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		RandomPatchFeature feature = new RandomPatchFeature(BlockClusterFeatureConfig.field_236587_a_) {
 			@Override
-			public boolean place(IWorld world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
-				DimensionType dimensionType = world.getDimension().getType();
+			public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
+				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == DimensionType.OVERWORLD)
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
-				return super.place(world, generator, random, pos, config);
+				return super.generate(world, generator, random, pos, config);
 			}
 		};
-		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
-			biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, feature.withConfiguration(
-					(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new DoublePlantBlockPlacer()))
-							.tries(64).build())
-					.withPlacement(Placement.NOISE_HEIGHTMAP_32.configure(new NoiseDependant(-0.8, 0, 5))));
-		}
+		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION)
+				.add(() -> (ConfiguredFeature<?, ?>) feature.withConfiguration(
+						(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new DoublePlantBlockPlacer()))
+								.tries(64).build())
+						.withPlacement(Placement.COUNT_NOISE.configure(new NoiseDependant(-0.8, 0, 2))));
 	}
 	public static class BlockCustomFlower extends DoublePlantBlock {
 		public BlockCustomFlower() {
-			super(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0f, 0f).lightValue(0));
+			super(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0f, 0f)
+					.setLightLevel(s -> 0));
 			setRegistryName("tall_grass_n");
 		}
 
@@ -114,7 +119,7 @@ public class TallGrassNBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public PlantType getPlantType(IBlockReader world, BlockPos pos) {
-			return PlantType.Plains;
+			return PlantType.PLAINS;
 		}
 	}
 }

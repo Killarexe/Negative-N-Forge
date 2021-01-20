@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "enchantment",
   "definition": {
     "name": "Poisonus",
@@ -9,32 +9,7 @@
     "maxLevel": 2,
     "damageModifier": 0,
     "compatibleEnchantments": [],
-    "compatibleItems": [
-      {
-        "value": "CUSTOM:EpeeenDiamantN"
-      },
-      {
-        "value": "CUSTOM:HacheendiamantN"
-      },
-      {
-        "value": "CUSTOM:Iron_NAxe"
-      },
-      {
-        "value": "CUSTOM:Iron_NSword"
-      },
-      {
-        "value": "CUSTOM:PlanchedeboisAxe"
-      },
-      {
-        "value": "CUSTOM:PlanchedeboisSword"
-      },
-      {
-        "value": "CUSTOM:CobblestoneAxe"
-      },
-      {
-        "value": "CUSTOM:CobblestoneSword"
-      }
-    ],
+    "compatibleItems": [],
     "isTreasureEnchantment": false,
     "isCurse": false,
     "isAllowedOnBooks": true

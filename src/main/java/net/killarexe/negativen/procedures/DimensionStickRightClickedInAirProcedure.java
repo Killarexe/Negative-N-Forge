@@ -17,6 +17,7 @@ import net.minecraft.entity.Entity;
 import net.killarexe.negativen.gui.DimensionStickGUIGui;
 import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -31,27 +32,27 @@ public class DimensionStickRightClickedInAirProcedure extends NegativenModElemen
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure DimensionStickRightClickedInAir!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure DimensionStickRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure DimensionStickRightClickedInAir!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure DimensionStickRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure DimensionStickRightClickedInAir!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure DimensionStickRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure DimensionStickRightClickedInAir!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure DimensionStickRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure DimensionStickRightClickedInAir!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure DimensionStickRightClickedInAir!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -81,13 +82,13 @@ public class DimensionStickRightClickedInAirProcedure extends NegativenModElemen
 						}
 					}
 				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You are not in creative mod!"), (true));
 					}
 				}
 			}
 		} else {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Debug Mod is not activate!"), (false));
 			}
 		}

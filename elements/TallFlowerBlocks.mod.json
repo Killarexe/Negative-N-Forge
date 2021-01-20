@@ -1,0 +1,19 @@
+{
+  "_fv": 15,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:PeonyN"
+      },
+      {
+        "value": "CUSTOM:RoseBushN"
+      }
+    ],
+    "functions": [],
+    "name": "tall_flowers",
+    "namespace": "minecraft"
+  }
+}

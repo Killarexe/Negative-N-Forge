@@ -9,6 +9,7 @@ import net.killarexe.negativen.potion.UnstablePotion;
 import net.killarexe.negativen.block.WaterNBlock;
 import net.killarexe.negativen.block.LavaNBlock;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -21,7 +22,7 @@ public class FludNBuketProcedure extends NegativenModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure FludNBuket!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure FludNBuket!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -3,9 +3,7 @@ package net.killarexe.negativen.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 
-import net.minecraft.world.storage.loot.LootContext;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -37,12 +35,12 @@ public class StartstoneBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 100f).lightValue(0));
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 100f).setLightLevel(s -> 0));
 			setRegistryName("start_stone");
 		}
 
 		@Override
-		public MaterialColor getMaterialColor(BlockState state, IBlockReader blockAccess, BlockPos pos) {
+		public MaterialColor getMaterialColor() {
 			return MaterialColor.BLUE_TERRACOTTA;
 		}
 

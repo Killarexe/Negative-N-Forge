@@ -1,8 +1,8 @@
 {
   "id_map": {
+    "DIMENSION": 5,
     "GUI": 8,
-    "ENTITY": 21,
-    "DIMENSION": 5
+    "ENTITY": 21
   },
   "mod_elements": [
     {
@@ -54,54 +54,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "diamond_n_ore"
-    },
-    {
-      "name": "Blockdediamentinverscraft",
-      "type": "recipe",
-      "sortid": 366,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "Bottesendiamantinverse",
-      "type": "recipe",
-      "sortid": 367,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "Diamantinversecraft",
-      "type": "recipe",
-      "sortid": 368,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "Pontalonendiamantinverse",
-      "type": "recipe",
-      "sortid": 369,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "Plastronendiamantinverse",
-      "type": "recipe",
-      "sortid": 370,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "Casqueendiamantinverse",
-      "type": "recipe",
-      "sortid": 371,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
     },
     {
       "name": "Couvremoidenegatf",
@@ -388,22 +340,6 @@
       "registry_name": "diamond_n_axe"
     },
     {
-      "name": "PellediamantNcraft",
-      "type": "recipe",
-      "sortid": 388,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "HachediamantNcraft",
-      "type": "recipe",
-      "sortid": 389,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "TerreNUpdateTick",
       "type": "procedure",
       "sortid": 390,
@@ -427,22 +363,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ArnurendiamantinverseHelmetTickEvent",
-      "type": "procedure",
-      "sortid": 391,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       }
@@ -714,6 +634,9 @@
       "locked_code": false,
       "ids": {
         "1": 1
+      },
+      "metadata": {
+        "ep": true
       }
     },
     {
@@ -849,7 +772,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "ester_egg"
+      "registry_name": "easter_egg"
     },
     {
       "name": "CowN",
@@ -991,15 +914,10 @@
       "type": "procedure",
       "sortid": 423,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "ids": {},
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -1018,6 +936,9 @@
       "locked_code": false,
       "ids": {
         "1": 2
+      },
+      "metadata": {
+        "ep": true
       }
     },
     {
@@ -1290,6 +1211,9 @@
       "locked_code": false,
       "ids": {
         "1": 3
+      },
+      "metadata": {
+        "ep": true
       }
     },
     {
@@ -1620,6 +1544,9 @@
       "locked_code": false,
       "ids": {
         "1": 4
+      },
+      "metadata": {
+        "ep": true
       }
     },
     {
@@ -1707,6 +1634,9 @@
       "locked_code": false,
       "ids": {
         "1": 5
+      },
+      "metadata": {
+        "ep": true
       }
     },
     {
@@ -2139,14 +2069,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "ItemDestroyer",
-      "type": "block",
-      "sortid": 479,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
     },
     {
       "name": "DespawnOnKeyPressed",
@@ -4144,35 +4066,6 @@
       }
     },
     {
-      "name": "DoorNOnBlockRightClicked",
-      "type": "procedure",
-      "sortid": 570,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "door_n_on_block_right_clicked",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "GoldNOre",
       "type": "block",
       "sortid": 192,
@@ -4990,7 +4883,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "classic_dim"
+      "registry_name": "classic_dim",
+      "metadata": {
+        "ep": true
+      }
     },
     {
       "name": "ClassicNDim",
@@ -4999,7 +4895,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "classic_n_dim"
+      "registry_name": "classic_n_dim",
+      "metadata": {
+        "ep": true
+      }
     },
     {
       "name": "ClassicRose",
@@ -5708,87 +5607,6 @@
       "registry_name": "abandonned_portal_nether_n"
     },
     {
-      "name": "AbandonnedPortalNetherNNether",
-      "type": "structure",
-      "sortid": 641,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "abandonned_portal_nether_n_nether"
-    },
-    {
-      "name": "AbandonnedPortalEndN",
-      "type": "structure",
-      "sortid": 642,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "abandonned_portal_end_n"
-    },
-    {
-      "name": "AbandonnedPortalEndNNether",
-      "type": "structure",
-      "sortid": 643,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "abandonned_portal_end_n_nether"
-    },
-    {
-      "name": "AbandonnedPortalNether",
-      "type": "structure",
-      "sortid": 644,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "abandonned_portal_nether"
-    },
-    {
-      "name": "AbandonnedPortalNetherNether",
-      "type": "structure",
-      "sortid": 645,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "abandonned_portal_nether_nether"
-    },
-    {
-      "name": "AbandonnedPortalClassicDim",
-      "type": "structure",
-      "sortid": 646,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "abandonned_portal_classic_dim"
-    },
-    {
-      "name": "AbandonnedPortalClassicDimNether",
-      "type": "structure",
-      "sortid": 647,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "abandonned_portal_classic_dim_nether"
-    },
-    {
-      "name": "AbandonnedPortalClassicNDim",
-      "type": "structure",
-      "sortid": 648,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "abandonned_portal_classic_n_dim"
-    },
-    {
-      "name": "AbandonnedPortalClassicNDimNether",
-      "type": "structure",
-      "sortid": 649,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "abandonned_portal_classic_n_dim_nether"
-    },
-    {
       "name": "UnderworldFint",
       "type": "recipe",
       "sortid": 650,
@@ -5992,8 +5810,8 @@
             "type": "entity"
           },
           {
-            "name": "itemstack",
-            "type": "itemstack"
+            "name": "sourceentity",
+            "type": "entity"
           }
         ]
       }
@@ -6007,7 +5825,12 @@
       "ids": {},
       "registry_name": "hi_command_executed",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -6461,7 +6284,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "cave_game_dim"
+      "registry_name": "cave_game_dim",
+      "metadata": {
+        "ep": false
+      }
     },
     {
       "name": "SoulSand",
@@ -8022,24 +7848,6 @@
       }
     },
     {
-      "name": "PeonyNBottomParticleSpawningCondition",
-      "type": "procedure",
-      "sortid": 776,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "peony_n_bottom_particle_spawning_condition",
-      "metadata": {
-        "return_type": "LOGIC",
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "FlowerGlitch",
       "type": "achievement",
       "sortid": 777,
@@ -8682,16 +8490,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "classic_nether_n"
-    },
-    {
-      "name": "TravelTheEarthN",
-      "type": "achievement",
-      "sortid": 806,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "travel_the_earth_n"
+      "registry_name": "classic_nether_n",
+      "metadata": {
+        "ep": true
+      }
     },
     {
       "name": "Fresh",
@@ -8701,33 +8503,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "fresh"
-    },
-    {
-      "name": "FreshTourism",
-      "type": "achievement",
-      "sortid": 808,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "fresh_tourism"
-    },
-    {
-      "name": "EpicExplorer",
-      "type": "achievement",
-      "sortid": 809,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "epic_explorer"
-    },
-    {
-      "name": "Explorer",
-      "type": "achievement",
-      "sortid": 810,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "explorer"
     },
     {
       "name": "ClassicNether",
@@ -8745,7 +8520,10 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "classic_nether_dim"
+      "registry_name": "classic_nether_dim",
+      "metadata": {
+        "ep": true
+      }
     },
     {
       "name": "ShearsN",
@@ -9770,15 +9548,6 @@
       "registry_name": "debug_stick"
     },
     {
-      "name": "VillagerTradeAdder",
-      "type": "code",
-      "sortid": 871,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "villager_trade_adder"
-    },
-    {
       "name": "QuartzNPillar",
       "type": "block",
       "sortid": 872,
@@ -9894,6 +9663,792 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "dev_statue_emblem"
+    },
+    {
+      "name": "MineingEnchantProcced",
+      "type": "procedure",
+      "sortid": 885,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mineing_enchant_procced",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlayerJoinWorld",
+      "type": "procedure",
+      "sortid": 886,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "player_join_world",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CutCopperNSlab",
+      "type": "block",
+      "sortid": 888,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cut_copper_n_slab"
+    },
+    {
+      "name": "LightlyWeatheredCutCopperNSlab",
+      "type": "block",
+      "sortid": 889,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lightly_weathered_cut_copper_n_slab"
+    },
+    {
+      "name": "SemiWeatheredCutCopperNSlab",
+      "type": "block",
+      "sortid": 890,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "semi_weathered_cut_copper_n_slab"
+    },
+    {
+      "name": "WeatheredCutCopperNSlab",
+      "type": "block",
+      "sortid": 891,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weathered_cut_copper_n_slab"
+    },
+    {
+      "name": "CutCopperNStairs",
+      "type": "block",
+      "sortid": 892,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cut_copper_n_stairs"
+    },
+    {
+      "name": "LightlyWeatheredCutCopperNStairs",
+      "type": "block",
+      "sortid": 893,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lightly_weathered_cut_copper_n_stairs"
+    },
+    {
+      "name": "SemiWeatheredCutCopperNStairs",
+      "type": "block",
+      "sortid": 894,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "semi_weathered_cut_copper_n_stairs"
+    },
+    {
+      "name": "WeatheredCutCopperNStairs",
+      "type": "block",
+      "sortid": 895,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "weathered_cut_copper_n_stairs"
+    },
+    {
+      "name": "EggN",
+      "type": "item",
+      "sortid": 896,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "egg_n"
+    },
+    {
+      "name": "CauldronN",
+      "type": "block",
+      "sortid": 897,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cauldron_n"
+    },
+    {
+      "name": "CauldronNLavaNFull",
+      "type": "block",
+      "sortid": 898,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cauldron_n_lava_n_full"
+    },
+    {
+      "name": "CauldronNWaterNFull",
+      "type": "block",
+      "sortid": 899,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cauldron_n_water_n_full"
+    },
+    {
+      "name": "CauldronNLavaN1",
+      "type": "block",
+      "sortid": 900,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cauldron_n_lava_n_1"
+    },
+    {
+      "name": "CaudronNLavaN2",
+      "type": "block",
+      "sortid": 901,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "caudron_n_lava_n_2"
+    },
+    {
+      "name": "CauldronNWaterN1",
+      "type": "block",
+      "sortid": 902,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cauldron_n_water_n_1"
+    },
+    {
+      "name": "CauldronNWaterN2",
+      "type": "block",
+      "sortid": 903,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cauldron_n_water_n_2"
+    },
+    {
+      "name": "MelonNSlice",
+      "type": "food",
+      "sortid": 904,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "melon_n_slice"
+    },
+    {
+      "name": "MelonN",
+      "type": "block",
+      "sortid": 904,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "melon_n"
+    },
+    {
+      "name": "MelonNSeed",
+      "type": "item",
+      "sortid": 905,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "melon_n_seed"
+    },
+    {
+      "name": "PumpkinNSeed",
+      "type": "item",
+      "sortid": 906,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pumpkin_n_seed"
+    },
+    {
+      "name": "CauldronNCraft",
+      "type": "recipe",
+      "sortid": 907,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cauldron_n_craft"
+    },
+    {
+      "name": "MelonNSeedCraft",
+      "type": "recipe",
+      "sortid": 908,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "melon_n_seed_craft"
+    },
+    {
+      "name": "FurnaceNCraft",
+      "type": "recipe",
+      "sortid": 909,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "furnace_n_craft"
+    },
+    {
+      "name": "LeatherNHelmetCraft",
+      "type": "recipe",
+      "sortid": 910,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "leather_n_helmet_craft"
+    },
+    {
+      "name": "LeatherNLeggings",
+      "type": "recipe",
+      "sortid": 911,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "leather_n_leggings"
+    },
+    {
+      "name": "LeatherNBoots",
+      "type": "recipe",
+      "sortid": 912,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "leather_n_boots"
+    },
+    {
+      "name": "LeatherNChestplate",
+      "type": "recipe",
+      "sortid": 913,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "leather_n_chestplate"
+    },
+    {
+      "name": "GlassBottleN",
+      "type": "item",
+      "sortid": 914,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glass_bottle_n"
+    },
+    {
+      "name": "RedstoneNTag",
+      "type": "tag",
+      "sortid": 915,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "redstone_n_tag"
+    },
+    {
+      "name": "LeverN",
+      "type": "block",
+      "sortid": 916,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lever_n"
+    },
+    {
+      "name": "RedstoneNParticle",
+      "type": "particle",
+      "sortid": 917,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "redstone_n_particle"
+    },
+    {
+      "name": "LeverNOn",
+      "type": "block",
+      "sortid": 918,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lever_n_on"
+    },
+    {
+      "name": "LeversNBlockRightClicked",
+      "type": "procedure",
+      "sortid": 919,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "levers_n_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StartStoneBricks",
+      "type": "block",
+      "sortid": 920,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "start_stone_bricks"
+    },
+    {
+      "name": "Test",
+      "type": "procedure",
+      "sortid": 921,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "test",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Eyewear",
+      "type": "enchantment",
+      "sortid": 922,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "eyewear"
+    },
+    {
+      "name": "ArmorEnchantProceed",
+      "type": "procedure",
+      "sortid": 923,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "armor_enchant_proceed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Withered",
+      "type": "enchantment",
+      "sortid": 924,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "withered"
+    },
+    {
+      "name": "OnFireN",
+      "type": "potion",
+      "sortid": 925,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "on_fire_n"
+    },
+    {
+      "name": "FireNRegenDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 925,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fire_n_regen_display_overlay_ingame",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FireNRegen",
+      "type": "overlay",
+      "sortid": 925,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fire_n_regen"
+    },
+    {
+      "name": "OnFireNOnPotionActiveTick",
+      "type": "procedure",
+      "sortid": 926,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "on_fire_n_on_potion_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WaterNBottleN",
+      "type": "food",
+      "sortid": 927,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "water_n_bottle_n"
+    },
+    {
+      "name": "LavaNBottleN",
+      "type": "food",
+      "sortid": 928,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lava_n_bottle_n"
+    },
+    {
+      "name": "CauldronNRightClick",
+      "type": "procedure",
+      "sortid": 929,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cauldron_n_right_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HappyChistmas",
+      "type": "achievement",
+      "sortid": 930,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "happy_chistmas"
+    },
+    {
+      "name": "BetaTester",
+      "type": "achievement",
+      "sortid": 931,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "beta_tester"
+    },
+    {
+      "name": "AbandonnedPortalChestsLoots",
+      "type": "loottable",
+      "sortid": 932,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "abandonned_portal_chests_loots"
+    },
+    {
+      "name": "DirtBlocks",
+      "type": "tag",
+      "sortid": 933,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dirt_blocks"
+    },
+    {
+      "name": "LogBlocks",
+      "type": "tag",
+      "sortid": 934,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "log_blocks"
+    },
+    {
+      "name": "FenceBlocks",
+      "type": "tag",
+      "sortid": 935,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fence_blocks"
+    },
+    {
+      "name": "WallBlocks",
+      "type": "tag",
+      "sortid": 936,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wall_blocks"
+    },
+    {
+      "name": "SmallFlowerBlocks",
+      "type": "tag",
+      "sortid": 937,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "small_flower_blocks"
+    },
+    {
+      "name": "TallFlowerBlocks",
+      "type": "tag",
+      "sortid": 938,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tall_flower_blocks"
+    },
+    {
+      "name": "BeaconBaseBlockBlocks",
+      "type": "tag",
+      "sortid": 939,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "beacon_base_block_blocks"
+    },
+    {
+      "name": "LeaveBlocks",
+      "type": "tag",
+      "sortid": 940,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "leave_blocks"
+    },
+    {
+      "name": "PlankItems",
+      "type": "tag",
+      "sortid": 941,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plank_items"
+    },
+    {
+      "name": "FlowerItems",
+      "type": "tag",
+      "sortid": 942,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "flower_items"
+    },
+    {
+      "name": "SmallFlowerItems",
+      "type": "tag",
+      "sortid": 943,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "small_flower_items"
+    },
+    {
+      "name": "DiamondNBlockCraft",
+      "type": "recipe",
+      "sortid": 944,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_n_block_craft"
+    },
+    {
+      "name": "DiamondNHelmetCraft",
+      "type": "recipe",
+      "sortid": 945,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_n_helmet_craft"
+    },
+    {
+      "name": "DiamondNLeggings",
+      "type": "recipe",
+      "sortid": 946,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_n_leggings"
+    },
+    {
+      "name": "DiamondNChestplate",
+      "type": "recipe",
+      "sortid": 947,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_n_chestplate"
+    },
+    {
+      "name": "DiamondNBoots",
+      "type": "recipe",
+      "sortid": 948,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_n_boots"
+    },
+    {
+      "name": "DiamondNSwordCraft",
+      "type": "recipe",
+      "sortid": 949,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_n_sword_craft"
+    },
+    {
+      "name": "DiamondNPickaxeCraft",
+      "type": "recipe",
+      "sortid": 950,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_n_pickaxe_craft"
+    },
+    {
+      "name": "DiamondNHoe",
+      "type": "recipe",
+      "sortid": 951,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_n_hoe"
+    },
+    {
+      "name": "DiamondNShovelCraft",
+      "type": "recipe",
+      "sortid": 952,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_n_shovel_craft"
+    },
+    {
+      "name": "DiamondNAxeCraft",
+      "type": "recipe",
+      "sortid": 953,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_n_axe_craft"
+    },
+    {
+      "name": "CoverMeWithDebrisN",
+      "type": "achievement",
+      "sortid": 954,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cover_me_with_debris_n"
+    },
+    {
+      "name": "BookshelfNCraft",
+      "type": "recipe",
+      "sortid": 955,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bookshelf_n_craft"
     }
   ],
   "variable_elements": [
@@ -9962,6 +10517,12 @@
       "type": "number",
       "scope": "global",
       "value": "1.3"
+    },
+    {
+      "name": "isNotCompete",
+      "type": "logic",
+      "scope": "global",
+      "value": "true"
     }
   ],
   "sound_elements": [
@@ -9989,12 +10550,13 @@
       "block.negativen.quartz_n_bricks": "Quartz-N Bricks",
       "item.negativen.acacia_n_boat_spawn_egg": "Acacia Boat N Spawn Egg",
       "item.negativen.hamburger": "Hamburger",
+      "item.negativen.glass_bottle_n": "Glass Bottle-N",
       "item.negativen.gold_n_armorlegs": "Gold-N Boots",
       "block.negativen.beetroot_stage_3": "Beetroots N Stage 0",
       "item.negativen.acacia_n_boat_item": "Acacia-N Boat",
       "item.planchedeboishoe.name": "Wooden Hoe-N",
       "item.negativen.nega": "Portal Igniter Tier 1",
-      "advancements.travel_the_earth_n.title": "Travel The Earth-N",
+      "item.negativen.easter_egg": "Easter egg",
       "entity.negativen.tntnprimed": "Tntnprimed",
       "block.negativen.classic_mossy_cobblestone_n": "Classic Mossy Cobblestone-N",
       "item.negativen.gold_n_armor_leggings": "Gold-N Leggings",
@@ -10041,6 +10603,7 @@
       "biome.negativen.desert_n": "Desert N",
       "entity.negativen.pigman_n": "Pigman-N",
       "item.negativen.gold_n_nugget": "Gold-N Nugget",
+      "item.negativen.egg_n": "Egg-N",
       "item.negativen.chicken_n_spawn_egg": "Chicken N Spawn Egg",
       "item.negativen.leather_n_armor_leggings": "Leather-N Armor Leggings",
       "item.negativen.birch_n_boat": "Birch Boat N Spawn Egg",
@@ -10053,6 +10616,7 @@
       "item.negativen.dark_oak_n_boat": "Dark Oak Boat N Spawn Egg",
       "item.negativen.milk_bucket_n": "Milk Bucket-N",
       "advancements.wtnn.title": "Negative-N",
+      "advancements.cover_me_with_debris_n.title": "Cover Me With Debris-N",
       "item.negativen.skeleton_n": "Skeleton-N Spawn Egg",
       "item.negativen.tntnprimed": "Tntnprimed Spawn Egg",
       "block.negativen.furnace_n_on": "Furnace-N",
@@ -10069,6 +10633,7 @@
       "item.negativen.netherite_n_armor_helmet": "Netherite-N Armor Helmet",
       "item.negativen.nether_brick_n": "Nether Brick N",
       "item.negativen.beetroots_n": "Beetroots-N",
+      "item.negativen.melon_n_slice": "Melon-N Slice",
       "block.negativen.oxeye_daisy_n": "Oxeye Daisy-N",
       "block.negativen.jungle_log_n": "Jungle Log-N",
       "biome.negativen.nethern": "Nether N",
@@ -10082,6 +10647,7 @@
       "advancements.nevitagen.title": "Nevitagen",
       "item.negativen.diamond_n_pickaxe": "Diamond-N Pickaxe",
       "item.negativen.dark_oak_n_boat_spawn_egg": "Dark Oak Boat N Spawn Egg",
+      "block.negativen.semi_weathered_cut_copper_n_stairs": "Semi Weathered Cut Copper-N Stairs",
       "block.negativen.classic_grass_n": "Classic Grass-N",
       "entity.negativen.skeleton_n": "Skeleton-N",
       "block.negativen.classic_gravel": "Classic Gravel",
@@ -10093,6 +10659,7 @@
       "block.negativen.lightly_weathered_copper_n_block": "Lightly Weathered Copper-N Block",
       "block.negativen.lapis_n_block": "Lapis-N Block",
       "item.cobblestonepickaxe.name": "Stone Pickaxe-N",
+      "item.negativen.easter_egg.desc": "Easter egg",
       "advancements.couvremoidenegatf.title": "Cover me with Dimonds-N!",
       "item.negativen.classic_water_n_bucket": "ClassicWaterN Bucket",
       "item.negativen.iron_n_hoe": "Iron-N Hoe",
@@ -10116,16 +10683,17 @@
       "entity.zombien.name": "Zombie-N",
       "block.negativen.acacia_log_n_stripped": "Acacia Log-N Stripped",
       "block.negativen.netherite_n_block": "Netherite N Block",
+      "block.negativen.cauldron_n_lava_n_full": "Cauldron-N",
       "item.negativen.updater": "Updater",
       "item.minecraft.potion.effect.poison_n": "Poison-N",
       "item.iron_narmorboots.name": "Iron_N Boots",
       "item.beefcookedn.name": "Beef cooked-N",
       "block.negativen.oak_leaves_n": "Oak Leaves-N",
       "item.negativen.piglin_n_brute": "Piglin-N Brute Spawn Egg",
-      "advancements.epic_explorer.title": "Epic Explorer",
       "block.negativen.iron_n_block": "Iron-N Block",
       "block.negativen.budding_amethyst_n_block": "Budding Amethyst-N Block",
       "item.planchedeboisshovel.name": "Wooden Shovel-N",
+      "block.negativen.cauldron_n": "Cauldron-N",
       "block.negativen.grass_block_n_snow": "Grass Block-N Snow",
       "block.negativen.warped_planks_n": "Spruce Planks-N",
       "item.negativen.zombien_spawn_egg": "Zombie-N Spawn Egg",
@@ -10145,7 +10713,6 @@
       "block.negativen.acacia_sapling_n": "Acacia Sapling-N",
       "block.negativen.crimson_nylium_n": "Crimson Nylium-N",
       "advancements.waterlava.title": "Water Lava",
-      "advancements.explorer.descr": "Travel In All Negative-N Dimensions!",
       "tile.cobblestonen.name": "Cobblestone-N",
       "advancements.happy_halloween.title": "Happy Halloween!",
       "block.negativen.dirt_n": "Terre-N",
@@ -10165,6 +10732,7 @@
       "block.negativen.hay_n_block": "Hay-N Block",
       "block.negativen.jungle_sapling_n": "Jungle Sapling-N",
       "block.negativen.redstone_block_n": "Redstone Block N",
+      "block.negativen.lever_n": "Lever-N",
       "item.negativen.n.desc": "N",
       "advancements.back_to_not_classic.descr": "Go to Classic-N Dimension",
       "block.negativen.acacia_leaves_n": "Acacia Leaves-N",
@@ -10218,11 +10786,12 @@
       "item.negativen.iron_narmorboots": "Iron-N Boots",
       "item.negativen.lava_nbucket": "Lava-N bucket",
       "item.negativen.netherndim": "Portal Igniter Tier 3",
-      "block.negativen.start_stone": "Startstone",
+      "block.negativen.start_stone": "Start Stone",
       "block.negativen.birch_slab_n": "Birch Slab-N",
       "block.negativen.wapred_nylium_n": "Wapred Nylium-N",
       "item.cobblestoneshovel.name": "Stone Shovel-N",
       "item.iron_narmorlegs.name": "Iron-N Leggings",
+      "block.negativen.weathered_cut_copper_n_stairs": "Weathered Cut Copper-N Stairs",
       "item.negativen.gold_n_apple": "Gold-N Apple",
       "item.blazenroad.name": "Blaze-N road",
       "fluid.classic_lava_n": "ClassicLavaN",
@@ -10253,12 +10822,12 @@
       "item.negativen.spruce_n_boat": "Spruce Boat N Spawn Egg",
       "block.negativen.snow_n": "Snow-N",
       "item.negativen.gold_n_armorbody": "Gold-N Chestplate",
+      "advancements.happy_chistmas.descr": "Play Negative-N The Chistmas Day!",
       "advancements.esteregg.descr": "Found the secret music!",
       "block.negativen.classic_netherrack_n": "Classic Netherrack-N",
       "block.negativen.classic_gravel_n": "Classic Gravel-N",
       "item.negativen.jungle_n_boat": "Jungle Boat N Spawn Egg",
       "block.negativen.pumpkin_n": "Pumpkin-N",
-      "advancements.travel_the_earth_n.descr": "Go in Every Biome on UnderWorld",
       "item.negativen.classic_nether_dim": "Classic Nether Key",
       "item.negativen.birch_n_boat_spawn_egg": "Birch Boat N Spawn Egg",
       "block.negativen.acacia_n_trap_door": "Acacia-N Trap Door",
@@ -10297,8 +10866,10 @@
       "item.negativen.diamond_n_hoe": "Diamond-N Hoe",
       "item.hamburger.name": "Hamburger",
       "item.negativen.classic_dim": "Classic Dimension Portal Igniter",
+      "item.negativen.lava_n_bottle_n": "Lava-N Bottle-N",
       "item.negativen.pign": "Pig-N Spawn Egg",
       "item.negativen.iron_n_armor_leggings": "Iron-N Leggings",
+      "block.negativen.weathered_cut_copper_n_slab": "Weathered Cut Copper-N Slab",
       "advancements.doctorwho.descr": "Have the tardis",
       "block.negativen.shroomlight_n": "Shroomlight-N",
       "block.negativen.cactus_n": "Cactus-N",
@@ -10307,7 +10878,6 @@
       "block.negativen.classic_coal_ore": "Classic Coal Ore",
       "block.negativen.lapis_n_ore": "Lapis-N Ore",
       "block.negativen.classic_grass": "Classic Grass",
-      "advancements.explorer.title": "Explorer",
       "item.negativen.netherite_n_armor_leggings": "Netherite-N Armor Leggings",
       "entity.negativen.piglin_n": "Piglin-N",
       "block.negativen.spruce_n_fence": "Spruce-N Fence",
@@ -10342,6 +10912,7 @@
       "block.negativen.bee_hive_n_honey": "Bee Hive-N",
       "entity.creepern.name": "Creeper N",
       "advancements.diamond_ingot.descr": "Obtain DiamondN ingot",
+      "block.negativen.caudron_n_lava_n_2": "Cauldron-N",
       "block.negativen.cobblestone_cave_game": "Cobblestone Cave Game",
       "block.negativen.carrot_n_stage_1": "Carrot N Stage 0",
       "block.negativen.birch_planks_n": "Birch planks-N",
@@ -10352,6 +10923,7 @@
       "block.negativen.carrot_n_stage_2": "Carrot N Stage 0",
       "item.negativen.start_pearl": "Start Pearl",
       "block.negativen.fire_n": "Fire N",
+      "item.minecraft.tipped_arrow.effect.on_fire_n": "Arrow of On Fire-N",
       "advancements.mmmisprettygood.descr": "Eat RottenFleshN",
       "item.negativen.cobblestone_n_sword": "Stone Sword-N",
       "item.negativen.diamond_n_armorboots": "Diamond-N Bottes",
@@ -10366,6 +10938,8 @@
       "effect.unstable": "Unstable",
       "block.negativen.chiseled_nether_brick_n": "Chiseled Nether Brick-N",
       "block.negativen.compress": "Compress",
+      "advancements.happy_chistmas.title": "Happy Chistmas!",
+      "advancements.cover_me_with_debris_n.descr": "Get a full Netherite-N Armor",
       "item.negativen.wood_n_shovel": "Wooden Shovel-N",
       "item.negativen.sugar_cane_n_item": "Sugar Cane-N",
       "item.iron_nsword.name": "Iron-N Sword",
@@ -10389,6 +10963,7 @@
       "item.negativen.shears_n": "Shears-N",
       "block.negativen.acacia_slab_n": "Acacia Slab-N",
       "tile.leavesn.name": "Leaves-N",
+      "block.negativen.lightly_weathered_cut_copper_n_stairs": "Lightly Weathered Cut Copper-N Stairs",
       "block.negativen.birch_sapling_n": "Birch Sapling-N",
       "item.negativen.oak_n_boat_item": "Oak-N Boat",
       "advancements.doctorwho.title": "Doctor Who",
@@ -10398,8 +10973,8 @@
       "item.negativen.iron_n_pickaxe": "Iron-N Pickaxe",
       "item.minecraft.lingering_potion.effect.poison_n": "Lingering Poison-N",
       "tile.oakstrairsn.name": "Oak Strairs-N",
-      "item.negativen.ester_egg": "Easter egg",
       "item.negativen.feather_n": "Feather-N",
+      "advancements.beta_tester.title": "Beta Tester",
       "block.negativen.spruce_leaves_n": "Spruce Leaves-N",
       "entity.cown.name": "Cow-N",
       "item.negativen.gold_n_armorhelmet": "Gold-N Helmet",
@@ -10414,7 +10989,6 @@
       "item.negativen.wheat_n_seed": "Wheat-N Seed",
       "advancements.nevitagen.descr": "Go to the UnderWorld",
       "advancements.a_inger.title": "Inger?",
-      "item.negativen.ester_egg.desc": "Easter egg",
       "tile.blockdediamantinverse.name": "Diamond-N Block",
       "itemGroup.tabclassic_blocks": "Classic Blocks",
       "block.negativen.spruce_log_n": "Spruce Log-N",
@@ -10433,12 +11007,12 @@
       "advancements.anewcoal.descr": "Get Coal-N",
       "block.negativen.allium_n": "Allium-N",
       "block.negativen.redstone_lamp_n_on": "Redstone Lamp-N",
+      "item.minecraft.splash_potion.effect.on_fire_n": "Splash On Fire-N",
       "item.cobblestonesword.name": "Stone Sword-N",
       "tile.stonen.name": "Stone-N",
       "item.negativen.redstone_n": "Redstone-N",
       "item.negativen.cobblestone_n_shovel": "Stone Shovel-N",
       "block.negativen.quartz_n_ore": "Quartz-N Ore",
-      "advancements.fresh_tourism.descr": "Get in All Biomes In The Nether-N!",
       "block.negativen.semi_weathered_copper_n_block": "Semi Weathered Copper-N Block",
       "item.negativen.nonedim": "None Dim Portal Igniter",
       "block.negativen.jungle_log_n_stripped": "Jungle Log-N Stripped",
@@ -10449,8 +11023,10 @@
       "entity.negativen.chicken_n": "Chicken N",
       "block.negativen.polished_andesite_n": "Polished Andesite-N",
       "block.negativen.crimson_n_trap_door": "Oak-N Trap Door",
+      "item.negativen.water_n_bottle_n": "Water N Bottle N",
       "block.negativen.emerald_n_block": "Emerald N Block",
-      "advancements.lafusion.descr": "Reussir à faire le fusionnator",
+      "effect.on_fire_n": "On Fire-N",
+      "advancements.lafusion.descr": "Make the Fusionator",
       "item.negativen.endermann": "Enderman-N Spawn Egg",
       "block.negativen.glass_n": "Glass-N",
       "block.negativen.weathered_copper_n_block": "Weathered Copper-N Block",
@@ -10469,15 +11045,18 @@
       "item.negativen.iron_narmorhelmet": "Iron-N Helmet",
       "item.negativen.gold_n_ingot": "Gold-N",
       "item.negativen.diamond_n_armor_leggings": "Diamond-N Leggings",
+      "block.negativen.start_stone_bricks": "Start Stone Bricks",
       "tile.tardis.name": "Tardis",
       "item.negativen.diamond_n_shovel": "Diamond-N Spade",
       "block.negativen.jungle_n_fence": "Jungle-N Fence",
       "item.negativen.netherite_n_axe": "Netherite-N Axe",
       "block.negativen.iron_n_ore": "Iron-N Ore",
       "biome.negativen.classic_nether": "Classic Nether",
+      "item.minecraft.lingering_potion.effect.on_fire_n": "Lingering On Fire-N",
       "block.negativen.acacia_planks_n": "Acacia planks-N",
       "entity.blazen.name": "Blaze-N",
       "tile.itemdestroyer.name": "Item Destroyer",
+      "block.negativen.cut_copper_n_stairs": "Cut Copper-N Stairs",
       "block.negativen.potato_n_stage_0": "Potato N Stage 0",
       "entity.negativen.creepern": "Creeper N",
       "item.negativen.diamond_n_armor_helmet": "Diamond-N Helmet",
@@ -10525,9 +11104,9 @@
       "item.negativen.nether_star_n": "Nether Star-N",
       "item.negativen.blaze_n_powder": "Blaze-N powder",
       "tile.startpotalframewiheye.name": "Startpotalframewiheye",
+      "block.negativen.lightly_weathered_cut_copper_n_slab": "Lightly Weathered Cut Copper-N Slab",
       "block.negativen.vine_n": "Vine-N",
       "item.negativen.gold_n_axe": "Gold-N Axe",
-      "advancements.fresh_tourism.title": "Fresh Tourism!",
       "block.negativen.classic_gold_n_ore": "Classic Gold-N Ore",
       "itemGroup.tabnegativenfood": "Negative-N Food",
       "item.pelleendiamantn.name": "Diamond-N Spade",
@@ -10542,6 +11121,7 @@
       "block.negativen.cut_copper_n_block": "Cut Copper-N Block",
       "block.negativen.stone_n": "Stone-N",
       "item.negativen.chicken_n": "Chicken N Spawn Egg",
+      "enchantment.negativen.withered": "Withered",
       "block.negativen.sand_n": "Sand-N",
       "block.negativen.grass_block_n": "Grass-N",
       "item.negativen.diamond_n_ingot": "Diamond-N ingot",
@@ -10561,11 +11141,12 @@
       "item.negativen.netherite_n_scrap": "Netherite_N Scrap",
       "block.negativen.warped_wart_n_block": "Warped Wart-N Block",
       "fluid.classic_water_n": "ClassicWaterN",
+      "block.negativen.melon_n": "Melon-N",
       "item.negativen.negative_dust": "Negative Dust",
-      "block.negativen.itemdestroyer": "Item Destroyer (WIP)",
       "tile.terren.name": "DIrt-N",
       "block.negativen.dark_oak_slab_n": "Dark Oak Slab-N",
       "item.negativen.nether_wart_n": "Nether Wart-N",
+      "enchantment.negativen.eyewear": "Eyewear",
       "block.negativen.classic_cobblestone": "Classic Cobblestone",
       "advancements.ismineingtime.descr": "Go to the mineing Dimension",
       "block.negativen.beetroots_n_stage_0": "Beetroots N Stage 0",
@@ -10582,8 +11163,7 @@
       "item.negativen.rottenfleshn": "Rotten flesh-N",
       "item.negativen.fusonator_recipies_book": "Fusonator Recipies Book",
       "block.negativen.warped_n_door": "Spruce-N Door",
-      "advancements.epic_explorer.descr": "Travel in All Biomes!",
-      "advancements.lafusion.title": "La fusion!",
+      "advancements.lafusion.title": "Combine Them all!",
       "advancements.waterlava.descr": "Take LavaN",
       "entity.negativen.zombien": "Zombie-N",
       "block.negativen.campfire_n": "Campfire-N",
@@ -10608,13 +11188,16 @@
       "item.negativen.spruce_n_boat_item": "Spruce-N Boat",
       "item.cownspawnegg.name": "Cow-N spawn egg",
       "block.negativen.weathered_cut_copper_n_block": "Weathered Cut Copper-N Block",
+      "item.negativen.pumpkin_n_seed": "Pumpkin-N Seed",
       "tile.saplingn.name": "Sapling-N",
       "block.negativen.birch_n_trap_door": "Birch-N Trap Door",
+      "block.negativen.lever_n_on": "Lever-N",
       "block.negativen.start_portal_frame": "Start portal frame",
       "block.negativen.bee_n_nest_honey": "Bee-N Nest",
       "item.negativen.iron_n_armor_chestplate": "Iron-N Chestplate",
       "item.mineingdim.name": "Portal Igniter Tier 2",
       "item.hacheendiamantn.name": "Diamond-N Axe",
+      "block.negativen.cut_copper_n_slab": "Cut Copper-N Slab",
       "block.negativen.blackstone_n": "Blackstone-N",
       "block.negativen.spruce_n_trap_door": "Spruce-N Trap Door",
       "item.iron_ningot.name": "Iron-N",
@@ -10623,9 +11206,11 @@
       "block.negativen.soul_lantern_n": "Soul Lantern-N",
       "block.negativen.dev_statue": "Dev Statue",
       "entity.negativen.piglin_n_brute": "Piglin-N Brute",
+      "item.minecraft.potion.effect.on_fire_n": "On Fire-N",
       "item.negativen.blazen_spawn_egg": "Blaze-N Spawn Egg",
       "biome.negativen.montains_n": "Montains N",
       "biome.negativen.cave_game_biome": "Cave Game Biome",
+      "advancements.beta_tester.descr": "Play in an uncomplete version of Negative-N",
       "advancements.diamond_ingot.title": "Diamond Ingot?",
       "advancements.happy_halloween.descr": "Play Negative-N in The Day of Halloween",
       "item.porkchopcookedn.name": "Porkchop cooked-N",
@@ -10650,12 +11235,17 @@
       "item.negativen.netherite_n_pickaxe": "Netherite-N Pickaxe",
       "item.dimensionstick.name": "Dimension Stick",
       "block.negativen.birch_log_n": "Birch log-N",
+      "block.negativen.cauldron_n_water_n_2": "Cauldron-N",
+      "block.negativen.cauldron_n_water_n_1": "Cauldron-N",
       "block.negativen.classic_coal_n_ore": "Classic Coal-N Ore",
       "block.negativen.clay_n": "Clay-N",
       "item.arnurendiamantinversebody.name": "Diamond Chestplate",
       "block.negativen.dark_oak_n_fence": "Dark Oak-N Fence",
       "block.negativen.semi_weathered_cut_copper_n_block": "Semi Weathered Cut Copper-N Block",
+      "item.negativen.melon_n_seed": "Melon-N Seed",
       "item.negativen.piglin_n": "Piglin-N Spawn Egg",
+      "block.negativen.semi_weathered_cut_copper_n_slab": "Semi Weathered Cut Copper-N Slab",
+      "block.negativen.cauldron_n_lava_n_1": "Cauldron-N",
       "block.negativen.classic_gold_n_block": "Classic Gold-N Block",
       "block.negativen.purpur_n_pillar": "Purpur-N Pillar",
       "advancements.fresh.descr": "Travel to the Nether-N!",
@@ -10665,12 +11255,13 @@
       "item.negativen.gold_n_armorboots": "Gold-N Boots",
       "block.negativen.acacia_n_fence_gate": "Acacia-N FenceGate",
       "item.negativen.arrow_n": "Arrow-N",
+      "block.negativen.cauldron_n_water_n_full": "Cauldron-N",
       "tile.netherrackn.name": "Netherrack N",
       "item.negativen.gold_n_pickaxe": "Gold-N Pickaxe",
       "block.negativen.nether_wart_n_stage_1": "Nether Wart-N",
       "block.negativen.emerald_n_ore": "Emerald-N Ore",
       "block.negativen.nether_wart_n_stage_0": "Nether Wart-N",
-      "block.negativen.fusonator": "Fusonator",
+      "block.negativen.fusonator": "Fusionator",
       "block.negativen.nether_wart_n_stage_2": "Nether Wart-N",
       "block.negativen.amethyst_n_block": "Amethyst-N Block",
       "itemGroup.tabnegativencombat": "Negative-N Weapons",
@@ -10706,12 +11297,13 @@
       "block.negativen.quartz_n_bricks": "Quartz N Block",
       "item.negativen.acacia_n_boat_spawn_egg": "Acacia Boat N Spawn Egg",
       "item.negativen.hamburger": "Hamburger",
+      "item.negativen.glass_bottle_n": "Glass Bottle-N",
       "item.negativen.gold_n_armorlegs": "Bottes en Or-N",
       "block.negativen.beetroot_stage_3": "Beetroots N Stage 0",
       "item.negativen.acacia_n_boat_item": "Oak-N Boat",
       "item.negativen.nega": "Clef de Portail Tier 1",
       "item.planchedeboishoe.name": "Hoe en Bois-N",
-      "advancements.travel_the_earth_n.title": "Travel The Earth-N",
+      "item.negativen.easter_egg": "Easter egg",
       "entity.negativen.tntnprimed": "Tntnprimed",
       "block.negativen.classic_mossy_cobblestone_n": "Classic Mossy Cobblestone",
       "item.negativen.gold_n_armor_leggings": "Pantalon en Or-N",
@@ -10725,8 +11317,8 @@
       "tile.logn.name": "Bois de Chêne-N",
       "item.iron_narmorbody.name": "Plastron en Fer-N",
       "block.negativen.purpur_n_block": "Purpur-N Block",
-      "biome.negativen.nether_n_crimson_biome": "Nether N Crimson Biome",
       "block.negativen.spruce_stairs_n": "Escalier en bois de Sapin-N",
+      "biome.negativen.nether_n_crimson_biome": "Nether N Crimson Biome",
       "block.negativen.quartz_n_block": "Quartz N Block",
       "block.negativen.cut_sandstone_n": "Chiseled Sandstone N",
       "item.negativen.gold_n_armor_chestplate": "Plastron en Or-N",
@@ -10758,6 +11350,7 @@
       "biome.negativen.desert_n": "Desert N",
       "entity.negativen.pigman_n": "Piglin-N",
       "item.negativen.gold_n_nugget": "Gold-N Nugget",
+      "item.negativen.egg_n": "Egg-N",
       "item.negativen.chicken_n_spawn_egg": "Chicken N Spawn Egg",
       "item.negativen.leather_n_armor_leggings": "Leather-N Armor Leggings",
       "item.negativen.birch_n_boat": "Oak Boat N Spawn Egg",
@@ -10770,6 +11363,7 @@
       "item.negativen.dark_oak_n_boat": "Oak Boat N Spawn Egg",
       "item.negativen.milk_bucket_n": "Milk Bucket-N",
       "advancements.wtnn.title": "Bienvenue sur Negative-N",
+      "advancements.cover_me_with_debris_n.title": "Cover Me With Debris-N",
       "item.negativen.skeleton_n": "Oeuf de Skeleton-N",
       "item.negativen.tntnprimed": "Tntnprimed Spawn Egg",
       "block.negativen.furnace_n_on": "Furnace-N",
@@ -10786,6 +11380,7 @@
       "item.negativen.netherite_n_armor_helmet": "Netherite-N Armor Helmet",
       "item.negativen.nether_brick_n": "Brick du Nether-N",
       "item.negativen.beetroots_n": "Beetroots-N",
+      "item.negativen.melon_n_slice": "Melon-N Slice",
       "block.negativen.oxeye_daisy_n": "Oxeye Daisy-N",
       "block.negativen.jungle_log_n": "Bois de Jungle-N",
       "biome.negativen.nethern": "Nether-N",
@@ -10799,6 +11394,7 @@
       "advancements.nevitagen.title": "Nevitagen",
       "item.negativen.diamond_n_pickaxe": "Pioche en Diamant-N",
       "item.negativen.dark_oak_n_boat_spawn_egg": "Dark Oak Boat N Spawn Egg",
+      "block.negativen.semi_weathered_cut_copper_n_stairs": "Semi Weathered Cut Copper-N Slab",
       "block.negativen.classic_grass_n": "Block d\u0027herbe classic",
       "entity.negativen.skeleton_n": "Squelette-N",
       "block.negativen.classic_gravel": "Gravier-N",
@@ -10810,6 +11406,7 @@
       "block.negativen.lightly_weathered_copper_n_block": "Lightly Weathered Copper-N Block",
       "block.negativen.lapis_n_block": "Lapis-N Block",
       "item.cobblestonepickaxe.name": "Pioche en Pierre",
+      "item.negativen.easter_egg.desc": "Easter egg",
       "advancements.couvremoidenegatf.title": "Couvre moi en Diamant-N!",
       "item.negativen.classic_water_n_bucket": "Seau d\u0027eau classic-N",
       "item.negativen.iron_n_hoe": "Iron-N Hoe",
@@ -10833,16 +11430,17 @@
       "entity.zombien.name": "Zombie-N",
       "block.negativen.acacia_log_n_stripped": "Bois d\u0027Acacia-N écorcé",
       "block.negativen.netherite_n_block": "Netherite N Block",
+      "block.negativen.cauldron_n_lava_n_full": "Cauldron-N",
       "item.negativen.updater": "Updater",
       "item.minecraft.potion.effect.poison_n": "Poison-N",
       "item.iron_narmorboots.name": "Bottes en Fer-N",
       "item.beefcookedn.name": "Boeuf-N",
       "block.negativen.oak_leaves_n": "Feuilles de Chêne-N",
       "item.negativen.piglin_n_brute": "Piglin-N Spawn Egg",
-      "advancements.epic_explorer.title": "Epic Explorer",
       "block.negativen.iron_n_block": "Block de Fer-N",
       "block.negativen.budding_amethyst_n_block": "Budding Amethyst-N Block",
       "item.planchedeboisshovel.name": "Pelle en Bois-N",
+      "block.negativen.cauldron_n": "Cauldron-N",
       "block.negativen.grass_block_n_snow": "Grass Block-N Snow",
       "block.negativen.warped_planks_n": "Spruce Planks-N",
       "item.negativen.zombien_spawn_egg": "Zombie-N Spawn Egg",
@@ -10862,7 +11460,6 @@
       "block.negativen.acacia_sapling_n": "Acacia Sapling-N",
       "block.negativen.crimson_nylium_n": "Wapred Nylium-N",
       "advancements.waterlava.title": "Water Lava",
-      "advancements.explorer.descr": "Travel In All Dimensions!",
       "tile.cobblestonen.name": "Stone-N",
       "advancements.happy_halloween.title": "Happy Halloween!",
       "block.negativen.dirt_n": "Terre-N",
@@ -10882,6 +11479,7 @@
       "block.negativen.hay_n_block": "Hay-N Block",
       "block.negativen.jungle_sapling_n": "Jungle Sapling-N",
       "block.negativen.redstone_block_n": "Redstone Block N",
+      "block.negativen.lever_n": "Lever-N",
       "item.negativen.n.desc": "N",
       "advancements.back_to_not_classic.descr": "Go to Classic Dimension",
       "block.negativen.acacia_leaves_n": "Acacia Leaves-N",
@@ -10939,6 +11537,7 @@
       "block.negativen.wapred_nylium_n": "Wapred Nylium-N",
       "item.iron_narmorlegs.name": "Pontalon en Fer-N",
       "item.cobblestoneshovel.name": "Pelle en pierre-N",
+      "block.negativen.weathered_cut_copper_n_stairs": "Weathered Cut Copper-N Slab",
       "item.negativen.gold_n_apple": "Gold-N Apple",
       "item.blazenroad.name": "Blaze-N road",
       "fluid.classic_lava_n": "ClassicLava",
@@ -10969,12 +11568,12 @@
       "item.negativen.spruce_n_boat": "Oak Boat N Spawn Egg",
       "block.negativen.snow_n": "Snow-N",
       "item.negativen.gold_n_armorbody": "GoldN Chestplate",
+      "advancements.happy_chistmas.descr": "Play Negative-N The Chistmas Day!",
       "advancements.esteregg.descr": "Found the secret music!",
       "block.negativen.classic_netherrack_n": "Classic Netherrack-N",
       "block.negativen.classic_gravel_n": "Classic Gravel",
       "item.negativen.jungle_n_boat": "Oak Boat N Spawn Egg",
       "block.negativen.pumpkin_n": "Pumpkin-N",
-      "advancements.travel_the_earth_n.descr": "Go in Every Biome on UnderWorld",
       "item.negativen.classic_nether_dim": "Classic Nether Key",
       "item.negativen.birch_n_boat_spawn_egg": "Birch Boat N Spawn Egg",
       "block.negativen.acacia_n_trap_door": "Oak-N Trap Door",
@@ -11013,8 +11612,10 @@
       "item.negativen.diamond_n_hoe": "Diamond-N Hoe",
       "item.hamburger.name": "Hamburger",
       "item.negativen.classic_dim": "Classic Dimension Portal Igniter",
+      "item.negativen.lava_n_bottle_n": "Lava N Bottle N",
       "item.negativen.pign": "Pig-N Spawn Egg",
       "item.negativen.iron_n_armor_leggings": "Iron-N Leggings",
+      "block.negativen.weathered_cut_copper_n_slab": "Weathered Cut Copper-N Block",
       "advancements.doctorwho.descr": "Have the tardis",
       "block.negativen.shroomlight_n": "Shroomlight-N",
       "block.negativen.cactus_n": "Cactus N",
@@ -11023,7 +11624,6 @@
       "block.negativen.classic_coal_ore": "Classic Coal Ore",
       "block.negativen.lapis_n_ore": "Lapis-N Ore",
       "block.negativen.classic_grass": "Classic Grass",
-      "advancements.explorer.title": "Explorer",
       "item.negativen.netherite_n_armor_leggings": "Netherite-N Armor Leggings",
       "entity.negativen.piglin_n": "Piglin-N",
       "block.negativen.spruce_n_fence": "Oak-N Fence",
@@ -11058,6 +11658,7 @@
       "block.negativen.bee_hive_n_honey": "Bee Hive-N",
       "entity.creepern.name": "Creeper N",
       "advancements.diamond_ingot.descr": "Obtain DiamondN ingot",
+      "block.negativen.caudron_n_lava_n_2": "Cauldron-N",
       "block.negativen.cobblestone_cave_game": "Cobblestone Cave Game",
       "block.negativen.carrot_n_stage_1": "Carrot N Stage 0",
       "block.negativen.birch_planks_n": "Birch planks-N",
@@ -11068,6 +11669,7 @@
       "block.negativen.carrot_n_stage_2": "Carrot N Stage 0",
       "item.negativen.start_pearl": "Start Pearl",
       "block.negativen.fire_n": "Fire N",
+      "item.minecraft.tipped_arrow.effect.on_fire_n": "Arrow of On Fire-N",
       "advancements.mmmisprettygood.descr": "Eat RottenFleshN",
       "item.negativen.cobblestone_n_sword": "Stone Sword-N",
       "item.negativen.diamond_n_armorboots": "Diamond-N Bottes",
@@ -11082,6 +11684,8 @@
       "effect.unstable": "Unstable",
       "block.negativen.chiseled_nether_brick_n": "Chiseled Nether Brick-N",
       "block.negativen.compress": "Compress",
+      "advancements.happy_chistmas.title": "Happy Chistmas!",
+      "advancements.cover_me_with_debris_n.descr": "Get a full Netherite-N Armor",
       "item.negativen.wood_n_shovel": "Wooden Shovel-N",
       "item.negativen.sugar_cane_n_item": "Sugar Cane-N",
       "item.iron_nsword.name": "Epée en Fer-N",
@@ -11105,6 +11709,7 @@
       "item.negativen.shears_n": "Shears-N",
       "block.negativen.acacia_slab_n": "Acacia Slab-N",
       "tile.leavesn.name": "Feuille-N",
+      "block.negativen.lightly_weathered_cut_copper_n_stairs": "Lightly Weathered Cut Copper-N Block",
       "block.negativen.birch_sapling_n": "Birch Sapling-N",
       "item.negativen.oak_n_boat_item": "Oak-N Boat",
       "advancements.doctorwho.title": "Doctor Who",
@@ -11114,8 +11719,8 @@
       "item.negativen.iron_n_pickaxe": "Iron-N Pickaxe",
       "item.minecraft.lingering_potion.effect.poison_n": "Lingering Poison-N",
       "tile.oakstrairsn.name": "Escailer en Bois-N",
-      "item.negativen.ester_egg": "Ester egg",
       "item.negativen.feather_n": "Feather N",
+      "advancements.beta_tester.title": "Beta Tester",
       "block.negativen.spruce_leaves_n": "Spruce Leaves-N",
       "entity.cown.name": "Vache-N",
       "item.negativen.gold_n_armorhelmet": "GoldN Helmet",
@@ -11130,7 +11735,6 @@
       "item.negativen.wheat_n_seed": "Wheat-N Seed",
       "advancements.nevitagen.descr": "Go to the UnderWorld",
       "advancements.a_inger.title": "Inger?",
-      "item.negativen.ester_egg.desc": "Ester egg",
       "tile.blockdediamantinverse.name": "Block de diamant-N",
       "itemGroup.tabclassic_blocks": "Classic Blocks",
       "block.negativen.spruce_log_n": "Spruce Log-N",
@@ -11149,12 +11753,12 @@
       "advancements.anewcoal.descr": "Get Coal-N",
       "block.negativen.allium_n": "Allium-N",
       "block.negativen.redstone_lamp_n_on": "Redstone Lamp-N",
+      "item.minecraft.splash_potion.effect.on_fire_n": "Splash On Fire-N",
       "item.cobblestonesword.name": "Cobblestone Sword",
       "tile.stonen.name": "Stone-N",
       "item.negativen.redstone_n": "Redstone-N",
       "item.negativen.cobblestone_n_shovel": "Stone Shovel-N",
       "block.negativen.quartz_n_ore": "Quartz-N Ore",
-      "advancements.fresh_tourism.descr": "Get in All Biomes In The Nether-N!",
       "block.negativen.semi_weathered_copper_n_block": "Semi Weathered Copper-N Block",
       "item.negativen.nonedim": "None Dim Portal Igniter",
       "block.negativen.jungle_log_n_stripped": "Birch Log-N Stripped",
@@ -11165,7 +11769,9 @@
       "entity.negativen.chicken_n": "Chicken N",
       "block.negativen.polished_andesite_n": "Andesite-N",
       "block.negativen.crimson_n_trap_door": "Oak-N Trap Door",
+      "item.negativen.water_n_bottle_n": "Water N Bottle N",
       "block.negativen.emerald_n_block": "Emerald N Block",
+      "effect.on_fire_n": "On Fire-N",
       "advancements.lafusion.descr": "Reussir à craft le fusionnator!",
       "item.negativen.endermann": "Enderman-N Spawn Egg",
       "block.negativen.glass_n": "Glass-N",
@@ -11185,15 +11791,18 @@
       "item.negativen.iron_narmorhelmet": "Iron_N Helmet",
       "item.negativen.gold_n_ingot": "GoldN",
       "item.negativen.diamond_n_armor_leggings": "Diamond-N Leggings",
+      "block.negativen.start_stone_bricks": "Start Stone Bricks",
       "tile.tardis.name": "Tardis",
       "item.negativen.diamond_n_shovel": "Diamond-N Spade",
       "block.negativen.jungle_n_fence": "Oak-N Fence",
       "item.negativen.netherite_n_axe": "Diamond-N Axe",
       "block.negativen.iron_n_ore": "Iron-N Ore",
       "biome.negativen.classic_nether": "Classic Nether",
+      "item.minecraft.lingering_potion.effect.on_fire_n": "Lingering On Fire-N",
       "block.negativen.acacia_planks_n": "Acacia planks-N",
       "entity.blazen.name": "Blaze-N",
       "tile.itemdestroyer.name": "Item Destroyer",
+      "block.negativen.cut_copper_n_stairs": "Cut Copper-N Slab",
       "block.negativen.potato_n_stage_0": "Potato N Stage 0",
       "entity.negativen.creepern": "Creeper N",
       "item.negativen.diamond_n_armor_helmet": "Diamond-N Helmet",
@@ -11240,9 +11849,9 @@
       "item.negativen.nether_star_n": "Nether Star-N",
       "item.negativen.blaze_n_powder": "Blaze-N powder",
       "tile.startpotalframewiheye.name": "Startpotalframewiheye",
+      "block.negativen.lightly_weathered_cut_copper_n_slab": "Lightly Weathered Cut Copper-N Block",
       "block.negativen.vine_n": "Vine-N",
       "item.negativen.gold_n_axe": "GoldN Axe",
-      "advancements.fresh_tourism.title": "Fresh Tourism!",
       "block.negativen.classic_gold_n_ore": "Classic Iron-N Ore",
       "itemGroup.tabnegativenfood": "Negative-N Food",
       "item.pelleendiamantn.name": "Pelle en Diamant-N",
@@ -11257,6 +11866,7 @@
       "block.negativen.cut_copper_n_block": "Copper-N Block",
       "block.negativen.stone_n": "Stone-N",
       "item.negativen.chicken_n": "Chicken N Spawn Egg",
+      "enchantment.negativen.withered": "Withered",
       "block.negativen.sand_n": "Sand-N",
       "block.negativen.grass_block_n": "Grass-N",
       "item.negativen.diamond_n_ingot": "Diamond-N ingot",
@@ -11276,11 +11886,12 @@
       "item.negativen.netherite_n_scrap": "Netherite_N Scrap",
       "block.negativen.warped_wart_n_block": "Warped Wart-N Block",
       "fluid.classic_water_n": "ClassicWater",
+      "block.negativen.melon_n": "Melon-N",
       "item.negativen.negative_dust": "Negative Dust",
-      "block.negativen.itemdestroyer": "Item Destroyer",
       "tile.terren.name": "Terre-N",
       "block.negativen.dark_oak_slab_n": "Dark Oak Slab-N",
       "item.negativen.nether_wart_n": "Nether Wart-N",
+      "enchantment.negativen.eyewear": "Eyewear",
       "block.negativen.classic_cobblestone": "Classic Cobblestone",
       "advancements.ismineingtime.descr": "Go to the mineing Dimension",
       "block.negativen.beetroots_n_stage_0": "Beetroots N Stage 0",
@@ -11297,7 +11908,6 @@
       "item.negativen.rottenfleshn": "Rotten flesh-N",
       "item.negativen.fusonator_recipies_book": "Fusonator Recipies Book",
       "block.negativen.warped_n_door": "Spruce-N Door",
-      "advancements.epic_explorer.descr": "Travel in All Biomes!",
       "advancements.lafusion.title": "La fusion!",
       "advancements.waterlava.descr": "Take LavaN",
       "entity.negativen.zombien": "Zombie-N",
@@ -11323,13 +11933,16 @@
       "item.negativen.spruce_n_boat_item": "Oak-N Boat",
       "item.cownspawnegg.name": "Cow-N spawn egg",
       "block.negativen.weathered_cut_copper_n_block": "Weathered Copper-N Block",
+      "item.negativen.pumpkin_n_seed": "Pumpkin-N Seed",
       "tile.saplingn.name": "Sapling-N",
       "block.negativen.birch_n_trap_door": "Acacia-N Trap Door",
+      "block.negativen.lever_n_on": "Lever-N",
       "block.negativen.start_portal_frame": "Start portal frame",
       "block.negativen.bee_n_nest_honey": "Bee-N Nest",
       "item.negativen.iron_n_armor_chestplate": "Iron-N Chestplate",
       "item.mineingdim.name": "Portal Igniter Tier 2",
       "item.hacheendiamantn.name": "Hache en Diamant-N",
+      "block.negativen.cut_copper_n_slab": "Cut Copper-N Block",
       "block.negativen.blackstone_n": "Blackstone-N",
       "block.negativen.spruce_n_trap_door": "Spruce-N Trap Door",
       "item.iron_ningot.name": "Fer-N",
@@ -11338,9 +11951,11 @@
       "block.negativen.soul_lantern_n": "Lantern-N",
       "block.negativen.dev_statue": "Dev Statue",
       "entity.negativen.piglin_n_brute": "Piglin-N",
+      "item.minecraft.potion.effect.on_fire_n": "On Fire-N",
       "item.negativen.blazen_spawn_egg": "Blaze-N Spawn Egg",
       "biome.negativen.montains_n": "Montains N",
       "biome.negativen.cave_game_biome": "Cave Game Biome",
+      "advancements.beta_tester.descr": "Play in an uncomplete version of Negative-N",
       "advancements.diamond_ingot.title": "Diamond Ingot?",
       "advancements.happy_halloween.descr": "Play Negative-N in The Day of Halloween",
       "item.porkchopcookedn.name": "Porkchop cooked-N",
@@ -11365,12 +11980,17 @@
       "item.negativen.netherite_n_pickaxe": "Diamond-N Pickaxe",
       "item.dimensionstick.name": "Dimension Stick",
       "block.negativen.birch_log_n": "Birch log-N",
+      "block.negativen.cauldron_n_water_n_2": "Cauldron-N",
+      "block.negativen.cauldron_n_water_n_1": "Cauldron-N",
       "block.negativen.classic_coal_n_ore": "Classic Coal Ore",
       "block.negativen.clay_n": "Clay-N",
       "item.arnurendiamantinversebody.name": "Plastron en Diamant-N",
       "block.negativen.dark_oak_n_fence": "Oak-N Fence",
       "block.negativen.semi_weathered_cut_copper_n_block": "Semi Weathered Copper-N Block",
+      "item.negativen.melon_n_seed": "Melon-N Seed",
       "item.negativen.piglin_n": "Piglin-N Spawn Egg",
+      "block.negativen.semi_weathered_cut_copper_n_slab": "Semi Weathered Cut Copper-N Block",
+      "block.negativen.cauldron_n_lava_n_1": "Cauldron-N",
       "block.negativen.classic_gold_n_block": "Classic Gold Block",
       "block.negativen.purpur_n_pillar": "Purpur-N Pillar",
       "advancements.fresh.descr": "Travel to the Nether-N!",
@@ -11380,6 +12000,7 @@
       "item.negativen.gold_n_armorboots": "GoldN Boots",
       "block.negativen.acacia_n_fence_gate": "Oak-N FenceGate",
       "item.negativen.arrow_n": "Arrow-N",
+      "block.negativen.cauldron_n_water_n_full": "Cauldron-N",
       "tile.netherrackn.name": "Netherrack N",
       "item.negativen.gold_n_pickaxe": "GoldN Pickaxe",
       "block.negativen.nether_wart_n_stage_1": "Nether Wart-N",
@@ -11417,21 +12038,22 @@
   "workspaceSettings": {
     "modid": "negativen",
     "modName": "Negative-N",
-    "version": "1.3.02a",
+    "version": "1.3 Pre-Release 2",
     "description": "A mod create by Killar.exe and Fuzy with new things to discover!",
-    "author": "Killar.exe, Fuzy/blackwarexe",
+    "author": "Killar.exe, Rainer",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/negative-n",
+    "license": "Not specified",
     "disableForgeVersionCheck": false,
     "serverSideOnly": false,
-    "modPicture": "logo_h",
+    "modPicture": "logo_1",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.15.2",
+    "currentGenerator": "forge-1.16.4",
     "credits": "The Mod made by Killar.exe and Fuzy and use MCreator",
     "modElementsPackage": "net.killarexe.negativen",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000547520
+  "mcreatorVersion": 202100103117
 }

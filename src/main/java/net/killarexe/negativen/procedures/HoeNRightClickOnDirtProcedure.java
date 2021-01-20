@@ -8,6 +8,7 @@ import net.killarexe.negativen.block.TerreNBlock;
 import net.killarexe.negativen.block.FarmlandNMoistBlock;
 import net.killarexe.negativen.block.BlockherbeNBlock;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Random;
 import java.util.Map;
@@ -21,27 +22,27 @@ public class HoeNRightClickOnDirtProcedure extends NegativenModElements.ModEleme
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("itemstack") == null) {
 			if (!dependencies.containsKey("itemstack"))
-				System.err.println("Failed to load dependency itemstack for procedure HoeNRightClickOnDirt!");
+				NegativenMod.LOGGER.warn("Failed to load dependency itemstack for procedure HoeNRightClickOnDirt!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure HoeNRightClickOnDirt!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure HoeNRightClickOnDirt!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure HoeNRightClickOnDirt!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure HoeNRightClickOnDirt!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure HoeNRightClickOnDirt!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure HoeNRightClickOnDirt!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure HoeNRightClickOnDirt!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure HoeNRightClickOnDirt!");
 			return;
 		}
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");

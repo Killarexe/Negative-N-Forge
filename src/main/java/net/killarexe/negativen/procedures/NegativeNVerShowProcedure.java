@@ -5,6 +5,7 @@ import net.minecraft.entity.Entity;
 
 import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -17,12 +18,12 @@ public class NegativeNVerShowProcedure extends NegativenModElements.ModElement {
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure NegativeNVerShow!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure NegativeNVerShow!");
 			return false;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure NegativeNVerShow!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure NegativeNVerShow!");
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

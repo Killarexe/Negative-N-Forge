@@ -26,7 +26,7 @@
     "experience": 1,
     "recipes": [
       "negativen:batonncraft",
-      "unknown_element"
+      "negativen:deleted_mod_element"
     ]
   },
   "parent": "negativen:inverseinfini"

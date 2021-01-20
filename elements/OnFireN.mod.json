@@ -1,0 +1,22 @@
+{
+  "_fv": 15,
+  "_type": "potion",
+  "definition": {
+    "name": "On Fire-N",
+    "effectName": "On Fire-N",
+    "icon": "on_fire_n.png",
+    "color": {
+      "value": -16776961,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "isBad": false,
+    "isBenefitical": true,
+    "registerPotionType": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "onActiveTick": {
+      "name": "OnFireNOnPotionActiveTick"
+    }
+  }
+}

@@ -56,7 +56,7 @@ public class Iron_NHoeItem extends NegativenModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(Iron_NIngotItem.block, (int) (1)));
 			}
-		}, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
+		}, 0, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
 			@Override
 			public ActionResultType onItemUse(ItemUseContext context) {
 				ActionResultType retval = super.onItemUse(context);

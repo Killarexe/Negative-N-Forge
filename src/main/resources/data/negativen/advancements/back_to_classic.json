@@ -16,9 +16,9 @@
   },
   "criteria": {
     "back_to_classic": {
-      "trigger": "minecraft:location",
+      "trigger": "minecraft:changed_dimension",
       "conditions": {
-        "biome": "negativen:classic_biome"
+        "to": "negativen:classic_dim"
       }
     }
   },

@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "negativen:diamond_n_block",
+    "negativen:iron_n_block",
+    "negativen:gold_n_ore_block",
+    "negativen:classic_iron_block",
+    "negativen:classic_iron_n_block",
+    "negativen:classic_gold_block",
+    "negativen:classic_gold_n_block",
+    "negativen:emerald_n_block",
+    "negativen:netherite_n_block",
+    "negativen:redstone_block_n",
+    "negativen:copper_n_block",
+    "negativen:lightly_weathered_copper_n_block",
+    "negativen:semi_weathered_copper_n_block",
+    "negativen:weathered_copper_n_block",
+    "negativen:cut_copper_n_block",
+    "negativen:lightly_weathered_cut_copper_block",
+    "negativen:semi_weathered_cut_copper_n_block",
+    "negativen:weathered_cut_copper_n_block",
+    "negativen:lapis_n_block"
+  ]
+}

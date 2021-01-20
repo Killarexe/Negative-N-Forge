@@ -1,10 +1,10 @@
 
 package net.killarexe.negativen.world.structure;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.IPlacementConfig;
 import net.minecraft.world.gen.feature.template.Template;
@@ -16,20 +16,15 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.ISeedReader;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
 
-import net.killarexe.negativen.world.dimension.StartDimDimension;
-import net.killarexe.negativen.world.dimension.NoneDimDimension;
-import net.killarexe.negativen.world.dimension.NegaDimension;
-import net.killarexe.negativen.world.dimension.MineingDimDimension;
-import net.killarexe.negativen.world.dimension.ClassicNDimDimension;
-import net.killarexe.negativen.world.dimension.ClassicDimDimension;
 import net.killarexe.negativen.NegativenModElements;
 
 import java.util.Random;
@@ -38,32 +33,33 @@ import java.util.Random;
 public class AbandonnedPortalOverworldStructure extends NegativenModElements.ModElement {
 	public AbandonnedPortalOverworldStructure(NegativenModElements instance) {
 		super(instance, 638);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
-	@Override
-	public void init(FMLCommonSetupEvent event) {
-		Feature<NoFeatureConfig> feature = new Feature<NoFeatureConfig>(NoFeatureConfig::deserialize) {
+	@SubscribeEvent
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		Feature<NoFeatureConfig> feature = new Feature<NoFeatureConfig>(NoFeatureConfig.field_236558_a_) {
 			@Override
-			public boolean place(IWorld world, ChunkGenerator generator, Random random, BlockPos pos, NoFeatureConfig config) {
+			public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, NoFeatureConfig config) {
 				int ci = (pos.getX() >> 4) << 4;
 				int ck = (pos.getZ() >> 4) << 4;
-				DimensionType dimensionType = world.getDimension().getType();
+				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == DimensionType.OVERWORLD)
+				if (dimensionType == World.OVERWORLD)
 					dimensionCriteria = true;
-				if (dimensionType == DimensionType.THE_END)
+				if (dimensionType == World.THE_END)
 					dimensionCriteria = true;
-				if (dimensionType == NegaDimension.type)
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
 					dimensionCriteria = true;
-				if (dimensionType == MineingDimDimension.type)
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:mineingdim")))
 					dimensionCriteria = true;
-				if (dimensionType == StartDimDimension.type)
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:startdim")))
 					dimensionCriteria = true;
-				if (dimensionType == NoneDimDimension.type)
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nonedim")))
 					dimensionCriteria = true;
-				if (dimensionType == ClassicDimDimension.type)
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:classic_dim")))
 					dimensionCriteria = true;
-				if (dimensionType == ClassicNDimDimension.type)
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:classic_n_dim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
@@ -80,20 +76,18 @@ public class AbandonnedPortalOverworldStructure extends NegativenModElements.Mod
 						int x = spawnTo.getX();
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();
-						Template template = ((ServerWorld) world.getWorld()).getSaveHandler().getStructureTemplateManager()
-								.getTemplateDefaulted(new ResourceLocation("negativen", "abandonned_portal_overworld"));
+						Template template = world.getWorld().getStructureTemplateManager()
+								.getTemplateDefaulted(new ResourceLocation("negativen", "abandonned_portal_3"));
 						if (template == null)
 							return false;
-						template.addBlocksToWorld(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
-								.addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false));
+						template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
+								.addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false), random);
 					}
 				}
 				return true;
 			}
 		};
-		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
-			biome.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, feature.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-					.withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
-		}
+		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> feature
+				.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
 	}
 }

@@ -71,7 +71,7 @@ public class PlanchedeboisAxeItem extends NegativenModElements.ModElement {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("entity", entity);
-					$_dependencies.put("itemstack", itemstack);
+					$_dependencies.put("sourceentity", sourceentity);
 					PoisonusProccedProcedure.executeProcedure($_dependencies);
 				}
 				return retval;

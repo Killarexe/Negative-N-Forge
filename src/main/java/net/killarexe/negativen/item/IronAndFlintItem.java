@@ -12,8 +12,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.BlockState;
 
@@ -25,6 +26,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 import com.google.common.collect.Multimap;
+import com.google.common.collect.ImmutableMultimap;
 
 @NegativenModElements.ModElement.Tag
 public class IronAndFlintItem extends NegativenModElements.ModElement {
@@ -89,15 +91,17 @@ public class IronAndFlintItem extends NegativenModElements.ModElement {
 		}
 
 		@Override
-		public Multimap<String, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot) {
-			Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(equipmentSlot);
+		public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot) {
 			if (equipmentSlot == EquipmentSlotType.MAINHAND) {
-				multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(),
+				ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
+				builder.putAll(super.getAttributeModifiers(equipmentSlot));
+				builder.put(Attributes.ATTACK_DAMAGE,
 						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", 2f, AttributeModifier.Operation.ADDITION));
-				multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
+				builder.put(Attributes.ATTACK_SPEED,
 						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", -3, AttributeModifier.Operation.ADDITION));
+				return builder.build();
 			}
-			return multimap;
+			return super.getAttributeModifiers(equipmentSlot);
 		}
 	}
 }

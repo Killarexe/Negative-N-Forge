@@ -7,6 +7,7 @@ import net.minecraft.block.Blocks;
 import net.killarexe.negativen.block.WaterNBlock;
 import net.killarexe.negativen.block.FarmlandNBlock;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -19,22 +20,22 @@ public class FarmlandNMoistUpdateTickProcedure extends NegativenModElements.ModE
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure FarmlandNMoistUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure FarmlandNMoistUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure FarmlandNMoistUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure FarmlandNMoistUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure FarmlandNMoistUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure FarmlandNMoistUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure FarmlandNMoistUpdateTick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure FarmlandNMoistUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

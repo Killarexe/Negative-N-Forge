@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negativen:blocks/melon_n_top",
+    "up": "negativen:blocks/melon_n_top",
+    "north": "negativen:blocks/melon_n_side",
+    "east": "negativen:blocks/melon_n_side",
+    "south": "negativen:blocks/melon_n_side",
+    "west": "negativen:blocks/melon_n_side",
+    "particle": "negativen:blocks/melon_n_top"
+  }
+}

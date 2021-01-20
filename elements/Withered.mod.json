@@ -1,0 +1,21 @@
+{
+  "_fv": 15,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Withered",
+    "type": "WEAPON",
+    "rarity": "VERY_RARE",
+    "minLevel": 1,
+    "maxLevel": 2,
+    "damageModifier": 0,
+    "compatibleEnchantments": [
+      {
+        "value": "CUSTOM:Poisonus"
+      }
+    ],
+    "compatibleItems": [],
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "isAllowedOnBooks": true
+  }
+}

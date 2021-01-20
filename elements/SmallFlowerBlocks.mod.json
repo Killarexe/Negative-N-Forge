@@ -1,0 +1,37 @@
+{
+  "_fv": 15,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:AlliumN"
+      },
+      {
+        "value": "CUSTOM:OrangeTulipN"
+      },
+      {
+        "value": "CUSTOM:OxeyeDaisyN"
+      },
+      {
+        "value": "CUSTOM:PinkTulipN"
+      },
+      {
+        "value": "CUSTOM:RedTulipN"
+      },
+      {
+        "value": "CUSTOM:ClassicRose"
+      },
+      {
+        "value": "CUSTOM:ClassicRoseN"
+      },
+      {
+        "value": "CUSTOM:SweetBerryNBushStage1"
+      }
+    ],
+    "functions": [],
+    "name": "small_flowers",
+    "namespace": "minecraft"
+  }
+}

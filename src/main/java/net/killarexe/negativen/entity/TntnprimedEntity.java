@@ -5,7 +5,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.network.FMLPlayMessages;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -19,7 +21,10 @@ import net.minecraft.network.IPacket;
 import net.minecraft.entity.projectile.PotionEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
@@ -44,7 +49,7 @@ public class TntnprimedEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public TntnprimedEntity(NegativenModElements instance) {
 		super(instance, 427);
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
 
 	@Override
@@ -55,17 +60,31 @@ public class TntnprimedEntity extends NegativenModElements.ModElement {
 		elements.entities.add(() -> entity);
 	}
 
-	@SubscribeEvent
-	@OnlyIn(Dist.CLIENT)
-	public void registerModels(ModelRegistryEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
-			return new MobRenderer(renderManager, new Modelcustom_model(), 0.5f) {
-				@Override
-				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("negativen:textures/tntn.png");
-				}
-			};
-		});
+	@Override
+	public void init(FMLCommonSetupEvent event) {
+		DeferredWorkQueue.runLater(this::setupAttributes);
+	}
+	private static class ModelRegisterHandler {
+		@SubscribeEvent
+		@OnlyIn(Dist.CLIENT)
+		public void registerModels(ModelRegistryEvent event) {
+			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
+				return new MobRenderer(renderManager, new Modelcustom_model(), 0.5f) {
+					@Override
+					public ResourceLocation getEntityTexture(Entity entity) {
+						return new ResourceLocation("negativen:textures/tntn.png");
+					}
+				};
+			});
+		}
+	}
+	private void setupAttributes() {
+		AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
+		ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0);
+		ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 10);
+		ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
+		ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 0);
+		GlobalEntityTypeAttributes.put(entity, ammma.create());
 	}
 	public static class CustomEntity extends CreatureEntity {
 		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
@@ -144,20 +163,6 @@ public class TntnprimedEntity extends NegativenModElements.ModElement {
 				$_dependencies.put("world", world);
 				TntnprimedOnEntityTickUpdateProcedure.executeProcedure($_dependencies);
 			}
-		}
-
-		@Override
-		protected void registerAttributes() {
-			super.registerAttributes();
-			if (this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED) != null)
-				this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0);
-			if (this.getAttribute(SharedMonsterAttributes.MAX_HEALTH) != null)
-				this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(10);
-			if (this.getAttribute(SharedMonsterAttributes.ARMOR) != null)
-				this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(0);
-			if (this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE) == null)
-				this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE);
-			this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(0);
 		}
 
 		@Override

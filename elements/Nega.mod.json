@@ -1,24 +1,7 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "dimension",
   "definition": {
-    "portalFrame": {
-      "value": "CUSTOM:Portalblock"
-    },
-    "portalParticles": {
-      "value": "ENCHANTMENT_TABLE"
-    },
-    "portalLuminance": 1.0,
-    "portalSound": {
-      "value": "ambient.cave"
-    },
-    "igniterName": "Portal Igniter Tier 1",
-    "igniterTab": {
-      "value": "CUSTOM:NeagtiveNOuils"
-    },
-    "texture": "fint_nega",
-    "portalTexture": "ega_portal",
-    "enablePortal": true,
     "biomesInDimension": [
       {
         "value": "CUSTOM:Negative"
@@ -64,11 +47,27 @@
     },
     "canRespawnHere": true,
     "hasFog": false,
-    "hasWeather": false,
     "isDark": true,
     "doesWaterVaporize": true,
     "sleepResult": "ALLOW",
     "hasSkyLight": true,
-    "imitateOverworldBehaviour": false
+    "imitateOverworldBehaviour": false,
+    "portalFrame": {
+      "value": "CUSTOM:Portalblock"
+    },
+    "portalParticles": {
+      "value": "ENCHANTMENT_TABLE"
+    },
+    "portalLuminance": 15,
+    "portalSound": {
+      "value": "ambient.cave"
+    },
+    "igniterName": "Portal Igniter Tier 1",
+    "igniterTab": {
+      "value": "CUSTOM:NeagtiveNOuils"
+    },
+    "texture": "fint_nega",
+    "portalTexture": "ega_portal",
+    "enablePortal": true
   }
 }

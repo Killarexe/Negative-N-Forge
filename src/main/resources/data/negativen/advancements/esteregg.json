@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "negativen:ester_egg"
+      "item": "negativen:easter_egg"
     },
     "title": {
       "translate": "advancements.esteregg.title"
@@ -20,7 +20,7 @@
       "conditions": {
         "items": [
           {
-            "item": "negativen:ester_egg",
+            "item": "negativen:easter_egg",
             "count": {
               "min": 1,
               "max": 1

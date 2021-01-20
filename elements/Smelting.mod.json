@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "enchantment",
   "definition": {
     "name": "Smelting",
@@ -8,7 +8,11 @@
     "minLevel": 1,
     "maxLevel": 1,
     "damageModifier": 0,
-    "compatibleEnchantments": [],
+    "compatibleEnchantments": [
+      {
+        "value": "CUSTOM:Mineing"
+      }
+    ],
     "compatibleItems": [],
     "isTreasureEnchantment": false,
     "isCurse": false,

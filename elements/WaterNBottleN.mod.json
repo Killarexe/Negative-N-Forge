@@ -1,0 +1,26 @@
+{
+  "_fv": 15,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "water_n_bottle",
+    "customModelName": "Normal",
+    "name": "Water N Bottle N",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNRessoures"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatingSpeed": 32,
+    "resultItem": {
+      "value": "CUSTOM:GlassBottleN"
+    },
+    "forDogs": false,
+    "isAlwaysEdible": false,
+    "animation": "drink",
+    "hasGlow": false
+  }
+}

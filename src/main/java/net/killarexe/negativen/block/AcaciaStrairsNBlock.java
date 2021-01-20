@@ -3,7 +3,7 @@ package net.killarexe.negativen.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 
-import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -36,7 +36,7 @@ public class AcaciaStrairsNBlock extends NegativenModElements.ModElement {
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2f, 10f)).getDefaultState(),
-					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 10f).lightValue(0));
+					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0));
 			setRegistryName("acacia_stairs_n");
 		}
 

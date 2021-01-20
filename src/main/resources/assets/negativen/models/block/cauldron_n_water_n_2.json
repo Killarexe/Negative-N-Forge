@@ -1,0 +1,12 @@
+{
+  "parent": "negativen:custom/cauldron_n_level_2",
+  "textures": {
+    "all": "negativen:blocks/cauldron_n_inner",
+    "particle": "negativen:blocks/cauldron_n_inner",
+    "side": "negativen:blocks/cauldron_n_side",
+    "top": "negativen:blocks/cauldron_n_top",
+    "bottom": "negativen:blocks/cauldron_n_bottom",
+    "inside": "negativen:blocks/cauldron_n_inner",
+    "content": "negativen:blocks/ater"
+  }
+}

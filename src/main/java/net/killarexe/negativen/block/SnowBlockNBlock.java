@@ -4,9 +4,9 @@ package net.killarexe.negativen.block;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -41,7 +41,7 @@ public class SnowBlockNBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.SNOW).sound(SoundType.SNOW).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(2)
+			super(Block.Properties.create(Material.SNOW).sound(SoundType.SNOW).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.SHOVEL).tickRandomly());
 			setRegistryName("snow_block_n");
 		}

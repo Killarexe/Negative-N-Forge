@@ -5,12 +5,11 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.IPlantable;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -46,18 +45,13 @@ public class TerreNBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(0.6f, 10f).lightValue(0).harvestLevel(0)
-					.harvestTool(ToolType.SHOVEL).tickRandomly());
+			super(Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(0.6f, 10f).setLightLevel(s -> 0)
+					.harvestLevel(0).harvestTool(ToolType.SHOVEL).tickRandomly());
 			setRegistryName("dirt_n");
 		}
 
 		@Override
-		public int tickRate(IWorldReader world) {
-			return 100;
-		}
-
-		@Override
-		public MaterialColor getMaterialColor(BlockState state, IBlockReader blockAccess, BlockPos pos) {
+		public MaterialColor getMaterialColor() {
 			return MaterialColor.LIGHT_BLUE;
 		}
 

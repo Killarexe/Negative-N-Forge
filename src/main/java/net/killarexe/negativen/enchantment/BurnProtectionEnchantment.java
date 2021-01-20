@@ -3,9 +3,8 @@ package net.killarexe.negativen.enchantment;
 
 import net.minecraftforge.registries.ObjectHolder;
 
-import net.minecraft.item.Items;
-import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.enchantment.Enchantment;
 
@@ -39,16 +38,8 @@ public class BurnProtectionEnchantment extends NegativenModElements.ModElement {
 		}
 
 		@Override
-		public boolean canApplyAtEnchantingTable(ItemStack stack) {
-			if (stack.getItem() == new ItemStack(Items.LEATHER_CHESTPLATE, (int) (1)).getItem())
-				return true;
-			if (stack.getItem() == new ItemStack(Items.CHAINMAIL_CHESTPLATE, (int) (1)).getItem())
-				return true;
-			if (stack.getItem() == new ItemStack(Items.IRON_CHESTPLATE, (int) (1)).getItem())
-				return true;
-			if (stack.getItem() == new ItemStack(Items.GOLDEN_CHESTPLATE, (int) (1)).getItem())
-				return true;
-			if (stack.getItem() == new ItemStack(Items.DIAMOND_CHESTPLATE, (int) (1)).getItem())
+		protected boolean canApplyTogether(Enchantment ench) {
+			if (ench == Enchantments.FIRE_PROTECTION)
 				return true;
 			return false;
 		}

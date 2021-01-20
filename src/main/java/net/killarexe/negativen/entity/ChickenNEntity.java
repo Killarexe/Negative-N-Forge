@@ -7,18 +7,25 @@ import net.minecraftforge.fml.network.FMLPlayMessages;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.gen.Heightmap;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Hand;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.network.IPacket;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -29,8 +36,12 @@ import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
@@ -51,7 +62,8 @@ public class ChickenNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public ChickenNEntity(NegativenModElements instance) {
 		super(instance, 59);
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
@@ -64,41 +76,53 @@ public class ChickenNEntity extends NegativenModElements.ModElement {
 				.setRegistryName("chicken_n_spawn_egg"));
 	}
 
+	@SubscribeEvent
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("negativen:negative").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:oak_nforest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:birch_n_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:plains_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:dark_oak_n_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:jungle_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:spruce_forest_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 20, 4, 4));
+	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
-			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:negative")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:oak_nforest")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:birch_n_forest")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:plains_n")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:dark_oak_n_forest")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:jungle_n")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:spruce_forest_n")))
-				biomeCriteria = true;
-			if (!biomeCriteria)
-				continue;
-			biome.getSpawns(EntityClassification.AMBIENT).add(new Biome.SpawnListEntry(entity, 20, 4, 4));
-		}
+		DeferredWorkQueue.runLater(this::setupAttributes);
 		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS,
 				Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
 	}
-
-	@SubscribeEvent
-	@OnlyIn(Dist.CLIENT)
-	public void registerModels(ModelRegistryEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new ChickenModel(), 0.5f) {
-			@Override
-			public ResourceLocation getEntityTexture(Entity entity) {
-				return new ResourceLocation("negativen:textures/chicken_n.png");
-			}
-		});
+	private static class ModelRegisterHandler {
+		@SubscribeEvent
+		@OnlyIn(Dist.CLIENT)
+		public void registerModels(ModelRegistryEvent event) {
+			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new ChickenModel(), 0.5f) {
+				@Override
+				public ResourceLocation getEntityTexture(Entity entity) {
+					return new ResourceLocation("negativen:textures/chicken_n.png");
+				}
+			});
+		}
+	}
+	private void setupAttributes() {
+		AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
+		ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
+		ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 5);
+		ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
+		ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
+		GlobalEntityTypeAttributes.put(entity, ammma.create());
 	}
 	public static class CustomEntity extends AnimalEntity {
 		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
@@ -152,10 +176,10 @@ public class ChickenNEntity extends NegativenModElements.ModElement {
 		}
 
 		@Override
-		public boolean processInteract(PlayerEntity sourceentity, Hand hand) {
+		public ActionResultType func_230254_b_(PlayerEntity sourceentity, Hand hand) {
 			ItemStack itemstack = sourceentity.getHeldItem(hand);
-			boolean retval = true;
-			super.processInteract(sourceentity, hand);
+			ActionResultType retval = ActionResultType.func_233537_a_(this.world.isRemote());
+			super.func_230254_b_(sourceentity, hand);
 			sourceentity.startRiding(this);
 			double x = this.getPosX();
 			double y = this.getPosY();
@@ -165,22 +189,11 @@ public class ChickenNEntity extends NegativenModElements.ModElement {
 		}
 
 		@Override
-		protected void registerAttributes() {
-			super.registerAttributes();
-			if (this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED) != null)
-				this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.3);
-			if (this.getAttribute(SharedMonsterAttributes.MAX_HEALTH) != null)
-				this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(5);
-			if (this.getAttribute(SharedMonsterAttributes.ARMOR) != null)
-				this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(0);
-			if (this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE) == null)
-				this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE);
-			this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3);
-		}
-
-		@Override
-		public AgeableEntity createChild(AgeableEntity ageable) {
-			return (CustomEntity) entity.create(this.world);
+		public AgeableEntity func_241840_a(ServerWorld serverWorld, AgeableEntity ageable) {
+			CustomEntity retval = (CustomEntity) entity.create(serverWorld);
+			retval.onInitialSpawn(serverWorld, serverWorld.getDifficultyForLocation(new BlockPos(retval.getPosition())), SpawnReason.BREEDING,
+					(ILivingEntityData) null, (CompoundNBT) null);
+			return retval;
 		}
 
 		@Override

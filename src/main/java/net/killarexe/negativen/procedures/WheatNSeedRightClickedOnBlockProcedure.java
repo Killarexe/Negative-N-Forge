@@ -12,6 +12,7 @@ import net.killarexe.negativen.block.WheatNStage0Block;
 import net.killarexe.negativen.block.FarmlandNMoistBlock;
 import net.killarexe.negativen.block.FarmlandNBlock;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -24,27 +25,27 @@ public class WheatNSeedRightClickedOnBlockProcedure extends NegativenModElements
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure WheatNSeedRightClickedOnBlock!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure WheatNSeedRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure WheatNSeedRightClickedOnBlock!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure WheatNSeedRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure WheatNSeedRightClickedOnBlock!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure WheatNSeedRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure WheatNSeedRightClickedOnBlock!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure WheatNSeedRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure WheatNSeedRightClickedOnBlock!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure WheatNSeedRightClickedOnBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -61,7 +62,8 @@ public class WheatNSeedRightClickedOnBlockProcedure extends NegativenModElements
 			if ((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false))) {
 				if (entity instanceof PlayerEntity) {
 					ItemStack _stktoremove = new ItemStack(WheatNSeedItem.block, (int) (1));
-					((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+					((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+							((PlayerEntity) entity).container.func_234641_j_());
 				}
 			}
 		}

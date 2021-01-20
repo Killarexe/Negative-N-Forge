@@ -1,0 +1,25 @@
+{
+  "mappings": {
+    "sun_n": {
+      "map": {
+        "side": "nightdark_detector_side",
+        "top": "nightdark_detector_top"
+      },
+      "name": "sun_n"
+    },
+    "moon_n": {
+      "map": {
+        "side": "nightdark_detector_side",
+        "top": "nightdark_detector_inverted_top"
+      },
+      "name": "moon_n"
+    },
+    "default": {
+      "map": {
+        "side": "",
+        "top": ""
+      },
+      "name": "default"
+    }
+  }
+}

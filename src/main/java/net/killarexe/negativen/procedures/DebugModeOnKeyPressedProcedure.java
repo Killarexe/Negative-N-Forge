@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 
 import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -19,12 +20,12 @@ public class DebugModeOnKeyPressedProcedure extends NegativenModElements.ModElem
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure DebugModeOnKeyPressed!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure DebugModeOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure DebugModeOnKeyPressed!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure DebugModeOnKeyPressed!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -32,7 +33,7 @@ public class DebugModeOnKeyPressedProcedure extends NegativenModElements.ModElem
 		if (((NegativenModVariables.MapVariables.get(world).Debug) == (true))) {
 			if ((entity.hasPermissionLevel((int) 4))) {
 				if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Debug Mode desactivate Sucessfuly!"), (true));
 					}
 					NegativenModVariables.MapVariables.get(world).Debug = (boolean) (false);
@@ -45,7 +46,7 @@ public class DebugModeOnKeyPressedProcedure extends NegativenModElements.ModElem
 						});
 					}
 				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You are not in Creative Mod!"), (true));
 					}
 				}
@@ -53,7 +54,7 @@ public class DebugModeOnKeyPressedProcedure extends NegativenModElements.ModElem
 		} else if (((NegativenModVariables.MapVariables.get(world).Debug) == (false))) {
 			if ((entity.hasPermissionLevel((int) 4))) {
 				if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Debug Mode Activate Sucessfuly!"), (true));
 					}
 					NegativenModVariables.MapVariables.get(world).Debug = (boolean) (true);
@@ -66,7 +67,7 @@ public class DebugModeOnKeyPressedProcedure extends NegativenModElements.ModElem
 						});
 					}
 				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You are not in Creative Mod!"), (true));
 					}
 				}

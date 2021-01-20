@@ -4,6 +4,7 @@ import net.minecraft.entity.Entity;
 
 import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -16,7 +17,7 @@ public class NegativeNVersionDEVDisplayOverlayIngameProcedure extends NegativenM
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure NegativeNVersionDEVDisplayOverlayIngame!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure NegativeNVersionDEVDisplayOverlayIngame!");
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

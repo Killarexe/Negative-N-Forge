@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "biome",
   "definition": {
     "name": "Desert N",
@@ -8,22 +8,6 @@
     },
     "undergroundBlock": {
       "value": "CUSTOM:SandstoneN"
-    },
-    "treeType": 1,
-    "vanillaTreeType": "Default",
-    "minHeight": 2,
-    "spawnVines": false,
-    "treeVines": {
-      "value": "Blocks.AIR"
-    },
-    "treeStem": {
-      "value": "CUSTOM:CactusN"
-    },
-    "treeBranch": {
-      "value": "Blocks.AIR"
-    },
-    "treeFruits": {
-      "value": "Blocks.AIR"
     },
     "airColor": {
       "value": -256,
@@ -45,30 +29,50 @@
       "value": -205,
       "falpha": 0.0
     },
-    "treesPerChunk": 1,
+    "moodSoundDelay": 0,
+    "spawnParticles": false,
+    "particlesProbability": 0.0,
+    "biomeCategory": "DESERT",
+    "parent": {
+      "value": "No parent"
+    },
+    "rainingPossibility": 0.0,
+    "temperature": 1.5,
+    "baseHeight": 0.1,
+    "heightVariation": 0.2,
+    "biomeType": "DESERT",
+    "spawnBiome": false,
+    "biomeWeight": 5,
+    "biomeDictionaryTypes": [],
     "grassPerChunk": 0,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 0,
     "mushroomsPerChunk": 0,
     "bigMushroomsChunk": 0,
-    "sandPathcesPerChunk": 0,
+    "sandPatchesPerChunk": 0,
     "gravelPatchesPerChunk": 0,
     "reedsPerChunk": 0,
     "cactiPerChunk": 0,
-    "rainingPossibility": 0.0,
-    "temperature": 1.5,
-    "baseHeight": 0.1,
-    "heightVariation": 0.2,
-    "spawnBiome": false,
-    "biomeWeight": 5,
-    "biomeType": "DESERT",
-    "biomeCategory": "DESERT",
-    "parent": {
-      "value": "No parent"
+    "treesPerChunk": 1,
+    "vanillaTreeType": "Default",
+    "treeType": 1,
+    "minHeight": 2,
+    "maxWaterDepth": 0,
+    "treeStem": {
+      "value": "CUSTOM:CactusN"
     },
-    "spawnStronghold": true,
-    "spawnMineshaft": true,
-    "spawnPillagerOutpost": true,
+    "treeBranch": {
+      "value": "Blocks.AIR"
+    },
+    "treeVines": {
+      "value": "Blocks.AIR"
+    },
+    "treeFruits": {
+      "value": "Blocks.AIR"
+    },
+    "spawnStronghold": false,
+    "spawnMineshaft": false,
+    "spawnPillagerOutpost": false,
     "villageType": "none",
     "spawnWoodlandMansion": false,
     "spawnJungleTemple": false,
@@ -77,13 +81,10 @@
     "spawnOceanMonument": false,
     "spawnShipwreck": false,
     "oceanRuinType": "NONE",
-    "biomeDictionaryTypes": [],
     "defaultFeatures": [
       "Caves",
-      "MonsterRooms",
       "Structures",
-      "Ores",
-      "Lakes"
+      "Ores"
     ],
     "spawnEntries": [
       {

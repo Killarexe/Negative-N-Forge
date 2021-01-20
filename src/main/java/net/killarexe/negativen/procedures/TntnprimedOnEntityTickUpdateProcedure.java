@@ -5,6 +5,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.gen.feature.template.Template;
 import net.minecraft.world.gen.feature.template.PlacementSettings;
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
@@ -16,6 +17,7 @@ import net.minecraft.entity.Entity;
 
 import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -28,27 +30,27 @@ public class TntnprimedOnEntityTickUpdateProcedure extends NegativenModElements.
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure TntnprimedOnEntityTickUpdate!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure TntnprimedOnEntityTickUpdate!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure TntnprimedOnEntityTickUpdate!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure TntnprimedOnEntityTickUpdate!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure TntnprimedOnEntityTickUpdate!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure TntnprimedOnEntityTickUpdate!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure TntnprimedOnEntityTickUpdate!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure TntnprimedOnEntityTickUpdate!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure TntnprimedOnEntityTickUpdate!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure TntnprimedOnEntityTickUpdate!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -61,12 +63,12 @@ public class TntnprimedOnEntityTickUpdateProcedure extends NegativenModElements.
 				entity.getPersistentData().putDouble("entityTimer", ((entity.getPersistentData().getDouble("entityTimer")) + 1));
 			}
 		} else if (((entity.getPersistentData().getDouble("entityTimer")) > 4)) {
-			if (!world.getWorld().isRemote) {
-				world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")),
 						SoundCategory.NEUTRAL, (float) 0.5, (float) 1);
 			} else {
-				world.getWorld().playSound(x, y, z,
+				((World) world).playSound(x, y, z,
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")),
 						SoundCategory.NEUTRAL, (float) 0.5, (float) 1, false);
 			}
@@ -79,16 +81,17 @@ public class TntnprimedOnEntityTickUpdateProcedure extends NegativenModElements.
 			if (world instanceof ServerWorld) {
 				((ServerWorld) world).spawnParticle(ParticleTypes.EXPLOSION, x, y, z, (int) 2, 6, 6, 6, 1);
 			}
-			if (!world.getWorld().isRemote) {
-				Template template = ((ServerWorld) world.getWorld()).getSaveHandler().getStructureTemplateManager()
-						.getTemplateDefaulted(new ResourceLocation("negativen", "tnt-n_explosion"));
+			if (world instanceof World && !world.isRemote()) {
+				Template template = ((ServerWorld) world).getStructureTemplateManager()
+						.getTemplateDefaulted(new ResourceLocation("negativen", "air_n_ball"));
 				if (template != null) {
-					template.addBlocksToWorld(world, new BlockPos((int) (x - 3), (int) (y - 3), (int) (z - 3)),
-							new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false));
+					template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 3), (int) (y - 3), (int) (z - 3)),
+							new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),
+							((World) world).rand);
 				}
 			}
 			entity.getPersistentData().putDouble("entityTimer", 0);
-			if (!entity.world.isRemote)
+			if (!entity.world.isRemote())
 				entity.remove();
 		}
 	}

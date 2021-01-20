@@ -28,6 +28,7 @@ import net.killarexe.negativen.block.CactusNBlock;
 import net.killarexe.negativen.block.BookshelfNBlock;
 import net.killarexe.negativen.block.BoisNBlock;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -42,22 +43,22 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure FusionnatorProceed!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure FusionnatorProceed!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure FusionnatorProceed!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure FusionnatorProceed!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure FusionnatorProceed!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure FusionnatorProceed!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure FusionnatorProceed!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure FusionnatorProceed!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -90,7 +91,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(CreateBlock.block, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -100,7 +101,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -147,7 +148,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(CreateNBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -157,7 +158,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -191,7 +192,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Blocks.CHEST, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -201,7 +202,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -248,7 +249,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(ChestNBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -258,7 +259,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -293,7 +294,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Blocks.BOOKSHELF, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -303,7 +304,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -350,7 +351,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(BookshelfNBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -360,7 +361,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -394,7 +395,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Items.STRING, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -404,7 +405,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -451,7 +452,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(StringNItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -461,7 +462,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -495,7 +496,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Blocks.STONE, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -505,7 +506,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -552,7 +553,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(Minerai_de_diamant_inverseBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -562,7 +563,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -597,7 +598,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(NegativeDustItem.block, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -607,7 +608,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -654,7 +655,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(CactusNBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -664,7 +665,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -698,7 +699,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Blocks.TNT, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -708,7 +709,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -755,7 +756,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(TNTNBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -765,7 +766,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -799,7 +800,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Items.DIAMOND, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -809,7 +810,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -856,7 +857,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(DiamantinverseItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -866,7 +867,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -900,7 +901,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Items.COAL, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -910,7 +911,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -957,7 +958,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(CoalNItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -967,7 +968,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1002,7 +1003,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Items.IRON_INGOT, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1012,7 +1013,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1059,7 +1060,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(Iron_NIngotItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1069,7 +1070,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1104,7 +1105,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Blocks.OAK_SAPLING, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1114,7 +1115,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1161,7 +1162,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(OakSaplingNBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1171,7 +1172,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1205,7 +1206,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Blocks.STONE, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1215,7 +1216,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1262,7 +1263,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(Blocks.IRON_ORE, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1272,7 +1273,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1307,7 +1308,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Items.ARMOR_STAND, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1317,7 +1318,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1364,7 +1365,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(Blocks.PLAYER_WALL_HEAD, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1374,7 +1375,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1409,7 +1410,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(NegativeDustItem.block, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1419,7 +1420,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1466,7 +1467,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(BoisNBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1476,7 +1477,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1511,7 +1512,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(NegativeDustItem.block, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1521,7 +1522,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1568,7 +1569,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(SpruceLogNBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1578,7 +1579,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1612,7 +1613,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Blocks.STONE, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1622,7 +1623,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1669,7 +1670,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(Blocks.DIAMOND_ORE, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1679,7 +1680,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1713,7 +1714,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Blocks.STONE, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1723,7 +1724,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1770,7 +1771,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(Blocks.GOLD_ORE, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1780,7 +1781,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1814,7 +1815,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Items.REDSTONE, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1824,7 +1825,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1871,7 +1872,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(Items.FIREWORK_ROCKET, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1881,7 +1882,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1916,7 +1917,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(NegativeDustItem.block, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1926,7 +1927,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1973,7 +1974,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(BucketNItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1983,7 +1984,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -2018,7 +2019,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(NegativeDustItem.block, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -2028,7 +2029,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -2075,7 +2076,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(BlazeNroadItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -2085,7 +2086,7 @@ public class FusionnatorProceedProcedure extends NegativenModElements.ModElement
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);

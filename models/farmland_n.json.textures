@@ -16,7 +16,7 @@
     },
     "moist": {
       "map": {
-        "top": "farmlandn_moist",
+        "top": "farmlandn",
         "dirt": "dn"
       },
       "name": "moist"

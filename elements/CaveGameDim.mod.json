@@ -1,24 +1,7 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "dimension",
   "definition": {
-    "portalFrame": {
-      "value": ""
-    },
-    "portalParticles": {
-      "value": "PORTAL"
-    },
-    "portalLuminance": 0.0,
-    "portalSound": {
-      "value": "block.portal.ambient"
-    },
-    "igniterName": "Cave Game Dim Portal Igniter",
-    "igniterTab": {
-      "value": "TOOLS"
-    },
-    "texture": "",
-    "portalTexture": "",
-    "enablePortal": false,
     "biomesInDimension": [
       {
         "value": "CUSTOM:CaveGameBiome"
@@ -47,11 +30,27 @@
     },
     "canRespawnHere": false,
     "hasFog": false,
-    "hasWeather": false,
     "isDark": false,
     "doesWaterVaporize": false,
     "sleepResult": "DENY",
     "hasSkyLight": false,
-    "imitateOverworldBehaviour": false
+    "imitateOverworldBehaviour": false,
+    "portalFrame": {
+      "value": ""
+    },
+    "portalParticles": {
+      "value": "PORTAL"
+    },
+    "portalLuminance": 0,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Cave Game Dim Portal Igniter",
+    "igniterTab": {
+      "value": "TOOLS"
+    },
+    "texture": "",
+    "portalTexture": "",
+    "enablePortal": false
   }
 }

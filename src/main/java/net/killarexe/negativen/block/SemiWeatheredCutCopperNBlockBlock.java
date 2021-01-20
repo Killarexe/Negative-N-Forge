@@ -4,11 +4,10 @@ package net.killarexe.negativen.block;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
-import net.minecraft.world.IWorldReader;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -43,14 +42,9 @@ public class SemiWeatheredCutCopperNBlockBlock extends NegativenModElements.ModE
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1.3f, 10f).lightValue(0).harvestLevel(2)
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1.3f, 10f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("semi_weathered_cut_copper_n_block");
-		}
-
-		@Override
-		public int tickRate(IWorldReader world) {
-			return 1200000;
 		}
 
 		@Override
@@ -67,7 +61,7 @@ public class SemiWeatheredCutCopperNBlockBlock extends NegativenModElements.ModE
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1200000);
 		}
 
 		@Override
@@ -84,7 +78,7 @@ public class SemiWeatheredCutCopperNBlockBlock extends NegativenModElements.ModE
 				$_dependencies.put("world", world);
 				CopperNAgeProcedureProcedure.executeProcedure($_dependencies);
 			}
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1200000);
 		}
 	}
 }

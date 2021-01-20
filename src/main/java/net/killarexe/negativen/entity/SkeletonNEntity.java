@@ -7,14 +7,17 @@ import net.minecraftforge.fml.network.FMLPlayMessages;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.DungeonHooks;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.gen.Heightmap;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.World;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.BlockPos;
@@ -24,6 +27,7 @@ import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.monster.SkeletonEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
@@ -32,7 +36,10 @@ import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.EntityType;
@@ -58,7 +65,8 @@ public class SkeletonNEntity extends NegativenModElements.ModElement {
 	public static EntityType entity = null;
 	public SkeletonNEntity(NegativenModElements instance) {
 		super(instance, 62);
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
@@ -71,50 +79,62 @@ public class SkeletonNEntity extends NegativenModElements.ModElement {
 				.setRegistryName("skeleton_n_spawn_egg"));
 	}
 
+	@SubscribeEvent
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("negativen:negative").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:desert_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:oak_nforest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:birch_n_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:plains_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:dark_oak_n_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:jungle_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:spruce_forest_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:montains_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negativen:acacia_n_biome").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 10, 4, 4));
+	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
-			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:negative")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:desert_n")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:oak_nforest")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:birch_n_forest")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:plains_n")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:dark_oak_n_forest")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:jungle_n")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:spruce_forest_n")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:montains_n")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:acacia_n_biome")))
-				biomeCriteria = true;
-			if (!biomeCriteria)
-				continue;
-			biome.getSpawns(EntityClassification.MONSTER).add(new Biome.SpawnListEntry(entity, 10, 4, 4));
-		}
+		DeferredWorkQueue.runLater(this::setupAttributes);
 		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
 				MonsterEntity::canMonsterSpawn);
 		DungeonHooks.addDungeonMob(entity, 180);
 	}
-
-	@SubscribeEvent
-	@OnlyIn(Dist.CLIENT)
-	public void registerModels(ModelRegistryEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
-			return new MobRenderer(renderManager, new Modelskeleton_n(), 0.5f) {
-				@Override
-				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("negativen:textures/skeleton-n.png");
-				}
-			};
-		});
+	private static class ModelRegisterHandler {
+		@SubscribeEvent
+		@OnlyIn(Dist.CLIENT)
+		public void registerModels(ModelRegistryEvent event) {
+			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
+				return new MobRenderer(renderManager, new Modelskeleton_n(), 0.5f) {
+					@Override
+					public ResourceLocation getEntityTexture(Entity entity) {
+						return new ResourceLocation("negativen:textures/skeleton-n.png");
+					}
+				};
+			});
+		}
+	}
+	private void setupAttributes() {
+		AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
+		ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
+		ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 15);
+		ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
+		ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
+		GlobalEntityTypeAttributes.put(entity, ammma.create());
 	}
 	public static class CustomEntity extends SkeletonEntity implements IRangedAttackMob {
 		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
@@ -125,6 +145,7 @@ public class SkeletonNEntity extends NegativenModElements.ModElement {
 			super(type, world);
 			experienceValue = 1;
 			setNoAI(false);
+			this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(BowNItem.block, (int) (1)));
 		}
 
 		@Override
@@ -184,20 +205,6 @@ public class SkeletonNEntity extends NegativenModElements.ModElement {
 			if (source == DamageSource.LIGHTNING_BOLT)
 				return false;
 			return super.attackEntityFrom(source, amount);
-		}
-
-		@Override
-		protected void registerAttributes() {
-			super.registerAttributes();
-			if (this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED) != null)
-				this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.3);
-			if (this.getAttribute(SharedMonsterAttributes.MAX_HEALTH) != null)
-				this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(15);
-			if (this.getAttribute(SharedMonsterAttributes.ARMOR) != null)
-				this.getAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(0);
-			if (this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE) == null)
-				this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTACK_DAMAGE);
-			this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3);
 		}
 
 		public void attackEntityWithRangedAttack(LivingEntity target, float flval) {

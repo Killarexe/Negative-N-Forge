@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "block",
   "definition": {
     "texture": "redstone_ore_n",
@@ -14,6 +14,9 @@
     "emissiveRendering": true,
     "displayFluidOverlay": false,
     "itemTexture": "",
+    "particleTexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -38,7 +41,6 @@
     },
     "dropAmount": 8,
     "useLootTableForDrops": false,
-    "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
@@ -64,7 +66,7 @@
     "soundOnStep": {
       "value": "STONE"
     },
-    "luminance": 0.0,
+    "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 3,
     "spawnParticles": false,
@@ -91,16 +93,22 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [],
+    "spawnWorldTypes": [
+      "CUSTOM:Nega",
+      "CUSTOM:MineingDim"
+    ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "Blocks.STONE"
+      },
+      {
+        "value": "CUSTOM:StoneN"
       }
     ],
-    "frequencyPerChunks": 10,
-    "frequencyOnChunk": 16,
+    "frequencyPerChunks": 5,
+    "frequencyOnChunk": 4,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 64
+    "maxGenerateHeight": 24
   }
 }

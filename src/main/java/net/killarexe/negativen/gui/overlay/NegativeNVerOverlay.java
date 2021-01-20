@@ -40,7 +40,7 @@ public class NegativeNVerOverlay extends NegativenModElements.ModElement {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 			if (NegativeNVerShowProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world))) {
-				Minecraft.getInstance().fontRenderer.drawString("Negative-N 1.3.02a", posX + -207, posY + -117, -1);
+				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(), "Negative-N 1.3 Pre-Release 1", posX + -207, posY + -117, -1);
 			}
 		}
 	}

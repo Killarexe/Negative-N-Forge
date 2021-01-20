@@ -15,6 +15,7 @@ import net.killarexe.negativen.item.MilkBucketNItem;
 import net.killarexe.negativen.item.BucketNItem;
 import net.killarexe.negativen.entity.CowNEntity;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -27,7 +28,7 @@ public class BucketNLivingEntityIsHitWithItemProcedure extends NegativenModEleme
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure BucketNLivingEntityIsHitWithItem!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure BucketNLivingEntityIsHitWithItem!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -41,7 +42,7 @@ public class BucketNLivingEntityIsHitWithItemProcedure extends NegativenModEleme
 				public boolean checkGamemode(Entity _ent) {
 					if (_ent instanceof ServerPlayerEntity) {
 						return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
-					} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+					} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
 						NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
 								.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
 						return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
@@ -51,7 +52,8 @@ public class BucketNLivingEntityIsHitWithItemProcedure extends NegativenModEleme
 			}.checkGamemode(entity))) {
 				if (entity instanceof PlayerEntity) {
 					ItemStack _stktoremove = new ItemStack(BucketNItem.block, (int) (1));
-					((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+					((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+							((PlayerEntity) entity).container.func_234641_j_());
 				}
 			}
 		}

@@ -4,7 +4,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
 
 import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
@@ -29,7 +29,7 @@ public class TimerProcedure extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void onWorldTick(TickEvent.WorldTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
-			World world = event.world;
+			IWorld world = event.world;
 			Map<String, Object> dependencies = new HashMap<>();
 			dependencies.put("world", world);
 			dependencies.put("event", event);

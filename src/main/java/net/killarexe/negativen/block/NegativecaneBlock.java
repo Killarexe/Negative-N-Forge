@@ -2,30 +2,32 @@
 package net.killarexe.negativen.block;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.common.PlantType;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.placement.FrequencyConfig;
+import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.ISeedReader;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.RegistryKey;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -38,7 +40,6 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.world.dimension.NegaDimension;
 import net.killarexe.negativen.item.SugarCaneNItem;
 import net.killarexe.negativen.NegativenModElements;
 
@@ -52,6 +53,7 @@ public class NegativecaneBlock extends NegativenModElements.ModElement {
 	public static final Block block = null;
 	public NegativecaneBlock(NegativenModElements instance) {
 		super(instance, 486);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
@@ -66,14 +68,19 @@ public class NegativecaneBlock extends NegativenModElements.ModElement {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
 
-	@Override
-	public void init(FMLCommonSetupEvent event) {
-		Feature<BlockClusterFeatureConfig> feature = new Feature<BlockClusterFeatureConfig>(BlockClusterFeatureConfig::deserialize) {
+	@SubscribeEvent
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("negativen:negative").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		Feature<BlockClusterFeatureConfig> feature = new Feature<BlockClusterFeatureConfig>(BlockClusterFeatureConfig.field_236587_a_) {
 			@Override
-			public boolean place(IWorld world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
-				DimensionType dimensionType = world.getDimension().getType();
+			public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
+				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == NegaDimension.type)
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
@@ -95,30 +102,17 @@ public class NegativecaneBlock extends NegativenModElements.ModElement {
 				return generated > 0;
 			}
 		};
-		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
-			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:negative")))
-				biomeCriteria = true;
-			if (!biomeCriteria)
-				continue;
-			biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-					feature.withConfiguration(
-							(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new SimpleBlockPlacer()))
-									.tries(64).build())
-							.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(5))));
-		}
+		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION)
+				.add(() -> (ConfiguredFeature<?, ?>) feature.withConfiguration(
+						(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new SimpleBlockPlacer()))
+								.tries(64).build())
+						.withPlacement(Features.Placements.PATCH_PLACEMENT).func_242731_b(5));
 	}
 	public static class BlockCustomFlower extends SugarCaneBlock {
 		public BlockCustomFlower() {
 			super(Block.Properties.create(Material.PLANTS).tickRandomly().doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0f, 0f)
-					.lightValue(0));
+					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setLightLevel(s -> 0));
 			setRegistryName("sugar_cane_n");
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public boolean isEmissiveRendering(BlockState blockState) {
-			return true;
 		}
 
 		@Override
@@ -136,7 +130,7 @@ public class NegativecaneBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public PlantType getPlantType(IBlockReader world, BlockPos pos) {
-			return PlantType.Beach;
+			return PlantType.BEACH;
 		}
 
 		@Override

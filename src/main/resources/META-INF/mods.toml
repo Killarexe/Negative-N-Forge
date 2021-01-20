@@ -1,14 +1,15 @@
 modLoader="javafml"
-loaderVersion="[31,)"
+loaderVersion="[35,)"
+license="Not specified"
 
 [[mods]]
 modId="negativen"
-version="1.3.02a"
+version="1.3 Pre-Release 2"
 displayName="Negative-N"
 credits="The Mod made by Killar.exe and Fuzy and use MCreator"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/negative-n"
 logoFile="logo.png"
-authors="Killar.exe, Fuzy/blackwarexe"
+authors="Killar.exe, Rainer"
 description='''
 A mod create by Killar.exe and Fuzy with new things to discover!
 '''
@@ -16,14 +17,14 @@ A mod create by Killar.exe and Fuzy with new things to discover!
 [[dependencies.negativen]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.16.4]"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.negativen]]
     modId="forge"
     mandatory=true
-    versionRange="[31.2.0]"
+    versionRange="[35.1.4]"
     ordering="NONE"
     side="BOTH"
 

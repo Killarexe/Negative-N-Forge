@@ -2,10 +2,8 @@
 package net.killarexe.negativen.block;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -36,14 +34,9 @@ public class SlimeNBlockBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.SEA_GRASS).sound(SoundType.SLIME).hardnessAndResistance(1f, 10f).lightValue(0).slipperiness(0.3f));
+			super(Block.Properties.create(Material.SEA_GRASS).sound(SoundType.SLIME).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0)
+					.slipperiness(0.3f).setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true));
 			setRegistryName("slime_n_block");
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public boolean isEmissiveRendering(BlockState blockState) {
-			return true;
 		}
 
 		@Override

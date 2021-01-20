@@ -21,6 +21,7 @@ import net.killarexe.negativen.block.BirchNFenceBlock;
 import net.killarexe.negativen.block.AcaciaplanksnBlock;
 import net.killarexe.negativen.block.AcaciaNFenceBlock;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -35,22 +36,22 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure FenceProcced!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure FenceProcced!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure FenceProcced!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure FenceProcced!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure FenceProcced!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure FenceProcced!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure FenceProcced!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure FenceProcced!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -70,7 +71,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 			}
 		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(PlanchedeboisNBlock.block, (int) (1))
 				.getItem()) && (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -80,7 +81,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -113,7 +114,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(OakNFenceBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -123,7 +124,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -145,7 +146,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 			}
 		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(AcaciaplanksnBlock.block, (int) (1)).getItem())
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -155,7 +156,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -188,7 +189,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(AcaciaNFenceBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -198,7 +199,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -220,7 +221,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 			}
 		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(BirchplanksnBlock.block, (int) (1)).getItem())
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -230,7 +231,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -263,7 +264,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(BirchNFenceBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -273,7 +274,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -295,7 +296,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 			}
 		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(DarkoakplanksNBlock.block, (int) (1))
 				.getItem()) && (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -305,7 +306,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -338,7 +339,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(DarkOakNFenceBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -348,7 +349,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -370,7 +371,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 			}
 		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(JunglePlanksNBlock.block, (int) (1)).getItem())
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -380,7 +381,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -413,7 +414,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(JungleNFenceBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -423,7 +424,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -445,7 +446,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 			}
 		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(SprucePlanksNBlock.block, (int) (1)).getItem())
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -455,7 +456,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -488,7 +489,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (2);
 					final ItemStack _setstack = new ItemStack(SpruceNFenceBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -498,7 +499,7 @@ public class FenceProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);

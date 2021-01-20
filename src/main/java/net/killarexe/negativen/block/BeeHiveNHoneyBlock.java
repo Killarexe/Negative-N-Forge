@@ -3,10 +3,8 @@ package net.killarexe.negativen.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -35,15 +33,10 @@ public class BeeHiveNHoneyBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1.1500000000000001f, 10f).lightValue(0)
-					.harvestLevel(1).harvestTool(ToolType.AXE));
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1.1500000000000001f, 10f).setLightLevel(s -> 0)
+					.harvestLevel(1).harvestTool(ToolType.AXE).setNeedsPostProcessing((bs, br, bp) -> true)
+					.setEmmisiveRendering((bs, br, bp) -> true));
 			setRegistryName("bee_hive_n_honey");
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public boolean isEmissiveRendering(BlockState blockState) {
-			return true;
 		}
 
 		@Override

@@ -7,12 +7,11 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
-import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -55,24 +54,14 @@ public class LightlyWeatheredCutCopperBlockBlock extends NegativenModElements.Mo
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1.4f, 10f).lightValue(0).harvestLevel(3)
-					.harvestTool(ToolType.PICKAXE).notSolid());
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1.4f, 10f).setLightLevel(s -> 0).harvestLevel(3)
+					.harvestTool(ToolType.PICKAXE).notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("lightly_weathered_cut_copper_block");
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
 		}
 
 		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
-		}
-
-		@Override
-		public int tickRate(IWorldReader world) {
-			return 1200000;
 		}
 
 		@Override
@@ -89,7 +78,7 @@ public class LightlyWeatheredCutCopperBlockBlock extends NegativenModElements.Mo
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1200000);
 		}
 
 		@Override
@@ -106,7 +95,7 @@ public class LightlyWeatheredCutCopperBlockBlock extends NegativenModElements.Mo
 				$_dependencies.put("world", world);
 				CopperNAgeProcedureProcedure.executeProcedure($_dependencies);
 			}
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1200000);
 		}
 	}
 }

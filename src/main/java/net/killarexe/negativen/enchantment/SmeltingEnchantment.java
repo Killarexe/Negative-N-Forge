@@ -37,6 +37,13 @@ public class SmeltingEnchantment extends NegativenModElements.ModElement {
 		}
 
 		@Override
+		protected boolean canApplyTogether(Enchantment ench) {
+			if (ench == MineingEnchantment.enchantment)
+				return true;
+			return false;
+		}
+
+		@Override
 		public boolean isTreasureEnchantment() {
 			return false;
 		}

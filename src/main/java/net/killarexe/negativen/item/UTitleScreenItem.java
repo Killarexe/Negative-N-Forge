@@ -15,7 +15,7 @@ import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
 public class UTitleScreenItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:ester_egg")
+	@ObjectHolder("negativen:easter_egg")
 	public static final Item block = null;
 	public UTitleScreenItem(NegativenModElements instance) {
 		super(instance, 415);
@@ -29,7 +29,7 @@ public class UTitleScreenItem extends NegativenModElements.ModElement {
 		public MusicDiscItemCustom() {
 			super(0, NegativenModElements.sounds.get(new ResourceLocation("negativen:easter_egg")),
 					new Item.Properties().group(null).maxStackSize(1).rarity(Rarity.RARE));
-			setRegistryName("ester_egg");
+			setRegistryName("easter_egg");
 		}
 
 		@Override

@@ -2,32 +2,33 @@
 package net.killarexe.negativen.block;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.placement.CountRangeConfig;
+import net.minecraft.world.gen.feature.template.IRuleTestType;
+import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.OreFeature;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
+import net.minecraft.world.ISeedReader;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -40,7 +41,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.world.dimension.NegaDimension;
 import net.killarexe.negativen.procedures.SweetBerryNBushStage3AdditionalGenerationConditionProcedure;
 import net.killarexe.negativen.procedures.SweetBerryBushRightClickProcedure;
 import net.killarexe.negativen.procedures.CropsGrowProcedure;
@@ -61,6 +61,7 @@ public class SweetBerryNBushStage3Block extends NegativenModElements.ModElement 
 	public static final Block block = null;
 	public SweetBerryNBushStage3Block(NegativenModElements instance) {
 		super(instance, 774);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
@@ -76,20 +77,10 @@ public class SweetBerryNBushStage3Block extends NegativenModElements.ModElement 
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.PLANT).hardnessAndResistance(0f, 0f).lightValue(2).doesNotBlockMovement()
-					.notSolid().tickRandomly());
+			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.PLANT).hardnessAndResistance(0f, 0f).setLightLevel(s -> 1)
+					.doesNotBlockMovement().notSolid().tickRandomly().setNeedsPostProcessing((bs, br, bp) -> true)
+					.setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
 			setRegistryName("sweet_berry_n_bush_stage_3");
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public boolean isEmissiveRendering(BlockState blockState) {
-			return true;
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
 		}
 
 		@Override
@@ -145,38 +136,41 @@ public class SweetBerryNBushStage3Block extends NegativenModElements.ModElement 
 			return ActionResultType.SUCCESS;
 		}
 	}
-	@Override
-	public void init(FMLCommonSetupEvent event) {
-		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
-			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("negativen:spruce_forest_n")))
-				biomeCriteria = true;
-			if (!biomeCriteria)
-				continue;
-			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, new OreFeature(OreFeatureConfig::deserialize) {
-				@Override
-				public boolean place(IWorld world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
-					DimensionType dimensionType = world.getDimension().getType();
-					boolean dimensionCriteria = false;
-					if (dimensionType == NegaDimension.type)
-						dimensionCriteria = true;
-					if (!dimensionCriteria)
-						return false;
-					int x = pos.getX();
-					int y = pos.getY();
-					int z = pos.getZ();
-					if (!SweetBerryNBushStage3AdditionalGenerationConditionProcedure
-							.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
-						return false;
-					return super.place(world, generator, rand, pos, config);
-				}
-			}.withConfiguration(new OreFeatureConfig(
-					OreFeatureConfig.FillerBlockType.create("sweet_berry_n_bush_stage_3", "sweet_berry_n_bush_stage_3", blockAt -> {
-						boolean blockCriteria = false;
-						if (blockAt.getBlock() == Blocks.AIR.getDefaultState().getBlock())
-							blockCriteria = true;
-						return blockCriteria;
-					}), block.getDefaultState(), 5)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(1, 52, 52, 75))));
-		}
+	@SubscribeEvent
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("negativen:spruce_forest_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> new OreFeature(OreFeatureConfig.CODEC) {
+			@Override
+			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
+				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
+				boolean dimensionCriteria = false;
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+					dimensionCriteria = true;
+				if (!dimensionCriteria)
+					return false;
+				int x = pos.getX();
+				int y = pos.getY();
+				int z = pos.getZ();
+				if (!SweetBerryNBushStage3AdditionalGenerationConditionProcedure
+						.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
+					return false;
+				return super.generate(world, generator, rand, pos, config);
+			}
+		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.AIR.getDefaultState().getBlock()) {
+			public boolean test(BlockState blockAt, Random random) {
+				boolean blockCriteria = false;
+				if (blockAt.getBlock() == Blocks.AIR.getDefaultState().getBlock())
+					blockCriteria = true;
+				return blockCriteria;
+			}
+
+			protected IRuleTestType<?> getType() {
+				return IRuleTestType.BLOCK_MATCH;
+			}
+		}, block.getDefaultState(), 5)).range(75).square().func_242731_b(1));
 	}
 }

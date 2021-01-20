@@ -1,71 +1,66 @@
 
 package net.killarexe.negativen.world.biome;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
-import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.placement.ChanceConfig;
-import net.minecraft.world.gen.feature.structure.MineshaftStructure;
-import net.minecraft.world.gen.feature.structure.MineshaftConfig;
-import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
+import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
+import net.minecraft.world.biome.BiomeGenerationSettings;
+import net.minecraft.world.biome.BiomeAmbience;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
+import net.minecraft.block.Blocks;
 
 import net.killarexe.negativen.block.ClassicNetherrackBlock;
 import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
 public class ClassicNetherBiome extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:classic_nether")
-	public static final CustomBiome biome = null;
+	public static Biome biome;
 	public ClassicNetherBiome(NegativenModElements instance) {
 		super(instance, 811);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
-
-	@Override
-	public void initElements() {
-		elements.biomes.add(() -> new CustomBiome());
+	private static class BiomeRegisterHandler {
+		@SubscribeEvent
+		public void registerBiomes(RegistryEvent.Register<Biome> event) {
+			if (biome == null) {
+				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-65536).setWaterColor(4159204).setWaterFogColor(329011)
+						.withSkyColor(-65536).withFoliageColor(10387789).withGrassColor(9470285).build();
+				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder().withSurfaceBuilder(
+						SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(ClassicNetherrackBlock.block.getDefaultState(),
+								ClassicNetherrackBlock.block.getDefaultState(), ClassicNetherrackBlock.block.getDefaultState())));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(
+								(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.BROWN_MUSHROOM.getDefaultState()),
+										SimpleBlockPlacer.PLACER)).tries(3).func_227317_b_().build()));
+				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+						Feature.RANDOM_PATCH.withConfiguration(
+								(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(Blocks.RED_MUSHROOM.getDefaultState()),
+										SimpleBlockPlacer.PLACER)).tries(3).func_227317_b_().build()));
+				DefaultBiomeFeatures.withCavesAndCanyons(biomeGenerationSettings);
+				DefaultBiomeFeatures.withOverworldOres(biomeGenerationSettings);
+				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
+				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ZOMBIFIED_PIGLIN, 20, 4, 4));
+				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.1f).scale(0.2f).temperature(2f)
+						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
+						.withGenerationSettings(biomeGenerationSettings.build()).build();
+				event.getRegistry().register(biome.setRegistryName("negativen:classic_nether"));
+			}
+		}
 	}
-
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-	}
-	static class CustomBiome extends Biome {
-		public CustomBiome() {
-			super(new Biome.Builder().downfall(0f).depth(0.1f).scale(0.2f).temperature(2f).precipitation(Biome.RainType.NONE)
-					.category(Biome.Category.NONE).waterColor(4159204).waterFogColor(329011)
-					.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(ClassicNetherrackBlock.block.getDefaultState(),
-							ClassicNetherrackBlock.block.getDefaultState(), ClassicNetherrackBlock.block.getDefaultState())));
-			setRegistryName("classic_nether");
-			DefaultBiomeFeatures.addCarvers(this);
-			DefaultBiomeFeatures.addMonsterRooms(this);
-			DefaultBiomeFeatures.addStructures(this);
-			DefaultBiomeFeatures.addOres(this);
-			DefaultBiomeFeatures.addLakes(this);
-			this.addStructure(Feature.STRONGHOLD.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-			this.addStructure(Feature.MINESHAFT.withConfiguration(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
-			this.addStructure(Feature.PILLAGER_OUTPOST.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-			addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-					Feature.RANDOM_PATCH.withConfiguration(DefaultBiomeFeatures.BROWN_MUSHROOM_CONFIG)
-							.withPlacement(Placement.CHANCE_HEIGHTMAP_DOUBLE.configure(new ChanceConfig(3))));
-			addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_PATCH.withConfiguration(DefaultBiomeFeatures.RED_MUSHROOM_CONFIG)
-					.withPlacement(Placement.CHANCE_HEIGHTMAP_DOUBLE.configure(new ChanceConfig(3))));
-			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ZOMBIE_PIGMAN, 20, 4, 4));
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public int getSkyColor() {
-			return -65536;
-		}
 	}
 }

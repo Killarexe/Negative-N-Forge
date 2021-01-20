@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "negativen:block/lever_n"
+    },
+    "facing=east": {
+      "model": "negativen:block/lever_n",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "negativen:block/lever_n",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "negativen:block/lever_n",
+      "y": 270
+    }
+  }
+}

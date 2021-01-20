@@ -4,7 +4,7 @@ package net.killarexe.negativen.block;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 
-import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -37,7 +37,7 @@ public class BrichStrairsNBlock extends NegativenModElements.ModElement {
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2f, 10f)).getDefaultState(),
-					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 10f).lightValue(0).harvestLevel(0)
+					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 10f).setLightLevel(s -> 0).harvestLevel(0)
 							.harvestTool(ToolType.AXE));
 			setRegistryName("birch_stairs_n");
 		}

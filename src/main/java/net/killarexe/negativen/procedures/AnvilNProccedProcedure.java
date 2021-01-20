@@ -25,6 +25,7 @@ import net.killarexe.negativen.item.ArnurendiamantinverseItem;
 import net.killarexe.negativen.block.NetheriteNBlockBlock;
 import net.killarexe.negativen.block.BlockdediamantInverseBlock;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -40,22 +41,22 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure AnvilNProcced!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure AnvilNProcced!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure AnvilNProcced!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure AnvilNProcced!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure AnvilNProcced!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure AnvilNProcced!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure AnvilNProcced!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure AnvilNProcced!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -101,7 +102,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(PiocheenDiamantNItem.block, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -111,7 +112,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -175,7 +176,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (3);
 					final ItemStack _setstack = new ItemStack(NetheriteNPickaxeItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -185,7 +186,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -233,7 +234,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(EpeeenDiamantNItem.block, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -243,7 +244,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -307,7 +308,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (3);
 					final ItemStack _setstack = new ItemStack(NetheriteNSwordItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -317,7 +318,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -365,7 +366,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(HacheendiamantNItem.block, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -375,7 +376,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -439,7 +440,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (3);
 					final ItemStack _setstack = new ItemStack(NetheriteNAxeItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -449,7 +450,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -497,7 +498,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(PelleenDiamantNItem.block, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -507,7 +508,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -571,7 +572,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (3);
 					final ItemStack _setstack = new ItemStack(NetheriteNShovelItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -581,7 +582,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -629,7 +630,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(HoeenDiamantNItem.block, (int) (1))
 						.getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -639,7 +640,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -703,7 +704,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (3);
 					final ItemStack _setstack = new ItemStack(NetheriteNHoeItem.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -713,7 +714,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -761,7 +762,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 						.getItem() == new ItemStack(BlockdediamantInverseBlock.block, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -771,7 +772,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -835,7 +836,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (3);
 					final ItemStack _setstack = new ItemStack(NetheriteNBlockBlock.block, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -845,7 +846,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -893,7 +894,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 						.getItem() == new ItemStack(ArnurendiamantinverseItem.helmet, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -903,7 +904,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -967,7 +968,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (3);
 					final ItemStack _setstack = new ItemStack(NetheriteNArmorItem.helmet, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -977,7 +978,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1025,7 +1026,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 						.getItem() == new ItemStack(ArnurendiamantinverseItem.body, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1035,7 +1036,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1099,7 +1100,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (3);
 					final ItemStack _setstack = new ItemStack(NetheriteNArmorItem.body, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1109,7 +1110,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1157,7 +1158,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 						.getItem() == new ItemStack(ArnurendiamantinverseItem.legs, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1167,7 +1168,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1231,7 +1232,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (3);
 					final ItemStack _setstack = new ItemStack(NetheriteNArmorItem.legs, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1241,7 +1242,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1289,7 +1290,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2)))
 						.getItem() == new ItemStack(ArnurendiamantinverseItem.boots, (int) (1)).getItem()))
 				&& (((new Object() {
-					public int getAmount(BlockPos pos, int sltid) {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
 						TileEntity _ent = world.getTileEntity(pos);
 						if (_ent != null) {
@@ -1299,7 +1300,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 						}
 						return _retval.get();
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) == 0) || ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -1363,7 +1364,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 					final int _sltid = (int) (3);
 					final ItemStack _setstack = new ItemStack(NetheriteNArmorItem.boots, (int) (1));
 					_setstack.setCount((int) ((new Object() {
-						public int getAmount(BlockPos pos, int sltid) {
+						public int getAmount(IWorld world, BlockPos pos, int sltid) {
 							AtomicInteger _retval = new AtomicInteger(0);
 							TileEntity _ent = world.getTileEntity(pos);
 							if (_ent != null) {
@@ -1373,7 +1374,7 @@ public class AnvilNProccedProcedure extends NegativenModElements.ModElement {
 							}
 							return _retval.get();
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
+					}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (3))) + 1));
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
 							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);

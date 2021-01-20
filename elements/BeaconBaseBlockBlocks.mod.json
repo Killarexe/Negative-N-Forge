@@ -1,0 +1,70 @@
+{
+  "_fv": 15,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:BlockdediamantInverse"
+      },
+      {
+        "value": "CUSTOM:Iron_NOreBlock"
+      },
+      {
+        "value": "CUSTOM:GoldNOreBlock"
+      },
+      {
+        "value": "CUSTOM:ClassicIronBlock"
+      },
+      {
+        "value": "CUSTOM:ClassicIronNBlock"
+      },
+      {
+        "value": "CUSTOM:ClassicGoldBlock"
+      },
+      {
+        "value": "CUSTOM:ClassicGoldNBlock"
+      },
+      {
+        "value": "CUSTOM:EmeraldNBlock"
+      },
+      {
+        "value": "CUSTOM:NetheriteNBlock"
+      },
+      {
+        "value": "CUSTOM:RedstoneBlockN"
+      },
+      {
+        "value": "CUSTOM:CopperNBlock"
+      },
+      {
+        "value": "CUSTOM:LightlyWeatheredCopperNBlock"
+      },
+      {
+        "value": "CUSTOM:SemiWeatheredCopperNBlock"
+      },
+      {
+        "value": "CUSTOM:WeatheredCopperNBlock"
+      },
+      {
+        "value": "CUSTOM:CutCopperNBlock"
+      },
+      {
+        "value": "CUSTOM:LightlyWeatheredCutCopperBlock"
+      },
+      {
+        "value": "CUSTOM:SemiWeatheredCutCopperNBlock"
+      },
+      {
+        "value": "CUSTOM:WeatheredCutCopperNBlock"
+      },
+      {
+        "value": "CUSTOM:LapisNBlock"
+      }
+    ],
+    "functions": [],
+    "name": "beacon_base_blocks",
+    "namespace": "minecraft"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "block",
   "definition": {
     "texture": "acacia_planksn",
@@ -13,6 +13,10 @@
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
+    "itemTexture": "",
+    "particleTexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -37,7 +41,6 @@
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
-    "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
@@ -48,7 +51,7 @@
     "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "LIGHT_BLUE",
     "creativePickItem": {
       "value": ""
     },
@@ -63,7 +66,7 @@
     "soundOnStep": {
       "value": "WOOD"
     },
-    "luminance": 0.0,
+    "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 0,
     "spawnParticles": false,
@@ -89,6 +92,7 @@
     "energyMaxExtract": 200,
     "isFluidTank": false,
     "fluidCapacity": 8000,
+    "fluidRestrictions": [],
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [],

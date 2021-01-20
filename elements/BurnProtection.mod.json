@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "enchantment",
   "definition": {
     "name": "Burn Protection",
@@ -8,24 +8,12 @@
     "minLevel": 1,
     "maxLevel": 1,
     "damageModifier": 0,
-    "compatibleEnchantments": [],
-    "compatibleItems": [
+    "compatibleEnchantments": [
       {
-        "value": "Items.LEATHER_CHESTPLATE"
-      },
-      {
-        "value": "Items.CHAINMAIL_CHESTPLATE"
-      },
-      {
-        "value": "Items.IRON_CHESTPLATE"
-      },
-      {
-        "value": "Items.GOLDEN_CHESTPLATE"
-      },
-      {
-        "value": "Items.DIAMOND_CHESTPLATE"
+        "value": "FIRE_PROTECTION"
       }
     ],
+    "compatibleItems": [],
     "isTreasureEnchantment": false,
     "isCurse": false,
     "isAllowedOnBooks": true

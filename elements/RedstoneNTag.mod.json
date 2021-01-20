@@ -1,0 +1,19 @@
+{
+  "_fv": 15,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:RedstoneBlockN"
+      },
+      {
+        "value": "CUSTOM:LeverNOn"
+      }
+    ],
+    "functions": [],
+    "name": "redstone_n",
+    "namespace": "forge"
+  }
+}

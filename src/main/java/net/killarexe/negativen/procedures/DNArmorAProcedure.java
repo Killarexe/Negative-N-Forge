@@ -10,6 +10,7 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 import java.util.Iterator;
@@ -23,7 +24,7 @@ public class DNArmorAProcedure extends NegativenModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure DNArmorA!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure DNArmorA!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

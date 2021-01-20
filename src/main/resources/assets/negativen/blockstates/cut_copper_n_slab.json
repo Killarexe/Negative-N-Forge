@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "negativen:block/cut_copper_n_slab"
+    },
+    "type=top": {
+      "model": "negativen:block/cut_copper_n_slab_top"
+    },
+    "type=double": {
+      "model": "negativen:block/cut_copper_n_slab_full"
+    }
+  }
+}

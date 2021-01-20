@@ -1,19 +1,22 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "tntn_bottom",
-    "textureTop": "tntn_top",
-    "textureLeft": "tntn_side",
-    "textureFront": "tntn_side",
-    "textureRight": "tntn_side",
-    "textureBack": "tntn_side",
+    "texture": "tnt_n_bottom",
+    "textureTop": "tnt_n_top",
+    "textureLeft": "tnt_n_side",
+    "textureFront": "tnt_n_side",
+    "textureRight": "tnt_n_side",
+    "textureBack": "tnt_n_side",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
+    "particleTexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -38,7 +41,6 @@
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
-    "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
@@ -49,7 +51,7 @@
     "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
-    "colorOnMap": "LIME",
+    "colorOnMap": "LIGHT_BLUE",
     "creativePickItem": {
       "value": ""
     },
@@ -64,7 +66,7 @@
     "soundOnStep": {
       "value": "GROUND"
     },
-    "luminance": 0.0,
+    "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "spawnParticles": false,
@@ -92,6 +94,9 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
+      "name": "TNTNOnBlockRightClicked"
+    },
+    "onNeighbourBlockChanges": {
       "name": "TNTNOnBlockRightClicked"
     },
     "spawnWorldTypes": [],

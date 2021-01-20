@@ -1,0 +1,26 @@
+{
+  "_fv": 15,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "melon_n_slice",
+    "customModelName": "Normal",
+    "name": "Melon-N Slice",
+    "rarity": "UNCOMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNFood"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 3,
+    "saturation": 0.3,
+    "eatingSpeed": 32,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": false,
+    "isAlwaysEdible": false,
+    "animation": "eat",
+    "hasGlow": false
+  }
+}

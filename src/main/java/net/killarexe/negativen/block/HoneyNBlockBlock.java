@@ -2,10 +2,8 @@
 package net.killarexe.negativen.block;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -36,15 +34,9 @@ public class HoneyNBlockBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.OCEAN_PLANT).sound(SoundType.field_226947_m_).hardnessAndResistance(1.1500000000000001f, 10f)
-					.lightValue(0).slipperiness(1f));
+			super(Block.Properties.create(Material.OCEAN_PLANT).sound(SoundType.HONEY).hardnessAndResistance(1.1500000000000001f, 10f)
+					.setLightLevel(s -> 0).slipperiness(1f).setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true));
 			setRegistryName("honey_n_block");
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public boolean isEmissiveRendering(BlockState blockState) {
-			return true;
 		}
 
 		@Override

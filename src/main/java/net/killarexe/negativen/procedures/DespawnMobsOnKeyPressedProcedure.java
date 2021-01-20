@@ -3,10 +3,13 @@ package net.killarexe.negativen.procedures;
 import net.minecraftforge.fml.server.ServerLifecycleHooks;
 
 import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.Vec2f;
+import net.minecraft.util.text.ChatType;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.vector.Vector2f;
+import net.minecraft.util.Util;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -15,6 +18,7 @@ import net.minecraft.command.CommandSource;
 
 import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -27,27 +31,27 @@ public class DespawnMobsOnKeyPressedProcedure extends NegativenModElements.ModEl
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure DespawnMobsOnKeyPressed!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure DespawnMobsOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure DespawnMobsOnKeyPressed!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure DespawnMobsOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure DespawnMobsOnKeyPressed!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure DespawnMobsOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure DespawnMobsOnKeyPressed!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure DespawnMobsOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure DespawnMobsOnKeyPressed!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure DespawnMobsOnKeyPressed!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -58,25 +62,26 @@ public class DespawnMobsOnKeyPressedProcedure extends NegativenModElements.ModEl
 		if (((NegativenModVariables.MapVariables.get(world).Debug) == (true))) {
 			if ((entity.hasPermissionLevel((int) 4))) {
 				if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
-					if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-						world.getWorld().getServer().getCommandManager().handleCommand(
-								new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-										new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+					if (world instanceof ServerWorld) {
+						((World) world).getServer().getCommandManager().handleCommand(
+								new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+										new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 								"kill @e[type=!player]");
 					}
-					{
+					if (!world.isRemote()) {
 						MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 						if (mcserv != null)
-							mcserv.getPlayerList().sendMessage(new StringTextComponent("Every Mobs Has been kill"));
+							mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Every Mobs Has been kill"), ChatType.SYSTEM,
+									Util.DUMMY_UUID);
 					}
 				} else {
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You are Not in creative mod!"), (true));
 					}
 				}
 			}
 		} else {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Debug Mod is not activate"), (true));
 			}
 		}

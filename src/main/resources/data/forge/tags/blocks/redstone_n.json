@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "negativen:redstone_block_n",
+    "negativen:lever_n_on"
+  ]
+}

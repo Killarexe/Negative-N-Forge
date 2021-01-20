@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "lever": "lever_n",
+        "base": "cobblestone_n"
+      },
+      "name": "default"
+    }
+  }
+}

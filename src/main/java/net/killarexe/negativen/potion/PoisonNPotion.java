@@ -12,7 +12,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
-import net.minecraft.entity.ai.attributes.AbstractAttributeMap;
+import net.minecraft.entity.ai.attributes.AttributeModifierManager;
 import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.procedures.PoisonNPotionStartedappliedProcedure;
@@ -87,7 +87,7 @@ public class PoisonNPotion extends NegativenModElements.ModElement {
 		}
 
 		@Override
-		public void applyAttributesModifiersToEntity(LivingEntity entity, AbstractAttributeMap attributeMapIn, int amplifier) {
+		public void applyAttributesModifiersToEntity(LivingEntity entity, AttributeModifierManager attributeMapIn, int amplifier) {
 			World world = entity.world;
 			double x = entity.getPosX();
 			double y = entity.getPosY();

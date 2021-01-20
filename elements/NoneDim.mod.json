@@ -1,24 +1,7 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "dimension",
   "definition": {
-    "portalFrame": {
-      "value": "CUSTOM:Portalblock"
-    },
-    "portalParticles": {
-      "value": "ENCHANTMENT_TABLE"
-    },
-    "portalLuminance": 0.0,
-    "portalSound": {
-      "value": "block.portal.ambient"
-    },
-    "igniterName": "None Dim Portal Igniter",
-    "igniterTab": {
-      "value": "No creative tab entry"
-    },
-    "texture": "si",
-    "portalTexture": "np",
-    "enablePortal": true,
     "biomesInDimension": [
       {
         "value": "void"
@@ -47,11 +30,27 @@
     },
     "canRespawnHere": false,
     "hasFog": false,
-    "hasWeather": false,
     "isDark": false,
     "doesWaterVaporize": false,
     "sleepResult": "ALLOW",
     "hasSkyLight": false,
-    "imitateOverworldBehaviour": false
+    "imitateOverworldBehaviour": false,
+    "portalFrame": {
+      "value": "CUSTOM:Portalblock"
+    },
+    "portalParticles": {
+      "value": "ENCHANTMENT_TABLE"
+    },
+    "portalLuminance": 0,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "None Dim Portal Igniter",
+    "igniterTab": {
+      "value": "No creative tab entry"
+    },
+    "texture": "si",
+    "portalTexture": "np",
+    "enablePortal": true
   }
 }

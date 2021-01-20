@@ -15,6 +15,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
@@ -48,6 +49,8 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
+import com.mojang.blaze3d.matrix.MatrixStack;
+
 @NegativenModElements.ModElement.Tag
 public class DimensionStickGUIGui extends NegativenModElements.ModElement {
 	public static HashMap guistate = new HashMap();
@@ -59,17 +62,17 @@ public class DimensionStickGUIGui extends NegativenModElements.ModElement {
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ContainerRegisterHandler());
 	}
-
+	private static class ContainerRegisterHandler {
+		@SubscribeEvent
+		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
+			event.getRegistry().register(containerType.setRegistryName("dimensionstickgui"));
+		}
+	}
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
 		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
-	}
-
-	@SubscribeEvent
-	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("dimensionstickgui"));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -125,19 +128,19 @@ public class DimensionStickGUIGui extends NegativenModElements.ModElement {
 		}
 		private static final ResourceLocation texture = new ResourceLocation("negativen:textures/dimensionstickgui.png");
 		@Override
-		public void render(int mouseX, int mouseY, float partialTicks) {
-			this.renderBackground();
-			super.render(mouseX, mouseY, partialTicks);
-			this.renderHoveredToolTip(mouseX, mouseY);
+		public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
+			this.renderBackground(ms);
+			super.render(ms, mouseX, mouseY, partialTicks);
+			this.renderHoveredTooltip(ms, mouseX, mouseY);
 		}
 
 		@Override
-		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
+		protected void drawGuiContainerBackgroundLayer(MatrixStack ms, float par1, int par2, int par3) {
 			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+			this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 		}
 
 		@Override
@@ -155,14 +158,14 @@ public class DimensionStickGUIGui extends NegativenModElements.ModElement {
 		}
 
 		@Override
-		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Choose your Dimension", 70, 1, -16777216);
-			this.font.drawString("DimStick Ver 1.2", 160, 182, -16777216);
+		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
+			this.font.drawString(ms, "Choose your Dimension", 70, 1, -16777216);
+			this.font.drawString(ms, "DimStick Ver 1.2", 160, 182, -16777216);
 		}
 
 		@Override
-		public void removed() {
-			super.removed();
+		public void onClose() {
+			super.onClose();
 			Minecraft.getInstance().keyboardListener.enableRepeatEvents(false);
 		}
 
@@ -170,51 +173,51 @@ public class DimensionStickGUIGui extends NegativenModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 19, 90, 20, "Owerworld", e -> {
+			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 19, 90, 20, new StringTextComponent("Owerworld"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 46, 60, 20, "Nether", e -> {
+			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 46, 60, 20, new StringTextComponent("Nether"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 73, 30, 20, "End", e -> {
+			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 73, 30, 20, new StringTextComponent("End"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
 				handleButtonAction(entity, 2, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 100, 100, 20, "Underworld", e -> {
+			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 100, 100, 20, new StringTextComponent("Underworld"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
 				handleButtonAction(entity, 3, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 127, 80, 20, "Nether-N", e -> {
+			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 127, 80, 20, new StringTextComponent("Nether-N"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(4, x, y, z));
 				handleButtonAction(entity, 4, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 154, 50, 20, "Start", e -> {
+			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 154, 50, 20, new StringTextComponent("Start"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(5, x, y, z));
 				handleButtonAction(entity, 5, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 46, 40, 20, "None", e -> {
+			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 46, 40, 20, new StringTextComponent("None"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(6, x, y, z));
 				handleButtonAction(entity, 6, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 19, 100, 20, "MineingDim", e -> {
+			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 19, 100, 20, new StringTextComponent("MineingDim"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(7, x, y, z));
 				handleButtonAction(entity, 7, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 73, 100, 20, "ClassicDim", e -> {
+			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 73, 100, 20, new StringTextComponent("ClassicDim"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(8, x, y, z));
 				handleButtonAction(entity, 8, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 100, 110, 20, "ClassicNDim", e -> {
+			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 100, 110, 20, new StringTextComponent("ClassicNDim"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(9, x, y, z));
 				handleButtonAction(entity, 9, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 116, this.guiTop + 127, 95, 20, "Classic Nether", e -> {
+			this.addButton(new Button(this.guiLeft + 116, this.guiTop + 127, 95, 20, new StringTextComponent("Classic Nether"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(10, x, y, z));
 				handleButtonAction(entity, 10, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 155, 105, 20, "Classic Nether-N", e -> {
+			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 155, 105, 20, new StringTextComponent("Classic Nether-N"), e -> {
 				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(11, x, y, z));
 				handleButtonAction(entity, 11, x, y, z);
 			}));

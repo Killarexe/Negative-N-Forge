@@ -1,11 +1,12 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
+import net.killarexe.negativen.potion.OnFireNPotion;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -18,11 +19,11 @@ public class FireNEntityWalksOnTheBlockProcedure extends NegativenModElements.Mo
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure FireNEntityWalksOnTheBlock!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure FireNEntityWalksOnTheBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 60, (int) 1));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(OnFireNPotion.potion, (int) 60, (int) 1));
 	}
 }

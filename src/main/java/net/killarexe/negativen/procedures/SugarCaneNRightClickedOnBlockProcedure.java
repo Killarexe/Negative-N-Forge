@@ -14,6 +14,7 @@ import net.minecraft.client.Minecraft;
 import net.killarexe.negativen.item.SugarCaneNItem;
 import net.killarexe.negativen.block.NegativecaneBlock;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -26,27 +27,27 @@ public class SugarCaneNRightClickedOnBlockProcedure extends NegativenModElements
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure SugarCaneNRightClickedOnBlock!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure SugarCaneNRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure SugarCaneNRightClickedOnBlock!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure SugarCaneNRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure SugarCaneNRightClickedOnBlock!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure SugarCaneNRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure SugarCaneNRightClickedOnBlock!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure SugarCaneNRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure SugarCaneNRightClickedOnBlock!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure SugarCaneNRightClickedOnBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -59,7 +60,7 @@ public class SugarCaneNRightClickedOnBlockProcedure extends NegativenModElements
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayerEntity) {
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
-				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote) {
+				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
 					NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
 							.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
 					return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
@@ -69,7 +70,8 @@ public class SugarCaneNRightClickedOnBlockProcedure extends NegativenModElements
 		}.checkGamemode(entity))) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _stktoremove = new ItemStack(SugarCaneNItem.block, (int) (1));
-				((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+				((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+						((PlayerEntity) entity).container.func_234641_j_());
 			}
 		}
 	}

@@ -7,10 +7,10 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -51,8 +51,8 @@ public class OakNFenceBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends FenceBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1.5f, 10f).lightValue(0).harvestLevel(0)
-					.harvestTool(ToolType.AXE).notSolid());
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1.5f, 10f).setLightLevel(s -> 0).harvestLevel(0)
+					.harvestTool(ToolType.AXE).notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("oak_n_fence");
 		}
 
@@ -61,11 +61,6 @@ public class OakNFenceBlock extends NegativenModElements.ModElement {
 			boolean flag = state.getBlock() instanceof FenceBlock && state.getMaterial() == this.material;
 			boolean flag1 = state.getBlock() instanceof FenceGateBlock && FenceGateBlock.isParallel(state, face);
 			return !cannotAttach(state.getBlock()) && checkattach || flag || flag1;
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
 		}
 
 		@Override

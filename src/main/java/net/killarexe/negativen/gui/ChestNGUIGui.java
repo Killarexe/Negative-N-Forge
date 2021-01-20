@@ -41,6 +41,8 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
+import com.mojang.blaze3d.matrix.MatrixStack;
+
 @NegativenModElements.ModElement.Tag
 public class ChestNGUIGui extends NegativenModElements.ModElement {
 	public static HashMap guistate = new HashMap();
@@ -52,17 +54,17 @@ public class ChestNGUIGui extends NegativenModElements.ModElement {
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ContainerRegisterHandler());
 	}
-
+	private static class ContainerRegisterHandler {
+		@SubscribeEvent
+		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
+			event.getRegistry().register(containerType.setRegistryName("chest_ngui"));
+		}
+	}
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
 		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
-	}
-
-	@SubscribeEvent
-	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("chest_ngui"));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -327,7 +329,7 @@ public class ChestNGUIGui extends NegativenModElements.ModElement {
 		}
 
 		private void slotChanged(int slotid, int ctype, int meta) {
-			if (this.world != null && this.world.isRemote) {
+			if (this.world != null && this.world.isRemote()) {
 				NegativenMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
 				handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 			}
@@ -351,19 +353,19 @@ public class ChestNGUIGui extends NegativenModElements.ModElement {
 		}
 		private static final ResourceLocation texture = new ResourceLocation("negativen:textures/chest_ngui.png");
 		@Override
-		public void render(int mouseX, int mouseY, float partialTicks) {
-			this.renderBackground();
-			super.render(mouseX, mouseY, partialTicks);
-			this.renderHoveredToolTip(mouseX, mouseY);
+		public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
+			this.renderBackground(ms);
+			super.render(ms, mouseX, mouseY, partialTicks);
+			this.renderHoveredTooltip(ms, mouseX, mouseY);
 		}
 
 		@Override
-		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
+		protected void drawGuiContainerBackgroundLayer(MatrixStack ms, float par1, int par2, int par3) {
 			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+			this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 		}
 
 		@Override
@@ -381,13 +383,13 @@ public class ChestNGUIGui extends NegativenModElements.ModElement {
 		}
 
 		@Override
-		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Chest-N", 18, 65, -16777216);
+		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
+			this.font.drawString(ms, "Chest-N", 18, 65, -16777216);
 		}
 
 		@Override
-		public void removed() {
-			super.removed();
+		public void onClose() {
+			super.onClose();
 			Minecraft.getInstance().keyboardListener.enableRepeatEvents(false);
 		}
 

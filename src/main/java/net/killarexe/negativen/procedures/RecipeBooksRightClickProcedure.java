@@ -21,6 +21,7 @@ import net.killarexe.negativen.item.FusonatorRecipiesBookItem;
 import net.killarexe.negativen.gui.IngerRecipesGUIGui;
 import net.killarexe.negativen.gui.FusonatorResipeGUIGui;
 import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativenMod;
 
 import java.util.Map;
 
@@ -35,27 +36,27 @@ public class RecipeBooksRightClickProcedure extends NegativenModElements.ModElem
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure RecipeBooksRightClick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure RecipeBooksRightClick!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure RecipeBooksRightClick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure RecipeBooksRightClick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure RecipeBooksRightClick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure RecipeBooksRightClick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure RecipeBooksRightClick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure RecipeBooksRightClick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure RecipeBooksRightClick!");
+				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure RecipeBooksRightClick!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
