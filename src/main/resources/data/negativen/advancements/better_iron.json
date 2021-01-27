@@ -42,7 +42,9 @@
       "negativen:iron_narmorhelmetrecipe",
       "negativen:iron_narmorbodyrecipe",
       "negativen:iron_narmorleggingsrecipe",
-      "negativen:iron_narmorbootsrecipe"
+      "negativen:iron_narmorbootsrecipe",
+      "negativen:smeltironn",
+      "negativen:negafilntcraft"
     ]
   },
   "parent": "negativen:anewcoal"

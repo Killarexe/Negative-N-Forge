@@ -18,6 +18,9 @@
     "spawnWorldTypes": [
       "CUSTOM:Nega"
     ],
-    "restrictionBiomes": []
+    "restrictionBiomes": [],
+    "onTickUpdate": {
+      "name": "WaterNUpdateTick"
+    }
   }
 }

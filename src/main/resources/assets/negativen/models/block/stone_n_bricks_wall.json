@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_side",
+  "textures": {
+    "wall": "negativen:blocks/stone_n_bricks",
+    "particle": "negativen:blocks/stone_n_bricks"
+  }
+}

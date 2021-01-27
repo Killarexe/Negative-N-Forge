@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "negativen:blocks/diorite_n",
+    "particle": "negativen:blocks/diorite_n"
+  }
+}

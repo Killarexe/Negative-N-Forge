@@ -64,7 +64,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "STONE"
+      "value": "ANCIENT_DEBRIS"
     },
     "luminance": 0,
     "unbreakable": false,

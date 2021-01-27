@@ -13,6 +13,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.feature.LakesFeature;
@@ -34,11 +35,15 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.FlowingFluidBlock;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.killarexe.negativen.procedures.WaterNUpdateTickProcedure;
 import net.killarexe.negativen.NegativenModElements;
 
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 
 @NegativenModElements.ModElement.Tag
 public class WaterNBlock extends NegativenModElements.ModElement {
@@ -76,6 +81,22 @@ public class WaterNBlock extends NegativenModElements.ModElement {
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("watern");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("watern_flowing");
 		elements.blocks.add(() -> new FlowingFluidBlock(still, Block.Properties.create(Material.LAVA)) {
+			@Override
+			public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+				super.tick(state, world, pos, random);
+				int x = pos.getX();
+				int y = pos.getY();
+				int z = pos.getZ();
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					$_dependencies.put("world", world);
+					WaterNUpdateTickProcedure.executeProcedure($_dependencies);
+				}
+				world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
+			}
 		}.setRegistryName("watern"));
 		elements.items.add(() -> new BucketItem(still, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(null))
 				.setRegistryName("watern_bucket"));

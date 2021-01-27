@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "negativen:blocks/andesite_n",
+    "particle": "negativen:blocks/andesite_n"
+  }
+}

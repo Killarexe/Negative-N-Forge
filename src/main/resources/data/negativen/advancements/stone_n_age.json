@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "negativen:stone_n"
+    },
+    "title": {
+      "translate": "advancements.stone_n_age.title"
+    },
+    "description": {
+      "translate": "advancements.stone_n_age.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "stone_n_age": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "negativen:cobblestone_n",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "negativen:cobblestoneaxerecipe",
+      "negativen:cobblestoneswordrecipe",
+      "negativen:cobblestoneshovelrecipe",
+      "negativen:cobblestonehoerecipe"
+    ]
+  },
+  "parent": "negativen:nevitagen"
+}

@@ -38,7 +38,7 @@ public class EpeeenDiamantNItem extends NegativenModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 18f;
+				return 16f;
 			}
 
 			public int getHarvestLevel() {

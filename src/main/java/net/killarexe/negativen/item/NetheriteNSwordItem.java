@@ -38,7 +38,7 @@ public class NetheriteNSwordItem extends NegativenModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 28f;
+				return 12f;
 			}
 
 			public int getHarvestLevel() {

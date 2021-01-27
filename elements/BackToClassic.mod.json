@@ -2,7 +2,7 @@
   "_fv": 15,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Back To Classic",
+    "achievementName": "Back To Alpha",
     "achievementDescription": "Go to Classic Dimension",
     "achievementIcon": {
       "value": "CUSTOM:ClassicGrass"

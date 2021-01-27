@@ -38,7 +38,7 @@ public class GoldNSwordItem extends NegativenModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 0f;
+				return 4f;
 			}
 
 			public int getHarvestLevel() {

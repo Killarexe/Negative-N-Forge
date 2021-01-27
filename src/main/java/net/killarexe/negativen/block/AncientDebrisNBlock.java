@@ -52,8 +52,8 @@ public class AncientDebrisNBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 50f).setLightLevel(s -> 0).harvestLevel(6)
-					.harvestTool(ToolType.PICKAXE));
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.ANCIENT_DEBRIS).hardnessAndResistance(3f, 50f).setLightLevel(s -> 0)
+					.harvestLevel(6).harvestTool(ToolType.PICKAXE));
 			setRegistryName("ancient_debris_n");
 		}
 

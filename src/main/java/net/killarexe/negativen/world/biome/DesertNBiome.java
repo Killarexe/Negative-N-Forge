@@ -69,7 +69,7 @@ public class DesertNBiome extends NegativenModElements.ModElement {
 								SandstoneNBlock.block.getDefaultState(), SandstoneNBlock.block.getDefaultState())));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.TREE
 						.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(CactusNBlock.block.getDefaultState()),
-								new SimpleBlockStateProvider(Blocks.AIR.getDefaultState()),
+								new SimpleBlockStateProvider(Blocks.CAVE_AIR.getDefaultState()),
 								new BlobFoliagePlacer(FeatureSpread.func_242252_a(2), FeatureSpread.func_242252_a(0), 3),
 								new StraightTrunkPlacer(2, 2, 0), new TwoLayerFeature(1, 0, 1)))
 										.setDecorators(ImmutableList.of(CustomLeaveVineTreeDecorator.instance, CustomTrunkVineTreeDecorator.instance,

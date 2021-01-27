@@ -38,7 +38,7 @@ public class CobblestoneSwordItem extends NegativenModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 3f;
+				return 6f;
 			}
 
 			public int getHarvestLevel() {

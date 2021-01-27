@@ -2,9 +2,9 @@
   "_fv": 15,
   "_type": "tab",
   "definition": {
-    "name": "Negative-N Food",
+    "name": "Negative-N Foodstuffs",
     "icon": {
-      "value": "CUSTOM:PorkchopcookedN"
+      "value": "CUSTOM:AppleN"
     },
     "showSearch": false
   }

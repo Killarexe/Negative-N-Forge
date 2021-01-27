@@ -18,7 +18,7 @@
     "name": "Tall Grass N",
     "specialInfo": [],
     "creativeTab": {
-      "value": "DECORATIONS"
+      "value": "CUSTOM:NegativeNDecorationBlocks"
     },
     "hardness": 0.0,
     "resistance": 0.0,

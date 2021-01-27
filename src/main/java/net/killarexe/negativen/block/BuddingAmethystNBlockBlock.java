@@ -9,6 +9,7 @@ import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
@@ -42,6 +43,11 @@ public class BuddingAmethystNBlockBlock extends NegativenModElements.ModElement 
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.GLASS).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).tickRandomly());
 			setRegistryName("budding_amethyst_n_block");
+		}
+
+		@Override
+		public MaterialColor getMaterialColor() {
+			return MaterialColor.GRASS;
 		}
 
 		@Override

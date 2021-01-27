@@ -33,7 +33,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:NegativeNBlocks"
+      "value": "CUSTOM:NegativeNRedstoneN"
     },
     "destroyTool": "Not specified",
     "customDrop": {
@@ -94,9 +94,6 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onRightClicked": {
-      "name": "TNTNOnBlockRightClicked"
-    },
-    "onNeighbourBlockChanges": {
       "name": "TNTNOnBlockRightClicked"
     },
     "spawnWorldTypes": [],

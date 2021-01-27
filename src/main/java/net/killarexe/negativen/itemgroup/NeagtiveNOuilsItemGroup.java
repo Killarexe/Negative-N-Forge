@@ -7,7 +7,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
-import net.killarexe.negativen.item.PiocheenDiamantNItem;
+import net.killarexe.negativen.item.Iron_NAxeItem;
 import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
@@ -22,7 +22,7 @@ public class NeagtiveNOuilsItemGroup extends NegativenModElements.ModElement {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(PiocheenDiamantNItem.block, (int) (1));
+				return new ItemStack(Iron_NAxeItem.block, (int) (1));
 			}
 
 			@OnlyIn(Dist.CLIENT)

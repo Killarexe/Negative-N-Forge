@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
-import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
+import net.killarexe.negativen.itemgroup.NegativeNFoodItemGroup;
 import net.killarexe.negativen.NegativenModElements;
 
 @NegativenModElements.ModElement.Tag
@@ -28,7 +28,7 @@ public class HoneyNBottleItem extends NegativenModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
+			super(new Item.Properties().group(NegativeNFoodItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(8).saturation(0.4f).setAlwaysEdible().build()));
 			setRegistryName("honey_n_bottle");
 		}

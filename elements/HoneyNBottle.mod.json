@@ -9,12 +9,15 @@
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
-      "value": "CUSTOM:NegativeNRessoures"
+      "value": "CUSTOM:NegativeNFood"
     },
     "stackSize": 64,
     "nutritionalValue": 8,
     "saturation": 0.4,
     "eatingSpeed": 42,
+    "resultItem": {
+      "value": ""
+    },
     "forDogs": false,
     "isAlwaysEdible": true,
     "animation": "drink",

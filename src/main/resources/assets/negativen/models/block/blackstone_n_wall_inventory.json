@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "negativen:blocks/blackstone_n",
+    "particle": "negativen:blocks/blackstone_n"
+  }
+}

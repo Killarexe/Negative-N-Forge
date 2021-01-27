@@ -35,7 +35,7 @@ public class NetheriteNBlockBlock extends NegativenModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.GLASS).sound(SoundType.GLASS).hardnessAndResistance(100f, 2400f).setLightLevel(s -> 0)
+			super(Block.Properties.create(Material.GLASS).sound(SoundType.NETHERITE).hardnessAndResistance(100f, 2400f).setLightLevel(s -> 0)
 					.harvestLevel(6).harvestTool(ToolType.PICKAXE).setNeedsPostProcessing((bs, br, bp) -> true)
 					.setEmmisiveRendering((bs, br, bp) -> true));
 			setRegistryName("netherite_n_block");

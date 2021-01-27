@@ -1,8 +1,10 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.entity.Entity;
 
+import net.killarexe.negativen.world.DebugModeNGameRule;
 import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
 import net.killarexe.negativen.NegativenMod;
@@ -28,7 +30,7 @@ public class NegativeNDebugModeDisplayOverlayIngameProcedure extends NegativenMo
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
-		return (((NegativenModVariables.MapVariables.get(world).Debug) == (true))
+		return ((((world instanceof World) ? ((World) world).getGameRules().getBoolean(DebugModeNGameRule.gamerule) : false) == (true))
 				&& (((entity.getCapability(NegativenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new NegativenModVariables.PlayerVariables())).DevVerson) == (false)));
 	}

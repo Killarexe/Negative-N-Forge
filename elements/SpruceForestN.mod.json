@@ -29,8 +29,23 @@
       "value": -256,
       "falpha": 0.0
     },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": ""
+    },
     "moodSoundDelay": 0,
     "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "CUSTOM:RedstoneNParticle"
+    },
     "particlesProbability": 0.0,
     "biomeCategory": "NONE",
     "parent": {
@@ -54,7 +69,7 @@
     "reedsPerChunk": 0,
     "cactiPerChunk": 0,
     "treesPerChunk": 2,
-    "vanillaTreeType": "Default",
+    "vanillaTreeType": "Mega spruce trees",
     "treeType": 1,
     "minHeight": 10,
     "maxWaterDepth": 0,

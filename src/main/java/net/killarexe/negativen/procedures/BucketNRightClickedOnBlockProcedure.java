@@ -65,7 +65,7 @@ public class BucketNRightClickedOnBlockProcedure extends NegativenModElements.Mo
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == LavaNBlock.block.getDefaultState().getBlock())) {
-			if ((LavaNBlock.block.getDefaultState().getFluidState().isSource())) {
+			if (((LavaNBlock.block.getDefaultState().getFluidState().isSource()) == (true))) {
 				if (entity instanceof PlayerEntity) {
 					ItemStack _stktoremove = new ItemStack(BucketNItem.block, (int) (1));
 					((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
@@ -102,7 +102,7 @@ public class BucketNRightClickedOnBlockProcedure extends NegativenModElements.Mo
 			}
 		}
 		if (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == WaterNBlock.block.getDefaultState().getBlock())) {
-			if ((WaterNBlock.block.getDefaultState().getFluidState().isSource())) {
+			if (((WaterNBlock.block.getDefaultState().getFluidState().isSource()) == (true))) {
 				if (entity instanceof PlayerEntity) {
 					ItemStack _stktoremove = new ItemStack(BucketNItem.block, (int) (1));
 					((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,

@@ -31,7 +31,19 @@
     }
   },
   "rewards": {
-    "experience": 50
+    "experience": 50,
+    "recipes": [
+      "negativen:diamond_n_block_craft",
+      "negativen:diamond_n_helmet_craft",
+      "negativen:diamond_n_leggings",
+      "negativen:diamond_n_chestplate",
+      "negativen:diamond_n_boots",
+      "negativen:diamond_n_sword_craft",
+      "negativen:diamond_n_pickaxe_craft",
+      "negativen:diamond_n_hoe",
+      "negativen:diamond_n_shovel_craft",
+      "negativen:diamond_n_axe_craft"
+    ]
   },
   "parent": "negativen:better_iron"
 }

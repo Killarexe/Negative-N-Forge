@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_side_tall",
+  "textures": {
+    "wall": "negativen:blocks/mossy_stone_n_bricks",
+    "particle": "negativen:blocks/mossy_stone_n_bricks"
+  }
+}

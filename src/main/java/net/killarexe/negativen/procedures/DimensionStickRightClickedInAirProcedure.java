@@ -2,6 +2,7 @@ package net.killarexe.negativen.procedures;
 
 import net.minecraftforge.fml.network.NetworkHooks;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
@@ -14,8 +15,8 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
+import net.killarexe.negativen.world.DebugModeNGameRule;
 import net.killarexe.negativen.gui.DimensionStickGUIGui;
-import net.killarexe.negativen.NegativenModVariables;
 import net.killarexe.negativen.NegativenModElements;
 import net.killarexe.negativen.NegativenMod;
 
@@ -60,7 +61,7 @@ public class DimensionStickRightClickedInAirProcedure extends NegativenModElemen
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((NegativenModVariables.MapVariables.get(world).Debug) == (true))) {
+		if ((((world instanceof World) ? ((World) world).getGameRules().getBoolean(DebugModeNGameRule.gamerule) : false) == (true))) {
 			if ((entity.hasPermissionLevel((int) 4))) {
 				if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
 					{

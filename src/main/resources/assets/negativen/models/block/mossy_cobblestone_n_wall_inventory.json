@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "negativen:blocks/mossy_cobblestone_n",
+    "particle": "negativen:blocks/mossy_cobblestone_n"
+  }
+}

@@ -45,7 +45,7 @@ public class PlanchedeboisSwordItem extends NegativenModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 1f;
+				return 4f;
 			}
 
 			public int getHarvestLevel() {

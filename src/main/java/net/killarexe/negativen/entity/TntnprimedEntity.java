@@ -94,18 +94,13 @@ public class TntnprimedEntity extends NegativenModElements.ModElement {
 		public CustomEntity(EntityType<CustomEntity> type, World world) {
 			super(type, world);
 			experienceValue = 5;
-			setNoAI(false);
+			setNoAI(true);
 			enablePersistence();
 		}
 
 		@Override
 		public IPacket<?> createSpawnPacket() {
 			return NetworkHooks.getEntitySpawningPacket(this);
-		}
-
-		@Override
-		protected void registerGoals() {
-			super.registerGoals();
 		}
 
 		@Override

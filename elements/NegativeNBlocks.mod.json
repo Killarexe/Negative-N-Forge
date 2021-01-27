@@ -2,9 +2,9 @@
   "_fv": 15,
   "_type": "tab",
   "definition": {
-    "name": "Negative-N Blocks",
+    "name": "Negative-N Building Blocks",
     "icon": {
-      "value": "CUSTOM:BlockdediamantInverse"
+      "value": "CUSTOM:BricksBlockN"
     },
     "showSearch": false
   }
