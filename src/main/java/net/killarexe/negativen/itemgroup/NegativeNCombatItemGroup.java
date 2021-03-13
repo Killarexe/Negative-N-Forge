@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.killarexe.negativen.item.GoldNSwordItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NegativeNCombatItemGroup extends NegativenModElements.ModElement {
-	public NegativeNCombatItemGroup(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class NegativeNCombatItemGroup extends NegativeNModElements.ModElement {
+	public NegativeNCombatItemGroup(NegativeNModElements instance) {
 		super(instance, 378);
 	}
 

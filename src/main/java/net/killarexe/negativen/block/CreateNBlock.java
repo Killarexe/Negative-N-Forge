@@ -55,7 +55,7 @@ import net.minecraft.block.Block;
 import net.killarexe.negativen.procedures.CreateOnBlockRightClickedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.gui.CreateinvGui;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -67,13 +67,13 @@ import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
 
-@NegativenModElements.ModElement.Tag
-public class CreateNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:create_n")
+@NegativeNModElements.ModElement.Tag
+public class CreateNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:create_n")
 	public static final Block block = null;
-	@ObjectHolder("negativen:create_n")
+	@ObjectHolder("negative_n:create_n")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public CreateNBlock(NegativenModElements instance) {
+	public CreateNBlock(NegativeNModElements instance) {
 		super(instance, 76);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

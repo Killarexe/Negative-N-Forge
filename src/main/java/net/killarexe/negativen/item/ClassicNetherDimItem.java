@@ -18,7 +18,7 @@ import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
 import com.google.common.collect.ImmutableMap;
 
 public class ClassicNetherDimItem extends Item {
-	@ObjectHolder("negativen:classic_nether_dim")
+	@ObjectHolder("negative_n:classic_nether_dim")
 	public static final Item block = null;
 	public ClassicNetherDimItem() {
 		super(new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).maxDamage(64));

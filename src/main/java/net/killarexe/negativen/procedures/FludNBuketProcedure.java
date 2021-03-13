@@ -8,21 +8,21 @@ import net.minecraft.entity.Entity;
 import net.killarexe.negativen.potion.UnstablePotion;
 import net.killarexe.negativen.block.WaterNBlock;
 import net.killarexe.negativen.block.LavaNBlock;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class FludNBuketProcedure extends NegativenModElements.ModElement {
-	public FludNBuketProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class FludNBuketProcedure extends NegativeNModElements.ModElement {
+	public FludNBuketProcedure(NegativeNModElements instance) {
 		super(instance, 506);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure FludNBuket!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure FludNBuket!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

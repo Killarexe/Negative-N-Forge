@@ -56,7 +56,7 @@ import net.minecraft.block.AbstractBlock;
 import net.killarexe.negativen.item.NegaItem;
 import net.killarexe.negativen.block.StoneNBlock;
 import net.killarexe.negativen.block.PortalblockBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -72,11 +72,11 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import com.google.common.collect.Sets;
 import com.google.common.collect.ImmutableSet;
 
-@NegativenModElements.ModElement.Tag
-public class NegaDimension extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:nega_portal")
+@NegativeNModElements.ModElement.Tag
+public class NegaDimension extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:overworld_n_portal")
 	public static final CustomPortalBlock portal = null;
-	public NegaDimension(NegativenModElements instance) {
+	public NegaDimension(NegativeNModElements instance) {
 		super(instance, 301);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
@@ -115,7 +115,7 @@ public class NegaDimension extends NegativenModElements.ModElement {
 			try {
 				Object2ObjectMap<ResourceLocation, DimensionRenderInfo> effectsRegistry = (Object2ObjectMap<ResourceLocation, DimensionRenderInfo>) ObfuscationReflectionHelper
 						.getPrivateValue(DimensionRenderInfo.class, null, "field_239208_a_");
-				effectsRegistry.put(new ResourceLocation("negativen:nega"), customEffect);
+				effectsRegistry.put(new ResourceLocation("negative_n:overworld_n"), customEffect);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -123,25 +123,25 @@ public class NegaDimension extends NegativenModElements.ModElement {
 		RenderTypeLookup.setRenderLayer(portal, RenderType.getTranslucent());
 	}
 	private static PointOfInterestType poi = null;
-	public static final TicketType<BlockPos> CUSTOM_PORTAL = TicketType.create("nega_portal", Vector3i::compareTo, 300);
+	public static final TicketType<BlockPos> CUSTOM_PORTAL = TicketType.create("overworld_n_portal", Vector3i::compareTo, 300);
 	public static class POIRegisterHandler {
 		@SubscribeEvent
 		public void registerPointOfInterest(RegistryEvent.Register<PointOfInterestType> event) {
-			poi = new PointOfInterestType("nega_portal", Sets.newHashSet(ImmutableSet.copyOf(portal.getStateContainer().getValidStates())), 0, 1)
-					.setRegistryName("nega_portal");
+			poi = new PointOfInterestType("overworld_n_portal", Sets.newHashSet(ImmutableSet.copyOf(portal.getStateContainer().getValidStates())), 0,
+					1).setRegistryName("overworld_n_portal");
 			ForgeRegistries.POI_TYPES.register(poi);
 		}
 	}
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomPortalBlock());
-		elements.items.add(() -> new NegaItem().setRegistryName("nega"));
+		elements.items.add(() -> new NegaItem().setRegistryName("overworld_n"));
 	}
 	public static class CustomPortalBlock extends NetherPortalBlock {
 		public CustomPortalBlock() {
 			super(Block.Properties.create(Material.PORTAL).doesNotBlockMovement().tickRandomly().hardnessAndResistance(-1.0F).sound(SoundType.GLASS)
 					.setLightLevel(s -> 15).noDrops());
-			setRegistryName("nega_portal");
+			setRegistryName("overworld_n_portal");
 		}
 
 		@Override
@@ -203,9 +203,10 @@ public class NegaDimension extends NegativenModElements.ModElement {
 			if (!entity.isPassenger() && !entity.isBeingRidden() && entity.isNonBoss() && !entity.world.isRemote && true) {
 				if (entity.func_242280_ah()) {
 					entity.func_242279_ag();
-				} else if (entity.world.getDimensionKey() != RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega"))) {
+				} else if (entity.world.getDimensionKey() != RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+						new ResourceLocation("negative_n:overworld_n"))) {
 					entity.func_242279_ag();
-					teleportToDimension(entity, pos, RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")));
+					teleportToDimension(entity, pos, RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")));
 				} else {
 					entity.func_242279_ag();
 					teleportToDimension(entity, pos, World.OVERWORLD);

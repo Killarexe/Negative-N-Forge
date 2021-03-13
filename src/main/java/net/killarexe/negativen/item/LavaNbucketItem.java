@@ -16,16 +16,16 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.procedures.LavaNbucketRightClickedOnBlockProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class LavaNbucketItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:lava_nbucket")
+@NegativeNModElements.ModElement.Tag
+public class LavaNbucketItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:lava_nbucket")
 	public static final Item block = null;
-	public LavaNbucketItem(NegativenModElements instance) {
+	public LavaNbucketItem(NegativeNModElements instance) {
 		super(instance, 25);
 	}
 

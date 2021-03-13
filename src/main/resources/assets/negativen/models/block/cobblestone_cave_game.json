@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "negativen:blocks/cave_game_cobblestone",
-    "particle": "negativen:blocks/cave_game_cobblestone"
-  }
-}

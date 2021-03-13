@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:grass_block_n"
+    },
+    "title": {
+      "translate": "advancements.nevitagen.title"
+    },
+    "description": {
+      "translate": "advancements.nevitagen.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "nevitagen": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "negative_n:overworld_n"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "negative_n:batonncraft",
+      "negative_n:deleted_mod_element"
+    ]
+  },
+  "parent": "negative_n:inverseinfini"
+}

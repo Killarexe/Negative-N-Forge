@@ -43,7 +43,7 @@ import net.killarexe.negativen.entity.EndermanNEntity;
 import net.killarexe.negativen.block.SandstoneNBlock;
 import net.killarexe.negativen.block.SandNBlock;
 import net.killarexe.negativen.block.CactusNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
@@ -51,10 +51,10 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 
-@NegativenModElements.ModElement.Tag
-public class DesertNBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class DesertNBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public DesertNBiome(NegativenModElements instance) {
+	public DesertNBiome(NegativeNModElements instance) {
 		super(instance, 514);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -84,7 +84,7 @@ public class DesertNBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(0.1f).scale(0.2f)
 						.temperature(1.5f).downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:desert_n"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:desert_n"));
 			}
 		}
 	}

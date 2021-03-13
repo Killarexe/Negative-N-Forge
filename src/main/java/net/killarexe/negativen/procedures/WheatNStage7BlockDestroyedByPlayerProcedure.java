@@ -6,36 +6,36 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.item.ItemEntity;
 
 import net.killarexe.negativen.item.WheatNItem;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class WheatNStage7BlockDestroyedByPlayerProcedure extends NegativenModElements.ModElement {
-	public WheatNStage7BlockDestroyedByPlayerProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class WheatNStage7BlockDestroyedByPlayerProcedure extends NegativeNModElements.ModElement {
+	public WheatNStage7BlockDestroyedByPlayerProcedure(NegativeNModElements instance) {
 		super(instance, 707);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure WheatNStage7BlockDestroyedByPlayer!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure WheatNStage7BlockDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure WheatNStage7BlockDestroyedByPlayer!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure WheatNStage7BlockDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure WheatNStage7BlockDestroyedByPlayer!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure WheatNStage7BlockDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure WheatNStage7BlockDestroyedByPlayer!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure WheatNStage7BlockDestroyedByPlayer!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

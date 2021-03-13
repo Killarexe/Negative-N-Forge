@@ -21,16 +21,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class JackOLanternNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:jack_o_lantern_n")
+@NegativeNModElements.ModElement.Tag
+public class JackOLanternNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:jack_o_lantern_n")
 	public static final Block block = null;
-	public JackOLanternNBlock(NegativenModElements instance) {
+	public JackOLanternNBlock(NegativeNModElements instance) {
 		super(instance, 124);
 	}
 

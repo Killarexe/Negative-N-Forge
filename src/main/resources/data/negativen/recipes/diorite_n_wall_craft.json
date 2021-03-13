@@ -1,9 +1,0 @@
-{
-  "group": "negativen",
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "negativen:diorite_n"
-  },
-  "result": "negativen:diorite_n_wall"
-}

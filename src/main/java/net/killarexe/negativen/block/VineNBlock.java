@@ -33,7 +33,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.VineNUpdateTickProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -41,11 +41,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class VineNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:vine_n")
+@NegativeNModElements.ModElement.Tag
+public class VineNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:vine_n")
 	public static final Block block = null;
-	public VineNBlock(NegativenModElements instance) {
+	public VineNBlock(NegativeNModElements instance) {
 		super(instance, 84);
 	}
 

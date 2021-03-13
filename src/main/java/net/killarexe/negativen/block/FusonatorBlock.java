@@ -62,7 +62,7 @@ import net.minecraft.block.Block;
 import net.killarexe.negativen.procedures.FusionnatorOnBlockRightClickedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.gui.FusionatorGui;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -75,13 +75,13 @@ import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
 
-@NegativenModElements.ModElement.Tag
-public class FusonatorBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:fusonator")
+@NegativeNModElements.ModElement.Tag
+public class FusonatorBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:fusonator")
 	public static final Block block = null;
-	@ObjectHolder("negativen:fusonator")
+	@ObjectHolder("negative_n:fusonator")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public FusonatorBlock(NegativenModElements instance) {
+	public FusonatorBlock(NegativeNModElements instance) {
 		super(instance, 159);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

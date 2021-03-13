@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.killarexe.negativen.item.AppleNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NegativeNFoodItemGroup extends NegativenModElements.ModElement {
-	public NegativeNFoodItemGroup(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class NegativeNFoodItemGroup extends NegativeNModElements.ModElement {
+	public NegativeNFoodItemGroup(NegativeNModElements instance) {
 		super(instance, 416);
 	}
 

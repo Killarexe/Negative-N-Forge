@@ -14,16 +14,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class WarpedPlanksNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:warped_planks_n")
+@NegativeNModElements.ModElement.Tag
+public class WarpedPlanksNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:warped_planks_n")
 	public static final Block block = null;
-	public WarpedPlanksNBlock(NegativenModElements instance) {
+	public WarpedPlanksNBlock(NegativeNModElements instance) {
 		super(instance, 225);
 	}
 

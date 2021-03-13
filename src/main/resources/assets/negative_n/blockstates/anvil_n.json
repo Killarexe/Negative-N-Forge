@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "negative_n:block/anvil_n"
+    },
+    "facing=east": {
+      "model": "negative_n:block/anvil_n",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "negative_n:block/anvil_n",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "negative_n:block/anvil_n",
+      "y": 270
+    }
+  }
+}

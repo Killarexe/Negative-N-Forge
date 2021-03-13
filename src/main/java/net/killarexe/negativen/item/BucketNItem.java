@@ -18,16 +18,16 @@ import net.minecraft.block.BlockState;
 import net.killarexe.negativen.procedures.BucketNRightClickedOnBlockProcedure;
 import net.killarexe.negativen.procedures.BucketNLivingEntityIsHitWithItemProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class BucketNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:bucket_n")
+@NegativeNModElements.ModElement.Tag
+public class BucketNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:bucket_n")
 	public static final Item block = null;
-	public BucketNItem(NegativenModElements instance) {
+	public BucketNItem(NegativeNModElements instance) {
 		super(instance, 24);
 	}
 

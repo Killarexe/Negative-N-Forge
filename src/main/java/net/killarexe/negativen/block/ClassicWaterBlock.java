@@ -34,20 +34,20 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicWaterBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:classic_water")
+@NegativeNModElements.ModElement.Tag
+public class ClassicWaterBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:classic_water")
 	public static final FlowingFluidBlock block = null;
-	@ObjectHolder("negativen:classic_water_bucket")
+	@ObjectHolder("negative_n:classic_water_bucket")
 	public static final Item bucket = null;
 	public static FlowingFluid flowing = null;
 	public static FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
-	public ClassicWaterBlock(NegativenModElements instance) {
+	public ClassicWaterBlock(NegativeNModElements instance) {
 		super(instance, 333);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -69,7 +69,7 @@ public class ClassicWaterBlock extends NegativenModElements.ModElement {
 	@Override
 	public void initElements() {
 		fluidproperties = new ForgeFlowingFluid.Properties(() -> still, () -> flowing,
-				FluidAttributes.builder(new ResourceLocation("negativen:blocks/water_c"), new ResourceLocation("negativen:blocks/water_c"))
+				FluidAttributes.builder(new ResourceLocation("negative_n:blocks/water_c"), new ResourceLocation("negative_n:blocks/water_c"))
 						.luminosity(0).density(1000).viscosity(1000)).block(() -> block);
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("classic_water");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("classic_water_flowing");
@@ -85,7 +85,7 @@ public class ClassicWaterBlock extends NegativenModElements.ModElement {
 					public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, BlockStateFeatureConfig config) {
 						RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 						boolean dimensionCriteria = false;
-						if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:classic_dim")))
+						if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:classic_dim")))
 							dimensionCriteria = true;
 						if (!dimensionCriteria)
 							return false;

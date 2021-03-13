@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class AmethystNShardItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:amethyst_n_shard")
+@NegativeNModElements.ModElement.Tag
+public class AmethystNShardItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:amethyst_n_shard")
 	public static final Item block = null;
-	public AmethystNShardItem(NegativenModElements instance) {
+	public AmethystNShardItem(NegativeNModElements instance) {
 		super(instance, 5);
 	}
 

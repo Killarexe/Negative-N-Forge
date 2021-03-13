@@ -12,13 +12,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class MilkBucketNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:milk_bucket_n")
+@NegativeNModElements.ModElement.Tag
+public class MilkBucketNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:milk_bucket_n")
 	public static final Item block = null;
-	public MilkBucketNItem(NegativenModElements instance) {
+	public MilkBucketNItem(NegativeNModElements instance) {
 		super(instance, 27);
 	}
 

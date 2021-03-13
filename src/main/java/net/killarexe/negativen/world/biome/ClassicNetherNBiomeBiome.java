@@ -29,16 +29,16 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.block.ClassicNetherrackNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
 import java.util.List;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicNetherNBiomeBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class ClassicNetherNBiomeBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public ClassicNetherNBiomeBiome(NegativenModElements instance) {
+	public ClassicNetherNBiomeBiome(NegativeNModElements instance) {
 		super(instance, 803);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -57,7 +57,7 @@ public class ClassicNetherNBiomeBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.5f).scale(0.5f).temperature(0f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:classic_nether_n_biome"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:classic_nether_n_biome"));
 			}
 		}
 	}

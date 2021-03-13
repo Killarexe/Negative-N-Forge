@@ -30,17 +30,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class GoldNOreBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:gold_n_ore")
+@NegativeNModElements.ModElement.Tag
+public class GoldNOreBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:gold_n_ore")
 	public static final Block block = null;
-	public GoldNOreBlock(NegativenModElements instance) {
+	public GoldNOreBlock(NegativeNModElements instance) {
 		super(instance, 192);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -73,9 +73,9 @@ public class GoldNOreBlock extends NegativenModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:mineingdim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:mineingdim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
@@ -94,6 +94,6 @@ public class GoldNOreBlock extends NegativenModElements.ModElement {
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 5)).range(24).square().func_242731_b(9));
+		}, block.getDefaultState(), 5)).range(24).square().func_242731_b(1));
 	}
 }

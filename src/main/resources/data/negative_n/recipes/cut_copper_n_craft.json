@@ -1,0 +1,22 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:copper_n_block"
+    },
+    {
+      "item": "negative_n:copper_n_block"
+    },
+    {
+      "item": "negative_n:copper_n_block"
+    },
+    {
+      "item": "negative_n:copper_n_block"
+    }
+  ],
+  "result": {
+    "item": "negative_n:cut_copper_n_block",
+    "count": 4
+  }
+}

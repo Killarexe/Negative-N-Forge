@@ -1,0 +1,32 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:glass_n"
+    },
+    "1": {
+      "item": "negative_n:glass_n"
+    },
+    "2": {
+      "item": "negative_n:glass_n"
+    },
+    "3": {
+      "item": "negative_n:glass_n"
+    },
+    "4": {
+      "item": "negative_n:glass_n"
+    },
+    "5": {
+      "item": "negative_n:glass_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:glass_npane",
+    "count": 16
+  }
+}

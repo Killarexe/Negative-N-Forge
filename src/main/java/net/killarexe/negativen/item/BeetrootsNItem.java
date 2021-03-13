@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.killarexe.negativen.itemgroup.NegativeNFoodItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class BeetrootsNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:beetroots_n")
+@NegativeNModElements.ModElement.Tag
+public class BeetrootsNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:beetroots_n")
 	public static final Item block = null;
-	public BeetrootsNItem(NegativenModElements instance) {
+	public BeetrootsNItem(NegativeNModElements instance) {
 		super(instance, 319);
 	}
 

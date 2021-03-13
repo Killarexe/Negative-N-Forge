@@ -5,21 +5,21 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.killarexe.negativen.potion.OnFireNPotion;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class FireNEntityWalksOnTheBlockProcedure extends NegativenModElements.ModElement {
-	public FireNEntityWalksOnTheBlockProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class FireNEntityWalksOnTheBlockProcedure extends NegativeNModElements.ModElement {
+	public FireNEntityWalksOnTheBlockProcedure(NegativeNModElements instance) {
 		super(instance, 597);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure FireNEntityWalksOnTheBlock!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure FireNEntityWalksOnTheBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

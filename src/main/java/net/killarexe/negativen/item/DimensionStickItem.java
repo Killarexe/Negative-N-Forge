@@ -15,16 +15,16 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.procedures.DimensionStickRightClickedInAirProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class DimensionStickItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:dimension_stick")
+@NegativeNModElements.ModElement.Tag
+public class DimensionStickItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:dimension_stick")
 	public static final Item block = null;
-	public DimensionStickItem(NegativenModElements instance) {
+	public DimensionStickItem(NegativeNModElements instance) {
 		super(instance, 432);
 	}
 

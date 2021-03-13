@@ -16,18 +16,18 @@ import net.minecraft.entity.ai.attributes.AttributeModifierManager;
 import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.procedures.PoisonNPotionStartedappliedProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class PoisonNPotion extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:poison_n")
+@NegativeNModElements.ModElement.Tag
+public class PoisonNPotion extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:poison_n")
 	public static final Effect potion = null;
-	@ObjectHolder("negativen:poison_n")
+	@ObjectHolder("negative_n:poison_n")
 	public static final Potion potionType = null;
-	public PoisonNPotion(NegativenModElements instance) {
+	public PoisonNPotion(NegativeNModElements instance) {
 		super(instance, 839);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
@@ -53,7 +53,7 @@ public class PoisonNPotion extends NegativenModElements.ModElement {
 		public EffectCustom() {
 			super(EffectType.HARMFUL, -16711936);
 			setRegistryName("poison_n");
-			potionIcon = new ResourceLocation("negativen:textures/logo_1.png");
+			potionIcon = new ResourceLocation("negative_n:textures/logo_1.png");
 		}
 
 		@Override

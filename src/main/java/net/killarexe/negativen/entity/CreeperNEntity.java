@@ -47,12 +47,12 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.GunPowderNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class CreeperNEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class CreeperNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public CreeperNEntity(NegativenModElements instance) {
+	public CreeperNEntity(NegativeNModElements instance) {
 		super(instance, 53);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -71,7 +71,7 @@ public class CreeperNEntity extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:negative").equals(event.getName()))
+		if (new ResourceLocation("negative_n:negative").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -92,7 +92,7 @@ public class CreeperNEntity extends NegativenModElements.ModElement {
 			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new CreeperModel(), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("negativen:textures/reepern.png");
+					return new ResourceLocation("negative_n:textures/reepern.png");
 				}
 			});
 		}

@@ -1,0 +1,29 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:jungle_planks_n"
+    },
+    "2": {
+      "item": "negative_n:jungle_planks_n"
+    },
+    "3": {
+      "item": "negative_n:jungle_planks_n"
+    },
+    "4": {
+      "item": "negative_n:jungle_planks_n"
+    },
+    "5": {
+      "item": "negative_n:jungle_planks_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:jungle_n_boat_item",
+    "count": 1
+  }
+}

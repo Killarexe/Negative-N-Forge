@@ -1,0 +1,22 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:acacia_planks_n"
+    },
+    "1": {
+      "item": "negative_n:acacia_planks_n"
+    },
+    "2": {
+      "item": "negative_n:acacia_planks_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:acacia_slab_n",
+    "count": 6
+  }
+}

@@ -40,18 +40,22 @@ import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
-import net.minecraft.client.renderer.entity.model.SlimeModel;
+import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.SlimeBallNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class SlimeNEntity extends NegativenModElements.ModElement {
+import com.mojang.blaze3d.vertex.IVertexBuilder;
+import com.mojang.blaze3d.matrix.MatrixStack;
+
+@NegativeNModElements.ModElement.Tag
+public class SlimeNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public SlimeNEntity(NegativenModElements instance) {
+	public SlimeNEntity(NegativeNModElements instance) {
 		super(instance, 61);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -70,7 +74,7 @@ public class SlimeNEntity extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:desert_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:desert_n").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -87,11 +91,13 @@ public class SlimeNEntity extends NegativenModElements.ModElement {
 		@SubscribeEvent
 		@OnlyIn(Dist.CLIENT)
 		public void registerModels(ModelRegistryEvent event) {
-			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new SlimeModel(0), 0.5f) {
-				@Override
-				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("negativen:textures/slime_n.png");
-				}
+			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
+				return new MobRenderer(renderManager, new Modelslime_n(), 0.5f) {
+					@Override
+					public ResourceLocation getEntityTexture(Entity entity) {
+						return new ResourceLocation("negative_n:textures/slime_n.png");
+					}
+				};
 			});
 		}
 	}
@@ -153,6 +159,56 @@ public class SlimeNEntity extends NegativenModElements.ModElement {
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.slime.death"));
+		}
+	}
+
+	// Made with Blockbench 3.7.4
+	// Exported for Minecraft version 1.15
+	// Paste this class into your mod and generate all required imports
+	public static class Modelslime_n extends EntityModel<Entity> {
+		private final ModelRenderer cube;
+		private final ModelRenderer eye0;
+		private final ModelRenderer eye1;
+		private final ModelRenderer mouth;
+		private final ModelRenderer cube2;
+		
+		public Modelslime_n() {
+			textureWidth = 64;
+			textureHeight = 32;
+			cube = new ModelRenderer(this);
+			cube.setRotationPoint(0.0F, 0.0F, 0.0F);
+			cube.setTextureOffset(0, 0).addBox(-4.0F, 16.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, true);
+			eye0 = new ModelRenderer(this);
+			eye0.setRotationPoint(0.0F, 0.0F, 0.0F);
+			eye0.setTextureOffset(32, 0).addBox(1.3F, 18.0F, -3.5F, 2.0F, 2.0F, 2.0F, 0.0F, true);
+			eye1 = new ModelRenderer(this);
+			eye1.setRotationPoint(0.0F, 0.0F, 0.0F);
+			eye1.setTextureOffset(32, 4).addBox(-3.3F, 18.0F, -3.5F, 2.0F, 2.0F, 2.0F, 0.0F, true);
+			mouth = new ModelRenderer(this);
+			mouth.setRotationPoint(0.0F, 0.0F, 0.0F);
+			mouth.setTextureOffset(32, 8).addBox(-1.0F, 21.0F, -3.5F, 1.0F, 1.0F, 1.0F, 0.0F, true);
+			cube2 = new ModelRenderer(this);
+			cube2.setRotationPoint(0.0F, 0.0F, 0.0F);
+			cube2.setTextureOffset(0, 16).addBox(-3.0F, 17.0F, -3.0F, 6.0F, 6.0F, 6.0F, 0.0F, true);
+		}
+
+		@Override
+		public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue,
+				float alpha) {
+			cube.render(matrixStack, buffer, packedLight, packedOverlay);
+			eye0.render(matrixStack, buffer, packedLight, packedOverlay);
+			eye1.render(matrixStack, buffer, packedLight, packedOverlay);
+			mouth.render(matrixStack, buffer, packedLight, packedOverlay);
+			cube2.render(matrixStack, buffer, packedLight, packedOverlay);
+		}
+
+		public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+			modelRenderer.rotateAngleX = x;
+			modelRenderer.rotateAngleY = y;
+			modelRenderer.rotateAngleZ = z;
+		}
+
+		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
 		}
 	}
 }

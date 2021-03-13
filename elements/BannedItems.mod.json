@@ -1,0 +1,152 @@
+{
+  "_fv": 15,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:LavaN"
+      },
+      {
+        "value": "CUSTOM:Negativecane"
+      },
+      {
+        "value": "CUSTOM:ClassicWater"
+      },
+      {
+        "value": "CUSTOM:ClassicWaterN"
+      },
+      {
+        "value": "CUSTOM:ClassicLava"
+      },
+      {
+        "value": "CUSTOM:ClassicLavaN"
+      },
+      {
+        "value": "CUSTOM:FireN"
+      },
+      {
+        "value": "CUSTOM:WheatNStage0"
+      },
+      {
+        "value": "CUSTOM:WheatNStage1"
+      },
+      {
+        "value": "CUSTOM:WheatNStage2"
+      },
+      {
+        "value": "CUSTOM:WheatNStage3"
+      },
+      {
+        "value": "CUSTOM:WheatNStage4"
+      },
+      {
+        "value": "CUSTOM:WheatNStage5"
+      },
+      {
+        "value": "CUSTOM:WheatNStage6"
+      },
+      {
+        "value": "CUSTOM:WheatNStage7"
+      },
+      {
+        "value": "CUSTOM:BeetrootsNStage0"
+      },
+      {
+        "value": "CUSTOM:BeetrootsStage1"
+      },
+      {
+        "value": "CUSTOM:BeetrootsStage2"
+      },
+      {
+        "value": "CUSTOM:BeetrootStage3"
+      },
+      {
+        "value": "CUSTOM:CarrotNStage0"
+      },
+      {
+        "value": "CUSTOM:CarrotNStage1"
+      },
+      {
+        "value": "CUSTOM:CarrotNStage2"
+      },
+      {
+        "value": "CUSTOM:CarrotNStage3"
+      },
+      {
+        "value": "CUSTOM:PotatoNStage0"
+      },
+      {
+        "value": "CUSTOM:PotatoNStage1"
+      },
+      {
+        "value": "CUSTOM:PotatoStage2"
+      },
+      {
+        "value": "CUSTOM:PotatoStage3"
+      },
+      {
+        "value": "CUSTOM:NetherWartNStage0"
+      },
+      {
+        "value": "CUSTOM:NetherWartNStage2"
+      },
+      {
+        "value": "CUSTOM:NetherWartNStage1"
+      },
+      {
+        "value": "CUSTOM:HangingLanternN"
+      },
+      {
+        "value": "CUSTOM:HanginigSoulLanternN"
+      },
+      {
+        "value": "CUSTOM:BarrilNOpen"
+      },
+      {
+        "value": "CUSTOM:DoubleChestN"
+      },
+      {
+        "value": "CUSTOM:CakeNSlice1"
+      },
+      {
+        "value": "CUSTOM:CakeNSlice2"
+      },
+      {
+        "value": "CUSTOM:CakeNSlice3"
+      },
+      {
+        "value": "CUSTOM:CakeNSlice4"
+      },
+      {
+        "value": "CUSTOM:CakeNSlice5"
+      },
+      {
+        "value": "CUSTOM:CakeNSlice6"
+      },
+      {
+        "value": "CUSTOM:WaterN"
+      },
+      {
+        "value": "CUSTOM:GrassBlockNSnow"
+      },
+      {
+        "value": "CUSTOM:GrassBlockCaveGame"
+      },
+      {
+        "value": "CUSTOM:CobblestoneCaveGame"
+      },
+      {
+        "value": "CUSTOM:SpawnerN"
+      },
+      {
+        "value": "CUSTOM:FurnaceNOn"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "banned_items",
+    "namespace": "forge"
+  }
+}

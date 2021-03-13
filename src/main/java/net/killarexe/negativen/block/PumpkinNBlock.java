@@ -22,18 +22,18 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.PumpkinsNRightClickProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class PumpkinNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:pumpkin_n")
+@NegativeNModElements.ModElement.Tag
+public class PumpkinNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:pumpkin_n")
 	public static final Block block = null;
-	public PumpkinNBlock(NegativenModElements instance) {
+	public PumpkinNBlock(NegativeNModElements instance) {
 		super(instance, 240);
 	}
 

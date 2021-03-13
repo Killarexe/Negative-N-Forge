@@ -17,16 +17,16 @@ import net.minecraft.entity.player.PlayerEntity;
 
 import net.killarexe.negativen.procedures.HoeNRightClickOnDirtProcedure;
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class HoeenDiamantNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:diamond_n_hoe")
+@NegativeNModElements.ModElement.Tag
+public class HoeenDiamantNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:diamond_n_hoe")
 	public static final Item block = null;
-	public HoeenDiamantNItem(NegativenModElements instance) {
+	public HoeenDiamantNItem(NegativeNModElements instance) {
 		super(instance, 283);
 	}
 

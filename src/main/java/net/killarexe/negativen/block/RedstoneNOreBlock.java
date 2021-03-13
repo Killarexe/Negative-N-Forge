@@ -31,17 +31,17 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.item.RedstoneNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class RedstoneNOreBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:redstone_n_ore")
+@NegativeNModElements.ModElement.Tag
+public class RedstoneNOreBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:redstone_n_ore")
 	public static final Block block = null;
-	public RedstoneNOreBlock(NegativenModElements instance) {
+	public RedstoneNOreBlock(NegativeNModElements instance) {
 		super(instance, 226);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -74,9 +74,9 @@ public class RedstoneNOreBlock extends NegativenModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:mineingdim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:mineingdim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

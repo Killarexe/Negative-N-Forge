@@ -14,7 +14,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.killarexe.negativen.world.dimension.NoneDimDimension;
 
 public class NoneDimItem extends Item {
-	@ObjectHolder("negativen:nonedim")
+	@ObjectHolder("negative_n:nonedim")
 	public static final Item block = null;
 	public NoneDimItem() {
 		super(new Item.Properties().group(null).maxDamage(64));

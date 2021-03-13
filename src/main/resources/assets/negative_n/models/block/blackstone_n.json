@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negative_n:blocks/blackstone_n_top",
+    "up": "negative_n:blocks/blackstone_n_top",
+    "north": "negative_n:blocks/blackstone_n",
+    "east": "negative_n:blocks/blackstone_n",
+    "south": "negative_n:blocks/blackstone_n",
+    "west": "negative_n:blocks/blackstone_n",
+    "particle": "negative_n:blocks/blackstone_n_top"
+  }
+}

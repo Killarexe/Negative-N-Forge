@@ -47,15 +47,15 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-@NegativenModElements.ModElement.Tag
-public class PigmanNEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class PigmanNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public PigmanNEntity(NegativenModElements instance) {
+	public PigmanNEntity(NegativeNModElements instance) {
 		super(instance, 64);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -74,11 +74,11 @@ public class PigmanNEntity extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:nethern").equals(event.getName()))
+		if (new ResourceLocation("negative_n:nethern").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:nether_n_warped_biome").equals(event.getName()))
+		if (new ResourceLocation("negative_n:nether_n_warped_biome").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:nether_n_crimson_biome").equals(event.getName()))
+		if (new ResourceLocation("negative_n:nether_n_crimson_biome").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -100,7 +100,7 @@ public class PigmanNEntity extends NegativenModElements.ModElement {
 				return new MobRenderer(renderManager, new Modelpiglin_n(), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("negativen:textures/zombified_piglin_n.png");
+						return new ResourceLocation("negative_n:textures/zombified_piglin_n.png");
 					}
 				};
 			});

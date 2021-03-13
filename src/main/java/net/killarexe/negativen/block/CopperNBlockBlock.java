@@ -18,7 +18,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.CopperNAgeProcedureProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -26,11 +26,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class CopperNBlockBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:copper_n_block")
+@NegativeNModElements.ModElement.Tag
+public class CopperNBlockBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:copper_n_block")
 	public static final Block block = null;
-	public CopperNBlockBlock(NegativenModElements instance) {
+	public CopperNBlockBlock(NegativeNModElements instance) {
 		super(instance, 243);
 	}
 

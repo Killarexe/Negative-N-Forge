@@ -32,7 +32,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.TorchNState2BlockAddedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -40,11 +40,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class TorchNState2Block extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:torch_n_state_2")
+@NegativeNModElements.ModElement.Tag
+public class TorchNState2Block extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:torch_n_state_2")
 	public static final Block block = null;
-	public TorchNState2Block(NegativenModElements instance) {
+	public TorchNState2Block(NegativeNModElements instance) {
 		super(instance, 72);
 	}
 

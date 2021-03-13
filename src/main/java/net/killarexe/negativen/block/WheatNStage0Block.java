@@ -28,7 +28,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.CropsGrowProcedure;
 import net.killarexe.negativen.item.WheatNSeedItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -36,11 +36,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class WheatNStage0Block extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:wheat_n_stage_0")
+@NegativeNModElements.ModElement.Tag
+public class WheatNStage0Block extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:wheat_n_stage_0")
 	public static final Block block = null;
-	public WheatNStage0Block(NegativenModElements instance) {
+	public WheatNStage0Block(NegativeNModElements instance) {
 		super(instance, 680);
 	}
 

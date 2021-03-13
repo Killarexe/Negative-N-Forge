@@ -1,7 +1,0 @@
-{
-  "parent": "block/fence_post",
-  "textures": {
-    "texture": "negativen:blocks/oak_planksn",
-    "particle": "negativen:blocks/oak_planksn"
-  }
-}

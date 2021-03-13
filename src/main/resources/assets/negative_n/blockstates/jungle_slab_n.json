@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "negative_n:block/jungle_slab_n"
+    },
+    "type=top": {
+      "model": "negative_n:block/jungle_slab_n_top"
+    },
+    "type=double": {
+      "model": "negative_n:block/jungle_slab_n_full"
+    }
+  }
+}

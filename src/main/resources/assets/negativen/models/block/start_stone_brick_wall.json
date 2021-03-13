@@ -1,7 +1,0 @@
-{
-  "parent": "block/template_wall_side",
-  "textures": {
-    "wall": "negativen:blocks/end_bricks",
-    "particle": "negativen:blocks/end_bricks"
-  }
-}

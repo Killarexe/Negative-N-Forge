@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class PumpkinNSeedItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:pumpkin_n_seed")
+@NegativeNModElements.ModElement.Tag
+public class PumpkinNSeedItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:pumpkin_n_seed")
 	public static final Item block = null;
-	public PumpkinNSeedItem(NegativenModElements instance) {
+	public PumpkinNSeedItem(NegativeNModElements instance) {
 		super(instance, 906);
 	}
 

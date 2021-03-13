@@ -13,16 +13,16 @@ import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.procedures.BeefrawNFoodEatenProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNFoodItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class BeefrawNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:beefrawn")
+@NegativeNModElements.ModElement.Tag
+public class BeefrawNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:beefrawn")
 	public static final Item block = null;
-	public BeefrawNItem(NegativenModElements instance) {
+	public BeefrawNItem(NegativeNModElements instance) {
 		super(instance, 311);
 	}
 

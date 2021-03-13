@@ -22,16 +22,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class OakStrairsNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:oak_n_stairs")
+@NegativeNModElements.ModElement.Tag
+public class OakStrairsNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:oak_n_stairs")
 	public static final Block block = null;
-	public OakStrairsNBlock(NegativenModElements instance) {
+	public OakStrairsNBlock(NegativeNModElements instance) {
 		super(instance, 163);
 	}
 

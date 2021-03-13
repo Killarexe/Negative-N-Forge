@@ -24,7 +24,7 @@
         "value": "CUSTOM:NetheriteN"
       }
     ],
-    "immuneToFire": false,
+    "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onEntityHitWith": {

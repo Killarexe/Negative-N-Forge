@@ -22,7 +22,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.AcaciaSaplingNUpdateTickProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -30,11 +30,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class AcaciaSaplingNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:acacia_sapling_n")
+@NegativeNModElements.ModElement.Tag
+public class AcaciaSaplingNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:acacia_sapling_n")
 	public static final Block block = null;
-	public AcaciaSaplingNBlock(NegativenModElements instance) {
+	public AcaciaSaplingNBlock(NegativeNModElements instance) {
 		super(instance, 69);
 	}
 

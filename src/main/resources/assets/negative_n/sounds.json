@@ -1,0 +1,30 @@
+{
+  "n-music_8bit": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "negative_n:seq_bgm_vs_n_2_8-bit",
+        "stream": false
+      }
+    ]
+  },
+  "easter_egg": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "negative_n:one_piece_-_amv_-_we_are_full_song",
+        "stream": false
+      }
+    ]
+  },
+  "op": {
+    "category": "music",
+    "subtitle": "subtitles.op",
+    "sounds": [
+      {
+        "name": "negative_n:baclassic",
+        "stream": true
+      }
+    ]
+  }
+}

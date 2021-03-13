@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NetheriteNPickaxeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:netherite_n_pickaxe")
+@NegativeNModElements.ModElement.Tag
+public class NetheriteNPickaxeItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:netherite_n_pickaxe")
 	public static final Item block = null;
-	public NetheriteNPickaxeItem(NegativenModElements instance) {
+	public NetheriteNPickaxeItem(NegativeNModElements instance) {
 		super(instance, 276);
 	}
 
@@ -46,7 +46,7 @@ public class NetheriteNPickaxeItem extends NegativenModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(NetheriteNItem.block, (int) (1)));
 			}
-		}, 1, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
+		}, 1, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).isImmuneToFire()) {
 		}.setRegistryName("netherite_n_pickaxe"));
 	}
 }

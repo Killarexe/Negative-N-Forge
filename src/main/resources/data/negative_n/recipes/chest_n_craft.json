@@ -1,0 +1,39 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "1": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "2": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "3": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "5": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "6": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "7": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "8": {
+      "tag": "minecraft:tag_planksn"
+    }
+  },
+  "result": {
+    "item": "negative_n:chest_n",
+    "count": 1
+  }
+}

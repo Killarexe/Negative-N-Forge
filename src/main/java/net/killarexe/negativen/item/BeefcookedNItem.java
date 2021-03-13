@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.killarexe.negativen.itemgroup.NegativeNFoodItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class BeefcookedNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:beefcookedn")
+@NegativeNModElements.ModElement.Tag
+public class BeefcookedNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:beefcookedn")
 	public static final Item block = null;
-	public BeefcookedNItem(NegativenModElements instance) {
+	public BeefcookedNItem(NegativeNModElements instance) {
 		super(instance, 312);
 	}
 

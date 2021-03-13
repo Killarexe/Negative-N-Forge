@@ -2,10 +2,10 @@
   "_fv": 15,
   "_type": "mob",
   "definition": {
-    "mobName": "Skeleton-N",
+    "mobName": "Wither Skeleton-N",
     "mobLabel": "",
     "mobModelName": "Modelskeleton_n",
-    "mobModelTexture": "skeleton-n.png",
+    "mobModelTexture": "wither_n_skeleton_n.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
@@ -112,34 +112,7 @@
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
-        "value": "CUSTOM:Negative"
-      },
-      {
-        "value": "CUSTOM:DesertN"
-      },
-      {
-        "value": "CUSTOM:OakNforest"
-      },
-      {
-        "value": "CUSTOM:BirchNForest"
-      },
-      {
-        "value": "CUSTOM:PlainsN"
-      },
-      {
-        "value": "CUSTOM:DarkOakNForest"
-      },
-      {
-        "value": "CUSTOM:JungleN"
-      },
-      {
-        "value": "CUSTOM:SpruceForestN"
-      },
-      {
-        "value": "CUSTOM:MontainsN"
-      },
-      {
-        "value": "CUSTOM:AcaciaNBiome"
+        "value": "CUSTOM:NetherN"
       }
     ],
     "spawnInDungeons": true

@@ -1,0 +1,26 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:semi_weathered_copper_n_block"
+    },
+    "1": {
+      "item": "negative_n:semi_weathered_copper_n_block"
+    },
+    "2": {
+      "item": "negative_n:semi_weathered_copper_n_block"
+    },
+    "3": {
+      "item": "negative_n:semi_weathered_copper_n_block"
+    }
+  },
+  "result": {
+    "item": "negative_n:semi_weathered_cut_copper_n_block",
+    "count": 4
+  }
+}

@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "negativen:blocks/redstone_ore_n",
-    "particle": "negativen:blocks/redstone_ore_n"
-  }
-}

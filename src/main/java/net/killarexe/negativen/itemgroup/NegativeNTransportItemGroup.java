@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.killarexe.negativen.item.OakNBoatItemItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NegativeNTransportItemGroup extends NegativenModElements.ModElement {
-	public NegativeNTransportItemGroup(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class NegativeNTransportItemGroup extends NegativeNModElements.ModElement {
+	public NegativeNTransportItemGroup(NegativeNModElements instance) {
 		super(instance, 793);
 	}
 

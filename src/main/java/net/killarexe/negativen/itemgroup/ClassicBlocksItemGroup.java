@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.killarexe.negativen.block.ClassicGrassBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicBlocksItemGroup extends NegativenModElements.ModElement {
-	public ClassicBlocksItemGroup(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class ClassicBlocksItemGroup extends NegativeNModElements.ModElement {
+	public ClassicBlocksItemGroup(NegativeNModElements instance) {
 		super(instance, 594);
 	}
 

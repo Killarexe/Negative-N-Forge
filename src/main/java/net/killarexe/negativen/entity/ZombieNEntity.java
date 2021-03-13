@@ -51,12 +51,12 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.RottenfleshNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class ZombieNEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class ZombieNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public ZombieNEntity(NegativenModElements instance) {
+	public ZombieNEntity(NegativeNModElements instance) {
 		super(instance, 57);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -75,7 +75,7 @@ public class ZombieNEntity extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:negative").equals(event.getName()))
+		if (new ResourceLocation("negative_n:negative").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -97,7 +97,7 @@ public class ZombieNEntity extends NegativenModElements.ModElement {
 				BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("negativen:textures/ombie-_2.png");
+						return new ResourceLocation("negative_n:textures/ombie-_2.png");
 					}
 				};
 				customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));

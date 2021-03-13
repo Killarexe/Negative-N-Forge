@@ -18,16 +18,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class WapredNyliumNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:wapred_nylium_n")
+@NegativeNModElements.ModElement.Tag
+public class WapredNyliumNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:wapred_nylium_n")
 	public static final Block block = null;
-	public WapredNyliumNBlock(NegativenModElements instance) {
+	public WapredNyliumNBlock(NegativeNModElements instance) {
 		super(instance, 229);
 	}
 

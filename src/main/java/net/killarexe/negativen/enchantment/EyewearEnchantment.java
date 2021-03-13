@@ -7,13 +7,13 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.enchantment.Enchantment;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class EyewearEnchantment extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:eyewear")
+@NegativeNModElements.ModElement.Tag
+public class EyewearEnchantment extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:eyewear")
 	public static final Enchantment enchantment = null;
-	public EyewearEnchantment(NegativenModElements instance) {
+	public EyewearEnchantment(NegativeNModElements instance) {
 		super(instance, 922);
 	}
 

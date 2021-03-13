@@ -25,13 +25,13 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 
-@NegativenModElements.ModElement.Tag
-public class AbandonnedPortalUnderworldNetherStructure extends NegativenModElements.ModElement {
-	public AbandonnedPortalUnderworldNetherStructure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class AbandonnedPortalUnderworldNetherStructure extends NegativeNModElements.ModElement {
+	public AbandonnedPortalUnderworldNetherStructure(NegativeNModElements instance) {
 		super(instance, 637);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -47,7 +47,7 @@ public class AbandonnedPortalUnderworldNetherStructure extends NegativenModEleme
 				boolean dimensionCriteria = false;
 				if (dimensionType == World.THE_NETHER)
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:netherndim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:netherndim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
@@ -65,7 +65,7 @@ public class AbandonnedPortalUnderworldNetherStructure extends NegativenModEleme
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();
 						Template template = world.getWorld().getStructureTemplateManager()
-								.getTemplateDefaulted(new ResourceLocation("negativen", "abandonned_portal_2"));
+								.getTemplateDefaulted(new ResourceLocation("negative_n", "abandonned_portal_2"));
 						if (template == null)
 							return false;
 						template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)

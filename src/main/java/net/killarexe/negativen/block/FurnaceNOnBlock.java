@@ -44,7 +44,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.gui.FurnaceNGuiGui;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -54,13 +54,13 @@ import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
 
-@NegativenModElements.ModElement.Tag
-public class FurnaceNOnBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:furnace_n_on")
+@NegativeNModElements.ModElement.Tag
+public class FurnaceNOnBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:furnace_n_on")
 	public static final Block block = null;
-	@ObjectHolder("negativen:furnace_n_on")
+	@ObjectHolder("negative_n:furnace_n_on")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public FurnaceNOnBlock(NegativenModElements instance) {
+	public FurnaceNOnBlock(NegativeNModElements instance) {
 		super(instance, 846);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

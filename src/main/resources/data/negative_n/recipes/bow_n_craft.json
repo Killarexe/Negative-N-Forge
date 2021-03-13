@@ -1,0 +1,33 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01 ",
+    "3 5",
+    "67 "
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:string_n"
+    },
+    "1": {
+      "item": "negative_n:stick_n"
+    },
+    "3": {
+      "item": "negative_n:string_n"
+    },
+    "5": {
+      "item": "negative_n:stick_n"
+    },
+    "6": {
+      "item": "negative_n:string_n"
+    },
+    "7": {
+      "item": "negative_n:stick_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:bow_n",
+    "count": 1
+  }
+}

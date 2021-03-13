@@ -26,7 +26,7 @@ import net.minecraft.block.Block;
 import net.killarexe.negativen.procedures.CactusNUpdateTickProcedure;
 import net.killarexe.negativen.procedures.CactusNEntityCollidesInTheBlockProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -34,11 +34,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class CactusNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:cactus_n")
+@NegativeNModElements.ModElement.Tag
+public class CactusNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:cactus_n")
 	public static final Block block = null;
-	public CactusNBlock(NegativenModElements instance) {
+	public CactusNBlock(NegativeNModElements instance) {
 		super(instance, 212);
 	}
 

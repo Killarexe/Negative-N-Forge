@@ -1,7 +1,0 @@
-{
-  "parent": "block/wall_inventory",
-  "textures": {
-    "wall": "negativen:blocks/end_bricks",
-    "particle": "negativen:blocks/end_bricks"
-  }
-}

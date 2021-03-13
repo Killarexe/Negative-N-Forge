@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "negativen:blocks/chiseled_nether_bricks_n",
-    "particle": "negativen:blocks/chiseled_nether_bricks_n"
-  }
-}

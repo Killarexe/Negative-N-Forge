@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "bottom": "negativen:blocks/semi_weathered_cut_copper_n",
-    "top": "negativen:blocks/semi_weathered_cut_copper_n",
-    "side": "negativen:blocks/semi_weathered_cut_copper_n"
-  }
-}

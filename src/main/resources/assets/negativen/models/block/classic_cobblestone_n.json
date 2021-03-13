@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "negativen:blocks/cobbelstone_c_n",
-    "particle": "negativen:blocks/cobbelstone_c_n"
-  }
-}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negative_n:blocks/dirt_c_n",
+    "up": "negative_n:blocks/grass_c_n",
+    "north": "negative_n:blocks/grass_c_n_side",
+    "east": "negative_n:blocks/grass_c_n_side",
+    "south": "negative_n:blocks/grass_c_n_side",
+    "west": "negative_n:blocks/grass_c_n_side",
+    "particle": "negative_n:blocks/dirt_c_n"
+  }
+}

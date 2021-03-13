@@ -21,16 +21,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class BirchlognBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:birch_log_n")
+@NegativeNModElements.ModElement.Tag
+public class BirchlognBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:birch_log_n")
 	public static final Block block = null;
-	public BirchlognBlock(NegativenModElements instance) {
+	public BirchlognBlock(NegativeNModElements instance) {
 		super(instance, 169);
 	}
 

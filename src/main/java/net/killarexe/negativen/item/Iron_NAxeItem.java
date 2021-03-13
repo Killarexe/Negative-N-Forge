@@ -13,16 +13,16 @@ import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.procedures.PoisonusProccedProcedure;
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class Iron_NAxeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:iron_n_axe")
+@NegativeNModElements.ModElement.Tag
+public class Iron_NAxeItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:iron_n_axe")
 	public static final Item block = null;
-	public Iron_NAxeItem(NegativenModElements instance) {
+	public Iron_NAxeItem(NegativeNModElements instance) {
 		super(instance, 285);
 	}
 

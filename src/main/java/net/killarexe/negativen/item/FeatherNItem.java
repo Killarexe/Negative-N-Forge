@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class FeatherNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:feather_n")
+@NegativeNModElements.ModElement.Tag
+public class FeatherNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:feather_n")
 	public static final Item block = null;
-	public FeatherNItem(NegativenModElements instance) {
+	public FeatherNItem(NegativeNModElements instance) {
 		super(instance, 39);
 	}
 

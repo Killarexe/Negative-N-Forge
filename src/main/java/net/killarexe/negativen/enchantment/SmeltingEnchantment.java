@@ -7,13 +7,13 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.enchantment.Enchantment;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class SmeltingEnchantment extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:smelting")
+@NegativeNModElements.ModElement.Tag
+public class SmeltingEnchantment extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:smelting")
 	public static final Enchantment enchantment = null;
-	public SmeltingEnchantment(NegativenModElements instance) {
+	public SmeltingEnchantment(NegativeNModElements instance) {
 		super(instance, 781);
 	}
 

@@ -24,18 +24,18 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.OverworldPortalEntityCollidesInTheBlockProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class OverworldPortalBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:overworld_portal")
+@NegativeNModElements.ModElement.Tag
+public class OverworldPortalBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:overworld_portal")
 	public static final Block block = null;
-	public OverworldPortalBlock(NegativenModElements instance) {
+	public OverworldPortalBlock(NegativeNModElements instance) {
 		super(instance, 635);
 	}
 

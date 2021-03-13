@@ -12,13 +12,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.killarexe.negativen.itemgroup.NegativeNFoodItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class HoneyNBottleItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:honey_n_bottle")
+@NegativeNModElements.ModElement.Tag
+public class HoneyNBottleItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:honey_n_bottle")
 	public static final Item block = null;
-	public HoneyNBottleItem(NegativenModElements instance) {
+	public HoneyNBottleItem(NegativeNModElements instance) {
 		super(instance, 20);
 	}
 

@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.killarexe.negativen.item.LavaNbucketItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NegativeNRessouresItemGroup extends NegativenModElements.ModElement {
-	public NegativeNRessouresItemGroup(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class NegativeNRessouresItemGroup extends NegativeNModElements.ModElement {
+	public NegativeNRessouresItemGroup(NegativeNModElements instance) {
 		super(instance, 380);
 	}
 

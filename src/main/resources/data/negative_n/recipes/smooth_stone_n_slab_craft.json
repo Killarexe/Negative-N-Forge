@@ -1,0 +1,9 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "negative_n:smooth_stone_n"
+  },
+  "result": "negative_n:smooth_stone_n_slab"
+}

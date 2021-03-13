@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "negativen:oak_planks_n",
-    "negativen:acacia_planks_n",
-    "negativen:birch_planks_n",
-    "negativen:dark_oak_planks_n",
-    "negativen:jungle_planks_n",
-    "negativen:spruce_planks_n",
-    "negativen:crimson_planks_n",
-    "negativen:warped_planks_n"
+    "negative_n:oak_planks_n",
+    "negative_n:acacia_planks_n",
+    "negative_n:birch_planks_n",
+    "negative_n:dark_oak_planks_n",
+    "negative_n:jungle_planks_n",
+    "negative_n:spruce_planks_n",
+    "negative_n:crimson_planks_n",
+    "negative_n:warped_planks_n"
   ]
 }

@@ -14,16 +14,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.ClassicBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicCobblestoneBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:classic_cobblestone")
+@NegativeNModElements.ModElement.Tag
+public class ClassicCobblestoneBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:classic_cobblestone")
 	public static final Block block = null;
-	public ClassicCobblestoneBlock(NegativenModElements instance) {
+	public ClassicCobblestoneBlock(NegativeNModElements instance) {
 		super(instance, 327);
 	}
 

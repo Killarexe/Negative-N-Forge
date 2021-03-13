@@ -1,0 +1,22 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:emerald_n_ingot"
+    },
+    {
+      "item": "negative_n:emerald_n_ingot"
+    },
+    {
+      "item": "negative_n:gold_n_ingot"
+    },
+    {
+      "item": "negative_n:gold_n_ingot"
+    }
+  ],
+  "result": {
+    "item": "negative_n:start_portal_frame",
+    "count": 3
+  }
+}

@@ -22,18 +22,18 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.IngerOnBlockRightClickedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class IngerBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:inger")
+@NegativeNModElements.ModElement.Tag
+public class IngerBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:inger")
 	public static final Block block = null;
-	public IngerBlock(NegativenModElements instance) {
+	public IngerBlock(NegativeNModElements instance) {
 		super(instance, 207);
 	}
 

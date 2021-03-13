@@ -12,7 +12,7 @@ import net.minecraft.command.Commands;
 import net.minecraft.command.CommandSource;
 
 import net.killarexe.negativen.procedures.DebugStickCommandExecutedProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -22,9 +22,9 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.arguments.StringArgumentType;
 
-@NegativenModElements.ModElement.Tag
-public class DebugStickCommand extends NegativenModElements.ModElement {
-	public DebugStickCommand(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class DebugStickCommand extends NegativeNModElements.ModElement {
+	public DebugStickCommand(NegativeNModElements instance) {
 		super(instance, 870);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

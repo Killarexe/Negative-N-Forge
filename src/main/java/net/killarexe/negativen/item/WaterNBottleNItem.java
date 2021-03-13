@@ -13,13 +13,13 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class WaterNBottleNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:water_n_bottle_n")
+@NegativeNModElements.ModElement.Tag
+public class WaterNBottleNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:water_n_bottle_n")
 	public static final Item block = null;
-	public WaterNBottleNItem(NegativenModElements instance) {
+	public WaterNBottleNItem(NegativeNModElements instance) {
 		super(instance, 927);
 	}
 

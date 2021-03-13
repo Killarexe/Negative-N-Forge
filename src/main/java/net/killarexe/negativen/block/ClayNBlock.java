@@ -30,7 +30,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.ClayNAdditionalGenerationConditionProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
@@ -38,11 +38,11 @@ import java.util.Collections;
 
 import com.google.common.collect.ImmutableMap;
 
-@NegativenModElements.ModElement.Tag
-public class ClayNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:clay_n")
+@NegativeNModElements.ModElement.Tag
+public class ClayNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:clay_n")
 	public static final Block block = null;
-	public ClayNBlock(NegativenModElements instance) {
+	public ClayNBlock(NegativeNModElements instance) {
 		super(instance, 261);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -75,7 +75,7 @@ public class ClayNBlock extends NegativenModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

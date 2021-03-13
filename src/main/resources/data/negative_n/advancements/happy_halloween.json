@@ -1,0 +1,11 @@
+{
+  "criteria": {
+    "happy_halloween": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "negative_n:wtnn"
+}

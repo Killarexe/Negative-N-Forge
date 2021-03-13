@@ -1,8 +1,0 @@
-{
-  "parent": "negativen:custom/amethyst_cluster",
-  "textures": {
-    "all": "negativen:blocks/small_amethyst_n_bud",
-    "particle": "negativen:blocks/small_amethyst_n_bud",
-    "0": "negativen:blocks/small_amethyst_n_bud"
-  }
-}

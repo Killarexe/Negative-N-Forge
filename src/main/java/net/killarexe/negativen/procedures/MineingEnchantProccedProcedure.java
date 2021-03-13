@@ -28,16 +28,16 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.enchantment.MineingEnchantment;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class MineingEnchantProccedProcedure extends NegativenModElements.ModElement {
-	public MineingEnchantProccedProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class MineingEnchantProccedProcedure extends NegativeNModElements.ModElement {
+	public MineingEnchantProccedProcedure(NegativeNModElements instance) {
 		super(instance, 885);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -45,27 +45,27 @@ public class MineingEnchantProccedProcedure extends NegativenModElements.ModElem
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure MineingEnchantProcced!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure MineingEnchantProcced!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure MineingEnchantProcced!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure MineingEnchantProcced!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure MineingEnchantProcced!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure MineingEnchantProcced!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure MineingEnchantProcced!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure MineingEnchantProcced!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure MineingEnchantProcced!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure MineingEnchantProcced!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -162,12 +162,12 @@ public class MineingEnchantProccedProcedure extends NegativenModElements.ModElem
 															new BlockPos((int) (entity.getPosX()), (int) (entity.getPosY()),
 																	(int) (entity.getPosZ())),
 															(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-																	.getValue(new ResourceLocation("negativen:n-music_8bit")),
+																	.getValue(new ResourceLocation("negative_n:n-music_8bit")),
 															SoundCategory.NEUTRAL, (float) 1, (float) 0.9);
 												} else {
 													((World) world).playSound((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
 															(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-																	.getValue(new ResourceLocation("negativen:n-music_8bit")),
+																	.getValue(new ResourceLocation("negative_n:n-music_8bit")),
 															SoundCategory.NEUTRAL, (float) 1, (float) 0.9, false);
 												}
 												if (entity instanceof PlayerEntity) {

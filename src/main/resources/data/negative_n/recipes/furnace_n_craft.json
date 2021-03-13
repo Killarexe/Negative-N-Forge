@@ -1,0 +1,39 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:cobblestone_n"
+    },
+    "1": {
+      "item": "negative_n:cobblestone_n"
+    },
+    "2": {
+      "item": "negative_n:cobblestone_n"
+    },
+    "3": {
+      "item": "negative_n:cobblestone_n"
+    },
+    "5": {
+      "item": "negative_n:cobblestone_n"
+    },
+    "6": {
+      "item": "negative_n:cobblestone_n"
+    },
+    "7": {
+      "item": "negative_n:cobblestone_n"
+    },
+    "8": {
+      "item": "negative_n:cobblestone_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:furnace_n",
+    "count": 1
+  }
+}

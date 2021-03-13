@@ -25,13 +25,13 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 
-@NegativenModElements.ModElement.Tag
-public class PumpkinNSpawnStructure extends NegativenModElements.ModElement {
-	public PumpkinNSpawnStructure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class PumpkinNSpawnStructure extends NegativeNModElements.ModElement {
+	public PumpkinNSpawnStructure(NegativeNModElements instance) {
 		super(instance, 816);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -45,19 +45,19 @@ public class PumpkinNSpawnStructure extends NegativenModElements.ModElement {
 				int ck = (pos.getZ() >> 4) << 4;
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:mineingdim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:mineingdim")))
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:netherndim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:netherndim")))
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:classic_dim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:classic_dim")))
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:classic_n_dim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:classic_n_dim")))
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:classic_nether_n")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:classic_nether_n")))
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:classic_nether_dim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:classic_nether_dim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
@@ -75,7 +75,7 @@ public class PumpkinNSpawnStructure extends NegativenModElements.ModElement {
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();
 						Template template = world.getWorld().getStructureTemplateManager()
-								.getTemplateDefaulted(new ResourceLocation("negativen", "pumpkin_n"));
+								.getTemplateDefaulted(new ResourceLocation("negative_n", "pumpkin_n"));
 						if (template == null)
 							return false;
 						template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)

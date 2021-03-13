@@ -28,18 +28,18 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.CauldronNRightClickProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class CauldronNLavaNFullBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:cauldron_n_lava_n_full")
+@NegativeNModElements.ModElement.Tag
+public class CauldronNLavaNFullBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:cauldron_n_lava_n_full")
 	public static final Block block = null;
-	public CauldronNLavaNFullBlock(NegativenModElements instance) {
+	public CauldronNLavaNFullBlock(NegativeNModElements instance) {
 		super(instance, 898);
 	}
 

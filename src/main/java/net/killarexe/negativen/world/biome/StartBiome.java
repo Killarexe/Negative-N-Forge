@@ -42,7 +42,7 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.entity.EndermanNEntity;
 import net.killarexe.negativen.block.StartstoneBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
@@ -50,10 +50,10 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 
-@NegativenModElements.ModElement.Tag
-public class StartBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class StartBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public StartBiome(NegativenModElements instance) {
+	public StartBiome(NegativeNModElements instance) {
 		super(instance, 453);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -89,7 +89,7 @@ public class StartBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(0.1f).scale(0.2f).temperature(0.5f)
 						.downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:start"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:start"));
 			}
 		}
 	}

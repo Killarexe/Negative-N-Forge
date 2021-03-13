@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class GoldNNuggetItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:gold_n_nugget")
+@NegativeNModElements.ModElement.Tag
+public class GoldNNuggetItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:gold_n_nugget")
 	public static final Item block = null;
-	public GoldNNuggetItem(NegativenModElements instance) {
+	public GoldNNuggetItem(NegativeNModElements instance) {
 		super(instance, 37);
 	}
 

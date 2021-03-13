@@ -29,18 +29,18 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.LanternsNUpdateTickProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class HanginigSoulLanternNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:hanginig_soul_lantern_n")
+@NegativeNModElements.ModElement.Tag
+public class HanginigSoulLanternNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:hanginig_soul_lantern_n")
 	public static final Block block = null;
-	public HanginigSoulLanternNBlock(NegativenModElements instance) {
+	public HanginigSoulLanternNBlock(NegativeNModElements instance) {
 		super(instance, 789);
 	}
 

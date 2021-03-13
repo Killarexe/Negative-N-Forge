@@ -1,0 +1,17 @@
+{
+  "_fv": 15,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "baclassic",
+    "name": "Bad Apple Classic",
+    "description": "ZUN - Touhou Bad Apple",
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNRessoures"
+    },
+    "music": {
+      "value": "CUSTOM:op"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

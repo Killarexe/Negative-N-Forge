@@ -1,7 +1,0 @@
-{
-  "parent": "block/template_orientable_trapdoor_top",
-  "textures": {
-    "texture": "negativen:blocks/dark_oak_n_trapdoor",
-    "particle": "negativen:blocks/dark_oak_n_trapdoor"
-  }
-}

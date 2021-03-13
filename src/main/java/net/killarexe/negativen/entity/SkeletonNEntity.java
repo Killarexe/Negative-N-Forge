@@ -55,15 +55,15 @@ import net.minecraft.block.BlockState;
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.BowNItem;
 import net.killarexe.negativen.item.BoneNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-@NegativenModElements.ModElement.Tag
-public class SkeletonNEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class SkeletonNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public SkeletonNEntity(NegativenModElements instance) {
+	public SkeletonNEntity(NegativeNModElements instance) {
 		super(instance, 62);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -82,25 +82,25 @@ public class SkeletonNEntity extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:negative").equals(event.getName()))
+		if (new ResourceLocation("negative_n:negative").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:desert_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:desert_n").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:oak_nforest").equals(event.getName()))
+		if (new ResourceLocation("negative_n:oak_nforest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:birch_n_forest").equals(event.getName()))
+		if (new ResourceLocation("negative_n:birch_n_forest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:plains_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:plains_n").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:dark_oak_n_forest").equals(event.getName()))
+		if (new ResourceLocation("negative_n:dark_oak_n_forest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:jungle_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:jungle_n").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:spruce_forest_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:spruce_forest_n").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:montains_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:montains_n").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:acacia_n_biome").equals(event.getName()))
+		if (new ResourceLocation("negative_n:acacia_n_biome").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -122,7 +122,7 @@ public class SkeletonNEntity extends NegativenModElements.ModElement {
 				return new MobRenderer(renderManager, new Modelskeleton_n(), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("negativen:textures/skeleton-n.png");
+						return new ResourceLocation("negative_n:textures/skeleton-n.png");
 					}
 				};
 			});

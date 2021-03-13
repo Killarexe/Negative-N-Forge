@@ -38,16 +38,16 @@ import net.killarexe.negativen.entity.CowNEntity;
 import net.killarexe.negativen.entity.ChickenNEntity;
 import net.killarexe.negativen.block.StoneNBlock;
 import net.killarexe.negativen.block.BlockherbeNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
 import java.util.List;
 
-@NegativenModElements.ModElement.Tag
-public class AcaciaNBiomeBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class AcaciaNBiomeBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public AcaciaNBiomeBiome(NegativenModElements instance) {
+	public AcaciaNBiomeBiome(NegativeNModElements instance) {
 		super(instance, 656);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -73,7 +73,7 @@ public class AcaciaNBiomeBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.1f).scale(0.2f).temperature(0.5f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:acacia_n_biome"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:acacia_n_biome"));
 			}
 		}
 	}

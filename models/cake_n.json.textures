@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "cake_n_side",
+        "top": "cake_n_top",
+        "bottom": "cake_n_bottom"
+      },
+      "name": "default"
+    }
+  }
+}

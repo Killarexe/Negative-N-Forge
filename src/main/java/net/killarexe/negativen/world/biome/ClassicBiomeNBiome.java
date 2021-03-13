@@ -42,7 +42,7 @@ import net.killarexe.negativen.block.ClassicWoodNBlock;
 import net.killarexe.negativen.block.ClassicStoneNBlock;
 import net.killarexe.negativen.block.ClassicLeavesNBlock;
 import net.killarexe.negativen.block.ClassicGrassNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
@@ -50,10 +50,10 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicBiomeNBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class ClassicBiomeNBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public ClassicBiomeNBiome(NegativenModElements instance) {
+	public ClassicBiomeNBiome(NegativeNModElements instance) {
 		super(instance, 596);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -82,7 +82,7 @@ public class ClassicBiomeNBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(0.1f).scale(0f).temperature(0.5f)
 						.downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:classic_biome_n"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:classic_biome_n"));
 			}
 		}
 	}

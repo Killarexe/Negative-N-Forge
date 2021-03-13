@@ -6,36 +6,36 @@ import net.minecraft.state.Property;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.block.TorchNState2Block;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class TorchNState2BlockAddedProcedure extends NegativenModElements.ModElement {
-	public TorchNState2BlockAddedProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class TorchNState2BlockAddedProcedure extends NegativeNModElements.ModElement {
+	public TorchNState2BlockAddedProcedure(NegativeNModElements instance) {
 		super(instance, 553);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure TorchNState2BlockAdded!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure TorchNState2BlockAdded!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure TorchNState2BlockAdded!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure TorchNState2BlockAdded!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure TorchNState2BlockAdded!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure TorchNState2BlockAdded!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure TorchNState2BlockAdded!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure TorchNState2BlockAdded!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

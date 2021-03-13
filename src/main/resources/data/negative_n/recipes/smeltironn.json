@@ -1,0 +1,12 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:smelting",
+  "experience": 0,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "negative_n:iron_n_ore"
+  },
+  "result": {
+    "item": "negative_n:iron_n_ingot"
+  }
+}

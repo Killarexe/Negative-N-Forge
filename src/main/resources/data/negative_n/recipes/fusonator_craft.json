@@ -1,0 +1,24 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:updater"
+    },
+    "1": {
+      "item": "minecraft:furnace"
+    },
+    "2": {
+      "item": "negative_n:diamond_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:fusonator",
+    "count": 1
+  }
+}

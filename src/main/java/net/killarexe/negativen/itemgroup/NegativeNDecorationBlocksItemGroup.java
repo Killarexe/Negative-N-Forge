@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.killarexe.negativen.block.PeonyNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NegativeNDecorationBlocksItemGroup extends NegativenModElements.ModElement {
-	public NegativeNDecorationBlocksItemGroup(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class NegativeNDecorationBlocksItemGroup extends NegativeNModElements.ModElement {
+	public NegativeNDecorationBlocksItemGroup(NegativeNModElements instance) {
 		super(instance, 591);
 	}
 

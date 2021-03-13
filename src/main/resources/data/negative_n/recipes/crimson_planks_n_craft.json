@@ -1,0 +1,13 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:crimson_n_stem"
+    }
+  ],
+  "result": {
+    "item": "negative_n:crimson_planks_n",
+    "count": 4
+  }
+}

@@ -24,16 +24,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class BirchNFenceBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:birch_n_fence")
+@NegativeNModElements.ModElement.Tag
+public class BirchNFenceBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:birch_n_fence")
 	public static final Block block = null;
-	public BirchNFenceBlock(NegativenModElements instance) {
+	public BirchNFenceBlock(NegativeNModElements instance) {
 		super(instance, 94);
 	}
 

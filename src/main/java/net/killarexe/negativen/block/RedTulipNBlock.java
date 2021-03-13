@@ -40,17 +40,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class RedTulipNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:red_tulip_n")
+@NegativeNModElements.ModElement.Tag
+public class RedTulipNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:red_tulip_n")
 	public static final Block block = null;
-	public RedTulipNBlock(NegativenModElements instance) {
+	public RedTulipNBlock(NegativeNModElements instance) {
 		super(instance, 108);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -80,7 +80,7 @@ public class RedTulipNBlock extends NegativenModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

@@ -13,16 +13,16 @@ import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.procedures.RottenfleshNFoodEatenProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class RottenfleshNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:rottenfleshn")
+@NegativeNModElements.ModElement.Tag
+public class RottenfleshNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:rottenfleshn")
 	public static final Item block = null;
-	public RottenfleshNItem(NegativenModElements instance) {
+	public RottenfleshNItem(NegativeNModElements instance) {
 		super(instance, 19);
 	}
 

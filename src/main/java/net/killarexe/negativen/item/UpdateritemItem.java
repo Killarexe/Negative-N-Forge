@@ -2,22 +2,26 @@
 package net.killarexe.negativen.item;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class UpdateritemItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:updater")
+import java.util.List;
+
+@NegativeNModElements.ModElement.Tag
+public class UpdateritemItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:updater")
 	public static final Item block = null;
-	public UpdateritemItem(NegativenModElements instance) {
+	public UpdateritemItem(NegativeNModElements instance) {
 		super(instance, 309);
 	}
 
@@ -62,9 +66,9 @@ public class UpdateritemItem extends NegativenModElements.ModElement {
 		}
 
 		@Override
-		@OnlyIn(Dist.CLIENT)
-		public boolean hasEffect(ItemStack itemstack) {
-			return true;
+		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
+			super.addInformation(itemstack, world, list, flag);
+			list.add(new StringTextComponent("Type: null"));
 		}
 	}
 }

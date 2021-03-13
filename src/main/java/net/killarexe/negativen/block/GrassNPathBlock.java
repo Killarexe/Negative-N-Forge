@@ -27,16 +27,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class GrassNPathBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:grass_n_path")
+@NegativeNModElements.ModElement.Tag
+public class GrassNPathBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:grass_n_path")
 	public static final Block block = null;
-	public GrassNPathBlock(NegativenModElements instance) {
+	public GrassNPathBlock(NegativeNModElements instance) {
 		super(instance, 125);
 	}
 

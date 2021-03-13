@@ -1,0 +1,42 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:sand_n"
+    },
+    "1": {
+      "item": "negative_n:gun_powder_n"
+    },
+    "2": {
+      "item": "negative_n:sand_n"
+    },
+    "3": {
+      "item": "negative_n:gun_powder_n"
+    },
+    "4": {
+      "item": "minecraft:tnt"
+    },
+    "5": {
+      "item": "negative_n:gun_powder_n"
+    },
+    "6": {
+      "item": "negative_n:sand_n"
+    },
+    "7": {
+      "item": "negative_n:gun_powder_n"
+    },
+    "8": {
+      "item": "negative_n:sand_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:tnt_n",
+    "count": 1
+  }
+}

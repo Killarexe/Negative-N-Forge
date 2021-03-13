@@ -19,16 +19,16 @@ import net.killarexe.negativen.block.JunglePlanksNBlock;
 import net.killarexe.negativen.block.DarkoakplanksNBlock;
 import net.killarexe.negativen.block.BirchplanksnBlock;
 import net.killarexe.negativen.block.AcaciaplanksnBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class PlanchedeboisAxeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:wood_n_axe")
+@NegativeNModElements.ModElement.Tag
+public class PlanchedeboisAxeItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:wood_n_axe")
 	public static final Item block = null;
-	public PlanchedeboisAxeItem(NegativenModElements instance) {
+	public PlanchedeboisAxeItem(NegativeNModElements instance) {
 		super(instance, 289);
 	}
 

@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "negativen:blocks/allium_n",
-    "particle": "negativen:blocks/allium_n"
-  }
-}

@@ -22,7 +22,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.BlockherbeNUpdateTickProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -30,11 +30,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class BlockherbeNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:grass_block_n")
+@NegativeNModElements.ModElement.Tag
+public class BlockherbeNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:grass_block_n")
 	public static final Block block = null;
-	public BlockherbeNBlock(NegativenModElements instance) {
+	public BlockherbeNBlock(NegativeNModElements instance) {
 		super(instance, 187);
 	}
 

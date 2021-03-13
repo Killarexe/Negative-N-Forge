@@ -13,16 +13,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class SlimeNBlockBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:slime_n_block")
+@NegativeNModElements.ModElement.Tag
+public class SlimeNBlockBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:slime_n_block")
 	public static final Block block = null;
-	public SlimeNBlockBlock(NegativenModElements instance) {
+	public SlimeNBlockBlock(NegativeNModElements instance) {
 		super(instance, 235);
 	}
 

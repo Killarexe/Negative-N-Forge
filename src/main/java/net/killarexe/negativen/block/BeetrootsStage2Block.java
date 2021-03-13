@@ -28,7 +28,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.CropsGrowProcedure;
 import net.killarexe.negativen.item.BeetrootSeedItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -36,11 +36,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class BeetrootsStage2Block extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:beetroots_stage_2")
+@NegativeNModElements.ModElement.Tag
+public class BeetrootsStage2Block extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:beetroots_stage_2")
 	public static final Block block = null;
-	public BeetrootsStage2Block(NegativenModElements instance) {
+	public BeetrootsStage2Block(NegativeNModElements instance) {
 		super(instance, 704);
 	}
 

@@ -14,16 +14,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.ClassicBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicGoldNBlockBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:classic_gold_n_block")
+@NegativeNModElements.ModElement.Tag
+public class ClassicGoldNBlockBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:classic_gold_n_block")
 	public static final Block block = null;
-	public ClassicGoldNBlockBlock(NegativenModElements instance) {
+	public ClassicGoldNBlockBlock(NegativeNModElements instance) {
 		super(instance, 350);
 	}
 

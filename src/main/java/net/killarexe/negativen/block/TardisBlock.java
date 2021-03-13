@@ -26,16 +26,16 @@ import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class TardisBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:tardis")
+@NegativeNModElements.ModElement.Tag
+public class TardisBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:tardis")
 	public static final Block block = null;
-	public TardisBlock(NegativenModElements instance) {
+	public TardisBlock(NegativeNModElements instance) {
 		super(instance, 438);
 	}
 

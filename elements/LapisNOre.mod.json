@@ -14,6 +14,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
+    "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -101,9 +102,9 @@
         "value": "CUSTOM:StoneN"
       }
     ],
-    "frequencyPerChunks": 10,
+    "frequencyPerChunks": 5,
     "frequencyOnChunk": 4,
-    "minGenerateHeight": 0,
+    "minGenerateHeight": 12,
     "maxGenerateHeight": 24
   }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "negative_n:blocks/birch_planksn",
+    "particle": "negative_n:blocks/birch_planksn"
+  }
+}

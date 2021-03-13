@@ -7,36 +7,36 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.block.TerreNBlock;
 import net.killarexe.negativen.block.BlockherbeNBlock;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class BlockherbeNUpdateTickProcedure extends NegativenModElements.ModElement {
-	public BlockherbeNUpdateTickProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class BlockherbeNUpdateTickProcedure extends NegativeNModElements.ModElement {
+	public BlockherbeNUpdateTickProcedure(NegativeNModElements instance) {
 		super(instance, 543);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure BlockherbeNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure BlockherbeNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure BlockherbeNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure BlockherbeNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure BlockherbeNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure BlockherbeNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure BlockherbeNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure BlockherbeNUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

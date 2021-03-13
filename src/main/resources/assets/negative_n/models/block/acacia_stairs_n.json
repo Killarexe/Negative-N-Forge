@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "negative_n:blocks/acacia_planksn",
+    "top": "negative_n:blocks/acacia_planksn",
+    "side": "negative_n:blocks/acacia_planksn"
+  }
+}

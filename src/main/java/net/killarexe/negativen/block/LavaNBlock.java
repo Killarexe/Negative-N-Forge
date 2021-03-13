@@ -36,20 +36,20 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 
-@NegativenModElements.ModElement.Tag
-public class LavaNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:lavan")
+@NegativeNModElements.ModElement.Tag
+public class LavaNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:lavan")
 	public static final FlowingFluidBlock block = null;
-	@ObjectHolder("negativen:lavan_bucket")
+	@ObjectHolder("negative_n:lavan_bucket")
 	public static final Item bucket = null;
 	public static FlowingFluid flowing = null;
 	public static FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
-	public LavaNBlock(NegativenModElements instance) {
+	public LavaNBlock(NegativeNModElements instance) {
 		super(instance, 435);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -71,7 +71,7 @@ public class LavaNBlock extends NegativenModElements.ModElement {
 	@Override
 	public void initElements() {
 		fluidproperties = new ForgeFlowingFluid.Properties(() -> still, () -> flowing,
-				FluidAttributes.builder(new ResourceLocation("negativen:blocks/ava"), new ResourceLocation("negativen:blocks/ava")).luminosity(0)
+				FluidAttributes.builder(new ResourceLocation("negative_n:blocks/ava"), new ResourceLocation("negative_n:blocks/ava")).luminosity(0)
 						.density(1000).viscosity(1000)).bucket(() -> bucket).block(() -> block);
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("lavan");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("lavan_flowing");
@@ -89,7 +89,7 @@ public class LavaNBlock extends NegativenModElements.ModElement {
 					public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, BlockStateFeatureConfig config) {
 						RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 						boolean dimensionCriteria = false;
-						if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:netherndim")))
+						if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:netherndim")))
 							dimensionCriteria = true;
 						if (!dimensionCriteria)
 							return false;

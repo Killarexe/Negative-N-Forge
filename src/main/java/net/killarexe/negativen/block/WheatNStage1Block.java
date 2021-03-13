@@ -53,7 +53,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.CropsGrowProcedure;
 import net.killarexe.negativen.item.WheatNSeedItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -64,13 +64,13 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class WheatNStage1Block extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:wheat_n_stage_1")
+@NegativeNModElements.ModElement.Tag
+public class WheatNStage1Block extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:wheat_n_stage_1")
 	public static final Block block = null;
-	@ObjectHolder("negativen:wheat_n_stage_1")
+	@ObjectHolder("negative_n:wheat_n_stage_1")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public WheatNStage1Block(NegativenModElements instance) {
+	public WheatNStage1Block(NegativeNModElements instance) {
 		super(instance, 685);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

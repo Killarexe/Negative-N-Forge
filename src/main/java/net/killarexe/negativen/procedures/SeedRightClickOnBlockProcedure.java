@@ -39,15 +39,15 @@ import net.killarexe.negativen.block.FarmlandNBlock;
 import net.killarexe.negativen.block.CarrotNStage0Block;
 import net.killarexe.negativen.block.BlockherbeNBlock;
 import net.killarexe.negativen.block.BeetrootsNStage0Block;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class SeedRightClickOnBlockProcedure extends NegativenModElements.ModElement {
-	public SeedRightClickOnBlockProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class SeedRightClickOnBlockProcedure extends NegativeNModElements.ModElement {
+	public SeedRightClickOnBlockProcedure(NegativeNModElements instance) {
 		super(instance, 701);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -55,27 +55,27 @@ public class SeedRightClickOnBlockProcedure extends NegativenModElements.ModElem
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure SeedRightClickOnBlock!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure SeedRightClickOnBlock!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure SeedRightClickOnBlock!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure SeedRightClickOnBlock!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure SeedRightClickOnBlock!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure SeedRightClickOnBlock!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure SeedRightClickOnBlock!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure SeedRightClickOnBlock!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure SeedRightClickOnBlock!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure SeedRightClickOnBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

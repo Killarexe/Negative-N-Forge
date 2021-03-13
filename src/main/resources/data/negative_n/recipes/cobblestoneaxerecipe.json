@@ -1,0 +1,30 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:cobblestone_n"
+    },
+    "1": {
+      "item": "negative_n:cobblestone_n"
+    },
+    "2": {
+      "item": "negative_n:cobblestone_n"
+    },
+    "3": {
+      "item": "negative_n:stick_n"
+    },
+    "5": {
+      "item": "negative_n:stick_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:cobblestone_n_axe",
+    "count": 1
+  }
+}

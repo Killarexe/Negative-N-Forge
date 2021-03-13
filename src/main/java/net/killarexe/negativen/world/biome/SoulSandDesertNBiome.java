@@ -36,16 +36,16 @@ import net.minecraft.block.BlockState;
 import net.killarexe.negativen.entity.SkeletonNEntity;
 import net.killarexe.negativen.block.SoulSoilNBlock;
 import net.killarexe.negativen.block.SoulSandBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
 import java.util.List;
 
-@NegativenModElements.ModElement.Tag
-public class SoulSandDesertNBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class SoulSandDesertNBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public SoulSandDesertNBiome(NegativenModElements instance) {
+	public SoulSandDesertNBiome(NegativeNModElements instance) {
 		super(instance, 719);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -73,7 +73,7 @@ public class SoulSandDesertNBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(0.1f).scale(0.2f).temperature(0.5f)
 						.downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:soul_sand_desert_n"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:soul_sand_desert_n"));
 			}
 		}
 	}

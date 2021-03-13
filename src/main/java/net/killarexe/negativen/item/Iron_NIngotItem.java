@@ -15,15 +15,15 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 
-@NegativenModElements.ModElement.Tag
-public class Iron_NIngotItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:iron_n_ingot")
+@NegativeNModElements.ModElement.Tag
+public class Iron_NIngotItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:iron_n_ingot")
 	public static final Item block = null;
-	public Iron_NIngotItem(NegativenModElements instance) {
+	public Iron_NIngotItem(NegativeNModElements instance) {
 		super(instance, 13);
 	}
 

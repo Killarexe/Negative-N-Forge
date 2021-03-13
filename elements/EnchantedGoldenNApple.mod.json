@@ -1,0 +1,29 @@
+{
+  "_fv": 15,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "golden_n_apple",
+    "customModelName": "Normal",
+    "name": "Enchanted Golden-N Apple",
+    "rarity": "EPIC",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNFood"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 20,
+    "saturation": 20.0,
+    "eatingSpeed": 128,
+    "resultItem": {
+      "value": "CUSTOM:AppleN"
+    },
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": true,
+    "onEaten": {
+      "name": "EnchantedGoldenNAppleFoodEaten"
+    }
+  }
+}

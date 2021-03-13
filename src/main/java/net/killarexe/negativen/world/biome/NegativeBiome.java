@@ -53,7 +53,7 @@ import net.killarexe.negativen.block.TerreNBlock;
 import net.killarexe.negativen.block.LeavesNBlock;
 import net.killarexe.negativen.block.BoisNBlock;
 import net.killarexe.negativen.block.BlockherbeNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
@@ -61,10 +61,10 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 
-@NegativenModElements.ModElement.Tag
-public class NegativeBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class NegativeBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public NegativeBiome(NegativenModElements instance) {
+	public NegativeBiome(NegativeNModElements instance) {
 		super(instance, 384);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -99,7 +99,7 @@ public class NegativeBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.PLAINS).depth(0.1f).scale(0.2f)
 						.temperature(0.5f).downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:negative"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:negative"));
 			}
 		}
 	}

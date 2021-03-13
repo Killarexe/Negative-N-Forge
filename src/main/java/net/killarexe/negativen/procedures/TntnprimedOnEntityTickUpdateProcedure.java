@@ -15,42 +15,42 @@ import net.minecraft.util.Mirror;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.entity.Entity;
 
-import net.killarexe.negativen.NegativenModVariables;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModVariables;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class TntnprimedOnEntityTickUpdateProcedure extends NegativenModElements.ModElement {
-	public TntnprimedOnEntityTickUpdateProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class TntnprimedOnEntityTickUpdateProcedure extends NegativeNModElements.ModElement {
+	public TntnprimedOnEntityTickUpdateProcedure(NegativeNModElements instance) {
 		super(instance, 431);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure TntnprimedOnEntityTickUpdate!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure TntnprimedOnEntityTickUpdate!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure TntnprimedOnEntityTickUpdate!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure TntnprimedOnEntityTickUpdate!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure TntnprimedOnEntityTickUpdate!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure TntnprimedOnEntityTickUpdate!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure TntnprimedOnEntityTickUpdate!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure TntnprimedOnEntityTickUpdate!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure TntnprimedOnEntityTickUpdate!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure TntnprimedOnEntityTickUpdate!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -59,7 +59,7 @@ public class TntnprimedOnEntityTickUpdateProcedure extends NegativenModElements.
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((entity.getPersistentData().getDouble("entityTimer")) <= 4)) {
-			if (((NegativenModVariables.global_timer) >= 1)) {
+			if (((NegativeNModVariables.global_timer) >= 1)) {
 				entity.getPersistentData().putDouble("entityTimer", ((entity.getPersistentData().getDouble("entityTimer")) + 1));
 			}
 		} else if (((entity.getPersistentData().getDouble("entityTimer")) > 4)) {
@@ -83,7 +83,7 @@ public class TntnprimedOnEntityTickUpdateProcedure extends NegativenModElements.
 			}
 			if (world instanceof World && !world.isRemote()) {
 				Template template = ((ServerWorld) world).getStructureTemplateManager()
-						.getTemplateDefaulted(new ResourceLocation("negativen", "air_n_ball"));
+						.getTemplateDefaulted(new ResourceLocation("negative_n", "air_n_ball"));
 				if (template != null) {
 					template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 3), (int) (y - 3), (int) (z - 3)),
 							new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),

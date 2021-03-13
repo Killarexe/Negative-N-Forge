@@ -8,36 +8,36 @@ import net.minecraft.block.BlockState;
 import net.killarexe.negativen.block.SnowNBlock;
 import net.killarexe.negativen.block.SnowBlockNBlock;
 import net.killarexe.negativen.block.BlockherbeNBlock;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class GrassBlockNSnowUpdateTickProcedure extends NegativenModElements.ModElement {
-	public GrassBlockNSnowUpdateTickProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class GrassBlockNSnowUpdateTickProcedure extends NegativeNModElements.ModElement {
+	public GrassBlockNSnowUpdateTickProcedure(NegativeNModElements instance) {
 		super(instance, 566);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure GrassBlockNSnowUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure GrassBlockNSnowUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure GrassBlockNSnowUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure GrassBlockNSnowUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure GrassBlockNSnowUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure GrassBlockNSnowUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure GrassBlockNSnowUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure GrassBlockNSnowUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

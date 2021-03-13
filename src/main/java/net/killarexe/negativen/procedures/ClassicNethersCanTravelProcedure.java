@@ -1,17 +1,17 @@
 package net.killarexe.negativen.procedures;
 
-import net.killarexe.negativen.NegativenModVariables;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModVariables;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicNethersCanTravelProcedure extends NegativenModElements.ModElement {
-	public ClassicNethersCanTravelProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class ClassicNethersCanTravelProcedure extends NegativeNModElements.ModElement {
+	public ClassicNethersCanTravelProcedure(NegativeNModElements instance) {
 		super(instance, 804);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
-		return ((NegativenModVariables.IsHalloween) == (true));
+		return ((NegativeNModVariables.IsHalloween) == (true));
 	}
 }

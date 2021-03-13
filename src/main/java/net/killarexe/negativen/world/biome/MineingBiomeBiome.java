@@ -29,16 +29,16 @@ import net.minecraft.state.BooleanProperty;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
 import java.util.List;
 
-@NegativenModElements.ModElement.Tag
-public class MineingBiomeBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class MineingBiomeBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public MineingBiomeBiome(NegativenModElements instance) {
+	public MineingBiomeBiome(NegativeNModElements instance) {
 		super(instance, 424);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -62,7 +62,7 @@ public class MineingBiomeBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.1f).scale(0.2f).temperature(0.5f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:mineingbiome"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:mineingbiome"));
 			}
 		}
 	}

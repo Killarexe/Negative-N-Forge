@@ -36,17 +36,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class MagmaNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:magma_n")
+@NegativeNModElements.ModElement.Tag
+public class MagmaNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:magma_n")
 	public static final Block block = null;
-	public MagmaNBlock(NegativenModElements instance) {
+	public MagmaNBlock(NegativeNModElements instance) {
 		super(instance, 201);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -95,7 +95,7 @@ public class MagmaNBlock extends NegativenModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:netherndim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:netherndim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

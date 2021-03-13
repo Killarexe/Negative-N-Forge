@@ -1,0 +1,13 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:dark_oak_log_n"
+    }
+  ],
+  "result": {
+    "item": "negative_n:dark_oak_planks_n",
+    "count": 4
+  }
+}

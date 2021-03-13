@@ -16,18 +16,18 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.GrassBlockNSnowUpdateTickProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class GrassBlockNSnowBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:grass_block_n_snow")
+@NegativeNModElements.ModElement.Tag
+public class GrassBlockNSnowBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:grass_block_n_snow")
 	public static final Block block = null;
-	public GrassBlockNSnowBlock(NegativenModElements instance) {
+	public GrassBlockNSnowBlock(NegativeNModElements instance) {
 		super(instance, 214);
 	}
 

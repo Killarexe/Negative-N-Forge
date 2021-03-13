@@ -16,17 +16,17 @@ import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
-import net.killarexe.negativen.NegativenModVariables;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModVariables;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 import java.util.Iterator;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class PlayerJoinWorldProcedure extends NegativenModElements.ModElement {
-	public PlayerJoinWorldProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class PlayerJoinWorldProcedure extends NegativeNModElements.ModElement {
+	public PlayerJoinWorldProcedure(NegativeNModElements instance) {
 		super(instance, 886);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -34,17 +34,17 @@ public class PlayerJoinWorldProcedure extends NegativenModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure PlayerJoinWorld!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure PlayerJoinWorld!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure PlayerJoinWorld!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure PlayerJoinWorld!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((NegativenModVariables.isNotCompete) == (true))) {
+		if (((NegativeNModVariables.isNotCompete) == (true))) {
 			if (!world.isRemote()) {
 				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 				if (mcserv != null)
@@ -52,10 +52,10 @@ public class PlayerJoinWorldProcedure extends NegativenModElements.ModElement {
 							"Warning: This a uncomplete version of this mod! Please play in creative to discover the newest features of the 1.3!"),
 							ChatType.SYSTEM, Util.DUMMY_UUID);
 			}
-		} else if (((NegativenModVariables.IsChistmas) == (true))) {
+		} else if (((NegativeNModVariables.IsChistmas) == (true))) {
 			if (entity instanceof ServerPlayerEntity) {
 				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
-						.getAdvancement(new ResourceLocation("negativen:happy_chistmas"));
+						.getAdvancement(new ResourceLocation("negative_n:happy_chistmas"));
 				AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
 				if (!_ap.isDone()) {
 					Iterator _iterator = _ap.getRemaningCriteria().iterator();

@@ -1,0 +1,36 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:iron_n_ingot"
+    },
+    "2": {
+      "item": "negative_n:iron_n_ingot"
+    },
+    "3": {
+      "item": "negative_n:iron_n_ingot"
+    },
+    "5": {
+      "item": "negative_n:iron_n_ingot"
+    },
+    "6": {
+      "item": "negative_n:iron_n_ingot"
+    },
+    "7": {
+      "item": "negative_n:iron_n_ingot"
+    },
+    "8": {
+      "item": "negative_n:iron_n_ingot"
+    }
+  },
+  "result": {
+    "item": "negative_n:cauldron_n",
+    "count": 1
+  }
+}

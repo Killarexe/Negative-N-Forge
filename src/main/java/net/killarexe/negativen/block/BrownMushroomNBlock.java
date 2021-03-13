@@ -40,17 +40,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class BrownMushroomNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:brown_mushroom_n")
+@NegativeNModElements.ModElement.Tag
+public class BrownMushroomNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:brown_mushroom_n")
 	public static final Block block = null;
-	public BrownMushroomNBlock(NegativenModElements instance) {
+	public BrownMushroomNBlock(NegativeNModElements instance) {
 		super(instance, 120);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -71,7 +71,7 @@ public class BrownMushroomNBlock extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:nethern").equals(event.getName()))
+		if (new ResourceLocation("negative_n:nethern").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -85,7 +85,7 @@ public class BrownMushroomNBlock extends NegativenModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:netherndim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:netherndim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

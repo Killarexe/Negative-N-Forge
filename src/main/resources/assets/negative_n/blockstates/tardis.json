@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "negative_n:block/tardis"
+    },
+    "facing=east": {
+      "model": "negative_n:block/tardis",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "negative_n:block/tardis",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "negative_n:block/tardis",
+      "y": 270
+    }
+  }
+}

@@ -20,16 +20,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class CrimsonNStemBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:crimson_n_stem")
+@NegativeNModElements.ModElement.Tag
+public class CrimsonNStemBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:crimson_n_stem")
 	public static final Block block = null;
-	public CrimsonNStemBlock(NegativenModElements instance) {
+	public CrimsonNStemBlock(NegativeNModElements instance) {
 		super(instance, 222);
 	}
 

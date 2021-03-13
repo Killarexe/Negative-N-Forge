@@ -13,16 +13,16 @@ import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.procedures.PoisonusProccedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNCombatItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class NetheriteNSwordItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:netherite_n_sword")
+@NegativeNModElements.ModElement.Tag
+public class NetheriteNSwordItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:netherite_n_sword")
 	public static final Item block = null;
-	public NetheriteNSwordItem(NegativenModElements instance) {
+	public NetheriteNSwordItem(NegativeNModElements instance) {
 		super(instance, 268);
 	}
 
@@ -52,7 +52,7 @@ public class NetheriteNSwordItem extends NegativenModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(NetheriteNItem.block, (int) (1)));
 			}
-		}, 3, -3f, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
+		}, 3, -3f, new Item.Properties().group(NegativeNCombatItemGroup.tab).isImmuneToFire()) {
 			@Override
 			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 				boolean retval = super.hitEntity(itemstack, entity, sourceentity);

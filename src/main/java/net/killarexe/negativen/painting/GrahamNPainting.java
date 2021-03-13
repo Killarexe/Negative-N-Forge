@@ -7,11 +7,11 @@ import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.entity.item.PaintingType;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class GrahamNPainting extends NegativenModElements.ModElement {
-	public GrahamNPainting(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class GrahamNPainting extends NegativeNModElements.ModElement {
+	public GrahamNPainting(NegativeNModElements instance) {
 		super(instance, 860);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

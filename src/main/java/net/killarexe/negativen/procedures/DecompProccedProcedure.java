@@ -18,38 +18,38 @@ import net.killarexe.negativen.block.NegativecaneBlock;
 import net.killarexe.negativen.block.Minerai_de_diamant_inverseBlock;
 import net.killarexe.negativen.block.Iron_NOreBlock;
 import net.killarexe.negativen.block.FusonatorBlock;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class DecompProccedProcedure extends NegativenModElements.ModElement {
-	public DecompProccedProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class DecompProccedProcedure extends NegativeNModElements.ModElement {
+	public DecompProccedProcedure(NegativeNModElements instance) {
 		super(instance, 392);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure DecompProcced!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure DecompProcced!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure DecompProcced!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure DecompProcced!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure DecompProcced!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure DecompProcced!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure DecompProcced!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure DecompProcced!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

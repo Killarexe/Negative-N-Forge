@@ -28,7 +28,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.FarmlandNMoistUpdateTickProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -36,11 +36,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class FarmlandNMoistBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:farmland_n_moist")
+@NegativeNModElements.ModElement.Tag
+public class FarmlandNMoistBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:farmland_n_moist")
 	public static final Block block = null;
-	public FarmlandNMoistBlock(NegativenModElements instance) {
+	public FarmlandNMoistBlock(NegativeNModElements instance) {
 		super(instance, 511);
 	}
 

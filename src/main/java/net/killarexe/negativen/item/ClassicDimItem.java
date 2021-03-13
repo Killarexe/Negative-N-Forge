@@ -15,7 +15,7 @@ import net.killarexe.negativen.world.dimension.ClassicDimDimension;
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
 
 public class ClassicDimItem extends Item {
-	@ObjectHolder("negativen:classic_dim")
+	@ObjectHolder("negative_n:classic_dim")
 	public static final Item block = null;
 	public ClassicDimItem() {
 		super(new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).maxDamage(64));

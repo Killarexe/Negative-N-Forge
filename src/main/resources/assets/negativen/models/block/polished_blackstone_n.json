@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "negativen:blocks/polished_blackstone_n",
-    "particle": "negativen:blocks/polished_blackstone_n"
-  }
-}

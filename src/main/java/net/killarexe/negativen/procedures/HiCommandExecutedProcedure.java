@@ -8,21 +8,21 @@ import net.minecraft.util.text.ChatType;
 import net.minecraft.util.Util;
 import net.minecraft.server.MinecraftServer;
 
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class HiCommandExecutedProcedure extends NegativenModElements.ModElement {
-	public HiCommandExecutedProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class HiCommandExecutedProcedure extends NegativeNModElements.ModElement {
+	public HiCommandExecutedProcedure(NegativeNModElements instance) {
 		super(instance, 666);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure HiCommandExecuted!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure HiCommandExecuted!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");

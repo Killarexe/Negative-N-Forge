@@ -32,7 +32,7 @@ import net.killarexe.negativen.procedures.CropsGrowProcedure;
 import net.killarexe.negativen.procedures.BeetrootStage3BlockDestroyedByPlayerProcedure;
 import net.killarexe.negativen.item.BeetrootsNItem;
 import net.killarexe.negativen.item.BeetrootSeedItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -40,11 +40,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class BeetrootStage3Block extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:beetroot_stage_3")
+@NegativeNModElements.ModElement.Tag
+public class BeetrootStage3Block extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:beetroot_stage_3")
 	public static final Block block = null;
-	public BeetrootStage3Block(NegativenModElements instance) {
+	public BeetrootStage3Block(NegativeNModElements instance) {
 		super(instance, 705);
 	}
 

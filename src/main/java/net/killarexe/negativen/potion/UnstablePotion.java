@@ -14,16 +14,16 @@ import net.minecraft.potion.Effect;
 import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.procedures.UnstablePotionStartedappliedProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class UnstablePotion extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:unstable")
+@NegativeNModElements.ModElement.Tag
+public class UnstablePotion extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:unstable")
 	public static final Effect potion = null;
-	public UnstablePotion(NegativenModElements instance) {
+	public UnstablePotion(NegativeNModElements instance) {
 		super(instance, 505);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
@@ -37,7 +37,7 @@ public class UnstablePotion extends NegativenModElements.ModElement {
 		public EffectCustom() {
 			super(EffectType.HARMFUL, -256);
 			setRegistryName("unstable");
-			potionIcon = new ResourceLocation("negativen:textures/di.png");
+			potionIcon = new ResourceLocation("negative_n:textures/di.png");
 		}
 
 		@Override

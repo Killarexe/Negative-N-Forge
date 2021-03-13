@@ -1,0 +1,19 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:classic_grass_n"
+    },
+    {
+      "item": "negative_n:updater"
+    },
+    {
+      "item": "negative_n:classic_dim"
+    }
+  ],
+  "result": {
+    "item": "negative_n:classic_n_dim",
+    "count": 1
+  }
+}

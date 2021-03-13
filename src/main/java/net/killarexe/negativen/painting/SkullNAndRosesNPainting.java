@@ -7,11 +7,11 @@ import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.entity.item.PaintingType;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class SkullNAndRosesNPainting extends NegativenModElements.ModElement {
-	public SkullNAndRosesNPainting(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class SkullNAndRosesNPainting extends NegativeNModElements.ModElement {
+	public SkullNAndRosesNPainting(NegativeNModElements instance) {
 		super(instance, 868);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

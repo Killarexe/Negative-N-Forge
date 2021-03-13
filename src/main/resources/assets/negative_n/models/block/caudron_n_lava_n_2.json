@@ -1,0 +1,12 @@
+{
+  "parent": "negative_n:custom/cauldron_n_level_2",
+  "textures": {
+    "all": "negative_n:blocks/cauldron_n_inner",
+    "particle": "negative_n:blocks/cauldron_n_inner",
+    "side": "negative_n:blocks/cauldron_n_side",
+    "top": "negative_n:blocks/cauldron_n_top",
+    "bottom": "negative_n:blocks/cauldron_n_bottom",
+    "inside": "negative_n:blocks/cauldron_n_inner",
+    "content": "negative_n:blocks/ava"
+  }
+}

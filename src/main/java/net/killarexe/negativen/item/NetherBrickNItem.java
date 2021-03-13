@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NetherBrickNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:nether_brick_n")
+@NegativeNModElements.ModElement.Tag
+public class NetherBrickNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:nether_brick_n")
 	public static final Item block = null;
-	public NetherBrickNItem(NegativenModElements instance) {
+	public NetherBrickNItem(NegativeNModElements instance) {
 		super(instance, 23);
 	}
 

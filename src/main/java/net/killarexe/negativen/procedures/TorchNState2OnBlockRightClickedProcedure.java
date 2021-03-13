@@ -14,41 +14,41 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.block.TorchNState1Block;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class TorchNState2OnBlockRightClickedProcedure extends NegativenModElements.ModElement {
-	public TorchNState2OnBlockRightClickedProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class TorchNState2OnBlockRightClickedProcedure extends NegativeNModElements.ModElement {
+	public TorchNState2OnBlockRightClickedProcedure(NegativeNModElements instance) {
 		super(instance, 677);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("direction") == null) {
 			if (!dependencies.containsKey("direction"))
-				NegativenMod.LOGGER.warn("Failed to load dependency direction for procedure TorchNState2OnBlockRightClicked!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency direction for procedure TorchNState2OnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure TorchNState2OnBlockRightClicked!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure TorchNState2OnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure TorchNState2OnBlockRightClicked!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure TorchNState2OnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure TorchNState2OnBlockRightClicked!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure TorchNState2OnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure TorchNState2OnBlockRightClicked!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure TorchNState2OnBlockRightClicked!");
 			return;
 		}
 		Direction direction = (Direction) dependencies.get("direction");

@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class GoldNPickaxeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:gold_n_pickaxe")
+@NegativeNModElements.ModElement.Tag
+public class GoldNPickaxeItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:gold_n_pickaxe")
 	public static final Item block = null;
-	public GoldNPickaxeItem(NegativenModElements instance) {
+	public GoldNPickaxeItem(NegativeNModElements instance) {
 		super(instance, 296);
 	}
 

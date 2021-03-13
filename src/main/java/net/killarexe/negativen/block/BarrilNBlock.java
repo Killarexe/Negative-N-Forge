@@ -55,7 +55,7 @@ import net.minecraft.block.Block;
 import net.killarexe.negativen.procedures.BarrilNOnBlockRightClickedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.gui.ChestNGUIGui;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -67,13 +67,13 @@ import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
 
-@NegativenModElements.ModElement.Tag
-public class BarrilNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:barril_n")
+@NegativeNModElements.ModElement.Tag
+public class BarrilNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:barril_n")
 	public static final Block block = null;
-	@ObjectHolder("negativen:barril_n")
+	@ObjectHolder("negative_n:barril_n")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public BarrilNBlock(NegativenModElements instance) {
+	public BarrilNBlock(NegativeNModElements instance) {
 		super(instance, 974);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

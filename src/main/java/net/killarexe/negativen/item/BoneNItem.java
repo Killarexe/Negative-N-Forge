@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class BoneNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:bone_n")
+@NegativeNModElements.ModElement.Tag
+public class BoneNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:bone_n")
 	public static final Item block = null;
-	public BoneNItem(NegativenModElements instance) {
+	public BoneNItem(NegativeNModElements instance) {
 		super(instance, 44);
 	}
 

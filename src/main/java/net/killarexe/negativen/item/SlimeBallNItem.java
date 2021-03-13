@@ -11,13 +11,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class SlimeBallNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:slime_ball_n")
+@NegativeNModElements.ModElement.Tag
+public class SlimeBallNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:slime_ball_n")
 	public static final Item block = null;
-	public SlimeBallNItem(NegativenModElements instance) {
+	public SlimeBallNItem(NegativeNModElements instance) {
 		super(instance, 33);
 	}
 

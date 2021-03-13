@@ -92,12 +92,12 @@ Refaire le Logo (1.3) Fait
 Add Plants for Melon-N and Pumpkin-N (1.3)
 Improve 3d Models (1.3) Fait
 Add Crafting Table-N/Furnace-N (1.3) Fait
-Add easter eggs (1.3) Fait
+Add easter eggs (1.3) Fait
 Wither-N Boss Summonable (1.3)
 Update to 2020.5 (1.3.x) Fait
 Add heads (1.3) Que le Wither-N
-Add Mobs: Wither Skeleton-N, etc (1.3) Fait
-Improve Effects (1.3) Fait
+Add Mobs: Wither Skeleton-N, etc (1.3) Fait
+Improve Effects (1.3) Fait
 Add Color Map in Blocks (1.3.x)
 Add Amethist-N (1.3) Fait
 Make a complete Wiki (Github 1.3.x)
@@ -106,22 +106,22 @@ Update Dimensions Stick (1.3) Fait
 Add Copper-N (1.3) Fait
 Add and Patch Crafts (1.3.x)
 Add Cauldron-N (1.3) Fait
-Add Double Chest-N (1.3)
-Add Barril-N (1.3) Fait
-Add Ices-N (1.3) Fait
+Add Double Chest-N (1.3) Fait
+Add Barril-N (1.3) Fait
+Add Ices-N (1.3) Fait
 Add Red Sand-N (1.3) Fait
-Add new Biomes (1.3) Fait
+Add new Biomes (1.3) Fait
 Add Basalt-N and BlackStone-N (1.3) Fait
 Add Lapis-N (1.3) Fait
 Add Quartz Blocks (1.3) Fait
-Add Wither Skeleton-N (1.3) Fait
-Add Lever-N/Buttons-N/Solar Panel-N (1.3.x)
-Add Cake-N (1.3.x)
+Add Wither Skeleton-N (1.3) Fait
+Add Lever-N/Buttons-N/Solar Panel-N (1.3.x) Fait
+Add Cake-N (1.3.x) Fait
 Add Eggs (1.3) Fait
-Add Walls (1.3.x) Fait
+Add Walls (1.3.x) Fait
 Add Missing Types of Blocks (1.3.x) Fait
-React TNT-N to Redstone-N (1.3) Fait
-Update to 1.16.4/ 2020.6 (1.3.x) Fait
+React TNT-N to Redstone-N (1.3) Fait
+Update to 1.16.4/ 2020.6 (1.3.x) Fait
 Add Iron-N Golem-N and summonable(1.3.x)
 -------------------------------------------------------------------------
 

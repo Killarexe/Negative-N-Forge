@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "negative_n:block/dev_statue"
+    },
+    "facing=east": {
+      "model": "negative_n:block/dev_statue",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "negative_n:block/dev_statue",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "negative_n:block/dev_statue",
+      "y": 270
+    }
+  }
+}

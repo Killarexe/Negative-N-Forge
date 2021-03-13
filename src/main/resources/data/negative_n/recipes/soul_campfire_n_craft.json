@@ -1,0 +1,36 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    "678"
+  ],
+  "key": {
+    "1": {
+      "item": "negative_n:stick_n"
+    },
+    "3": {
+      "item": "negative_n:stick_n"
+    },
+    "4": {
+      "item": "negative_n:soul_sand_n"
+    },
+    "5": {
+      "item": "negative_n:stick_n"
+    },
+    "6": {
+      "tag": "minecraft:logs"
+    },
+    "7": {
+      "tag": "minecraft:logs"
+    },
+    "8": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "item": "negative_n:soul_campfire_n",
+    "count": 1
+  }
+}

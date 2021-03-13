@@ -7,11 +7,11 @@ import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.entity.item.PaintingType;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class KebabNPainting extends NegativenModElements.ModElement {
-	public KebabNPainting(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class KebabNPainting extends NegativeNModElements.ModElement {
+	public KebabNPainting(NegativeNModElements instance) {
 		super(instance, 861);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

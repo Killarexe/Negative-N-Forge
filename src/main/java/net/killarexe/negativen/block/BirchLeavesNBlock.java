@@ -6,6 +6,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.util.Direction;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -18,16 +19,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class BirchLeavesNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:birch_leaves_n")
+@NegativeNModElements.ModElement.Tag
+public class BirchLeavesNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:birch_leaves_n")
 	public static final Block block = null;
-	public BirchLeavesNBlock(NegativenModElements instance) {
+	public BirchLeavesNBlock(NegativeNModElements instance) {
 		super(instance, 82);
 	}
 
@@ -48,6 +49,11 @@ public class BirchLeavesNBlock extends NegativenModElements.ModElement {
 			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.5f, 10f).setLightLevel(s -> 0).notSolid()
 					.tickRandomly().setOpaque((bs, br, bp) -> false));
 			setRegistryName("birch_leaves_n");
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		public boolean isSideInvisible(BlockState state, BlockState adjacentBlockState, Direction side) {
+			return adjacentBlockState.getBlock() == this ? true : super.isSideInvisible(state, adjacentBlockState, side);
 		}
 
 		@Override

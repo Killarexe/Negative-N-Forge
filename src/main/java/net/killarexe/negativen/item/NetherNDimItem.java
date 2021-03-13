@@ -15,7 +15,7 @@ import net.killarexe.negativen.world.dimension.NetherNDimDimension;
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
 
 public class NetherNDimItem extends Item {
-	@ObjectHolder("negativen:netherndim")
+	@ObjectHolder("negative_n:netherndim")
 	public static final Item block = null;
 	public NetherNDimItem() {
 		super(new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).maxDamage(64));

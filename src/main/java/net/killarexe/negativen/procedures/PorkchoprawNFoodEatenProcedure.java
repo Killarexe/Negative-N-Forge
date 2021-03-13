@@ -5,21 +5,21 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class PorkchoprawNFoodEatenProcedure extends NegativenModElements.ModElement {
-	public PorkchoprawNFoodEatenProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class PorkchoprawNFoodEatenProcedure extends NegativeNModElements.ModElement {
+	public PorkchoprawNFoodEatenProcedure(NegativeNModElements instance) {
 		super(instance, 420);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure PorkchoprawNFoodEaten!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure PorkchoprawNFoodEaten!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

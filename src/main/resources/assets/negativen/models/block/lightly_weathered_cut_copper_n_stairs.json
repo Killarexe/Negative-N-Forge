@@ -1,8 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "negativen:blocks/lightly_weathered_cut_copper_n",
-    "top": "negativen:blocks/lightly_weathered_cut_copper_n",
-    "side": "negativen:blocks/lightly_weathered_cut_copper_n"
-  }
-}

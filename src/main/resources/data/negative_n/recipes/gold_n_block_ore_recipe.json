@@ -1,0 +1,13 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:gold_n_ore_block"
+    }
+  ],
+  "result": {
+    "item": "negative_n:gold_n_ingot",
+    "count": 9
+  }
+}

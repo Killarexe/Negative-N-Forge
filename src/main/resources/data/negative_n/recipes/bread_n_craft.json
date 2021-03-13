@@ -1,0 +1,22 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:wheat_n"
+    },
+    "1": {
+      "item": "negative_n:wheat_n"
+    },
+    "2": {
+      "item": "negative_n:wheat_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:bread_n",
+    "count": 1
+  }
+}

@@ -25,13 +25,13 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 
-@NegativenModElements.ModElement.Tag
-public class NetherFNStructure extends NegativenModElements.ModElement {
-	public NetherFNStructure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class NetherFNStructure extends NegativeNModElements.ModElement {
+	public NetherFNStructure(NegativeNModElements instance) {
 		super(instance, 495);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -45,7 +45,7 @@ public class NetherFNStructure extends NegativenModElements.ModElement {
 				int ck = (pos.getZ() >> 4) << 4;
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:netherndim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:netherndim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
@@ -63,7 +63,7 @@ public class NetherFNStructure extends NegativenModElements.ModElement {
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();
 						Template template = world.getWorld().getStructureTemplateManager()
-								.getTemplateDefaulted(new ResourceLocation("negativen", "fnnn"));
+								.getTemplateDefaulted(new ResourceLocation("negative_n", "fnnn"));
 						if (template == null)
 							return false;
 						template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)

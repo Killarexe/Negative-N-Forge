@@ -1,0 +1,24 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "1": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "2": {
+      "item": "negative_n:stick_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:wood_n_sword",
+    "count": 1
+  }
+}

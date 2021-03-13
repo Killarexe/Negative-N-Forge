@@ -1,6 +1,7 @@
 
 package net.killarexe.negativen.entity;
 
+import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.network.FMLPlayMessages;
@@ -17,13 +18,16 @@ import net.minecraft.world.server.ServerBossInfo;
 import net.minecraft.world.World;
 import net.minecraft.world.BossInfo;
 import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.pathfinding.FlyingPathNavigator;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.projectile.PotionEntity;
+import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.BlazeEntity;
@@ -39,6 +43,7 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
@@ -46,22 +51,29 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.block.BlockState;
 
+import net.killarexe.negativen.procedures.WitherCombatProcedure;
 import net.killarexe.negativen.item.NetherStarNItem;
-import net.killarexe.negativen.item.BowNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.block.WitherNHeadBlock;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.EnumSet;
 
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-@NegativenModElements.ModElement.Tag
-public class WitherNEntity extends NegativenModElements.ModElement {
+import com.google.common.collect.ImmutableMap;
+
+@NegativeNModElements.ModElement.Tag
+public class WitherNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public WitherNEntity(NegativenModElements instance) {
+	@ObjectHolder("negative_n:entitybulletwither_n")
+	public static final EntityType arrow = null;
+	public WitherNEntity(NegativeNModElements instance) {
 		super(instance, 699);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
@@ -69,9 +81,12 @@ public class WitherNEntity extends NegativenModElements.ModElement {
 	@Override
 	public void initElements() {
 		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(2f, 2f)).build("wither_n")
+				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(4f, 4f)).build("wither_n")
 						.setRegistryName("wither_n");
 		elements.entities.add(() -> entity);
+		elements.entities.add(() -> (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
+				.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
+				.size(0.5f, 0.5f)).build("entitybulletwither_n").setRegistryName("entitybulletwither_n"));
 	}
 
 	@Override
@@ -83,13 +98,15 @@ public class WitherNEntity extends NegativenModElements.ModElement {
 		@OnlyIn(Dist.CLIENT)
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
-				return new MobRenderer(renderManager, new Modelwither_n(), 2f) {
+				return new MobRenderer(renderManager, new Modelwither_n(), 4f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("negativen:textures/wither_n.png");
+						return new ResourceLocation("negative_n:textures/wither_n.png");
 					}
 				};
 			});
+			RenderingRegistry.registerEntityRenderingHandler(arrow,
+					renderManager -> new SpriteRenderer(renderManager, Minecraft.getInstance().getItemRenderer()));
 		}
 	}
 	private void setupAttributes() {
@@ -111,6 +128,7 @@ public class WitherNEntity extends NegativenModElements.ModElement {
 			experienceValue = 75;
 			setNoAI(false);
 			enablePersistence();
+			this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(WitherNHeadBlock.block, (int) (1)));
 			this.moveController = new FlyingMovementController(this, 10, true);
 			this.navigator = new FlyingPathNavigator(this, this.world);
 		}
@@ -163,7 +181,25 @@ public class WitherNEntity extends NegativenModElements.ModElement {
 				}
 			});
 			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
-			this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, true));
+			this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, true) {
+				@Override
+				public boolean shouldExecute() {
+					double x = CustomEntity.this.getPosX();
+					double y = CustomEntity.this.getPosY();
+					double z = CustomEntity.this.getPosZ();
+					Entity entity = CustomEntity.this;
+					return super.shouldExecute() && WitherCombatProcedure.executeProcedure(ImmutableMap.of("entity", entity));
+				}
+
+				@Override
+				public boolean shouldContinueExecuting() {
+					double x = CustomEntity.this.getPosX();
+					double y = CustomEntity.this.getPosY();
+					double z = CustomEntity.this.getPosZ();
+					Entity entity = CustomEntity.this;
+					return super.shouldContinueExecuting() && WitherCombatProcedure.executeProcedure(ImmutableMap.of("entity", entity));
+				}
+			});
 			this.goalSelector.addGoal(5, new LookAtGoal(this, PlayerEntity.class, (float) 6));
 			this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
 			this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
@@ -186,7 +222,7 @@ public class WitherNEntity extends NegativenModElements.ModElement {
 
 		@Override
 		public double getMountedYOffset() {
-			return super.getMountedYOffset() + 2;
+			return super.getMountedYOffset() + 4;
 		}
 
 		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
@@ -230,7 +266,12 @@ public class WitherNEntity extends NegativenModElements.ModElement {
 		}
 
 		public void attackEntityWithRangedAttack(LivingEntity target, float flval) {
-			BowNItem.shoot(this, target);
+			ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, this, this.world);
+			double d0 = target.getPosY() + (double) target.getEyeHeight() - 1.1;
+			double d1 = target.getPosX() - this.getPosX();
+			double d3 = target.getPosZ() - this.getPosZ();
+			entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.6F, 12.0F);
+			world.addEntity(entityarrow);
 		}
 
 		@Override
@@ -268,6 +309,41 @@ public class WitherNEntity extends NegativenModElements.ModElement {
 		public void livingTick() {
 			super.livingTick();
 			this.setNoGravity(true);
+		}
+	}
+
+	@OnlyIn(value = Dist.CLIENT, _interface = IRendersAsItem.class)
+	private static class ArrowCustomEntity extends AbstractArrowEntity implements IRendersAsItem {
+		public ArrowCustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
+			super(arrow, world);
+		}
+
+		public ArrowCustomEntity(EntityType<? extends ArrowCustomEntity> type, World world) {
+			super(type, world);
+		}
+
+		public ArrowCustomEntity(EntityType<? extends ArrowCustomEntity> type, double x, double y, double z, World world) {
+			super(type, x, y, z, world);
+		}
+
+		public ArrowCustomEntity(EntityType<? extends ArrowCustomEntity> type, LivingEntity entity, World world) {
+			super(type, entity, world);
+		}
+
+		@Override
+		public IPacket<?> createSpawnPacket() {
+			return NetworkHooks.getEntitySpawningPacket(this);
+		}
+
+		@Override
+		@OnlyIn(Dist.CLIENT)
+		public ItemStack getItem() {
+			return new ItemStack(WitherNHeadBlock.block, (int) (1));
+		}
+
+		@Override
+		protected ItemStack getArrowStack() {
+			return new ItemStack(WitherNHeadBlock.block, (int) (1));
 		}
 	}
 

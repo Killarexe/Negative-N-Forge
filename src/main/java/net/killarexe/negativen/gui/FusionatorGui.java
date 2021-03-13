@@ -37,8 +37,8 @@ import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
 import net.killarexe.negativen.procedures.FusionnatorProceedProcedure;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -46,11 +46,11 @@ import java.util.HashMap;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-@NegativenModElements.ModElement.Tag
-public class FusionatorGui extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class FusionatorGui extends NegativeNModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public FusionatorGui(NegativenModElements instance) {
+	public FusionatorGui(NegativeNModElements instance) {
 		super(instance, 373);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
@@ -289,7 +289,7 @@ public class FusionatorGui extends NegativenModElements.ModElement {
 
 		private void slotChanged(int slotid, int ctype, int meta) {
 			if (this.world != null && this.world.isRemote()) {
-				NegativenMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
 				handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 			}
 		}
@@ -310,7 +310,7 @@ public class FusionatorGui extends NegativenModElements.ModElement {
 			this.xSize = 176;
 			this.ySize = 166;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("negativen:textures/fusionator.png");
+		private static final ResourceLocation texture = new ResourceLocation("negative_n:textures/fusionator.png");
 		@Override
 		public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 			this.renderBackground(ms);
@@ -357,7 +357,7 @@ public class FusionatorGui extends NegativenModElements.ModElement {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
 			this.addButton(new Button(this.guiLeft + 51, this.guiTop + 29, 80, 20, new StringTextComponent("Fusion"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
 		}

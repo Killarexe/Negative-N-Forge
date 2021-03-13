@@ -55,12 +55,12 @@ import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.WheatNSeedItem;
 import net.killarexe.negativen.item.ChickenNFoodItem;
 import net.killarexe.negativen.item.BeetrootSeedItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class ChickenNEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class ChickenNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public ChickenNEntity(NegativenModElements instance) {
+	public ChickenNEntity(NegativeNModElements instance) {
 		super(instance, 59);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -79,19 +79,19 @@ public class ChickenNEntity extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:negative").equals(event.getName()))
+		if (new ResourceLocation("negative_n:negative").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:oak_nforest").equals(event.getName()))
+		if (new ResourceLocation("negative_n:oak_nforest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:birch_n_forest").equals(event.getName()))
+		if (new ResourceLocation("negative_n:birch_n_forest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:plains_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:plains_n").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:dark_oak_n_forest").equals(event.getName()))
+		if (new ResourceLocation("negative_n:dark_oak_n_forest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:jungle_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:jungle_n").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:spruce_forest_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:spruce_forest_n").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -111,7 +111,7 @@ public class ChickenNEntity extends NegativenModElements.ModElement {
 			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new ChickenModel(), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("negativen:textures/chicken_n.png");
+					return new ResourceLocation("negative_n:textures/chicken_n.png");
 				}
 			});
 		}

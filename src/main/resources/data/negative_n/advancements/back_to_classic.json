@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:classic_grass"
+    },
+    "title": {
+      "translate": "advancements.back_to_classic.title"
+    },
+    "description": {
+      "translate": "advancements.back_to_classic.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "back_to_classic": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "negative_n:classic_dim"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0
+  },
+  "parent": "negative_n:starting"
+}

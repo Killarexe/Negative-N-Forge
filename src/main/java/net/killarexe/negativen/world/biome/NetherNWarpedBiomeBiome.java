@@ -46,7 +46,7 @@ import net.killarexe.negativen.block.WarpedWartNBlockBlock;
 import net.killarexe.negativen.block.WarpedNStemBlock;
 import net.killarexe.negativen.block.WapredNyliumNBlock;
 import net.killarexe.negativen.block.NetherrackNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
@@ -54,10 +54,10 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 
-@NegativenModElements.ModElement.Tag
-public class NetherNWarpedBiomeBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class NetherNWarpedBiomeBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public NetherNWarpedBiomeBiome(NegativenModElements instance) {
+	public NetherNWarpedBiomeBiome(NegativeNModElements instance) {
 		super(instance, 724);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -95,7 +95,7 @@ public class NetherNWarpedBiomeBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.NONE).category(Biome.Category.NONE).depth(0.1f).scale(0.2f).temperature(0.5f)
 						.downfall(0f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:nether_n_warped_biome"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:nether_n_warped_biome"));
 			}
 		}
 	}

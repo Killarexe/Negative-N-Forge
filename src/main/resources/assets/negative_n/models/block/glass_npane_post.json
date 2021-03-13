@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_glass_pane_post",
+  "textures": {
+    "edge": "negative_n:blocks/glass_panen_top",
+    "pane": "negative_n:blocks/glassn"
+  }
+}

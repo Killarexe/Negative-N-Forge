@@ -22,41 +22,41 @@ import net.killarexe.negativen.item.BucketNItem;
 import net.killarexe.negativen.entity.CowNEntity;
 import net.killarexe.negativen.block.WaterNBlock;
 import net.killarexe.negativen.block.LavaNBlock;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class BucketNRightClickedOnBlockProcedure extends NegativenModElements.ModElement {
-	public BucketNRightClickedOnBlockProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class BucketNRightClickedOnBlockProcedure extends NegativeNModElements.ModElement {
+	public BucketNRightClickedOnBlockProcedure(NegativeNModElements instance) {
 		super(instance, 523);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure BucketNRightClickedOnBlock!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure BucketNRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure BucketNRightClickedOnBlock!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure BucketNRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure BucketNRightClickedOnBlock!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure BucketNRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure BucketNRightClickedOnBlock!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure BucketNRightClickedOnBlock!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure BucketNRightClickedOnBlock!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure BucketNRightClickedOnBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

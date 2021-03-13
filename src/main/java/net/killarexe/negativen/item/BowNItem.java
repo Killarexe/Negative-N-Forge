@@ -40,20 +40,20 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 
 import net.killarexe.negativen.itemgroup.NegativeNCombatItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-@NegativenModElements.ModElement.Tag
-public class BowNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:bow_n")
+@NegativeNModElements.ModElement.Tag
+public class BowNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:bow_n")
 	public static final Item block = null;
-	@ObjectHolder("negativen:entitybulletbow_n")
+	@ObjectHolder("negative_n:entitybulletbow_n")
 	public static final EntityType arrow = null;
-	public BowNItem(NegativenModElements instance) {
+	public BowNItem(NegativeNModElements instance) {
 		super(instance, 274);
 	}
 
@@ -190,7 +190,7 @@ public class BowNItem extends NegativenModElements.ModElement {
 	}
 
 	public static class CustomRender extends EntityRenderer<ArrowCustomEntity> {
-		private static final ResourceLocation texture = new ResourceLocation("negativen:textures/arrow_n_entity.png");
+		private static final ResourceLocation texture = new ResourceLocation("negative_n:textures/arrow_n_entity.png");
 		public CustomRender(EntityRendererManager renderManager) {
 			super(renderManager);
 		}

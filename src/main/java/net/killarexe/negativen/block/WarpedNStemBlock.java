@@ -20,16 +20,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class WarpedNStemBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:warped_n_stem")
+@NegativeNModElements.ModElement.Tag
+public class WarpedNStemBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:warped_n_stem")
 	public static final Block block = null;
-	public WarpedNStemBlock(NegativenModElements instance) {
+	public WarpedNStemBlock(NegativeNModElements instance) {
 		super(instance, 223);
 	}
 

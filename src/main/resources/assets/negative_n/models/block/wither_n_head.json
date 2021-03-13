@@ -1,0 +1,8 @@
+{
+  "parent": "negative_n:custom/head",
+  "textures": {
+    "all": "negative_n:blocks/wither_n",
+    "particle": "negative_n:blocks/wither_n",
+    "0": "negative_n:blocks/wither_n"
+  }
+}

@@ -15,14 +15,19 @@
     "useDuration": 5,
     "toolType": 1.0,
     "damageCount": 5,
+    "recipeRemainder": {
+      "value": ""
+    },
     "destroyAnyBlock": false,
     "immuneToFire": false,
     "stayInGridWhenCrafting": true,
     "damageOnCrafting": true,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
-    "hasGlow": true,
+    "specialInfo": [
+      "Type: null"
+    ],
+    "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64

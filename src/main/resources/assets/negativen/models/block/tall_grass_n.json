@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "negativen:blocks/tall_grass_n_top",
-    "particle": "negativen:blocks/tall_grass_n_top"
-  }
-}

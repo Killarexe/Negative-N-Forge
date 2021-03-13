@@ -35,7 +35,7 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
 
 import net.killarexe.negativen.procedures.TntnprimedOnEntityTickUpdateProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -44,10 +44,10 @@ import java.util.HashMap;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-@NegativenModElements.ModElement.Tag
-public class TntnprimedEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class TntnprimedEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public TntnprimedEntity(NegativenModElements instance) {
+	public TntnprimedEntity(NegativeNModElements instance) {
 		super(instance, 427);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
@@ -72,7 +72,7 @@ public class TntnprimedEntity extends NegativenModElements.ModElement {
 				return new MobRenderer(renderManager, new Modelcustom_model(), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("negativen:textures/tntn.png");
+						return new ResourceLocation("negative_n:textures/tntn.png");
 					}
 				};
 			});
@@ -160,11 +160,6 @@ public class TntnprimedEntity extends NegativenModElements.ModElement {
 			}
 		}
 
-		@Override
-		public boolean canBeCollidedWith() {
-			return false;
-		}
-
 		public void livingTick() {
 			super.livingTick();
 			double x = this.getPosX();
@@ -174,14 +169,10 @@ public class TntnprimedEntity extends NegativenModElements.ModElement {
 			Entity entity = this;
 			if (true)
 				for (int l = 0; l < 4; ++l) {
-					double d0 = (x + random.nextFloat());
-					double d1 = (y + random.nextFloat());
-					double d2 = (z + random.nextFloat());
-					int i1 = random.nextInt(2) * 2 - 1;
-					double d3 = (random.nextFloat() - 0.5D) * 0.5D;
-					double d4 = (random.nextFloat() - 0.5D) * 0.5D;
-					double d5 = (random.nextFloat() - 0.5D) * 0.5D;
-					world.addParticle(ParticleTypes.EXPLOSION, d0, d1, d2, d3, d4, d5);
+					double d0 = (double) ((float) x + 0.5) + (double) (random.nextFloat() - 0.5) * 0.5D;
+					double d1 = ((double) ((float) y + 0.7) + (double) (random.nextFloat() - 0.5) * 0.5D) + 0.5;
+					double d2 = (double) ((float) z + 0.5) + (double) (random.nextFloat() - 0.5) * 0.5D;
+					world.addParticle(ParticleTypes.FALLING_LAVA, d0, d1, d2, 0, 0, 0);
 				}
 		}
 	}

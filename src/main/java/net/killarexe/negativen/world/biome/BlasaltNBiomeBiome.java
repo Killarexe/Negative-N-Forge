@@ -44,7 +44,7 @@ import net.killarexe.negativen.entity.PigmanNEntity;
 import net.killarexe.negativen.entity.PiglinNEntity;
 import net.killarexe.negativen.block.PolishedBasaltNBlock;
 import net.killarexe.negativen.block.BasaltNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
@@ -52,10 +52,10 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 
-@NegativenModElements.ModElement.Tag
-public class BlasaltNBiomeBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class BlasaltNBiomeBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public BlasaltNBiomeBiome(NegativenModElements instance) {
+	public BlasaltNBiomeBiome(NegativeNModElements instance) {
 		super(instance, 957);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -91,7 +91,7 @@ public class BlasaltNBiomeBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(0.1f).scale(0.2f).temperature(1f)
 						.downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:blasalt_n_biome"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:blasalt_n_biome"));
 			}
 		}
 	}

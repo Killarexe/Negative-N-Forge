@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_side",
+  "textures": {
+    "wall": "negative_n:blocks/end_bricks",
+    "particle": "negative_n:blocks/end_bricks"
+  }
+}

@@ -14,16 +14,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class CutSandstoneNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:cut_sandstone_n")
+@NegativeNModElements.ModElement.Tag
+public class CutSandstoneNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:cut_sandstone_n")
 	public static final Block block = null;
-	public CutSandstoneNBlock(NegativenModElements instance) {
+	public CutSandstoneNBlock(NegativeNModElements instance) {
 		super(instance, 881);
 	}
 

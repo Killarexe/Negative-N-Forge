@@ -25,13 +25,13 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 
-@NegativenModElements.ModElement.Tag
-public class AcaciaNTreeStructure extends NegativenModElements.ModElement {
-	public AcaciaNTreeStructure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class AcaciaNTreeStructure extends NegativeNModElements.ModElement {
+	public AcaciaNTreeStructure(NegativeNModElements instance) {
 		super(instance, 655);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -39,7 +39,7 @@ public class AcaciaNTreeStructure extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:acacia_n_biome").equals(event.getName()))
+		if (new ResourceLocation("negative_n:acacia_n_biome").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -50,7 +50,7 @@ public class AcaciaNTreeStructure extends NegativenModElements.ModElement {
 				int ck = (pos.getZ() >> 4) << 4;
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
@@ -68,7 +68,7 @@ public class AcaciaNTreeStructure extends NegativenModElements.ModElement {
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();
 						Template template = world.getWorld().getStructureTemplateManager()
-								.getTemplateDefaulted(new ResourceLocation("negativen", "sprucentree"));
+								.getTemplateDefaulted(new ResourceLocation("negative_n", "sprucentree"));
 						if (template == null)
 							return false;
 						template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)

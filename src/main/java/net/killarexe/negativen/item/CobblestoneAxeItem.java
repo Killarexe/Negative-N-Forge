@@ -13,16 +13,16 @@ import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.procedures.PoisonusProccedProcedure;
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class CobblestoneAxeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:cobblestone_n_axe")
+@NegativeNModElements.ModElement.Tag
+public class CobblestoneAxeItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:cobblestone_n_axe")
 	public static final Item block = null;
-	public CobblestoneAxeItem(NegativenModElements instance) {
+	public CobblestoneAxeItem(NegativeNModElements instance) {
 		super(instance, 293);
 	}
 

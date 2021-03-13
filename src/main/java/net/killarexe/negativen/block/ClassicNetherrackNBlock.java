@@ -14,16 +14,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.ClassicBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicNetherrackNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:classic_netherrack_n")
+@NegativeNModElements.ModElement.Tag
+public class ClassicNetherrackNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:classic_netherrack_n")
 	public static final Block block = null;
-	public ClassicNetherrackNBlock(NegativenModElements instance) {
+	public ClassicNetherrackNBlock(NegativeNModElements instance) {
 		super(instance, 355);
 	}
 

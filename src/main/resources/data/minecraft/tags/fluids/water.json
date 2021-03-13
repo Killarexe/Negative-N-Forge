@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "negativen:lavan",
-    "negativen:lavan_flowing",
-    "negativen:classic_water",
-    "negativen:classic_water_flowing",
-    "negativen:classic_lava_n",
-    "negativen:classic_lava_n_flowing"
+    "negative_n:lavan",
+    "negative_n:lavan_flowing",
+    "negative_n:classic_water",
+    "negative_n:classic_water_flowing",
+    "negative_n:classic_lava_n",
+    "negative_n:classic_lava_n_flowing"
   ]
 }

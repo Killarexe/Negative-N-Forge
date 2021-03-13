@@ -18,12 +18,12 @@ import net.minecraft.client.particle.IParticleFactory;
 import net.minecraft.client.particle.IAnimatedSprite;
 import net.minecraft.client.Minecraft;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class RedstoneNParticleParticle extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class RedstoneNParticleParticle extends NegativeNModElements.ModElement {
 	public static final BasicParticleType particle = new BasicParticleType(false);
-	public RedstoneNParticleParticle(NegativenModElements instance) {
+	public RedstoneNParticleParticle(NegativeNModElements instance) {
 		super(instance, 917);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

@@ -22,16 +22,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNRedstoneNItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class AcaciaNFenceGateBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:acacia_n_fence_gate")
+@NegativeNModElements.ModElement.Tag
+public class AcaciaNFenceGateBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:acacia_n_fence_gate")
 	public static final Block block = null;
-	public AcaciaNFenceGateBlock(NegativenModElements instance) {
+	public AcaciaNFenceGateBlock(NegativeNModElements instance) {
 		super(instance, 129);
 	}
 

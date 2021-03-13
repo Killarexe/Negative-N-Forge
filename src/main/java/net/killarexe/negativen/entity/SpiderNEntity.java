@@ -46,12 +46,12 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.StringNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class SpiderNEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class SpiderNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public SpiderNEntity(NegativenModElements instance) {
+	public SpiderNEntity(NegativeNModElements instance) {
 		super(instance, 54);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -70,7 +70,7 @@ public class SpiderNEntity extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:nethern").equals(event.getName()))
+		if (new ResourceLocation("negative_n:nethern").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -90,7 +90,7 @@ public class SpiderNEntity extends NegativenModElements.ModElement {
 			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new SpiderModel(), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("negativen:textures/pidern.png");
+					return new ResourceLocation("negative_n:textures/pidern.png");
 				}
 			});
 		}

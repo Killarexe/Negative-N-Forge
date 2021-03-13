@@ -1,0 +1,11 @@
+{
+  "criteria": {
+    "flower_glitch": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 0
+  },
+  "parent": "negative_n:wtnn"
+}

@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class QuartzNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:quartz_n")
+@NegativeNModElements.ModElement.Tag
+public class QuartzNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:quartz_n")
 	public static final Item block = null;
-	public QuartzNItem(NegativenModElements instance) {
+	public QuartzNItem(NegativeNModElements instance) {
 		super(instance, 8);
 	}
 

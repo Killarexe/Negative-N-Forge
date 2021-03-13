@@ -29,16 +29,16 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.item.AmethystNShardItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class AmethystNClusterBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:amethyst_n_cluster")
+@NegativeNModElements.ModElement.Tag
+public class AmethystNClusterBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:amethyst_n_cluster")
 	public static final Block block = null;
-	public AmethystNClusterBlock(NegativenModElements instance) {
+	public AmethystNClusterBlock(NegativeNModElements instance) {
 		super(instance, 255);
 	}
 

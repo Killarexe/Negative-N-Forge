@@ -19,7 +19,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.CopperNAgeProcedureProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -27,11 +27,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class SemiWeatheredCutCopperNStairsBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:semi_weathered_cut_copper_n_stairs")
+@NegativeNModElements.ModElement.Tag
+public class SemiWeatheredCutCopperNStairsBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:semi_weathered_cut_copper_n_stairs")
 	public static final Block block = null;
-	public SemiWeatheredCutCopperNStairsBlock(NegativenModElements instance) {
+	public SemiWeatheredCutCopperNStairsBlock(NegativeNModElements instance) {
 		super(instance, 894);
 	}
 

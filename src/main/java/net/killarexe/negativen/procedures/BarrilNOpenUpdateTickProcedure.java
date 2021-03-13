@@ -14,15 +14,15 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.block.BarrilNOpenBlock;
 import net.killarexe.negativen.block.BarrilNBlock;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class BarrilNOpenUpdateTickProcedure extends NegativenModElements.ModElement {
-	public BarrilNOpenUpdateTickProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class BarrilNOpenUpdateTickProcedure extends NegativeNModElements.ModElement {
+	public BarrilNOpenUpdateTickProcedure(NegativeNModElements instance) {
 		super(instance, 983);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -30,22 +30,22 @@ public class BarrilNOpenUpdateTickProcedure extends NegativenModElements.ModElem
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure BarrilNOpenUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure BarrilNOpenUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure BarrilNOpenUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure BarrilNOpenUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure BarrilNOpenUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure BarrilNOpenUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure BarrilNOpenUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure BarrilNOpenUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

@@ -14,16 +14,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class StoneNBricksBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:stone_n_bricks")
+@NegativeNModElements.ModElement.Tag
+public class StoneNBricksBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:stone_n_bricks")
 	public static final Block block = null;
-	public StoneNBricksBlock(NegativenModElements instance) {
+	public StoneNBricksBlock(NegativeNModElements instance) {
 		super(instance, 109);
 	}
 

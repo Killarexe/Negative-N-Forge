@@ -21,16 +21,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class SmoothStoneNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:smooth_stone_n")
+@NegativeNModElements.ModElement.Tag
+public class SmoothStoneNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:smooth_stone_n")
 	public static final Block block = null;
-	public SmoothStoneNBlock(NegativenModElements instance) {
+	public SmoothStoneNBlock(NegativeNModElements instance) {
 		super(instance, 110);
 	}
 

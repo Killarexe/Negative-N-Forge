@@ -23,16 +23,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class OakNslabBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:oak_slab_n")
+@NegativeNModElements.ModElement.Tag
+public class OakNslabBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:oak_slab_n")
 	public static final Block block = null;
-	public OakNslabBlock(NegativenModElements instance) {
+	public OakNslabBlock(NegativeNModElements instance) {
 		super(instance, 164);
 	}
 

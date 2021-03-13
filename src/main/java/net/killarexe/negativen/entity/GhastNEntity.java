@@ -48,14 +48,14 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.EnumSet;
 
-@NegativenModElements.ModElement.Tag
-public class GhastNEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class GhastNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public GhastNEntity(NegativenModElements instance) {
+	public GhastNEntity(NegativeNModElements instance) {
 		super(instance, 60);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -74,7 +74,7 @@ public class GhastNEntity extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:nethern").equals(event.getName()))
+		if (new ResourceLocation("negative_n:nethern").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -94,7 +94,7 @@ public class GhastNEntity extends NegativenModElements.ModElement {
 			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new GhastModel(), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("negativen:textures/ghast_n.png");
+					return new ResourceLocation("negative_n:textures/ghast_n.png");
 				}
 			});
 		}

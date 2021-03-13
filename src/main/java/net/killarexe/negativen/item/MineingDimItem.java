@@ -15,7 +15,7 @@ import net.killarexe.negativen.world.dimension.MineingDimDimension;
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
 
 public class MineingDimItem extends Item {
-	@ObjectHolder("negativen:mineingdim")
+	@ObjectHolder("negative_n:mineingdim")
 	public static final Item block = null;
 	public MineingDimItem() {
 		super(new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).maxDamage(64));

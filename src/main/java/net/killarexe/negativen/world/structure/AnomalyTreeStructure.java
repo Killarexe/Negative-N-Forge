@@ -25,13 +25,13 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 
-@NegativenModElements.ModElement.Tag
-public class AnomalyTreeStructure extends NegativenModElements.ModElement {
-	public AnomalyTreeStructure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class AnomalyTreeStructure extends NegativeNModElements.ModElement {
+	public AnomalyTreeStructure(NegativeNModElements instance) {
 		super(instance, 536);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -39,9 +39,9 @@ public class AnomalyTreeStructure extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:oak_nforest").equals(event.getName()))
+		if (new ResourceLocation("negative_n:oak_nforest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:plains_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:plains_n").equals(event.getName()))
 			biomeCriteria = true;
 		if (new ResourceLocation("desert").equals(event.getName()))
 			biomeCriteria = true;
@@ -56,7 +56,7 @@ public class AnomalyTreeStructure extends NegativenModElements.ModElement {
 				int ck = (pos.getZ() >> 4) << 4;
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
 				if (dimensionType == World.OVERWORLD)
 					dimensionCriteria = true;
@@ -76,7 +76,7 @@ public class AnomalyTreeStructure extends NegativenModElements.ModElement {
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();
 						Template template = world.getWorld().getStructureTemplateManager()
-								.getTemplateDefaulted(new ResourceLocation("negativen", "anomalytree"));
+								.getTemplateDefaulted(new ResourceLocation("negative_n", "anomalytree"));
 						if (template == null)
 							return false;
 						template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)

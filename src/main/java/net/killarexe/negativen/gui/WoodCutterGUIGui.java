@@ -39,8 +39,8 @@ import net.minecraft.client.Minecraft;
 import net.killarexe.negativen.procedures.StairsProccedProcedure;
 import net.killarexe.negativen.procedures.FenceProccedProcedure;
 import net.killarexe.negativen.procedures.CutProccedProcedure;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -48,11 +48,11 @@ import java.util.HashMap;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-@NegativenModElements.ModElement.Tag
-public class WoodCutterGUIGui extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class WoodCutterGUIGui extends NegativeNModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public WoodCutterGUIGui(NegativenModElements instance) {
+	public WoodCutterGUIGui(NegativeNModElements instance) {
 		super(instance, 561);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
@@ -301,7 +301,7 @@ public class WoodCutterGUIGui extends NegativenModElements.ModElement {
 
 		private void slotChanged(int slotid, int ctype, int meta) {
 			if (this.world != null && this.world.isRemote()) {
-				NegativenMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
 				handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 			}
 		}
@@ -322,7 +322,7 @@ public class WoodCutterGUIGui extends NegativenModElements.ModElement {
 			this.xSize = 210;
 			this.ySize = 200;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("negativen:textures/wood_cutter_gui.png");
+		private static final ResourceLocation texture = new ResourceLocation("negative_n:textures/wood_cutter_gui.png");
 		@Override
 		public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 			this.renderBackground(ms);
@@ -369,15 +369,15 @@ public class WoodCutterGUIGui extends NegativenModElements.ModElement {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
 			this.addButton(new Button(this.guiLeft + 50, this.guiTop + 73, 120, 20, new StringTextComponent("Cut/Stripped"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 113, this.guiTop + 46, 60, 20, new StringTextComponent("Stairs"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 122, this.guiTop + 19, 50, 20, new StringTextComponent("Fence"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
 				handleButtonAction(entity, 2, x, y, z);
 			}));
 		}

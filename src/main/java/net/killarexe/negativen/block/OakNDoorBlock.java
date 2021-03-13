@@ -24,16 +24,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNRedstoneNItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class OakNDoorBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:oak_n_door")
+@NegativeNModElements.ModElement.Tag
+public class OakNDoorBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:oak_n_door")
 	public static final Block block = null;
-	public OakNDoorBlock(NegativenModElements instance) {
+	public OakNDoorBlock(NegativeNModElements instance) {
 		super(instance, 134);
 	}
 

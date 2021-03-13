@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNCombatItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class ArrowNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:arrow_n")
+@NegativeNModElements.ModElement.Tag
+public class ArrowNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:arrow_n")
 	public static final Item block = null;
-	public ArrowNItem(NegativenModElements instance) {
+	public ArrowNItem(NegativeNModElements instance) {
 		super(instance, 275);
 	}
 

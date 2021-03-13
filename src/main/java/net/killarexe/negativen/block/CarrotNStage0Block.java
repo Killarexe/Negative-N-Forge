@@ -28,7 +28,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.CropsGrowProcedure;
 import net.killarexe.negativen.item.CarrotsNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -36,11 +36,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class CarrotNStage0Block extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:carrot_n_stage_0")
+@NegativeNModElements.ModElement.Tag
+public class CarrotNStage0Block extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:carrot_n_stage_0")
 	public static final Block block = null;
-	public CarrotNStage0Block(NegativenModElements instance) {
+	public CarrotNStage0Block(NegativeNModElements instance) {
 		super(instance, 709);
 	}
 

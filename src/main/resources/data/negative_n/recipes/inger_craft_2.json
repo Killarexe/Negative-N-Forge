@@ -1,0 +1,16 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:updater"
+    },
+    {
+      "item": "minecraft:smithing_table"
+    }
+  ],
+  "result": {
+    "item": "negative_n:inger",
+    "count": 1
+  }
+}

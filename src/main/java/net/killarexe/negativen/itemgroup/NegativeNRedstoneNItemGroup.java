@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.killarexe.negativen.item.RedstoneNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NegativeNRedstoneNItemGroup extends NegativenModElements.ModElement {
-	public NegativeNRedstoneNItemGroup(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class NegativeNRedstoneNItemGroup extends NegativeNModElements.ModElement {
+	public NegativeNRedstoneNItemGroup(NegativeNModElements instance) {
 		super(instance, 718);
 	}
 

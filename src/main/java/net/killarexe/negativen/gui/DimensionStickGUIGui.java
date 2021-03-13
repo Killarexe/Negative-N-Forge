@@ -42,8 +42,8 @@ import net.killarexe.negativen.procedures.ClassicNetherNButtonProcedure;
 import net.killarexe.negativen.procedures.ClassicNetherButtonProcedure;
 import net.killarexe.negativen.procedures.ClassicNDimButtonProcedure;
 import net.killarexe.negativen.procedures.ClassicDimButtonProcedure;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -51,11 +51,11 @@ import java.util.HashMap;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-@NegativenModElements.ModElement.Tag
-public class DimensionStickGUIGui extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class DimensionStickGUIGui extends NegativeNModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public DimensionStickGUIGui(NegativenModElements instance) {
+	public DimensionStickGUIGui(NegativeNModElements instance) {
 		super(instance, 457);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
@@ -126,7 +126,7 @@ public class DimensionStickGUIGui extends NegativenModElements.ModElement {
 			this.xSize = 250;
 			this.ySize = 200;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("negativen:textures/dimensionstickgui.png");
+		private static final ResourceLocation texture = new ResourceLocation("negative_n:textures/dimensionstickgui.png");
 		@Override
 		public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 			this.renderBackground(ms);
@@ -174,51 +174,51 @@ public class DimensionStickGUIGui extends NegativenModElements.ModElement {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
 			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 19, 90, 20, new StringTextComponent("Owerworld"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 46, 60, 20, new StringTextComponent("Nether"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 73, 30, 20, new StringTextComponent("End"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
 				handleButtonAction(entity, 2, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 100, 100, 20, new StringTextComponent("Underworld"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
 				handleButtonAction(entity, 3, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 127, 80, 20, new StringTextComponent("Nether-N"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(4, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(4, x, y, z));
 				handleButtonAction(entity, 4, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 7, this.guiTop + 154, 50, 20, new StringTextComponent("Start"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(5, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(5, x, y, z));
 				handleButtonAction(entity, 5, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 46, 40, 20, new StringTextComponent("None"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(6, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(6, x, y, z));
 				handleButtonAction(entity, 6, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 19, 100, 20, new StringTextComponent("MineingDim"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(7, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(7, x, y, z));
 				handleButtonAction(entity, 7, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 73, 100, 20, new StringTextComponent("ClassicDim"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(8, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(8, x, y, z));
 				handleButtonAction(entity, 8, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 100, 110, 20, new StringTextComponent("ClassicNDim"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(9, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(9, x, y, z));
 				handleButtonAction(entity, 9, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 116, this.guiTop + 127, 95, 20, new StringTextComponent("Classic Nether"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(10, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(10, x, y, z));
 				handleButtonAction(entity, 10, x, y, z);
 			}));
 			this.addButton(new Button(this.guiLeft + 115, this.guiTop + 155, 105, 20, new StringTextComponent("Classic Nether-N"), e -> {
-				NegativenMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(11, x, y, z));
+				NegativeNMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(11, x, y, z));
 				handleButtonAction(entity, 11, x, y, z);
 			}));
 		}

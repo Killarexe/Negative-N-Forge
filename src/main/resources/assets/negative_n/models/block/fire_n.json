@@ -1,0 +1,8 @@
+{
+  "parent": "negative_n:custom/template_fire_floor",
+  "textures": {
+    "all": "negative_n:blocks/fire_n",
+    "particle": "negative_n:blocks/fire_n",
+    "fire": "negative_n:blocks/fire_n"
+  }
+}

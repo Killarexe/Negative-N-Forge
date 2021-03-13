@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "negativen:blocks/oak_planksn",
-    "top": "negativen:blocks/oak_planksn",
-    "side": "negativen:blocks/oak_planksn"
-  }
-}

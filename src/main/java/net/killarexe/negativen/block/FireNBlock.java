@@ -25,7 +25,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.FireNUpdateTickProcedure;
 import net.killarexe.negativen.procedures.FireNEntityWalksOnTheBlockProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -33,11 +33,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class FireNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:fire_n")
+@NegativeNModElements.ModElement.Tag
+public class FireNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:fire_n")
 	public static final Block block = null;
-	public FireNBlock(NegativenModElements instance) {
+	public FireNBlock(NegativeNModElements instance) {
 		super(instance, 598);
 	}
 

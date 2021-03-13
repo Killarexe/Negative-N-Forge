@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class GunPowderNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:gun_powder_n")
+@NegativeNModElements.ModElement.Tag
+public class GunPowderNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:gun_powder_n")
 	public static final Item block = null;
-	public GunPowderNItem(NegativenModElements instance) {
+	public GunPowderNItem(NegativeNModElements instance) {
 		super(instance, 40);
 	}
 

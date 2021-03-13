@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NetheriteNShovelItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:netherite_n_shovel")
+@NegativeNModElements.ModElement.Tag
+public class NetheriteNShovelItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:netherite_n_shovel")
 	public static final Item block = null;
-	public NetheriteNShovelItem(NegativenModElements instance) {
+	public NetheriteNShovelItem(NegativeNModElements instance) {
 		super(instance, 278);
 	}
 
@@ -46,7 +46,7 @@ public class NetheriteNShovelItem extends NegativenModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(NetheriteNItem.block, (int) (1)));
 			}
-		}, 1, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
+		}, 1, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).isImmuneToFire()) {
 		}.setRegistryName("netherite_n_shovel"));
 	}
 }

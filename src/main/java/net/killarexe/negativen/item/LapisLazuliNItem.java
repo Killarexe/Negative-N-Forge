@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class LapisLazuliNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:lapis_lazuli_n")
+@NegativeNModElements.ModElement.Tag
+public class LapisLazuliNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:lapis_lazuli_n")
 	public static final Item block = null;
-	public LapisLazuliNItem(NegativenModElements instance) {
+	public LapisLazuliNItem(NegativeNModElements instance) {
 		super(instance, 9);
 	}
 

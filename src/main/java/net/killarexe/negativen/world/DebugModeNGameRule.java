@@ -4,15 +4,15 @@ import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 
 import net.minecraft.world.GameRules;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.lang.reflect.Method;
 
-@NegativenModElements.ModElement.Tag
-public class DebugModeNGameRule extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class DebugModeNGameRule extends NegativeNModElements.ModElement {
 	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("debugModeN", GameRules.Category.PLAYER,
 			create(false));
-	public DebugModeNGameRule(NegativenModElements instance) {
+	public DebugModeNGameRule(NegativeNModElements instance) {
 		super(instance, 959);
 	}
 

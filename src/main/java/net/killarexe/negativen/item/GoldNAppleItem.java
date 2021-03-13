@@ -15,16 +15,16 @@ import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.procedures.GoldNAppleFoodEatenProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNFoodItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class GoldNAppleItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:gold_n_apple")
+@NegativeNModElements.ModElement.Tag
+public class GoldNAppleItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:gold_n_apple")
 	public static final Item block = null;
-	public GoldNAppleItem(NegativenModElements instance) {
+	public GoldNAppleItem(NegativeNModElements instance) {
 		super(instance, 316);
 	}
 

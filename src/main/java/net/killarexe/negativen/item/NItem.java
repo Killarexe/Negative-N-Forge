@@ -11,13 +11,13 @@ import net.minecraft.item.MusicDiscItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:n")
+@NegativeNModElements.ModElement.Tag
+public class NItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:n")
 	public static final Item block = null;
-	public NItem(NegativenModElements instance) {
+	public NItem(NegativeNModElements instance) {
 		super(instance, 541);
 	}
 
@@ -27,7 +27,7 @@ public class NItem extends NegativenModElements.ModElement {
 	}
 	public static class MusicDiscItemCustom extends MusicDiscItem {
 		public MusicDiscItemCustom() {
-			super(0, NegativenModElements.sounds.get(new ResourceLocation("negativen:n-music_8bit")),
+			super(0, NegativeNModElements.sounds.get(new ResourceLocation("negative_n:n-music_8bit")),
 					new Item.Properties().group(null).maxStackSize(1).rarity(Rarity.RARE));
 			setRegistryName("n");
 		}

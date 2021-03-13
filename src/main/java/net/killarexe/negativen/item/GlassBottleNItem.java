@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class GlassBottleNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:glass_bottle_n")
+@NegativeNModElements.ModElement.Tag
+public class GlassBottleNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:glass_bottle_n")
 	public static final Item block = null;
-	public GlassBottleNItem(NegativenModElements instance) {
+	public GlassBottleNItem(NegativeNModElements instance) {
 		super(instance, 914);
 	}
 

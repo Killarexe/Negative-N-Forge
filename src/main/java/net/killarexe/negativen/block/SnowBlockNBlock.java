@@ -17,7 +17,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.SnowNUpdateTickProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -25,11 +25,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class SnowBlockNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:snow_block_n")
+@NegativeNModElements.ModElement.Tag
+public class SnowBlockNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:snow_block_n")
 	public static final Block block = null;
-	public SnowBlockNBlock(NegativenModElements instance) {
+	public SnowBlockNBlock(NegativeNModElements instance) {
 		super(instance, 213);
 	}
 

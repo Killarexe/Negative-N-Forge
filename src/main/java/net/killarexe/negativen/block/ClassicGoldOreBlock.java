@@ -29,17 +29,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.ClassicBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicGoldOreBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:classic_gold_ore")
+@NegativeNModElements.ModElement.Tag
+public class ClassicGoldOreBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:classic_gold_ore")
 	public static final Block block = null;
-	public ClassicGoldOreBlock(NegativenModElements instance) {
+	public ClassicGoldOreBlock(NegativeNModElements instance) {
 		super(instance, 345);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -72,7 +72,7 @@ public class ClassicGoldOreBlock extends NegativenModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:classic_dim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:classic_dim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

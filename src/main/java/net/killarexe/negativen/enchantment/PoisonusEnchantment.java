@@ -7,13 +7,13 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.enchantment.Enchantment;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class PoisonusEnchantment extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:poisonus")
+@NegativeNModElements.ModElement.Tag
+public class PoisonusEnchantment extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:poisonus")
 	public static final Enchantment enchantment = null;
-	public PoisonusEnchantment(NegativenModElements instance) {
+	public PoisonusEnchantment(NegativeNModElements instance) {
 		super(instance, 662);
 	}
 

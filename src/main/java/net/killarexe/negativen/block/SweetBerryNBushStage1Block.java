@@ -28,7 +28,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.CropsGrowProcedure;
 import net.killarexe.negativen.item.SweetBerryNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -36,11 +36,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class SweetBerryNBushStage1Block extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:sweet_berry_n_bush_stage_1")
+@NegativeNModElements.ModElement.Tag
+public class SweetBerryNBushStage1Block extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:sweet_berry_n_bush_stage_1")
 	public static final Block block = null;
-	public SweetBerryNBushStage1Block(NegativenModElements instance) {
+	public SweetBerryNBushStage1Block(NegativeNModElements instance) {
 		super(instance, 772);
 	}
 

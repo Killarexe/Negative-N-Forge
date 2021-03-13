@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Slime-N",
     "mobLabel": "",
-    "mobModelName": "Slime",
+    "mobModelName": "Modelslime_n",
     "mobModelTexture": "slime_n.png",
     "mobModelGlowTexture": "",
     "modelWidth": 1.0,

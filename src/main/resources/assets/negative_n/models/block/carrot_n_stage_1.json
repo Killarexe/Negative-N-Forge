@@ -1,0 +1,8 @@
+{
+  "parent": "negative_n:custom/carrot_n_stage_0",
+  "textures": {
+    "all": "negative_n:blocks/carrots_n_stage1",
+    "particle": "negative_n:blocks/carrots_n_stage1",
+    "1": "negative_n:blocks/carrots_n_stage1"
+  }
+}

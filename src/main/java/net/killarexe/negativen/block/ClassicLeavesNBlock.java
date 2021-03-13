@@ -23,18 +23,18 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.ClassicLeavesBlockDestroyedByPlayerProcedure;
 import net.killarexe.negativen.itemgroup.ClassicBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicLeavesNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:classic_leaves_n")
+@NegativeNModElements.ModElement.Tag
+public class ClassicLeavesNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:classic_leaves_n")
 	public static final Block block = null;
-	public ClassicLeavesNBlock(NegativenModElements instance) {
+	public ClassicLeavesNBlock(NegativeNModElements instance) {
 		super(instance, 338);
 	}
 

@@ -29,7 +29,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.LanternsNUpdateTickProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -37,11 +37,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class HangingLanternNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:hanging_lantern_n")
+@NegativeNModElements.ModElement.Tag
+public class HangingLanternNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:hanging_lantern_n")
 	public static final Block block = null;
-	public HangingLanternNBlock(NegativenModElements instance) {
+	public HangingLanternNBlock(NegativeNModElements instance) {
 		super(instance, 788);
 	}
 

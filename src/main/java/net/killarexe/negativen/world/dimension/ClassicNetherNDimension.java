@@ -57,7 +57,7 @@ import net.killarexe.negativen.procedures.ClassicNethersCanTravelProcedure;
 import net.killarexe.negativen.item.ClassicNetherNItem;
 import net.killarexe.negativen.block.PortalblockBlock;
 import net.killarexe.negativen.block.ClassicNetherrackNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -74,11 +74,11 @@ import com.google.common.collect.Sets;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.ImmutableMap;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicNetherNDimension extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:classic_nether_n_portal")
+@NegativeNModElements.ModElement.Tag
+public class ClassicNetherNDimension extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:classic_nether_n_portal")
 	public static final CustomPortalBlock portal = null;
-	public ClassicNetherNDimension(NegativenModElements instance) {
+	public ClassicNetherNDimension(NegativeNModElements instance) {
 		super(instance, 307);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
@@ -117,7 +117,7 @@ public class ClassicNetherNDimension extends NegativenModElements.ModElement {
 			try {
 				Object2ObjectMap<ResourceLocation, DimensionRenderInfo> effectsRegistry = (Object2ObjectMap<ResourceLocation, DimensionRenderInfo>) ObfuscationReflectionHelper
 						.getPrivateValue(DimensionRenderInfo.class, null, "field_239208_a_");
-				effectsRegistry.put(new ResourceLocation("negativen:classic_nether_n"), customEffect);
+				effectsRegistry.put(new ResourceLocation("negative_n:classic_nether_n"), customEffect);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -208,10 +208,10 @@ public class ClassicNetherNDimension extends NegativenModElements.ModElement {
 				if (entity.func_242280_ah()) {
 					entity.func_242279_ag();
 				} else if (entity.world.getDimensionKey() != RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-						new ResourceLocation("negativen:classic_nether_n"))) {
+						new ResourceLocation("negative_n:classic_nether_n"))) {
 					entity.func_242279_ag();
 					teleportToDimension(entity, pos,
-							RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:classic_nether_n")));
+							RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:classic_nether_n")));
 				} else {
 					entity.func_242279_ag();
 					teleportToDimension(entity, pos, World.OVERWORLD);

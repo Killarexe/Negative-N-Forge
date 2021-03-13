@@ -1,0 +1,19 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:sugar_cane_n_item"
+    },
+    {
+      "item": "negative_n:sugar_cane_n_item"
+    },
+    {
+      "item": "negative_n:sugar_cane_n_item"
+    }
+  ],
+  "result": {
+    "item": "negative_n:paper_n",
+    "count": 3
+  }
+}

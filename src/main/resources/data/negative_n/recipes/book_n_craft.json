@@ -1,0 +1,22 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:leather_n"
+    },
+    {
+      "item": "negative_n:paper_n"
+    },
+    {
+      "item": "negative_n:paper_n"
+    },
+    {
+      "item": "negative_n:paper_n"
+    }
+  ],
+  "result": {
+    "item": "negative_n:book_n",
+    "count": 1
+  }
+}

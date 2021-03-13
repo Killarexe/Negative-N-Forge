@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "negative_n:blocks/amethyst_n_cluster",
+    "particle": "negative_n:blocks/amethyst_n_cluster"
+  }
+}

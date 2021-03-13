@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.killarexe.negativen.block.BricksBlockNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NegativeNBlocksItemGroup extends NegativenModElements.ModElement {
-	public NegativeNBlocksItemGroup(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class NegativeNBlocksItemGroup extends NegativeNModElements.ModElement {
+	public NegativeNBlocksItemGroup(NegativeNModElements instance) {
 		super(instance, 381);
 	}
 

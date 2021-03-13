@@ -15,7 +15,7 @@ import net.killarexe.negativen.world.dimension.NegaDimension;
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
 
 public class NegaItem extends Item {
-	@ObjectHolder("negativen:nega")
+	@ObjectHolder("negative_n:overworld_n")
 	public static final Item block = null;
 	public NegaItem() {
 		super(new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).maxDamage(64));

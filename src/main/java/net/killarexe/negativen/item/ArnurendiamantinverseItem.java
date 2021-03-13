@@ -19,22 +19,22 @@ import net.minecraft.entity.Entity;
 
 import net.killarexe.negativen.procedures.ArnurendiamantinverseBootsTickEventProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNCombatItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class ArnurendiamantinverseItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:diamond_n_armor_helmet")
+@NegativeNModElements.ModElement.Tag
+public class ArnurendiamantinverseItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:diamond_n_armor_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("negativen:diamond_n_armor_chestplate")
+	@ObjectHolder("negative_n:diamond_n_armor_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("negativen:diamond_n_armor_leggings")
+	@ObjectHolder("negative_n:diamond_n_armor_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("negativen:diamond_n_armor_boots")
+	@ObjectHolder("negative_n:diamond_n_armor_boots")
 	public static final Item boots = null;
-	public ArnurendiamantinverseItem(NegativenModElements instance) {
+	public ArnurendiamantinverseItem(NegativeNModElements instance) {
 		super(instance, 264);
 	}
 
@@ -85,25 +85,25 @@ public class ArnurendiamantinverseItem extends NegativenModElements.ModElement {
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "negativen:textures/models/armor/diamond_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "negative_n:textures/models/armor/diamond_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 		}.setRegistryName("diamond_n_armor_helmet"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "negativen:textures/models/armor/diamond_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "negative_n:textures/models/armor/diamond_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 		}.setRegistryName("diamond_n_armor_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "negativen:textures/models/armor/diamond_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "negative_n:textures/models/armor/diamond_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 		}.setRegistryName("diamond_n_armor_leggings"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "negativen:textures/models/armor/diamond_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "negative_n:textures/models/armor/diamond_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 
 			@Override

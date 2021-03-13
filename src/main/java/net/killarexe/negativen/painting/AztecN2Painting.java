@@ -7,11 +7,11 @@ import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.entity.item.PaintingType;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class AztecN2Painting extends NegativenModElements.ModElement {
-	public AztecN2Painting(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class AztecN2Painting extends NegativeNModElements.ModElement {
+	public AztecN2Painting(NegativeNModElements instance) {
 		super(instance, 852);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

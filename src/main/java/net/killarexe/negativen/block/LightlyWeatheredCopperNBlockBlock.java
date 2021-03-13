@@ -24,7 +24,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.CopperNAgeProcedureProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -32,11 +32,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class LightlyWeatheredCopperNBlockBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:lightly_weathered_copper_n_block")
+@NegativeNModElements.ModElement.Tag
+public class LightlyWeatheredCopperNBlockBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:lightly_weathered_copper_n_block")
 	public static final Block block = null;
-	public LightlyWeatheredCopperNBlockBlock(NegativenModElements instance) {
+	public LightlyWeatheredCopperNBlockBlock(NegativeNModElements instance) {
 		super(instance, 244);
 	}
 

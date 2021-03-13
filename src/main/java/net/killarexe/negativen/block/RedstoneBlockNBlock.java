@@ -22,16 +22,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNRedstoneNItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class RedstoneBlockNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:redstone_block_n")
+@NegativeNModElements.ModElement.Tag
+public class RedstoneBlockNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:redstone_block_n")
 	public static final Block block = null;
-	public RedstoneBlockNBlock(NegativenModElements instance) {
+	public RedstoneBlockNBlock(NegativeNModElements instance) {
 		super(instance, 150);
 	}
 

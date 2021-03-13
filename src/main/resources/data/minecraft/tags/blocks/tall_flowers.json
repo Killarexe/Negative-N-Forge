@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "negativen:peony_n",
-    "negativen:rose_bush_n"
+    "negative_n:peony_n",
+    "negative_n:rose_bush_n"
   ]
 }

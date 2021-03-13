@@ -47,7 +47,7 @@ import net.killarexe.negativen.entity.CreeperNEntity;
 import net.killarexe.negativen.entity.CowNEntity;
 import net.killarexe.negativen.block.TerreNBlock;
 import net.killarexe.negativen.block.BlockherbeNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
@@ -55,10 +55,10 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 
-@NegativenModElements.ModElement.Tag
-public class PlainsNBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class PlainsNBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public PlainsNBiome(NegativenModElements instance) {
+	public PlainsNBiome(NegativeNModElements instance) {
 		super(instance, 517);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -97,7 +97,7 @@ public class PlainsNBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(0f).scale(0f).temperature(0.5f)
 						.downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:plains_n"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:plains_n"));
 			}
 		}
 	}

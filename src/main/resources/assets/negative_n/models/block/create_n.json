@@ -1,0 +1,8 @@
+{
+  "parent": "negative_n:custom/create",
+  "textures": {
+    "all": "negative_n:blocks/barrieln_side",
+    "particle": "negative_n:blocks/barrieln_side",
+    "0": "negative_n:blocks/barrieln_side"
+  }
+}

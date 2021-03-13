@@ -11,13 +11,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class BlazeNpowderItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:blaze_n_powder")
+@NegativeNModElements.ModElement.Tag
+public class BlazeNpowderItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:blaze_n_powder")
 	public static final Item block = null;
-	public BlazeNpowderItem(NegativenModElements instance) {
+	public BlazeNpowderItem(NegativeNModElements instance) {
 		super(instance, 18);
 	}
 

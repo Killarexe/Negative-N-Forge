@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "negativen:stone_n",
-    "negativen:andesite_n",
-    "negativen:granite_n",
-    "negativen:diorite_n",
-    "negativen:classic_stone",
-    "negativen:classic_stone_n"
+    "negative_n:stone_n",
+    "negative_n:andesite_n",
+    "negative_n:granite_n",
+    "negative_n:diorite_n",
+    "negative_n:classic_stone",
+    "negative_n:classic_stone_n"
   ]
 }

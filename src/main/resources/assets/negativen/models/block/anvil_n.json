@@ -1,9 +1,0 @@
-{
-  "parent": "negativen:custom/anvil_n",
-  "textures": {
-    "all": "negativen:blocks/anvil_n",
-    "particle": "negativen:blocks/anvil_n",
-    "top": "negativen:blocks/anvil_n_top",
-    "body": "negativen:blocks/anvil_n"
-  }
-}

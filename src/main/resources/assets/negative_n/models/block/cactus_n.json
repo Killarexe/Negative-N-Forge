@@ -1,0 +1,10 @@
+{
+  "parent": "negative_n:custom/cactus_n",
+  "textures": {
+    "all": "negative_n:blocks/cactusn_top",
+    "particle": "negative_n:blocks/cactusn_top",
+    "side": "negative_n:blocks/cactusn_side",
+    "top": "negative_n:blocks/cactusn_top",
+    "bottom": "negative_n:blocks/cactus_n_bottom"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:slime_ball_n"
+    },
+    "1": {
+      "item": "negative_n:slime_ball_n"
+    },
+    "2": {
+      "item": "negative_n:slime_ball_n"
+    },
+    "3": {
+      "item": "negative_n:slime_ball_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:slime_n_block",
+    "count": 1
+  }
+}

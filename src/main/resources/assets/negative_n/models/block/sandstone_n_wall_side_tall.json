@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_side_tall",
+  "textures": {
+    "wall": "negative_n:blocks/sandstonen_top",
+    "particle": "negative_n:blocks/sandstonen_top"
+  }
+}

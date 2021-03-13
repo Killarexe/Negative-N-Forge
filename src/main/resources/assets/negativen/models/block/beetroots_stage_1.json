@@ -1,8 +1,0 @@
-{
-  "parent": "negativen:custom/beetroots_n_stage_0",
-  "textures": {
-    "all": "negativen:blocks/beetroots_n_stage1",
-    "particle": "negativen:blocks/beetroots_n_stage1",
-    "1": "negativen:blocks/beetroots_n_stage1"
-  }
-}

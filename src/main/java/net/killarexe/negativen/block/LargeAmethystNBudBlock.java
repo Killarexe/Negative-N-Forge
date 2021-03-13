@@ -29,7 +29,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.AmethystNClusterUpdateTickProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -37,11 +37,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class LargeAmethystNBudBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:large_amethyst_n_bud")
+@NegativeNModElements.ModElement.Tag
+public class LargeAmethystNBudBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:large_amethyst_n_bud")
 	public static final Block block = null;
-	public LargeAmethystNBudBlock(NegativenModElements instance) {
+	public LargeAmethystNBudBlock(NegativeNModElements instance) {
 		super(instance, 841);
 	}
 
@@ -86,8 +86,8 @@ public class LargeAmethystNBudBlock extends NegativenModElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
-			;
-			return this.getDefaultState().with(FACING, context.getNearestLookingDirection().getOpposite());
+			Direction facing = context.getFace();;
+			return this.getDefaultState().with(FACING, facing);
 		}
 
 		@Override

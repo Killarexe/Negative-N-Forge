@@ -15,7 +15,7 @@ import net.minecraft.client.world.DimensionRenderInfo;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.block.CobblestoneCaveGameBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 
@@ -23,9 +23,9 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 
 import com.google.common.collect.ImmutableSet;
 
-@NegativenModElements.ModElement.Tag
-public class CaveGameDimDimension extends NegativenModElements.ModElement {
-	public CaveGameDimDimension(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class CaveGameDimDimension extends NegativeNModElements.ModElement {
+	public CaveGameDimDimension(NegativeNModElements instance) {
 		super(instance, 357);
 	}
 
@@ -63,7 +63,7 @@ public class CaveGameDimDimension extends NegativenModElements.ModElement {
 			try {
 				Object2ObjectMap<ResourceLocation, DimensionRenderInfo> effectsRegistry = (Object2ObjectMap<ResourceLocation, DimensionRenderInfo>) ObfuscationReflectionHelper
 						.getPrivateValue(DimensionRenderInfo.class, null, "field_239208_a_");
-				effectsRegistry.put(new ResourceLocation("negativen:cave_game_dim"), customEffect);
+				effectsRegistry.put(new ResourceLocation("negative_n:cave_game_dim"), customEffect);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

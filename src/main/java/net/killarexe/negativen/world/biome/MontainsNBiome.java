@@ -38,16 +38,16 @@ import net.killarexe.negativen.entity.CowNEntity;
 import net.killarexe.negativen.entity.ChickenNEntity;
 import net.killarexe.negativen.block.StoneNBlock;
 import net.killarexe.negativen.block.SnowBlockNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
 import java.util.List;
 
-@NegativenModElements.ModElement.Tag
-public class MontainsNBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class MontainsNBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public MontainsNBiome(NegativenModElements instance) {
+	public MontainsNBiome(NegativeNModElements instance) {
 		super(instance, 654);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -73,7 +73,7 @@ public class MontainsNBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(1f).scale(0.5f).temperature(0.5f)
 						.downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:montains_n"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:montains_n"));
 			}
 		}
 	}

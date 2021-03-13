@@ -59,7 +59,7 @@ import net.minecraft.block.Block;
 import net.killarexe.negativen.procedures.DecompositorOnBlockRightClickedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.gui.DecompositeurGui;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -71,13 +71,13 @@ import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
 
-@NegativenModElements.ModElement.Tag
-public class DecompositorBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:decompositor")
+@NegativeNModElements.ModElement.Tag
+public class DecompositorBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:decompositor")
 	public static final Block block = null;
-	@ObjectHolder("negativen:decompositor")
+	@ObjectHolder("negative_n:decompositor")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public DecompositorBlock(NegativenModElements instance) {
+	public DecompositorBlock(NegativeNModElements instance) {
 		super(instance, 158);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

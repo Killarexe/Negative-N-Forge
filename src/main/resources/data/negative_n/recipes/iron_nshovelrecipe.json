@@ -1,0 +1,24 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:iron_n_ingot"
+    },
+    "1": {
+      "item": "negative_n:stick_n"
+    },
+    "2": {
+      "item": "negative_n:stick_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:iron_n_shovel",
+    "count": 1
+  }
+}

@@ -45,7 +45,7 @@ import net.killarexe.negativen.procedures.SweetBerryNBushStage3AdditionalGenerat
 import net.killarexe.negativen.procedures.SweetBerryBushRightClickProcedure;
 import net.killarexe.negativen.procedures.CropsGrowProcedure;
 import net.killarexe.negativen.item.SweetBerryNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -55,11 +55,11 @@ import java.util.Collections;
 
 import com.google.common.collect.ImmutableMap;
 
-@NegativenModElements.ModElement.Tag
-public class SweetBerryNBushStage3Block extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:sweet_berry_n_bush_stage_3")
+@NegativeNModElements.ModElement.Tag
+public class SweetBerryNBushStage3Block extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:sweet_berry_n_bush_stage_3")
 	public static final Block block = null;
-	public SweetBerryNBushStage3Block(NegativenModElements instance) {
+	public SweetBerryNBushStage3Block(NegativeNModElements instance) {
 		super(instance, 774);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -139,7 +139,7 @@ public class SweetBerryNBushStage3Block extends NegativenModElements.ModElement 
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:spruce_forest_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:spruce_forest_n").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -148,7 +148,7 @@ public class SweetBerryNBushStage3Block extends NegativenModElements.ModElement 
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

@@ -14,16 +14,16 @@ import net.minecraft.potion.Effect;
 import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.procedures.OnFireNOnPotionActiveTickProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class OnFireNPotion extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:on_fire_n")
+@NegativeNModElements.ModElement.Tag
+public class OnFireNPotion extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:on_fire_n")
 	public static final Effect potion = null;
-	public OnFireNPotion(NegativenModElements instance) {
+	public OnFireNPotion(NegativeNModElements instance) {
 		super(instance, 925);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
@@ -37,7 +37,7 @@ public class OnFireNPotion extends NegativenModElements.ModElement {
 		public EffectCustom() {
 			super(EffectType.BENEFICIAL, -16776961);
 			setRegistryName("on_fire_n");
-			potionIcon = new ResourceLocation("negativen:textures/on_fire_n.png");
+			potionIcon = new ResourceLocation("negative_n:textures/on_fire_n.png");
 		}
 
 		@Override

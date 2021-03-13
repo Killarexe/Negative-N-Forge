@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.killarexe.negativen.item.Iron_NAxeItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NeagtiveNOuilsItemGroup extends NegativenModElements.ModElement {
-	public NeagtiveNOuilsItemGroup(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class NeagtiveNOuilsItemGroup extends NegativeNModElements.ModElement {
+	public NeagtiveNOuilsItemGroup(NegativeNModElements instance) {
 		super(instance, 379);
 	}
 

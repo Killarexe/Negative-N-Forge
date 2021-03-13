@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "bottom": "negativen:blocks/smooth_stone_n",
-    "top": "negativen:blocks/smooth_stone_n",
-    "side": "negativen:blocks/smooth_stone_n_slab_side"
-  }
-}

@@ -1,0 +1,16 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:start_pearl"
+    },
+    {
+      "item": "negative_n:blaze_n_powder"
+    }
+  ],
+  "result": {
+    "item": "negative_n:start_eye",
+    "count": 1
+  }
+}

@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class GoldNShovelItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:gold_n_shovel")
+@NegativeNModElements.ModElement.Tag
+public class GoldNShovelItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:gold_n_shovel")
 	public static final Item block = null;
-	public GoldNShovelItem(NegativenModElements instance) {
+	public GoldNShovelItem(NegativeNModElements instance) {
 		super(instance, 298);
 	}
 

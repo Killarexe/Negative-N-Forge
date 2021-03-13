@@ -35,16 +35,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class GraniteNWallBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:granite_n_wall")
+@NegativeNModElements.ModElement.Tag
+public class GraniteNWallBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:granite_n_wall")
 	public static final Block block = null;
-	public GraniteNWallBlock(NegativenModElements instance) {
+	public GraniteNWallBlock(NegativeNModElements instance) {
 		super(instance, 965);
 	}
 

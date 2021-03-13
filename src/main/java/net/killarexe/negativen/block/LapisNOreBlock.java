@@ -30,17 +30,17 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.item.LapisLazuliNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class LapisNOreBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:lapis_n_ore")
+@NegativeNModElements.ModElement.Tag
+public class LapisNOreBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:lapis_n_ore")
 	public static final Block block = null;
-	public LapisNOreBlock(NegativenModElements instance) {
+	public LapisNOreBlock(NegativeNModElements instance) {
 		super(instance, 251);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -73,7 +73,7 @@ public class LapisNOreBlock extends NegativenModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
@@ -90,6 +90,6 @@ public class LapisNOreBlock extends NegativenModElements.ModElement {
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 4)).range(24).square().func_242731_b(10));
+		}, block.getDefaultState(), 4)).range(24).square().func_242731_b(5));
 	}
 }

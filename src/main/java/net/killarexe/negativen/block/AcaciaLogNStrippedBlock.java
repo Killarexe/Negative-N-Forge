@@ -20,16 +20,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class AcaciaLogNStrippedBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:acacia_log_n_stripped")
+@NegativeNModElements.ModElement.Tag
+public class AcaciaLogNStrippedBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:acacia_log_n_stripped")
 	public static final Block block = null;
-	public AcaciaLogNStrippedBlock(NegativenModElements instance) {
+	public AcaciaLogNStrippedBlock(NegativeNModElements instance) {
 		super(instance, 86);
 	}
 

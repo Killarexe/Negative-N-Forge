@@ -12,16 +12,16 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class CobblestoneCaveGameBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:cobblestone_cave_game")
+@NegativeNModElements.ModElement.Tag
+public class CobblestoneCaveGameBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:cobblestone_cave_game")
 	public static final Block block = null;
-	public CobblestoneCaveGameBlock(NegativenModElements instance) {
+	public CobblestoneCaveGameBlock(NegativeNModElements instance) {
 		super(instance, 695);
 	}
 

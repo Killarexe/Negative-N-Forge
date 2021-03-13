@@ -9,36 +9,36 @@ import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class MineindDimBottonProcedure extends NegativenModElements.ModElement {
-	public MineindDimBottonProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class MineindDimBottonProcedure extends NegativeNModElements.ModElement {
+	public MineindDimBottonProcedure(NegativeNModElements instance) {
 		super(instance, 465);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure MineindDimBotton!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure MineindDimBotton!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure MineindDimBotton!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure MineindDimBotton!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure MineindDimBotton!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure MineindDimBotton!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure MineindDimBotton!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure MineindDimBotton!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

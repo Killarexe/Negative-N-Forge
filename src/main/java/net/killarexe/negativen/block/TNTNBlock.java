@@ -22,18 +22,18 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.TNTNOnBlockRightClickedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNRedstoneNItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class TNTNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:tnt_n")
+@NegativeNModElements.ModElement.Tag
+public class TNTNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:tnt_n")
 	public static final Block block = null;
-	public TNTNBlock(NegativenModElements instance) {
+	public TNTNBlock(NegativeNModElements instance) {
 		super(instance, 198);
 	}
 

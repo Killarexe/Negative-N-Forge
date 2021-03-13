@@ -15,7 +15,7 @@ import net.killarexe.negativen.world.dimension.StartDimDimension;
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
 
 public class StartDimItem extends Item {
-	@ObjectHolder("negativen:startdim")
+	@ObjectHolder("negative_n:startdim")
 	public static final Item block = null;
 	public StartDimItem() {
 		super(new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).maxDamage(64));

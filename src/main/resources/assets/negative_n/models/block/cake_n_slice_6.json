@@ -1,0 +1,11 @@
+{
+  "parent": "negative_n:custom/cake_n_slice_6",
+  "textures": {
+    "all": "negative_n:blocks/cake_n_top",
+    "particle": "negative_n:blocks/cake_n_top",
+    "side": "negative_n:blocks/cake_n_side",
+    "top": "negative_n:blocks/cake_n_top",
+    "bottom": "negative_n:blocks/cake_n_bottom",
+    "inside": "negative_n:blocks/cake_n_inner"
+  }
+}

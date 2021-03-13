@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class BookNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:book_n")
+@NegativeNModElements.ModElement.Tag
+public class BookNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:book_n")
 	public static final Item block = null;
-	public BookNItem(NegativenModElements instance) {
+	public BookNItem(NegativeNModElements instance) {
 		super(instance, 28);
 	}
 

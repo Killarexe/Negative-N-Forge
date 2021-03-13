@@ -1,0 +1,16 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:updater"
+    },
+    {
+      "item": "negative_n:iron_and_flint"
+    }
+  ],
+  "result": {
+    "item": "negative_n:overworld_n",
+    "count": 1
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_fv": 15,
+  "_type": "overlay",
+  "definition": {
+    "priority": "LOWEST",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Negative-N",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Negative-N",
+          "x": 6,
+          "y": 8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:Version>",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "<VAR:Version>",
+          "x": 60,
+          "y": 8
+        }
+      }
+    ],
+    "baseTexture": "",
+    "displayCondition": {
+      "name": "NegativeNVersionOverlayDisplayOverlayIngame"
+    }
+  }
+}

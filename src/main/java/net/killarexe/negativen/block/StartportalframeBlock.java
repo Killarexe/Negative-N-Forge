@@ -29,18 +29,18 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.StartportalframeOnBlockRightClickedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class StartportalframeBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:start_portal_frame")
+@NegativeNModElements.ModElement.Tag
+public class StartportalframeBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:start_portal_frame")
 	public static final Block block = null;
-	public StartportalframeBlock(NegativenModElements instance) {
+	public StartportalframeBlock(NegativeNModElements instance) {
 		super(instance, 77);
 	}
 

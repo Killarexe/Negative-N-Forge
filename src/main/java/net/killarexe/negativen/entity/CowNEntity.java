@@ -53,12 +53,12 @@ import net.minecraft.block.material.Material;
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.WheatNItem;
 import net.killarexe.negativen.item.BeefrawNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class CowNEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class CowNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public CowNEntity(NegativenModElements instance) {
+	public CowNEntity(NegativeNModElements instance) {
 		super(instance, 58);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -77,17 +77,17 @@ public class CowNEntity extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:negative").equals(event.getName()))
+		if (new ResourceLocation("negative_n:negative").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:oak_nforest").equals(event.getName()))
+		if (new ResourceLocation("negative_n:oak_nforest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:birch_n_forest").equals(event.getName()))
+		if (new ResourceLocation("negative_n:birch_n_forest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:plains_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:plains_n").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:dark_oak_n_forest").equals(event.getName()))
+		if (new ResourceLocation("negative_n:dark_oak_n_forest").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:acacia_n_biome").equals(event.getName()))
+		if (new ResourceLocation("negative_n:acacia_n_biome").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -108,7 +108,7 @@ public class CowNEntity extends NegativenModElements.ModElement {
 			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new CowModel(), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("negativen:textures/ow-.png");
+					return new ResourceLocation("negative_n:textures/ow-.png");
 				}
 			});
 		}

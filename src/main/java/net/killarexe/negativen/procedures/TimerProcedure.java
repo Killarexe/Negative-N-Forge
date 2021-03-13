@@ -6,23 +6,23 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.IWorld;
 
-import net.killarexe.negativen.NegativenModVariables;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModVariables;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class TimerProcedure extends NegativenModElements.ModElement {
-	public TimerProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class TimerProcedure extends NegativeNModElements.ModElement {
+	public TimerProcedure(NegativeNModElements instance) {
 		super(instance, 429);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		NegativenModVariables.global_timer = (double) ((NegativenModVariables.global_timer) + 0.05);
-		if (((NegativenModVariables.global_timer) >= 1.1)) {
-			NegativenModVariables.global_timer = (double) 0;
+		NegativeNModVariables.global_timer = (double) ((NegativeNModVariables.global_timer) + 0.05);
+		if (((NegativeNModVariables.global_timer) >= 1.1)) {
+			NegativeNModVariables.global_timer = (double) 0;
 		}
 	}
 

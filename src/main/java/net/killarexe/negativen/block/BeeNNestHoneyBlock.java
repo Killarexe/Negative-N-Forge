@@ -17,16 +17,16 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class BeeNNestHoneyBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:bee_n_nest_honey")
+@NegativeNModElements.ModElement.Tag
+public class BeeNNestHoneyBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:bee_n_nest_honey")
 	public static final Block block = null;
-	public BeeNNestHoneyBlock(NegativenModElements instance) {
+	public BeeNNestHoneyBlock(NegativeNModElements instance) {
 		super(instance, 733);
 	}
 

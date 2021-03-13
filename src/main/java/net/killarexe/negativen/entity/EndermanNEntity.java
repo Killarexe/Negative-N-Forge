@@ -48,12 +48,12 @@ import net.minecraft.client.renderer.entity.BipedRenderer;
 
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.StartPearlItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class EndermanNEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class EndermanNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public EndermanNEntity(NegativenModElements instance) {
+	public EndermanNEntity(NegativeNModElements instance) {
 		super(instance, 55);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
@@ -72,9 +72,9 @@ public class EndermanNEntity extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:negative").equals(event.getName()))
+		if (new ResourceLocation("negative_n:negative").equals(event.getName()))
 			biomeCriteria = true;
-		if (new ResourceLocation("negativen:nethern").equals(event.getName()))
+		if (new ResourceLocation("negative_n:nethern").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -96,7 +96,7 @@ public class EndermanNEntity extends NegativenModElements.ModElement {
 				BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("negativen:textures/ndermann.png");
+						return new ResourceLocation("negative_n:textures/ndermann.png");
 					}
 				};
 				customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));

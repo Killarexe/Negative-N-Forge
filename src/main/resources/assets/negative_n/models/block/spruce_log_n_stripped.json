@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negative_n:blocks/stripped_spruce_logn_top",
+    "up": "negative_n:blocks/stripped_spruce_logn_top",
+    "north": "negative_n:blocks/stripped_spruce_logn",
+    "east": "negative_n:blocks/stripped_spruce_logn",
+    "south": "negative_n:blocks/stripped_spruce_logn",
+    "west": "negative_n:blocks/stripped_spruce_logn",
+    "particle": "negative_n:blocks/stripped_spruce_logn_top"
+  }
+}

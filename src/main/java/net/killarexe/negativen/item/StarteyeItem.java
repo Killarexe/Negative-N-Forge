@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class StarteyeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:start_eye")
+@NegativeNModElements.ModElement.Tag
+public class StarteyeItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:start_eye")
 	public static final Item block = null;
-	public StarteyeItem(NegativenModElements instance) {
+	public StarteyeItem(NegativeNModElements instance) {
 		super(instance, 21);
 	}
 

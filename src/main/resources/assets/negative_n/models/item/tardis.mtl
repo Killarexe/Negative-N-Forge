@@ -1,0 +1,7 @@
+newmtl Element
+Ka 0.0 0.0 0.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd negative_n:blocks/tardis_
+Ns 100.0
+d 1.0

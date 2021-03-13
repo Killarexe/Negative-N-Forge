@@ -1,0 +1,12 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "negative_n:classic_iron_ore"
+  },
+  "result": {
+    "item": "negative_n:classic_iron_block"
+  }
+}

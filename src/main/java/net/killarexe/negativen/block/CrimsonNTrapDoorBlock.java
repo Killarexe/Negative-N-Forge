@@ -21,16 +21,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNRedstoneNItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class CrimsonNTrapDoorBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:crimson_n_trap_door")
+@NegativeNModElements.ModElement.Tag
+public class CrimsonNTrapDoorBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:crimson_n_trap_door")
 	public static final Block block = null;
-	public CrimsonNTrapDoorBlock(NegativenModElements instance) {
+	public CrimsonNTrapDoorBlock(NegativeNModElements instance) {
 		super(instance, 148);
 	}
 

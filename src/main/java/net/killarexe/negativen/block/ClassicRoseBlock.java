@@ -40,17 +40,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.ClassicBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicRoseBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:classic_rose")
+@NegativeNModElements.ModElement.Tag
+public class ClassicRoseBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:classic_rose")
 	public static final Block block = null;
-	public ClassicRoseBlock(NegativenModElements instance) {
+	public ClassicRoseBlock(NegativeNModElements instance) {
 		super(instance, 339);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -71,7 +71,7 @@ public class ClassicRoseBlock extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:classic_biome").equals(event.getName()))
+		if (new ResourceLocation("negative_n:classic_biome").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -87,7 +87,7 @@ public class ClassicRoseBlock extends NegativenModElements.ModElement {
 				boolean dimensionCriteria = false;
 				if (dimensionType == World.OVERWORLD)
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:classic_dim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:classic_dim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

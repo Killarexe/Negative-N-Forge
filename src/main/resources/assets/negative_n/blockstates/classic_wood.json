@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "negative_n:block/classic_wood"
+    },
+    "facing=north": {
+      "model": "negative_n:block/classic_wood"
+    },
+    "facing=east": {
+      "model": "negative_n:block/classic_wood",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "negative_n:block/classic_wood",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "negative_n:block/classic_wood",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "negative_n:block/classic_wood",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

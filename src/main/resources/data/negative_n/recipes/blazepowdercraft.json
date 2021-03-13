@@ -1,0 +1,13 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:blaze_n_road"
+    }
+  ],
+  "result": {
+    "item": "negative_n:blaze_n_powder",
+    "count": 2
+  }
+}

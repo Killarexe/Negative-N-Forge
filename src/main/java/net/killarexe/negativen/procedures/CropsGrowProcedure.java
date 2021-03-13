@@ -31,36 +31,36 @@ import net.killarexe.negativen.block.BeetrootsStage2Block;
 import net.killarexe.negativen.block.BeetrootsStage1Block;
 import net.killarexe.negativen.block.BeetrootsNStage0Block;
 import net.killarexe.negativen.block.BeetrootStage3Block;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class CropsGrowProcedure extends NegativenModElements.ModElement {
-	public CropsGrowProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class CropsGrowProcedure extends NegativeNModElements.ModElement {
+	public CropsGrowProcedure(NegativeNModElements instance) {
 		super(instance, 700);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure CropsGrow!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure CropsGrow!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure CropsGrow!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure CropsGrow!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure CropsGrow!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure CropsGrow!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure CropsGrow!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure CropsGrow!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class CobblestoneShovelItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:cobblestone_n_shovel")
+@NegativeNModElements.ModElement.Tag
+public class CobblestoneShovelItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:cobblestone_n_shovel")
 	public static final Item block = null;
-	public CobblestoneShovelItem(NegativenModElements instance) {
+	public CobblestoneShovelItem(NegativeNModElements instance) {
 		super(instance, 294);
 	}
 

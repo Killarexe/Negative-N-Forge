@@ -1,0 +1,12 @@
+{
+  "parent": "negative_n:custom/lapis_block",
+  "textures": {
+    "all": "negative_n:blocks/1963",
+    "particle": "negative_n:blocks/1963",
+    "sign2": "negative_n:blocks/sign2",
+    "sign1": "negative_n:blocks/sign1",
+    "exterior": "negative_n:blocks/jodie_slab",
+    "lamp": "negative_n:blocks/lamp",
+    "window": "negative_n:blocks/windows"
+  }
+}

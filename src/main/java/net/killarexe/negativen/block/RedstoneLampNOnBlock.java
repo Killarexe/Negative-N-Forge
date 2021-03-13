@@ -17,18 +17,18 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.RedstoneStageLineProcedure;
 import net.killarexe.negativen.procedures.GetRedstoneNProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class RedstoneLampNOnBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:redstone_lamp_n_on")
+@NegativeNModElements.ModElement.Tag
+public class RedstoneLampNOnBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:redstone_lamp_n_on")
 	public static final Block block = null;
-	public RedstoneLampNOnBlock(NegativenModElements instance) {
+	public RedstoneLampNOnBlock(NegativeNModElements instance) {
 		super(instance, 721);
 	}
 

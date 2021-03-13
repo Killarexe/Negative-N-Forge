@@ -11,13 +11,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class BlazeNroadItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:blaze_n_road")
+@NegativeNModElements.ModElement.Tag
+public class BlazeNroadItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:blaze_n_road")
 	public static final Item block = null;
-	public BlazeNroadItem(NegativenModElements instance) {
+	public BlazeNroadItem(NegativeNModElements instance) {
 		super(instance, 17);
 	}
 

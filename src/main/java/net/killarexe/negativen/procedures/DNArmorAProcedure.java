@@ -9,29 +9,29 @@ import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 import java.util.Iterator;
 
-@NegativenModElements.ModElement.Tag
-public class DNArmorAProcedure extends NegativenModElements.ModElement {
-	public DNArmorAProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class DNArmorAProcedure extends NegativeNModElements.ModElement {
+	public DNArmorAProcedure(NegativeNModElements instance) {
 		super(instance, 583);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure DNArmorA!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure DNArmorA!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 10) && (entity instanceof PlayerEntity))) {
 			if (entity instanceof ServerPlayerEntity) {
 				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
-						.getAdvancement(new ResourceLocation("negativen:couvremoidenegatf"));
+						.getAdvancement(new ResourceLocation("negative_n:couvremoidenegatf"));
 				AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
 				if (!_ap.isDone()) {
 					Iterator _iterator = _ap.getRemaningCriteria().iterator();

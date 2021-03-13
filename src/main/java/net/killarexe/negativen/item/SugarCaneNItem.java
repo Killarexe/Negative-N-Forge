@@ -18,16 +18,16 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.procedures.SugarCaneNRightClickedOnBlockProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class SugarCaneNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:sugar_cane_n_item")
+@NegativeNModElements.ModElement.Tag
+public class SugarCaneNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:sugar_cane_n_item")
 	public static final Item block = null;
-	public SugarCaneNItem(NegativenModElements instance) {
+	public SugarCaneNItem(NegativeNModElements instance) {
 		super(instance, 43);
 	}
 

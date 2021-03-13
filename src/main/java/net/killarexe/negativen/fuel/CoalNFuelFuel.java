@@ -8,11 +8,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.item.ItemStack;
 
 import net.killarexe.negativen.item.CoalNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class CoalNFuelFuel extends NegativenModElements.ModElement {
-	public CoalNFuelFuel(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class CoalNFuelFuel extends NegativeNModElements.ModElement {
+	public CoalNFuelFuel(NegativeNModElements instance) {
 		super(instance, 409);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

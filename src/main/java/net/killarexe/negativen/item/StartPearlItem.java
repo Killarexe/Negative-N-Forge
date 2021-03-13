@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class StartPearlItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:start_pearl")
+@NegativeNModElements.ModElement.Tag
+public class StartPearlItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:start_pearl")
 	public static final Item block = null;
-	public StartPearlItem(NegativenModElements instance) {
+	public StartPearlItem(NegativeNModElements instance) {
 		super(instance, 22);
 	}
 

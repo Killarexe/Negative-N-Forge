@@ -13,13 +13,13 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class LavaNBottleNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:lava_n_bottle_n")
+@NegativeNModElements.ModElement.Tag
+public class LavaNBottleNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:lava_n_bottle_n")
 	public static final Item block = null;
-	public LavaNBottleNItem(NegativenModElements instance) {
+	public LavaNBottleNItem(NegativeNModElements instance) {
 		super(instance, 928);
 	}
 

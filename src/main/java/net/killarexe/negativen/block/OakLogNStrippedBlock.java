@@ -20,16 +20,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class OakLogNStrippedBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:oak_log_n_stripped")
+@NegativeNModElements.ModElement.Tag
+public class OakLogNStrippedBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:oak_log_n_stripped")
 	public static final Block block = null;
-	public OakLogNStrippedBlock(NegativenModElements instance) {
+	public OakLogNStrippedBlock(NegativeNModElements instance) {
 		super(instance, 85);
 	}
 

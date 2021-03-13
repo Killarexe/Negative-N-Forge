@@ -8,36 +8,36 @@ import net.killarexe.negativen.block.SoulLanternNBlock;
 import net.killarexe.negativen.block.LanternNBlock;
 import net.killarexe.negativen.block.HanginigSoulLanternNBlock;
 import net.killarexe.negativen.block.HangingLanternNBlock;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class LanternsNUpdateTickProcedure extends NegativenModElements.ModElement {
-	public LanternsNUpdateTickProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class LanternsNUpdateTickProcedure extends NegativeNModElements.ModElement {
+	public LanternsNUpdateTickProcedure(NegativeNModElements instance) {
 		super(instance, 790);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure LanternsNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure LanternsNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure LanternsNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure LanternsNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure LanternsNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure LanternsNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure LanternsNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure LanternsNUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

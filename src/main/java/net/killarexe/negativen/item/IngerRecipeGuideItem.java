@@ -18,16 +18,16 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.procedures.RecipeBooksRightClickProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class IngerRecipeGuideItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:inger_recipe_guide")
+@NegativeNModElements.ModElement.Tag
+public class IngerRecipeGuideItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:inger_recipe_guide")
 	public static final Item block = null;
-	public IngerRecipeGuideItem(NegativenModElements instance) {
+	public IngerRecipeGuideItem(NegativeNModElements instance) {
 		super(instance, 32);
 	}
 

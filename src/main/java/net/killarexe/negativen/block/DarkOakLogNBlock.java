@@ -20,16 +20,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class DarkOakLogNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:dark_oak_log_n")
+@NegativeNModElements.ModElement.Tag
+public class DarkOakLogNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:dark_oak_log_n")
 	public static final Block block = null;
-	public DarkOakLogNBlock(NegativenModElements instance) {
+	public DarkOakLogNBlock(NegativeNModElements instance) {
 		super(instance, 173);
 	}
 

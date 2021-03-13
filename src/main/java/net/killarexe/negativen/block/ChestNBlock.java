@@ -66,7 +66,7 @@ import net.minecraft.block.Block;
 import net.killarexe.negativen.procedures.ChestNOnBlockRightClickedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.gui.ChestNGUIGui;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -78,13 +78,13 @@ import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
 
-@NegativenModElements.ModElement.Tag
-public class ChestNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:chest_n")
+@NegativeNModElements.ModElement.Tag
+public class ChestNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:chest_n")
 	public static final Block block = null;
-	@ObjectHolder("negativen:chest_n")
+	@ObjectHolder("negative_n:chest_n")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public ChestNBlock(NegativenModElements instance) {
+	public ChestNBlock(NegativeNModElements instance) {
 		super(instance, 203);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

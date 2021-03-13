@@ -10,36 +10,36 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Mirror;
 
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class AcaciaSaplingNUpdateTickProcedure extends NegativenModElements.ModElement {
-	public AcaciaSaplingNUpdateTickProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class AcaciaSaplingNUpdateTickProcedure extends NegativeNModElements.ModElement {
+	public AcaciaSaplingNUpdateTickProcedure(NegativeNModElements instance) {
 		super(instance, 546);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure AcaciaSaplingNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure AcaciaSaplingNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure AcaciaSaplingNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure AcaciaSaplingNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure AcaciaSaplingNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure AcaciaSaplingNUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure AcaciaSaplingNUpdateTick!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure AcaciaSaplingNUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -49,7 +49,7 @@ public class AcaciaSaplingNUpdateTickProcedure extends NegativenModElements.ModE
 		if ((Math.random() >= 0.875)) {
 			if (world instanceof World && !world.isRemote()) {
 				Template template = ((ServerWorld) world).getStructureTemplateManager()
-						.getTemplateDefaulted(new ResourceLocation("negativen", "acaciantree"));
+						.getTemplateDefaulted(new ResourceLocation("negative_n", "acaciantree"));
 				if (template != null) {
 					template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 5), (int) y, (int) (z - 3)),
 							new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),

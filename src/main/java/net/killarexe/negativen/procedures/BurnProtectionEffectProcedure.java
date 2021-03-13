@@ -14,15 +14,15 @@ import net.minecraft.entity.Entity;
 import net.minecraft.enchantment.EnchantmentHelper;
 
 import net.killarexe.negativen.enchantment.BurnProtectionEnchantment;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class BurnProtectionEffectProcedure extends NegativenModElements.ModElement {
-	public BurnProtectionEffectProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class BurnProtectionEffectProcedure extends NegativeNModElements.ModElement {
+	public BurnProtectionEffectProcedure(NegativeNModElements instance) {
 		super(instance, 664);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -30,7 +30,7 @@ public class BurnProtectionEffectProcedure extends NegativenModElements.ModEleme
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure BurnProtectionEffect!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure BurnProtectionEffect!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

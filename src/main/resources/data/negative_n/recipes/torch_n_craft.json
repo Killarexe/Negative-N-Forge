@@ -1,0 +1,20 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:coal_n"
+    },
+    "1": {
+      "item": "negative_n:stick_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:torch_n_state_2",
+    "count": 4
+  }
+}

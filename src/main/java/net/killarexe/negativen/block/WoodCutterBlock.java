@@ -60,7 +60,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.gui.WoodCutterGUIGui;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -70,13 +70,13 @@ import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
 
-@NegativenModElements.ModElement.Tag
-public class WoodCutterBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:wood_cutter")
+@NegativeNModElements.ModElement.Tag
+public class WoodCutterBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:wood_cutter")
 	public static final Block block = null;
-	@ObjectHolder("negativen:wood_cutter")
+	@ObjectHolder("negative_n:wood_cutter")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public WoodCutterBlock(NegativenModElements instance) {
+	public WoodCutterBlock(NegativeNModElements instance) {
 		super(instance, 160);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "negative_n:blocks/wheatn_stage2",
+    "particle": "negative_n:blocks/wheatn_stage2"
+  }
+}

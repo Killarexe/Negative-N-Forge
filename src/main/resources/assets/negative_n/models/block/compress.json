@@ -1,0 +1,8 @@
+{
+  "parent": "negative_n:custom/compress",
+  "textures": {
+    "all": "negative_n:blocks/piston_n_bottom",
+    "particle": "negative_n:blocks/piston_n_bottom",
+    "main": "negative_n:blocks/compress"
+  }
+}

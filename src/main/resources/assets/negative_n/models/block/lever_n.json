@@ -1,0 +1,9 @@
+{
+  "parent": "negative_n:custom/lever_n",
+  "textures": {
+    "all": "negative_n:blocks/lever_n",
+    "particle": "negative_n:blocks/lever_n",
+    "lever": "negative_n:blocks/lever_n",
+    "base": "negative_n:blocks/cobblestone_n"
+  }
+}

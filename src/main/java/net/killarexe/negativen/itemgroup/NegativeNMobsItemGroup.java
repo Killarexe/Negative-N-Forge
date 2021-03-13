@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.killarexe.negativen.item.RottenfleshNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class NegativeNMobsItemGroup extends NegativenModElements.ModElement {
-	public NegativeNMobsItemGroup(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class NegativeNMobsItemGroup extends NegativeNModElements.ModElement {
+	public NegativeNMobsItemGroup(NegativeNModElements instance) {
 		super(instance, 593);
 	}
 

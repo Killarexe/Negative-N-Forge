@@ -28,7 +28,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.LanternsNUpdateTickProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -36,11 +36,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class SoulLanternNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:soul_lantern_n")
+@NegativeNModElements.ModElement.Tag
+public class SoulLanternNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:soul_lantern_n")
 	public static final Block block = null;
-	public SoulLanternNBlock(NegativenModElements instance) {
+	public SoulLanternNBlock(NegativeNModElements instance) {
 		super(instance, 118);
 	}
 

@@ -33,17 +33,17 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.item.CoalNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class CoalNoreBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:coal_n_ore")
+@NegativeNModElements.ModElement.Tag
+public class CoalNoreBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:coal_n_ore")
 	public static final Block block = null;
-	public CoalNoreBlock(NegativenModElements instance) {
+	public CoalNoreBlock(NegativeNModElements instance) {
 		super(instance, 194);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -88,9 +88,9 @@ public class CoalNoreBlock extends NegativenModElements.ModElement {
 				boolean dimensionCriteria = false;
 				if (dimensionType == World.OVERWORLD)
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:mineingdim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:mineingdim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

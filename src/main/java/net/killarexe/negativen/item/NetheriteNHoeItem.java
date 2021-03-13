@@ -17,16 +17,16 @@ import net.minecraft.entity.player.PlayerEntity;
 
 import net.killarexe.negativen.procedures.HoeNRightClickOnDirtProcedure;
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class NetheriteNHoeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:netherite_n_hoe")
+@NegativeNModElements.ModElement.Tag
+public class NetheriteNHoeItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:netherite_n_hoe")
 	public static final Item block = null;
-	public NetheriteNHoeItem(NegativenModElements instance) {
+	public NetheriteNHoeItem(NegativeNModElements instance) {
 		super(instance, 279);
 	}
 
@@ -56,7 +56,7 @@ public class NetheriteNHoeItem extends NegativenModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(NetheriteNItem.block, (int) (1)));
 			}
-		}, 0, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
+		}, 0, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).isImmuneToFire()) {
 			@Override
 			public ActionResultType onItemUse(ItemUseContext context) {
 				ActionResultType retval = super.onItemUse(context);

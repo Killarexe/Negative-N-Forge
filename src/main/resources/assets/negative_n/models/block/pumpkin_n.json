@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negative_n:blocks/pumpkin_n_side",
+    "up": "negative_n:blocks/pumpkin_n_top",
+    "north": "negative_n:blocks/pumpkin_n_side",
+    "east": "negative_n:blocks/pumpkin_n_side",
+    "south": "negative_n:blocks/pumpkin_n_side",
+    "west": "negative_n:blocks/pumpkin_n_side",
+    "particle": "negative_n:blocks/pumpkin_n_side"
+  }
+}

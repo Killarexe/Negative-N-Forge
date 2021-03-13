@@ -1,0 +1,51 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:gold_n_ingot"
+    },
+    "title": {
+      "translate": "advancements.time_to_get_poor.title"
+    },
+    "description": {
+      "translate": "advancements.time_to_get_poor.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "time_to_get_poor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "negative_n:gold_n_ingot",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "negative_n:gold_n_ore_block_recipe",
+      "negative_n:gold_n_block_ore_recipe",
+      "negative_n:gold_n_ore_smelting",
+      "negative_n:gold_n_pickaxe_recipe",
+      "negative_n:gold_n_axe_recipe",
+      "negative_n:gold_n_sword_recipe",
+      "negative_n:gold_n_shovel_recipe",
+      "negative_n:gold_n_hoe_recipe",
+      "negative_n:gold_n_armor_helmet_recipe",
+      "negative_n:gold_n_armor_body_recipe",
+      "negative_n:gold_n_armor_leggings_recipe",
+      "negative_n:gold_n_armor_boots_recipe"
+    ]
+  },
+  "parent": "negative_n:better_iron"
+}

@@ -32,18 +32,18 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.LeversNBlockRightClickedProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class LeverNOnBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:lever_n_on")
+@NegativeNModElements.ModElement.Tag
+public class LeverNOnBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:lever_n_on")
 	public static final Block block = null;
-	public LeverNOnBlock(NegativenModElements instance) {
+	public LeverNOnBlock(NegativeNModElements instance) {
 		super(instance, 918);
 	}
 

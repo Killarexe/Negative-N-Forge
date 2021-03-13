@@ -16,16 +16,16 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.procedures.BoatsNItemRightClickedOnBlockProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNTransportItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class BirchNBoatItemItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:birch_n_boat_item")
+@NegativeNModElements.ModElement.Tag
+public class BirchNBoatItemItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:birch_n_boat_item")
 	public static final Item block = null;
-	public BirchNBoatItemItem(NegativenModElements instance) {
+	public BirchNBoatItemItem(NegativeNModElements instance) {
 		super(instance, 363);
 	}
 

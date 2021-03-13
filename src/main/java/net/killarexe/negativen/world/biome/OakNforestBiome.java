@@ -48,7 +48,7 @@ import net.killarexe.negativen.block.TerreNBlock;
 import net.killarexe.negativen.block.LeavesNBlock;
 import net.killarexe.negativen.block.BoisNBlock;
 import net.killarexe.negativen.block.BlockherbeNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Set;
 import java.util.Random;
@@ -56,10 +56,10 @@ import java.util.List;
 
 import com.google.common.collect.ImmutableList;
 
-@NegativenModElements.ModElement.Tag
-public class OakNforestBiome extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class OakNforestBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
-	public OakNforestBiome(NegativenModElements instance) {
+	public OakNforestBiome(NegativeNModElements instance) {
 		super(instance, 515);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
@@ -97,7 +97,7 @@ public class OakNforestBiome extends NegativenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(0.1f).scale(0.2f)
 						.temperature(0.5f).downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("negativen:oak_nforest"));
+				event.getRegistry().register(biome.setRegistryName("negative_n:oak_nforest"));
 			}
 		}
 	}

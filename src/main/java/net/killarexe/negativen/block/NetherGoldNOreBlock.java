@@ -30,17 +30,17 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.item.GoldNNuggetItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class NetherGoldNOreBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:nether_gold_n_ore")
+@NegativeNModElements.ModElement.Tag
+public class NetherGoldNOreBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:nether_gold_n_ore")
 	public static final Block block = null;
-	public NetherGoldNOreBlock(NegativenModElements instance) {
+	public NetherGoldNOreBlock(NegativeNModElements instance) {
 		super(instance, 228);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -73,7 +73,7 @@ public class NetherGoldNOreBlock extends NegativenModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:netherndim")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:netherndim")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

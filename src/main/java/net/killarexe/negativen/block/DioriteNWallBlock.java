@@ -35,16 +35,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class DioriteNWallBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:diorite_n_wall")
+@NegativeNModElements.ModElement.Tag
+public class DioriteNWallBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:diorite_n_wall")
 	public static final Block block = null;
-	public DioriteNWallBlock(NegativenModElements instance) {
+	public DioriteNWallBlock(NegativeNModElements instance) {
 		super(instance, 964);
 	}
 

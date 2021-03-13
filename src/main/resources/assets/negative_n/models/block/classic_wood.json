@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "negative_n:blocks/wood_c_side",
+    "up": "negative_n:blocks/wood_c_side",
+    "north": "negative_n:blocks/wood_c",
+    "east": "negative_n:blocks/wood_c",
+    "south": "negative_n:blocks/wood_c",
+    "west": "negative_n:blocks/wood_c",
+    "particle": "negative_n:blocks/wood_c_side"
+  }
+}

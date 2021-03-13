@@ -1,0 +1,36 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:leather_n"
+    },
+    "1": {
+      "item": "negative_n:leather_n"
+    },
+    "2": {
+      "item": "negative_n:leather_n"
+    },
+    "3": {
+      "item": "negative_n:leather_n"
+    },
+    "5": {
+      "item": "negative_n:leather_n"
+    },
+    "6": {
+      "item": "negative_n:leather_n"
+    },
+    "8": {
+      "item": "negative_n:leather_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:leather_n_armor_leggings",
+    "count": 1
+  }
+}

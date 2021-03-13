@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class CopperNIngotItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:copper_n_ingot")
+@NegativeNModElements.ModElement.Tag
+public class CopperNIngotItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:copper_n_ingot")
 	public static final Item block = null;
-	public CopperNIngotItem(NegativenModElements instance) {
+	public CopperNIngotItem(NegativeNModElements instance) {
 		super(instance, 12);
 	}
 

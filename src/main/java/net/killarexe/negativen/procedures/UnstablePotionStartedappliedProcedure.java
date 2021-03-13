@@ -3,21 +3,21 @@ package net.killarexe.negativen.procedures;
 import net.minecraft.util.DamageSource;
 import net.minecraft.entity.Entity;
 
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class UnstablePotionStartedappliedProcedure extends NegativenModElements.ModElement {
-	public UnstablePotionStartedappliedProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class UnstablePotionStartedappliedProcedure extends NegativeNModElements.ModElement {
+	public UnstablePotionStartedappliedProcedure(NegativeNModElements instance) {
 		super(instance, 504);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure UnstablePotionStartedapplied!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure UnstablePotionStartedapplied!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

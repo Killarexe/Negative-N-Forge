@@ -1,0 +1,10 @@
+{
+  "parent": "negative_n:custom/campfire_n",
+  "textures": {
+    "all": "negative_n:blocks/fire_n",
+    "particle": "negative_n:blocks/fire_n",
+    "lit_log": "negative_n:blocks/campfire_n_log_lit",
+    "log": "negative_n:blocks/campfire_n_log",
+    "fire": "negative_n:blocks/campfire_n_fire"
+  }
+}

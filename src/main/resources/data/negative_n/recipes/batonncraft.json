@@ -1,0 +1,16 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:tag_planksn"
+    },
+    {
+      "tag": "minecraft:tag_planksn"
+    }
+  ],
+  "result": {
+    "item": "negative_n:stick_n",
+    "count": 4
+  }
+}

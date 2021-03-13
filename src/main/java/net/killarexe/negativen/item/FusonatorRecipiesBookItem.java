@@ -41,7 +41,7 @@ import net.minecraft.block.BlockState;
 import net.killarexe.negativen.procedures.RecipeBooksRightClickProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
 import net.killarexe.negativen.gui.IngerRecipesGUIGui;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
@@ -52,11 +52,11 @@ import java.util.HashMap;
 
 import io.netty.buffer.Unpooled;
 
-@NegativenModElements.ModElement.Tag
-public class FusonatorRecipiesBookItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:fusonator_recipies_book")
+@NegativeNModElements.ModElement.Tag
+public class FusonatorRecipiesBookItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:fusonator_recipies_book")
 	public static final Item block = null;
-	public FusonatorRecipiesBookItem(NegativenModElements instance) {
+	public FusonatorRecipiesBookItem(NegativeNModElements instance) {
 		super(instance, 31);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

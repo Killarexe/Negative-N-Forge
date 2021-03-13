@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "wither_n"
+      },
+      "name": "default"
+    }
+  }
+}

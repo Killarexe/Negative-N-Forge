@@ -28,18 +28,18 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.PumpkinsNRightClickProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class CarvedPumpkinNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:carved_pumpkin_n")
+@NegativeNModElements.ModElement.Tag
+public class CarvedPumpkinNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:carved_pumpkin_n")
 	public static final Block block = null;
-	public CarvedPumpkinNBlock(NegativenModElements instance) {
+	public CarvedPumpkinNBlock(NegativeNModElements instance) {
 		super(instance, 123);
 	}
 

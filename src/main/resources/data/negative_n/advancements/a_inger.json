@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:inger"
+    },
+    "title": {
+      "translate": "advancements.a_inger.title"
+    },
+    "description": {
+      "translate": "advancements.a_inger.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "a_inger": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "item": {
+          "item": "negative_n:inger"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "negative_n:lafusion"
+}

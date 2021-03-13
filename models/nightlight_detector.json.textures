@@ -1,0 +1,18 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "nightdark_detector_side",
+        "top": "nightdark_detector_top"
+      },
+      "name": "default"
+    },
+    "inverted": {
+      "map": {
+        "side": "nightdark_detector_side",
+        "top": "nightdark_detector_inverted_top"
+      },
+      "name": "inverted"
+    }
+  }
+}

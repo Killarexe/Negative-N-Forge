@@ -17,43 +17,43 @@ import net.minecraft.entity.Entity;
 
 import net.killarexe.negativen.world.DebugModeNGameRule;
 import net.killarexe.negativen.gui.DimensionStickGUIGui;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
 import io.netty.buffer.Unpooled;
 
-@NegativenModElements.ModElement.Tag
-public class DimensionStickRightClickedInAirProcedure extends NegativenModElements.ModElement {
-	public DimensionStickRightClickedInAirProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class DimensionStickRightClickedInAirProcedure extends NegativeNModElements.ModElement {
+	public DimensionStickRightClickedInAirProcedure(NegativeNModElements instance) {
 		super(instance, 458);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure DimensionStickRightClickedInAir!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure DimensionStickRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure DimensionStickRightClickedInAir!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure DimensionStickRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure DimensionStickRightClickedInAir!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure DimensionStickRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure DimensionStickRightClickedInAir!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure DimensionStickRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure DimensionStickRightClickedInAir!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure DimensionStickRightClickedInAir!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

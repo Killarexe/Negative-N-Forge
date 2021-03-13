@@ -7,11 +7,11 @@ import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.entity.item.PaintingType;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class PigNScenePainting extends NegativenModElements.ModElement {
-	public PigNScenePainting(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class PigNScenePainting extends NegativeNModElements.ModElement {
+	public PigNScenePainting(NegativeNModElements instance) {
 		super(instance, 862);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

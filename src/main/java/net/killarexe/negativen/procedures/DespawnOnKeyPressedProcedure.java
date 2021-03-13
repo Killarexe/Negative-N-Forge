@@ -11,42 +11,42 @@ import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 
-import net.killarexe.negativen.NegativenModVariables;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModVariables;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 
-@NegativenModElements.ModElement.Tag
-public class DespawnOnKeyPressedProcedure extends NegativenModElements.ModElement {
-	public DespawnOnKeyPressedProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class DespawnOnKeyPressedProcedure extends NegativeNModElements.ModElement {
+	public DespawnOnKeyPressedProcedure(NegativeNModElements instance) {
 		super(instance, 480);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure DespawnOnKeyPressed!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure DespawnOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				NegativenMod.LOGGER.warn("Failed to load dependency x for procedure DespawnOnKeyPressed!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency x for procedure DespawnOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				NegativenMod.LOGGER.warn("Failed to load dependency y for procedure DespawnOnKeyPressed!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency y for procedure DespawnOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				NegativenMod.LOGGER.warn("Failed to load dependency z for procedure DespawnOnKeyPressed!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency z for procedure DespawnOnKeyPressed!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				NegativenMod.LOGGER.warn("Failed to load dependency world for procedure DespawnOnKeyPressed!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure DespawnOnKeyPressed!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -54,7 +54,7 @@ public class DespawnOnKeyPressedProcedure extends NegativenModElements.ModElemen
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((NegativenModVariables.MapVariables.get(world).Debug) == (true))) {
+		if (((NegativeNModVariables.MapVariables.get(world).Debug) == (true))) {
 			if ((entity.hasPermissionLevel((int) 4))) {
 				if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).abilities.isCreativeMode : false)) {
 					if (world instanceof ServerWorld) {

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "negative_n:block/diamond_n_block"
+    }
+  }
+}

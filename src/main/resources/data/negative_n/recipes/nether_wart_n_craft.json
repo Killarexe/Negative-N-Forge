@@ -1,0 +1,16 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:nether_wart_n_block"
+    }
+  },
+  "result": {
+    "item": "negative_n:nether_wart_n",
+    "count": 9
+  }
+}

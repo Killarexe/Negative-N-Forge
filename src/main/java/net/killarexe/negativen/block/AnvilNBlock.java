@@ -65,7 +65,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.gui.AnvilNGuiGui;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -75,13 +75,13 @@ import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
 
-@NegativenModElements.ModElement.Tag
-public class AnvilNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:anvil_n")
+@NegativeNModElements.ModElement.Tag
+public class AnvilNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:anvil_n")
 	public static final Block block = null;
-	@ObjectHolder("negativen:anvil_n")
+	@ObjectHolder("negative_n:anvil_n")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public AnvilNBlock(NegativenModElements instance) {
+	public AnvilNBlock(NegativeNModElements instance) {
 		super(instance, 119);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

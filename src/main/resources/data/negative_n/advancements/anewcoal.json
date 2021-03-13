@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:coal_n"
+    },
+    "title": {
+      "translate": "advancements.anewcoal.title"
+    },
+    "description": {
+      "translate": "advancements.anewcoal.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "anewcoal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "negative_n:coal_n",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "negative_n:coalblockcraft"
+    ]
+  },
+  "parent": "negative_n:wtnn"
+}

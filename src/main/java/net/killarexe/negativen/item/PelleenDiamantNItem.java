@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class PelleenDiamantNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:diamond_n_shovel")
+@NegativeNModElements.ModElement.Tag
+public class PelleenDiamantNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:diamond_n_shovel")
 	public static final Item block = null;
-	public PelleenDiamantNItem(NegativenModElements instance) {
+	public PelleenDiamantNItem(NegativeNModElements instance) {
 		super(instance, 282);
 	}
 

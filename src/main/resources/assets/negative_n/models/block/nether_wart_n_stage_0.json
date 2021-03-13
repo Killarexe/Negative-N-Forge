@@ -1,0 +1,8 @@
+{
+  "parent": "negative_n:custom/nether_wart_n_stage",
+  "textures": {
+    "all": "negative_n:blocks/nether_wart_n_stage0",
+    "particle": "negative_n:blocks/nether_wart_n_stage0",
+    "crop": "negative_n:blocks/nether_wart_n_stage0"
+  }
+}

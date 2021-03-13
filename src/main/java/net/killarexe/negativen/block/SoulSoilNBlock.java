@@ -18,18 +18,18 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.SoulSandEntityWalksOnTheBlockProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class SoulSoilNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:soul_soil_n")
+@NegativeNModElements.ModElement.Tag
+public class SoulSoilNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:soul_soil_n")
 	public static final Block block = null;
-	public SoulSoilNBlock(NegativenModElements instance) {
+	public SoulSoilNBlock(NegativeNModElements instance) {
 		super(instance, 220);
 	}
 

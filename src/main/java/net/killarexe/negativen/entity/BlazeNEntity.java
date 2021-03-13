@@ -46,12 +46,12 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.BlazeNroadItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class BlazeNEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class BlazeNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public BlazeNEntity(NegativenModElements instance) {
+	public BlazeNEntity(NegativeNModElements instance) {
 		super(instance, 56);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
@@ -79,7 +79,7 @@ public class BlazeNEntity extends NegativenModElements.ModElement {
 				BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("negativen:textures/blaze.png");
+						return new ResourceLocation("negative_n:textures/blaze.png");
 					}
 				};
 				customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));

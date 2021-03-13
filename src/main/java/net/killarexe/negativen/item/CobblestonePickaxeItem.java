@@ -11,13 +11,13 @@ import net.minecraft.item.IItemTier;
 
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
 import net.killarexe.negativen.block.CobblestoneNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class CobblestonePickaxeItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:cobblestone_n_pickaxe")
+@NegativeNModElements.ModElement.Tag
+public class CobblestonePickaxeItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:cobblestone_n_pickaxe")
 	public static final Item block = null;
-	public CobblestonePickaxeItem(NegativenModElements instance) {
+	public CobblestonePickaxeItem(NegativeNModElements instance) {
 		super(instance, 292);
 	}
 

@@ -55,7 +55,7 @@ import net.minecraft.block.AbstractBlock;
 
 import net.killarexe.negativen.item.NoneDimItem;
 import net.killarexe.negativen.block.PortalblockBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -71,11 +71,11 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import com.google.common.collect.Sets;
 import com.google.common.collect.ImmutableSet;
 
-@NegativenModElements.ModElement.Tag
-public class NoneDimDimension extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:nonedim_portal")
+@NegativeNModElements.ModElement.Tag
+public class NoneDimDimension extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:nonedim_portal")
 	public static final CustomPortalBlock portal = null;
-	public NoneDimDimension(NegativenModElements instance) {
+	public NoneDimDimension(NegativeNModElements instance) {
 		super(instance, 456);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
@@ -114,7 +114,7 @@ public class NoneDimDimension extends NegativenModElements.ModElement {
 			try {
 				Object2ObjectMap<ResourceLocation, DimensionRenderInfo> effectsRegistry = (Object2ObjectMap<ResourceLocation, DimensionRenderInfo>) ObfuscationReflectionHelper
 						.getPrivateValue(DimensionRenderInfo.class, null, "field_239208_a_");
-				effectsRegistry.put(new ResourceLocation("negativen:nonedim"), customEffect);
+				effectsRegistry.put(new ResourceLocation("negative_n:nonedim"), customEffect);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -203,9 +203,9 @@ public class NoneDimDimension extends NegativenModElements.ModElement {
 				if (entity.func_242280_ah()) {
 					entity.func_242279_ag();
 				} else if (entity.world.getDimensionKey() != RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-						new ResourceLocation("negativen:nonedim"))) {
+						new ResourceLocation("negative_n:nonedim"))) {
 					entity.func_242279_ag();
-					teleportToDimension(entity, pos, RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nonedim")));
+					teleportToDimension(entity, pos, RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:nonedim")));
 				} else {
 					entity.func_242279_ag();
 					teleportToDimension(entity, pos, World.OVERWORLD);

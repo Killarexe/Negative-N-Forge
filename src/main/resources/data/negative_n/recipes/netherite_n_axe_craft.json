@@ -1,0 +1,30 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    "4 "
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:netherite_n"
+    },
+    "1": {
+      "item": "negative_n:netherite_n"
+    },
+    "2": {
+      "item": "negative_n:stick_n"
+    },
+    "3": {
+      "item": "negative_n:netherite_n"
+    },
+    "4": {
+      "item": "negative_n:stick_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:netherite_n_axe",
+    "count": 1
+  }
+}

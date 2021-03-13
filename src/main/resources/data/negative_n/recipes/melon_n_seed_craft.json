@@ -1,0 +1,13 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "negative_n:melon_n_slice"
+    }
+  ],
+  "result": {
+    "item": "negative_n:melon_n_seed",
+    "count": 1
+  }
+}

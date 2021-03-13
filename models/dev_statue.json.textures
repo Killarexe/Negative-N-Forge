@@ -2,9 +2,15 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "50ff6ff37be60dba"
+        "0": "skin1"
       },
       "name": "default"
+    },
+    "skin2": {
+      "map": {
+        "0": "cf051013025dff66"
+      },
+      "name": "skin2"
     }
   }
 }

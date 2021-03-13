@@ -16,16 +16,16 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.procedures.WaterNbucketRightClickedOnBlockProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class WaterNbucketItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:water_nbucket")
+@NegativeNModElements.ModElement.Tag
+public class WaterNbucketItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:water_nbucket")
 	public static final Item block = null;
-	public WaterNbucketItem(NegativenModElements instance) {
+	public WaterNbucketItem(NegativeNModElements instance) {
 		super(instance, 26);
 	}
 

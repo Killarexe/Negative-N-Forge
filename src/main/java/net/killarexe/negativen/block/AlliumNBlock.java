@@ -40,17 +40,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class AlliumNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:allium_n")
+@NegativeNModElements.ModElement.Tag
+public class AlliumNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:allium_n")
 	public static final Block block = null;
-	public AlliumNBlock(NegativenModElements instance) {
+	public AlliumNBlock(NegativeNModElements instance) {
 		super(instance, 104);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -80,7 +80,7 @@ public class AlliumNBlock extends NegativenModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

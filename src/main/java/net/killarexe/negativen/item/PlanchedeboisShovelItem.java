@@ -16,13 +16,13 @@ import net.killarexe.negativen.block.JunglePlanksNBlock;
 import net.killarexe.negativen.block.DarkoakplanksNBlock;
 import net.killarexe.negativen.block.BirchplanksnBlock;
 import net.killarexe.negativen.block.AcaciaplanksnBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class PlanchedeboisShovelItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:wood_n_shovel")
+@NegativeNModElements.ModElement.Tag
+public class PlanchedeboisShovelItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:wood_n_shovel")
 	public static final Item block = null;
-	public PlanchedeboisShovelItem(NegativenModElements instance) {
+	public PlanchedeboisShovelItem(NegativeNModElements instance) {
 		super(instance, 290);
 	}
 

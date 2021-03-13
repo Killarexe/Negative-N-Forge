@@ -14,16 +14,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class ChiseledNetherBrickNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:chiseled_nether_brick_n")
+@NegativeNModElements.ModElement.Tag
+public class ChiseledNetherBrickNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:chiseled_nether_brick_n")
 	public static final Block block = null;
-	public ChiseledNetherBrickNBlock(NegativenModElements instance) {
+	public ChiseledNetherBrickNBlock(NegativeNModElements instance) {
 		super(instance, 878);
 	}
 

@@ -14,16 +14,16 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.Minecraft;
 
 import net.killarexe.negativen.procedures.FireNRegenDisplayOverlayIngameProcedure;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
 
 import com.google.common.collect.ImmutableMap;
 
-@NegativenModElements.ModElement.Tag
-public class FireNRegenOverlay extends NegativenModElements.ModElement {
-	public FireNRegenOverlay(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class FireNRegenOverlay extends NegativeNModElements.ModElement {
+	public FireNRegenOverlay(NegativeNModElements instance) {
 		super(instance, 925);
 	}
 
@@ -50,7 +50,7 @@ public class FireNRegenOverlay extends NegativenModElements.ModElement {
 						GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 				RenderSystem.disableAlphaTest();
-				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("negativen:textures/on_fire_n.png"));
+				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("negative_n:textures/on_fire_n.png"));
 				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), 0, 0, 0, 0, event.getWindow().getScaledWidth(),
 						event.getWindow().getScaledHeight(), event.getWindow().getScaledWidth(), event.getWindow().getScaledHeight());
 				RenderSystem.depthMask(true);

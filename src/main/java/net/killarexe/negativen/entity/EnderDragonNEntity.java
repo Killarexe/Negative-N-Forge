@@ -53,17 +53,17 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.block.BlockState;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-@NegativenModElements.ModElement.Tag
-public class EnderDragonNEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class EnderDragonNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	@ObjectHolder("negativen:entitybulletender_dragon_n")
+	@ObjectHolder("negative_n:entitybulletender_dragon_n")
 	public static final EntityType arrow = null;
-	public EnderDragonNEntity(NegativenModElements instance) {
+	public EnderDragonNEntity(NegativeNModElements instance) {
 		super(instance, 661);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
@@ -91,7 +91,7 @@ public class EnderDragonNEntity extends NegativenModElements.ModElement {
 				return new MobRenderer(renderManager, new Modelenderdragon_n(), 1.2000000000000002f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("negativen:textures/dragon-n.png");
+						return new ResourceLocation("negative_n:textures/dragon-n.png");
 					}
 				};
 			});

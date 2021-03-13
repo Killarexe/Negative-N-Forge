@@ -41,17 +41,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class PeonyNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:peony_n")
+@NegativeNModElements.ModElement.Tag
+public class PeonyNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:peony_n")
 	public static final Block block = null;
-	public PeonyNBlock(NegativenModElements instance) {
+	public PeonyNBlock(NegativeNModElements instance) {
 		super(instance, 126);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -72,7 +72,7 @@ public class PeonyNBlock extends NegativenModElements.ModElement {
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
-		if (new ResourceLocation("negativen:plains_n").equals(event.getName()))
+		if (new ResourceLocation("negative_n:plains_n").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -81,7 +81,7 @@ public class PeonyNBlock extends NegativenModElements.ModElement {
 			public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, BlockClusterFeatureConfig config) {
 				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:nega")))
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:overworld_n")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

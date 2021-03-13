@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:wood_n_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.ismineingtime.title"
+    },
+    "description": {
+      "translate": "advancements.ismineingtime.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ismineingtime": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "negative_n:mineingbiome"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "negative_n:nevitagen"
+}

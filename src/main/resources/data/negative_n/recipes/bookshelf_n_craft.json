@@ -1,0 +1,42 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "1": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "2": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "3": {
+      "item": "negative_n:book_n"
+    },
+    "4": {
+      "item": "negative_n:book_n"
+    },
+    "5": {
+      "item": "negative_n:book_n"
+    },
+    "6": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "7": {
+      "tag": "minecraft:tag_planksn"
+    },
+    "8": {
+      "tag": "minecraft:tag_planksn"
+    }
+  },
+  "result": {
+    "item": "negative_n:bookshelf_n",
+    "count": 1
+  }
+}

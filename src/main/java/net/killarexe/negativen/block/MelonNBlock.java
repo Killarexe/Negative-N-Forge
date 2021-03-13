@@ -15,16 +15,16 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.item.MelonNSliceItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class MelonNBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:melon_n")
+@NegativeNModElements.ModElement.Tag
+public class MelonNBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:melon_n")
 	public static final Block block = null;
-	public MelonNBlock(NegativenModElements instance) {
+	public MelonNBlock(NegativeNModElements instance) {
 		super(instance, 904);
 	}
 

@@ -11,13 +11,13 @@ import net.minecraft.item.MusicDiscItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class UTitleScreenItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:easter_egg")
+@NegativeNModElements.ModElement.Tag
+public class UTitleScreenItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:easter_egg")
 	public static final Item block = null;
-	public UTitleScreenItem(NegativenModElements instance) {
+	public UTitleScreenItem(NegativeNModElements instance) {
 		super(instance, 415);
 	}
 
@@ -27,7 +27,7 @@ public class UTitleScreenItem extends NegativenModElements.ModElement {
 	}
 	public static class MusicDiscItemCustom extends MusicDiscItem {
 		public MusicDiscItemCustom() {
-			super(0, NegativenModElements.sounds.get(new ResourceLocation("negativen:easter_egg")),
+			super(0, NegativeNModElements.sounds.get(new ResourceLocation("negative_n:easter_egg")),
 					new Item.Properties().group(null).maxStackSize(1).rarity(Rarity.RARE));
 			setRegistryName("easter_egg");
 		}

@@ -24,16 +24,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class SpruceNFenceBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:spruce_n_fence")
+@NegativeNModElements.ModElement.Tag
+public class SpruceNFenceBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:spruce_n_fence")
 	public static final Block block = null;
-	public SpruceNFenceBlock(NegativenModElements instance) {
+	public SpruceNFenceBlock(NegativeNModElements instance) {
 		super(instance, 97);
 	}
 

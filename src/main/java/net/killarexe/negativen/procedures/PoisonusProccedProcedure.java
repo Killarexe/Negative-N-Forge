@@ -14,15 +14,15 @@ import net.minecraft.enchantment.EnchantmentHelper;
 
 import net.killarexe.negativen.enchantment.WitheredEnchantment;
 import net.killarexe.negativen.enchantment.PoisonusEnchantment;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@NegativenModElements.ModElement.Tag
-public class PoisonusProccedProcedure extends NegativenModElements.ModElement {
-	public PoisonusProccedProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class PoisonusProccedProcedure extends NegativeNModElements.ModElement {
+	public PoisonusProccedProcedure(NegativeNModElements instance) {
 		super(instance, 665);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -30,12 +30,12 @@ public class PoisonusProccedProcedure extends NegativenModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure PoisonusProcced!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure PoisonusProcced!");
 			return;
 		}
 		if (dependencies.get("sourceentity") == null) {
 			if (!dependencies.containsKey("sourceentity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency sourceentity for procedure PoisonusProcced!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency sourceentity for procedure PoisonusProcced!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

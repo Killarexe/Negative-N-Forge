@@ -5,22 +5,22 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.killarexe.negativen.potion.OnFireNPotion;
-import net.killarexe.negativen.NegativenModElements;
-import net.killarexe.negativen.NegativenMod;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 import java.util.Collection;
 
-@NegativenModElements.ModElement.Tag
-public class FireNRegenDisplayOverlayIngameProcedure extends NegativenModElements.ModElement {
-	public FireNRegenDisplayOverlayIngameProcedure(NegativenModElements instance) {
+@NegativeNModElements.ModElement.Tag
+public class FireNRegenDisplayOverlayIngameProcedure extends NegativeNModElements.ModElement {
+	public FireNRegenDisplayOverlayIngameProcedure(NegativeNModElements instance) {
 		super(instance, 925);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				NegativenMod.LOGGER.warn("Failed to load dependency entity for procedure FireNRegenDisplayOverlayIngame!");
+				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure FireNRegenDisplayOverlayIngame!");
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

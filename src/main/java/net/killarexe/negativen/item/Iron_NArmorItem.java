@@ -16,19 +16,19 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.Entity;
 
 import net.killarexe.negativen.itemgroup.NegativeNCombatItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class Iron_NArmorItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:iron_n_armor_helmet")
+@NegativeNModElements.ModElement.Tag
+public class Iron_NArmorItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:iron_n_armor_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("negativen:iron_n_armor_chestplate")
+	@ObjectHolder("negative_n:iron_n_armor_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("negativen:iron_n_armor_leggings")
+	@ObjectHolder("negative_n:iron_n_armor_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("negativen:iron_n_armor_boots")
+	@ObjectHolder("negative_n:iron_n_armor_boots")
 	public static final Item boots = null;
-	public Iron_NArmorItem(NegativenModElements instance) {
+	public Iron_NArmorItem(NegativeNModElements instance) {
 		super(instance, 266);
 	}
 
@@ -79,25 +79,25 @@ public class Iron_NArmorItem extends NegativenModElements.ModElement {
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "negativen:textures/models/armor/iron_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "negative_n:textures/models/armor/iron_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 		}.setRegistryName("iron_n_armor_helmet"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "negativen:textures/models/armor/iron_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "negative_n:textures/models/armor/iron_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 		}.setRegistryName("iron_n_armor_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "negativen:textures/models/armor/iron_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "negative_n:textures/models/armor/iron_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 		}.setRegistryName("iron_n_armor_leggings"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "negativen:textures/models/armor/iron_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "negative_n:textures/models/armor/iron_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 		}.setRegistryName("iron_n_armor_boots"));
 	}

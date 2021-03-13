@@ -24,7 +24,7 @@ import net.minecraft.block.Block;
 
 import net.killarexe.negativen.procedures.CropsGrowProcedure;
 import net.killarexe.negativen.item.NetherWartNItem;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -32,11 +32,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class NetherWartNStage1Block extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:nether_wart_n_stage_1")
+@NegativeNModElements.ModElement.Tag
+public class NetherWartNStage1Block extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:nether_wart_n_stage_1")
 	public static final Block block = null;
-	public NetherWartNStage1Block(NegativenModElements instance) {
+	public NetherWartNStage1Block(NegativeNModElements instance) {
 		super(instance, 731);
 	}
 

@@ -1,0 +1,39 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:netherite_n"
+    },
+    "2": {
+      "item": "negative_n:netherite_n"
+    },
+    "3": {
+      "item": "negative_n:netherite_n"
+    },
+    "4": {
+      "item": "negative_n:netherite_n"
+    },
+    "5": {
+      "item": "negative_n:netherite_n"
+    },
+    "6": {
+      "item": "negative_n:netherite_n"
+    },
+    "7": {
+      "item": "negative_n:netherite_n"
+    },
+    "8": {
+      "item": "negative_n:netherite_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:netherite_n_armor_chestplate",
+    "count": 1
+  }
+}

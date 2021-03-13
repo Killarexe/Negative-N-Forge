@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:diamond_n"
+    },
+    "title": {
+      "translate": "advancements.inverseinfini.title"
+    },
+    "description": {
+      "translate": "advancements.inverseinfini.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "inverseinfini": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "negative_n:diamond_n",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50,
+    "recipes": [
+      "negative_n:diamond_n_block_craft",
+      "negative_n:diamond_n_helmet_craft",
+      "negative_n:diamond_n_leggings",
+      "negative_n:diamond_n_chestplate",
+      "negative_n:diamond_n_boots",
+      "negative_n:diamond_n_sword_craft",
+      "negative_n:diamond_n_pickaxe_craft",
+      "negative_n:diamond_n_hoe",
+      "negative_n:diamond_n_shovel_craft",
+      "negative_n:diamond_n_axe_craft"
+    ]
+  },
+  "parent": "negative_n:better_iron"
+}

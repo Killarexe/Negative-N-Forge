@@ -30,17 +30,17 @@ import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class TorchNState1Block extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:torch_n_state_1")
+@NegativeNModElements.ModElement.Tag
+public class TorchNState1Block extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:torch_n_state_1")
 	public static final Block block = null;
-	public TorchNState1Block(NegativenModElements instance) {
+	public TorchNState1Block(NegativeNModElements instance) {
 		super(instance, 552);
 	}
 

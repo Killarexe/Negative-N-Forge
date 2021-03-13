@@ -20,7 +20,7 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.procedures.IronAndFlintRightClickedOnBlockProcedure;
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -28,11 +28,11 @@ import java.util.HashMap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
-@NegativenModElements.ModElement.Tag
-public class IronAndFlintItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:iron_and_flint")
+@NegativeNModElements.ModElement.Tag
+public class IronAndFlintItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:iron_and_flint")
 	public static final Item block = null;
-	public IronAndFlintItem(NegativenModElements instance) {
+	public IronAndFlintItem(NegativeNModElements instance) {
 		super(instance, 300);
 	}
 

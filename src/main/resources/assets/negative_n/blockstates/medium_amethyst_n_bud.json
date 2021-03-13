@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "negative_n:block/medium_amethyst_n_bud"
+    },
+    "facing=east": {
+      "model": "negative_n:block/medium_amethyst_n_bud",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "negative_n:block/medium_amethyst_n_bud",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "negative_n:block/medium_amethyst_n_bud",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "negative_n:block/medium_amethyst_n_bud",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "negative_n:block/medium_amethyst_n_bud",
+      "x": 90
+    }
+  }
+}

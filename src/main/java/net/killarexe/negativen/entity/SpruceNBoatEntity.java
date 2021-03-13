@@ -46,15 +46,15 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.block.PlanchedeboisNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-@NegativenModElements.ModElement.Tag
-public class SpruceNBoatEntity extends NegativenModElements.ModElement {
+@NegativeNModElements.ModElement.Tag
+public class SpruceNBoatEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
-	public SpruceNBoatEntity(NegativenModElements instance) {
+	public SpruceNBoatEntity(NegativeNModElements instance) {
 		super(instance, 49);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
@@ -79,7 +79,7 @@ public class SpruceNBoatEntity extends NegativenModElements.ModElement {
 				return new MobRenderer(renderManager, new Modeloak_n_boat(), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("negativen:textures/spruce_n_boat.png");
+						return new ResourceLocation("negative_n:textures/spruce_n_boat.png");
 					}
 				};
 			});

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:netherrack_n"
+    },
+    "title": {
+      "translate": "advancements.fresh.title"
+    },
+    "description": {
+      "translate": "advancements.fresh.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "fresh": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "negative_n:netherndim"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "negative_n:nevitagen"
+}

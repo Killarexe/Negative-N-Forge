@@ -15,16 +15,16 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
-@NegativenModElements.ModElement.Tag
-public class ShearsNItem extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:shears_n")
+@NegativeNModElements.ModElement.Tag
+public class ShearsNItem extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:shears_n")
 	public static final Item block = null;
-	public ShearsNItem(NegativenModElements instance) {
+	public ShearsNItem(NegativeNModElements instance) {
 		super(instance, 310);
 	}
 

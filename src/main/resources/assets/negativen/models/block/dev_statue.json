@@ -1,8 +1,0 @@
-{
-  "parent": "negativen:custom/dev_statue",
-  "textures": {
-    "all": "negativen:blocks/50ff6ff37be60dba",
-    "particle": "negativen:blocks/50ff6ff37be60dba",
-    "0": "negativen:blocks/50ff6ff37be60dba"
-  }
-}

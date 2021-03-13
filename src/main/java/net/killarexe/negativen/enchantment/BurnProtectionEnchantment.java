@@ -8,13 +8,13 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.enchantment.Enchantment;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
-@NegativenModElements.ModElement.Tag
-public class BurnProtectionEnchantment extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:burn_protection")
+@NegativeNModElements.ModElement.Tag
+public class BurnProtectionEnchantment extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:burn_protection")
 	public static final Enchantment enchantment = null;
-	public BurnProtectionEnchantment(NegativenModElements instance) {
+	public BurnProtectionEnchantment(NegativeNModElements instance) {
 		super(instance, 663);
 	}
 

@@ -1,0 +1,8 @@
+{
+  "parent": "negative_n:custom/dev_statue",
+  "textures": {
+    "all": "negative_n:blocks/skin1",
+    "particle": "negative_n:blocks/skin1",
+    "0": "negative_n:blocks/cf051013025dff66"
+  }
+}

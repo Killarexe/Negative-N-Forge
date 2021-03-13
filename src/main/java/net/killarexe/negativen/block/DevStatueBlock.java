@@ -26,16 +26,16 @@ import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@NegativenModElements.ModElement.Tag
-public class DevStatueBlock extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:dev_statue")
+@NegativeNModElements.ModElement.Tag
+public class DevStatueBlock extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:dev_statue")
 	public static final Block block = null;
-	public DevStatueBlock(NegativenModElements instance) {
+	public DevStatueBlock(NegativeNModElements instance) {
 		super(instance, 633);
 	}
 

@@ -2,7 +2,7 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "50ff6ff37be60dba",
+    "texture": "skin1",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -13,7 +13,7 @@
     "rotationMode": 1,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "pdp",
+    "itemTexture": "ruby_n",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,

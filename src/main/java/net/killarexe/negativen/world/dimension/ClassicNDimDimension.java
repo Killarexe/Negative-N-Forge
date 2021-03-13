@@ -56,7 +56,7 @@ import net.minecraft.block.AbstractBlock;
 import net.killarexe.negativen.item.ClassicNDimItem;
 import net.killarexe.negativen.block.PortalblockBlock;
 import net.killarexe.negativen.block.ClassicStoneNBlock;
-import net.killarexe.negativen.NegativenModElements;
+import net.killarexe.negativen.NegativeNModElements;
 
 import javax.annotation.Nullable;
 
@@ -72,11 +72,11 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import com.google.common.collect.Sets;
 import com.google.common.collect.ImmutableSet;
 
-@NegativenModElements.ModElement.Tag
-public class ClassicNDimDimension extends NegativenModElements.ModElement {
-	@ObjectHolder("negativen:classic_n_dim_portal")
+@NegativeNModElements.ModElement.Tag
+public class ClassicNDimDimension extends NegativeNModElements.ModElement {
+	@ObjectHolder("negative_n:classic_n_dim_portal")
 	public static final CustomPortalBlock portal = null;
-	public ClassicNDimDimension(NegativenModElements instance) {
+	public ClassicNDimDimension(NegativeNModElements instance) {
 		super(instance, 306);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
@@ -115,7 +115,7 @@ public class ClassicNDimDimension extends NegativenModElements.ModElement {
 			try {
 				Object2ObjectMap<ResourceLocation, DimensionRenderInfo> effectsRegistry = (Object2ObjectMap<ResourceLocation, DimensionRenderInfo>) ObfuscationReflectionHelper
 						.getPrivateValue(DimensionRenderInfo.class, null, "field_239208_a_");
-				effectsRegistry.put(new ResourceLocation("negativen:classic_n_dim"), customEffect);
+				effectsRegistry.put(new ResourceLocation("negative_n:classic_n_dim"), customEffect);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -204,9 +204,10 @@ public class ClassicNDimDimension extends NegativenModElements.ModElement {
 				if (entity.func_242280_ah()) {
 					entity.func_242279_ag();
 				} else if (entity.world.getDimensionKey() != RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-						new ResourceLocation("negativen:classic_n_dim"))) {
+						new ResourceLocation("negative_n:classic_n_dim"))) {
 					entity.func_242279_ag();
-					teleportToDimension(entity, pos, RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negativen:classic_n_dim")));
+					teleportToDimension(entity, pos,
+							RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:classic_n_dim")));
 				} else {
 					entity.func_242279_ag();
 					teleportToDimension(entity, pos, World.OVERWORLD);
