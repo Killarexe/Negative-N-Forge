@@ -1,8 +1,8 @@
 {
-  "_fv": 15,
+  "_fv": 17,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Fresh...",
+    "achievementName": "We Need To Go Higher!",
     "achievementDescription": "Travel to the Nether-N!",
     "achievementIcon": {
       "value": "CUSTOM:NetherrackN"
@@ -20,6 +20,6 @@
     "parent": {
       "value": "CUSTOM:Nevitagen"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"dimension_entered\" x=\"52\" y=\"53\"><field name=\"dimension\">CUSTOM:NetherNDim</field><next><block type=\"advancement_trigger\" deletable=\"false\"/></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"dimension_entered\" x=\"52\" y=\"53\"><field name=\"dimension\">CUSTOM:NetherNDim</field><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }

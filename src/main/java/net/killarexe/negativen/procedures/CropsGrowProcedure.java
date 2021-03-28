@@ -1,45 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.block.Blocks;
-
-import net.killarexe.negativen.block.WheatNStage7Block;
-import net.killarexe.negativen.block.WheatNStage6Block;
-import net.killarexe.negativen.block.WheatNStage5Block;
-import net.killarexe.negativen.block.WheatNStage4Block;
-import net.killarexe.negativen.block.WheatNStage3Block;
-import net.killarexe.negativen.block.WheatNStage2Block;
-import net.killarexe.negativen.block.WheatNStage1Block;
-import net.killarexe.negativen.block.WheatNStage0Block;
-import net.killarexe.negativen.block.SweetBerryNBushStage3Block;
-import net.killarexe.negativen.block.SweetBerryNBushStage2Block;
-import net.killarexe.negativen.block.SweetBerryNBushStage1Block;
-import net.killarexe.negativen.block.SweetBerryNBushStage0Block;
-import net.killarexe.negativen.block.PotatoStage3Block;
-import net.killarexe.negativen.block.PotatoStage2Block;
-import net.killarexe.negativen.block.PotatoNStage1Block;
-import net.killarexe.negativen.block.PotatoNStage0Block;
-import net.killarexe.negativen.block.NetherWartNStage2Block;
-import net.killarexe.negativen.block.NetherWartNStage1Block;
-import net.killarexe.negativen.block.NetherWartNStage0Block;
-import net.killarexe.negativen.block.CarrotNStage3Block;
-import net.killarexe.negativen.block.CarrotNStage2Block;
-import net.killarexe.negativen.block.CarrotNStage1Block;
-import net.killarexe.negativen.block.CarrotNStage0Block;
-import net.killarexe.negativen.block.BeetrootsStage2Block;
-import net.killarexe.negativen.block.BeetrootsStage1Block;
-import net.killarexe.negativen.block.BeetrootsNStage0Block;
-import net.killarexe.negativen.block.BeetrootStage3Block;
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.Map;
-
 @NegativeNModElements.ModElement.Tag
 public class CropsGrowProcedure extends NegativeNModElements.ModElement {
+
 	public CropsGrowProcedure(NegativeNModElements instance) {
 		super(instance, 700);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -63,10 +29,12 @@ public class CropsGrowProcedure extends NegativeNModElements.ModElement {
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure CropsGrow!");
 			return;
 		}
+
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		double RandomGroth = 0;
 		RandomGroth = (double) Math.random();
 		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == WheatNStage0Block.block.getDefaultState().getBlock())) {
@@ -242,5 +210,7 @@ public class CropsGrowProcedure extends NegativeNModElements.ModElement {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), SweetBerryNBushStage3Block.block.getDefaultState(), 3);
 			}
 		}
+
 	}
+
 }

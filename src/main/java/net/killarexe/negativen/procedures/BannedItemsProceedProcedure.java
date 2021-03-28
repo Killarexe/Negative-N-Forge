@@ -1,33 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.item.ItemTossEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.math.vector.Vector2f;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.command.ICommandSource;
-import net.minecraft.command.CommandSource;
-
-import net.killarexe.negativen.world.GetBannedItemsGameRule;
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @NegativeNModElements.ModElement.Tag
 public class BannedItemsProceedProcedure extends NegativeNModElements.ModElement {
+
 	public BannedItemsProceedProcedure(NegativeNModElements instance) {
 		super(instance, 1002);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -57,12 +35,14 @@ public class BannedItemsProceedProcedure extends NegativeNModElements.ModElement
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure BannedItemsProceed!");
 			return;
 		}
+
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((world instanceof World) ? ((World) world).getGameRules().getBoolean(GetBannedItemsGameRule.gamerule) : false) == (true))) {
+
+		if (((world.getWorldInfo().getGameRulesInstance().getBoolean(GetBannedItemsGameRule.gamerule)) == (true))) {
 			if ((ItemTags.getCollection().getTagByID(new ResourceLocation(("forge:banned_items").toLowerCase(java.util.Locale.ENGLISH)))
 					.contains((itemstack).getItem()))) {
 				if (world instanceof ServerWorld) {
@@ -78,6 +58,7 @@ public class BannedItemsProceedProcedure extends NegativeNModElements.ModElement
 				}
 			}
 		}
+
 	}
 
 	@SubscribeEvent
@@ -98,4 +79,5 @@ public class BannedItemsProceedProcedure extends NegativeNModElements.ModElement
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
+
 }

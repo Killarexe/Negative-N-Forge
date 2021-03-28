@@ -40,6 +40,7 @@ import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.procedures.RecipeBooksRightClickProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
+import net.killarexe.negativen.gui.IngerRecipesGUIGuiWindow;
 import net.killarexe.negativen.gui.IngerRecipesGUIGui;
 import net.killarexe.negativen.NegativeNModElements;
 
@@ -65,7 +66,7 @@ public class FusonatorRecipiesBookItem extends NegativeNModElements.ModElement {
 	@OnlyIn(Dist.CLIENT)
 	public void onItemDropped(ItemTossEvent event) {
 		if (event.getEntityItem().getItem().getItem() == block) {
-			if (Minecraft.getInstance().currentScreen instanceof IngerRecipesGUIGui.GuiWindow) {
+			if (Minecraft.getInstance().currentScreen instanceof IngerRecipesGUIGuiWindow) {
 				Minecraft.getInstance().player.closeScreen();
 			}
 		}
@@ -150,7 +151,6 @@ public class FusonatorRecipiesBookItem extends NegativeNModElements.ModElement {
 			ItemStack itemstack = context.getItem();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

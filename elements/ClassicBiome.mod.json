@@ -1,5 +1,5 @@
 {
-  "_fv": 15,
+  "_fv": 17,
   "_type": "biome",
   "definition": {
     "name": "Classic Biome",
@@ -9,8 +9,23 @@
     "undergroundBlock": {
       "value": "CUSTOM:ClassicStone"
     },
+    "ambientSound": {
+      "value": "music.creative"
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": ""
+    },
     "moodSoundDelay": 0,
     "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "CUSTOM:RedstoneNParticle"
+    },
     "particlesProbability": 0.0,
     "biomeCategory": "NONE",
     "parent": {
@@ -64,8 +79,7 @@
     "defaultFeatures": [
       "Caves",
       "Structures",
-      "Ores",
-      "Lakes"
+      "Ores"
     ],
     "spawnEntries": []
   }

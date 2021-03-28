@@ -1,29 +1,12 @@
 
 package net.killarexe.negativen.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.block.BlockState;
-
-import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativeNModElements;
-
-import com.google.common.collect.Multimap;
-import com.google.common.collect.ImmutableMultimap;
-
 @NegativeNModElements.ModElement.Tag
 public class ShearsNItem extends NegativeNModElements.ModElement {
+
 	@ObjectHolder("negative_n:shears_n")
 	public static final Item block = null;
+
 	public ShearsNItem(NegativeNModElements instance) {
 		super(instance, 310);
 	}
@@ -31,6 +14,7 @@ public class ShearsNItem extends NegativeNModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemToolCustom() {
+
 			@Override
 			public boolean hasContainerItem() {
 				return true;
@@ -45,9 +29,12 @@ public class ShearsNItem extends NegativeNModElements.ModElement {
 				}
 				return retval;
 			}
+
 		}.setRegistryName("shears_n"));
 	}
+
 	private static class ItemToolCustom extends Item {
+
 		protected ItemToolCustom() {
 			super(new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).maxDamage(100));
 		}
@@ -85,7 +72,10 @@ public class ShearsNItem extends NegativeNModElements.ModElement {
 						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", -3, AttributeModifier.Operation.ADDITION));
 				return builder.build();
 			}
+
 			return super.getAttributeModifiers(equipmentSlot);
 		}
+
 	}
+
 }

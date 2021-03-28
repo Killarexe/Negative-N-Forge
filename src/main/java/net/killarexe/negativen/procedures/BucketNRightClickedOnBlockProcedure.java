@@ -1,36 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.items.ItemHandlerHelper;
-
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.state.Property;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
-
-import net.killarexe.negativen.item.WaterNbucketItem;
-import net.killarexe.negativen.item.MilkBucketNItem;
-import net.killarexe.negativen.item.LavaNbucketItem;
-import net.killarexe.negativen.item.BucketNItem;
-import net.killarexe.negativen.entity.CowNEntity;
-import net.killarexe.negativen.block.WaterNBlock;
-import net.killarexe.negativen.block.LavaNBlock;
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.Map;
-
 @NegativeNModElements.ModElement.Tag
 public class BucketNRightClickedOnBlockProcedure extends NegativeNModElements.ModElement {
+
 	public BucketNRightClickedOnBlockProcedure(NegativeNModElements instance) {
 		super(instance, 523);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -59,11 +34,13 @@ public class BucketNRightClickedOnBlockProcedure extends NegativeNModElements.Mo
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure BucketNRightClickedOnBlock!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == LavaNBlock.block.getDefaultState().getBlock())) {
 			if (((LavaNBlock.block.getDefaultState().getFluidState().isSource()) == (true))) {
 				if (entity instanceof PlayerEntity) {
@@ -88,6 +65,7 @@ public class BucketNRightClickedOnBlockProcedure extends NegativeNModElements.Mo
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
 					BlockState _bs = Blocks.AIR.getDefaultState();
+
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -97,7 +75,9 @@ public class BucketNRightClickedOnBlockProcedure extends NegativeNModElements.Mo
 							} catch (Exception e) {
 							}
 					}
+
 					world.setBlockState(_bp, _bs, 3);
+
 				}
 			}
 		}
@@ -125,6 +105,7 @@ public class BucketNRightClickedOnBlockProcedure extends NegativeNModElements.Mo
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
 					BlockState _bs = Blocks.AIR.getDefaultState();
+
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -134,7 +115,9 @@ public class BucketNRightClickedOnBlockProcedure extends NegativeNModElements.Mo
 							} catch (Exception e) {
 							}
 					}
+
 					world.setBlockState(_bp, _bs, 3);
+
 				}
 			}
 		}
@@ -152,6 +135,7 @@ public class BucketNRightClickedOnBlockProcedure extends NegativeNModElements.Mo
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = Blocks.AIR.getDefaultState();
+
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -161,8 +145,12 @@ public class BucketNRightClickedOnBlockProcedure extends NegativeNModElements.Mo
 						} catch (Exception e) {
 						}
 				}
+
 				world.setBlockState(_bp, _bs, 3);
+
 			}
 		}
+
 	}
+
 }

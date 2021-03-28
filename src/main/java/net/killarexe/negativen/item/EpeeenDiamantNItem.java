@@ -1,27 +1,12 @@
 
 package net.killarexe.negativen.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.World;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-import net.minecraft.entity.LivingEntity;
-
-import net.killarexe.negativen.procedures.PoisonusProccedProcedure;
-import net.killarexe.negativen.itemgroup.NegativeNCombatItemGroup;
-import net.killarexe.negativen.NegativeNModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @NegativeNModElements.ModElement.Tag
 public class EpeeenDiamantNItem extends NegativeNModElements.ModElement {
+
 	@ObjectHolder("negative_n:diamond_n_sword")
 	public static final Item block = null;
+
 	public EpeeenDiamantNItem(NegativeNModElements instance) {
 		super(instance, 269);
 	}
@@ -53,6 +38,7 @@ public class EpeeenDiamantNItem extends NegativeNModElements.ModElement {
 				return Ingredient.fromStacks(new ItemStack(DiamantinverseItem.block, (int) (1)));
 			}
 		}, 3, -3f, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
+
 			@Override
 			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 				boolean retval = super.hitEntity(itemstack, entity, sourceentity);
@@ -62,12 +48,16 @@ public class EpeeenDiamantNItem extends NegativeNModElements.ModElement {
 				World world = entity.world;
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
+
 					$_dependencies.put("entity", entity);
 					$_dependencies.put("sourceentity", sourceentity);
+
 					PoisonusProccedProcedure.executeProcedure($_dependencies);
 				}
 				return retval;
 			}
+
 		}.setRegistryName("diamond_n_sword"));
 	}
+
 }

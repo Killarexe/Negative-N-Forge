@@ -1,30 +1,15 @@
 
 package net.killarexe.negativen.potion;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
-
-import net.minecraft.world.World;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.potion.EffectType;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effect;
-import net.minecraft.entity.LivingEntity;
-
-import net.killarexe.negativen.procedures.OnFireNOnPotionActiveTickProcedure;
-import net.killarexe.negativen.NegativeNModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @NegativeNModElements.ModElement.Tag
 public class OnFireNPotion extends NegativeNModElements.ModElement {
+
 	@ObjectHolder("negative_n:on_fire_n")
 	public static final Effect potion = null;
+
 	public OnFireNPotion(NegativeNModElements instance) {
 		super(instance, 925);
+
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -32,8 +17,11 @@ public class OnFireNPotion extends NegativeNModElements.ModElement {
 	public void registerEffect(RegistryEvent.Register<Effect> event) {
 		event.getRegistry().register(new EffectCustom());
 	}
+
 	public static class EffectCustom extends Effect {
+
 		private final ResourceLocation potionIcon;
+
 		public EffectCustom() {
 			super(EffectType.BENEFICIAL, -16776961);
 			setRegistryName("on_fire_n");
@@ -78,7 +66,9 @@ public class OnFireNPotion extends NegativeNModElements.ModElement {
 			double z = entity.getPosZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("entity", entity);
+
 				OnFireNOnPotionActiveTickProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -87,5 +77,7 @@ public class OnFireNPotion extends NegativeNModElements.ModElement {
 		public boolean isReady(int duration, int amplifier) {
 			return true;
 		}
+
 	}
+
 }

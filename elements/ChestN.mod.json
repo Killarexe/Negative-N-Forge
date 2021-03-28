@@ -1,5 +1,5 @@
 {
-  "_fv": 15,
+  "_fv": 17,
   "_type": "block",
   "definition": {
     "texture": "chest_n",
@@ -18,12 +18,18 @@
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",
-    "mx": 0.0,
-    "my": 0.0,
-    "mz": 0.0,
-    "Mx": 0.9,
-    "My": 0.9,
-    "Mz": 0.9,
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 14.4,
+        "My": 14.4,
+        "Mz": 14.4,
+        "subtract": false
+      }
+    ],
     "name": "Chest-N",
     "specialInfo": [],
     "hardness": 1.5,
@@ -59,6 +65,8 @@
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {

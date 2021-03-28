@@ -1,22 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.item.ItemEntity;
-
-import net.killarexe.negativen.item.WheatNSeedItem;
-import net.killarexe.negativen.item.BeetrootSeedItem;
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.Random;
-import java.util.Map;
-
 @NegativeNModElements.ModElement.Tag
 public class GrassNPlantDestroyedByPlayerProcedure extends NegativeNModElements.ModElement {
+
 	public GrassNPlantDestroyedByPlayerProcedure(NegativeNModElements instance) {
 		super(instance, 738);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -40,10 +29,12 @@ public class GrassNPlantDestroyedByPlayerProcedure extends NegativeNModElements.
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure GrassNPlantDestroyedByPlayer!");
 			return;
 		}
+
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		double Random = 0;
 		Random = (double) Math.random();
 		if (((Random) <= 0.66)) {
@@ -59,5 +50,7 @@ public class GrassNPlantDestroyedByPlayerProcedure extends NegativeNModElements.
 				world.addEntity(entityToSpawn);
 			}
 		}
+
 	}
+
 }

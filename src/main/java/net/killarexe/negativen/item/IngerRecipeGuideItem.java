@@ -37,7 +37,7 @@ public class IngerRecipeGuideItem extends NegativeNModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(1).isImmuneToFire().rarity(Rarity.EPIC));
 			setRegistryName("inger_recipe_guide");
 		}
 
@@ -75,7 +75,6 @@ public class IngerRecipeGuideItem extends NegativeNModElements.ModElement {
 			ItemStack itemstack = context.getItem();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

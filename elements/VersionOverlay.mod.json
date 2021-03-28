@@ -1,10 +1,11 @@
 {
-  "_fv": 15,
+  "_fv": 17,
   "_type": "gamerule",
   "definition": {
     "type": "Logic",
+    "displayName": "Show Negative-N Version",
     "description": "Show Negative-N Version",
-    "category": "PLAYER",
+    "category": "UPDATES",
     "defaultValueLogic": true,
     "defaultValueNumber": 0
   }

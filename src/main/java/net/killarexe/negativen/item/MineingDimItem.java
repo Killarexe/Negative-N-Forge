@@ -1,22 +1,11 @@
 
 package net.killarexe.negativen.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.item.ItemUseContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.entity.player.PlayerEntity;
-
-import net.killarexe.negativen.world.dimension.MineingDimDimension;
-import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-
 public class MineingDimItem extends Item {
+
 	@ObjectHolder("negative_n:mineingdim")
 	public static final Item block = null;
+
 	public MineingDimItem() {
 		super(new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).maxDamage(64));
 	}
@@ -33,8 +22,10 @@ public class MineingDimItem extends Item {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
+
 			if (world.isAirBlock(pos) && true)
 				MineingDimDimension.portal.portalSpawn(world, pos);
+
 			itemstack.damageItem(1, entity, c -> c.sendBreakAnimation(context.getHand()));
 			return ActionResultType.SUCCESS;
 		}

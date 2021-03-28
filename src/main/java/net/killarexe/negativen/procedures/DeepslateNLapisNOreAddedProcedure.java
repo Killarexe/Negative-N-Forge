@@ -1,19 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.block.Blocks;
-
-import net.killarexe.negativen.block.DeepslateNBlock;
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.Map;
-
 @NegativeNModElements.ModElement.Tag
 public class DeepslateNLapisNOreAddedProcedure extends NegativeNModElements.ModElement {
+
 	public DeepslateNLapisNOreAddedProcedure(NegativeNModElements instance) {
 		super(instance, 1020);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -37,10 +29,12 @@ public class DeepslateNLapisNOreAddedProcedure extends NegativeNModElements.ModE
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure DeepslateNLapisNOreAdded!");
 			return;
 		}
+
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		boolean isAir = false;
 		if (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.CAVE_AIR.getDefaultState().getBlock())) {
 			isAir = (boolean) (true);
@@ -63,5 +57,7 @@ public class DeepslateNLapisNOreAddedProcedure extends NegativeNModElements.ModE
 		if (((isAir) == (true))) {
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), DeepslateNBlock.block.getDefaultState(), 3);
 		}
+
 	}
+
 }

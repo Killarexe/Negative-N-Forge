@@ -1,24 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
-
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.Map;
-import java.util.Iterator;
-
 @NegativeNModElements.ModElement.Tag
 public class DNArmorAProcedure extends NegativeNModElements.ModElement {
+
 	public DNArmorAProcedure(NegativeNModElements instance) {
 		super(instance, 583);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -27,7 +14,9 @@ public class DNArmorAProcedure extends NegativeNModElements.ModElement {
 				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure DNArmorA!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 10) && (entity instanceof PlayerEntity))) {
 			if (entity instanceof ServerPlayerEntity) {
 				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
@@ -42,5 +31,7 @@ public class DNArmorAProcedure extends NegativeNModElements.ModElement {
 				}
 			}
 		}
+
 	}
+
 }

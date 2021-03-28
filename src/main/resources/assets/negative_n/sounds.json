@@ -18,12 +18,12 @@
     ]
   },
   "op": {
-    "category": "music",
+    "category": "player",
     "subtitle": "subtitles.op",
     "sounds": [
       {
         "name": "negative_n:baclassic",
-        "stream": true
+        "stream": false
       }
     ]
   }

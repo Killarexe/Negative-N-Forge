@@ -1,8 +1,9 @@
 {
-  "_fv": 15,
+  "_fv": 17,
   "_type": "gamerule",
   "definition": {
     "type": "Logic",
+    "displayName": "Cave Game Dimension Survival Access",
     "description": "Cave Game Dimension Survival Access",
     "category": "UPDATES",
     "defaultValueLogic": false,

@@ -1,37 +1,12 @@
 
 package net.killarexe.negativen.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.item.ItemUseContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.block.BlockState;
-
-import net.killarexe.negativen.procedures.IronAndFlintRightClickedOnBlockProcedure;
-import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.NegativeNModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
-import com.google.common.collect.Multimap;
-import com.google.common.collect.ImmutableMultimap;
-
 @NegativeNModElements.ModElement.Tag
 public class IronAndFlintItem extends NegativeNModElements.ModElement {
+
 	@ObjectHolder("negative_n:iron_and_flint")
 	public static final Item block = null;
+
 	public IronAndFlintItem(NegativeNModElements instance) {
 		super(instance, 300);
 	}
@@ -39,6 +14,7 @@ public class IronAndFlintItem extends NegativeNModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemToolCustom() {
+
 			@Override
 			public ActionResultType onItemUse(ItemUseContext context) {
 				ActionResultType retval = super.onItemUse(context);
@@ -52,18 +28,23 @@ public class IronAndFlintItem extends NegativeNModElements.ModElement {
 				ItemStack itemstack = context.getItem();
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
+
 					$_dependencies.put("itemstack", itemstack);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
 					$_dependencies.put("world", world);
+
 					IronAndFlintRightClickedOnBlockProcedure.executeProcedure($_dependencies);
 				}
 				return retval;
 			}
+
 		}.setRegistryName("iron_and_flint"));
 	}
+
 	private static class ItemToolCustom extends Item {
+
 		protected ItemToolCustom() {
 			super(new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).maxDamage(64));
 		}
@@ -101,7 +82,10 @@ public class IronAndFlintItem extends NegativeNModElements.ModElement {
 						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", -3, AttributeModifier.Operation.ADDITION));
 				return builder.build();
 			}
+
 			return super.getAttributeModifiers(equipmentSlot);
 		}
+
 	}
+
 }

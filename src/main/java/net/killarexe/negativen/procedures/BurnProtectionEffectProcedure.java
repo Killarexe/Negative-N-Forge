@@ -1,29 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.World;
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.item.ItemStack;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.enchantment.EnchantmentHelper;
-
-import net.killarexe.negativen.enchantment.BurnProtectionEnchantment;
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @NegativeNModElements.ModElement.Tag
 public class BurnProtectionEffectProcedure extends NegativeNModElements.ModElement {
+
 	public BurnProtectionEffectProcedure(NegativeNModElements instance) {
 		super(instance, 664);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -33,7 +15,9 @@ public class BurnProtectionEffectProcedure extends NegativeNModElements.ModEleme
 				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure BurnProtectionEffect!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		if ((entity.isBurning())) {
 			if (((EnchantmentHelper.getEnchantmentLevel(BurnProtectionEnchantment.enchantment,
 					((entity instanceof LivingEntity)
@@ -44,6 +28,7 @@ public class BurnProtectionEffectProcedure extends NegativeNModElements.ModEleme
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 1024, (int) 1));
 			}
 		}
+
 	}
 
 	@SubscribeEvent
@@ -64,4 +49,5 @@ public class BurnProtectionEffectProcedure extends NegativeNModElements.ModEleme
 			this.executeProcedure(dependencies);
 		}
 	}
+
 }

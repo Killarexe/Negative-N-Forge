@@ -1,78 +1,22 @@
 
 package net.killarexe.negativen.block;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.items.wrapper.SidedInvWrapper;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.Direction;
-import net.minecraft.tileentity.TileEntityType;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.LockableLootTileEntity;
-import net.minecraft.network.play.server.SUpdateTileEntityPacket;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItem;
-import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ChestContainer;
-import net.minecraft.inventory.ItemStackHelper;
-import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
-
-import net.killarexe.negativen.procedures.CropsGrowProcedure;
-import net.killarexe.negativen.item.WheatNSeedItem;
-import net.killarexe.negativen.NegativeNModElements;
-
-import javax.annotation.Nullable;
-
-import java.util.stream.IntStream;
-import java.util.Random;
-import java.util.Map;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
 public class WheatNStage1Block extends NegativeNModElements.ModElement {
+
 	@ObjectHolder("negative_n:wheat_n_stage_1")
 	public static final Block block = null;
+
 	@ObjectHolder("negative_n:wheat_n_stage_1")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
+
 	public WheatNStage1Block(NegativeNModElements instance) {
 		super(instance, 685);
+
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
+
 	}
 
 	@Override
@@ -80,22 +24,29 @@ public class WheatNStage1Block extends NegativeNModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
+
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
 			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("wheat_n_stage_1"));
 		}
 	}
+
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
+
 	public static class CustomBlock extends Block {
+
 		public CustomBlock() {
-			super(Block.Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(0f, 0f).setLightLevel(s -> 0)
-					.doesNotBlockMovement().notSolid().tickRandomly().setNeedsPostProcessing((bs, br, bp) -> true)
-					.setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
+			super(
+
+					Block.Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(0f, 0f).setLightLevel(s -> 0)
+							.doesNotBlockMovement().notSolid().tickRandomly().setNeedsPostProcessing((bs, br, bp) -> true)
+							.setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
+
 			setRegistryName("wheat_n_stage_1");
 		}
 
@@ -107,7 +58,11 @@ public class WheatNStage1Block extends NegativeNModElements.ModElement {
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.create(0D, 0D, 0D, 1D, 0.3D, 1D).withOffset(offset.x, offset.y, offset.z);
+			return VoxelShapes.or(makeCuboidShape(0, 0, 0, 16, 4.800000000000001, 16)
+
+			)
+
+					.withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override
@@ -117,6 +72,7 @@ public class WheatNStage1Block extends NegativeNModElements.ModElement {
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -131,10 +87,12 @@ public class WheatNStage1Block extends NegativeNModElements.ModElement {
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
+
 				CropsGrowProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -161,10 +119,13 @@ public class WheatNStage1Block extends NegativeNModElements.ModElement {
 			TileEntity tileentity = world.getTileEntity(pos);
 			return tileentity == null ? false : tileentity.receiveClientEvent(eventID, eventParam);
 		}
+
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
+
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
+
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -172,18 +133,23 @@ public class WheatNStage1Block extends NegativeNModElements.ModElement {
 		@Override
 		public void read(BlockState blockState, CompoundNBT compound) {
 			super.read(blockState, compound);
+
 			if (!this.checkLootAndRead(compound)) {
 				this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 			}
+
 			ItemStackHelper.loadAllItems(compound, this.stacks);
+
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT compound) {
 			super.write(compound);
+
 			if (!this.checkLootAndWrite(compound)) {
 				ItemStackHelper.saveAllItems(compound, this.stacks);
 			}
+
 			return compound;
 		}
 
@@ -264,11 +230,14 @@ public class WheatNStage1Block extends NegativeNModElements.ModElement {
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
 			return true;
 		}
+
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
+
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 				return handlers[facing.ordinal()].cast();
+
 			return super.getCapability(capability, facing);
 		}
 
@@ -278,5 +247,7 @@ public class WheatNStage1Block extends NegativeNModElements.ModElement {
 			for (LazyOptional<? extends IItemHandler> handler : handlers)
 				handler.invalidate();
 		}
+
 	}
+
 }

@@ -3,7 +3,6 @@ package net.killarexe.negativen.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.loot.LootContext;
@@ -20,7 +19,6 @@ import net.killarexe.negativen.procedures.StoneNBlockAddedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.NegativeNModElements;
 
-import java.util.Random;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
@@ -65,7 +63,6 @@ public class StoneNBlock extends NegativeNModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
@@ -74,23 +71,6 @@ public class StoneNBlock extends NegativeNModElements.ModElement {
 				$_dependencies.put("world", world);
 				StoneNBlockAddedProcedure.executeProcedure($_dependencies);
 			}
-		}
-
-		@Override
-		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-			super.tick(state, world, pos, random);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				StoneNBlockAddedProcedure.executeProcedure($_dependencies);
-			}
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
 		}
 	}
 }

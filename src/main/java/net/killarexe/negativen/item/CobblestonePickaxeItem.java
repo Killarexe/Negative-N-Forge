@@ -1,22 +1,12 @@
 
 package net.killarexe.negativen.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-
-import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.block.CobblestoneNBlock;
-import net.killarexe.negativen.NegativeNModElements;
-
 @NegativeNModElements.ModElement.Tag
 public class CobblestonePickaxeItem extends NegativeNModElements.ModElement {
+
 	@ObjectHolder("negative_n:cobblestone_n_pickaxe")
 	public static final Item block = null;
+
 	public CobblestonePickaxeItem(NegativeNModElements instance) {
 		super(instance, 292);
 	}
@@ -48,6 +38,8 @@ public class CobblestonePickaxeItem extends NegativeNModElements.ModElement {
 				return Ingredient.fromStacks(new ItemStack(CobblestoneNBlock.block, (int) (1)));
 			}
 		}, 1, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
+
 		}.setRegistryName("cobblestone_n_pickaxe"));
 	}
+
 }

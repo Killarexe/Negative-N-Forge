@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 
 @NegativeNModElements.ModElement.Tag
 public class VersionOverlayGameRule extends NegativeNModElements.ModElement {
-	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("versionOverlay", GameRules.Category.PLAYER,
+	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("versionOverlay", GameRules.Category.UPDATES,
 			create(true));
 	public VersionOverlayGameRule(NegativeNModElements instance) {
 		super(instance, 991);

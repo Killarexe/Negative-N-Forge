@@ -1,17 +1,13 @@
 package net.killarexe.negativen.world;
 
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
-
-import net.minecraft.world.GameRules;
-
-import net.killarexe.negativen.NegativeNModElements;
-
-import java.lang.reflect.Method;
+import net.killarexe.negativen.NegativeNMod;
 
 @NegativeNModElements.ModElement.Tag
 public class DebugModeNGameRule extends NegativeNModElements.ModElement {
+
 	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("debugModeN", GameRules.Category.PLAYER,
 			create(false));
+
 	public DebugModeNGameRule(NegativeNModElements instance) {
 		super(instance, 959);
 	}

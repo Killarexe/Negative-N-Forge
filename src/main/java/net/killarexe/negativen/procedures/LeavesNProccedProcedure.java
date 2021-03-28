@@ -1,25 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.block.Block;
-
-import net.killarexe.negativen.block.SpruceLogNBlock;
-import net.killarexe.negativen.block.JungleLogNBlock;
-import net.killarexe.negativen.block.DarkOakLogNBlock;
-import net.killarexe.negativen.block.BoisNBlock;
-import net.killarexe.negativen.block.BirchlognBlock;
-import net.killarexe.negativen.block.AcacialognBlock;
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.Map;
-
 @NegativeNModElements.ModElement.Tag
 public class LeavesNProccedProcedure extends NegativeNModElements.ModElement {
+
 	public LeavesNProccedProcedure(NegativeNModElements instance) {
 		super(instance, 568);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -43,10 +29,12 @@ public class LeavesNProccedProcedure extends NegativeNModElements.ModElement {
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure LeavesNProcced!");
 			return;
 		}
+
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		double OffX = 0;
 		double OffY = 0;
 		double OffZ = 0;
@@ -62,6 +50,7 @@ public class LeavesNProccedProcedure extends NegativeNModElements.ModElement {
 						if (world instanceof World) {
 							Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 									new BlockPos((int) x, (int) y, (int) z));
+
 							world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 						}
 					} else if (((world.getBlockState(new BlockPos((int) (x + (OffX)), (int) (y + (OffY)), (int) (z + (OffZ)))))
@@ -69,6 +58,7 @@ public class LeavesNProccedProcedure extends NegativeNModElements.ModElement {
 						if (world instanceof World) {
 							Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 									new BlockPos((int) x, (int) y, (int) z));
+
 							world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 						}
 					} else if (((world.getBlockState(new BlockPos((int) (x + (OffX)), (int) (y + (OffY)), (int) (z + (OffZ)))))
@@ -76,6 +66,7 @@ public class LeavesNProccedProcedure extends NegativeNModElements.ModElement {
 						if (world instanceof World) {
 							Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 									new BlockPos((int) x, (int) y, (int) z));
+
 							world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 						}
 					} else if (((world.getBlockState(new BlockPos((int) (x + (OffX)), (int) (y + (OffY)), (int) (z + (OffZ)))))
@@ -83,6 +74,7 @@ public class LeavesNProccedProcedure extends NegativeNModElements.ModElement {
 						if (world instanceof World) {
 							Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 									new BlockPos((int) x, (int) y, (int) z));
+
 							world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 						}
 					} else if (((world.getBlockState(new BlockPos((int) (x + (OffX)), (int) (y + (OffY)), (int) (z + (OffZ)))))
@@ -90,6 +82,7 @@ public class LeavesNProccedProcedure extends NegativeNModElements.ModElement {
 						if (world instanceof World) {
 							Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 									new BlockPos((int) x, (int) y, (int) z));
+
 							world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 						}
 					} else if (((world.getBlockState(new BlockPos((int) (x + (OffX)), (int) (y + (OffY)), (int) (z + (OffZ)))))
@@ -97,6 +90,7 @@ public class LeavesNProccedProcedure extends NegativeNModElements.ModElement {
 						if (world instanceof World) {
 							Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
 									new BlockPos((int) x, (int) y, (int) z));
+
 							world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 						}
 					}
@@ -106,5 +100,7 @@ public class LeavesNProccedProcedure extends NegativeNModElements.ModElement {
 			}
 			OffZ = (double) ((OffZ) + 1);
 		}
+
 	}
+
 }

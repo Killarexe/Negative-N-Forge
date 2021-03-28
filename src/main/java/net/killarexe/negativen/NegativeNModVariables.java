@@ -1,7 +1,5 @@
 package net.killarexe.negativen;
 
-import org.spongepowered.asm.mixin.Debug;
-
 import org.lwjgl.Version;
 
 import net.minecraftforge.fml.network.PacketDistributor;

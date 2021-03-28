@@ -1,17 +1,9 @@
 
 package net.killarexe.negativen.itemgroup;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-
-import net.killarexe.negativen.item.AppleNItem;
-import net.killarexe.negativen.NegativeNModElements;
-
 @NegativeNModElements.ModElement.Tag
 public class NegativeNFoodItemGroup extends NegativeNModElements.ModElement {
+
 	public NegativeNFoodItemGroup(NegativeNModElements instance) {
 		super(instance, 416);
 	}
@@ -31,5 +23,7 @@ public class NegativeNFoodItemGroup extends NegativeNModElements.ModElement {
 			}
 		};
 	}
+
 	public static ItemGroup tab;
+
 }

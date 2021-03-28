@@ -13,6 +13,7 @@ import java.util.Collections;
 import net.minecraft.client.MainWindow;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 @NegativeNModElements.ModElement.Tag
 public class WindowUpdateProcedure extends NegativeNModElements.ModElement {
@@ -28,7 +29,7 @@ public class WindowUpdateProcedure extends NegativeNModElements.ModElement {
 	}
 
 	@OnlyIn(Dist.CLIENT)
-	@Override
+	@SubscribeEvent
 	public void init(PlayerEvent.PlayerLoggedInEvent event) {
 		this.executeProcedure(Collections.emptyMap());
 		window.setWindowTitle("Negative-N " + NegativeNModVariables.Version);

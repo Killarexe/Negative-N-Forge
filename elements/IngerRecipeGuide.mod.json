@@ -1,12 +1,12 @@
 {
-  "_fv": 15,
+  "_fv": 17,
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "knowledge_book_n",
+    "texture": "book_n",
     "customModelName": "Normal",
-    "name": "Inger Recipe Guide",
-    "rarity": "COMMON",
+    "name": "Wither-N Spawner",
+    "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:NegativeNRessoures"
     },
@@ -15,8 +15,11 @@
     "useDuration": 0,
     "toolType": 1.0,
     "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
     "destroyAnyBlock": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,

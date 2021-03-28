@@ -1,27 +1,12 @@
 
 package net.killarexe.negativen.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-
-import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
-import net.killarexe.negativen.block.SprucePlanksNBlock;
-import net.killarexe.negativen.block.PlanchedeboisNBlock;
-import net.killarexe.negativen.block.JunglePlanksNBlock;
-import net.killarexe.negativen.block.DarkoakplanksNBlock;
-import net.killarexe.negativen.block.BirchplanksnBlock;
-import net.killarexe.negativen.block.AcaciaplanksnBlock;
-import net.killarexe.negativen.NegativeNModElements;
-
 @NegativeNModElements.ModElement.Tag
 public class PlanchedeboisShovelItem extends NegativeNModElements.ModElement {
+
 	@ObjectHolder("negative_n:wood_n_shovel")
 	public static final Item block = null;
+
 	public PlanchedeboisShovelItem(NegativeNModElements instance) {
 		super(instance, 290);
 	}
@@ -55,6 +40,8 @@ public class PlanchedeboisShovelItem extends NegativeNModElements.ModElement {
 						new ItemStack(JunglePlanksNBlock.block, (int) (1)), new ItemStack(SprucePlanksNBlock.block, (int) (1)));
 			}
 		}, 1, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
+
 		}.setRegistryName("wood_n_shovel"));
 	}
+
 }

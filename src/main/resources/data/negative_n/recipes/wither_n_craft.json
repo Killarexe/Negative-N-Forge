@@ -1,0 +1,36 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "negative_n:wither_n_head"
+    },
+    "1": {
+      "item": "negative_n:wither_n_head"
+    },
+    "2": {
+      "item": "negative_n:wither_n_head"
+    },
+    "3": {
+      "item": "negative_n:soul_sand_n"
+    },
+    "4": {
+      "item": "negative_n:soul_sand_n"
+    },
+    "5": {
+      "item": "negative_n:soul_sand_n"
+    },
+    "7": {
+      "item": "negative_n:soul_sand_n"
+    }
+  },
+  "result": {
+    "item": "negative_n:inger_recipe_guide",
+    "count": 1
+  }
+}

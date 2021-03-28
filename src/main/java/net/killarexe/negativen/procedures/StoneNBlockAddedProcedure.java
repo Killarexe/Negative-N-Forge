@@ -3,6 +3,8 @@ package net.killarexe.negativen.procedures;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 
+import net.killarexe.negativen.world.EnableDeepslateNGameRule;
+import net.killarexe.negativen.block.StoneNBlock;
 import net.killarexe.negativen.block.DeepslateNBlock;
 import net.killarexe.negativen.NegativeNModElements;
 import net.killarexe.negativen.NegativeNMod;
@@ -40,8 +42,16 @@ public class StoneNBlockAddedProcedure extends NegativeNModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((y <= 12)) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), DeepslateNBlock.block.getDefaultState(), 3);
+		if (((world.getWorldInfo().getGameRulesInstance().getBoolean(EnableDeepslateNGameRule.gamerule)) == (true))) {
+			if (((world.getBlockState(new BlockPos((int) x, (int) 14, (int) z))).getBlock() == StoneNBlock.block.getDefaultState().getBlock())) {
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), DeepslateNBlock.block.getDefaultState(), 3);
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) 13, (int) z))).getBlock() == StoneNBlock.block.getDefaultState()
+					.getBlock())) {
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), DeepslateNBlock.block.getDefaultState(), 3);
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) 12, (int) z))).getBlock() == StoneNBlock.block.getDefaultState()
+					.getBlock())) {
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), DeepslateNBlock.block.getDefaultState(), 3);
+			}
 		}
 	}
 }

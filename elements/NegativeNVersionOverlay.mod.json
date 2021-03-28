@@ -1,5 +1,5 @@
 {
-  "_fv": 15,
+  "_fv": 17,
   "_type": "overlay",
   "definition": {
     "priority": "LOWEST",
@@ -26,7 +26,7 @@
             "falpha": 0.0
           },
           "name": "<VAR:Version>",
-          "x": 60,
+          "x": 69,
           "y": 8
         }
       }

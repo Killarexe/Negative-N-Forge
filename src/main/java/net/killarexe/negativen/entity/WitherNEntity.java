@@ -24,7 +24,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.pathfinding.FlyingPathNavigator;
 import net.minecraft.network.IPacket;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.projectile.PotionEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
@@ -84,6 +86,7 @@ public class WitherNEntity extends NegativeNModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(4f, 4f)).build("wither_n")
 						.setRegistryName("wither_n");
 		elements.entities.add(() -> entity);
+		elements.items.add(() -> new SpawnEggItem(entity, -1, -10066330, new Item.Properties().group(null)).setRegistryName("wither_n_spawn_egg"));
 		elements.entities.add(() -> (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 				.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 				.size(0.5f, 0.5f)).build("entitybulletwither_n").setRegistryName("entitybulletwither_n"));

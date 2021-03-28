@@ -1,80 +1,25 @@
 
 package net.killarexe.negativen.block;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.items.wrapper.SidedInvWrapper;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.ToolType;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.gen.feature.template.IRuleTestType;
-import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.feature.OreFeature;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.World;
-import net.minecraft.world.ISeedReader;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.RegistryKey;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.Direction;
-import net.minecraft.tileentity.TileEntityType;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.LockableLootTileEntity;
-import net.minecraft.network.play.server.SUpdateTileEntityPacket;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItem;
-import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ChestContainer;
-import net.minecraft.inventory.ItemStackHelper;
-import net.minecraft.inventory.InventoryHelper;
-import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
-
-import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativeNModElements;
-
-import javax.annotation.Nullable;
-
-import java.util.stream.IntStream;
-import java.util.Random;
-import java.util.List;
-import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
 public class BlockdediamantInverseBlock extends NegativeNModElements.ModElement {
+
 	@ObjectHolder("negative_n:diamond_n_block")
 	public static final Block block = null;
+
 	@ObjectHolder("negative_n:diamond_n_block")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
+
 	public BlockdediamantInverseBlock(NegativeNModElements instance) {
 		super(instance, 154);
+
 		MinecraftForge.EVENT_BUS.register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
+
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
+
 	}
 
 	@Override
@@ -83,6 +28,7 @@ public class BlockdediamantInverseBlock extends NegativeNModElements.ModElement 
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNBlocksItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
@@ -91,9 +37,13 @@ public class BlockdediamantInverseBlock extends NegativeNModElements.ModElement 
 	}
 
 	public static class CustomBlock extends Block {
+
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.NETHERITE).hardnessAndResistance(5f, 19f).setLightLevel(s -> 0)
-					.harvestLevel(6).harvestTool(ToolType.PICKAXE));
+			super(
+
+					Block.Properties.create(Material.IRON).sound(SoundType.NETHERITE).hardnessAndResistance(5f, 19f).setLightLevel(s -> 0)
+							.harvestLevel(6).harvestTool(ToolType.PICKAXE).setRequiresTool());
+
 			setRegistryName("diamond_n_block");
 		}
 
@@ -104,6 +54,7 @@ public class BlockdediamantInverseBlock extends NegativeNModElements.ModElement 
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -141,6 +92,7 @@ public class BlockdediamantInverseBlock extends NegativeNModElements.ModElement 
 					InventoryHelper.dropInventoryItems(world, pos, (CustomTileEntity) tileentity);
 					world.updateComparatorOutputLevel(pos, this);
 				}
+
 				super.onReplaced(state, world, pos, newState, isMoving);
 			}
 		}
@@ -158,10 +110,13 @@ public class BlockdediamantInverseBlock extends NegativeNModElements.ModElement 
 			else
 				return 0;
 		}
+
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
+
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
+
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -169,18 +124,23 @@ public class BlockdediamantInverseBlock extends NegativeNModElements.ModElement 
 		@Override
 		public void read(BlockState blockState, CompoundNBT compound) {
 			super.read(blockState, compound);
+
 			if (!this.checkLootAndRead(compound)) {
 				this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 			}
+
 			ItemStackHelper.loadAllItems(compound, this.stacks);
+
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT compound) {
 			super.write(compound);
+
 			if (!this.checkLootAndWrite(compound)) {
 				ItemStackHelper.saveAllItems(compound, this.stacks);
 			}
+
 			return compound;
 		}
 
@@ -261,11 +221,14 @@ public class BlockdediamantInverseBlock extends NegativeNModElements.ModElement 
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
 			return true;
 		}
+
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
+
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 				return handlers[facing.ordinal()].cast();
+
 			return super.getCapability(capability, facing);
 		}
 
@@ -275,31 +238,69 @@ public class BlockdediamantInverseBlock extends NegativeNModElements.ModElement 
 			for (LazyOptional<? extends IItemHandler> handler : handlers)
 				handler.invalidate();
 		}
+
 	}
+
+	private static Feature<OreFeatureConfig> feature = null;
+	private static ConfiguredFeature<?, ?> configuredFeature = null;
+
+	private static IRuleTestType<CustomRuleTest> CUSTOM_MATCH = null;
+
+	private static class CustomRuleTest extends RuleTest {
+
+		static final CustomRuleTest INSTANCE = new CustomRuleTest();
+		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+
+		public boolean test(BlockState blockAt, Random random) {
+			boolean blockCriteria = false;
+
+			if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
+				blockCriteria = true;
+
+			return blockCriteria;
+		}
+
+		protected IRuleTestType<?> getType() {
+			return CUSTOM_MATCH;
+		}
+
+	}
+
+	private static class FeatureRegisterHandler {
+
+		@SubscribeEvent
+		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
+			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("negative_n:diamond_n_block_match"),
+					() -> CustomRuleTest.codec);
+
+			feature = new OreFeature(OreFeatureConfig.CODEC) {
+				@Override
+				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
+					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
+					boolean dimensionCriteria = false;
+
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:mineingdim")))
+						dimensionCriteria = true;
+
+					if (!dimensionCriteria)
+						return false;
+
+					return super.generate(world, generator, rand, pos, config);
+				}
+			};
+
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 1)).range(6).square()
+					.func_242731_b(4);
+
+			event.getRegistry().register(feature.setRegistryName("diamond_n_block"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("negative_n:diamond_n_block"), configuredFeature);
+		}
+
+	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> new OreFeature(OreFeatureConfig.CODEC) {
-			@Override
-			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
-				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
-				boolean dimensionCriteria = false;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:mineingdim")))
-					dimensionCriteria = true;
-				if (!dimensionCriteria)
-					return false;
-				return super.generate(world, generator, rand, pos, config);
-			}
-		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.STONE.getDefaultState().getBlock()) {
-			public boolean test(BlockState blockAt, Random random) {
-				boolean blockCriteria = false;
-				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
-					blockCriteria = true;
-				return blockCriteria;
-			}
-
-			protected IRuleTestType<?> getType() {
-				return IRuleTestType.BLOCK_MATCH;
-			}
-		}, block.getDefaultState(), 1)).range(6).square().func_242731_b(4));
+		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> configuredFeature);
 	}
+
 }

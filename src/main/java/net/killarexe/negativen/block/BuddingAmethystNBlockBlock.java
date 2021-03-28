@@ -1,36 +1,17 @@
 
 package net.killarexe.negativen.block;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItem;
-import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
-
-import net.killarexe.negativen.procedures.BuddingAmethystNBlockUpdateTickProcedure;
-import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
-import net.killarexe.negativen.NegativeNModElements;
-
-import java.util.Random;
-import java.util.Map;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
 public class BuddingAmethystNBlockBlock extends NegativeNModElements.ModElement {
+
 	@ObjectHolder("negative_n:budding_amethyst_n_block")
 	public static final Block block = null;
+
 	public BuddingAmethystNBlockBlock(NegativeNModElements instance) {
 		super(instance, 254);
+
 	}
 
 	@Override
@@ -39,9 +20,15 @@ public class BuddingAmethystNBlockBlock extends NegativeNModElements.ModElement 
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNBlocksItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
+
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GLASS).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).tickRandomly());
+			super(
+
+					Block.Properties.create(Material.ROCK).sound(SoundType.GLASS).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0)
+							.tickRandomly());
+
 			setRegistryName("budding_amethyst_n_block");
 		}
 
@@ -52,6 +39,7 @@ public class BuddingAmethystNBlockBlock extends NegativeNModElements.ModElement 
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -66,12 +54,16 @@ public class BuddingAmethystNBlockBlock extends NegativeNModElements.ModElement 
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
+
 				BuddingAmethystNBlockUpdateTickProcedure.executeProcedure($_dependencies);
 			}
 		}
+
 	}
+
 }

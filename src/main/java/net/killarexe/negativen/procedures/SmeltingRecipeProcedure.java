@@ -1,31 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.CapabilityItemHandler;
-
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.item.ItemStack;
-
-import net.killarexe.negativen.item.CoalNItem;
-import net.killarexe.negativen.block.CoalBlockBlock;
-import net.killarexe.negativen.block.BoisNBlock;
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.Map;
-
 @NegativeNModElements.ModElement.Tag
 public class SmeltingRecipeProcedure extends NegativeNModElements.ModElement {
+
 	public SmeltingRecipeProcedure(NegativeNModElements instance) {
 		super(instance, 1007);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -49,10 +29,12 @@ public class SmeltingRecipeProcedure extends NegativeNModElements.ModElement {
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure SmeltingRecipe!");
 			return;
 		}
+
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if ((((new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
@@ -186,5 +168,7 @@ public class SmeltingRecipeProcedure extends NegativeNModElements.ModElement {
 						SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 			}
 		}
+
 	}
+
 }

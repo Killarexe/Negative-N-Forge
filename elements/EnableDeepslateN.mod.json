@@ -1,0 +1,12 @@
+{
+  "_fv": 17,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "deepslate_n",
+    "description": "Enable Deepslate-N Generation",
+    "category": "MISC",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 0
+  }
+}

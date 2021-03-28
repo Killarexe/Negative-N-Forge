@@ -1,35 +1,17 @@
 
 package net.killarexe.negativen.block;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.common.ToolType;
-
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
-
-import net.killarexe.negativen.procedures.GetRedstoneNProcedure;
-import net.killarexe.negativen.itemgroup.NegativeNRedstoneNItemGroup;
-import net.killarexe.negativen.NegativeNModElements;
-
-import java.util.Map;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
 public class RedstoneLampNBlock extends NegativeNModElements.ModElement {
+
 	@ObjectHolder("negative_n:redstone_lamp_n")
 	public static final Block block = null;
+
 	public RedstoneLampNBlock(NegativeNModElements instance) {
 		super(instance, 151);
+
 	}
 
 	@Override
@@ -38,15 +20,21 @@ public class RedstoneLampNBlock extends NegativeNModElements.ModElement {
 		elements.items.add(
 				() -> new BlockItem(block, new Item.Properties().group(NegativeNRedstoneNItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
+
 		public CustomBlock() {
-			super(Block.Properties.create(Material.GLASS).sound(SoundType.GLASS).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(0)
-					.harvestTool(ToolType.PICKAXE));
+			super(
+
+					Block.Properties.create(Material.GLASS).sound(SoundType.GLASS).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0)
+							.harvestLevel(0).harvestTool(ToolType.PICKAXE).setRequiresTool());
+
 			setRegistryName("redstone_lamp_n");
 		}
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -61,10 +49,12 @@ public class RedstoneLampNBlock extends NegativeNModElements.ModElement {
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
+
 				GetRedstoneNProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -80,12 +70,16 @@ public class RedstoneLampNBlock extends NegativeNModElements.ModElement {
 			}
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
+
 				GetRedstoneNProcedure.executeProcedure($_dependencies);
 			}
 		}
+
 	}
+
 }

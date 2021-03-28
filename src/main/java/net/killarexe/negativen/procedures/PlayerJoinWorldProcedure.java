@@ -1,33 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraftforge.fml.server.ServerLifecycleHooks;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ChatType;
-import net.minecraft.util.Util;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
-
-import net.killarexe.negativen.NegativeNModVariables;
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.Map;
-import java.util.Iterator;
-import java.util.HashMap;
-
 @NegativeNModElements.ModElement.Tag
 public class PlayerJoinWorldProcedure extends NegativeNModElements.ModElement {
+
 	public PlayerJoinWorldProcedure(NegativeNModElements instance) {
 		super(instance, 886);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -42,8 +20,10 @@ public class PlayerJoinWorldProcedure extends NegativeNModElements.ModElement {
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure PlayerJoinWorld!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if (((NegativeNModVariables.isNotCompete) == (true))) {
 			if (!world.isRemote()) {
 				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
@@ -66,6 +46,7 @@ public class PlayerJoinWorldProcedure extends NegativeNModElements.ModElement {
 				}
 			}
 		}
+
 	}
 
 	@SubscribeEvent
@@ -80,4 +61,5 @@ public class PlayerJoinWorldProcedure extends NegativeNModElements.ModElement {
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
+
 }

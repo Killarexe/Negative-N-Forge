@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "negativen:blocks/peony_n_bottom",
-    "particle": "negativen:blocks/peony_n_bottom"
+    "cross": "negative_n:blocks/peony_n_bottom",
+    "particle": "negative_n:blocks/peony_n_bottom"
   }
 }

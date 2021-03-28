@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[35,)"
+loaderVersion="[36,)"
 license="Creative Commons Attribution-NonCommercial 3.0"
 
 [[mods]]
@@ -17,14 +17,14 @@ A mod create by Killar.exe and Fuzy with new things to discover!
 [[dependencies.negative_n]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.4]"
+    versionRange="[1.16.5]"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.negative_n]]
     modId="forge"
     mandatory=true
-    versionRange="[35.1.4]"
+    versionRange="[36.1.0]"
     ordering="NONE"
     side="BOTH"
 

@@ -3,19 +3,13 @@ package net.killarexe.negativen.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
-import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NeagtiveNOuilsItemGroup;
 import net.killarexe.negativen.NegativeNModElements;
-
-import java.util.List;
 
 @NegativeNModElements.ModElement.Tag
 public class UpdateritemItem extends NegativeNModElements.ModElement {
@@ -63,12 +57,6 @@ public class UpdateritemItem extends NegativeNModElements.ModElement {
 		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 			return 1F;
-		}
-
-		@Override
-		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
-			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Type: null"));
 		}
 	}
 }

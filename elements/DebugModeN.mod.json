@@ -1,8 +1,9 @@
 {
-  "_fv": 15,
+  "_fv": 17,
   "_type": "gamerule",
   "definition": {
     "type": "Logic",
+    "displayName": "Set Negative-N Debug Mod",
     "description": "Set Negative-N Debug Mod",
     "category": "PLAYER",
     "defaultValueLogic": false,

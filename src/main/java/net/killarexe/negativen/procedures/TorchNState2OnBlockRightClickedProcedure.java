@@ -1,28 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Direction;
-import net.minecraft.state.EnumProperty;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
-
-import net.killarexe.negativen.block.TorchNState1Block;
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.Map;
-
 @NegativeNModElements.ModElement.Tag
 public class TorchNState2OnBlockRightClickedProcedure extends NegativeNModElements.ModElement {
+
 	public TorchNState2OnBlockRightClickedProcedure(NegativeNModElements instance) {
 		super(instance, 677);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -51,11 +34,13 @@ public class TorchNState2OnBlockRightClickedProcedure extends NegativeNModElemen
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure TorchNState2OnBlockRightClicked!");
 			return;
 		}
+
 		Direction direction = (Direction) dependencies.get("direction");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if ((direction == Direction.UP)) {
 			if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
 					|| ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
@@ -176,5 +161,7 @@ public class TorchNState2OnBlockRightClickedProcedure extends NegativeNModElemen
 				}
 			}
 		}
+
 	}
+
 }

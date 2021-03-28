@@ -1,33 +1,11 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-
-import net.killarexe.negativen.block.WeatheredCutCopperNStairsBlock;
-import net.killarexe.negativen.block.WeatheredCutCopperNSlabBlock;
-import net.killarexe.negativen.block.WeatheredCutCopperNBlockBlock;
-import net.killarexe.negativen.block.WeatheredCopperNBlockBlock;
-import net.killarexe.negativen.block.SemiWeatheredCutCopperNStairsBlock;
-import net.killarexe.negativen.block.SemiWeatheredCutCopperNSlabBlock;
-import net.killarexe.negativen.block.SemiWeatheredCutCopperNBlockBlock;
-import net.killarexe.negativen.block.SemiWeatheredCopperNBlockBlock;
-import net.killarexe.negativen.block.LightlyWeatheredCutCopperNStairsBlock;
-import net.killarexe.negativen.block.LightlyWeatheredCutCopperNSlabBlock;
-import net.killarexe.negativen.block.LightlyWeatheredCutCopperBlockBlock;
-import net.killarexe.negativen.block.LightlyWeatheredCopperNBlockBlock;
-import net.killarexe.negativen.block.CutCopperNStairsBlock;
-import net.killarexe.negativen.block.CutCopperNSlabBlock;
-import net.killarexe.negativen.block.CutCopperNBlockBlock;
-import net.killarexe.negativen.block.CopperNBlockBlock;
-import net.killarexe.negativen.NegativeNModElements;
-import net.killarexe.negativen.NegativeNMod;
-
-import java.util.Map;
-
 @NegativeNModElements.ModElement.Tag
 public class CopperNAgeProcedureProcedure extends NegativeNModElements.ModElement {
+
 	public CopperNAgeProcedureProcedure(NegativeNModElements instance) {
 		super(instance, 825);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -51,10 +29,12 @@ public class CopperNAgeProcedureProcedure extends NegativeNModElements.ModElemen
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure CopperNAgeProcedure!");
 			return;
 		}
+
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CopperNBlockBlock.block.getDefaultState().getBlock())) {
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), LightlyWeatheredCopperNBlockBlock.block.getDefaultState(), 3);
 		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LightlyWeatheredCopperNBlockBlock.block
@@ -91,5 +71,7 @@ public class CopperNAgeProcedureProcedure extends NegativeNModElements.ModElemen
 				.getDefaultState().getBlock())) {
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WeatheredCutCopperNStairsBlock.block.getDefaultState(), 3);
 		}
+
 	}
+
 }
