@@ -1,24 +1,29 @@
 
 package net.killarexe.negativen.item;
 
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.item.Rarity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.block.BlockState;
+
+import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
+import net.killarexe.negativen.NegativeNModElements;
+
 @NegativeNModElements.ModElement.Tag
 public class StartPearlItem extends NegativeNModElements.ModElement {
-
 	@ObjectHolder("negative_n:start_pearl")
 	public static final Item block = null;
-
 	public StartPearlItem(NegativeNModElements instance) {
 		super(instance, 22);
-
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
-
 	public static class ItemCustom extends Item {
-
 		public ItemCustom() {
 			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("start_pearl");
@@ -38,7 +43,5 @@ public class StartPearlItem extends NegativeNModElements.ModElement {
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 			return 1F;
 		}
-
 	}
-
 }

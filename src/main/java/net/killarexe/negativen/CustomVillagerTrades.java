@@ -32,6 +32,7 @@ import net.minecraft.entity.merchant.villager.VillagerTrades;
 import net.minecraftforge.common.BasicTrade;
 import net.minecraft.item.ItemStack;
 import net.killarexe.negativen.item.*;
+import net.killarexe.negativen.block.*;
 import net.minecraft.item.Items;
 
 @NegativeNModElements.ModElement.Tag
@@ -65,9 +66,46 @@ public class CustomVillagerTrades extends NegativeNModElements.ModElement {
 	public void addCustomTrade(VillagerTradesEvent event){
 		if(event.getType() == VillagerProfession.TOOLSMITH){
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
-			trades.add(new BasicTrade(new ItemStack(Items.EMERALD, 32), new ItemStack(Items.NETHERITE_HOE), new ItemStack(HoeenDiamantNItem.block), 1, 0, 0));
-			trades.add(new BasicTrade(new ItemStack(Items.EMERALD, 32), new ItemStack(Items.NETHERITE_PICKAXE), new ItemStack(PiocheenDiamantNItem.block), 1, 0, 0));
-			trades.add(new BasicTrade(new ItemStack(Items.EMERALD, 32), new ItemStack(Items.NETHERITE_SHOVEL), new ItemStack(PelleenDiamantNItem.block), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 32), new ItemStack(HoeenDiamantNItem.block), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 32), new ItemStack(PiocheenDiamantNItem.block), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 32), new ItemStack(PelleenDiamantNItem.block), 1, 0, 0));
+		}else if(event.getType() == VillagerProfession.WEAPONSMITH){
+			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 32), new ItemStack(HacheendiamantNItem.block), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 32), new ItemStack(EpeeenDiamantNItem.block), 1, 0, 0));
+		}else if(event.getType() == VillagerProfession.ARMORER){
+			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 32), new ItemStack(ArnurendiamantinverseItem.helmet), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 32), new ItemStack(ArnurendiamantinverseItem.body), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 32), new ItemStack(ArnurendiamantinverseItem.legs), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 32), new ItemStack(ArnurendiamantinverseItem.boots), 1, 0, 0));	
+		}else if(event.getType() == VillagerProfession.CLERIC){
+			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 8), new ItemStack(Items.ENDER_EYE), new ItemStack(StarteyeItem.block), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 8), new ItemStack(Items.LAPIS_BLOCK), new ItemStack(LapisLazuliNItem.block, 9), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 8), new ItemStack(Items.REDSTONE, 16), new ItemStack(RedstoneNItem.block, 16), 1, 0, 0));
+		}else if(event.getType() == VillagerProfession.FARMER){
+			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 3), new ItemStack(Items.WHEAT, 16), new ItemStack(WheatNItem.block, 8), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 5), new ItemStack(Items.POTATO, 16), new ItemStack(PotatoNItem.block, 8), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 7), new ItemStack(Items.BEETROOT, 16), new ItemStack(BeetrootsNItem.block), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 4), new ItemStack(Items.CARROT,16), new ItemStack(CarrotsNItem.block), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 10), new ItemStack(Items.PUMPKIN), new ItemStack(PumpkinNBlock.block), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 10), new ItemStack(Items.MELON), new ItemStack(MelonNBlock.block), 1, 0, 0));
+		}else if(event.getType() == VillagerProfession.FLETCHER){
+			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 32), new ItemStack(BowNItem.block), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 16), new ItemStack(Items.ARROW, 16), new ItemStack(ArrowNItem.block, 16), 1, 0, 0));
+		}else if(event.getType() == VillagerProfession.BUTCHER){
+			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 8), new ItemStack(ChickenNFoodItem.block, 5), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 5), new ItemStack(BeefrawNItem.block, 5), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 6), new ItemStack(PorkchoprawNItem.block, 5), 1, 0, 0));
+		}else if(event.getType() == VillagerProfession.LIBRARIAN){
+			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 2), new ItemStack(PaperNItem.block, 5), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 4), new ItemStack(BookNItem.block, 5), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 9), new ItemStack(BookshelfNBlock.block, 5), 1, 0, 0));
 		}
 	}
 }

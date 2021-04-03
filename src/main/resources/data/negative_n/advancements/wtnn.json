@@ -1,6 +1,6 @@
 {
   "display": {
-    "background": "minecraft:textures/block/stone.png",
+    "background": "negative_n:textures/deepslate_n_top.png",
     "icon": {
       "item": "negative_n:diamond_n"
     },

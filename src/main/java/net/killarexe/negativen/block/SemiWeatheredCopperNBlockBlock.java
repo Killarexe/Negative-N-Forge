@@ -1,17 +1,37 @@
 
 package net.killarexe.negativen.block;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolType;
+
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.loot.LootContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
+
+import net.killarexe.negativen.procedures.CopperNAgeProcedureProcedure;
+import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
+import net.killarexe.negativen.NegativeNModElements;
+
+import java.util.Random;
+import java.util.Map;
+import java.util.List;
+import java.util.HashMap;
+import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
 public class SemiWeatheredCopperNBlockBlock extends NegativeNModElements.ModElement {
-
 	@ObjectHolder("negative_n:semi_weathered_copper_n_block")
 	public static final Block block = null;
-
 	public SemiWeatheredCopperNBlockBlock(NegativeNModElements instance) {
 		super(instance, 245);
-
 	}
 
 	@Override
@@ -20,21 +40,15 @@ public class SemiWeatheredCopperNBlockBlock extends NegativeNModElements.ModElem
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNBlocksItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
-
 	public static class CustomBlock extends Block {
-
 		public CustomBlock() {
-			super(
-
-					Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1.3f, 10f).setLightLevel(s -> 0)
-							.harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool());
-
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1.3f, 10f).setLightLevel(s -> 0).harvestLevel(2)
+					.harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("semi_weathered_copper_n_block");
 		}
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -58,17 +72,13 @@ public class SemiWeatheredCopperNBlockBlock extends NegativeNModElements.ModElem
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				CopperNAgeProcedureProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 1200000);
 		}
-
 	}
-
 }

@@ -1,9 +1,17 @@
 
 package net.killarexe.negativen.itemgroup;
 
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+
+import net.killarexe.negativen.item.GoldNSwordItem;
+import net.killarexe.negativen.NegativeNModElements;
+
 @NegativeNModElements.ModElement.Tag
 public class NegativeNCombatItemGroup extends NegativeNModElements.ModElement {
-
 	public NegativeNCombatItemGroup(NegativeNModElements instance) {
 		super(instance, 378);
 	}
@@ -23,7 +31,5 @@ public class NegativeNCombatItemGroup extends NegativeNModElements.ModElement {
 			}
 		};
 	}
-
 	public static ItemGroup tab;
-
 }

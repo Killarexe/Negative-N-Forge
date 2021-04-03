@@ -1,11 +1,43 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraftforge.items.IItemHandlerModifiable;
+import net.minecraftforge.items.CapabilityItemHandler;
+
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.block.Blocks;
+
+import net.killarexe.negativen.item.StringNItem;
+import net.killarexe.negativen.item.NegativeDustItem;
+import net.killarexe.negativen.item.Iron_NIngotItem;
+import net.killarexe.negativen.item.DiamantinverseItem;
+import net.killarexe.negativen.item.CoalNItem;
+import net.killarexe.negativen.item.BucketNItem;
+import net.killarexe.negativen.item.BlazeNroadItem;
+import net.killarexe.negativen.block.TNTNBlock;
+import net.killarexe.negativen.block.SpruceLogNBlock;
+import net.killarexe.negativen.block.OakSaplingNBlock;
+import net.killarexe.negativen.block.Minerai_de_diamant_inverseBlock;
+import net.killarexe.negativen.block.CreateNBlock;
+import net.killarexe.negativen.block.CreateBlock;
+import net.killarexe.negativen.block.ChestNBlock;
+import net.killarexe.negativen.block.CactusNBlock;
+import net.killarexe.negativen.block.BookshelfNBlock;
+import net.killarexe.negativen.block.BoisNBlock;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
+
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Map;
+
 @NegativeNModElements.ModElement.Tag
 public class FusionnatorProceedProcedure extends NegativeNModElements.ModElement {
-
 	public FusionnatorProceedProcedure(NegativeNModElements instance) {
 		super(instance, 375);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -29,12 +61,10 @@ public class FusionnatorProceedProcedure extends NegativeNModElements.ModElement
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure FusionnatorProceed!");
 			return;
 		}
-
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if (((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -2065,7 +2095,5 @@ public class FusionnatorProceedProcedure extends NegativeNModElements.ModElement
 				}
 			}
 		}
-
 	}
-
 }

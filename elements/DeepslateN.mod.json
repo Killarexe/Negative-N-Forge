@@ -110,7 +110,7 @@
         "value": "CUSTOM:StoneN"
       }
     ],
-    "frequencyPerChunks": 32,
+    "frequencyPerChunks": 4,
     "frequencyOnChunk": 32,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 12

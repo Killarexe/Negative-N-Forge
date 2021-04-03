@@ -1,22 +1,89 @@
 
 package net.killarexe.negativen.block;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.items.wrapper.SidedInvWrapper;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.ToolType;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.World;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Rotation;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.Mirror;
+import net.minecraft.util.Hand;
+import net.minecraft.util.Direction;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.LockableLootTileEntity;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.DirectionProperty;
+import net.minecraft.network.play.server.SUpdateTileEntityPacket;
+import net.minecraft.network.PacketBuffer;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.loot.LootContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.BlockItem;
+import net.minecraft.inventory.container.INamedContainerProvider;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.ItemStackHelper;
+import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.HorizontalBlock;
+import net.minecraft.block.FallingBlock;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
+
+import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
+import net.killarexe.negativen.gui.AnvilNGuiGui;
+import net.killarexe.negativen.NegativeNModElements;
+
+import javax.annotation.Nullable;
+
+import java.util.stream.IntStream;
+import java.util.List;
+import java.util.Collections;
+
+import io.netty.buffer.Unpooled;
 
 @NegativeNModElements.ModElement.Tag
 public class AnvilNBlock extends NegativeNModElements.ModElement {
-
 	@ObjectHolder("negative_n:anvil_n")
 	public static final Block block = null;
-
 	@ObjectHolder("negative_n:anvil_n")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-
 	public AnvilNBlock(NegativeNModElements instance) {
 		super(instance, 119);
-
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
-
 	}
 
 	@Override
@@ -25,32 +92,23 @@ public class AnvilNBlock extends NegativeNModElements.ModElement {
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNDecorationBlocksItemGroup.tab))
 				.setRegistryName(block.getRegistryName()));
 	}
-
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
 			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("anvil_n"));
 		}
 	}
-
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
-
 	public static class CustomBlock extends FallingBlock {
-
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
-
 		public CustomBlock() {
-			super(
-
-					Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(3)
-							.harvestTool(ToolType.PICKAXE).setRequiresTool().notSolid().setOpaque((bs, br, bp) -> false));
-
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(3)
+					.harvestTool(ToolType.PICKAXE).setRequiresTool().notSolid().setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
-
 			setRegistryName("anvil_n");
 		}
 
@@ -65,29 +123,13 @@ public class AnvilNBlock extends NegativeNModElements.ModElement {
 			switch ((Direction) state.get(FACING)) {
 				case SOUTH :
 				default :
-					return VoxelShapes.or(makeCuboidShape(16, 0, 16, 3.2, 16, 3.2)
-
-					)
-
-							.withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(16, 0, 16, 3.2, 16, 3.2)).withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
-					return VoxelShapes.or(makeCuboidShape(0, 0, 0, 12.8, 16, 12.8)
-
-					)
-
-							.withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(0, 0, 0, 12.8, 16, 12.8)).withOffset(offset.x, offset.y, offset.z);
 				case EAST :
-					return VoxelShapes.or(makeCuboidShape(16, 0, 0, 3.2, 16, 12.8)
-
-					)
-
-							.withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(16, 0, 0, 3.2, 16, 12.8)).withOffset(offset.x, offset.y, offset.z);
 				case WEST :
-					return VoxelShapes.or(makeCuboidShape(0, 0, 16, 12.8, 16, 3.2)
-
-					)
-
-							.withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(0, 0, 16, 12.8, 16, 3.2)).withOffset(offset.x, offset.y, offset.z);
 			}
 		}
 
@@ -112,7 +154,6 @@ public class AnvilNBlock extends NegativeNModElements.ModElement {
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -123,11 +164,9 @@ public class AnvilNBlock extends NegativeNModElements.ModElement {
 		public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity entity, Hand hand,
 				BlockRayTraceResult hit) {
 			super.onBlockActivated(state, world, pos, entity, hand, hit);
-
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-
 			if (entity instanceof ServerPlayerEntity) {
 				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
 					@Override
@@ -142,7 +181,6 @@ public class AnvilNBlock extends NegativeNModElements.ModElement {
 					}
 				}, new BlockPos(x, y, z));
 			}
-
 			return ActionResultType.SUCCESS;
 		}
 
@@ -177,7 +215,6 @@ public class AnvilNBlock extends NegativeNModElements.ModElement {
 					InventoryHelper.dropInventoryItems(world, pos, (CustomTileEntity) tileentity);
 					world.updateComparatorOutputLevel(pos, this);
 				}
-
 				super.onReplaced(state, world, pos, newState, isMoving);
 			}
 		}
@@ -195,13 +232,10 @@ public class AnvilNBlock extends NegativeNModElements.ModElement {
 			else
 				return 0;
 		}
-
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
-
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -209,23 +243,18 @@ public class AnvilNBlock extends NegativeNModElements.ModElement {
 		@Override
 		public void read(BlockState blockState, CompoundNBT compound) {
 			super.read(blockState, compound);
-
 			if (!this.checkLootAndRead(compound)) {
 				this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 			}
-
 			ItemStackHelper.loadAllItems(compound, this.stacks);
-
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT compound) {
 			super.write(compound);
-
 			if (!this.checkLootAndWrite(compound)) {
 				ItemStackHelper.saveAllItems(compound, this.stacks);
 			}
-
 			return compound;
 		}
 
@@ -306,14 +335,11 @@ public class AnvilNBlock extends NegativeNModElements.ModElement {
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
 			return true;
 		}
-
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
-
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 				return handlers[facing.ordinal()].cast();
-
 			return super.getCapability(capability, facing);
 		}
 
@@ -323,7 +349,5 @@ public class AnvilNBlock extends NegativeNModElements.ModElement {
 			for (LazyOptional<? extends IItemHandler> handler : handlers)
 				handler.invalidate();
 		}
-
 	}
-
 }

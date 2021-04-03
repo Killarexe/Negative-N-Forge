@@ -1,24 +1,41 @@
 
 package net.killarexe.negativen.item;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Direction;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.item.Rarity;
+import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.block.BlockState;
+
+import net.killarexe.negativen.procedures.SugarCaneNRightClickedOnBlockProcedure;
+import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
+import net.killarexe.negativen.NegativeNModElements;
+
+import java.util.Map;
+import java.util.HashMap;
+
 @NegativeNModElements.ModElement.Tag
 public class SugarCaneNItem extends NegativeNModElements.ModElement {
-
 	@ObjectHolder("negative_n:sugar_cane_n_item")
 	public static final Item block = null;
-
 	public SugarCaneNItem(NegativeNModElements instance) {
 		super(instance, 43);
-
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
-
 	public static class ItemCustom extends Item {
-
 		public ItemCustom() {
 			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("sugar_cane_n_item");
@@ -58,18 +75,14 @@ public class SugarCaneNItem extends NegativeNModElements.ModElement {
 			ItemStack itemstack = context.getItem();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				SugarCaneNRightClickedOnBlockProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
-
 	}
-
 }

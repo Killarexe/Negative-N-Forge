@@ -1,13 +1,17 @@
 package net.killarexe.negativen.world;
 
-import net.killarexe.negativen.NegativeNMod;
+import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
+
+import net.minecraft.world.GameRules;
+
+import net.killarexe.negativen.NegativeNModElements;
+
+import java.lang.reflect.Method;
 
 @NegativeNModElements.ModElement.Tag
 public class CaveGameGameRule extends NegativeNModElements.ModElement {
-
 	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("caveGame", GameRules.Category.UPDATES,
 			create(false));
-
 	public CaveGameGameRule(NegativeNModElements instance) {
 		super(instance, 989);
 	}

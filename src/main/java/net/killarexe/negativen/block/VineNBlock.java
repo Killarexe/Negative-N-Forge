@@ -1,17 +1,52 @@
 
 package net.killarexe.negativen.block;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.IWorldReader;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Rotation;
+import net.minecraft.util.Mirror;
+import net.minecraft.util.Direction;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.DirectionProperty;
+import net.minecraft.loot.LootContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.BlockItem;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.HorizontalBlock;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
+
+import net.killarexe.negativen.procedures.VineNUpdateTickProcedure;
+import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
+import net.killarexe.negativen.NegativeNModElements;
+
+import java.util.Random;
+import java.util.Map;
+import java.util.List;
+import java.util.HashMap;
+import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
 public class VineNBlock extends NegativeNModElements.ModElement {
-
 	@ObjectHolder("negative_n:vine_n")
 	public static final Block block = null;
-
 	public VineNBlock(NegativeNModElements instance) {
 		super(instance, 84);
-
 	}
 
 	@Override
@@ -26,19 +61,12 @@ public class VineNBlock extends NegativeNModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
-
 	public static class CustomBlock extends Block {
-
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
-
 		public CustomBlock() {
-			super(
-
-					Block.Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(0.5f, 10f).setLightLevel(s -> 0)
-							.doesNotBlockMovement().notSolid().tickRandomly().setOpaque((bs, br, bp) -> false));
-
+			super(Block.Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(0.5f, 10f).setLightLevel(s -> 0)
+					.doesNotBlockMovement().notSolid().tickRandomly().setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
-
 			setRegistryName("vine_n");
 		}
 
@@ -83,7 +111,6 @@ public class VineNBlock extends NegativeNModElements.ModElement {
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -98,16 +125,12 @@ public class VineNBlock extends NegativeNModElements.ModElement {
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				VineNUpdateTickProcedure.executeProcedure($_dependencies);
 			}
 		}
-
 	}
-
 }

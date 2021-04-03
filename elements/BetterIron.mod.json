@@ -2,7 +2,7 @@
   "_fv": 17,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Better Iron?",
+    "achievementName": "Acquire Software",
     "achievementDescription": "Smelt Iron-N Ore to get Iron-N Ingot",
     "achievementIcon": {
       "value": "CUSTOM:Iron_NIngot"
@@ -25,7 +25,15 @@
       "Iron_NArmorLeggingsRecipe",
       "Iron_NArmorBootsRecipe",
       "SmeltIronN",
-      "Negafilntcraft"
+      "Negafilntcraft",
+      "IngerCraft",
+      "IngerCraft2",
+      "Flint5Steel",
+      "Flint6Steel",
+      "IronNNuggetCraft",
+      "IronNCraft2",
+      "Updater",
+      "UpdaterCraft"
     ],
     "rewardFunction": "No function",
     "rewardXP": 1,

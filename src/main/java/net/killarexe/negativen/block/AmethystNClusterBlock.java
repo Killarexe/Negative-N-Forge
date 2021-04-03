@@ -1,17 +1,45 @@
 
 package net.killarexe.negativen.block;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.common.ToolType;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Rotation;
+import net.minecraft.util.Mirror;
+import net.minecraft.util.Direction;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.DirectionProperty;
+import net.minecraft.loot.LootContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.BlockItem;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.DirectionalBlock;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
+
+import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
+import net.killarexe.negativen.item.AmethystNShardItem;
+import net.killarexe.negativen.NegativeNModElements;
+
+import java.util.List;
+import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
 public class AmethystNClusterBlock extends NegativeNModElements.ModElement {
-
 	@ObjectHolder("negative_n:amethyst_n_cluster")
 	public static final Block block = null;
-
 	public AmethystNClusterBlock(NegativeNModElements instance) {
 		super(instance, 255);
-
 	}
 
 	@Override
@@ -26,21 +54,13 @@ public class AmethystNClusterBlock extends NegativeNModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
-
 	public static class CustomBlock extends Block {
-
 		public static final DirectionProperty FACING = DirectionalBlock.FACING;
-
 		public CustomBlock() {
-			super(
-
-					Block.Properties.create(Material.ROCK).sound(SoundType.GLASS).hardnessAndResistance(0.05f, 10f).setLightLevel(s -> 0)
-							.harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().notSolid().tickRandomly()
-							.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true)
-							.setOpaque((bs, br, bp) -> false));
-
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.GLASS).hardnessAndResistance(0.05f, 10f).setLightLevel(s -> 0)
+					.harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().notSolid().tickRandomly()
+					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
-
 			setRegistryName("amethyst_n_cluster");
 		}
 
@@ -70,13 +90,10 @@ public class AmethystNClusterBlock extends NegativeNModElements.ModElement {
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(AmethystNShardItem.block, (int) (3)));
 		}
-
 	}
-
 }

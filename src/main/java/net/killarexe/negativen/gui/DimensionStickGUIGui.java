@@ -1,71 +1,86 @@
 
 package net.killarexe.negativen.gui;
 
-import net.killarexe.negativen.NegativeNMod;
+import net.minecraftforge.items.ItemStackHandler;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.fml.network.NetworkEvent;
+import net.minecraftforge.fml.network.IContainerFactory;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.DeferredWorkQueue;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.network.PacketBuffer;
+import net.minecraft.inventory.container.Slot;
+import net.minecraft.inventory.container.ContainerType;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.gui.ScreenManager;
+
+import net.killarexe.negativen.procedures.UnderworldBottonProcedure;
+import net.killarexe.negativen.procedures.StartBottonProcedure;
+import net.killarexe.negativen.procedures.OverworldbottonProcedure;
+import net.killarexe.negativen.procedures.NoneBottonProcedure;
+import net.killarexe.negativen.procedures.NetherbottonProcedure;
+import net.killarexe.negativen.procedures.NetherNBottonProcedure;
+import net.killarexe.negativen.procedures.MineindDimBottonProcedure;
+import net.killarexe.negativen.procedures.EndBottonProcedure;
+import net.killarexe.negativen.procedures.ClassicNetherNButtonProcedure;
+import net.killarexe.negativen.procedures.ClassicNetherButtonProcedure;
+import net.killarexe.negativen.procedures.ClassicNDimButtonProcedure;
+import net.killarexe.negativen.procedures.ClassicDimButtonProcedure;
+import net.killarexe.negativen.NegativeNModElements;
+
+import java.util.function.Supplier;
+import java.util.Map;
+import java.util.HashMap;
 
 @NegativeNModElements.ModElement.Tag
 public class DimensionStickGUIGui extends NegativeNModElements.ModElement {
-
 	public static HashMap guistate = new HashMap();
-
 	private static ContainerType<GuiContainerMod> containerType = null;
-
 	public DimensionStickGUIGui(NegativeNModElements instance) {
 		super(instance, 457);
-
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
 				GUISlotChangedMessage::handler);
-
 		containerType = new ContainerType<>(new GuiContainerModFactory());
-
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ContainerRegisterHandler());
-
 	}
-
 	private static class ContainerRegisterHandler {
-
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
 			event.getRegistry().register(containerType.setRegistryName("dimensionstickgui"));
 		}
-
 	}
-
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
 		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, DimensionStickGUIGuiWindow::new));
 	}
-
 	public static class GuiContainerModFactory implements IContainerFactory {
-
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
 			return new GuiContainerMod(id, inv, extraData);
 		}
-
 	}
 
 	public static class GuiContainerMod extends Container implements Supplier<Map<Integer, Slot>> {
-
 		World world;
 		PlayerEntity entity;
 		int x, y, z;
-
 		private IItemHandler internal;
-
 		private Map<Integer, Slot> customSlots = new HashMap<>();
-
 		private boolean bound = false;
-
 		public GuiContainerMod(int id, PlayerInventory inv, PacketBuffer extraData) {
 			super(containerType, id);
-
 			this.entity = inv.player;
 			this.world = inv.player.world;
-
 			this.internal = new ItemStackHandler(0);
-
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -73,7 +88,6 @@ public class DimensionStickGUIGui extends NegativeNModElements.ModElement {
 				this.y = pos.getY();
 				this.z = pos.getZ();
 			}
-
 		}
 
 		public Map<Integer, Slot> get() {
@@ -84,13 +98,10 @@ public class DimensionStickGUIGui extends NegativeNModElements.ModElement {
 		public boolean canInteractWith(PlayerEntity player) {
 			return true;
 		}
-
 	}
 
 	public static class ButtonPressedMessage {
-
 		int buttonID, x, y, z;
-
 		public ButtonPressedMessage(PacketBuffer buffer) {
 			this.buttonID = buffer.readInt();
 			this.x = buffer.readInt();
@@ -120,18 +131,14 @@ public class DimensionStickGUIGui extends NegativeNModElements.ModElement {
 				int x = message.x;
 				int y = message.y;
 				int z = message.z;
-
 				handleButtonAction(entity, buttonID, x, y, z);
 			});
 			context.setPacketHandled(true);
 		}
-
 	}
 
 	public static class GUISlotChangedMessage {
-
 		int slotID, x, y, z, changeType, meta;
-
 		public GUISlotChangedMessage(int slotID, int x, int y, int z, int changeType, int meta) {
 			this.slotID = slotID;
 			this.x = x;
@@ -169,162 +176,133 @@ public class DimensionStickGUIGui extends NegativeNModElements.ModElement {
 				int x = message.x;
 				int y = message.y;
 				int z = message.z;
-
 				handleSlotAction(entity, slotID, changeType, meta, x, y, z);
 			});
 			context.setPacketHandled(true);
 		}
-
 	}
-
 	static void handleButtonAction(PlayerEntity entity, int buttonID, int x, int y, int z) {
 		World world = entity.world;
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-
 		if (buttonID == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				OverworldbottonProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 1) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				NetherbottonProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 2) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				EndBottonProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 3) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				UnderworldBottonProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 4) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				NetherNBottonProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 5) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				StartBottonProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 6) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				NoneBottonProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 7) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				MineindDimBottonProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 8) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				ClassicDimButtonProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 9) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				ClassicNDimButtonProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 10) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				ClassicNetherButtonProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 11) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				ClassicNetherNButtonProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -332,11 +310,8 @@ public class DimensionStickGUIGui extends NegativeNModElements.ModElement {
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {
 		World world = entity.world;
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-
 	}
-
 }

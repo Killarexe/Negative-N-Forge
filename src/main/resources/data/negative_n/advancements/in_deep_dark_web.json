@@ -31,7 +31,13 @@
     }
   },
   "rewards": {
-    "experience": 3
+    "experience": 3,
+    "recipes": [
+      "negative_n:netherite_n_block_craft",
+      "negative_n:netherite_n_craft",
+      "negative_n:netherite_n_srap_smelt",
+      "negative_n:netherite_n_crap_smelt"
+    ]
   },
   "parent": "negative_n:inverseinfini"
 }

@@ -2,7 +2,7 @@
   "_fv": 17,
   "_type": "biome",
   "definition": {
-    "name": "Desert N",
+    "name": "Desert-N",
     "groundBlock": {
       "value": "CUSTOM:SandN"
     },
@@ -98,7 +98,6 @@
     "oceanRuinType": "NONE",
     "defaultFeatures": [
       "Caves",
-      "Structures",
       "Ores"
     ],
     "spawnEntries": [

@@ -2,7 +2,7 @@
   "_fv": 17,
   "_type": "biome",
   "definition": {
-    "name": "Spruce Forest N",
+    "name": "Spruce Forest-N",
     "groundBlock": {
       "value": "CUSTOM:BlockherbeN"
     },
@@ -98,7 +98,6 @@
     "oceanRuinType": "NONE",
     "defaultFeatures": [
       "Caves",
-      "Structures",
       "Ores"
     ],
     "spawnEntries": [

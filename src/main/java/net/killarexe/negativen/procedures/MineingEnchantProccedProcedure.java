@@ -1,11 +1,44 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.common.MinecraftForge;
+
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.GameType;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.Hand;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.AxeItem;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.client.network.play.NetworkPlayerInfo;
+import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
+import net.minecraft.client.Minecraft;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Block;
+
+import net.killarexe.negativen.enchantment.MineingEnchantment;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
+
+import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
+
 @NegativeNModElements.ModElement.Tag
 public class MineingEnchantProccedProcedure extends NegativeNModElements.ModElement {
-
 	public MineingEnchantProccedProcedure(NegativeNModElements instance) {
 		super(instance, 885);
-
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -35,13 +68,11 @@ public class MineingEnchantProccedProcedure extends NegativeNModElements.ModElem
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure MineingEnchantProcced!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		double posX = 0;
 		double posY = 0;
 		double posZ = 0;
@@ -100,7 +131,6 @@ public class MineingEnchantProccedProcedure extends NegativeNModElements.ModElem
 										if (world instanceof World) {
 											Block.spawnDrops(world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ))),
 													(World) world, new BlockPos((int) (posX), (int) (posY), (int) (posZ)));
-
 											world.destroyBlock(new BlockPos((int) (posX), (int) (posY), (int) (posZ)), false);
 										}
 										if (((new Object() {
@@ -201,7 +231,6 @@ public class MineingEnchantProccedProcedure extends NegativeNModElements.ModElem
 										if (world instanceof World) {
 											Block.spawnDrops(world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ))),
 													(World) world, new BlockPos((int) (posX), (int) (posY), (int) (posZ)));
-
 											world.destroyBlock(new BlockPos((int) (posX), (int) (posY), (int) (posZ)), false);
 										}
 										if (((new Object() {
@@ -298,7 +327,6 @@ public class MineingEnchantProccedProcedure extends NegativeNModElements.ModElem
 										if (world instanceof World) {
 											Block.spawnDrops(world.getBlockState(new BlockPos((int) (posX), (int) (posY), (int) (posZ))),
 													(World) world, new BlockPos((int) (posX), (int) (posY), (int) (posZ)));
-
 											world.destroyBlock(new BlockPos((int) (posX), (int) (posY), (int) (posZ)), false);
 										}
 										if (((new Object() {
@@ -363,7 +391,6 @@ public class MineingEnchantProccedProcedure extends NegativeNModElements.ModElem
 				}
 			}
 		}
-
 	}
 
 	@SubscribeEvent
@@ -383,5 +410,4 @@ public class MineingEnchantProccedProcedure extends NegativeNModElements.ModElem
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
-
 }

@@ -2,7 +2,7 @@
   "_fv": 17,
   "_type": "biome",
   "definition": {
-    "name": "Classic Biome",
+    "name": "Classic",
     "groundBlock": {
       "value": "CUSTOM:ClassicGrass"
     },
@@ -78,7 +78,6 @@
     "oceanRuinType": "NONE",
     "defaultFeatures": [
       "Caves",
-      "Structures",
       "Ores"
     ],
     "spawnEntries": []

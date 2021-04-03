@@ -2,7 +2,7 @@
   "_fv": 17,
   "_type": "biome",
   "definition": {
-    "name": "Oak Nforest",
+    "name": "Oak-N Forest",
     "groundBlock": {
       "value": "CUSTOM:BlockherbeN"
     },
@@ -29,8 +29,23 @@
       "value": -256,
       "falpha": 0.0
     },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": ""
+    },
     "moodSoundDelay": 0,
     "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "CUSTOM:RedstoneNParticle"
+    },
     "particlesProbability": 0.0,
     "biomeCategory": "FOREST",
     "parent": {
@@ -83,7 +98,6 @@
     "oceanRuinType": "NONE",
     "defaultFeatures": [
       "Caves",
-      "Structures",
       "Ores"
     ],
     "spawnEntries": [

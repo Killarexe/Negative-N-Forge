@@ -1,11 +1,29 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.common.MinecraftForge;
+
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.state.Property;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.block.BlockState;
+
+import net.killarexe.negativen.block.BarrilNOpenBlock;
+import net.killarexe.negativen.block.BarrilNBlock;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
+
+import java.util.Map;
+import java.util.HashMap;
+
 @NegativeNModElements.ModElement.Tag
 public class BarrilNOpenUpdateTickProcedure extends NegativeNModElements.ModElement {
-
 	public BarrilNOpenUpdateTickProcedure(NegativeNModElements instance) {
 		super(instance, 983);
-
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -30,17 +48,14 @@ public class BarrilNOpenUpdateTickProcedure extends NegativeNModElements.ModElem
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure BarrilNOpenUpdateTick!");
 			return;
 		}
-
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BarrilNOpenBlock.block.getDefaultState().getBlock())) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = BarrilNBlock.block.getDefaultState();
-
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -50,16 +65,13 @@ public class BarrilNOpenUpdateTickProcedure extends NegativeNModElements.ModElem
 						} catch (Exception e) {
 						}
 				}
-
 				TileEntity _te = world.getTileEntity(_bp);
 				CompoundNBT _bnbt = null;
 				if (_te != null) {
 					_bnbt = _te.write(new CompoundNBT());
 					_te.remove();
 				}
-
 				world.setBlockState(_bp, _bs, 3);
-
 				if (_bnbt != null) {
 					_te = world.getTileEntity(_bp);
 					if (_te != null) {
@@ -71,7 +83,6 @@ public class BarrilNOpenUpdateTickProcedure extends NegativeNModElements.ModElem
 				}
 			}
 		}
-
 	}
 
 	@SubscribeEvent
@@ -93,5 +104,4 @@ public class BarrilNOpenUpdateTickProcedure extends NegativeNModElements.ModElem
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
-
 }

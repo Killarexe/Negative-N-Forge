@@ -1,11 +1,41 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraftforge.items.ItemHandlerHelper;
+
+import net.minecraft.world.IWorld;
+import net.minecraft.world.GameType;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.client.network.play.NetworkPlayerInfo;
+import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
+import net.minecraft.client.Minecraft;
+
+import net.killarexe.negativen.item.WaterNbucketItem;
+import net.killarexe.negativen.item.WaterNBottleNItem;
+import net.killarexe.negativen.item.LavaNbucketItem;
+import net.killarexe.negativen.item.LavaNBottleNItem;
+import net.killarexe.negativen.item.GlassBottleNItem;
+import net.killarexe.negativen.item.BucketNItem;
+import net.killarexe.negativen.block.CauldronNWaterNFullBlock;
+import net.killarexe.negativen.block.CauldronNWaterN2Block;
+import net.killarexe.negativen.block.CauldronNWaterN1Block;
+import net.killarexe.negativen.block.CauldronNLavaNFullBlock;
+import net.killarexe.negativen.block.CauldronNLavaN1Block;
+import net.killarexe.negativen.block.CauldronNBlock;
+import net.killarexe.negativen.block.CaudronNLavaN2Block;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
+
+import java.util.Map;
+
 @NegativeNModElements.ModElement.Tag
 public class CauldronNRightClickProcedure extends NegativeNModElements.ModElement {
-
 	public CauldronNRightClickProcedure(NegativeNModElements instance) {
 		super(instance, 929);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -34,13 +64,11 @@ public class CauldronNRightClickProcedure extends NegativeNModElements.ModElemen
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure CauldronNRightClick!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CauldronNBlock.block.getDefaultState().getBlock())) {
 			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == new ItemStack(LavaNbucketItem.block, (int) (1)).getItem())) {
@@ -478,7 +506,5 @@ public class CauldronNRightClickProcedure extends NegativeNModElements.ModElemen
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), CauldronNWaterN2Block.block.getDefaultState(), 3);
 			}
 		}
-
 	}
-
 }

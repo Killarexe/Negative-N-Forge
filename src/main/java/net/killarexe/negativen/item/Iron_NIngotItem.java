@@ -1,24 +1,37 @@
 
 package net.killarexe.negativen.item;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.item.Rarity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.block.BlockState;
+
+import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
+import net.killarexe.negativen.NegativeNModElements;
+
+import java.util.List;
+
 @NegativeNModElements.ModElement.Tag
 public class Iron_NIngotItem extends NegativeNModElements.ModElement {
-
 	@ObjectHolder("negative_n:iron_n_ingot")
 	public static final Item block = null;
-
 	public Iron_NIngotItem(NegativeNModElements instance) {
 		super(instance, 13);
-
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
-
 	public static class ItemCustom extends Item {
-
 		public ItemCustom() {
 			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("iron_n_ingot");
@@ -50,7 +63,5 @@ public class Iron_NIngotItem extends NegativeNModElements.ModElement {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Iron-Negative"));
 		}
-
 	}
-
 }

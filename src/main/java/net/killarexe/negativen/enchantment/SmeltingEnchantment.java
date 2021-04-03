@@ -1,12 +1,18 @@
 
 package net.killarexe.negativen.enchantment;
 
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.enchantment.EnchantmentType;
+import net.minecraft.enchantment.Enchantment;
+
+import net.killarexe.negativen.NegativeNModElements;
+
 @NegativeNModElements.ModElement.Tag
 public class SmeltingEnchantment extends NegativeNModElements.ModElement {
-
 	@ObjectHolder("negative_n:smelting")
 	public static final Enchantment enchantment = null;
-
 	public SmeltingEnchantment(NegativeNModElements instance) {
 		super(instance, 781);
 	}
@@ -15,9 +21,7 @@ public class SmeltingEnchantment extends NegativeNModElements.ModElement {
 	public void initElements() {
 		elements.enchantments.add(() -> new CustomEnchantment(EquipmentSlotType.MAINHAND).setRegistryName("smelting"));
 	}
-
 	public static class CustomEnchantment extends Enchantment {
-
 		public CustomEnchantment(EquipmentSlotType... slots) {
 			super(Enchantment.Rarity.VERY_RARE, EnchantmentType.DIGGER, slots);
 		}
@@ -53,7 +57,5 @@ public class SmeltingEnchantment extends NegativeNModElements.ModElement {
 		public boolean isAllowedOnBooks() {
 			return true;
 		}
-
 	}
-
 }

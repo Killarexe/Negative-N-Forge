@@ -39,7 +39,7 @@
       "value": "CUSTOM:Portalblock"
     },
     "portalParticles": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "CUSTOM:RedstoneNParticle"
     },
     "portalLuminance": 0,
     "portalSound": {

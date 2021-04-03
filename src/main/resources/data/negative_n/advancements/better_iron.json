@@ -44,7 +44,15 @@
       "negative_n:iron_narmorleggingsrecipe",
       "negative_n:iron_narmorbootsrecipe",
       "negative_n:smeltironn",
-      "negative_n:negafilntcraft"
+      "negative_n:negafilntcraft",
+      "negative_n:inger_craft",
+      "negative_n:inger_craft_2",
+      "negative_n:flint_5_steel",
+      "negative_n:flint_6_steel",
+      "negative_n:iron_n_nugget_craft",
+      "negative_n:iron_n_craft_2",
+      "negative_n:updater",
+      "negative_n:updater_craft"
     ]
   },
   "parent": "negative_n:anewcoal"

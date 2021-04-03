@@ -1,11 +1,36 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraftforge.items.IItemHandlerModifiable;
+import net.minecraftforge.items.CapabilityItemHandler;
+
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.item.ItemStack;
+
+import net.killarexe.negativen.block.SprucePlanksNBlock;
+import net.killarexe.negativen.block.SpruceNFenceBlock;
+import net.killarexe.negativen.block.PlanchedeboisNBlock;
+import net.killarexe.negativen.block.OakNFenceBlock;
+import net.killarexe.negativen.block.JunglePlanksNBlock;
+import net.killarexe.negativen.block.JungleNFenceBlock;
+import net.killarexe.negativen.block.DarkoakplanksNBlock;
+import net.killarexe.negativen.block.DarkOakNFenceBlock;
+import net.killarexe.negativen.block.BirchplanksnBlock;
+import net.killarexe.negativen.block.BirchNFenceBlock;
+import net.killarexe.negativen.block.AcaciaplanksnBlock;
+import net.killarexe.negativen.block.AcaciaNFenceBlock;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
+
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Map;
+
 @NegativeNModElements.ModElement.Tag
 public class FenceProccedProcedure extends NegativeNModElements.ModElement {
-
 	public FenceProccedProcedure(NegativeNModElements instance) {
 		super(instance, 564);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -29,12 +54,10 @@ public class FenceProccedProcedure extends NegativeNModElements.ModElement {
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure FenceProcced!");
 			return;
 		}
-
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -485,7 +508,5 @@ public class FenceProccedProcedure extends NegativeNModElements.ModElement {
 				}
 			}
 		}
-
 	}
-
 }

@@ -1,9 +1,17 @@
 
 package net.killarexe.negativen.itemgroup;
 
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+
+import net.killarexe.negativen.item.RedstoneNItem;
+import net.killarexe.negativen.NegativeNModElements;
+
 @NegativeNModElements.ModElement.Tag
 public class NegativeNRedstoneNItemGroup extends NegativeNModElements.ModElement {
-
 	public NegativeNRedstoneNItemGroup(NegativeNModElements instance) {
 		super(instance, 718);
 	}
@@ -23,7 +31,5 @@ public class NegativeNRedstoneNItemGroup extends NegativeNModElements.ModElement
 			}
 		};
 	}
-
 	public static ItemGroup tab;
-
 }

@@ -1,12 +1,19 @@
 
 package net.killarexe.negativen.enchantment;
 
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.enchantment.EnchantmentType;
+import net.minecraft.enchantment.Enchantment;
+
+import net.killarexe.negativen.NegativeNModElements;
+
 @NegativeNModElements.ModElement.Tag
 public class BurnProtectionEnchantment extends NegativeNModElements.ModElement {
-
 	@ObjectHolder("negative_n:burn_protection")
 	public static final Enchantment enchantment = null;
-
 	public BurnProtectionEnchantment(NegativeNModElements instance) {
 		super(instance, 663);
 	}
@@ -15,9 +22,7 @@ public class BurnProtectionEnchantment extends NegativeNModElements.ModElement {
 	public void initElements() {
 		elements.enchantments.add(() -> new CustomEnchantment(EquipmentSlotType.MAINHAND).setRegistryName("burn_protection"));
 	}
-
 	public static class CustomEnchantment extends Enchantment {
-
 		public CustomEnchantment(EquipmentSlotType... slots) {
 			super(Enchantment.Rarity.VERY_RARE, EnchantmentType.ARMOR_CHEST, slots);
 		}
@@ -53,7 +58,5 @@ public class BurnProtectionEnchantment extends NegativeNModElements.ModElement {
 		public boolean isAllowedOnBooks() {
 			return true;
 		}
-
 	}
-
 }

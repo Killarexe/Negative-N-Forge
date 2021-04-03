@@ -2,15 +2,30 @@
   "_fv": 17,
   "_type": "biome",
   "definition": {
-    "name": "Cave Game Biome",
+    "name": "Cave Game",
     "groundBlock": {
       "value": "CUSTOM:GrassBlockCaveGame"
     },
     "undergroundBlock": {
       "value": "CUSTOM:CobblestoneCaveGame"
     },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": ""
+    },
     "moodSoundDelay": 0,
     "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "CUSTOM:RedstoneNParticle"
+    },
     "particlesProbability": 0.0,
     "biomeCategory": "NONE",
     "parent": {

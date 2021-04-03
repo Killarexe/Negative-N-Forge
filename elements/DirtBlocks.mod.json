@@ -4,8 +4,40 @@
   "definition": {
     "type": "Blocks",
     "items": [],
-    "blocks": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:TerreN"
+      },
+      {
+        "value": "CUSTOM:BlockherbeN"
+      },
+      {
+        "value": "CUSTOM:FarmlandN"
+      },
+      {
+        "value": "CUSTOM:FarmlandNMoist"
+      },
+      {
+        "value": "CUSTOM:GrassNPath"
+      },
+      {
+        "value": "CUSTOM:ClassicGrass"
+      },
+      {
+        "value": "CUSTOM:ClassicGrassN"
+      },
+      {
+        "value": "CUSTOM:GrassBlockCaveGame"
+      },
+      {
+        "value": "CUSTOM:BasaltN"
+      },
+      {
+        "value": "CUSTOM:PolishedBasaltN"
+      }
+    ],
     "functions": [],
+    "entities": [],
     "name": "dirt",
     "namespace": "forge"
   }

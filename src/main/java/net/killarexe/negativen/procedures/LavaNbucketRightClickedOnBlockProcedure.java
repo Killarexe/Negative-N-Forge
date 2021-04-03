@@ -1,11 +1,30 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.items.ItemHandlerHelper;
+
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
+
+import net.killarexe.negativen.item.LavaNbucketItem;
+import net.killarexe.negativen.item.BucketNItem;
+import net.killarexe.negativen.block.LavaNBlock;
+import net.killarexe.negativen.block.CauldronNBlock;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
+
+import java.util.Map;
+
 @NegativeNModElements.ModElement.Tag
 public class LavaNbucketRightClickedOnBlockProcedure extends NegativeNModElements.ModElement {
-
 	public LavaNbucketRightClickedOnBlockProcedure(NegativeNModElements instance) {
 		super(instance, 525);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -34,13 +53,11 @@ public class LavaNbucketRightClickedOnBlockProcedure extends NegativeNModElement
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure LavaNbucketRightClickedOnBlock!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if ((!((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CauldronNBlock.block.getDefaultState().getBlock()))) {
 			world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), LavaNBlock.block.getDefaultState(), 3);
 			if (entity instanceof PlayerEntity) {
@@ -63,7 +80,5 @@ public class LavaNbucketRightClickedOnBlockProcedure extends NegativeNModElement
 				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
 		}
-
 	}
-
 }

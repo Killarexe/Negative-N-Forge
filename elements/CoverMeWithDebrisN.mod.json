@@ -5,7 +5,7 @@
     "achievementName": "Cover Me With Debris-N",
     "achievementDescription": "Get a full Netherite-N Armor",
     "achievementIcon": {
-      "value": "CUSTOM:Arnurendiamantinverse.helmet"
+      "value": "CUSTOM:NetheriteNArmor.helmet"
     },
     "background": "Default",
     "disableDisplay": false,
@@ -20,6 +20,6 @@
     "parent": {
       "value": "CUSTOM:InDeepDarkWeb"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_in_inventory\" x=\"64\" y=\"58\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:Arnurendiamantinverse.helmet</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"59\" y=\"132\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }

@@ -1,17 +1,40 @@
 
 package net.killarexe.negativen.block;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolType;
+import net.minecraftforge.common.IPlantable;
+
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Direction;
+import net.minecraft.loot.LootContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItem;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
+
+import net.killarexe.negativen.procedures.TerreNUpdateTickProcedure;
+import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
+import net.killarexe.negativen.NegativeNModElements;
+
+import java.util.Random;
+import java.util.Map;
+import java.util.List;
+import java.util.HashMap;
+import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
 public class TerreNBlock extends NegativeNModElements.ModElement {
-
 	@ObjectHolder("negative_n:dirt_n")
 	public static final Block block = null;
-
 	public TerreNBlock(NegativeNModElements instance) {
 		super(instance, 186);
-
 	}
 
 	@Override
@@ -20,15 +43,10 @@ public class TerreNBlock extends NegativeNModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNBlocksItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
-
 	public static class CustomBlock extends Block {
-
 		public CustomBlock() {
-			super(
-
-					Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(0.6f, 10f).setLightLevel(s -> 0)
-							.harvestLevel(0).harvestTool(ToolType.SHOVEL).setRequiresTool().tickRandomly());
-
+			super(Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(0.6f, 10f).setLightLevel(s -> 0)
+					.harvestLevel(0).harvestTool(ToolType.SHOVEL).setRequiresTool().tickRandomly());
 			setRegistryName("dirt_n");
 		}
 
@@ -44,7 +62,6 @@ public class TerreNBlock extends NegativeNModElements.ModElement {
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -59,16 +76,12 @@ public class TerreNBlock extends NegativeNModElements.ModElement {
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				TerreNUpdateTickProcedure.executeProcedure($_dependencies);
 			}
 		}
-
 	}
-
 }

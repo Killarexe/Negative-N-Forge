@@ -2,15 +2,30 @@
   "_fv": 17,
   "_type": "biome",
   "definition": {
-    "name": "Soul Sand Desert N",
+    "name": "Soul Sand Desert-N",
     "groundBlock": {
       "value": "CUSTOM:SoulSoilN"
     },
     "undergroundBlock": {
       "value": "CUSTOM:SoulSand"
     },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": ""
+    },
     "moodSoundDelay": 0,
     "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "CUSTOM:RedstoneNParticle"
+    },
     "particlesProbability": 0.0,
     "biomeCategory": "NONE",
     "parent": {

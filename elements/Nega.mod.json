@@ -32,6 +32,9 @@
       },
       {
         "value": "CUSTOM:MontainsN"
+      },
+      {
+        "value": "CUSTOM:AcaciaNBiome"
       }
     ],
     "worldGenType": "Normal world gen",
@@ -47,7 +50,7 @@
     },
     "canRespawnHere": true,
     "hasFog": false,
-    "isDark": true,
+    "isDark": false,
     "doesWaterVaporize": true,
     "sleepResult": "ALLOW",
     "hasSkyLight": true,

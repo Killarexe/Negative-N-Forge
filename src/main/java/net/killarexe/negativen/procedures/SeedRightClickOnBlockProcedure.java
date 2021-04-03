@@ -1,11 +1,54 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.common.MinecraftForge;
+
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.GameType;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.client.network.play.NetworkPlayerInfo;
+import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
+import net.minecraft.client.Minecraft;
+import net.minecraft.block.Blocks;
+
+import net.killarexe.negativen.item.WheatNSeedItem;
+import net.killarexe.negativen.item.SweetBerryNItem;
+import net.killarexe.negativen.item.PotatoNItem;
+import net.killarexe.negativen.item.NetherWartNItem;
+import net.killarexe.negativen.item.CarrotsNItem;
+import net.killarexe.negativen.item.BeetrootSeedItem;
+import net.killarexe.negativen.block.WheatNStage0Block;
+import net.killarexe.negativen.block.TerreNBlock;
+import net.killarexe.negativen.block.SweetBerryNBushStage0Block;
+import net.killarexe.negativen.block.SoulSoilNBlock;
+import net.killarexe.negativen.block.SoulSandBlock;
+import net.killarexe.negativen.block.PotatoNStage0Block;
+import net.killarexe.negativen.block.NetherWartNStage0Block;
+import net.killarexe.negativen.block.FarmlandNMoistBlock;
+import net.killarexe.negativen.block.FarmlandNBlock;
+import net.killarexe.negativen.block.CarrotNStage0Block;
+import net.killarexe.negativen.block.BlockherbeNBlock;
+import net.killarexe.negativen.block.BeetrootsNStage0Block;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
+
+import java.util.Map;
+import java.util.HashMap;
+
 @NegativeNModElements.ModElement.Tag
 public class SeedRightClickOnBlockProcedure extends NegativeNModElements.ModElement {
-
 	public SeedRightClickOnBlockProcedure(NegativeNModElements instance) {
 		super(instance, 701);
-
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -35,13 +78,11 @@ public class SeedRightClickOnBlockProcedure extends NegativeNModElements.ModElem
 				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure SeedRightClickOnBlock!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(WheatNSeedItem.block, (int) (1)).getItem())) {
 			if (((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == FarmlandNBlock.block.getDefaultState().getBlock())
@@ -215,7 +256,6 @@ public class SeedRightClickOnBlockProcedure extends NegativeNModElements.ModElem
 				}
 			}
 		}
-
 	}
 
 	@SubscribeEvent
@@ -237,5 +277,4 @@ public class SeedRightClickOnBlockProcedure extends NegativeNModElements.ModElem
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
-
 }

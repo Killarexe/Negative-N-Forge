@@ -1,13 +1,4 @@
 {
-  "n-music_8bit": {
-    "category": "neutral",
-    "sounds": [
-      {
-        "name": "negative_n:seq_bgm_vs_n_2_8-bit",
-        "stream": false
-      }
-    ]
-  },
   "easter_egg": {
     "category": "neutral",
     "sounds": [
@@ -17,8 +8,17 @@
       }
     ]
   },
+  "n-music_8bit": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "negative_n:seq_bgm_vs_n_2_8-bit",
+        "stream": false
+      }
+    ]
+  },
   "op": {
-    "category": "player",
+    "category": "neutral",
     "subtitle": "subtitles.op",
     "sounds": [
       {

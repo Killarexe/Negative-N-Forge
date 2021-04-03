@@ -102,12 +102,16 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "spawnWorldTypes": [
-      "CUSTOM:Nega"
+      "CUSTOM:Nega",
+      "CUSTOM:MineingDim"
     ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "CUSTOM:StoneN"
+      },
+      {
+        "value": "Blocks.STONE#0"
       }
     ],
     "frequencyPerChunks": 4,

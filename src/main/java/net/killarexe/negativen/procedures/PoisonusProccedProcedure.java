@@ -1,11 +1,29 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.common.MinecraftForge;
+
+import net.minecraft.world.World;
+import net.minecraft.potion.Effects;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.enchantment.EnchantmentHelper;
+
+import net.killarexe.negativen.enchantment.WitheredEnchantment;
+import net.killarexe.negativen.enchantment.PoisonusEnchantment;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
+
+import java.util.Map;
+import java.util.HashMap;
+
 @NegativeNModElements.ModElement.Tag
 public class PoisonusProccedProcedure extends NegativeNModElements.ModElement {
-
 	public PoisonusProccedProcedure(NegativeNModElements instance) {
 		super(instance, 665);
-
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -20,10 +38,8 @@ public class PoisonusProccedProcedure extends NegativeNModElements.ModElement {
 				NegativeNMod.LOGGER.warn("Failed to load dependency sourceentity for procedure PoisonusProcced!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-
 		double EnchantLevel = 0;
 		if (((EnchantmentHelper.getEnchantmentLevel(PoisonusEnchantment.enchantment,
 				((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))) > 0)) {
@@ -51,7 +67,6 @@ public class PoisonusProccedProcedure extends NegativeNModElements.ModElement {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WITHER, (int) 256, (int) (EnchantLevel)));
 		}
-
 	}
 
 	@SubscribeEvent
@@ -78,5 +93,4 @@ public class PoisonusProccedProcedure extends NegativeNModElements.ModElement {
 			this.executeProcedure(dependencies);
 		}
 	}
-
 }

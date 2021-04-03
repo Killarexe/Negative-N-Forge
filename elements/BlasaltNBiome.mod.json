@@ -26,19 +26,19 @@
       "value": ""
     },
     "moodSoundDelay": 6000,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
       "value": "CUSTOM:RedstoneNParticle"
     },
     "particlesProbability": 0.5,
-    "biomeCategory": "NONE",
+    "biomeCategory": "ICY",
     "parent": {
       "value": "No parent"
     },
     "rainingPossibility": 0.5,
     "temperature": 1.0,
     "baseHeight": 0.1,
-    "heightVariation": 0.2,
+    "heightVariation": 2.0,
     "biomeType": "DESERT",
     "spawnBiome": false,
     "biomeWeight": 10,
@@ -52,10 +52,10 @@
     "gravelPatchesPerChunk": 0,
     "reedsPerChunk": 0,
     "cactiPerChunk": 0,
-    "treesPerChunk": 1,
+    "treesPerChunk": 10,
     "vanillaTreeType": "Default",
     "treeType": 1,
-    "minHeight": 4,
+    "minHeight": 10,
     "maxWaterDepth": 0,
     "treeStem": {
       "value": "CUSTOM:PolishedBasaltN"
@@ -67,7 +67,7 @@
       "value": "Blocks.AIR"
     },
     "treeFruits": {
-      "value": "Blocks.POLISHED_BLACKSTONE_STAIRS"
+      "value": "Blocks.AIR"
     },
     "spawnStronghold": false,
     "spawnMineshaft": false,

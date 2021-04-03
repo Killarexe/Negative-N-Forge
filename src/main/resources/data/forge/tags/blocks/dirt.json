@@ -1,4 +1,15 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "negative_n:dirt_n",
+    "negative_n:grass_block_n",
+    "negative_n:farmland_n",
+    "negative_n:farmland_n_moist",
+    "negative_n:grass_n_path",
+    "negative_n:classic_grass",
+    "negative_n:classic_grass_n",
+    "negative_n:grass_block_cave_game",
+    "negative_n:basalt_n",
+    "negative_n:polished_basalt_n"
+  ]
 }

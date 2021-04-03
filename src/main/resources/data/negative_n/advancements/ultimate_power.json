@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:enchanted_golden_n_apple"
+    },
+    "title": {
+      "translate": "advancements.ultimate_power.title"
+    },
+    "description": {
+      "translate": "advancements.ultimate_power.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ultimate_power": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "negative_n:enchanted_golden_n_apple"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "negative_n:time_to_get_poor"
+}

@@ -1,18 +1,62 @@
 
 package net.killarexe.negativen.entity;
 
-import net.minecraft.block.material.Material;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraftforge.fml.network.FMLPlayMessages;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.DeferredWorkQueue;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.common.ForgeMod;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.World;
+import net.minecraft.world.IWorldReader;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.Hand;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.pathfinding.SwimmerPathNavigator;
+import net.minecraft.network.IPacket;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.ai.controller.MovementController;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.AttributeModifierMap;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.CreatureEntity;
+import net.minecraft.entity.CreatureAttribute;
+import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.block.BlockState;
+
+import net.killarexe.negativen.block.PlanchedeboisNBlock;
+import net.killarexe.negativen.NegativeNModElements;
+
+import com.mojang.blaze3d.vertex.IVertexBuilder;
+import com.mojang.blaze3d.matrix.MatrixStack;
 
 @NegativeNModElements.ModElement.Tag
 public class AcaciaNBoatEntity extends NegativeNModElements.ModElement {
-
 	public static EntityType entity = null;
-
 	public AcaciaNBoatEntity(NegativeNModElements instance) {
 		super(instance, 50);
-
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
-
 	}
 
 	@Override
@@ -20,49 +64,37 @@ public class AcaciaNBoatEntity extends NegativeNModElements.ModElement {
 		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE).setShouldReceiveVelocityUpdates(true)
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.6f, 0.2f))
 						.build("acacia_n_boat").setRegistryName("acacia_n_boat");
-
 		elements.entities.add(() -> entity);
-
 	}
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		DeferredWorkQueue.runLater(this::setupAttributes);
-
 	}
-
 	private static class ModelRegisterHandler {
-
 		@SubscribeEvent
 		@OnlyIn(Dist.CLIENT)
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
 				return new MobRenderer(renderManager, new Modeloak_n_boat(), 0.5f) {
-
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("negative_n:textures/acacia_n_boat.png");
 					}
 				};
 			});
-
 		}
 	}
-
 	private void setupAttributes() {
 		AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
 		ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
 		ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 10);
 		ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 		ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
-
 		ammma = ammma.createMutableAttribute(ForgeMod.SWIM_SPEED.get(), 0.3);
-
 		GlobalEntityTypeAttributes.put(entity, ammma.create());
 	}
-
 	public static class CustomEntity extends CreatureEntity {
-
 		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
 			this(entity, world);
 		}
@@ -71,15 +103,12 @@ public class AcaciaNBoatEntity extends NegativeNModElements.ModElement {
 			super(type, world);
 			experienceValue = 0;
 			setNoAI(false);
-
 			enablePersistence();
-
 			this.moveController = new MovementController(this) {
 				@Override
 				public void tick() {
 					if (CustomEntity.this.areEyesInFluid(FluidTags.WATER))
 						CustomEntity.this.setMotion(CustomEntity.this.getMotion().add(0, 0.005, 0));
-
 					if (this.action == MovementController.Action.MOVE_TO && !CustomEntity.this.getNavigator().noPath()) {
 						double dx = this.posX - CustomEntity.this.getPosX();
 						double dy = this.posY - CustomEntity.this.getPosY();
@@ -107,7 +136,6 @@ public class AcaciaNBoatEntity extends NegativeNModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-
 		}
 
 		@Override
@@ -145,11 +173,8 @@ public class AcaciaNBoatEntity extends NegativeNModElements.ModElement {
 		public ActionResultType func_230254_b_(PlayerEntity sourceentity, Hand hand) {
 			ItemStack itemstack = sourceentity.getHeldItem(hand);
 			ActionResultType retval = ActionResultType.func_233537_a_(this.world.isRemote());
-
 			super.func_230254_b_(sourceentity, hand);
-
 			sourceentity.startRiding(this);
-
 			double x = this.getPosX();
 			double y = this.getPosY();
 			double z = this.getPosZ();
@@ -184,17 +209,12 @@ public class AcaciaNBoatEntity extends NegativeNModElements.ModElement {
 				this.renderYawOffset = entity.rotationYaw;
 				this.rotationYawHead = entity.rotationYaw;
 				this.stepHeight = 1.0F;
-
 				if (entity instanceof LivingEntity) {
 					this.setAIMoveSpeed((float) this.getAttributeValue(Attributes.MOVEMENT_SPEED));
-
 					float forward = ((LivingEntity) entity).moveForward;
-
 					float strafe = 0;
-
 					super.travel(new Vector3d(strafe, 0, forward));
 				}
-
 				this.prevLimbSwingAmount = this.limbSwingAmount;
 				double d1 = this.getPosX() - this.prevPosX;
 				double d0 = this.getPosZ() - this.prevPosZ;
@@ -207,45 +227,36 @@ public class AcaciaNBoatEntity extends NegativeNModElements.ModElement {
 			}
 			this.stepHeight = 0.5F;
 			this.jumpMovementFactor = 0.02F;
-
 			super.travel(dir);
 		}
-
 	}
 
 	// Made with Blockbench 3.6.6
 	// Exported for Minecraft version 1.15
 	// Paste this class into your mod and generate all required imports
-
 	public static class Modeloak_n_boat extends EntityModel<Entity> {
 		private final ModelRenderer bottom;
 		private final ModelRenderer front;
 		private final ModelRenderer back;
 		private final ModelRenderer right;
 		private final ModelRenderer left;
-
 		public Modeloak_n_boat() {
 			textureWidth = 128;
 			textureHeight = 64;
-
 			bottom = new ModelRenderer(this);
 			bottom.setRotationPoint(0.0F, 24.0F, 0.0F);
 			setRotationAngle(bottom, 1.5708F, 1.5708F, 0.0F);
 			bottom.setTextureOffset(0, 0).addBox(-14.0F, -8.0F, 0.0F, 28.0F, 16.0F, 3.0F, 0.0F, true);
-
 			front = new ModelRenderer(this);
 			front.setRotationPoint(7.0F, 24.0F, 0.0F);
 			front.setTextureOffset(0, 27).addBox(-15.0F, -9.0F, -16.0F, 16.0F, 6.0F, 2.0F, 0.0F, true);
-
 			back = new ModelRenderer(this);
 			back.setRotationPoint(8.0F, 21.0F, 13.0F);
 			back.setTextureOffset(0, 19).addBox(-16.0F, -6.0F, 0.0F, 16.0F, 6.0F, 2.0F, 0.0F, true);
-
 			right = new ModelRenderer(this);
 			right.setRotationPoint(0.0F, 24.0F, 0.0F);
 			setRotationAngle(right, 0.0F, -1.5708F, 0.0F);
 			right.setTextureOffset(0, 35).addBox(-14.0F, -9.0F, -10.0F, 28.0F, 6.0F, 2.0F, 0.0F, true);
-
 			left = new ModelRenderer(this);
 			left.setRotationPoint(0.0F, 42.0F, 0.0F);
 			setRotationAngle(left, 0.0F, -1.5708F, 0.0F);
@@ -269,8 +280,6 @@ public class AcaciaNBoatEntity extends NegativeNModElements.ModElement {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
-
 		}
 	}
-
 }

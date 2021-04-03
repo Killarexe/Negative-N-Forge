@@ -218,13 +218,13 @@
         {
           "type": "minecraft:item",
           "name": "negative_n:portal_block",
-          "weight": 7,
+          "weight": 1,
           "functions": [
             {
               "function": "set_count",
               "count": {
                 "min": 0,
-                "max": 3
+                "max": 1
               }
             }
           ]
@@ -233,6 +233,20 @@
           "type": "minecraft:item",
           "name": "negative_n:iron_and_flint",
           "weight": 10,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "negative_n:dev_statue_2",
+          "weight": 1,
           "functions": [
             {
               "function": "set_count",

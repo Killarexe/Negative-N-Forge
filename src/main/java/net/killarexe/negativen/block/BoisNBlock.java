@@ -1,17 +1,37 @@
 
 package net.killarexe.negativen.block;
 
+import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolType;
+
+import net.minecraft.util.Rotation;
+import net.minecraft.util.Direction;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.DirectionProperty;
+import net.minecraft.loot.LootContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.BlockItem;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.DirectionalBlock;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Block;
+
+import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
+import net.killarexe.negativen.NegativeNModElements;
+
+import java.util.List;
+import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
 public class BoisNBlock extends NegativeNModElements.ModElement {
-
 	@ObjectHolder("negative_n:oak_log_n")
 	public static final Block block = null;
-
 	public BoisNBlock(NegativeNModElements instance) {
 		super(instance, 161);
-
 	}
 
 	@Override
@@ -20,19 +40,12 @@ public class BoisNBlock extends NegativeNModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(NegativeNBlocksItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
-
 	public static class CustomBlock extends Block {
-
 		public static final DirectionProperty FACING = DirectionalBlock.FACING;
-
 		public CustomBlock() {
-			super(
-
-					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1.9999999999999998f, 12f).setLightLevel(s -> 0)
-							.harvestLevel(0).harvestTool(ToolType.AXE).setRequiresTool());
-
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1.9999999999999998f, 12f).setLightLevel(s -> 0)
+					.harvestLevel(0).harvestTool(ToolType.AXE).setRequiresTool());
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.SOUTH));
-
 			setRegistryName("oak_log_n");
 		}
 
@@ -72,13 +85,10 @@ public class BoisNBlock extends NegativeNModElements.ModElement {
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
 		}
-
 	}
-
 }

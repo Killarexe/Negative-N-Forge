@@ -1,11 +1,28 @@
 package net.killarexe.negativen.procedures;
 
+import net.minecraftforge.items.ItemHandlerHelper;
+
+import net.minecraft.world.GameType;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.client.network.play.NetworkPlayerInfo;
+import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
+import net.minecraft.client.Minecraft;
+
+import net.killarexe.negativen.item.MilkBucketNItem;
+import net.killarexe.negativen.item.BucketNItem;
+import net.killarexe.negativen.entity.CowNEntity;
+import net.killarexe.negativen.NegativeNModElements;
+import net.killarexe.negativen.NegativeNMod;
+
+import java.util.Map;
+
 @NegativeNModElements.ModElement.Tag
 public class BucketNLivingEntityIsHitWithItemProcedure extends NegativeNModElements.ModElement {
-
 	public BucketNLivingEntityIsHitWithItemProcedure(NegativeNModElements instance) {
 		super(instance, 732);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -14,9 +31,7 @@ public class BucketNLivingEntityIsHitWithItemProcedure extends NegativeNModEleme
 				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure BucketNLivingEntityIsHitWithItem!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
-
 		if ((entity instanceof CowNEntity.CustomEntity)) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _setstack = new ItemStack(MilkBucketNItem.block, (int) (1));
@@ -42,7 +57,5 @@ public class BucketNLivingEntityIsHitWithItemProcedure extends NegativeNModEleme
 				}
 			}
 		}
-
 	}
-
 }
