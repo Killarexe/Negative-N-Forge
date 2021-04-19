@@ -16,7 +16,7 @@ public class EggNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:egg_n")
 	public static final Item block = null;
 	public EggNItem(NegativeNModElements instance) {
-		super(instance, 896);
+		super(instance, 53);
 	}
 
 	@Override

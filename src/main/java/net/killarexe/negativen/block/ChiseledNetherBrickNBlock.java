@@ -24,7 +24,7 @@ public class ChiseledNetherBrickNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:chiseled_nether_brick_n")
 	public static final Block block = null;
 	public ChiseledNetherBrickNBlock(NegativeNModElements instance) {
-		super(instance, 878);
+		super(instance, 341);
 	}
 
 	@Override

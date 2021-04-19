@@ -54,7 +54,7 @@ public class OxeyeDaisyNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:oxeye_daisy_n")
 	public static final Block block = null;
 	public OxeyeDaisyNBlock(NegativeNModElements instance) {
-		super(instance, 106);
+		super(instance, 143);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

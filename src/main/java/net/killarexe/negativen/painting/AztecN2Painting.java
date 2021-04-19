@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class AztecN2Painting extends NegativeNModElements.ModElement {
 	public AztecN2Painting(NegativeNModElements instance) {
-		super(instance, 852);
+		super(instance, 872);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

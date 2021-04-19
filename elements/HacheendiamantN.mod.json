@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "hachedi",
+    "texture": "diamond_n_axe",
     "customModelName": "Normal",
     "name": "Diamond-N Axe",
     "specialInfo": [],

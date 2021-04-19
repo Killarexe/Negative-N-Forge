@@ -35,7 +35,7 @@ public class SpruceSaplingNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:spruce_sapling_n")
 	public static final Block block = null;
 	public SpruceSaplingNBlock(NegativeNModElements instance) {
-		super(instance, 71);
+		super(instance, 101);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public class StartstoneBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:start_stone")
 	public static final Block block = null;
 	public StartstoneBlock(NegativeNModElements instance) {
-		super(instance, 204);
+		super(instance, 236);
 	}
 
 	@Override

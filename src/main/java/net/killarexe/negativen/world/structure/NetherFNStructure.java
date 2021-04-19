@@ -38,7 +38,7 @@ public class NetherFNStructure extends NegativeNModElements.ModElement {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public NetherFNStructure(NegativeNModElements instance) {
-		super(instance, 495);
+		super(instance, 545);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

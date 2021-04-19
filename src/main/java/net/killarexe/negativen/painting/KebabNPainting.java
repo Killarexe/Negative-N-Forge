@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class KebabNPainting extends NegativeNModElements.ModElement {
 	public KebabNPainting(NegativeNModElements instance) {
-		super(instance, 861);
+		super(instance, 881);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

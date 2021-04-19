@@ -22,7 +22,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class SweetBerryBushRightClickProcedure extends NegativeNModElements.ModElement {
 	public SweetBerryBushRightClickProcedure(NegativeNModElements instance) {
-		super(instance, 785);
+		super(instance, 810);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

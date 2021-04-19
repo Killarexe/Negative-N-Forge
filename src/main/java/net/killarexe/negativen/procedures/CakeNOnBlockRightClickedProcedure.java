@@ -24,7 +24,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class CakeNOnBlockRightClickedProcedure extends NegativeNModElements.ModElement {
 	public CakeNOnBlockRightClickedProcedure(NegativeNModElements instance) {
-		super(instance, 992);
+		super(instance, 965);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

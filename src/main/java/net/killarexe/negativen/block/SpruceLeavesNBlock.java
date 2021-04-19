@@ -29,7 +29,7 @@ public class SpruceLeavesNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:spruce_leaves_n")
 	public static final Block block = null;
 	public SpruceLeavesNBlock(NegativeNModElements instance) {
-		super(instance, 83);
+		super(instance, 119);
 	}
 
 	@Override

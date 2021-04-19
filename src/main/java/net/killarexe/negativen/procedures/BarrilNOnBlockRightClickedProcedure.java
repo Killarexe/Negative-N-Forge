@@ -16,7 +16,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class BarrilNOnBlockRightClickedProcedure extends NegativeNModElements.ModElement {
 	public BarrilNOnBlockRightClickedProcedure(NegativeNModElements instance) {
-		super(instance, 982);
+		super(instance, 953);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

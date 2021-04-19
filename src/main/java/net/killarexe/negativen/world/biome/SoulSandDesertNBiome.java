@@ -46,7 +46,7 @@ import java.util.List;
 public class SoulSandDesertNBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
 	public SoulSandDesertNBiome(NegativeNModElements instance) {
-		super(instance, 719);
+		super(instance, 745);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

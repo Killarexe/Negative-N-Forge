@@ -30,7 +30,7 @@ public class WarpedNStemBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:warped_n_stem")
 	public static final Block block = null;
 	public WarpedNStemBlock(NegativeNModElements instance) {
-		super(instance, 223);
+		super(instance, 301);
 	}
 
 	@Override

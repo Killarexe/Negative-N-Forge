@@ -77,7 +77,7 @@ public class CraftingTableNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:crafting_table_n")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public CraftingTableNBlock(NegativeNModElements instance) {
-		super(instance, 73);
+		super(instance, 103);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class BombNPainting extends NegativeNModElements.ModElement {
 	public BombNPainting(NegativeNModElements instance) {
-		super(instance, 853);
+		super(instance, 873);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

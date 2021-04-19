@@ -38,7 +38,7 @@ public class FireNSpawnStructure extends NegativeNModElements.ModElement {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public FireNSpawnStructure(NegativeNModElements instance) {
-		super(instance, 817);
+		super(instance, 837);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

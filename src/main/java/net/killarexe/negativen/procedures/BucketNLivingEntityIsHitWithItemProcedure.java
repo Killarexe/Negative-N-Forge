@@ -22,7 +22,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class BucketNLivingEntityIsHitWithItemProcedure extends NegativeNModElements.ModElement {
 	public BucketNLivingEntityIsHitWithItemProcedure(NegativeNModElements instance) {
-		super(instance, 732);
+		super(instance, 758);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

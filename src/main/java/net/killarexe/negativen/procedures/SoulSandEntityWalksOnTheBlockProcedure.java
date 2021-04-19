@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class SoulSandEntityWalksOnTheBlockProcedure extends NegativeNModElements.ModElement {
 	public SoulSandEntityWalksOnTheBlockProcedure(NegativeNModElements instance) {
-		super(instance, 697);
+		super(instance, 723);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

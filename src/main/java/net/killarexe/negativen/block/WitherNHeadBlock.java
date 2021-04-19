@@ -43,7 +43,7 @@ public class WitherNHeadBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:wither_n_head")
 	public static final Block block = null;
 	public WitherNHeadBlock(NegativeNModElements instance) {
-		super(instance, 1004);
+		super(instance, 179);
 	}
 
 	@Override

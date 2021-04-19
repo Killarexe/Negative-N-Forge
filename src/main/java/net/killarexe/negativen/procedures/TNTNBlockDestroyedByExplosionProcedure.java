@@ -20,7 +20,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class TNTNBlockDestroyedByExplosionProcedure extends NegativeNModElements.ModElement {
 	public TNTNBlockDestroyedByExplosionProcedure(NegativeNModElements instance) {
-		super(instance, 430);
+		super(instance, 485);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

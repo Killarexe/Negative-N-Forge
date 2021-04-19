@@ -11,7 +11,7 @@ import java.util.HashMap;
 @NegativeNModElements.ModElement.Tag
 public class CraftingTableNCraftRegisterProcedure extends NegativeNModElements.ModElement {
 	public CraftingTableNCraftRegisterProcedure(NegativeNModElements instance) {
-		super(instance, 1010);
+		super(instance, 980);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

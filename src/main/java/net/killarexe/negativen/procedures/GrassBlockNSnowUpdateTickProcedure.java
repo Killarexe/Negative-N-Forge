@@ -16,7 +16,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class GrassBlockNSnowUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public GrassBlockNSnowUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 566);
+		super(instance, 615);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

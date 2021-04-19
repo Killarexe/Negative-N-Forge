@@ -40,7 +40,7 @@ public class DoubleChestNGUIGui extends NegativeNModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public DoubleChestNGUIGui(NegativeNModElements instance) {
-		super(instance, 990);
+		super(instance, 961);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

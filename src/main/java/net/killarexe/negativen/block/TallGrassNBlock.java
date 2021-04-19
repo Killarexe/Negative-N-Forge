@@ -51,7 +51,7 @@ public class TallGrassNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:tall_grass_n")
 	public static final Block block = null;
 	public TallGrassNBlock(NegativeNModElements instance) {
-		super(instance, 364);
+		super(instance, 163);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -95,6 +95,25 @@ public class TallGrassNBlock extends NegativeNModElements.ModElement {
 	}
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("negative_n:negative").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negative_n:oak_nforest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negative_n:birch_n_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negative_n:plains_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negative_n:dark_oak_n_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negative_n:jungle_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negative_n:spruce_forest_n").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("negative_n:acacia_n_biome").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> configuredFeature);
 	}
 	public static class BlockCustomFlower extends DoublePlantBlock {

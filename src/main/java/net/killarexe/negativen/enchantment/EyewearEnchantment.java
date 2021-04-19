@@ -14,7 +14,7 @@ public class EyewearEnchantment extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:eyewear")
 	public static final Enchantment enchantment = null;
 	public EyewearEnchantment(NegativeNModElements instance) {
-		super(instance, 922);
+		super(instance, 913);
 	}
 
 	@Override

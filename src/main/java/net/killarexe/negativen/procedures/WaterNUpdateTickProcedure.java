@@ -14,7 +14,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class WaterNUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public WaterNUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 976);
+		super(instance, 948);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

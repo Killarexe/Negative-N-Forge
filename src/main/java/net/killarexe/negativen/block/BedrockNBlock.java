@@ -45,7 +45,7 @@ public class BedrockNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:bedrock_n")
 	public static final Block block = null;
 	public BedrockNBlock(NegativeNModElements instance) {
-		super(instance, 241);
+		super(instance, 238);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

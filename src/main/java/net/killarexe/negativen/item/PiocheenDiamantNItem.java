@@ -17,7 +17,7 @@ public class PiocheenDiamantNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:diamond_n_pickaxe")
 	public static final Item block = null;
 	public PiocheenDiamantNItem(NegativeNModElements instance) {
-		super(instance, 280);
+		super(instance, 362);
 	}
 
 	@Override

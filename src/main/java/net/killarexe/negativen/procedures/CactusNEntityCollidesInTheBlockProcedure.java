@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class CactusNEntityCollidesInTheBlockProcedure extends NegativeNModElements.ModElement {
 	public CactusNEntityCollidesInTheBlockProcedure(NegativeNModElements instance) {
-		super(instance, 508);
+		super(instance, 557);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

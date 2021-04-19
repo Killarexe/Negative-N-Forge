@@ -38,7 +38,7 @@ public class CirmsonTreeNStructure extends NegativeNModElements.ModElement {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public CirmsonTreeNStructure(NegativeNModElements instance) {
-		super(instance, 727);
+		super(instance, 753);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -41,7 +41,7 @@ public class WheatNStage6Block extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:wheat_n_stage_6")
 	public static final Block block = null;
 	public WheatNStage6Block(NegativeNModElements instance) {
-		super(instance, 690);
+		super(instance, 717);
 	}
 
 	@Override

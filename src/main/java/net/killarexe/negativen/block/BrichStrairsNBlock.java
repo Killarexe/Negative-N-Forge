@@ -25,7 +25,7 @@ public class BrichStrairsNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:birch_stairs_n")
 	public static final Block block = null;
 	public BrichStrairsNBlock(NegativeNModElements instance) {
-		super(instance, 171);
+		super(instance, 286);
 	}
 
 	@Override

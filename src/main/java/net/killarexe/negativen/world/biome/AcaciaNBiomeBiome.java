@@ -48,7 +48,7 @@ import java.util.List;
 public class AcaciaNBiomeBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
 	public AcaciaNBiomeBiome(NegativeNModElements instance) {
-		super(instance, 656);
+		super(instance, 690);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

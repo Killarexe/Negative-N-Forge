@@ -32,7 +32,7 @@ public class SemiWeatheredCutCopperNStairsBlock extends NegativeNModElements.Mod
 	@ObjectHolder("negative_n:semi_weathered_cut_copper_n_stairs")
 	public static final Block block = null;
 	public SemiWeatheredCutCopperNStairsBlock(NegativeNModElements instance) {
-		super(instance, 894);
+		super(instance, 318);
 	}
 
 	@Override

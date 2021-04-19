@@ -53,7 +53,7 @@ public class LavaNBlock extends NegativeNModElements.ModElement {
 	public static FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 	public LavaNBlock(NegativeNModElements instance) {
-		super(instance, 435);
+		super(instance, 490);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());

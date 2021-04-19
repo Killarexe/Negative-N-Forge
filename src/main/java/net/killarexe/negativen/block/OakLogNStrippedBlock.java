@@ -30,7 +30,7 @@ public class OakLogNStrippedBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:oak_log_n_stripped")
 	public static final Block block = null;
 	public OakLogNStrippedBlock(NegativeNModElements instance) {
-		super(instance, 85);
+		super(instance, 121);
 	}
 
 	@Override

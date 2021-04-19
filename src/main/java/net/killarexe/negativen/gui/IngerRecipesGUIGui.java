@@ -33,7 +33,7 @@ public class IngerRecipesGUIGui extends NegativeNModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public IngerRecipesGUIGui(NegativeNModElements instance) {
-		super(instance, 836);
+		super(instance, 856);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

@@ -24,7 +24,7 @@ public class ClassicStoneBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:classic_stone")
 	public static final Block block = null;
 	public ClassicStoneBlock(NegativeNModElements instance) {
-		super(instance, 329);
+		super(instance, 396);
 	}
 
 	@Override

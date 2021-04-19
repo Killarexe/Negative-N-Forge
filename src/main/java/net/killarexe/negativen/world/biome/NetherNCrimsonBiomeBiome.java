@@ -56,7 +56,7 @@ import com.google.common.collect.ImmutableList;
 public class NetherNCrimsonBiomeBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
 	public NetherNCrimsonBiomeBiome(NegativeNModElements instance) {
-		super(instance, 725);
+		super(instance, 751);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

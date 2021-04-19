@@ -17,7 +17,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class BuddingAmethystNBlockUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public BuddingAmethystNBlockUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 844);
+		super(instance, 864);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -47,71 +47,14 @@ public class BuddingAmethystNBlockUpdateTickProcedure extends NegativeNModElemen
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())) {
 			world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), SmallAmethystNBudBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), SmallAmethystNBudBlock.block.getDefaultState(), 3);
-			try {
-				BlockState _bs = world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z));
-				DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-				if (_property != null) {
-					world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), _bs.with(_property, Direction.DOWN), 3);
-				} else {
-					world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z),
-							_bs.with((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.DOWN.getAxis()),
-							3);
-				}
-			} catch (Exception e) {
-			}
-		} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), SmallAmethystNBudBlock.block.getDefaultState(), 3);
-			try {
-				BlockState _bs = world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z));
-				DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-				if (_property != null) {
-					world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), _bs.with(_property, Direction.WEST), 3);
-				} else {
-					world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z),
-							_bs.with((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.WEST.getAxis()),
-							3);
-				}
-			} catch (Exception e) {
-			}
-		} else if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), SmallAmethystNBudBlock.block.getDefaultState(), 3);
-			try {
-				BlockState _bs = world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z));
-				DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-				if (_property != null) {
-					world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), _bs.with(_property, Direction.EAST), 3);
-				} else {
-					world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z),
-							_bs.with((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.EAST.getAxis()),
-							3);
-				}
-			} catch (Exception e) {
-			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.AIR.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), SmallAmethystNBudBlock.block.getDefaultState(), 3);
-			try {
-				BlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)));
-				DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-				if (_property != null) {
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), _bs.with(_property, Direction.SOUTH), 3);
-				} else {
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), _bs.with(
-							(EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.SOUTH.getAxis()), 3);
-				}
-			} catch (Exception e) {
-			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.AIR.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), SmallAmethystNBudBlock.block.getDefaultState(), 3);
 			try {
 				BlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)));
 				DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
 				if (_property != null) {
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), _bs.with(_property, Direction.NORTH), 3);
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), _bs.with(_property, Direction.SOUTH), 3);
 				} else {
 					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), _bs.with(
-							(EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.NORTH.getAxis()), 3);
+							(EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.SOUTH.getAxis()), 3);
 				}
 			} catch (Exception e) {
 			}

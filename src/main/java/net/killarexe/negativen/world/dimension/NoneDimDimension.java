@@ -76,7 +76,7 @@ public class NoneDimDimension extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:nonedim_portal")
 	public static final CustomPortalBlock portal = null;
 	public NoneDimDimension(NegativeNModElements instance) {
-		super(instance, 456);
+		super(instance, 511);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 

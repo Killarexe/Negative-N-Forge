@@ -19,7 +19,7 @@ public class UTitleScreenItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:easter_egg")
 	public static final Item block = null;
 	public UTitleScreenItem(NegativeNModElements instance) {
-		super(instance, 415);
+		super(instance, 61);
 	}
 
 	@Override

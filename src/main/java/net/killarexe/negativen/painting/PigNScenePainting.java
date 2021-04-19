@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class PigNScenePainting extends NegativeNModElements.ModElement {
 	public PigNScenePainting(NegativeNModElements instance) {
-		super(instance, 862);
+		super(instance, 882);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

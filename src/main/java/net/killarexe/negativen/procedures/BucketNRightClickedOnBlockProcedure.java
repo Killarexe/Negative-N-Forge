@@ -30,7 +30,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class BucketNRightClickedOnBlockProcedure extends NegativeNModElements.ModElement {
 	public BucketNRightClickedOnBlockProcedure(NegativeNModElements instance) {
-		super(instance, 523);
+		super(instance, 572);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -17,7 +17,7 @@ public class PotatoNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:potato_n")
 	public static final Item block = null;
 	public PotatoNItem(NegativeNModElements instance) {
-		super(instance, 322);
+		super(instance, 75);
 	}
 
 	@Override

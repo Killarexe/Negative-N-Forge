@@ -34,7 +34,7 @@ public class DarkOakNDoorBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:dark_oak_n_door")
 	public static final Block block = null;
 	public DarkOakNDoorBlock(NegativeNModElements instance) {
-		super(instance, 137);
+		super(instance, 189);
 	}
 
 	@Override

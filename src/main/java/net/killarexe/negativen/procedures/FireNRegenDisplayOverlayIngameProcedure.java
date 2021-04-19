@@ -14,7 +14,7 @@ import java.util.Collection;
 @NegativeNModElements.ModElement.Tag
 public class FireNRegenDisplayOverlayIngameProcedure extends NegativeNModElements.ModElement {
 	public FireNRegenDisplayOverlayIngameProcedure(NegativeNModElements instance) {
-		super(instance, 925);
+		super(instance, 916);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

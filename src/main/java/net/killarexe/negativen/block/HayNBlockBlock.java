@@ -23,7 +23,7 @@ public class HayNBlockBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:hay_n_block")
 	public static final Block block = null;
 	public HayNBlockBlock(NegativeNModElements instance) {
-		super(instance, 877);
+		super(instance, 340);
 	}
 
 	@Override

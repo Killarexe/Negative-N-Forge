@@ -24,7 +24,7 @@ public class BasaltNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:basalt_n")
 	public static final Block block = null;
 	public BasaltNBlock(NegativeNModElements instance) {
-		super(instance, 874);
+		super(instance, 337);
 	}
 
 	@Override

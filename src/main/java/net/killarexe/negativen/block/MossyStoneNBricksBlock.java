@@ -24,7 +24,7 @@ public class MossyStoneNBricksBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:mossy_stone_n_bricks")
 	public static final Block block = null;
 	public MossyStoneNBricksBlock(NegativeNModElements instance) {
-		super(instance, 115);
+		super(instance, 151);
 	}
 
 	@Override

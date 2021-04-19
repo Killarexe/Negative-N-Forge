@@ -1,0 +1,19 @@
+{
+  "_fv": 17,
+  "_type": "potion",
+  "definition": {
+    "name": "Storage",
+    "effectName": "Storage",
+    "icon": "storage.png",
+    "color": {
+      "value": -10079488,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "registerPotionType": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

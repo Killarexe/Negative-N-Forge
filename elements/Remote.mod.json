@@ -1,0 +1,25 @@
+{
+  "_fv": 17,
+  "_type": "potion",
+  "definition": {
+    "name": "Remote",
+    "effectName": "Remote",
+    "icon": "remote.png",
+    "color": {
+      "value": -16738048,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "registerPotionType": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "RemotePotionStartedapplied"
+    },
+    "onExpired": {
+      "name": "RemotePotionExpires"
+    }
+  }
+}

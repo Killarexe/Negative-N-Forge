@@ -28,11 +28,14 @@ import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.killarexe.negativen.procedures.FortuneProceedProcedure;
 import net.killarexe.negativen.procedures.DeepslateNLapisNOreAddedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.item.LapisLazuliNItem;
@@ -49,7 +52,7 @@ public class DeepslateNLapisNOreBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:deepslate_n_lapis_n_ore")
 	public static final Block block = null;
 	public DeepslateNLapisNOreBlock(NegativeNModElements instance) {
-		super(instance, 1018);
+		super(instance, 260);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -89,6 +92,24 @@ public class DeepslateNLapisNOreBlock extends NegativeNModElements.ModElement {
 				$_dependencies.put("world", world);
 				DeepslateNLapisNOreAddedProcedure.executeProcedure($_dependencies);
 			}
+		}
+
+		@Override
+		public boolean removedByPlayer(BlockState state, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, FluidState fluid) {
+			boolean retval = super.removedByPlayer(state, world, pos, entity, willHarvest, fluid);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				FortuneProceedProcedure.executeProcedure($_dependencies);
+			}
+			return retval;
 		}
 	}
 	private static Feature<OreFeatureConfig> feature = null;

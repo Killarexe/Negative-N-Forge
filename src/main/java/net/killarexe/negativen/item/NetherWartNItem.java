@@ -16,7 +16,7 @@ public class NetherWartNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:nether_wart_n")
 	public static final Item block = null;
 	public NetherWartNItem(NegativeNModElements instance) {
-		super(instance, 45);
+		super(instance, 46);
 	}
 
 	@Override

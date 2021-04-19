@@ -22,7 +22,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class MiningCraftProcedure extends NegativeNModElements.ModElement {
 	public MiningCraftProcedure(NegativeNModElements instance) {
-		super(instance, 1008);
+		super(instance, 978);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

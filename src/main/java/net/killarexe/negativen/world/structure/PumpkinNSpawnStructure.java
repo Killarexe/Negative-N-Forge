@@ -38,7 +38,7 @@ public class PumpkinNSpawnStructure extends NegativeNModElements.ModElement {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public PumpkinNSpawnStructure(NegativeNModElements instance) {
-		super(instance, 816);
+		super(instance, 836);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -16,7 +16,7 @@ public class MelonNSeedItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:melon_n_seed")
 	public static final Item block = null;
 	public MelonNSeedItem(NegativeNModElements instance) {
-		super(instance, 905);
+		super(instance, 54);
 	}
 
 	@Override

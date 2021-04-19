@@ -39,7 +39,7 @@ public class LightlyWeatheredCutCopperNSlabBlock extends NegativeNModElements.Mo
 	@ObjectHolder("negative_n:lightly_weathered_cut_copper_n_slab")
 	public static final Block block = null;
 	public LightlyWeatheredCutCopperNSlabBlock(NegativeNModElements instance) {
-		super(instance, 889);
+		super(instance, 313);
 	}
 
 	@Override

@@ -38,7 +38,7 @@ public class DarkOakNTreeStructure extends NegativeNModElements.ModElement {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public DarkOakNTreeStructure(NegativeNModElements instance) {
-		super(instance, 550);
+		super(instance, 598);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

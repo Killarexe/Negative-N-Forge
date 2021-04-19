@@ -45,7 +45,7 @@ public class AndesiteNWallBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:andesite_n_wall")
 	public static final Block block = null;
 	public AndesiteNWallBlock(NegativeNModElements instance) {
-		super(instance, 963);
+		super(instance, 168);
 	}
 
 	@Override

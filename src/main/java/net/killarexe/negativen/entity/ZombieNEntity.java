@@ -57,7 +57,7 @@ import net.killarexe.negativen.NegativeNModElements;
 public class ZombieNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public ZombieNEntity(NegativeNModElements instance) {
-		super(instance, 57);
+		super(instance, 85);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}

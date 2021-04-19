@@ -55,7 +55,7 @@ import com.google.common.collect.ImmutableList;
 public class DesertNBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
 	public DesertNBiome(NegativeNModElements instance) {
-		super(instance, 514);
+		super(instance, 563);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

@@ -77,7 +77,7 @@ public class WoodCutterBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:wood_cutter")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public WoodCutterBlock(NegativeNModElements instance) {
-		super(instance, 160);
+		super(instance, 275);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

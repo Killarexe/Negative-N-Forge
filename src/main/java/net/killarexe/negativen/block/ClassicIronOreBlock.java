@@ -45,7 +45,7 @@ public class ClassicIronOreBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:classic_iron_ore")
 	public static final Block block = null;
 	public ClassicIronOreBlock(NegativeNModElements instance) {
-		super(instance, 343);
+		super(instance, 410);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

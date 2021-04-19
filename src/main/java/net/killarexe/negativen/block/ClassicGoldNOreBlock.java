@@ -45,7 +45,7 @@ public class ClassicGoldNOreBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:classic_gold_n_ore")
 	public static final Block block = null;
 	public ClassicGoldNOreBlock(NegativeNModElements instance) {
-		super(instance, 346);
+		super(instance, 413);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

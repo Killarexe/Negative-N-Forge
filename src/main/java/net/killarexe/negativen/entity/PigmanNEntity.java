@@ -56,7 +56,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class PigmanNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public PigmanNEntity(NegativeNModElements instance) {
-		super(instance, 64);
+		super(instance, 92);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -67,7 +67,7 @@ public class PigmanNEntity extends NegativeNModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("pigman_n")
 						.setRegistryName("pigman_n");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -16750900, -3407668, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("pigman_n_spawn_egg"));
 	}
 
@@ -136,9 +136,8 @@ public class PigmanNEntity extends NegativeNModElements.ModElement {
 			this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
 			this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false));
 			this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 1));
-			this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
-			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(6, new SwimGoal(this));
+			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(5, new SwimGoal(this));
 		}
 
 		@Override
@@ -148,22 +147,23 @@ public class PigmanNEntity extends NegativeNModElements.ModElement {
 
 		@Override
 		public net.minecraft.util.SoundEvent getAmbientSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.pig.ambient"));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.piglin.ambient"));
 		}
 
 		@Override
 		public void playStepSound(BlockPos pos, BlockState blockIn) {
-			this.playSound((net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.pig.step")), 0.15f, 1);
+			this.playSound((net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.piglin.step")), 0.15f,
+					1);
 		}
 
 		@Override
 		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.pig.hurt"));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.piglin.hurt"));
 		}
 
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.pig.death"));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.piglin.death"));
 		}
 
 		@Override

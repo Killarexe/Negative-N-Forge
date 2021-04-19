@@ -24,7 +24,7 @@ public class LapisNBlockBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:lapis_n_block")
 	public static final Block block = null;
 	public LapisNBlockBlock(NegativeNModElements instance) {
-		super(instance, 252);
+		super(instance, 243);
 	}
 
 	@Override

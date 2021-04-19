@@ -17,7 +17,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class EndBottonProcedure extends NegativeNModElements.ModElement {
 	public EndBottonProcedure(NegativeNModElements instance) {
-		super(instance, 461);
+		super(instance, 516);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

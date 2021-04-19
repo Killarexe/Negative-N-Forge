@@ -26,7 +26,7 @@ public class AcaciaSlabNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:acacia_slab_n")
 	public static final Block block = null;
 	public AcaciaSlabNBlock(NegativeNModElements instance) {
-		super(instance, 168);
+		super(instance, 283);
 	}
 
 	@Override

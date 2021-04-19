@@ -24,7 +24,7 @@ public class PolishedGraniteNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:polished_granite_n")
 	public static final Block block = null;
 	public PolishedGraniteNBlock(NegativeNModElements instance) {
-		super(instance, 102);
+		super(instance, 139);
 	}
 
 	@Override

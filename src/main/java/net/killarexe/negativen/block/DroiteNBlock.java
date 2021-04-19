@@ -44,7 +44,7 @@ public class DroiteNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:diorite_n")
 	public static final Block block = null;
 	public DroiteNBlock(NegativeNModElements instance) {
-		super(instance, 217);
+		super(instance, 209);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

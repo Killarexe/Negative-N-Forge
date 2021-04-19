@@ -24,7 +24,7 @@ public class PolishedDroiteNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:polished_diorite_n")
 	public static final Block block = null;
 	public PolishedDroiteNBlock(NegativeNModElements instance) {
-		super(instance, 103);
+		super(instance, 140);
 	}
 
 	@Override

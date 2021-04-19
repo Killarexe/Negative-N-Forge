@@ -77,7 +77,7 @@ public class NetherNDimDimension extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:netherndim_portal")
 	public static final CustomPortalBlock portal = null;
 	public NetherNDimDimension(NegativeNModElements instance) {
-		super(instance, 303);
+		super(instance, 386);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 

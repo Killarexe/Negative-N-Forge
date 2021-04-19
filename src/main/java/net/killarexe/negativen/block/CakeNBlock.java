@@ -39,7 +39,7 @@ public class CakeNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:cake_n")
 	public static final Block block = null;
 	public CakeNBlock(NegativeNModElements instance) {
-		super(instance, 992);
+		super(instance, 79);
 	}
 
 	@Override

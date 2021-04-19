@@ -20,7 +20,7 @@ public class WaterNBottleNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:water_n_bottle_n")
 	public static final Item block = null;
 	public WaterNBottleNItem(NegativeNModElements instance) {
-		super(instance, 927);
+		super(instance, 57);
 	}
 
 	@Override

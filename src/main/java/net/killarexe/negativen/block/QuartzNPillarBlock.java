@@ -30,7 +30,7 @@ public class QuartzNPillarBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:quartz_n_pillar")
 	public static final Block block = null;
 	public QuartzNPillarBlock(NegativeNModElements instance) {
-		super(instance, 872);
+		super(instance, 253);
 	}
 
 	@Override

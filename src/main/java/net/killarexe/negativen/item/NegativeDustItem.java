@@ -16,7 +16,7 @@ public class NegativeDustItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:negative_dust")
 	public static final Item block = null;
 	public NegativeDustItem(NegativeNModElements instance) {
-		super(instance, 15);
+		super(instance, 17);
 	}
 
 	@Override

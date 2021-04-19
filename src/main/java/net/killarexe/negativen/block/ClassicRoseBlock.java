@@ -54,7 +54,7 @@ public class ClassicRoseBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:classic_rose")
 	public static final Block block = null;
 	public ClassicRoseBlock(NegativeNModElements instance) {
-		super(instance, 339);
+		super(instance, 406);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "snp",
+    "texture": "stone_n_pickaxe",
     "customModelName": "Normal",
     "name": "Stone Pickaxe-N",
     "specialInfo": [],

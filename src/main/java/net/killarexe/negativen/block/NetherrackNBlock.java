@@ -25,7 +25,7 @@ public class NetherrackNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:netherrack_n")
 	public static final Block block = null;
 	public NetherrackNBlock(NegativeNModElements instance) {
-		super(instance, 199);
+		super(instance, 232);
 	}
 
 	@Override

@@ -16,7 +16,7 @@ public class GlassBottleNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:glass_bottle_n")
 	public static final Item block = null;
 	public GlassBottleNItem(NegativeNModElements instance) {
-		super(instance, 914);
+		super(instance, 56);
 	}
 
 	@Override

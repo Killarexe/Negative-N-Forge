@@ -54,7 +54,7 @@ public class BowNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:entitybulletbow_n")
 	public static final EntityType arrow = null;
 	public BowNItem(NegativeNModElements instance) {
-		super(instance, 274);
+		super(instance, 355);
 	}
 
 	@Override

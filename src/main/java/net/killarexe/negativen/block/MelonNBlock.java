@@ -25,7 +25,7 @@ public class MelonNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:melon_n")
 	public static final Block block = null;
 	public MelonNBlock(NegativeNModElements instance) {
-		super(instance, 904);
+		super(instance, 343);
 	}
 
 	@Override

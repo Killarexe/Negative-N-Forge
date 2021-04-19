@@ -28,7 +28,7 @@ public class BookshelfNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:bookshelf_n")
 	public static final Block block = null;
 	public BookshelfNBlock(NegativeNModElements instance) {
-		super(instance, 185);
+		super(instance, 304);
 	}
 
 	@Override

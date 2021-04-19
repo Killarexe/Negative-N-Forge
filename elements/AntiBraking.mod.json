@@ -1,0 +1,19 @@
+{
+  "_fv": 17,
+  "_type": "potion",
+  "definition": {
+    "name": "Anti-Braking",
+    "effectName": "Anti Braking",
+    "icon": "anti_braking.png",
+    "color": {
+      "value": -16776961,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "registerPotionType": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

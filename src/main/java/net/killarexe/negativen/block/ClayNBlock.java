@@ -48,7 +48,7 @@ public class ClayNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:clay_n")
 	public static final Block block = null;
 	public ClayNBlock(NegativeNModElements instance) {
-		super(instance, 261);
+		super(instance, 336);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

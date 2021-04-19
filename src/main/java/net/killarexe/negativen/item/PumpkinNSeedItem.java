@@ -16,7 +16,7 @@ public class PumpkinNSeedItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:pumpkin_n_seed")
 	public static final Item block = null;
 	public PumpkinNSeedItem(NegativeNModElements instance) {
-		super(instance, 906);
+		super(instance, 55);
 	}
 
 	@Override

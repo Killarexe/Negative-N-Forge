@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class SeaNPainting extends NegativeNModElements.ModElement {
 	public SeaNPainting(NegativeNModElements instance) {
-		super(instance, 866);
+		super(instance, 886);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "negative_n:blocks/crimson_n_roots",
+    "particle": "negative_n:blocks/crimson_n_roots"
+  }
+}

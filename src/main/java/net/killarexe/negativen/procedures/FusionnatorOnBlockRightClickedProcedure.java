@@ -25,7 +25,7 @@ import io.netty.buffer.Unpooled;
 @NegativeNModElements.ModElement.Tag
 public class FusionnatorOnBlockRightClickedProcedure extends NegativeNModElements.ModElement {
 	public FusionnatorOnBlockRightClickedProcedure(NegativeNModElements instance) {
-		super(instance, 374);
+		super(instance, 434);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

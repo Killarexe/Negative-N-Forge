@@ -16,7 +16,7 @@ public class StringNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:string_n")
 	public static final Item block = null;
 	public StringNItem(NegativeNModElements instance) {
-		super(instance, 34);
+		super(instance, 35);
 	}
 
 	@Override

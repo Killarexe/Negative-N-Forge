@@ -4,7 +4,7 @@
   "definition": {
     "priority": "LOWEST",
     "components": [],
-    "baseTexture": "on_fire_n.png",
+    "baseTexture": "",
     "displayCondition": {
       "name": "FireNRegenDisplayOverlayIngame"
     }

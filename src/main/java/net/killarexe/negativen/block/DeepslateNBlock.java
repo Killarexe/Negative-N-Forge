@@ -46,7 +46,7 @@ public class DeepslateNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:deepslate_n")
 	public static final Block block = null;
 	public DeepslateNBlock(NegativeNModElements instance) {
-		super(instance, 1013);
+		super(instance, 213);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

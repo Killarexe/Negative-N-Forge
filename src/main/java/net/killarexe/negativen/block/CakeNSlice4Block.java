@@ -36,7 +36,7 @@ public class CakeNSlice4Block extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:cake_n_slice_4")
 	public static final Block block = null;
 	public CakeNSlice4Block(NegativeNModElements instance) {
-		super(instance, 996);
+		super(instance, 969);
 	}
 
 	@Override

@@ -76,7 +76,7 @@ public class StartDimDimension extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:startdim_portal")
 	public static final CustomPortalBlock portal = null;
 	public StartDimDimension(NegativeNModElements instance) {
-		super(instance, 304);
+		super(instance, 387);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 

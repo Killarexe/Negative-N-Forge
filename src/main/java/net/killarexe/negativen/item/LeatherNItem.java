@@ -16,7 +16,7 @@ public class LeatherNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:leather_n")
 	public static final Item block = null;
 	public LeatherNItem(NegativeNModElements instance) {
-		super(instance, 29);
+		super(instance, 30);
 	}
 
 	@Override

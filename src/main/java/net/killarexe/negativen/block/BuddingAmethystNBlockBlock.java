@@ -30,7 +30,7 @@ public class BuddingAmethystNBlockBlock extends NegativeNModElements.ModElement 
 	@ObjectHolder("negative_n:budding_amethyst_n_block")
 	public static final Block block = null;
 	public BuddingAmethystNBlockBlock(NegativeNModElements instance) {
-		super(instance, 254);
+		super(instance, 333);
 	}
 
 	@Override

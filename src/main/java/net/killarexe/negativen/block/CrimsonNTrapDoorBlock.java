@@ -31,7 +31,7 @@ public class CrimsonNTrapDoorBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:crimson_n_trap_door")
 	public static final Block block = null;
 	public CrimsonNTrapDoorBlock(NegativeNModElements instance) {
-		super(instance, 148);
+		super(instance, 200);
 	}
 
 	@Override

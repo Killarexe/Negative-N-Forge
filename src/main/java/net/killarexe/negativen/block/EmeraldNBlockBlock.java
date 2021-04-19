@@ -23,7 +23,7 @@ public class EmeraldNBlockBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:emerald_n_block")
 	public static final Block block = null;
 	public EmeraldNBlockBlock(NegativeNModElements instance) {
-		super(instance, 155);
+		super(instance, 242);
 	}
 
 	@Override

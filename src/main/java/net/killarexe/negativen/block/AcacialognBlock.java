@@ -31,7 +31,7 @@ public class AcacialognBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:acacia_log_n")
 	public static final Block block = null;
 	public AcacialognBlock(NegativeNModElements instance) {
-		super(instance, 165);
+		super(instance, 280);
 	}
 
 	@Override

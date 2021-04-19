@@ -34,7 +34,7 @@ public class BirchNDoorBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:birch_n_door")
 	public static final Block block = null;
 	public BirchNDoorBlock(NegativeNModElements instance) {
-		super(instance, 136);
+		super(instance, 188);
 	}
 
 	@Override

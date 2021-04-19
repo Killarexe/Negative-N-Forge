@@ -36,7 +36,7 @@ public class TardisBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:tardis")
 	public static final Block block = null;
 	public TardisBlock(NegativeNModElements instance) {
-		super(instance, 438);
+		super(instance, 493);
 	}
 
 	@Override

@@ -26,7 +26,7 @@ public class JungleSlabNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:jungle_slab_n")
 	public static final Block block = null;
 	public JungleSlabNBlock(NegativeNModElements instance) {
-		super(instance, 180);
+		super(instance, 295);
 	}
 
 	@Override

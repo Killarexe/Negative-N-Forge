@@ -31,7 +31,7 @@ public class SmoothStoneNSlabBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:smooth_stone_n_slab")
 	public static final Block block = null;
 	public SmoothStoneNSlabBlock(NegativeNModElements instance) {
-		super(instance, 111);
+		super(instance, 148);
 	}
 
 	@Override

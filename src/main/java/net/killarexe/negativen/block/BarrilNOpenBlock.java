@@ -76,7 +76,7 @@ public class BarrilNOpenBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:barril_n_open")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BarrilNOpenBlock(NegativeNModElements instance) {
-		super(instance, 981);
+		super(instance, 952);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

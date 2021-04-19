@@ -19,7 +19,7 @@ public class MilkBucketNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:milk_bucket_n")
 	public static final Item block = null;
 	public MilkBucketNItem(NegativeNModElements instance) {
-		super(instance, 27);
+		super(instance, 28);
 	}
 
 	@Override

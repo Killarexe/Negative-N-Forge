@@ -24,7 +24,7 @@ public class ObsidanNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:obsidan_n")
 	public static final Block block = null;
 	public ObsidanNBlock(NegativeNModElements instance) {
-		super(instance, 206);
+		super(instance, 274);
 	}
 
 	@Override

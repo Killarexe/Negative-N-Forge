@@ -40,7 +40,7 @@ public class CauldronNWaterN2Block extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:cauldron_n_water_n_2")
 	public static final Block block = null;
 	public CauldronNWaterN2Block(NegativeNModElements instance) {
-		super(instance, 903);
+		super(instance, 900);
 	}
 
 	@Override

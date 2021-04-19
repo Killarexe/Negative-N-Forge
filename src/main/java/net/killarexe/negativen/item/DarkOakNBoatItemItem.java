@@ -26,7 +26,7 @@ public class DarkOakNBoatItemItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:dark_oak_n_boat_item")
 	public static final Item block = null;
 	public DarkOakNBoatItemItem(NegativeNModElements instance) {
-		super(instance, 360);
+		super(instance, 427);
 	}
 
 	@Override

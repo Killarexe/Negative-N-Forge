@@ -24,7 +24,7 @@ public class Iron_NIngotItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:iron_n_ingot")
 	public static final Item block = null;
 	public Iron_NIngotItem(NegativeNModElements instance) {
-		super(instance, 13);
+		super(instance, 14);
 	}
 
 	@Override

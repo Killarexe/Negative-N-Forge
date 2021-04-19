@@ -61,7 +61,7 @@ public class GrassNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:grass_n")
 	public static final Block block = null;
 	public GrassNBlock(NegativeNModElements instance) {
-		super(instance, 91);
+		super(instance, 128);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

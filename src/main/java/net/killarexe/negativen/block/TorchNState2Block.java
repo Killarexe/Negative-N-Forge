@@ -45,7 +45,7 @@ public class TorchNState2Block extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:torch_n_state_2")
 	public static final Block block = null;
 	public TorchNState2Block(NegativeNModElements instance) {
-		super(instance, 72);
+		super(instance, 102);
 	}
 
 	@Override

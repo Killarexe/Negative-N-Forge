@@ -60,7 +60,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class PiglinNBruteEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public PiglinNBruteEntity(NegativeNModElements instance) {
-		super(instance, 65);
+		super(instance, 93);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -71,7 +71,7 @@ public class PiglinNBruteEntity extends NegativeNModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("piglin_n_brute")
 						.setRegistryName("piglin_n_brute");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -16737844, -16763956, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("piglin_n_brute_spawn_egg"));
 	}
 

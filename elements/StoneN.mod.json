@@ -101,15 +101,8 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "StoneNBlockAdded"
-    },
     "spawnWorldTypes": [],
-    "restrictionBiomes": [
-      {
-        "value": "CUSTOM:Negative"
-      }
-    ],
+    "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "Blocks.STONE"

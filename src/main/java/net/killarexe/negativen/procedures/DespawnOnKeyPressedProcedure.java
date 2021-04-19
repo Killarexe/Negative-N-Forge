@@ -20,7 +20,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class DespawnOnKeyPressedProcedure extends NegativeNModElements.ModElement {
 	public DespawnOnKeyPressedProcedure(NegativeNModElements instance) {
-		super(instance, 480);
+		super(instance, 534);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

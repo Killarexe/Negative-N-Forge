@@ -25,7 +25,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class IngerOnBlockRightClickedProcedure extends NegativeNModElements.ModElement {
 	public IngerOnBlockRightClickedProcedure(NegativeNModElements instance) {
-		super(instance, 499);
+		super(instance, 549);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

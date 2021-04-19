@@ -38,7 +38,7 @@ public class AbandonnedPortalOverworldNetherStructure extends NegativeNModElemen
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public AbandonnedPortalOverworldNetherStructure(NegativeNModElements instance) {
-		super(instance, 639);
+		super(instance, 682);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

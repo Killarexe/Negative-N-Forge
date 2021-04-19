@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "pin",
+    "texture": "iron_n_pickaxe",
     "customModelName": "Normal",
     "name": "Iron-N Pickaxe",
     "specialInfo": [],

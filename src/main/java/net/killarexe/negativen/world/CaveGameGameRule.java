@@ -13,7 +13,7 @@ public class CaveGameGameRule extends NegativeNModElements.ModElement {
 	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("caveGame", GameRules.Category.UPDATES,
 			create(false));
 	public CaveGameGameRule(NegativeNModElements instance) {
-		super(instance, 989);
+		super(instance, 960);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

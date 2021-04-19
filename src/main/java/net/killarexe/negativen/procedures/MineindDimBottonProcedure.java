@@ -17,7 +17,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class MineindDimBottonProcedure extends NegativeNModElements.ModElement {
 	public MineindDimBottonProcedure(NegativeNModElements instance) {
-		super(instance, 465);
+		super(instance, 520);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

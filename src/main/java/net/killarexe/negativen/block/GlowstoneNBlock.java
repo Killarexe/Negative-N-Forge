@@ -51,7 +51,7 @@ public class GlowstoneNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:glowstone_n")
 	public static final Block block = null;
 	public GlowstoneNBlock(NegativeNModElements instance) {
-		super(instance, 200);
+		super(instance, 234);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -13,11 +13,11 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -1,
+      "value": -13395457,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -1,
+      "value": -16750900,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -89,7 +89,7 @@
       "value": "entity.pig.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "entity.pig.step"
     },
     "spawnParticles": false,
     "particleToSpawn": {

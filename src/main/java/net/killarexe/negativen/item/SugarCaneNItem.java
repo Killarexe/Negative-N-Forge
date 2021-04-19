@@ -28,7 +28,7 @@ public class SugarCaneNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:sugar_cane_n_item")
 	public static final Item block = null;
 	public SugarCaneNItem(NegativeNModElements instance) {
-		super(instance, 43);
+		super(instance, 44);
 	}
 
 	@Override

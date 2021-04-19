@@ -19,7 +19,7 @@ public class BreadNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:bread_n")
 	public static final Item block = null;
 	public BreadNItem(NegativeNModElements instance) {
-		super(instance, 321);
+		super(instance, 72);
 	}
 
 	@Override

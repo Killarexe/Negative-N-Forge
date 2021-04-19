@@ -12,7 +12,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class ExplosiveArrowBulletHitsBlockProcedure extends NegativeNModElements.ModElement {
 	public ExplosiveArrowBulletHitsBlockProcedure(NegativeNModElements instance) {
-		super(instance, 469);
+		super(instance, 524);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

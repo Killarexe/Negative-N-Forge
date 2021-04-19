@@ -16,7 +16,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class HiCommandExecutedProcedure extends NegativeNModElements.ModElement {
 	public HiCommandExecutedProcedure(NegativeNModElements instance) {
-		super(instance, 666);
+		super(instance, 700);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

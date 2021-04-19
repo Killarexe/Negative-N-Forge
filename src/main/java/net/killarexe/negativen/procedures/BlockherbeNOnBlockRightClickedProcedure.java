@@ -26,7 +26,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class BlockherbeNOnBlockRightClickedProcedure extends NegativeNModElements.ModElement {
 	public BlockherbeNOnBlockRightClickedProcedure(NegativeNModElements instance) {
-		super(instance, 512);
+		super(instance, 561);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -31,7 +31,7 @@ public class SprucenTrapDoorBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:spruce_n_trap_door")
 	public static final Block block = null;
 	public SprucenTrapDoorBlock(NegativeNModElements instance) {
-		super(instance, 145);
+		super(instance, 199);
 	}
 
 	@Override

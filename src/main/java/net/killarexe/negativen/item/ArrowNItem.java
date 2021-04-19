@@ -16,7 +16,7 @@ public class ArrowNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:arrow_n")
 	public static final Item block = null;
 	public ArrowNItem(NegativeNModElements instance) {
-		super(instance, 275);
+		super(instance, 356);
 	}
 
 	@Override

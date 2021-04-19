@@ -32,7 +32,7 @@ public class OakStrairsNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:oak_n_stairs")
 	public static final Block block = null;
 	public OakStrairsNBlock(NegativeNModElements instance) {
-		super(instance, 163);
+		super(instance, 278);
 	}
 
 	@Override

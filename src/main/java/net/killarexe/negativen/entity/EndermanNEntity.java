@@ -54,7 +54,7 @@ import net.killarexe.negativen.NegativeNModElements;
 public class EndermanNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public EndermanNEntity(NegativeNModElements instance) {
-		super(instance, 55);
+		super(instance, 83);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -65,7 +65,7 @@ public class EndermanNEntity extends NegativeNModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("endermann")
 						.setRegistryName("endermann");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -1, -6750055, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("endermann_spawn_egg"));
 	}
 

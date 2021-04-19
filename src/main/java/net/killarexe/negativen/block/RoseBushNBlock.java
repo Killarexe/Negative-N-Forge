@@ -56,7 +56,7 @@ public class RoseBushNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:rose_bush_n")
 	public static final Block block = null;
 	public RoseBushNBlock(NegativeNModElements instance) {
-		super(instance, 127);
+		super(instance, 162);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -93,7 +93,7 @@ public class RoseBushNBlock extends NegativeNModElements.ModElement {
 			configuredFeature = feature.withConfiguration(
 					(new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(block.getDefaultState()), new DoublePlantBlockPlacer()))
 							.tries(64).func_227317_b_().build())
-					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(5);
+					.withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(1);
 			event.getRegistry().register(feature.setRegistryName("rose_bush_n"));
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("negative_n:rose_bush_n"), configuredFeature);
 		}

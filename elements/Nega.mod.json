@@ -51,9 +51,9 @@
     "canRespawnHere": true,
     "hasFog": false,
     "isDark": false,
-    "doesWaterVaporize": true,
+    "doesWaterVaporize": false,
     "sleepResult": "ALLOW",
-    "hasSkyLight": true,
+    "hasSkyLight": false,
     "imitateOverworldBehaviour": false,
     "portalFrame": {
       "value": "CUSTOM:Portalblock"

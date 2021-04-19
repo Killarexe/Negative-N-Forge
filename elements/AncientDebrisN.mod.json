@@ -103,8 +103,7 @@
     "fluidRestrictions": [],
     "spawnWorldTypes": [
       "CUSTOM:NetherNDim",
-      "CUSTOM:MineingDim",
-      "Surface"
+      "CUSTOM:MineingDim"
     ],
     "restrictionBiomes": [],
     "blocksToReplace": [
@@ -113,6 +112,27 @@
       },
       {
         "value": "CUSTOM:NetherrackN"
+      },
+      {
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "CUSTOM:BasaltN"
+      },
+      {
+        "value": "CUSTOM:PolishedBasaltN"
+      },
+      {
+        "value": "CUSTOM:SoulSand"
+      },
+      {
+        "value": "CUSTOM:SoulSoilN"
+      },
+      {
+        "value": "CUSTOM:WapredNyliumN"
+      },
+      {
+        "value": "CUSTOM:CrimsonNyliumN"
       }
     ],
     "frequencyPerChunks": 2,

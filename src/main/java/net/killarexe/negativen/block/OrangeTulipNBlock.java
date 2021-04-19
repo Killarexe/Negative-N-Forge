@@ -54,7 +54,7 @@ public class OrangeTulipNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:orange_tulip_n")
 	public static final Block block = null;
 	public OrangeTulipNBlock(NegativeNModElements instance) {
-		super(instance, 105);
+		super(instance, 142);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

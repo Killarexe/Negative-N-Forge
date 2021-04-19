@@ -38,7 +38,7 @@ public class AbandonnedPortalUnderworldStructure extends NegativeNModElements.Mo
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public AbandonnedPortalUnderworldStructure(NegativeNModElements instance) {
-		super(instance, 636);
+		super(instance, 679);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

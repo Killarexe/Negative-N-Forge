@@ -12,7 +12,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class WikiCommandExecutedProcedure extends NegativeNModElements.ModElement {
 	public WikiCommandExecutedProcedure(NegativeNModElements instance) {
-		super(instance, 692);
+		super(instance, 719);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -45,7 +45,7 @@ public class BrickNWallBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:brick_n_wall")
 	public static final Block block = null;
 	public BrickNWallBlock(NegativeNModElements instance) {
-		super(instance, 968);
+		super(instance, 173);
 	}
 
 	@Override

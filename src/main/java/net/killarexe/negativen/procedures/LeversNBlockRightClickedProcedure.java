@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class LeversNBlockRightClickedProcedure extends NegativeNModElements.ModElement {
 	public LeversNBlockRightClickedProcedure(NegativeNModElements instance) {
-		super(instance, 919);
+		super(instance, 911);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

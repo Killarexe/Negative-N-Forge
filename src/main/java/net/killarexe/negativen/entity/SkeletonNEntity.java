@@ -64,7 +64,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class SkeletonNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public SkeletonNEntity(NegativeNModElements instance) {
-		super(instance, 62);
+		super(instance, 90);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -75,7 +75,7 @@ public class SkeletonNEntity extends NegativeNModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.6f, 1.8f))
 						.build("skeleton_n").setRegistryName("skeleton_n");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -13421773, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("skeleton_n_spawn_egg"));
 	}
 

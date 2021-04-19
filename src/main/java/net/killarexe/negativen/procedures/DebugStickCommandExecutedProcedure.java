@@ -17,7 +17,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class DebugStickCommandExecutedProcedure extends NegativeNModElements.ModElement {
 	public DebugStickCommandExecutedProcedure(NegativeNModElements instance) {
-		super(instance, 869);
+		super(instance, 889);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

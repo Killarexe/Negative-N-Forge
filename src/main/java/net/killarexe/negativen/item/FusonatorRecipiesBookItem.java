@@ -58,7 +58,7 @@ public class FusonatorRecipiesBookItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:fusonator_recipies_book")
 	public static final Item block = null;
 	public FusonatorRecipiesBookItem(NegativeNModElements instance) {
-		super(instance, 31);
+		super(instance, 32);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

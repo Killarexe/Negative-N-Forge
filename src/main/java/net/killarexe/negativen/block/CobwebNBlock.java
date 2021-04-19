@@ -30,7 +30,7 @@ public class CobwebNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:cobweb_n")
 	public static final Block block = null;
 	public CobwebNBlock(NegativeNModElements instance) {
-		super(instance, 113);
+		super(instance, 149);
 	}
 
 	@Override

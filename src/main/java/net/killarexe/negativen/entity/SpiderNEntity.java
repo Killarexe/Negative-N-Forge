@@ -52,7 +52,7 @@ import net.killarexe.negativen.NegativeNModElements;
 public class SpiderNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public SpiderNEntity(NegativeNModElements instance) {
-		super(instance, 54);
+		super(instance, 82);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -63,8 +63,8 @@ public class SpiderNEntity extends NegativeNModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(1.4f, 0.9f)).build("spidern")
 						.setRegistryName("spidern");
 		elements.entities.add(() -> entity);
-		elements.items.add(
-				() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("spidern_spawn_egg"));
+		elements.items.add(() -> new SpawnEggItem(entity, -1, -6710887, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+				.setRegistryName("spidern_spawn_egg"));
 	}
 
 	@SubscribeEvent

@@ -1,0 +1,19 @@
+{
+  "_fv": 17,
+  "_type": "potion",
+  "definition": {
+    "name": "Teleporter",
+    "effectName": "Teleporter",
+    "icon": "teleporter.png",
+    "color": {
+      "value": -16737997,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "isBad": false,
+    "isBenefitical": false,
+    "registerPotionType": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

@@ -12,7 +12,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class SweetBerryNBushStage3AdditionalGenerationConditionProcedure extends NegativeNModElements.ModElement {
 	public SweetBerryNBushStage3AdditionalGenerationConditionProcedure(NegativeNModElements instance) {
-		super(instance, 775);
+		super(instance, 801);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

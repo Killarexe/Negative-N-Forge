@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class VineNUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public VineNUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 538);
+		super(instance, 587);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

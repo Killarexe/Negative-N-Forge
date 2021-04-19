@@ -45,7 +45,7 @@ public class BlackstoneNWallBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:blackstone_n_wall")
 	public static final Block block = null;
 	public BlackstoneNWallBlock(NegativeNModElements instance) {
-		super(instance, 971);
+		super(instance, 176);
 	}
 
 	@Override

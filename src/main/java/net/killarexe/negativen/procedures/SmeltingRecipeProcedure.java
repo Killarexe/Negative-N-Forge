@@ -25,7 +25,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class SmeltingRecipeProcedure extends NegativeNModElements.ModElement {
 	public SmeltingRecipeProcedure(NegativeNModElements instance) {
-		super(instance, 1007);
+		super(instance, 977);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

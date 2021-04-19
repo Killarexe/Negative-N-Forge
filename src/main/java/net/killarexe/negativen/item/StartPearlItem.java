@@ -16,7 +16,7 @@ public class StartPearlItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:start_pearl")
 	public static final Item block = null;
 	public StartPearlItem(NegativeNModElements instance) {
-		super(instance, 22);
+		super(instance, 23);
 	}
 
 	@Override

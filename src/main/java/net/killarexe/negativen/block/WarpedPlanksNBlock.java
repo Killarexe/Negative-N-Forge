@@ -24,7 +24,7 @@ public class WarpedPlanksNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:warped_planks_n")
 	public static final Block block = null;
 	public WarpedPlanksNBlock(NegativeNModElements instance) {
-		super(instance, 225);
+		super(instance, 303);
 	}
 
 	@Override

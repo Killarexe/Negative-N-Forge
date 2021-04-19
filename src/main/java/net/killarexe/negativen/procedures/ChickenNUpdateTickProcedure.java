@@ -22,7 +22,7 @@ import java.util.HashMap;
 @NegativeNModElements.ModElement.Tag
 public class ChickenNUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public ChickenNUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 979);
+		super(instance, 950);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

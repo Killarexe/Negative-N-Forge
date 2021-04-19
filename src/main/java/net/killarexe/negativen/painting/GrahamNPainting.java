@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class GrahamNPainting extends NegativeNModElements.ModElement {
 	public GrahamNPainting(NegativeNModElements instance) {
-		super(instance, 860);
+		super(instance, 880);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -59,7 +59,7 @@ import com.google.common.collect.ImmutableList;
 public class PlainsNBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
 	public PlainsNBiome(NegativeNModElements instance) {
-		super(instance, 517);
+		super(instance, 566);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

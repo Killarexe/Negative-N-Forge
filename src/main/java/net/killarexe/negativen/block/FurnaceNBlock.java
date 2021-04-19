@@ -77,7 +77,7 @@ public class FurnaceNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:furnace_n")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public FurnaceNBlock(NegativeNModElements instance) {
-		super(instance, 74);
+		super(instance, 104);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

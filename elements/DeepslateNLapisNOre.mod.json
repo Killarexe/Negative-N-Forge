@@ -104,6 +104,9 @@
     "onBlockAdded": {
       "name": "DeepslateNLapisNOreAdded"
     },
+    "onDestroyedByPlayer": {
+      "name": "FortuneProceed"
+    },
     "spawnWorldTypes": [
       "CUSTOM:Nega"
     ],

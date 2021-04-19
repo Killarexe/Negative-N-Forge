@@ -4,6 +4,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
@@ -20,19 +21,22 @@ import net.minecraft.advancements.Advancement;
 
 import net.killarexe.negativen.item.NetheriteNArmorItem;
 import net.killarexe.negativen.item.ArnurendiamantinverseItem;
+import net.killarexe.negativen.enchantment.ResistantEnchantment;
 import net.killarexe.negativen.enchantment.EyewearEnchantment;
 import net.killarexe.negativen.enchantment.BurnProtectionEnchantment;
+import net.killarexe.negativen.enchantment.AntiPotionEnchantment;
 import net.killarexe.negativen.NegativeNModElements;
 import net.killarexe.negativen.NegativeNMod;
 
 import java.util.Map;
 import java.util.Iterator;
 import java.util.HashMap;
+import java.util.Collection;
 
 @NegativeNModElements.ModElement.Tag
 public class BurnProtectionEffectProcedure extends NegativeNModElements.ModElement {
 	public BurnProtectionEffectProcedure(NegativeNModElements instance) {
-		super(instance, 664);
+		super(instance, 698);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -43,6 +47,8 @@ public class BurnProtectionEffectProcedure extends NegativeNModElements.ModEleme
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+		double playerHealth = 0;
+		playerHealth = (double) ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1);
 		if (((EnchantmentHelper.getEnchantmentLevel(BurnProtectionEnchantment.enchantment,
 				((entity instanceof LivingEntity)
 						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
@@ -57,6 +63,74 @@ public class BurnProtectionEffectProcedure extends NegativeNModElements.ModEleme
 						: ItemStack.EMPTY))) > 0)) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, (int) 40, (int) 1, (false), (false)));
+		} else if (((EnchantmentHelper.getEnchantmentLevel(AntiPotionEnchantment.enchantment,
+				((entity instanceof LivingEntity)
+						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
+						: ItemStack.EMPTY))) > 0)) {
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).clearActivePotions();
+		} else if (((EnchantmentHelper.getEnchantmentLevel(ResistantEnchantment.enchantment,
+				((entity instanceof LivingEntity)
+						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
+						: ItemStack.EMPTY))) > 0)) {
+			if ((new Object() {
+				boolean check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == Effects.HEALTH_BOOST)
+								return true;
+						}
+					}
+					return false;
+				}
+			}.check(entity))) {
+				if (((new Object() {
+					int check(Entity _entity) {
+						if (_entity instanceof LivingEntity) {
+							Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+							for (EffectInstance effect : effects) {
+								if (effect.getPotion() == Effects.HEALTH_BOOST)
+									return effect.getDuration();
+							}
+						}
+						return 0;
+					}
+				}.check(entity)) == 40)) {
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HEALTH_BOOST, (int) 6000,
+								(int) (EnchantmentHelper.getEnchantmentLevel(ResistantEnchantment.enchantment,
+										((entity instanceof LivingEntity)
+												? ((LivingEntity) entity).getItemStackFromSlot(
+														EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
+												: ItemStack.EMPTY))),
+								(false), (false)));
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity).setHealth((float) (playerHealth));
+				}
+			} else if ((!(new Object() {
+				boolean check(Entity _entity) {
+					if (_entity instanceof LivingEntity) {
+						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+						for (EffectInstance effect : effects) {
+							if (effect.getPotion() == Effects.HEALTH_BOOST)
+								return true;
+						}
+					}
+					return false;
+				}
+			}.check(entity)))) {
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HEALTH_BOOST, (int) 6000,
+							(int) (EnchantmentHelper.getEnchantmentLevel(ResistantEnchantment.enchantment,
+									((entity instanceof LivingEntity)
+											? ((LivingEntity) entity).getItemStackFromSlot(
+													EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
+											: ItemStack.EMPTY))),
+							(false), (false)));
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.INSTANT_HEALTH, (int) 20, (int) 255));
+			}
 		}
 		if (((((entity instanceof LivingEntity)
 				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
@@ -72,15 +146,22 @@ public class BurnProtectionEffectProcedure extends NegativeNModElements.ModEleme
 										? ((LivingEntity) entity)
 												.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
 										: ItemStack.EMPTY).getItem() == new ItemStack(ArnurendiamantinverseItem.boots, (int) (1)).getItem()))))) {
-			if (entity instanceof ServerPlayerEntity) {
-				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
-						.getAdvancement(new ResourceLocation("negative_n:couvremoidenegatf"));
-				AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
-				if (!_ap.isDone()) {
-					Iterator _iterator = _ap.getRemaningCriteria().iterator();
-					while (_iterator.hasNext()) {
-						String _criterion = (String) _iterator.next();
-						((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+			if ((!(((entity instanceof ServerPlayerEntity) && (entity.world instanceof ServerWorld))
+					? ((ServerPlayerEntity) entity).getAdvancements()
+							.getProgress(((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+									.getAdvancement(new ResourceLocation("negative_n:couvremoidenegatf")))
+							.isDone()
+					: false))) {
+				if (entity instanceof ServerPlayerEntity) {
+					Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+							.getAdvancement(new ResourceLocation("negative_n:couvremoidenegatf"));
+					AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
+					if (!_ap.isDone()) {
+						Iterator _iterator = _ap.getRemaningCriteria().iterator();
+						while (_iterator.hasNext()) {
+							String _criterion = (String) _iterator.next();
+							((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+						}
 					}
 				}
 			}
@@ -99,15 +180,22 @@ public class BurnProtectionEffectProcedure extends NegativeNModElements.ModEleme
 										? ((LivingEntity) entity)
 												.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
 										: ItemStack.EMPTY).getItem() == new ItemStack(NetheriteNArmorItem.boots, (int) (1)).getItem()))))) {
-			if (entity instanceof ServerPlayerEntity) {
-				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
-						.getAdvancement(new ResourceLocation("negative_n:cover_me_with_debris_n"));
-				AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
-				if (!_ap.isDone()) {
-					Iterator _iterator = _ap.getRemaningCriteria().iterator();
-					while (_iterator.hasNext()) {
-						String _criterion = (String) _iterator.next();
-						((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+			if ((!(((entity instanceof ServerPlayerEntity) && (entity.world instanceof ServerWorld))
+					? ((ServerPlayerEntity) entity).getAdvancements()
+							.getProgress(((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+									.getAdvancement(new ResourceLocation("negative_n:cover_me_with_debris_n")))
+							.isDone()
+					: false))) {
+				if (entity instanceof ServerPlayerEntity) {
+					Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+							.getAdvancement(new ResourceLocation("negative_n:cover_me_with_debris_n"));
+					AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
+					if (!_ap.isDone()) {
+						Iterator _iterator = _ap.getRemaningCriteria().iterator();
+						while (_iterator.hasNext()) {
+							String _criterion = (String) _iterator.next();
+							((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+						}
 					}
 				}
 			}

@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "snh",
+    "texture": "stone_n_hoe",
     "customModelName": "Normal",
     "name": "Stone Hoe-N",
     "specialInfo": [],

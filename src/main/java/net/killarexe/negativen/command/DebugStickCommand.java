@@ -25,7 +25,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 @NegativeNModElements.ModElement.Tag
 public class DebugStickCommand extends NegativeNModElements.ModElement {
 	public DebugStickCommand(NegativeNModElements instance) {
-		super(instance, 870);
+		super(instance, 890);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

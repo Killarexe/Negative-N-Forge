@@ -12,7 +12,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class ClayNAdditionalGenerationConditionProcedure extends NegativeNModElements.ModElement {
 	public ClayNAdditionalGenerationConditionProcedure(NegativeNModElements instance) {
-		super(instance, 849);
+		super(instance, 869);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

@@ -40,7 +40,7 @@ public class CauldronNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:cauldron_n")
 	public static final Block block = null;
 	public CauldronNBlock(NegativeNModElements instance) {
-		super(instance, 897);
+		super(instance, 112);
 	}
 
 	@Override

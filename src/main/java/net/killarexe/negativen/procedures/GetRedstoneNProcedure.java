@@ -25,7 +25,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class GetRedstoneNProcedure extends NegativeNModElements.ModElement {
 	public GetRedstoneNProcedure(NegativeNModElements instance) {
-		super(instance, 722);
+		super(instance, 748);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

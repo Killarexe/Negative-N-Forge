@@ -85,7 +85,7 @@ public class ChestNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:chest_n")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public ChestNBlock(NegativeNModElements instance) {
-		super(instance, 203);
+		super(instance, 107);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

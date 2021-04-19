@@ -18,7 +18,7 @@ public class CobblestonePickaxeItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:cobblestone_n_pickaxe")
 	public static final Item block = null;
 	public CobblestonePickaxeItem(NegativeNModElements instance) {
-		super(instance, 292);
+		super(instance, 374);
 	}
 
 	@Override

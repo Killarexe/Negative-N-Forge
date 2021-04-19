@@ -21,24 +21,32 @@ import net.minecraft.world.World;
 import net.minecraft.world.ISeedReader;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
+import net.minecraft.util.Hand;
+import net.minecraft.util.Direction;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.killarexe.negativen.procedures.FortuneProceedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.item.QuartzNItem;
 import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
@@ -46,7 +54,7 @@ public class QuartzNOreBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:quartz_n_ore")
 	public static final Block block = null;
 	public QuartzNOreBlock(NegativeNModElements instance) {
-		super(instance, 227);
+		super(instance, 273);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -70,6 +78,26 @@ public class QuartzNOreBlock extends NegativeNModElements.ModElement {
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(QuartzNItem.block, (int) (1)));
+		}
+
+		@Override
+		public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity entity, Hand hand,
+				BlockRayTraceResult hit) {
+			super.onBlockActivated(state, world, pos, entity, hand, hit);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			Direction direction = hit.getFace();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				FortuneProceedProcedure.executeProcedure($_dependencies);
+			}
+			return ActionResultType.SUCCESS;
 		}
 	}
 	private static Feature<OreFeatureConfig> feature = null;

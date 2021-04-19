@@ -25,7 +25,7 @@ public class SpruceStrairsNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:spruce_stairs_n")
 	public static final Block block = null;
 	public SpruceStrairsNBlock(NegativeNModElements instance) {
-		super(instance, 183);
+		super(instance, 298);
 	}
 
 	@Override

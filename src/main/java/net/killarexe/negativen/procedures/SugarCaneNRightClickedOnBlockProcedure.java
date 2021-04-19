@@ -21,7 +21,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class SugarCaneNRightClickedOnBlockProcedure extends NegativeNModElements.ModElement {
 	public SugarCaneNRightClickedOnBlockProcedure(NegativeNModElements instance) {
-		super(instance, 713);
+		super(instance, 739);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -14,7 +14,7 @@ public class WitheredEnchantment extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:withered")
 	public static final Enchantment enchantment = null;
 	public WitheredEnchantment(NegativeNModElements instance) {
-		super(instance, 924);
+		super(instance, 914);
 	}
 
 	@Override

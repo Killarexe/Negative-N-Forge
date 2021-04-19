@@ -26,7 +26,7 @@ import com.google.common.collect.ImmutableSet;
 @NegativeNModElements.ModElement.Tag
 public class CaveGameDimDimension extends NegativeNModElements.ModElement {
 	public CaveGameDimDimension(NegativeNModElements instance) {
-		super(instance, 357);
+		super(instance, 415);
 	}
 
 	@Override

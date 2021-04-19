@@ -33,7 +33,7 @@ public class SpawnerNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:spawner_n")
 	public static final Block block = null;
 	public SpawnerNBlock(NegativeNModElements instance) {
-		super(instance, 698);
+		super(instance, 724);
 	}
 
 	@Override

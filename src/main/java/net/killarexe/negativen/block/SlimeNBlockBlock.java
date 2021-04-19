@@ -23,7 +23,7 @@ public class SlimeNBlockBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:slime_n_block")
 	public static final Block block = null;
 	public SlimeNBlockBlock(NegativeNModElements instance) {
-		super(instance, 235);
+		super(instance, 328);
 	}
 
 	@Override

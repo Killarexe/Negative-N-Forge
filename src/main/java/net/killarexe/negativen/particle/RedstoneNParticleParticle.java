@@ -24,7 +24,7 @@ import net.killarexe.negativen.NegativeNModElements;
 public class RedstoneNParticleParticle extends NegativeNModElements.ModElement {
 	public static final BasicParticleType particle = new BasicParticleType(false);
 	public RedstoneNParticleParticle(NegativeNModElements instance) {
-		super(instance, 917);
+		super(instance, 909);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

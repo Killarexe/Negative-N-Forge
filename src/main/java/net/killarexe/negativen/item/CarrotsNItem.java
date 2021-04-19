@@ -17,7 +17,7 @@ public class CarrotsNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:carrots_n")
 	public static final Item block = null;
 	public CarrotsNItem(NegativeNModElements instance) {
-		super(instance, 320);
+		super(instance, 74);
 	}
 
 	@Override

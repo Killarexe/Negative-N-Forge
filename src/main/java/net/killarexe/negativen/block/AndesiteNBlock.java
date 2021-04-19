@@ -45,7 +45,7 @@ public class AndesiteNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:andesite_n")
 	public static final Block block = null;
 	public AndesiteNBlock(NegativeNModElements instance) {
-		super(instance, 215);
+		super(instance, 208);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

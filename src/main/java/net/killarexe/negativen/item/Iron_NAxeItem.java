@@ -23,7 +23,7 @@ public class Iron_NAxeItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:iron_n_axe")
 	public static final Item block = null;
 	public Iron_NAxeItem(NegativeNModElements instance) {
-		super(instance, 285);
+		super(instance, 367);
 	}
 
 	@Override

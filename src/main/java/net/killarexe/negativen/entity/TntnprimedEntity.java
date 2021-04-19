@@ -48,15 +48,15 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class TntnprimedEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public TntnprimedEntity(NegativeNModElements instance) {
-		super(instance, 427);
+		super(instance, 482);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
 
 	@Override
 	public void initElements() {
 		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.6f, 1.8f))
-						.build("tntnprimed").setRegistryName("tntnprimed");
+				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0f, 0f)).build("tntnprimed")
+						.setRegistryName("tntnprimed");
 		elements.entities.add(() -> entity);
 	}
 
@@ -69,7 +69,7 @@ public class TntnprimedEntity extends NegativeNModElements.ModElement {
 		@OnlyIn(Dist.CLIENT)
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
-				return new MobRenderer(renderManager, new Modelcustom_model(), 0.5f) {
+				return new MobRenderer(renderManager, new Modelcustom_model(), 0f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
 						return new ResourceLocation("negative_n:textures/tntn.png");
@@ -158,6 +158,11 @@ public class TntnprimedEntity extends NegativeNModElements.ModElement {
 				$_dependencies.put("world", world);
 				TntnprimedOnEntityTickUpdateProcedure.executeProcedure($_dependencies);
 			}
+		}
+
+		@Override
+		public boolean canBeCollidedWith() {
+			return false;
 		}
 
 		public void livingTick() {

@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "sna",
+    "texture": "stone_n_axe",
     "customModelName": "Normal",
     "name": "Stone Axe-N",
     "specialInfo": [],

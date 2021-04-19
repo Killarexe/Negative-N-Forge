@@ -29,7 +29,7 @@ import net.killarexe.negativen.NegativeNModElements;
 public class ClassicNetherBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
 	public ClassicNetherBiome(NegativeNModElements instance) {
-		super(instance, 811);
+		super(instance, 831);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

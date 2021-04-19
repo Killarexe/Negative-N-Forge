@@ -45,7 +45,7 @@ public class NetherNBricksWallBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:nether_n_bricks_wall")
 	public static final Block block = null;
 	public NetherNBricksWallBlock(NegativeNModElements instance) {
-		super(instance, 969);
+		super(instance, 174);
 	}
 
 	@Override

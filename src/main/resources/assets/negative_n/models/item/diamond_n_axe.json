@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "negative_n:items/hachedi"
+    "layer0": "negative_n:items/diamond_n_axe"
   }
 }

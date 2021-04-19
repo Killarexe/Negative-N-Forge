@@ -16,7 +16,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class CampfireNUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public CampfireNUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 592);
+		super(instance, 635);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

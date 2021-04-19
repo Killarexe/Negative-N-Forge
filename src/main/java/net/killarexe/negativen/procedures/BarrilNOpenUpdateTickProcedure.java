@@ -23,7 +23,7 @@ import java.util.HashMap;
 @NegativeNModElements.ModElement.Tag
 public class BarrilNOpenUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public BarrilNOpenUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 983);
+		super(instance, 954);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

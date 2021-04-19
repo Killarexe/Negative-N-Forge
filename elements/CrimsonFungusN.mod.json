@@ -4,7 +4,10 @@
   "definition": {
     "renderType": 12,
     "texture": "crimson_fungus_n",
+    "textureBottom": "",
     "customModelName": "Cross model",
+    "itemTexture": "",
+    "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "plantType": "normal",
@@ -22,7 +25,7 @@
     },
     "hardness": 0.0,
     "resistance": 0.0,
-    "luminance": 0,
+    "luminance": 5,
     "unbreakable": false,
     "soundOnStep": {
       "value": "WOOD"
@@ -33,7 +36,7 @@
     },
     "dropAmount": 1,
     "forceTicking": false,
-    "emissiveRendering": true,
+    "emissiveRendering": false,
     "hasTileEntity": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",

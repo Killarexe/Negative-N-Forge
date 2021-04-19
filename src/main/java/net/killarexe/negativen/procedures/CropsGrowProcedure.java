@@ -39,7 +39,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class CropsGrowProcedure extends NegativeNModElements.ModElement {
 	public CropsGrowProcedure(NegativeNModElements instance) {
-		super(instance, 700);
+		super(instance, 726);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

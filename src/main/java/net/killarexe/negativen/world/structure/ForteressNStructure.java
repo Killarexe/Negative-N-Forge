@@ -38,7 +38,7 @@ public class ForteressNStructure extends NegativeNModElements.ModElement {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public ForteressNStructure(NegativeNModElements instance) {
-		super(instance, 451);
+		super(instance, 506);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

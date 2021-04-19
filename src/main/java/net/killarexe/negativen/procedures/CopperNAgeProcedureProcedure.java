@@ -27,7 +27,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class CopperNAgeProcedureProcedure extends NegativeNModElements.ModElement {
 	public CopperNAgeProcedureProcedure(NegativeNModElements instance) {
-		super(instance, 825);
+		super(instance, 845);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

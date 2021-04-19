@@ -39,7 +39,7 @@ public class CactusNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:cactus_n")
 	public static final Block block = null;
 	public CactusNBlock(NegativeNModElements instance) {
-		super(instance, 212);
+		super(instance, 324);
 	}
 
 	@Override

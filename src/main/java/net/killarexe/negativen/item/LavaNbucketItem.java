@@ -26,7 +26,7 @@ public class LavaNbucketItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:lava_nbucket")
 	public static final Item block = null;
 	public LavaNbucketItem(NegativeNModElements instance) {
-		super(instance, 25);
+		super(instance, 26);
 	}
 
 	@Override

@@ -30,7 +30,7 @@ public class SpruceLogNStrippedBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:spruce_log_n_stripped")
 	public static final Block block = null;
 	public SpruceLogNStrippedBlock(NegativeNModElements instance) {
-		super(instance, 90);
+		super(instance, 126);
 	}
 
 	@Override

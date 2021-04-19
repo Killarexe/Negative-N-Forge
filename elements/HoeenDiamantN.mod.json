@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "hoedi",
+    "texture": "diamond_n_hoe",
     "customModelName": "Normal",
     "name": "Diamond-N Hoe",
     "specialInfo": [],

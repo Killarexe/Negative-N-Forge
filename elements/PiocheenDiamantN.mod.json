@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "pdn",
+    "texture": "diamond_n_pickaxe",
     "customModelName": "Normal",
     "name": "Diamond-N Pickaxe",
     "specialInfo": [],

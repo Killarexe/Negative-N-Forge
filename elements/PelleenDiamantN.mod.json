@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "pelledi",
+    "texture": "diamond_n_shovel",
     "customModelName": "Normal",
     "name": "Diamond-N Spade",
     "specialInfo": [],

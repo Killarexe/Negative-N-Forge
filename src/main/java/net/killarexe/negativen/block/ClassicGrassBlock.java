@@ -28,7 +28,7 @@ public class ClassicGrassBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:classic_grass")
 	public static final Block block = null;
 	public ClassicGrassBlock(NegativeNModElements instance) {
-		super(instance, 325);
+		super(instance, 392);
 	}
 
 	@Override

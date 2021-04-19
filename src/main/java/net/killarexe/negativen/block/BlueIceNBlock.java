@@ -23,7 +23,7 @@ public class BlueIceNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:blue_ice_n")
 	public static final Block block = null;
 	public BlueIceNBlock(NegativeNModElements instance) {
-		super(instance, 975);
+		super(instance, 342);
 	}
 
 	@Override

@@ -30,7 +30,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class StairsProccedProcedure extends NegativeNModElements.ModElement {
 	public StairsProccedProcedure(NegativeNModElements instance) {
-		super(instance, 563);
+		super(instance, 611);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

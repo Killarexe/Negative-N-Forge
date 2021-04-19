@@ -47,7 +47,7 @@ import java.util.List;
 public class NetherNBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
 	public NetherNBiome(NegativeNModElements instance) {
-		super(instance, 436);
+		super(instance, 491);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

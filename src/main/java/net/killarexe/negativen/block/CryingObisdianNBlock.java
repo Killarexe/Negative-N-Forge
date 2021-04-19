@@ -24,7 +24,7 @@ public class CryingObisdianNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:crying_obisdian_n")
 	public static final Block block = null;
 	public CryingObisdianNBlock(NegativeNModElements instance) {
-		super(instance, 257);
+		super(instance, 335);
 	}
 
 	@Override

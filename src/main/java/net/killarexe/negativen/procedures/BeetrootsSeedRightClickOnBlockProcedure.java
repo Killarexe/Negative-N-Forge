@@ -19,7 +19,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class BeetrootsSeedRightClickOnBlockProcedure extends NegativeNModElements.ModElement {
 	public BeetrootsSeedRightClickOnBlockProcedure(NegativeNModElements instance) {
-		super(instance, 706);
+		super(instance, 732);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

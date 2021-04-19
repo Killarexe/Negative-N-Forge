@@ -45,7 +45,7 @@ public class BeetrootStage3Block extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:beetroot_stage_3")
 	public static final Block block = null;
 	public BeetrootStage3Block(NegativeNModElements instance) {
-		super(instance, 705);
+		super(instance, 731);
 	}
 
 	@Override

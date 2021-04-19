@@ -54,7 +54,7 @@ public class CrimsonFungusNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:crimson_fungus_n")
 	public static final Block block = null;
 	public CrimsonFungusNBlock(NegativeNModElements instance) {
-		super(instance, 122);
+		super(instance, 158);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -113,9 +113,8 @@ public class CrimsonFungusNBlock extends NegativeNModElements.ModElement {
 	}
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
-			super(Effects.SATURATION, 0,
-					Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.WOOD).hardnessAndResistance(0f, 0f)
-							.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setLightLevel(s -> 0));
+			super(Effects.SATURATION, 0, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.WOOD)
+					.hardnessAndResistance(0f, 0f).setLightLevel(s -> 5));
 			setRegistryName("crimson_fungus_n");
 		}
 

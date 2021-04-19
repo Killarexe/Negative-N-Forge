@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class PoolNPainting extends NegativeNModElements.ModElement {
 	public PoolNPainting(NegativeNModElements instance) {
-		super(instance, 865);
+		super(instance, 885);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

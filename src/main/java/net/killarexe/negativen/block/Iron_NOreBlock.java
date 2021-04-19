@@ -28,6 +28,8 @@ import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
@@ -35,11 +37,14 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.killarexe.negativen.procedures.FortuneProceedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNBlocksItemGroup;
 import net.killarexe.negativen.NegativeNModElements;
 
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
@@ -47,7 +52,7 @@ public class Iron_NOreBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:iron_n_ore")
 	public static final Block block = null;
 	public Iron_NOreBlock(NegativeNModElements instance) {
-		super(instance, 193);
+		super(instance, 268);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -76,6 +81,24 @@ public class Iron_NOreBlock extends NegativeNModElements.ModElement {
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
+		}
+
+		@Override
+		public boolean removedByPlayer(BlockState state, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, FluidState fluid) {
+			boolean retval = super.removedByPlayer(state, world, pos, entity, willHarvest, fluid);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				FortuneProceedProcedure.executeProcedure($_dependencies);
+			}
+			return retval;
 		}
 	}
 	private static Feature<OreFeatureConfig> feature = null;

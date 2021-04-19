@@ -29,7 +29,7 @@ public class GlassNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:glass_n")
 	public static final Block block = null;
 	public GlassNBlock(NegativeNModElements instance) {
-		super(instance, 208);
+		super(instance, 322);
 	}
 
 	@Override

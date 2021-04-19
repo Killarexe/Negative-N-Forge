@@ -45,7 +45,7 @@ public class ShroomlightNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:shroomlight_n")
 	public static final Block block = null;
 	public ShroomlightNBlock(NegativeNModElements instance) {
-		super(instance, 239);
+		super(instance, 330);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

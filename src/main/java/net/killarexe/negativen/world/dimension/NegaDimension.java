@@ -77,7 +77,7 @@ public class NegaDimension extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:overworld_n_portal")
 	public static final CustomPortalBlock portal = null;
 	public NegaDimension(NegativeNModElements instance) {
-		super(instance, 301);
+		super(instance, 384);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 

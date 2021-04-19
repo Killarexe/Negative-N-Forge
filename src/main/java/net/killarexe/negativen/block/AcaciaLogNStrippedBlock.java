@@ -30,7 +30,7 @@ public class AcaciaLogNStrippedBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:acacia_log_n_stripped")
 	public static final Block block = null;
 	public AcaciaLogNStrippedBlock(NegativeNModElements instance) {
-		super(instance, 86);
+		super(instance, 122);
 	}
 
 	@Override

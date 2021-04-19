@@ -1,7 +1,7 @@
 {
   "type": "negative_n:cave_game_dim",
   "generator": {
-    "type": "minecraft:noise",
+    "type": "minecraft:flat",
     "seed": 0,
     "biome_source": {
       "type": "minecraft:multi_noise",

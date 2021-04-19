@@ -24,7 +24,7 @@ public class ChiseledSandstoneNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:chiseled_sandstone_n")
 	public static final Block block = null;
 	public ChiseledSandstoneNBlock(NegativeNModElements instance) {
-		super(instance, 880);
+		super(instance, 221);
 	}
 
 	@Override

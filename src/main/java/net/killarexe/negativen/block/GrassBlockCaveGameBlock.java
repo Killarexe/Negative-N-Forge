@@ -22,7 +22,7 @@ public class GrassBlockCaveGameBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:grass_block_cave_game")
 	public static final Block block = null;
 	public GrassBlockCaveGameBlock(NegativeNModElements instance) {
-		super(instance, 694);
+		super(instance, 720);
 	}
 
 	@Override

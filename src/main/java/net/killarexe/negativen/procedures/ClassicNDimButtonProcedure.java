@@ -17,7 +17,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class ClassicNDimButtonProcedure extends NegativeNModElements.ModElement {
 	public ClassicNDimButtonProcedure(NegativeNModElements instance) {
-		super(instance, 632);
+		super(instance, 675);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

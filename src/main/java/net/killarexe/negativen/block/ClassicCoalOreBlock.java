@@ -46,7 +46,7 @@ public class ClassicCoalOreBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:classic_coal_ore")
 	public static final Block block = null;
 	public ClassicCoalOreBlock(NegativeNModElements instance) {
-		super(instance, 341);
+		super(instance, 408);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

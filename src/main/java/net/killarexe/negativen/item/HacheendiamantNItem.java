@@ -23,7 +23,7 @@ public class HacheendiamantNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:diamond_n_axe")
 	public static final Item block = null;
 	public HacheendiamantNItem(NegativeNModElements instance) {
-		super(instance, 281);
+		super(instance, 363);
 	}
 
 	@Override

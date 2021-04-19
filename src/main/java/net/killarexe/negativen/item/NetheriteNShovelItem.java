@@ -17,7 +17,7 @@ public class NetheriteNShovelItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:netherite_n_shovel")
 	public static final Item block = null;
 	public NetheriteNShovelItem(NegativeNModElements instance) {
-		super(instance, 278);
+		super(instance, 360);
 	}
 
 	@Override

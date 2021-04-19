@@ -41,7 +41,7 @@ public class CarrotNStage1Block extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:carrot_n_stage_1")
 	public static final Block block = null;
 	public CarrotNStage1Block(NegativeNModElements instance) {
-		super(instance, 710);
+		super(instance, 736);
 	}
 
 	@Override

@@ -22,7 +22,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class StartportalframeOnBlockRightClickedProcedure extends NegativeNModElements.ModElement {
 	public StartportalframeOnBlockRightClickedProcedure(NegativeNModElements instance) {
-		super(instance, 455);
+		super(instance, 510);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

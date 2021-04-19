@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class PoisonNPotionStartedappliedProcedure extends NegativeNModElements.ModElement {
 	public PoisonNPotionStartedappliedProcedure(NegativeNModElements instance) {
-		super(instance, 840);
+		super(instance, 860);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

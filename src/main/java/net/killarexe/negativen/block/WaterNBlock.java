@@ -58,7 +58,7 @@ public class WaterNBlock extends NegativeNModElements.ModElement {
 	public static FlowingFluid still = null;
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 	public WaterNBlock(NegativeNModElements instance) {
-		super(instance, 412);
+		super(instance, 469);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());

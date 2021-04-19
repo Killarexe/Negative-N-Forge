@@ -33,7 +33,7 @@ public class IronAndFlintItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:iron_and_flint")
 	public static final Item block = null;
 	public IronAndFlintItem(NegativeNModElements instance) {
-		super(instance, 300);
+		super(instance, 357);
 	}
 
 	@Override

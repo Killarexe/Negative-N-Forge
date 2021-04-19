@@ -24,7 +24,7 @@ public class PolishedBasaltNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:polished_basalt_n")
 	public static final Block block = null;
 	public PolishedBasaltNBlock(NegativeNModElements instance) {
-		super(instance, 875);
+		super(instance, 338);
 	}
 
 	@Override

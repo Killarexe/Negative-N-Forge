@@ -31,7 +31,7 @@ public class WeatheredCopperNBlockBlock extends NegativeNModElements.ModElement 
 	@ObjectHolder("negative_n:weathered_copper_n_block")
 	public static final Block block = null;
 	public WeatheredCopperNBlockBlock(NegativeNModElements instance) {
-		super(instance, 246);
+		super(instance, 249);
 	}
 
 	@Override

@@ -23,7 +23,7 @@ import java.util.HashMap;
 @NegativeNModElements.ModElement.Tag
 public class PoisonusProccedProcedure extends NegativeNModElements.ModElement {
 	public PoisonusProccedProcedure(NegativeNModElements instance) {
-		super(instance, 665);
+		super(instance, 699);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

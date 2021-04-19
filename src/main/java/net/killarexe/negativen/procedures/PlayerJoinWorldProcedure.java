@@ -27,7 +27,7 @@ import java.util.HashMap;
 @NegativeNModElements.ModElement.Tag
 public class PlayerJoinWorldProcedure extends NegativeNModElements.ModElement {
 	public PlayerJoinWorldProcedure(NegativeNModElements instance) {
-		super(instance, 886);
+		super(instance, 894);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

@@ -17,7 +17,7 @@ public class PorkchoprawNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:porkchoprawn")
 	public static final Item block = null;
 	public PorkchoprawNItem(NegativeNModElements instance) {
-		super(instance, 313);
+		super(instance, 65);
 	}
 
 	@Override

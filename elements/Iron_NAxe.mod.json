@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "hachein",
+    "texture": "iron_n_axe",
     "customModelName": "Normal",
     "name": "Iron-N Axe",
     "specialInfo": [],

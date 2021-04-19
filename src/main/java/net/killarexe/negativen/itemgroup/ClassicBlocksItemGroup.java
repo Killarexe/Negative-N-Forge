@@ -13,7 +13,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class ClassicBlocksItemGroup extends NegativeNModElements.ModElement {
 	public ClassicBlocksItemGroup(NegativeNModElements instance) {
-		super(instance, 594);
+		super(instance, 637);
 	}
 
 	@Override

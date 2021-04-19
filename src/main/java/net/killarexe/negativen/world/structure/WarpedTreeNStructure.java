@@ -38,7 +38,7 @@ public class WarpedTreeNStructure extends NegativeNModElements.ModElement {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public WarpedTreeNStructure(NegativeNModElements instance) {
-		super(instance, 726);
+		super(instance, 752);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

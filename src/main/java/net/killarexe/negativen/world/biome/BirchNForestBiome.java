@@ -60,7 +60,7 @@ import com.google.common.collect.ImmutableList;
 public class BirchNForestBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
 	public BirchNForestBiome(NegativeNModElements instance) {
-		super(instance, 516);
+		super(instance, 565);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

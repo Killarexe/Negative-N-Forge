@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "negative_n:items/snsh"
+    "layer0": "negative_n:items/stone_n_shovel"
   }
 }

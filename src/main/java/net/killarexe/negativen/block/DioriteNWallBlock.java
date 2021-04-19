@@ -45,7 +45,7 @@ public class DioriteNWallBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:diorite_n_wall")
 	public static final Block block = null;
 	public DioriteNWallBlock(NegativeNModElements instance) {
-		super(instance, 964);
+		super(instance, 169);
 	}
 
 	@Override

@@ -54,7 +54,7 @@ public class WarpedFungusNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:warped_fungus_n")
 	public static final Block block = null;
 	public WarpedFungusNBlock(NegativeNModElements instance) {
-		super(instance, 121);
+		super(instance, 157);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -113,9 +113,8 @@ public class WarpedFungusNBlock extends NegativeNModElements.ModElement {
 	}
 	public static class BlockCustomFlower extends FlowerBlock {
 		public BlockCustomFlower() {
-			super(Effects.SATURATION, 0,
-					Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0f, 0f)
-							.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setLightLevel(s -> 0));
+			super(Effects.SATURATION, 0, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT)
+					.hardnessAndResistance(0f, 0f).setLightLevel(s -> 5));
 			setRegistryName("warped_fungus_n");
 		}
 

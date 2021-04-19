@@ -23,7 +23,7 @@ public class StartStoneBricksBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:start_stone_bricks")
 	public static final Block block = null;
 	public StartStoneBricksBlock(NegativeNModElements instance) {
-		super(instance, 920);
+		super(instance, 237);
 	}
 
 	@Override

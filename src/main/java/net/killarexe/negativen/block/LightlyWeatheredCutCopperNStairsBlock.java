@@ -38,7 +38,7 @@ public class LightlyWeatheredCutCopperNStairsBlock extends NegativeNModElements.
 	@ObjectHolder("negative_n:lightly_weathered_cut_copper_n_stairs")
 	public static final Block block = null;
 	public LightlyWeatheredCutCopperNStairsBlock(NegativeNModElements instance) {
-		super(instance, 893);
+		super(instance, 317);
 	}
 
 	@Override

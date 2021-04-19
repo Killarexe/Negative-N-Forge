@@ -48,7 +48,7 @@ import java.util.List;
 public class MontainsNBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
 	public MontainsNBiome(NegativeNModElements instance) {
-		super(instance, 654);
+		super(instance, 688);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

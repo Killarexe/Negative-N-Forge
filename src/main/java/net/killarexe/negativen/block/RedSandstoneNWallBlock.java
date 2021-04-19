@@ -45,7 +45,7 @@ public class RedSandstoneNWallBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:red_sandstone_n_wall")
 	public static final Block block = null;
 	public RedSandstoneNWallBlock(NegativeNModElements instance) {
-		super(instance, 967);
+		super(instance, 172);
 	}
 
 	@Override

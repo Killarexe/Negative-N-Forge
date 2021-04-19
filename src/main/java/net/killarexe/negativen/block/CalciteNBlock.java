@@ -45,7 +45,7 @@ public class CalciteNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:calcite_n")
 	public static final Block block = null;
 	public CalciteNBlock(NegativeNModElements instance) {
-		super(instance, 876);
+		super(instance, 339);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

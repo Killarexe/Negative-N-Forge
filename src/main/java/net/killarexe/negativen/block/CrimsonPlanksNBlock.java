@@ -24,7 +24,7 @@ public class CrimsonPlanksNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:crimson_planks_n")
 	public static final Block block = null;
 	public CrimsonPlanksNBlock(NegativeNModElements instance) {
-		super(instance, 224);
+		super(instance, 302);
 	}
 
 	@Override

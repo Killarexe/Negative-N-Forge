@@ -38,7 +38,7 @@ public class SpruceNTreeStructure extends NegativeNModElements.ModElement {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public SpruceNTreeStructure(NegativeNModElements instance) {
-		super(instance, 653);
+		super(instance, 687);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

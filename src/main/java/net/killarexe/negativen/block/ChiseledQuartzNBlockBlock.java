@@ -30,7 +30,7 @@ public class ChiseledQuartzNBlockBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:chiseled_quartz_n_block")
 	public static final Block block = null;
 	public ChiseledQuartzNBlockBlock(NegativeNModElements instance) {
-		super(instance, 873);
+		super(instance, 254);
 	}
 
 	@Override

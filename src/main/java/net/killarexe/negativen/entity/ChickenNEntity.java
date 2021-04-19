@@ -61,7 +61,7 @@ import net.killarexe.negativen.NegativeNModElements;
 public class ChickenNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public ChickenNEntity(NegativeNModElements instance) {
-		super(instance, 59);
+		super(instance, 87);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -72,7 +72,7 @@ public class ChickenNEntity extends NegativeNModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.4f, 0.7f))
 						.build("chicken_n").setRegistryName("chicken_n");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -16777216, -16750900, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("chicken_n_spawn_egg"));
 	}
 

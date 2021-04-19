@@ -26,7 +26,7 @@ public class WaterNbucketItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:water_nbucket")
 	public static final Item block = null;
 	public WaterNbucketItem(NegativeNModElements instance) {
-		super(instance, 26);
+		super(instance, 27);
 	}
 
 	@Override

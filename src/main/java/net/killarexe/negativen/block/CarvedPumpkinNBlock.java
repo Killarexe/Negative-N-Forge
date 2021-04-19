@@ -40,7 +40,7 @@ public class CarvedPumpkinNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:carved_pumpkin_n")
 	public static final Block block = null;
 	public CarvedPumpkinNBlock(NegativeNModElements instance) {
-		super(instance, 123);
+		super(instance, 159);
 	}
 
 	@Override

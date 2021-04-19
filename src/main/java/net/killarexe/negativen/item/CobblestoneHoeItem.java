@@ -27,7 +27,7 @@ public class CobblestoneHoeItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:cobblestone_n_hoe")
 	public static final Item block = null;
 	public CobblestoneHoeItem(NegativeNModElements instance) {
-		super(instance, 295);
+		super(instance, 377);
 	}
 
 	@Override

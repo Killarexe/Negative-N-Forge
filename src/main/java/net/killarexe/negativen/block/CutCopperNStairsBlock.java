@@ -32,7 +32,7 @@ public class CutCopperNStairsBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:cut_copper_n_stairs")
 	public static final Block block = null;
 	public CutCopperNStairsBlock(NegativeNModElements instance) {
-		super(instance, 892);
+		super(instance, 316);
 	}
 
 	@Override

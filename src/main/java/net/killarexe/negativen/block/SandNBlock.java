@@ -26,7 +26,7 @@ public class SandNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:sand_n")
 	public static final Block block = null;
 	public SandNBlock(NegativeNModElements instance) {
-		super(instance, 210);
+		super(instance, 218);
 	}
 
 	@Override

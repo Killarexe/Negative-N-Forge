@@ -31,7 +31,7 @@ public class BricksBlockNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:bricks_block_n")
 	public static final Block block = null;
 	public BricksBlockNBlock(NegativeNModElements instance) {
-		super(instance, 221);
+		super(instance, 235);
 	}
 
 	@Override

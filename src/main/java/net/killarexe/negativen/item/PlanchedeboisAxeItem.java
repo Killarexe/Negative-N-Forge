@@ -29,7 +29,7 @@ public class PlanchedeboisAxeItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:wood_n_axe")
 	public static final Item block = null;
 	public PlanchedeboisAxeItem(NegativeNModElements instance) {
-		super(instance, 289);
+		super(instance, 371);
 	}
 
 	@Override

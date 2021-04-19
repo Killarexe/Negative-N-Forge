@@ -37,7 +37,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class FusionnatorProceedProcedure extends NegativeNModElements.ModElement {
 	public FusionnatorProceedProcedure(NegativeNModElements instance) {
-		super(instance, 375);
+		super(instance, 435);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

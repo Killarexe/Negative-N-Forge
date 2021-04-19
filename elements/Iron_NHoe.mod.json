@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "hin",
+    "texture": "iron_n_hoe",
     "customModelName": "Normal",
     "name": "Iron-N Hoe",
     "specialInfo": [],

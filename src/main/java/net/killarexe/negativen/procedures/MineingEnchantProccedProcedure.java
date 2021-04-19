@@ -38,7 +38,7 @@ import java.util.HashMap;
 @NegativeNModElements.ModElement.Tag
 public class MineingEnchantProccedProcedure extends NegativeNModElements.ModElement {
 	public MineingEnchantProccedProcedure(NegativeNModElements instance) {
-		super(instance, 885);
+		super(instance, 893);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

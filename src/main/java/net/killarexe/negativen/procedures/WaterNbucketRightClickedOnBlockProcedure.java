@@ -24,7 +24,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class WaterNbucketRightClickedOnBlockProcedure extends NegativeNModElements.ModElement {
 	public WaterNbucketRightClickedOnBlockProcedure(NegativeNModElements instance) {
-		super(instance, 524);
+		super(instance, 573);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -39,7 +39,7 @@ import java.util.List;
 public class MineingBiomeBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
 	public MineingBiomeBiome(NegativeNModElements instance) {
-		super(instance, 424);
+		super(instance, 479);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

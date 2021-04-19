@@ -16,7 +16,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class HoeNRightClickOnDirtProcedure extends NegativeNModElements.ModElement {
 	public HoeNRightClickOnDirtProcedure(NegativeNModElements instance) {
-		super(instance, 679);
+		super(instance, 706);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "snsh",
+    "texture": "stone_n_shovel",
     "customModelName": "Normal",
     "name": "Stone Shovel-N",
     "specialInfo": [],

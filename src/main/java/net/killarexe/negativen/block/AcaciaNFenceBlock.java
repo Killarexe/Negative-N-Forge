@@ -34,7 +34,7 @@ public class AcaciaNFenceBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:acacia_n_fence")
 	public static final Block block = null;
 	public AcaciaNFenceBlock(NegativeNModElements instance) {
-		super(instance, 93);
+		super(instance, 130);
 	}
 
 	@Override

@@ -18,7 +18,7 @@ public class BlazeNpowderItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:blaze_n_powder")
 	public static final Item block = null;
 	public BlazeNpowderItem(NegativeNModElements instance) {
-		super(instance, 18);
+		super(instance, 20);
 	}
 
 	@Override

@@ -76,7 +76,7 @@ public class MineingDimDimension extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:mineingdim_portal")
 	public static final CustomPortalBlock portal = null;
 	public MineingDimDimension(NegativeNModElements instance) {
-		super(instance, 302);
+		super(instance, 385);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new POIRegisterHandler());
 	}
 

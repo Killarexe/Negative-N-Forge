@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class BruningSkullNPainting extends NegativeNModElements.ModElement {
 	public BruningSkullNPainting(NegativeNModElements instance) {
-		super(instance, 854);
+		super(instance, 874);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

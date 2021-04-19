@@ -17,7 +17,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class NetherNBottonProcedure extends NegativeNModElements.ModElement {
 	public NetherNBottonProcedure(NegativeNModElements instance) {
-		super(instance, 463);
+		super(instance, 518);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

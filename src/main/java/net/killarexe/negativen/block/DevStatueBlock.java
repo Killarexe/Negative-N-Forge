@@ -36,7 +36,7 @@ public class DevStatueBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:dev_statue")
 	public static final Block block = null;
 	public DevStatueBlock(NegativeNModElements instance) {
-		super(instance, 633);
+		super(instance, 676);
 	}
 
 	@Override

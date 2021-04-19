@@ -25,7 +25,7 @@ public class AmethystNBlockBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:amethyst_n_block")
 	public static final Block block = null;
 	public AmethystNBlockBlock(NegativeNModElements instance) {
-		super(instance, 253);
+		super(instance, 332);
 	}
 
 	@Override

@@ -43,7 +43,7 @@
     },
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:RawGoldN"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -101,6 +101,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "FortuneProceed"
+    },
     "spawnWorldTypes": [
       "CUSTOM:Nega",
       "CUSTOM:MineingDim",

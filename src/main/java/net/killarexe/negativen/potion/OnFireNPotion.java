@@ -24,7 +24,7 @@ public class OnFireNPotion extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:on_fire_n")
 	public static final Effect potion = null;
 	public OnFireNPotion(NegativeNModElements instance) {
-		super(instance, 925);
+		super(instance, 915);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

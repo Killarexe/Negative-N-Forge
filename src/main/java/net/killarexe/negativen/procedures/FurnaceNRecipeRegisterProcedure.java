@@ -11,7 +11,7 @@ import java.util.HashMap;
 @NegativeNModElements.ModElement.Tag
 public class FurnaceNRecipeRegisterProcedure extends NegativeNModElements.ModElement {
 	public FurnaceNRecipeRegisterProcedure(NegativeNModElements instance) {
-		super(instance, 1009);
+		super(instance, 979);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

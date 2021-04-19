@@ -30,6 +30,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -45,7 +46,7 @@ public class AncientDebrisNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:ancient_debris_n")
 	public static final Block block = null;
 	public AncientDebrisNBlock(NegativeNModElements instance) {
-		super(instance, 189);
+		super(instance, 255);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
@@ -83,6 +84,20 @@ public class AncientDebrisNBlock extends NegativeNModElements.ModElement {
 				blockCriteria = true;
 			if (blockAt.getBlock() == NetherrackNBlock.block.getDefaultState().getBlock())
 				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == BasaltNBlock.block.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == PolishedBasaltNBlock.block.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == SoulSandBlock.block.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == SoulSoilNBlock.block.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == WapredNyliumNBlock.block.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == CrimsonNyliumNBlock.block.getDefaultState().getBlock())
+				blockCriteria = true;
 			return blockCriteria;
 		}
 
@@ -104,8 +119,6 @@ public class AncientDebrisNBlock extends NegativeNModElements.ModElement {
 					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:netherndim")))
 						dimensionCriteria = true;
 					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("negative_n:mineingdim")))
-						dimensionCriteria = true;
-					if (dimensionType == World.OVERWORLD)
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;

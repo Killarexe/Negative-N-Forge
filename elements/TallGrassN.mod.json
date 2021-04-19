@@ -54,6 +54,31 @@
     "spawnWorldTypes": [
       "CUSTOM:Nega"
     ],
-    "restrictionBiomes": []
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Negative"
+      },
+      {
+        "value": "CUSTOM:OakNforest"
+      },
+      {
+        "value": "CUSTOM:BirchNForest"
+      },
+      {
+        "value": "CUSTOM:PlainsN"
+      },
+      {
+        "value": "CUSTOM:DarkOakNForest"
+      },
+      {
+        "value": "CUSTOM:JungleN"
+      },
+      {
+        "value": "CUSTOM:SpruceForestN"
+      },
+      {
+        "value": "CUSTOM:AcaciaNBiome"
+      }
+    ]
   }
 }

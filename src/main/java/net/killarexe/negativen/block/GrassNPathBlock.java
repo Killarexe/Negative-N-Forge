@@ -37,7 +37,7 @@ public class GrassNPathBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:grass_n_path")
 	public static final Block block = null;
 	public GrassNPathBlock(NegativeNModElements instance) {
-		super(instance, 125);
+		super(instance, 127);
 	}
 
 	@Override

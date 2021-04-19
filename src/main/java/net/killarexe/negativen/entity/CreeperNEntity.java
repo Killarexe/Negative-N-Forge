@@ -53,7 +53,7 @@ import net.killarexe.negativen.NegativeNModElements;
 public class CreeperNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public CreeperNEntity(NegativeNModElements instance) {
-		super(instance, 53);
+		super(instance, 81);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -64,7 +64,7 @@ public class CreeperNEntity extends NegativeNModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.7f)).build("creepern")
 						.setRegistryName("creepern");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -3407668, -16777216, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("creepern_spawn_egg"));
 	}
 

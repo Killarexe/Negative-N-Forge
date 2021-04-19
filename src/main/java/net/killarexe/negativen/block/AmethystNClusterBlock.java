@@ -39,7 +39,7 @@ public class AmethystNClusterBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:amethyst_n_cluster")
 	public static final Block block = null;
 	public AmethystNClusterBlock(NegativeNModElements instance) {
-		super(instance, 255);
+		super(instance, 334);
 	}
 
 	@Override

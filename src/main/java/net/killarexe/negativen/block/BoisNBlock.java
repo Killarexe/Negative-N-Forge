@@ -31,7 +31,7 @@ public class BoisNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:oak_log_n")
 	public static final Block block = null;
 	public BoisNBlock(NegativeNModElements instance) {
-		super(instance, 161);
+		super(instance, 276);
 	}
 
 	@Override

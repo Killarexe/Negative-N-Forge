@@ -82,7 +82,7 @@ public class FusonatorBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:fusonator")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public FusonatorBlock(NegativeNModElements instance) {
-		super(instance, 159);
+		super(instance, 105);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

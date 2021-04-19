@@ -24,7 +24,7 @@ public class PurpurNBlockBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:purpur_n_block")
 	public static final Block block = null;
 	public PurpurNBlockBlock(NegativeNModElements instance) {
-		super(instance, 233);
+		super(instance, 326);
 	}
 
 	@Override

@@ -9,22 +9,18 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.Minecraft;
 
 import net.killarexe.negativen.procedures.FireNRegenDisplayOverlayIngameProcedure;
 import net.killarexe.negativen.NegativeNModElements;
 
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.platform.GlStateManager;
-
 import com.google.common.collect.ImmutableMap;
 
 @NegativeNModElements.ModElement.Tag
 public class FireNRegenOverlay extends NegativeNModElements.ModElement {
 	public FireNRegenOverlay(NegativeNModElements instance) {
-		super(instance, 925);
+		super(instance, 917);
 	}
 
 	@Override
@@ -44,19 +40,6 @@ public class FireNRegenOverlay extends NegativeNModElements.ModElement {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 			if (FireNRegenDisplayOverlayIngameProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
-				RenderSystem.disableDepthTest();
-				RenderSystem.depthMask(false);
-				RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA,
-						GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
-				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
-				RenderSystem.disableAlphaTest();
-				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("negative_n:textures/on_fire_n.png"));
-				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), 0, 0, 0, 0, event.getWindow().getScaledWidth(),
-						event.getWindow().getScaledHeight(), event.getWindow().getScaledWidth(), event.getWindow().getScaledHeight());
-				RenderSystem.depthMask(true);
-				RenderSystem.enableDepthTest();
-				RenderSystem.enableAlphaTest();
-				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 			}
 		}
 	}

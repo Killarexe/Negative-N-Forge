@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class DeepslateNLapisNOreAddedProcedure extends NegativeNModElements.ModElement {
 	public DeepslateNLapisNOreAddedProcedure(NegativeNModElements instance) {
-		super(instance, 1020);
+		super(instance, 983);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

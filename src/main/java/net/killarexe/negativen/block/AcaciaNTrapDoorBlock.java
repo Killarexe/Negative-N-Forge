@@ -31,7 +31,7 @@ public class AcaciaNTrapDoorBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:acacia_n_trap_door")
 	public static final Block block = null;
 	public AcaciaNTrapDoorBlock(NegativeNModElements instance) {
-		super(instance, 141);
+		super(instance, 195);
 	}
 
 	@Override

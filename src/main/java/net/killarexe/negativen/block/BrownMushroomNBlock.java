@@ -54,7 +54,7 @@ public class BrownMushroomNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:brown_mushroom_n")
 	public static final Block block = null;
 	public BrownMushroomNBlock(NegativeNModElements instance) {
-		super(instance, 120);
+		super(instance, 156);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

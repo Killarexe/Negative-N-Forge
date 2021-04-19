@@ -23,7 +23,7 @@ public class RedSandStoneNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:red_sand_stone_n")
 	public static final Block block = null;
 	public RedSandStoneNBlock(NegativeNModElements instance) {
-		super(instance, 260);
+		super(instance, 223);
 	}
 
 	@Override

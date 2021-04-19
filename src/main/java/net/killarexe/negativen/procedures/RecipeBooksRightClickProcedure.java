@@ -21,7 +21,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class RecipeBooksRightClickProcedure extends NegativeNModElements.ModElement {
 	public RecipeBooksRightClickProcedure(NegativeNModElements instance) {
-		super(instance, 837);
+		super(instance, 857);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -45,7 +45,7 @@ public class ClassicGravelBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:classic_gravel")
 	public static final Block block = null;
 	public ClassicGravelBlock(NegativeNModElements instance) {
-		super(instance, 351);
+		super(instance, 418);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -38,7 +38,7 @@ public class AcaciaNTreeStructure extends NegativeNModElements.ModElement {
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public AcaciaNTreeStructure(NegativeNModElements instance) {
-		super(instance, 655);
+		super(instance, 689);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

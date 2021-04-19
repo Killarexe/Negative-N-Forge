@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "pellein",
+    "texture": "iron_n_shovel",
     "customModelName": "Normal",
     "name": "Iron-N Shovel",
     "specialInfo": [],

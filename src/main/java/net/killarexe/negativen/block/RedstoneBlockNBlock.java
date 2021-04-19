@@ -32,7 +32,7 @@ public class RedstoneBlockNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:redstone_block_n")
 	public static final Block block = null;
 	public RedstoneBlockNBlock(NegativeNModElements instance) {
-		super(instance, 150);
+		super(instance, 202);
 	}
 
 	@Override

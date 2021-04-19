@@ -26,7 +26,7 @@ import java.util.HashMap;
 @NegativeNModElements.ModElement.Tag
 public class WitherNSummonProcedure extends NegativeNModElements.ModElement {
 	public WitherNSummonProcedure(NegativeNModElements instance) {
-		super(instance, 980);
+		super(instance, 951);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

@@ -23,7 +23,7 @@ public class PlanchedeboisPickaxeItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:wood_n_pickaxe")
 	public static final Item block = null;
 	public PlanchedeboisPickaxeItem(NegativeNModElements instance) {
-		super(instance, 288);
+		super(instance, 370);
 	}
 
 	@Override

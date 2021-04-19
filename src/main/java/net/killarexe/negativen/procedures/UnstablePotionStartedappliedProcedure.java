@@ -11,7 +11,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class UnstablePotionStartedappliedProcedure extends NegativeNModElements.ModElement {
 	public UnstablePotionStartedappliedProcedure(NegativeNModElements instance) {
-		super(instance, 504);
+		super(instance, 553);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

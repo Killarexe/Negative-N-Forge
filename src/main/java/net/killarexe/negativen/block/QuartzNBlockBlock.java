@@ -24,7 +24,7 @@ public class QuartzNBlockBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:quartz_n_block")
 	public static final Block block = null;
 	public QuartzNBlockBlock(NegativeNModElements instance) {
-		super(instance, 258);
+		super(instance, 251);
 	}
 
 	@Override

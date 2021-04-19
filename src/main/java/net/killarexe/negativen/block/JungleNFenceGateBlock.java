@@ -32,7 +32,7 @@ public class JungleNFenceGateBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:jungle_n_fence_gate")
 	public static final Block block = null;
 	public JungleNFenceGateBlock(NegativeNModElements instance) {
-		super(instance, 132);
+		super(instance, 184);
 	}
 
 	@Override

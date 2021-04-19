@@ -55,7 +55,7 @@ public class NegativecaneBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:sugar_cane_n")
 	public static final Block block = null;
 	public NegativecaneBlock(NegativeNModElements instance) {
-		super(instance, 486);
+		super(instance, 536);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

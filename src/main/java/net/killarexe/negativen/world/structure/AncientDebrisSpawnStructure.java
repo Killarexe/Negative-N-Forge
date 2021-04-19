@@ -38,7 +38,7 @@ public class AncientDebrisSpawnStructure extends NegativeNModElements.ModElement
 	private static Feature<NoFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	public AncientDebrisSpawnStructure(NegativeNModElements instance) {
-		super(instance, 818);
+		super(instance, 838);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

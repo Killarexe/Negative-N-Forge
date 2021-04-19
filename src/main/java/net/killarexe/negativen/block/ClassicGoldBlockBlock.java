@@ -24,7 +24,7 @@ public class ClassicGoldBlockBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:classic_gold_block")
 	public static final Block block = null;
 	public ClassicGoldBlockBlock(NegativeNModElements instance) {
-		super(instance, 349);
+		super(instance, 416);
 	}
 
 	@Override

@@ -13,7 +13,7 @@ public class DebugModeNGameRule extends NegativeNModElements.ModElement {
 	public static final GameRules.RuleKey<GameRules.BooleanValue> gamerule = GameRules.register("debugModeN", GameRules.Category.PLAYER,
 			create(false));
 	public DebugModeNGameRule(NegativeNModElements instance) {
-		super(instance, 959);
+		super(instance, 947);
 	}
 
 	public static GameRules.RuleType<GameRules.BooleanValue> create(boolean defaultValue) {

@@ -48,6 +48,7 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.BlockState;
 
+import net.killarexe.negativen.procedures.PiglinNConditionProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.GoldNArmorItem;
 import net.killarexe.negativen.NegativeNModElements;
@@ -55,11 +56,13 @@ import net.killarexe.negativen.NegativeNModElements;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
+import com.google.common.collect.ImmutableMap;
+
 @NegativeNModElements.ModElement.Tag
 public class PiglinNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public PiglinNEntity(NegativeNModElements instance) {
-		super(instance, 63);
+		super(instance, 91);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -70,7 +73,7 @@ public class PiglinNEntity extends NegativeNModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("piglin_n")
 						.setRegistryName("piglin_n");
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -16737844, -13382401, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("piglin_n_spawn_egg"));
 	}
 
@@ -137,9 +140,18 @@ public class PiglinNEntity extends NegativeNModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false));
+			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+				@Override
+				public boolean shouldExecute() {
+					double x = CustomEntity.this.getPosX();
+					double y = CustomEntity.this.getPosY();
+					double z = CustomEntity.this.getPosZ();
+					Entity entity = CustomEntity.this;
+					return super.shouldExecute() && PiglinNConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity));
+				}
+			});
 			this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 1));
-			this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+			this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
 			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
 			this.goalSelector.addGoal(5, new SwimGoal(this));
 		}
@@ -151,22 +163,23 @@ public class PiglinNEntity extends NegativeNModElements.ModElement {
 
 		@Override
 		public net.minecraft.util.SoundEvent getAmbientSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.pig.ambient"));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.piglin.ambient"));
 		}
 
 		@Override
 		public void playStepSound(BlockPos pos, BlockState blockIn) {
-			this.playSound((net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.pig.step")), 0.15f, 1);
+			this.playSound((net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.piglin.step")), 0.15f,
+					1);
 		}
 
 		@Override
 		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.pig.hurt"));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.piglin.hurt"));
 		}
 
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.pig.death"));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.piglin.death"));
 		}
 
 		@Override

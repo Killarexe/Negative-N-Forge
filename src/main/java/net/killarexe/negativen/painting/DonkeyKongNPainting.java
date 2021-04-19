@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class DonkeyKongNPainting extends NegativeNModElements.ModElement {
 	public DonkeyKongNPainting(NegativeNModElements instance) {
-		super(instance, 857);
+		super(instance, 877);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

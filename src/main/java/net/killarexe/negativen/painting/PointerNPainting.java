@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class PointerNPainting extends NegativeNModElements.ModElement {
 	public PointerNPainting(NegativeNModElements instance) {
-		super(instance, 864);
+		super(instance, 884);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

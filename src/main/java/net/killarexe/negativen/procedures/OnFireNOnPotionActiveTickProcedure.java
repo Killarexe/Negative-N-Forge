@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class OnFireNOnPotionActiveTickProcedure extends NegativeNModElements.ModElement {
 	public OnFireNOnPotionActiveTickProcedure(NegativeNModElements instance) {
-		super(instance, 926);
+		super(instance, 918);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

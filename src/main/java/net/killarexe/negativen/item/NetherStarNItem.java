@@ -18,7 +18,7 @@ public class NetherStarNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:nether_star_n")
 	public static final Item block = null;
 	public NetherStarNItem(NegativeNModElements instance) {
-		super(instance, 41);
+		super(instance, 42);
 	}
 
 	@Override

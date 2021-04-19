@@ -24,7 +24,7 @@ public class CutRedSandstoneNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:cut_red_sandstone_n")
 	public static final Block block = null;
 	public CutRedSandstoneNBlock(NegativeNModElements instance) {
-		super(instance, 882);
+		super(instance, 224);
 	}
 
 	@Override

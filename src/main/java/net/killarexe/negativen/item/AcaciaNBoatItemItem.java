@@ -26,7 +26,7 @@ public class AcaciaNBoatItemItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:acacia_n_boat_item")
 	public static final Item block = null;
 	public AcaciaNBoatItemItem(NegativeNModElements instance) {
-		super(instance, 359);
+		super(instance, 426);
 	}
 
 	@Override

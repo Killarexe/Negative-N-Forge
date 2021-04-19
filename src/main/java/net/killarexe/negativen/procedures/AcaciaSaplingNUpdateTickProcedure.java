@@ -18,7 +18,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class AcaciaSaplingNUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public AcaciaSaplingNUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 546);
+		super(instance, 594);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

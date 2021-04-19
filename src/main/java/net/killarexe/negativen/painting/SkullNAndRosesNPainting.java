@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class SkullNAndRosesNPainting extends NegativeNModElements.ModElement {
 	public SkullNAndRosesNPainting(NegativeNModElements instance) {
-		super(instance, 868);
+		super(instance, 888);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

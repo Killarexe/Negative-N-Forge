@@ -28,7 +28,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class DecompProccedProcedure extends NegativeNModElements.ModElement {
 	public DecompProccedProcedure(NegativeNModElements instance) {
-		super(instance, 392);
+		super(instance, 449);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

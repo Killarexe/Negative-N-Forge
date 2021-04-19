@@ -35,7 +35,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class CauldronNRightClickProcedure extends NegativeNModElements.ModElement {
 	public CauldronNRightClickProcedure(NegativeNModElements instance) {
-		super(instance, 929);
+		super(instance, 919);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

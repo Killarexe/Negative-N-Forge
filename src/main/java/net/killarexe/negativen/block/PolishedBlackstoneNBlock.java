@@ -45,7 +45,7 @@ public class PolishedBlackstoneNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:polished_blackstone_n")
 	public static final Block block = null;
 	public PolishedBlackstoneNBlock(NegativeNModElements instance) {
-		super(instance, 973);
+		super(instance, 212);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

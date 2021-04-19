@@ -17,7 +17,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class OverworldPortalEntityCollidesInTheBlockProcedure extends NegativeNModElements.ModElement {
 	public OverworldPortalEntityCollidesInTheBlockProcedure(NegativeNModElements instance) {
-		super(instance, 634);
+		super(instance, 677);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

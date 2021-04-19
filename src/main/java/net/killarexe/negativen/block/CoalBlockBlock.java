@@ -25,7 +25,7 @@ public class CoalBlockBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:coal_n_block")
 	public static final Block block = null;
 	public CoalBlockBlock(NegativeNModElements instance) {
-		super(instance, 195);
+		super(instance, 250);
 	}
 
 	@Override

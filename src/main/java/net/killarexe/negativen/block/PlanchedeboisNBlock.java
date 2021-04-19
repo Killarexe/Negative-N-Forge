@@ -25,7 +25,7 @@ public class PlanchedeboisNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:oak_planks_n")
 	public static final Block block = null;
 	public PlanchedeboisNBlock(NegativeNModElements instance) {
-		super(instance, 162);
+		super(instance, 277);
 	}
 
 	@Override

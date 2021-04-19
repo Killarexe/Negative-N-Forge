@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class SkeletonNPaintPainting extends NegativeNModElements.ModElement {
 	public SkeletonNPaintPainting(NegativeNModElements instance) {
-		super(instance, 867);
+		super(instance, 887);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -2,7 +2,9 @@ package net.killarexe.negativen.procedures;
 
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.state.Property;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.block.SmallAmethystNBudBlock;
@@ -17,7 +19,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class AmethystNClusterUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public AmethystNClusterUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 845);
+		super(instance, 865);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -59,7 +61,22 @@ public class AmethystNClusterUpdateTickProcedure extends NegativeNModElements.Mo
 						} catch (Exception e) {
 						}
 				}
+				TileEntity _te = world.getTileEntity(_bp);
+				CompoundNBT _bnbt = null;
+				if (_te != null) {
+					_bnbt = _te.write(new CompoundNBT());
+					_te.remove();
+				}
 				world.setBlockState(_bp, _bs, 3);
+				if (_bnbt != null) {
+					_te = world.getTileEntity(_bp);
+					if (_te != null) {
+						try {
+							_te.read(_bso, _bnbt);
+						} catch (Exception ignored) {
+						}
+					}
+				}
 			}
 		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MediumAmethystNBudBlock.block.getDefaultState()
 				.getBlock())) {
@@ -75,7 +92,22 @@ public class AmethystNClusterUpdateTickProcedure extends NegativeNModElements.Mo
 						} catch (Exception e) {
 						}
 				}
+				TileEntity _te = world.getTileEntity(_bp);
+				CompoundNBT _bnbt = null;
+				if (_te != null) {
+					_bnbt = _te.write(new CompoundNBT());
+					_te.remove();
+				}
 				world.setBlockState(_bp, _bs, 3);
+				if (_bnbt != null) {
+					_te = world.getTileEntity(_bp);
+					if (_te != null) {
+						try {
+							_te.read(_bso, _bnbt);
+						} catch (Exception ignored) {
+						}
+					}
+				}
 			}
 		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LargeAmethystNBudBlock.block.getDefaultState()
 				.getBlock())) {
@@ -91,7 +123,22 @@ public class AmethystNClusterUpdateTickProcedure extends NegativeNModElements.Mo
 						} catch (Exception e) {
 						}
 				}
+				TileEntity _te = world.getTileEntity(_bp);
+				CompoundNBT _bnbt = null;
+				if (_te != null) {
+					_bnbt = _te.write(new CompoundNBT());
+					_te.remove();
+				}
 				world.setBlockState(_bp, _bs, 3);
+				if (_bnbt != null) {
+					_te = world.getTileEntity(_bp);
+					if (_te != null) {
+						try {
+							_te.read(_bso, _bnbt);
+						} catch (Exception ignored) {
+						}
+					}
+				}
 			}
 		}
 	}

@@ -65,7 +65,7 @@ public class SweetBerryNBushStage3Block extends NegativeNModElements.ModElement 
 	@ObjectHolder("negative_n:sweet_berry_n_bush_stage_3")
 	public static final Block block = null;
 	public SweetBerryNBushStage3Block(NegativeNModElements instance) {
-		super(instance, 774);
+		super(instance, 800);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -42,7 +42,7 @@ public class MediumAmethystNBudBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:medium_amethyst_n_bud")
 	public static final Block block = null;
 	public MediumAmethystNBudBlock(NegativeNModElements instance) {
-		super(instance, 842);
+		super(instance, 862);
 	}
 
 	@Override

@@ -82,7 +82,7 @@ public class DoubleChestNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:double_chest_n")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public DoubleChestNBlock(NegativeNModElements instance) {
-		super(instance, 990);
+		super(instance, 962);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

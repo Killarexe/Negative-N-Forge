@@ -45,7 +45,7 @@ public class GraniteNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:granite_n")
 	public static final Block block = null;
 	public GraniteNBlock(NegativeNModElements instance) {
-		super(instance, 216);
+		super(instance, 210);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

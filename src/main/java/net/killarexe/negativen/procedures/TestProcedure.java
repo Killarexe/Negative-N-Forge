@@ -1,7 +1,7 @@
 package net.killarexe.negativen.procedures;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.EntityMobGriefingEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.server.ServerWorld;
@@ -25,7 +25,7 @@ import java.util.HashMap;
 @NegativeNModElements.ModElement.Tag
 public class TestProcedure extends NegativeNModElements.ModElement {
 	public TestProcedure(NegativeNModElements instance) {
-		super(instance, 921);
+		super(instance, 912);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -74,23 +74,19 @@ public class TestProcedure extends NegativeNModElements.ModElement {
 	}
 
 	@SubscribeEvent
-	public void onEntityDeath(LivingDeathEvent event) {
-		if (event != null && event.getEntity() != null) {
-			Entity entity = event.getEntity();
-			Entity sourceentity = event.getSource().getTrueSource();
-			double i = entity.getPosX();
-			double j = entity.getPosY();
-			double k = entity.getPosZ();
-			World world = entity.world;
-			Map<String, Object> dependencies = new HashMap<>();
-			dependencies.put("x", i);
-			dependencies.put("y", j);
-			dependencies.put("z", k);
-			dependencies.put("world", world);
-			dependencies.put("entity", entity);
-			dependencies.put("sourceentity", sourceentity);
-			dependencies.put("event", event);
-			this.executeProcedure(dependencies);
-		}
+	public void onEntityGrief(EntityMobGriefingEvent event) {
+		Entity entity = event.getEntity();
+		double i = entity.getPosX();
+		double j = entity.getPosY();
+		double k = entity.getPosZ();
+		World world = entity.world;
+		Map<String, Object> dependencies = new HashMap<>();
+		dependencies.put("x", i);
+		dependencies.put("y", j);
+		dependencies.put("z", k);
+		dependencies.put("world", world);
+		dependencies.put("entity", entity);
+		dependencies.put("event", event);
+		this.executeProcedure(dependencies);
 	}
 }

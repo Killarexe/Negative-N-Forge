@@ -28,7 +28,7 @@ public class IngerRecipeGuideItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:inger_recipe_guide")
 	public static final Item block = null;
 	public IngerRecipeGuideItem(NegativeNModElements instance) {
-		super(instance, 32);
+		super(instance, 33);
 	}
 
 	@Override

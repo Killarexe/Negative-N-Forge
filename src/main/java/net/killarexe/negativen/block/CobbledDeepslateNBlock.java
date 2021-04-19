@@ -25,7 +25,7 @@ public class CobbledDeepslateNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:cobbled_deepslate_n")
 	public static final Block block = null;
 	public CobbledDeepslateNBlock(NegativeNModElements instance) {
-		super(instance, 1014);
+		super(instance, 215);
 	}
 
 	@Override

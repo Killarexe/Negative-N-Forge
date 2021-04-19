@@ -49,6 +49,7 @@ import net.minecraft.entity.AgeableEntity;
 import net.minecraft.client.renderer.entity.model.PigModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.BlockState;
 
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.PotatoNItem;
@@ -61,7 +62,7 @@ import net.killarexe.negativen.NegativeNModElements;
 public class PigNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public PigNEntity(NegativeNModElements instance) {
-		super(instance, 52);
+		super(instance, 80);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -72,8 +73,8 @@ public class PigNEntity extends NegativeNModElements.ModElement {
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.9f, 0.9f)).build("pign")
 						.setRegistryName("pign");
 		elements.entities.add(() -> entity);
-		elements.items.add(
-				() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("pign_spawn_egg"));
+		elements.items.add(() -> new SpawnEggItem(entity, -13395457, -16750900, new Item.Properties().group(NegativeNMobsItemGroup.tab))
+				.setRegistryName("pign_spawn_egg"));
 	}
 
 	@SubscribeEvent
@@ -153,6 +154,11 @@ public class PigNEntity extends NegativeNModElements.ModElement {
 		@Override
 		public net.minecraft.util.SoundEvent getAmbientSound() {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.pig.ambient"));
+		}
+
+		@Override
+		public void playStepSound(BlockPos pos, BlockState blockIn) {
+			this.playSound((net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.pig.step")), 0.15f, 1);
 		}
 
 		@Override

@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class CreebetNPainting extends NegativeNModElements.ModElement {
 	public CreebetNPainting(NegativeNModElements instance) {
-		super(instance, 856);
+		super(instance, 876);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

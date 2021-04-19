@@ -23,7 +23,7 @@ public class RottenfleshNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:rottenfleshn")
 	public static final Item block = null;
 	public RottenfleshNItem(NegativeNModElements instance) {
-		super(instance, 19);
+		super(instance, 21);
 	}
 
 	@Override

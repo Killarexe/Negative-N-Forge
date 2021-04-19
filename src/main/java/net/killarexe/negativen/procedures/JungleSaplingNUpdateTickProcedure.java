@@ -18,7 +18,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class JungleSaplingNUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public JungleSaplingNUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 547);
+		super(instance, 595);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

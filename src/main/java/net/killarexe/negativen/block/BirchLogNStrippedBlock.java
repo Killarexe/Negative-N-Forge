@@ -30,7 +30,7 @@ public class BirchLogNStrippedBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:birch_log_n_stripped")
 	public static final Block block = null;
 	public BirchLogNStrippedBlock(NegativeNModElements instance) {
-		super(instance, 87);
+		super(instance, 123);
 	}
 
 	@Override

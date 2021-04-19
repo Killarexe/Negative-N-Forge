@@ -1,0 +1,152 @@
+{
+  "_fv": 17,
+  "_type": "mob",
+  "definition": {
+    "mobName": "Squid-N",
+    "mobLabel": "",
+    "mobModelName": "Modelsquid_n",
+    "mobModelTexture": "squid_n.png",
+    "mobModelGlowTexture": "",
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
+    "modelShadowSize": 0.5,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -13108,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -26215,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNMobs"
+    },
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Creature",
+    "mobCreatureType": "WATER",
+    "attackStrength": 3,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 0.0,
+    "movementSpeed": 0.3,
+    "armorBaseValue": 0.0,
+    "trackingRange": 64,
+    "health": 10,
+    "xpAmount": 0,
+    "waterMob": true,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": true,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": ""
+    },
+    "livingSound": {
+      "value": "entity.squid.ambient"
+    },
+    "hurtSound": {
+      "value": "entity.squid.hurt"
+    },
+    "deathSound": {
+      "value": "entity.squid.death"
+    },
+    "stepSound": {
+      "value": "entity.squid.squirt"
+    },
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "CUSTOM:RedstoneNParticle"
+    },
+    "particleSpawningShape": "Spread",
+    "particleSpawningRadious": 0.5,
+    "particleAmount": 4,
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": true,
+    "spawningProbability": 20,
+    "mobSpawningType": "waterCreature",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Negative"
+      },
+      {
+        "value": "CUSTOM:DesertN"
+      },
+      {
+        "value": "CUSTOM:OakNforest"
+      },
+      {
+        "value": "CUSTOM:BirchNForest"
+      },
+      {
+        "value": "CUSTOM:PlainsN"
+      },
+      {
+        "value": "CUSTOM:DarkOakNForest"
+      },
+      {
+        "value": "CUSTOM:JungleN"
+      },
+      {
+        "value": "CUSTOM:SpruceForestN"
+      },
+      {
+        "value": "CUSTOM:MontainsN"
+      },
+      {
+        "value": "CUSTOM:AcaciaNBiome"
+      }
+    ],
+    "spawnInDungeons": false
+  }
+}

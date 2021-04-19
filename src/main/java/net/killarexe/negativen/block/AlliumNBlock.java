@@ -54,7 +54,7 @@ public class AlliumNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:allium_n")
 	public static final Block block = null;
 	public AlliumNBlock(NegativeNModElements instance) {
-		super(instance, 104);
+		super(instance, 141);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

@@ -16,7 +16,7 @@ public class GunPowderNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:gun_powder_n")
 	public static final Item block = null;
 	public GunPowderNItem(NegativeNModElements instance) {
-		super(instance, 40);
+		super(instance, 41);
 	}
 
 	@Override

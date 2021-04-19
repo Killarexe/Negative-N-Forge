@@ -27,7 +27,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class TNTNOnBlockRightClickedProcedure extends NegativeNModElements.ModElement {
 	public TNTNOnBlockRightClickedProcedure(NegativeNModElements instance) {
-		super(instance, 428);
+		super(instance, 483);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

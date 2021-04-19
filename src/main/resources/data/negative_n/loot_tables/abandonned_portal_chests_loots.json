@@ -75,7 +75,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "negative_n:gold_n_armor_helmet",
+          "name": "negative_n:gold_n_helmet",
           "weight": 10,
           "functions": [
             {
@@ -97,7 +97,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "negative_n:gold_n_armor_chestplate",
+          "name": "negative_n:gold_n_chestplate",
           "weight": 10,
           "functions": [
             {

@@ -12,7 +12,7 @@ import net.killarexe.negativen.NegativeNModElements;
 @NegativeNModElements.ModElement.Tag
 public class AlbanNPainting extends NegativeNModElements.ModElement {
 	public AlbanNPainting(NegativeNModElements instance) {
-		super(instance, 850);
+		super(instance, 870);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

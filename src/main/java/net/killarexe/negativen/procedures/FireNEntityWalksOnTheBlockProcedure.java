@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class FireNEntityWalksOnTheBlockProcedure extends NegativeNModElements.ModElement {
 	public FireNEntityWalksOnTheBlockProcedure(NegativeNModElements instance) {
-		super(instance, 597);
+		super(instance, 640);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

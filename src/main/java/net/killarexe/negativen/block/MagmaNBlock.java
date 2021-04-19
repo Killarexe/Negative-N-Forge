@@ -52,7 +52,7 @@ public class MagmaNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:magma_n")
 	public static final Block block = null;
 	public MagmaNBlock(NegativeNModElements instance) {
-		super(instance, 201);
+		super(instance, 321);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

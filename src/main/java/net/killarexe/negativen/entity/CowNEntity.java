@@ -21,12 +21,15 @@ import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.Hand;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.network.IPacket;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
@@ -49,17 +52,22 @@ import net.minecraft.entity.AgeableEntity;
 import net.minecraft.client.renderer.entity.model.CowModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.BlockState;
 
+import net.killarexe.negativen.procedures.CowNRightClickedOnEntityProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNMobsItemGroup;
 import net.killarexe.negativen.item.WheatNItem;
 import net.killarexe.negativen.item.BeefrawNItem;
 import net.killarexe.negativen.NegativeNModElements;
 
+import java.util.Map;
+import java.util.HashMap;
+
 @NegativeNModElements.ModElement.Tag
 public class CowNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public CowNEntity(NegativeNModElements instance) {
-		super(instance, 58);
+		super(instance, 86);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -164,6 +172,11 @@ public class CowNEntity extends NegativeNModElements.ModElement {
 		}
 
 		@Override
+		public void playStepSound(BlockPos pos, BlockState blockIn) {
+			this.playSound((net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.step")), 0.15f, 1);
+		}
+
+		@Override
 		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.hurt"));
 		}
@@ -171,6 +184,23 @@ public class CowNEntity extends NegativeNModElements.ModElement {
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.death"));
+		}
+
+		@Override
+		public ActionResultType func_230254_b_(PlayerEntity sourceentity, Hand hand) {
+			ItemStack itemstack = sourceentity.getHeldItem(hand);
+			ActionResultType retval = ActionResultType.func_233537_a_(this.world.isRemote());
+			super.func_230254_b_(sourceentity, hand);
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				CowNRightClickedOnEntityProcedure.executeProcedure($_dependencies);
+			}
+			return retval;
 		}
 
 		@Override

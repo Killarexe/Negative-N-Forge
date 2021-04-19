@@ -20,7 +20,7 @@ public class LavaNBottleNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:lava_n_bottle_n")
 	public static final Item block = null;
 	public LavaNBottleNItem(NegativeNModElements instance) {
-		super(instance, 928);
+		super(instance, 58);
 	}
 
 	@Override

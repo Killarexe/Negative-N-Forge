@@ -71,7 +71,7 @@ public class WheatNStage1Block extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:wheat_n_stage_1")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public WheatNStage1Block(NegativeNModElements instance) {
-		super(instance, 685);
+		super(instance, 712);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

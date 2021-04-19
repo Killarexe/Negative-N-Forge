@@ -31,7 +31,7 @@ public class JungleNTrapDoorBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:jungle_n_trap_door")
 	public static final Block block = null;
 	public JungleNTrapDoorBlock(NegativeNModElements instance) {
-		super(instance, 144);
+		super(instance, 198);
 	}
 
 	@Override

@@ -29,7 +29,7 @@ public class BirchLeavesNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:birch_leaves_n")
 	public static final Block block = null;
 	public BirchLeavesNBlock(NegativeNModElements instance) {
-		super(instance, 82);
+		super(instance, 118);
 	}
 
 	@Override

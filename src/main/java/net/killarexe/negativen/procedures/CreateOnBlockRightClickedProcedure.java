@@ -25,7 +25,7 @@ import io.netty.buffer.Unpooled;
 @NegativeNModElements.ModElement.Tag
 public class CreateOnBlockRightClickedProcedure extends NegativeNModElements.ModElement {
 	public CreateOnBlockRightClickedProcedure(NegativeNModElements instance) {
-		super(instance, 450);
+		super(instance, 505);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

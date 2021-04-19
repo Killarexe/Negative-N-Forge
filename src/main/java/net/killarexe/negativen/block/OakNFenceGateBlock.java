@@ -32,7 +32,7 @@ public class OakNFenceGateBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:oak_n_fence_gate")
 	public static final Block block = null;
 	public OakNFenceGateBlock(NegativeNModElements instance) {
-		super(instance, 128);
+		super(instance, 180);
 	}
 
 	@Override

@@ -48,7 +48,7 @@ import java.util.HashMap;
 @NegativeNModElements.ModElement.Tag
 public class SeedRightClickOnBlockProcedure extends NegativeNModElements.ModElement {
 	public SeedRightClickOnBlockProcedure(NegativeNModElements instance) {
-		super(instance, 701);
+		super(instance, 727);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

@@ -27,7 +27,7 @@ public class BeeNNestHoneyBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:bee_n_nest_honey")
 	public static final Block block = null;
 	public BeeNNestHoneyBlock(NegativeNModElements instance) {
-		super(instance, 733);
+		super(instance, 759);
 	}
 
 	@Override

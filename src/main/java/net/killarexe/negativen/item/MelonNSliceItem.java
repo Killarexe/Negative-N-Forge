@@ -17,7 +17,7 @@ public class MelonNSliceItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:melon_n_slice")
 	public static final Item block = null;
 	public MelonNSliceItem(NegativeNModElements instance) {
-		super(instance, 904);
+		super(instance, 78);
 	}
 
 	@Override

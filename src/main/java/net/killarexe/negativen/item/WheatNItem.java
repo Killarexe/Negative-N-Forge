@@ -16,7 +16,7 @@ public class WheatNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:wheat_n")
 	public static final Item block = null;
 	public WheatNItem(NegativeNModElements instance) {
-		super(instance, 36);
+		super(instance, 37);
 	}
 
 	@Override

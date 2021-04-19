@@ -58,7 +58,7 @@ import com.google.common.collect.ImmutableList;
 public class BlasaltNBiomeBiome extends NegativeNModElements.ModElement {
 	public static Biome biome;
 	public BlasaltNBiomeBiome(NegativeNModElements instance) {
-		super(instance, 957);
+		super(instance, 946);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {

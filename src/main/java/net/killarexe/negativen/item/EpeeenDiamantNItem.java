@@ -23,7 +23,7 @@ public class EpeeenDiamantNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:diamond_n_sword")
 	public static final Item block = null;
 	public EpeeenDiamantNItem(NegativeNModElements instance) {
-		super(instance, 269);
+		super(instance, 350);
 	}
 
 	@Override

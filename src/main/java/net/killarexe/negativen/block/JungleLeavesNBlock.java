@@ -29,7 +29,7 @@ public class JungleLeavesNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:jungle_leaves_n")
 	public static final Block block = null;
 	public JungleLeavesNBlock(NegativeNModElements instance) {
-		super(instance, 80);
+		super(instance, 116);
 	}
 
 	@Override

@@ -34,7 +34,7 @@ public class SpruceNDoorBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:spruce_n_door")
 	public static final Block block = null;
 	public SpruceNDoorBlock(NegativeNModElements instance) {
-		super(instance, 139);
+		super(instance, 191);
 	}
 
 	@Override

@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class DeepslateNDiamondNOreUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public DeepslateNDiamondNOreUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 1019);
+		super(instance, 982);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

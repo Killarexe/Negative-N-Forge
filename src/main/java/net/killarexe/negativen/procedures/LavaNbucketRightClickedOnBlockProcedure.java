@@ -24,7 +24,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class LavaNbucketRightClickedOnBlockProcedure extends NegativeNModElements.ModElement {
 	public LavaNbucketRightClickedOnBlockProcedure(NegativeNModElements instance) {
-		super(instance, 525);
+		super(instance, 574);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

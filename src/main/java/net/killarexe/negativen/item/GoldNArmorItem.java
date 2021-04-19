@@ -20,16 +20,16 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class GoldNArmorItem extends NegativeNModElements.ModElement {
-	@ObjectHolder("negative_n:gold_n_armor_helmet")
+	@ObjectHolder("negative_n:gold_n_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("negative_n:gold_n_armor_chestplate")
+	@ObjectHolder("negative_n:gold_n_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("negative_n:gold_n_armor_leggings")
+	@ObjectHolder("negative_n:gold_n_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("negative_n:gold_n_armor_boots")
+	@ObjectHolder("negative_n:gold_n_boots")
 	public static final Item boots = null;
 	public GoldNArmorItem(NegativeNModElements instance) {
-		super(instance, 265);
+		super(instance, 346);
 	}
 
 	@Override
@@ -63,7 +63,7 @@ public class GoldNArmorItem extends NegativeNModElements.ModElement {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public String getName() {
-				return "gold_n_armor";
+				return "gold_n";
 			}
 
 			@Override
@@ -81,24 +81,24 @@ public class GoldNArmorItem extends NegativeNModElements.ModElement {
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "negative_n:textures/models/armor/gold_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("gold_n_armor_helmet"));
+		}.setRegistryName("gold_n_helmet"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "negative_n:textures/models/armor/gold_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("gold_n_armor_chestplate"));
+		}.setRegistryName("gold_n_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "negative_n:textures/models/armor/gold_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("gold_n_armor_leggings"));
+		}.setRegistryName("gold_n_leggings"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "negative_n:textures/models/armor/gold_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("gold_n_armor_boots"));
+		}.setRegistryName("gold_n_boots"));
 	}
 }

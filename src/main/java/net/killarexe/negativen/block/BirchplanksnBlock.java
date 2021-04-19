@@ -25,7 +25,7 @@ public class BirchplanksnBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:birch_planks_n")
 	public static final Block block = null;
 	public BirchplanksnBlock(NegativeNModElements instance) {
-		super(instance, 170);
+		super(instance, 285);
 	}
 
 	@Override

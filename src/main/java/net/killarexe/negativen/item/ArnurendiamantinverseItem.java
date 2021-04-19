@@ -26,16 +26,16 @@ import java.util.HashMap;
 
 @NegativeNModElements.ModElement.Tag
 public class ArnurendiamantinverseItem extends NegativeNModElements.ModElement {
-	@ObjectHolder("negative_n:diamond_n_armor_helmet")
+	@ObjectHolder("negative_n:diamond_n_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("negative_n:diamond_n_armor_chestplate")
+	@ObjectHolder("negative_n:diamond_n_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("negative_n:diamond_n_armor_leggings")
+	@ObjectHolder("negative_n:diamond_n_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("negative_n:diamond_n_armor_boots")
+	@ObjectHolder("negative_n:diamond_n_boots")
 	public static final Item boots = null;
 	public ArnurendiamantinverseItem(NegativeNModElements instance) {
-		super(instance, 264);
+		super(instance, 345);
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class ArnurendiamantinverseItem extends NegativeNModElements.ModElement {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public String getName() {
-				return "diamond_n_armor";
+				return "diamond_n";
 			}
 
 			@Override
@@ -87,19 +87,19 @@ public class ArnurendiamantinverseItem extends NegativeNModElements.ModElement {
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "negative_n:textures/models/armor/diamond_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("diamond_n_armor_helmet"));
+		}.setRegistryName("diamond_n_helmet"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "negative_n:textures/models/armor/diamond_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("diamond_n_armor_chestplate"));
+		}.setRegistryName("diamond_n_chestplate"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "negative_n:textures/models/armor/diamond_n__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
-		}.setRegistryName("diamond_n_armor_leggings"));
+		}.setRegistryName("diamond_n_leggings"));
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
@@ -117,6 +117,6 @@ public class ArnurendiamantinverseItem extends NegativeNModElements.ModElement {
 					ArnurendiamantinverseBootsTickEventProcedure.executeProcedure($_dependencies);
 				}
 			}
-		}.setRegistryName("diamond_n_armor_boots"));
+		}.setRegistryName("diamond_n_boots"));
 	}
 }

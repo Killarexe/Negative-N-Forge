@@ -30,7 +30,7 @@ public class LeavesNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:oak_leaves_n")
 	public static final Block block = null;
 	public LeavesNBlock(NegativeNModElements instance) {
-		super(instance, 78);
+		super(instance, 114);
 	}
 
 	@Override

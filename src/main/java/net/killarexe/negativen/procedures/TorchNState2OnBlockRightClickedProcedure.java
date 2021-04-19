@@ -22,7 +22,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class TorchNState2OnBlockRightClickedProcedure extends NegativeNModElements.ModElement {
 	public TorchNState2OnBlockRightClickedProcedure(NegativeNModElements instance) {
-		super(instance, 677);
+		super(instance, 704);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

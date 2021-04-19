@@ -45,7 +45,7 @@ public class GraniteNWallBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:granite_n_wall")
 	public static final Block block = null;
 	public GraniteNWallBlock(NegativeNModElements instance) {
-		super(instance, 965);
+		super(instance, 170);
 	}
 
 	@Override

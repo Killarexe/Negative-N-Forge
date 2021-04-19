@@ -11,7 +11,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class WitherCombatProcedure extends NegativeNModElements.ModElement {
 	public WitherCombatProcedure(NegativeNModElements instance) {
-		super(instance, 1006);
+		super(instance, 976);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

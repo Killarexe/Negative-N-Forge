@@ -40,7 +40,7 @@ public class LanternNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:lantern_n")
 	public static final Block block = null;
 	public LanternNBlock(NegativeNModElements instance) {
-		super(instance, 117);
+		super(instance, 153);
 	}
 
 	@Override

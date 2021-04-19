@@ -23,7 +23,7 @@ public class HamburgerItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:hamburger")
 	public static final Item block = null;
 	public HamburgerItem(NegativeNModElements instance) {
-		super(instance, 315);
+		super(instance, 68);
 	}
 
 	@Override

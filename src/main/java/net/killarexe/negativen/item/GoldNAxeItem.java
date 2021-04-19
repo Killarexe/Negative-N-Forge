@@ -23,7 +23,7 @@ public class GoldNAxeItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:gold_n_axe")
 	public static final Item block = null;
 	public GoldNAxeItem(NegativeNModElements instance) {
-		super(instance, 297);
+		super(instance, 379);
 	}
 
 	@Override

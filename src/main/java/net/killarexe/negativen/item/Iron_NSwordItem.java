@@ -23,7 +23,7 @@ public class Iron_NSwordItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:iron_n_sword")
 	public static final Item block = null;
 	public Iron_NSwordItem(NegativeNModElements instance) {
-		super(instance, 271);
+		super(instance, 352);
 	}
 
 	@Override

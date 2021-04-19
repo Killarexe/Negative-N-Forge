@@ -55,7 +55,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 public class OakBoatNEntity extends NegativeNModElements.ModElement {
 	public static EntityType entity = null;
 	public OakBoatNEntity(NegativeNModElements instance) {
-		super(instance, 51);
+		super(instance, 52);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ModelRegisterHandler());
 	}
 

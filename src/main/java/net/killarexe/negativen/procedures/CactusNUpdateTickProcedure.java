@@ -13,7 +13,7 @@ import java.util.Map;
 @NegativeNModElements.ModElement.Tag
 public class CactusNUpdateTickProcedure extends NegativeNModElements.ModElement {
 	public CactusNUpdateTickProcedure(NegativeNModElements instance) {
-		super(instance, 509);
+		super(instance, 558);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

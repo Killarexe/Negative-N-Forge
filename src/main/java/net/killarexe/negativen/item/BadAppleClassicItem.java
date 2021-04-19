@@ -16,7 +16,7 @@ public class BadAppleClassicItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:bad_apple_classic")
 	public static final Item block = null;
 	public BadAppleClassicItem(NegativeNModElements instance) {
-		super(instance, 1012);
+		super(instance, 59);
 	}
 
 	@Override

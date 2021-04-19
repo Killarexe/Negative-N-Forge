@@ -45,7 +45,7 @@ public class LeverNBlock extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:lever_n")
 	public static final Block block = null;
 	public LeverNBlock(NegativeNModElements instance) {
-		super(instance, 916);
+		super(instance, 203);
 	}
 
 	@Override

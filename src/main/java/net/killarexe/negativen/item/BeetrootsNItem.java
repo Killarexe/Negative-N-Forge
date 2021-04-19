@@ -17,7 +17,7 @@ public class BeetrootsNItem extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:beetroots_n")
 	public static final Item block = null;
 	public BeetrootsNItem(NegativeNModElements instance) {
-		super(instance, 319);
+		super(instance, 73);
 	}
 
 	@Override

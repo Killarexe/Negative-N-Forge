@@ -21,7 +21,7 @@ import com.google.common.collect.ImmutableMap;
 @NegativeNModElements.ModElement.Tag
 public class NegativeNVersionOverlayOverlay extends NegativeNModElements.ModElement {
 	public NegativeNVersionOverlayOverlay(NegativeNModElements instance) {
-		super(instance, 991);
+		super(instance, 964);
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class NegativeNVersionOverlayOverlay extends NegativeNModElements.ModElem
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			if (NegativeNVersionOverlayDisplayOverlayIngameProcedure.executeProcedure(ImmutableMap.of("world", world))) {
+			if (NegativeNVersionOverlayDisplayOverlayIngameProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(), "Negative-N", posX + -207, posY + -112, -1);
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(), "" + (NegativeNModVariables.Version) + "", posX + -153,
 						posY + -112, -1);
