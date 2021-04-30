@@ -28,7 +28,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
-import net.killarexe.negativen.procedures.DecompProccedProcedure;
 import net.killarexe.negativen.NegativeNModElements;
 import net.killarexe.negativen.NegativeNMod;
 
@@ -114,15 +113,15 @@ public class DecompositeurGui extends NegativeNModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 79, 3) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 25, 35) {
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 43, 57) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 133, 62) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 124, 57) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 133, 8) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -375,16 +374,6 @@ public class DecompositeurGui extends NegativeNModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				DecompProccedProcedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {

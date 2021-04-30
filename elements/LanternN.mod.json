@@ -1,5 +1,5 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "block",
   "definition": {
     "texture": "lantern_n",
@@ -20,14 +20,14 @@
     "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "CUTOUT_MIPPED",
-    "disableOffset": true,
+    "disableOffset": false,
     "boundingBoxes": [
       {
         "mx": 0.0,
         "my": 0.0,
         "mz": 0.0,
-        "Mx": 8.0,
-        "My": 8.0,
+        "Mx": 6.0,
+        "My": 7.0,
         "Mz": 8.0,
         "subtract": false
       }

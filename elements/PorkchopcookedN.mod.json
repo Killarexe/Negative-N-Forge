@@ -1,9 +1,9 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "porkchop_cooked-",
+    "texture": "porkchop_cooked-n",
     "customModelName": "Normal",
     "name": "Porkchop cooked-N",
     "rarity": "COMMON",
@@ -15,6 +15,9 @@
     "nutritionalValue": 4,
     "saturation": 0.3,
     "eatingSpeed": 32,
+    "resultItem": {
+      "value": ""
+    },
     "forDogs": true,
     "isAlwaysEdible": false,
     "animation": "eat",

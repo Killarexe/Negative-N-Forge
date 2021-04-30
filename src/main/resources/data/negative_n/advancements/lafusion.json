@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "negative_n:fusonator"
+      "item": "negative_n:merger"
     },
     "title": {
       "translate": "advancements.lafusion.title"
@@ -20,7 +20,7 @@
       "conditions": {
         "items": [
           {
-            "item": "negative_n:fusonator",
+            "item": "negative_n:merger",
             "count": {
               "min": 1,
               "max": 1

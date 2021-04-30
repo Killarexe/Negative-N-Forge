@@ -223,6 +223,9 @@ public class NegativeNModVariables {
 			nbt.putDouble("posX", instance.posX);
 			nbt.putDouble("posY", instance.posY);
 			nbt.putDouble("posZ", instance.posZ);
+			nbt.putDouble("pageNumber", instance.pageNumber);
+			nbt.putString("pageNumberText", instance.pageNumberText);
+			nbt.putString("recipeName", instance.recipeName);
 			return nbt;
 		}
 
@@ -233,6 +236,9 @@ public class NegativeNModVariables {
 			instance.posX = nbt.getDouble("posX");
 			instance.posY = nbt.getDouble("posY");
 			instance.posZ = nbt.getDouble("posZ");
+			instance.pageNumber = nbt.getDouble("pageNumber");
+			instance.pageNumberText = nbt.getString("pageNumberText");
+			instance.recipeName = nbt.getString("recipeName");
 		}
 	}
 
@@ -241,6 +247,9 @@ public class NegativeNModVariables {
 		public double posX = 0;
 		public double posY = 0;
 		public double posZ = 0;
+		public double pageNumber = 0;
+		public String pageNumberText = "";
+		public String recipeName = "";
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				NegativeNMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -270,11 +279,17 @@ public class NegativeNModVariables {
 
 	@SubscribeEvent
 	public void clonePlayer(PlayerEvent.Clone event) {
-		if (event.isWasDeath()) {
-			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new PlayerVariables()));
-			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new PlayerVariables()));
+		PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new PlayerVariables()));
+		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+		if (!event.isWasDeath()) {
+			clone.versionOverlay = original.versionOverlay;
+			clone.posX = original.posX;
+			clone.posY = original.posY;
+			clone.posZ = original.posZ;
+			clone.pageNumber = original.pageNumber;
+			clone.pageNumberText = original.pageNumberText;
+			clone.recipeName = original.recipeName;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -302,6 +317,9 @@ public class NegativeNModVariables {
 					variables.posX = message.data.posX;
 					variables.posY = message.data.posY;
 					variables.posZ = message.data.posZ;
+					variables.pageNumber = message.data.pageNumber;
+					variables.pageNumberText = message.data.pageNumberText;
+					variables.recipeName = message.data.recipeName;
 				}
 			});
 			context.setPacketHandled(true);

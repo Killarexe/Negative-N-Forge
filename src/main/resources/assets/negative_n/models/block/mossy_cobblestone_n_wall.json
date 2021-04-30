@@ -1,7 +1,0 @@
-{
-  "parent": "block/template_wall_side",
-  "textures": {
-    "wall": "negative_n:blocks/mossy_cobblestone_n",
-    "particle": "negative_n:blocks/mossy_cobblestone_n"
-  }
-}

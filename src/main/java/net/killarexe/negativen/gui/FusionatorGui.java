@@ -28,7 +28,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
-import net.killarexe.negativen.procedures.FusionnatorProceedProcedure;
 import net.killarexe.negativen.NegativeNModElements;
 import net.killarexe.negativen.NegativeNMod;
 
@@ -114,11 +113,11 @@ public class FusionatorGui extends NegativeNModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 52, 12) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 25, 17) {
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 115, 12) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 53) {
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 83, 54) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 124, 35) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -371,16 +370,6 @@ public class FusionatorGui extends NegativeNModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				FusionnatorProceedProcedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {

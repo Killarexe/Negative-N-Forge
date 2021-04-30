@@ -1,8 +1,6 @@
 
 package net.killarexe.negativen.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -18,6 +16,7 @@ import net.minecraft.client.Minecraft;
 
 import net.killarexe.negativen.NegativeNMod;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 @OnlyIn(Dist.CLIENT)
@@ -44,12 +43,15 @@ public class DimensionStickGUIGuiWindow extends ContainerScreen<DimensionStickGU
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(MatrixStack ms, float par1, int par2, int par3) {
-		GL11.glColor4f(1, 1, 1, 1);
+	protected void drawGuiContainerBackgroundLayer(MatrixStack ms, float partialTicks, int gx, int gy) {
+		RenderSystem.color4f(1, 1, 1, 1);
+		RenderSystem.enableBlend();
+		RenderSystem.defaultBlendFunc();
 		Minecraft.getInstance().getTextureManager().bindTexture(texture);
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+		RenderSystem.disableBlend();
 	}
 
 	@Override
@@ -83,52 +85,76 @@ public class DimensionStickGUIGuiWindow extends ContainerScreen<DimensionStickGU
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
 		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 19, 90, 20, new StringTextComponent("Owerworld"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(0, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 0, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(0, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 0, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 46, 60, 20, new StringTextComponent("Nether"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(1, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 1, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(1, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 1, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 73, 30, 20, new StringTextComponent("End"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(2, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 2, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(2, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 2, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 100, 100, 20, new StringTextComponent("Underworld"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(3, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 3, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(3, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 3, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 127, 80, 20, new StringTextComponent("Nether-N"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(4, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 4, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(4, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 4, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 154, 50, 20, new StringTextComponent("Start"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(5, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 5, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(5, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 5, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 115, this.guiTop + 46, 40, 20, new StringTextComponent("None"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(6, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 6, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(6, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 6, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 115, this.guiTop + 19, 100, 20, new StringTextComponent("MineingDim"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(7, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 7, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(7, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 7, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 115, this.guiTop + 73, 100, 20, new StringTextComponent("ClassicDim"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(8, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 8, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(8, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 8, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 115, this.guiTop + 100, 110, 20, new StringTextComponent("ClassicNDim"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(9, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 9, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(9, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 9, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 116, this.guiTop + 127, 95, 20, new StringTextComponent("Classic Nether"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(10, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 10, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(10, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 10, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 115, this.guiTop + 155, 105, 20, new StringTextComponent("Classic Nether-N"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(11, x, y, z));
-			DimensionStickGUIGui.handleButtonAction(entity, 11, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new DimensionStickGUIGui.ButtonPressedMessage(11, x, y, z));
+				DimensionStickGUIGui.handleButtonAction(entity, 11, x, y, z);
+			}
 		}));
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -21,21 +21,21 @@
           "dropItemsWhenNotBound": true,
           "name": "Slot #0",
           "x": 150,
-          "y": 48
+          "y": 53
         }
       },
       {
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:NegativeDust"
           },
           "id": 1,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
           "x": 150,
-          "y": 84
+          "y": 89
         }
       },
       {
@@ -45,8 +45,64 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
-          "x": 222,
-          "y": 66
+          "x": 249,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Furnace-N",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Furnace-N",
+          "x": 130,
+          "y": 41
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<ENBT:integer:craft>%",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<ENBT:integer:craft>%",
+          "x": 190,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow4.png",
+          "use1Xscale": false,
+          "name": "arrow4.png",
+          "x": 171,
+          "y": 55
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "plus.png",
+          "use1Xscale": false,
+          "name": "plus.png",
+          "x": 152,
+          "y": 73
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "powder_n_icon.png",
+          "use1Xscale": false,
+          "name": "powder_n_icon.png",
+          "x": 151,
+          "y": 89
         }
       }
     ],

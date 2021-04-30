@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:netherbrick_block_n"
+    },
+    "title": {
+      "translate": "advancements.a_beautiful_forteress_n.title"
+    },
+    "description": {
+      "translate": "advancements.a_beautiful_forteress_n.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "a_beautiful_forteress_n": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "negative_n:fresh"
+}

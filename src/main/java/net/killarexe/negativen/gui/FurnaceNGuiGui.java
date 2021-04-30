@@ -31,6 +31,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
 import net.killarexe.negativen.procedures.FurnaceNRecipeRegisterProcedure;
+import net.killarexe.negativen.item.NegativeDustItem;
 import net.killarexe.negativen.NegativeNModElements;
 import net.killarexe.negativen.NegativeNMod;
 
@@ -136,11 +137,15 @@ public class FurnaceNGuiGui extends NegativeNModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 25, 12) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 25, 17) {
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 48) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 53) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (new ItemStack(NegativeDustItem.block, (int) (1)).getItem() == stack.getItem());
+				}
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 97, 30) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 124, 35) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;

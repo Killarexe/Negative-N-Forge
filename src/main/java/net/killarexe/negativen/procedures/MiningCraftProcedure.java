@@ -7,6 +7,7 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.block.Blocks;
 
 import net.killarexe.negativen.item.UpdateritemItem;
 import net.killarexe.negativen.item.Iron_NPickaxeItem;
@@ -61,7 +62,7 @@ public class MiningCraftProcedure extends NegativeNModElements.ModElement {
 				}
 				return _retval.get();
 			}
-		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (9))) < 64) && ((((new Object() {
+		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (9))) != 64) && ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 				TileEntity _ent = world.getTileEntity(pos);
@@ -212,8 +213,8 @@ public class MiningCraftProcedure extends NegativeNModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (9)))
-								.getItem() == new ItemStack(Iron_NPickaxeItem.block, (int) (1)).getItem()))))) {
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (9))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
+								.getItem()))))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {

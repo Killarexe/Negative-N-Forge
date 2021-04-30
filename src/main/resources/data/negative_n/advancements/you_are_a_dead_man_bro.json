@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:gold_n_sword"
+    },
+    "title": {
+      "translate": "advancements.you_are_a_dead_man_bro.title"
+    },
+    "description": {
+      "translate": "advancements.you_are_a_dead_man_bro.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "you_are_a_dead_man_bro": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "negative_n:fresh"
+}

@@ -1,5 +1,5 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "block",
   "definition": {
     "texture": "crying_obsidian_n",
@@ -34,7 +34,7 @@
     ],
     "name": "Crying Obisdian-N",
     "specialInfo": [],
-    "hardness": 10.0,
+    "hardness": 20.0,
     "resistance": 100.0,
     "hasGravity": false,
     "isWaterloggable": false,

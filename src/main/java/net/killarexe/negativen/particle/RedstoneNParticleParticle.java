@@ -22,7 +22,7 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class RedstoneNParticleParticle extends NegativeNModElements.ModElement {
-	public static final BasicParticleType particle = new BasicParticleType(false);
+	public static final BasicParticleType particle = new BasicParticleType(true);
 	public RedstoneNParticleParticle(NegativeNModElements instance) {
 		super(instance, 909);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
@@ -46,7 +46,7 @@ public class RedstoneNParticleParticle extends NegativeNModElements.ModElement {
 			this.spriteSet = spriteSet;
 			this.setSize((float) 0.2, (float) 0.2);
 			this.particleScale *= (float) 1;
-			this.maxAge = 7;
+			this.maxAge = 32;
 			this.particleGravity = (float) 0;
 			this.canCollide = false;
 			this.motionX = vx * 1;
@@ -56,20 +56,15 @@ public class RedstoneNParticleParticle extends NegativeNModElements.ModElement {
 		}
 
 		@Override
-		public int getBrightnessForRender(float partialTick) {
-			return 15728880;
-		}
-
-		@Override
 		public IParticleRenderType getRenderType() {
-			return IParticleRenderType.PARTICLE_SHEET_LIT;
+			return IParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
 		}
 
 		@Override
 		public void tick() {
 			super.tick();
 			if (!this.isExpired) {
-				this.setSprite(this.spriteSet.get((this.age / 16) % 8 + 1, 8));
+				this.setSprite(this.spriteSet.get((this.age / 4) % 8 + 1, 8));
 			}
 		}
 	}

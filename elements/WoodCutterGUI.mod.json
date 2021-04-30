@@ -1,5 +1,5 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -110,6 +110,16 @@
           "name": "Fence",
           "x": 231,
           "y": 39
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow.png",
+          "use1Xscale": false,
+          "name": "arrow.png",
+          "x": 142,
+          "y": 67
         }
       }
     ]

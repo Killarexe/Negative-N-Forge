@@ -54,7 +54,7 @@ import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.procedures.CraftingTableNCraftRegisterProcedure;
+import net.killarexe.negativen.procedures.MiningCraftProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.gui.CraftingTableNGuiGui;
 import net.killarexe.negativen.NegativeNModElements;
@@ -151,7 +151,7 @@ public class CraftingTableNBlock extends NegativeNModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				CraftingTableNCraftRegisterProcedure.executeProcedure($_dependencies);
+				MiningCraftProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
 		}
@@ -314,6 +314,8 @@ public class CraftingTableNBlock extends NegativeNModElements.ModElement {
 
 		@Override
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
+			if (index == 9)
+				return false;
 			return true;
 		}
 

@@ -1,0 +1,9 @@
+{
+  "parent": "negative_n:custom/nightdark_detector",
+  "textures": {
+    "all": "negative_n:blocks/nightdark_detector_inverted_top",
+    "particle": "negative_n:blocks/nightdark_detector_inverted_top",
+    "side": "negative_n:blocks/nightdark_detector_side",
+    "top": "negative_n:blocks/nightdark_detector_top"
+  }
+}

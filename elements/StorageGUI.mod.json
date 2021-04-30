@@ -1,5 +1,5 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -31,7 +31,7 @@
           },
           "id": 0,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #0",
           "x": 132,
           "y": 84
@@ -45,7 +45,7 @@
           },
           "id": 1,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #1",
           "x": 150,
           "y": 84
@@ -59,7 +59,7 @@
           },
           "id": 2,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #2",
           "x": 168,
           "y": 84
@@ -73,7 +73,7 @@
           },
           "id": 3,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #3",
           "x": 186,
           "y": 84
@@ -87,7 +87,7 @@
           },
           "id": 4,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #4",
           "x": 204,
           "y": 84
@@ -101,7 +101,7 @@
           },
           "id": 5,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #5",
           "x": 222,
           "y": 84
@@ -115,7 +115,7 @@
           },
           "id": 6,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #6",
           "x": 240,
           "y": 84
@@ -129,7 +129,7 @@
           },
           "id": 7,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #7",
           "x": 258,
           "y": 84
@@ -143,7 +143,7 @@
           },
           "id": 8,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #8",
           "x": 276,
           "y": 84

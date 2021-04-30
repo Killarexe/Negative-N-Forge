@@ -1,11 +1,11 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "structure",
   "definition": {
-    "structure": "forteressn",
+    "structure": "forteress_n",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 1000,
+    "spawnProbability": 5000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",
@@ -13,14 +13,10 @@
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [
-      "CUSTOM:Nega"
+      "CUSTOM:NetherNDim"
     ],
     "restrictionBlocks": [],
-    "restrictionBiomes": [
-      {
-        "value": "CUSTOM:Negative"
-      }
-    ],
-    "ignoreBlocks": "STRUCTURE_BLOCK"
+    "restrictionBiomes": [],
+    "ignoreBlocks": "AIR"
   }
 }

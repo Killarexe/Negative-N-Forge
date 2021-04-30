@@ -1,0 +1,33 @@
+{
+  "_fv": 18,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "knowledge_book_n",
+    "customModelName": "Normal",
+    "name": "Raw Filter Recipe",
+    "rarity": "COMMON",
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNRessoures"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [],
+    "hasGlow": false,
+    "guiBoundTo": "RawFilterRecipeGUI",
+    "inventorySize": 5,
+    "inventoryStackSize": 64
+  }
+}

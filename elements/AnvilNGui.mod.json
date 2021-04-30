@@ -1,5 +1,5 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -77,17 +77,63 @@
         }
       },
       {
-        "type": "button",
+        "type": "image",
         "data": {
-          "text": "Upgrade",
-          "onClick": {
-            "name": "AnvilNProcced"
-          },
-          "width": 70,
-          "height": 20,
-          "name": "Upgrade",
-          "x": 182,
-          "y": 98
+          "image": "arrow.png",
+          "use1Xscale": false,
+          "name": "arrow.png",
+          "x": 233,
+          "y": 76
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "plus.png",
+          "use1Xscale": false,
+          "name": "plus.png",
+          "x": 193,
+          "y": 77
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow2.png",
+          "use1Xscale": false,
+          "name": "arrow2.png",
+          "x": 169,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow3.png",
+          "use1Xscale": false,
+          "name": "arrow3.png",
+          "x": 172,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "update_patern.png",
+          "use1Xscale": false,
+          "name": "update_patern.png",
+          "x": 142,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ingot_patern.png",
+          "use1Xscale": false,
+          "name": "ingot_patern.png",
+          "x": 169,
+          "y": 76
         }
       }
     ]

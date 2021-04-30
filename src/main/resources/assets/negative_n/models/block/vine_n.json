@@ -1,9 +1,12 @@
 {
-  "parent": "negative_n:custom/vine-n",
+  "parent": "block/cube",
   "textures": {
-    "all": "negative_n:blocks/vine_n",
-    "particle": "negative_n:blocks/vine_n",
-    "0": "negative_n:blocks/vine_n",
-    "missing": "negative_n:blocks/"
+    "down": "negative_n:blocks/transparent",
+    "up": "negative_n:blocks/transparent",
+    "north": "negative_n:blocks/transparent",
+    "east": "negative_n:blocks/transparent",
+    "south": "negative_n:blocks/vine_n",
+    "west": "negative_n:blocks/transparent",
+    "particle": "negative_n:blocks/transparent"
   }
 }

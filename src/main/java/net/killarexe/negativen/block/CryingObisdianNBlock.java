@@ -35,7 +35,7 @@ public class CryingObisdianNBlock extends NegativeNModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(10f, 100f).setLightLevel(s -> 0).harvestLevel(6)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(20f, 100f).setLightLevel(s -> 0).harvestLevel(6)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool().setNeedsPostProcessing((bs, br, bp) -> true)
 					.setEmmisiveRendering((bs, br, bp) -> true));
 			setRegistryName("crying_obisdian_n");

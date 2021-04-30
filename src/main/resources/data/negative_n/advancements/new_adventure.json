@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "negative_n:start_eye"
+    },
+    "title": {
+      "translate": "advancements.new_adventure.title"
+    },
+    "description": {
+      "translate": "advancements.new_adventure.descr"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "new_adventure": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "negative_n:fresh"
+}

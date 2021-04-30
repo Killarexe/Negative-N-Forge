@@ -15,6 +15,7 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
@@ -59,6 +60,7 @@ import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.killarexe.negativen.procedures.FusionnatorProceedProcedure;
 import net.killarexe.negativen.procedures.FusionnatorOnBlockRightClickedProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.gui.FusionatorGui;
@@ -77,9 +79,9 @@ import io.netty.buffer.Unpooled;
 
 @NegativeNModElements.ModElement.Tag
 public class FusonatorBlock extends NegativeNModElements.ModElement {
-	@ObjectHolder("negative_n:fusonator")
+	@ObjectHolder("negative_n:merger")
 	public static final Block block = null;
-	@ObjectHolder("negative_n:fusonator")
+	@ObjectHolder("negative_n:merger")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public FusonatorBlock(NegativeNModElements instance) {
 		super(instance, 105);
@@ -95,7 +97,7 @@ public class FusonatorBlock extends NegativeNModElements.ModElement {
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("fusonator"));
+			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("merger"));
 		}
 	}
 	@Override
@@ -109,7 +111,7 @@ public class FusonatorBlock extends NegativeNModElements.ModElement {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(5f, 10f).setLightLevel(s -> 0).notSolid()
 					.setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
-			setRegistryName("fusonator");
+			setRegistryName("merger");
 		}
 
 		@Override
@@ -144,6 +146,32 @@ public class FusonatorBlock extends NegativeNModElements.ModElement {
 			return Collections.singletonList(new ItemStack(this, 1));
 		}
 
+		@Override
+		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(state, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
+		}
+
+		@Override
+		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+			super.tick(state, world, pos, random);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				FusionnatorProceedProcedure.executeProcedure($_dependencies);
+			}
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
+		}
+
 		@OnlyIn(Dist.CLIENT)
 		@Override
 		public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
@@ -176,7 +204,7 @@ public class FusonatorBlock extends NegativeNModElements.ModElement {
 				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
-						return new StringTextComponent("Fusionator");
+						return new StringTextComponent("Merger");
 					}
 
 					@Override
@@ -303,7 +331,7 @@ public class FusonatorBlock extends NegativeNModElements.ModElement {
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("fusonator");
+			return new StringTextComponent("merger");
 		}
 
 		@Override
@@ -318,7 +346,7 @@ public class FusonatorBlock extends NegativeNModElements.ModElement {
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Fusionator");
+			return new StringTextComponent("Merger");
 		}
 
 		@Override

@@ -1,15 +1,15 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "furnace_top",
-    "textureTop": "dh",
-    "textureLeft": "bddi",
-    "textureFront": "bddi",
-    "textureRight": "bddi",
-    "textureBack": "bddi",
-    "renderType": 2,
-    "customModelName": "decopositor:default",
+    "texture": "furnace_n_top",
+    "textureTop": "raw_filter_n_top",
+    "textureLeft": "furnace_n_side",
+    "textureFront": "raw_filter_n_front",
+    "textureRight": "furnace_n_side",
+    "textureBack": "furnace_n_side",
+    "renderType": 10,
+    "customModelName": "Normal",
     "rotationMode": 1,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Decompositor",
+    "name": "Raw Filter",
     "specialInfo": [],
     "hardness": 3.0,
     "resistance": 12.0,
@@ -54,7 +54,7 @@
     "material": {
       "value": "IRON"
     },
-    "tickRate": 10,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
@@ -85,14 +85,21 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "hasInventory": true,
-    "guiBoundTo": "Decompositeur",
-    "openGUIOnRightClick": false,
-    "inventorySize": 3,
+    "guiBoundTo": "RawFilterGUI",
+    "openGUIOnRightClick": true,
+    "inventorySize": 5,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
-    "inventoryOutSlotIDs": [],
-    "inventoryInSlotIDs": [],
+    "inventoryOutSlotIDs": [
+      2,
+      3,
+      4
+    ],
+    "inventoryInSlotIDs": [
+      0,
+      1
+    ],
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,
@@ -101,8 +108,8 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "DecompositorOnBlockRightClicked"
+    "onTickUpdate": {
+      "name": "RawFilterUpdateTick"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

@@ -1,8 +1,6 @@
 
 package net.killarexe.negativen.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -18,6 +16,7 @@ import net.minecraft.client.Minecraft;
 
 import net.killarexe.negativen.NegativeNMod;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 @OnlyIn(Dist.CLIENT)
@@ -44,12 +43,17 @@ public class WoodCutterGUIGuiWindow extends ContainerScreen<WoodCutterGUIGui.Gui
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(MatrixStack ms, float par1, int par2, int par3) {
-		GL11.glColor4f(1, 1, 1, 1);
+	protected void drawGuiContainerBackgroundLayer(MatrixStack ms, float partialTicks, int gx, int gy) {
+		RenderSystem.color4f(1, 1, 1, 1);
+		RenderSystem.enableBlend();
+		RenderSystem.defaultBlendFunc();
 		Minecraft.getInstance().getTextureManager().bindTexture(texture);
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("negative_n:textures/arrow.png"));
+		this.blit(ms, this.guiLeft + 33, this.guiTop + 47, 0, 0, 22, 15, 22, 15);
+		RenderSystem.disableBlend();
 	}
 
 	@Override
@@ -82,16 +86,22 @@ public class WoodCutterGUIGuiWindow extends ContainerScreen<WoodCutterGUIGui.Gui
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
 		this.addButton(new Button(this.guiLeft + 50, this.guiTop + 73, 120, 20, new StringTextComponent("Cut/Stripped"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new WoodCutterGUIGui.ButtonPressedMessage(0, x, y, z));
-			WoodCutterGUIGui.handleButtonAction(entity, 0, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new WoodCutterGUIGui.ButtonPressedMessage(0, x, y, z));
+				WoodCutterGUIGui.handleButtonAction(entity, 0, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 113, this.guiTop + 46, 60, 20, new StringTextComponent("Stairs"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new WoodCutterGUIGui.ButtonPressedMessage(1, x, y, z));
-			WoodCutterGUIGui.handleButtonAction(entity, 1, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new WoodCutterGUIGui.ButtonPressedMessage(1, x, y, z));
+				WoodCutterGUIGui.handleButtonAction(entity, 1, x, y, z);
+			}
 		}));
 		this.addButton(new Button(this.guiLeft + 122, this.guiTop + 19, 50, 20, new StringTextComponent("Fence"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new WoodCutterGUIGui.ButtonPressedMessage(2, x, y, z));
-			WoodCutterGUIGui.handleButtonAction(entity, 2, x, y, z);
+			if (true) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new WoodCutterGUIGui.ButtonPressedMessage(2, x, y, z));
+				WoodCutterGUIGui.handleButtonAction(entity, 2, x, y, z);
+			}
 		}));
 	}
 }

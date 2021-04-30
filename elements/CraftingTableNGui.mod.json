@@ -1,5 +1,5 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -144,6 +144,16 @@
           "dropItemsWhenNotBound": true,
           "name": "Slot #9",
           "x": 240,
+          "y": 66
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow.png",
+          "use1Xscale": false,
+          "name": "arrow.png",
+          "x": 208,
           "y": 66
         }
       }

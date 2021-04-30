@@ -1,5 +1,5 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -11,20 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "button",
-        "data": {
-          "text": "Decopose",
-          "onClick": {
-            "name": "DecompProcced"
-          },
-          "width": 80,
-          "height": 20,
-          "name": "Decopose",
-          "x": 177,
-          "y": 66
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -34,8 +20,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #0",
-          "x": 204,
-          "y": 39
+          "x": 150,
+          "y": 71
         }
       },
       {
@@ -45,8 +31,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
-          "x": 168,
-          "y": 93
+          "x": 258,
+          "y": 98
         }
       },
       {
@@ -56,8 +42,21 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
-          "x": 249,
-          "y": 93
+          "x": 258,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Decompositor",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Decompositor",
+          "x": 132,
+          "y": 44
         }
       }
     ]

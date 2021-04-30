@@ -1,15 +1,15 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "furnace_front_off",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
-    "renderType": 2,
-    "customModelName": "fusonator:default",
+    "texture": "oak_planksn",
+    "textureTop": "merger_top",
+    "textureLeft": "crafting_table_n_side",
+    "textureFront": "crafting_table_n_front",
+    "textureRight": "crafting_table_n_side",
+    "textureBack": "crafting_table_n_side",
+    "renderType": 10,
+    "customModelName": "Normal",
     "rotationMode": 1,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Fusionator",
+    "name": "Merger",
     "specialInfo": [],
     "hardness": 5.0,
     "resistance": 10.0,
@@ -103,6 +103,9 @@
     "fluidRestrictions": [],
     "onRightClicked": {
       "name": "FusionnatorOnBlockRightClicked"
+    },
+    "onTickUpdate": {
+      "name": "FusionnatorProceed"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

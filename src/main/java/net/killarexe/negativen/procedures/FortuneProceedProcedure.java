@@ -9,6 +9,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.block.Block;
 
 import net.killarexe.negativen.NegativeNModElements;
 import net.killarexe.negativen.NegativeNMod;
@@ -61,13 +62,21 @@ public class FortuneProceedProcedure extends NegativeNModElements.ModElement {
 				for (int index0 = 0; index0 < (int) ((EnchantmentHelper.getEnchantmentLevel(Enchantments.FORTUNE,
 						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)))); index0++) {
 					if (((Chance) < 0.5)) {
-						if (world instanceof World && !world.isRemote()) {
-							ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
-									(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())));
-							entityToSpawn.setPickupDelay((int) 10);
-							world.addEntity(entityToSpawn);
+						if (world instanceof World) {
+							Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
+									new BlockPos((int) x, (int) y, (int) z));
+							world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 						}
 					}
+				}
+			}
+			if (((EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH,
+					((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY))) > 0)) {
+				if (world instanceof World && !world.isRemote()) {
+					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z,
+							(new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock())));
+					entityToSpawn.setPickupDelay((int) 10);
+					world.addEntity(entityToSpawn);
 				}
 			}
 		}

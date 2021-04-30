@@ -1,21 +1,21 @@
 {
-  "_fv": 17,
+  "_fv": 18,
   "_type": "particle",
   "definition": {
     "texture": "generic.png",
     "animate": true,
-    "frameDuration": 16,
+    "frameDuration": 4,
     "width": 0.2,
     "height": 0.2,
     "scale": 1.0,
     "speedFactor": 1.0,
     "gravity": 0.0,
-    "maxAge": 7,
+    "maxAge": 32,
     "maxAgeDiff": 0,
     "angularVelocity": 0.0,
     "angularAcceleration": 0.0,
     "canCollide": false,
-    "alwaysShow": false,
-    "renderType": "LIT"
+    "alwaysShow": true,
+    "renderType": "TRANSLUCENT"
   }
 }

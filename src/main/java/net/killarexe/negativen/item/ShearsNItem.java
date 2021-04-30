@@ -45,6 +45,11 @@ public class ShearsNItem extends NegativeNModElements.ModElement {
 				}
 				return retval;
 			}
+
+			@Override
+			public boolean isRepairable(ItemStack itemstack) {
+				return false;
+			}
 		}.setRegistryName("shears_n"));
 	}
 	private static class ItemToolCustom extends Item {

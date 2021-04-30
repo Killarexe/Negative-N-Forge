@@ -20,7 +20,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.killarexe.negativen.procedures.AcaciaSaplingNUpdateTickProcedure;
+import net.killarexe.negativen.procedures.SaplingNGrowProcedure;
 import net.killarexe.negativen.itemgroup.NegativeNDecorationBlocksItemGroup;
 import net.killarexe.negativen.NegativeNModElements;
 
@@ -82,7 +82,7 @@ public class AcaciaSaplingNBlock extends NegativeNModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				AcaciaSaplingNUpdateTickProcedure.executeProcedure($_dependencies);
+				SaplingNGrowProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

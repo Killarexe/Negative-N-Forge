@@ -1,23 +1,18 @@
 
 package net.killarexe.negativen.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
-import net.killarexe.negativen.NegativeNMod;
-
+import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 @OnlyIn(Dist.CLIENT)
@@ -44,12 +39,27 @@ public class AnvilNGuiGuiWindow extends ContainerScreen<AnvilNGuiGui.GuiContaine
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(MatrixStack ms, float par1, int par2, int par3) {
-		GL11.glColor4f(1, 1, 1, 1);
+	protected void drawGuiContainerBackgroundLayer(MatrixStack ms, float partialTicks, int gx, int gy) {
+		RenderSystem.color4f(1, 1, 1, 1);
+		RenderSystem.enableBlend();
+		RenderSystem.defaultBlendFunc();
 		Minecraft.getInstance().getTextureManager().bindTexture(texture);
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("negative_n:textures/arrow.png"));
+		this.blit(ms, this.guiLeft + 107, this.guiTop + 39, 0, 0, 22, 15, 22, 15);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("negative_n:textures/plus.png"));
+		this.blit(ms, this.guiLeft + 67, this.guiTop + 40, 0, 0, 13, 13, 13, 13);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("negative_n:textures/arrow2.png"));
+		this.blit(ms, this.guiLeft + 43, this.guiTop + 12, 0, 0, 15, 22, 15, 22);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("negative_n:textures/arrow3.png"));
+		this.blit(ms, this.guiLeft + 46, this.guiTop + 12, 0, 0, 56, 22, 56, 22);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("negative_n:textures/update_patern.png"));
+		this.blit(ms, this.guiLeft + 16, this.guiTop + 12, 0, 0, 16, 16, 16, 16);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("negative_n:textures/ingot_patern.png"));
+		this.blit(ms, this.guiLeft + 43, this.guiTop + 39, 0, 0, 16, 16, 16, 16);
+		RenderSystem.disableBlend();
 	}
 
 	@Override
@@ -81,9 +91,5 @@ public class AnvilNGuiGuiWindow extends ContainerScreen<AnvilNGuiGui.GuiContaine
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 56, this.guiTop + 61, 70, 20, new StringTextComponent("Upgrade"), e -> {
-			NegativeNMod.PACKET_HANDLER.sendToServer(new AnvilNGuiGui.ButtonPressedMessage(0, x, y, z));
-			AnvilNGuiGui.handleButtonAction(entity, 0, x, y, z);
-		}));
 	}
 }
