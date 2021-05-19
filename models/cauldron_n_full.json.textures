@@ -6,7 +6,7 @@
         "top": "cauldron_n_top",
         "bottom": "cauldron_n_bottom",
         "inside": "cauldron_n_inner",
-        "content": "notexture"
+        "content": "transparent"
       },
       "name": "default"
     },

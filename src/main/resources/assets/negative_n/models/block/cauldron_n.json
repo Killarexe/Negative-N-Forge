@@ -7,6 +7,6 @@
     "top": "negative_n:blocks/cauldron_n_top",
     "bottom": "negative_n:blocks/cauldron_n_bottom",
     "inside": "negative_n:blocks/cauldron_n_inner",
-    "content": "negative_n:blocks/notexture"
+    "content": "negative_n:blocks/transparent"
   }
 }

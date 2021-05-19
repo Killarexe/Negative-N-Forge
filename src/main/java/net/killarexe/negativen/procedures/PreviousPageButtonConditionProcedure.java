@@ -22,7 +22,7 @@ public class PreviousPageButtonConditionProcedure extends NegativeNModElements.M
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((((entity.getCapability(NegativeNModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new NegativeNModVariables.PlayerVariables())).pageNumber) == 1)) {
+				.orElse(new NegativeNModVariables.PlayerVariables())).pageNumber) >= 1)) {
 			return (true);
 		}
 		return (false);

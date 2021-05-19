@@ -8,7 +8,7 @@
     "name": "Glass Bottle-N",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:NegativeNRessoures"
+      "value": "CUSTOM:NegativeNPotions"
     },
     "stackSize": 64,
     "enchantability": 0,

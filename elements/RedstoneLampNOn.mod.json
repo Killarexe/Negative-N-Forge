@@ -14,6 +14,7 @@
     "emissiveRendering": true,
     "displayFluidOverlay": false,
     "itemTexture": "",
+    "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -76,9 +77,9 @@
     "luminance": 15,
     "unbreakable": false,
     "breakHarvestLevel": 0,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "CUSTOM:RedstoneNParticle"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,

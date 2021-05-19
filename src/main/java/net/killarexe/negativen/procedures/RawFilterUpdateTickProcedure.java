@@ -277,7 +277,7 @@ public class RawFilterUpdateTickProcedure extends NegativeNModElements.ModElemen
 					});
 				}
 			}
-			if (((chance) <= 0.5)) {
+			if (((chance) <= 0.25)) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
@@ -302,7 +302,7 @@ public class RawFilterUpdateTickProcedure extends NegativeNModElements.ModElemen
 						});
 					}
 				}
-			} else if (((chance) >= 0.25)) {
+			} else if (((chance) >= 0.1)) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
@@ -554,7 +554,7 @@ public class RawFilterUpdateTickProcedure extends NegativeNModElements.ModElemen
 					});
 				}
 			}
-			if (((chance) <= 0.5)) {
+			if (((chance) <= 0.25)) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
@@ -579,7 +579,7 @@ public class RawFilterUpdateTickProcedure extends NegativeNModElements.ModElemen
 						});
 					}
 				}
-			} else if (((chance) >= 0.25)) {
+			} else if (((chance) >= 0.1)) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
@@ -831,7 +831,7 @@ public class RawFilterUpdateTickProcedure extends NegativeNModElements.ModElemen
 					});
 				}
 			}
-			if (((chance) <= 0.5)) {
+			if (((chance) <= 0.25)) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {
@@ -856,7 +856,7 @@ public class RawFilterUpdateTickProcedure extends NegativeNModElements.ModElemen
 						});
 					}
 				}
-			} else if (((chance) >= 0.25)) {
+			} else if (((chance) >= 0.1)) {
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 					if (_ent != null) {

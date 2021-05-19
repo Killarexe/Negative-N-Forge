@@ -28,13 +28,16 @@
         "value": "CUSTOM:SpruceForestN"
       },
       {
-        "value": "CUSTOM:ClassicBiomeN"
-      },
-      {
         "value": "CUSTOM:MontainsN"
       },
       {
         "value": "CUSTOM:AcaciaNBiome"
+      },
+      {
+        "value": "CUSTOM:BeachN"
+      },
+      {
+        "value": "CUSTOM:DeepslateNBiome"
       }
     ],
     "worldGenType": "Normal world gen",
@@ -53,7 +56,7 @@
     "isDark": false,
     "doesWaterVaporize": false,
     "sleepResult": "ALLOW",
-    "hasSkyLight": false,
+    "hasSkyLight": true,
     "imitateOverworldBehaviour": false,
     "portalFrame": {
       "value": "CUSTOM:Portalblock"

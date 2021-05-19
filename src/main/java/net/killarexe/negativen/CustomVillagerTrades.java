@@ -83,6 +83,9 @@ public class CustomVillagerTrades extends NegativeNModElements.ModElement {
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);
 			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 8), new ItemStack(Items.ENDER_EYE), new ItemStack(StarteyeItem.block), 1, 0, 0));
 			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 8), new ItemStack(Items.LAPIS_BLOCK), new ItemStack(LapisLazuliNItem.block, 9), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 8), new ItemStack(Items.GLASS_BOTTLE, 16), new ItemStack(GlassBottleNItem.block, 16), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 8), new ItemStack(Items.WATER_BUCKET, 1), new ItemStack(WaterNBottleNItem.block, 3), 1, 0, 0));
+			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 8), new ItemStack(Items.LAVA_BUCKET, 1), new ItemStack(LavaNBottleNItem.block, 3), 1, 0, 0));
 			trades.add(new BasicTrade(new ItemStack(EmeraldNItem.block, 8), new ItemStack(Items.REDSTONE, 16), new ItemStack(RedstoneNItem.block, 16), 1, 0, 0));
 		}else if(event.getType() == VillagerProfession.FARMER){
 			List<VillagerTrades.ITrade> trades = event.getTrades().get(5);

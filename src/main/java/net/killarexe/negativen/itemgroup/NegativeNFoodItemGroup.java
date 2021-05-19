@@ -18,7 +18,7 @@ public class NegativeNFoodItemGroup extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		tab = new ItemGroup("tabnegativenfood") {
+		tab = new ItemGroup("tabnegative_n_food") {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {

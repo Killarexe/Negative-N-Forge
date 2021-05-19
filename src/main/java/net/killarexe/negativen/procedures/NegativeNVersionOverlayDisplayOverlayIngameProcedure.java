@@ -1,8 +1,8 @@
 package net.killarexe.negativen.procedures;
 
-import net.minecraft.entity.Entity;
+import net.minecraft.world.IWorld;
 
-import net.killarexe.negativen.NegativeNModVariables;
+import net.killarexe.negativen.world.ShowVersionGameRule;
 import net.killarexe.negativen.NegativeNModElements;
 import net.killarexe.negativen.NegativeNMod;
 
@@ -15,13 +15,17 @@ public class NegativeNVersionOverlayDisplayOverlayIngameProcedure extends Negati
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				NegativeNMod.LOGGER.warn("Failed to load dependency entity for procedure NegativeNVersionOverlayDisplayOverlayIngame!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				NegativeNMod.LOGGER.warn("Failed to load dependency world for procedure NegativeNVersionOverlayDisplayOverlayIngame!");
 			return false;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		return (((entity.getCapability(NegativeNModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new NegativeNModVariables.PlayerVariables())).versionOverlay) == (true));
+		IWorld world = (IWorld) dependencies.get("world");
+		if (((world.getWorldInfo().getGameRulesInstance().getBoolean(ShowVersionGameRule.gamerule)) == (true))) {
+			return (true);
+		} else {
+			return (false);
+		}
+		return (false);
 	}
 }

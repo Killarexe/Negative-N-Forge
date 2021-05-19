@@ -18,7 +18,7 @@ public class NeagtiveNOuilsItemGroup extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		tab = new ItemGroup("tabneagtivenouils") {
+		tab = new ItemGroup("tabneagtive_n_tools") {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {

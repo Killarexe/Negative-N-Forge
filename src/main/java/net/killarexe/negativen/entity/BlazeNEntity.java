@@ -42,7 +42,9 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class BlazeNEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.6f, 1.8f)).build("blazen").setRegistryName("blazen");
 	public BlazeNEntity(NegativeNModElements instance) {
 		super(instance, 84);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BlazeNRenderer.ModelRegisterHandler());
@@ -51,9 +53,6 @@ public class BlazeNEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("blazen")
-						.setRegistryName("blazen");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -6710785, -16777012, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("blazen_spawn_egg"));

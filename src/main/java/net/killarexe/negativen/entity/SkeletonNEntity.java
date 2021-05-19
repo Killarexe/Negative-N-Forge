@@ -50,7 +50,9 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class SkeletonNEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
+			.size(0.6f, 1.8f)).build("skeleton_n").setRegistryName("skeleton_n");
 	public SkeletonNEntity(NegativeNModElements instance) {
 		super(instance, 90);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SkeletonNRenderer.ModelRegisterHandler());
@@ -60,9 +62,6 @@ public class SkeletonNEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.6f, 1.8f))
-						.build("skeleton_n").setRegistryName("skeleton_n");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -13421773, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("skeleton_n_spawn_egg"));

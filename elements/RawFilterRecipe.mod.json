@@ -28,6 +28,9 @@
     "hasGlow": false,
     "guiBoundTo": "RawFilterRecipeGUI",
     "inventorySize": 5,
-    "inventoryStackSize": 64
+    "inventoryStackSize": 64,
+    "onItemInInventoryTick": {
+      "name": "RecipeRawFilterScreen"
+    }
   }
 }

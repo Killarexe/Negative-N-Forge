@@ -1,0 +1,19 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "music_disc_8",
+    "name": "Random Music (Creative)",
+    "description": "Original Music",
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNRessoures"
+    },
+    "music": {
+      "value": "music.creative"
+    },
+    "specialInfo": [
+      "Need to be creative play this!"
+    ],
+    "hasGlow": false
+  }
+}

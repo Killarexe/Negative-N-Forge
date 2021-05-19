@@ -12,7 +12,7 @@ import net.minecraft.item.Food;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 
-import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
+import net.killarexe.negativen.itemgroup.NegativeNPotionsItemGroup;
 import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
@@ -29,7 +29,7 @@ public class WaterNBottleNItem extends NegativeNModElements.ModElement {
 	}
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
+			super(new Item.Properties().group(NegativeNPotionsItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
 					.food((new Food.Builder()).hunger(4).saturation(0.3f).build()));
 			setRegistryName("water_n_bottle_n");
 		}

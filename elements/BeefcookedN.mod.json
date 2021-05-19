@@ -3,7 +3,7 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "eef_cooked",
+    "texture": "beef_cooked",
     "customModelName": "Normal",
     "name": "Beef cooked-N",
     "rarity": "COMMON",
@@ -15,6 +15,9 @@
     "nutritionalValue": 4,
     "saturation": 0.3,
     "eatingSpeed": 32,
+    "resultItem": {
+      "value": ""
+    },
     "forDogs": true,
     "isAlwaysEdible": false,
     "animation": "eat",

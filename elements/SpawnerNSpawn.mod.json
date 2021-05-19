@@ -9,14 +9,18 @@
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Underground",
-    "spawnHeightOffset": 0,
+    "spawnHeightOffset": -1,
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [
       "CUSTOM:Nega",
       "CUSTOM:MineingDim"
     ],
-    "restrictionBlocks": [],
+    "restrictionBlocks": [
+      {
+        "value": "Blocks.CAVE_AIR"
+      }
+    ],
     "restrictionBiomes": [],
     "ignoreBlocks": "AIR"
   }

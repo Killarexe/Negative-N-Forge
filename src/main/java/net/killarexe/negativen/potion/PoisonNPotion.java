@@ -8,7 +8,6 @@ import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.potion.Potion;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
@@ -25,8 +24,6 @@ import java.util.HashMap;
 public class PoisonNPotion extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:poison_n")
 	public static final Effect potion = null;
-	@ObjectHolder("negative_n:poison_n")
-	public static final Potion potionType = null;
 	public PoisonNPotion(NegativeNModElements instance) {
 		super(instance, 859);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
@@ -36,18 +33,6 @@ public class PoisonNPotion extends NegativeNModElements.ModElement {
 	public void registerEffect(RegistryEvent.Register<Effect> event) {
 		event.getRegistry().register(new EffectCustom());
 	}
-
-	@SubscribeEvent
-	public void registerPotion(RegistryEvent.Register<Potion> event) {
-		event.getRegistry().register(new PotionCustom());
-	}
-	public static class PotionCustom extends Potion {
-		public PotionCustom() {
-			super(new EffectInstance(potion, 3600));
-			setRegistryName("poison_n");
-		}
-	}
-
 	public static class EffectCustom extends Effect {
 		private final ResourceLocation potionIcon;
 		public EffectCustom() {

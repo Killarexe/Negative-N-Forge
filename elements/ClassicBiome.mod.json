@@ -36,7 +36,7 @@
     "baseHeight": 0.1,
     "heightVariation": 0.0,
     "biomeType": "WARM",
-    "spawnBiome": true,
+    "spawnBiome": false,
     "biomeWeight": 4,
     "biomeDictionaryTypes": [],
     "grassPerChunk": 0,

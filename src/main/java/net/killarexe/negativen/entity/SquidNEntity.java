@@ -46,7 +46,9 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class SquidNEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.WATER_CREATURE)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
+			.size(0.6f, 1.8f)).build("squid_n").setRegistryName("squid_n");
 	public SquidNEntity(NegativeNModElements instance) {
 		super(instance, 95);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SquidNRenderer.ModelRegisterHandler());
@@ -56,9 +58,6 @@ public class SquidNEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.WATER_CREATURE)
-				.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-				.immuneToFire().size(0.6f, 1.8f)).build("squid_n").setRegistryName("squid_n");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -13108, -26215, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("squid_n_spawn_egg"));

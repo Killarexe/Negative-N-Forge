@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
+import net.killarexe.negativen.itemgroup.NegativeNPotionsItemGroup;
 import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
@@ -25,7 +25,7 @@ public class GlassBottleNItem extends NegativeNModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(NegativeNPotionsItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("glass_bottle_n");
 		}
 

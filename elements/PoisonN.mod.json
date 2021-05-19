@@ -12,7 +12,7 @@
     "isInstant": false,
     "isBad": true,
     "isBenefitical": false,
-    "registerPotionType": true,
+    "registerPotionType": false,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
     "onStarted": {

@@ -46,10 +46,14 @@ public class NegativeNModElements {
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public NegativeNModElements() {
-		sounds.put(new ResourceLocation("negative_n", "easter_egg"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("negative_n", "easter_egg")));
 		sounds.put(new ResourceLocation("negative_n", "n-music_8bit"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("negative_n", "n-music_8bit")));
+		sounds.put(new ResourceLocation("negative_n", "sweden_remix"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("negative_n", "sweden_remix")));
+		sounds.put(new ResourceLocation("negative_n", "easter_egg"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("negative_n", "easter_egg")));
+		sounds.put(new ResourceLocation("negative_n", "sweden_80s"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("negative_n", "sweden_80s")));
 		sounds.put(new ResourceLocation("negative_n", "op"), new net.minecraft.util.SoundEvent(new ResourceLocation("negative_n", "op")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("negative_n").getFile().getScanResult();

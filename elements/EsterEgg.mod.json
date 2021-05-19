@@ -2,8 +2,8 @@
   "_fv": 18,
   "_type": "achievement",
   "definition": {
-    "achievementName": "The secret music",
-    "achievementDescription": "Found the secret music!",
+    "achievementName": "Complete Collection!",
+    "achievementDescription": "All Negative-N music!",
     "achievementIcon": {
       "value": "CUSTOM:UTitleScreen"
     },
@@ -20,6 +20,6 @@
     "parent": {
       "value": "CUSTOM:WTNN"
     },
-    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_in_inventory\" x=\"39\" y=\"22\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:UTitleScreen</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"/></next></block></xml>"
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"57\" y=\"48\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
   }
 }

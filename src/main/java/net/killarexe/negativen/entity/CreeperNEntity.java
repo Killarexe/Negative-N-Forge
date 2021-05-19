@@ -44,7 +44,9 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class CreeperNEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.6f, 1.7f)).build("creepern").setRegistryName("creepern");
 	public CreeperNEntity(NegativeNModElements instance) {
 		super(instance, 81);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new CreeperNRenderer.ModelRegisterHandler());
@@ -54,9 +56,6 @@ public class CreeperNEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.7f)).build("creepern")
-						.setRegistryName("creepern");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -3407668, -16777216, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("creepern_spawn_egg"));

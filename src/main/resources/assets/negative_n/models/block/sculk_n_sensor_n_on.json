@@ -1,0 +1,11 @@
+{
+  "parent": "negative_n:custom/sculk_sensor",
+  "textures": {
+    "all": "negative_n:blocks/sculk_sensor_n_side",
+    "particle": "negative_n:blocks/sculk_sensor_n_side",
+    "side": "negative_n:blocks/sculk_sensor_n_side",
+    "top": "negative_n:blocks/sculk_sensor_n_top",
+    "bottom": "negative_n:blocks/sculk_sensor_n_side",
+    "tendrils": "negative_n:blocks/sculk_sensor_n_tendril_active"
+  }
+}

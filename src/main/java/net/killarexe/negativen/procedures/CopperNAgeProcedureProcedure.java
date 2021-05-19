@@ -55,41 +55,46 @@ public class CopperNAgeProcedureProcedure extends NegativeNModElements.ModElemen
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CopperNBlockBlock.block.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), LightlyWeatheredCopperNBlockBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LightlyWeatheredCopperNBlockBlock.block
-				.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), SemiWeatheredCopperNBlockBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SemiWeatheredCopperNBlockBlock.block
-				.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WeatheredCopperNBlockBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CutCopperNBlockBlock.block.getDefaultState()
+		boolean found = false;
+		double sx = 0;
+		double sy = 0;
+		double sz = 0;
+		if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == CopperNBlockBlock.block.getDefaultState()
 				.getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), LightlyWeatheredCutCopperBlockBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LightlyWeatheredCutCopperBlockBlock.block
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), LightlyWeatheredCopperNBlockBlock.block.getDefaultState(), 3);
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == LightlyWeatheredCopperNBlockBlock.block
 				.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), SemiWeatheredCutCopperNBlockBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SemiWeatheredCutCopperNBlockBlock.block
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), SemiWeatheredCopperNBlockBlock.block.getDefaultState(), 3);
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == SemiWeatheredCopperNBlockBlock.block
 				.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WeatheredCutCopperNBlockBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CutCopperNSlabBlock.block.getDefaultState()
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), WeatheredCopperNBlockBlock.block.getDefaultState(), 3);
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == CutCopperNBlockBlock.block.getDefaultState()
 				.getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), LightlyWeatheredCutCopperNSlabBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LightlyWeatheredCutCopperNSlabBlock.block
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), LightlyWeatheredCutCopperBlockBlock.block.getDefaultState(), 3);
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == LightlyWeatheredCutCopperBlockBlock.block
 				.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), SemiWeatheredCutCopperNSlabBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SemiWeatheredCutCopperNSlabBlock.block
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), SemiWeatheredCutCopperNBlockBlock.block.getDefaultState(), 3);
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == SemiWeatheredCutCopperNBlockBlock.block
 				.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WeatheredCutCopperNSlabBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CutCopperNStairsBlock.block.getDefaultState()
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), WeatheredCutCopperNBlockBlock.block.getDefaultState(), 3);
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == CutCopperNSlabBlock.block.getDefaultState()
 				.getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), LightlyWeatheredCutCopperNStairsBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == LightlyWeatheredCutCopperNStairsBlock.block
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), LightlyWeatheredCutCopperNSlabBlock.block.getDefaultState(), 3);
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == LightlyWeatheredCutCopperNSlabBlock.block
 				.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), SemiWeatheredCutCopperNStairsBlock.block.getDefaultState(), 3);
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SemiWeatheredCutCopperNStairsBlock.block
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), SemiWeatheredCutCopperNSlabBlock.block.getDefaultState(), 3);
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == SemiWeatheredCutCopperNSlabBlock.block
 				.getDefaultState().getBlock())) {
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), WeatheredCutCopperNStairsBlock.block.getDefaultState(), 3);
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), WeatheredCutCopperNSlabBlock.block.getDefaultState(), 3);
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == CutCopperNStairsBlock.block.getDefaultState()
+				.getBlock())) {
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), LightlyWeatheredCutCopperNStairsBlock.block.getDefaultState(), 3);
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == LightlyWeatheredCutCopperNStairsBlock.block
+				.getDefaultState().getBlock())) {
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), SemiWeatheredCutCopperNStairsBlock.block.getDefaultState(), 3);
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == SemiWeatheredCutCopperNStairsBlock.block
+				.getDefaultState().getBlock())) {
+			world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), WeatheredCutCopperNStairsBlock.block.getDefaultState(), 3);
 		}
 	}
 }

@@ -34,7 +34,7 @@ public class EpeeenDiamantNItem extends NegativeNModElements.ModElement {
 			}
 
 			public float getEfficiency() {
-				return 16f;
+				return 14f;
 			}
 
 			public float getAttackDamage() {
@@ -52,7 +52,7 @@ public class EpeeenDiamantNItem extends NegativeNModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(DiamantinverseItem.block, (int) (1)));
 			}
-		}, 3, -3f, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
+		}, 3, -0.8f, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 				boolean retval = super.hitEntity(itemstack, entity, sourceentity);

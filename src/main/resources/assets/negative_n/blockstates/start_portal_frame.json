@@ -1,7 +1,28 @@
 {
   "variants": {
-    "": {
+    "facing=south": {
       "model": "negative_n:block/start_portal_frame"
+    },
+    "facing=north": {
+      "model": "negative_n:block/start_portal_frame"
+    },
+    "facing=east": {
+      "model": "negative_n:block/start_portal_frame",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "negative_n:block/start_portal_frame",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "negative_n:block/start_portal_frame",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "negative_n:block/start_portal_frame",
+      "x": 90,
+      "y": 90
     }
   }
 }

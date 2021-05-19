@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "obsidian_n",
+        "missing": "glassn"
+      },
+      "name": "default"
+    }
+  }
+}

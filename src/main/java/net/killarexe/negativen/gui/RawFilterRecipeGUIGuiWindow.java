@@ -5,15 +5,23 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
+import net.killarexe.negativen.procedures.PreviousPageButtonConditionProcedure;
+import net.killarexe.negativen.procedures.NextPageButtonConditionProcedure;
+import net.killarexe.negativen.NegativeNMod;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
+
+import com.google.common.collect.ImmutableMap;
 
 @OnlyIn(Dist.CLIENT)
 public class RawFilterRecipeGUIGuiWindow extends ContainerScreen<RawFilterRecipeGUIGui.GuiContainerMod> {
@@ -71,6 +79,9 @@ public class RawFilterRecipeGUIGuiWindow extends ContainerScreen<RawFilterRecipe
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Raw Filter", 6, 7, -12829636);
+		this.font.drawString(ms, "" + (entity.getPersistentData().getString("chanceIron")) + "", 150, 34, -12829636);
+		this.font.drawString(ms, "" + (entity.getPersistentData().getString("chanceCopper")) + "", 150, 7, -12829636);
+		this.font.drawString(ms, "" + (entity.getPersistentData().getString("chanceGold")) + "", 150, 61, -12829636);
 	}
 
 	@Override
@@ -83,5 +94,29 @@ public class RawFilterRecipeGUIGuiWindow extends ContainerScreen<RawFilterRecipe
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
+		this.addButton(new Button(this.guiLeft + 177, this.guiTop + 142, 45, 20, new StringTextComponent("Next"), e -> {
+			if (NextPageButtonConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new RawFilterRecipeGUIGui.ButtonPressedMessage(0, x, y, z));
+				RawFilterRecipeGUIGui.handleButtonAction(entity, 0, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(MatrixStack ms, int gx, int gy, float ticks) {
+				if (NextPageButtonConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
+		this.addButton(new Button(this.guiLeft + -65, this.guiTop + 142, 65, 20, new StringTextComponent("Previous"), e -> {
+			if (PreviousPageButtonConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+				NegativeNMod.PACKET_HANDLER.sendToServer(new RawFilterRecipeGUIGui.ButtonPressedMessage(1, x, y, z));
+				RawFilterRecipeGUIGui.handleButtonAction(entity, 1, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(MatrixStack ms, int gx, int gy, float ticks) {
+				if (PreviousPageButtonConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
 	}
 }

@@ -103,6 +103,79 @@
           "x": 161,
           "y": 73
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<ENBT:text:chanceIron>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<ENBT:text:chanceIron>",
+          "x": 276,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<ENBT:text:chanceCopper>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<ENBT:text:chanceCopper>",
+          "x": 276,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<ENBT:text:chanceGold>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<ENBT:text:chanceGold>",
+          "x": 276,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Next",
+          "onClick": {
+            "name": "NextPageButton"
+          },
+          "displayCondition": {
+            "name": "NextPageButtonCondition"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Next",
+          "x": 303,
+          "y": 179
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Previous",
+          "onClick": {
+            "name": "PreviousPageButton"
+          },
+          "displayCondition": {
+            "name": "PreviousPageButtonCondition"
+          },
+          "width": 65,
+          "height": 20,
+          "name": "Previous",
+          "x": 60,
+          "y": 179
+        }
       }
     ]
   }

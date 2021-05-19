@@ -1,7 +1,6 @@
 
 package net.killarexe.negativen.entity;
 
-import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.network.FMLPlayMessages;
@@ -62,9 +61,12 @@ import com.google.common.collect.ImmutableMap;
 
 @NegativeNModElements.ModElement.Tag
 public class WitherNEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
-	@ObjectHolder("negative_n:entitybulletwither_n")
-	public static final EntityType arrow = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
+			.size(4f, 4f)).build("wither_n").setRegistryName("wither_n");
+	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
+			.size(0.5f, 0.5f)).build("entitybulletwither_n").setRegistryName("entitybulletwither_n");
 	public WitherNEntity(NegativeNModElements instance) {
 		super(instance, 725);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new WitherNRenderer.ModelRegisterHandler());
@@ -73,14 +75,9 @@ public class WitherNEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(4f, 4f)).build("wither_n")
-						.setRegistryName("wither_n");
 		elements.entities.add(() -> entity);
+		elements.entities.add(() -> arrow);
 		elements.items.add(() -> new SpawnEggItem(entity, -1, -10066330, new Item.Properties().group(null)).setRegistryName("wither_n_spawn_egg"));
-		elements.entities.add(() -> (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
-				.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-				.size(0.5f, 0.5f)).build("entitybulletwither_n").setRegistryName("entitybulletwither_n"));
 	}
 
 	@Override

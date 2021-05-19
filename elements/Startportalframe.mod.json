@@ -10,7 +10,7 @@
     "textureBack": "end-framen_side",
     "renderType": 2,
     "customModelName": "start_portal_frame:default",
-    "rotationMode": 0,
+    "rotationMode": 5,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
@@ -37,7 +37,7 @@
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
-    "isWaterloggable": false,
+    "isWaterloggable": true,
     "creativeTab": {
       "value": "CUSTOM:NegativeNDecorationBlocks"
     },

@@ -53,7 +53,9 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class ChickenNEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
+			.size(0.4f, 0.7f)).build("chicken_n").setRegistryName("chicken_n");
 	public ChickenNEntity(NegativeNModElements instance) {
 		super(instance, 87);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ChickenNRenderer.ModelRegisterHandler());
@@ -63,9 +65,6 @@ public class ChickenNEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.4f, 0.7f))
-						.build("chicken_n").setRegistryName("chicken_n");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -16777216, -16750900, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("chicken_n_spawn_egg"));

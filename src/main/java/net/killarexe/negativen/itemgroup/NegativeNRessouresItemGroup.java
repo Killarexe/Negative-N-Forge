@@ -18,7 +18,7 @@ public class NegativeNRessouresItemGroup extends NegativeNModElements.ModElement
 
 	@Override
 	public void initElements() {
-		tab = new ItemGroup("tabnegativenressoures") {
+		tab = new ItemGroup("tabnegative_n_misc") {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {

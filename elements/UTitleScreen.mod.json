@@ -2,16 +2,16 @@
   "_fv": 18,
   "_type": "musicdisc",
   "definition": {
-    "texture": "ester_egg",
-    "name": "Easter egg",
-    "description": "Easter egg",
+    "texture": "music_disc_1",
+    "name": "C418 - Sweden (Caution & Crisis Remix)",
+    "description": "By MrSuicideSheep",
     "creativeTab": {
       "value": "CUSTOM:NegativeNRessoures"
     },
     "music": {
-      "value": "CUSTOM:easter_egg"
+      "value": "CUSTOM:sweden_remix"
     },
     "specialInfo": [],
-    "hasGlow": true
+    "hasGlow": false
   }
 }

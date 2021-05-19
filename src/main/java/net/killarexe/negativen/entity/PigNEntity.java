@@ -53,7 +53,9 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class PigNEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.9f, 0.9f)).build("pign").setRegistryName("pign");
 	public PigNEntity(NegativeNModElements instance) {
 		super(instance, 80);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PigNRenderer.ModelRegisterHandler());
@@ -63,9 +65,6 @@ public class PigNEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.9f, 0.9f)).build("pign")
-						.setRegistryName("pign");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -13395457, -16750900, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("pign_spawn_egg"));

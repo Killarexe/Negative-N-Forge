@@ -43,7 +43,9 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class SpruceNBoatEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
+			.size(0.6f, 0.2f)).build("spruce_n_boat").setRegistryName("spruce_n_boat");
 	public SpruceNBoatEntity(NegativeNModElements instance) {
 		super(instance, 50);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new SpruceNBoatRenderer.ModelRegisterHandler());
@@ -52,9 +54,6 @@ public class SpruceNBoatEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.6f, 0.2f))
-						.build("spruce_n_boat").setRegistryName("spruce_n_boat");
 		elements.entities.add(() -> entity);
 	}
 

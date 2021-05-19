@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "sculk_sensor_n_side",
+        "top": "sculk_sensor_n_top",
+        "bottom": "sculk_sensor_n_side",
+        "tendrils": "sculk_sensor_n_tendril_inactive"
+      },
+      "name": "default"
+    },
+    "active": {
+      "map": {
+        "side": "sculk_sensor_n_side",
+        "top": "sculk_sensor_n_top",
+        "bottom": "sculk_sensor_n_side",
+        "tendrils": "sculk_sensor_n_tendril_active"
+      },
+      "name": "active"
+    }
+  }
+}

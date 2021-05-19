@@ -47,7 +47,9 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class ZombieNEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.6f, 1.95f)).build("zombien").setRegistryName("zombien");
 	public ZombieNEntity(NegativeNModElements instance) {
 		super(instance, 85);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ZombieNRenderer.ModelRegisterHandler());
@@ -57,9 +59,6 @@ public class ZombieNEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.95f)).build("zombien")
-						.setRegistryName("zombien");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -52429, -39169, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("zombien_spawn_egg"));

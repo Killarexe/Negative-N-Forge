@@ -57,8 +57,10 @@
     "heightVariation": 0.5,
     "biomeType": "ICY",
     "spawnBiome": false,
-    "biomeWeight": 10,
-    "biomeDictionaryTypes": [],
+    "biomeWeight": 5,
+    "biomeDictionaryTypes": [
+      "MOUNTAIN"
+    ],
     "grassPerChunk": 0,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 0,

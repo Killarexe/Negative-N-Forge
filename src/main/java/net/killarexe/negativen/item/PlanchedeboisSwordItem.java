@@ -45,7 +45,7 @@ public class PlanchedeboisSwordItem extends NegativeNModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 4f;
+				return 6f;
 			}
 
 			public int getHarvestLevel() {
@@ -62,7 +62,7 @@ public class PlanchedeboisSwordItem extends NegativeNModElements.ModElement {
 						new ItemStack(JunglePlanksNBlock.block, (int) (1)), new ItemStack(SprucePlanksNBlock.block, (int) (1)),
 						new ItemStack(WheatNStage1Block.block, (int) (1)));
 			}
-		}, 3, -3f, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
+		}, 3, -0.8f, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 				boolean retval = super.hitEntity(itemstack, entity, sourceentity);

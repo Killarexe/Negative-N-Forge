@@ -6,13 +6,19 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
+import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
+import net.minecraft.entity.LivingEntity;
 
+import net.killarexe.negativen.procedures.FrozenOnPotionActiveTickProcedure;
 import net.killarexe.negativen.NegativeNModElements;
+
+import java.util.Map;
+import java.util.HashMap;
 
 @NegativeNModElements.ModElement.Tag
 public class FrozenPotion extends NegativeNModElements.ModElement {
@@ -77,6 +83,19 @@ public class FrozenPotion extends NegativeNModElements.ModElement {
 		@Override
 		public boolean shouldRenderHUD(EffectInstance effect) {
 			return true;
+		}
+
+		@Override
+		public void performEffect(LivingEntity entity, int amplifier) {
+			World world = entity.world;
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				FrozenOnPotionActiveTickProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override

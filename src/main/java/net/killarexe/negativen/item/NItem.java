@@ -2,13 +2,10 @@
 package net.killarexe.negativen.item;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.MusicDiscItem;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 
 import net.killarexe.negativen.itemgroup.NegativeNRessouresItemGroup;
@@ -28,15 +25,9 @@ public class NItem extends NegativeNModElements.ModElement {
 	}
 	public static class MusicDiscItemCustom extends MusicDiscItem {
 		public MusicDiscItemCustom() {
-			super(0, NegativeNModElements.sounds.get(new ResourceLocation("negative_n:n-music_8bit")),
+			super(0, NegativeNModElements.sounds.get(new ResourceLocation("negative_n:sweden_80s")),
 					new Item.Properties().group(NegativeNRessouresItemGroup.tab).maxStackSize(1).rarity(Rarity.RARE));
 			setRegistryName("n");
-		}
-
-		@Override
-		@OnlyIn(Dist.CLIENT)
-		public boolean hasEffect(ItemStack itemstack) {
-			return true;
 		}
 	}
 }

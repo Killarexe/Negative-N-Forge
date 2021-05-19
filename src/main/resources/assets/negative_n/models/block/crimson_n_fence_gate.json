@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_fence_gate",
+  "textures": {
+    "texture": "negative_n:blocks/crimson_planks_n"
+  }
+}

@@ -38,7 +38,7 @@ public class NetheriteNAxeItem extends NegativeNModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 31f;
+				return 18f;
 			}
 
 			public int getHarvestLevel() {
@@ -52,7 +52,7 @@ public class NetheriteNAxeItem extends NegativeNModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(DiamantinverseItem.block, (int) (1)));
 			}
-		}, 1, -1f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).isImmuneToFire()) {
+		}, 1, -2f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab).isImmuneToFire()) {
 			@Override
 			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 				boolean retval = super.hitEntity(itemstack, entity, sourceentity);

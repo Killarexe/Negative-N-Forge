@@ -2,16 +2,16 @@
   "_fv": 18,
   "_type": "musicdisc",
   "definition": {
-    "texture": "n",
-    "name": "N",
-    "description": "N",
+    "texture": "music_disc_7",
+    "name": "Sweden (80's Version)",
+    "description": "By Astrophysics",
     "creativeTab": {
       "value": "CUSTOM:NegativeNRessoures"
     },
     "music": {
-      "value": "CUSTOM:n-music_8bit"
+      "value": "CUSTOM:sweden_80s"
     },
     "specialInfo": [],
-    "hasGlow": true
+    "hasGlow": false
   }
 }

@@ -46,7 +46,9 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class PiglinNBruteEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.6f, 1.8f)).build("piglin_n_brute").setRegistryName("piglin_n_brute");
 	public PiglinNBruteEntity(NegativeNModElements instance) {
 		super(instance, 93);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new PiglinNBruteRenderer.ModelRegisterHandler());
@@ -56,9 +58,6 @@ public class PiglinNBruteEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("piglin_n_brute")
-						.setRegistryName("piglin_n_brute");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -16737844, -16763956, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("piglin_n_brute_spawn_egg"));

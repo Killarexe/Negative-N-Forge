@@ -7,7 +7,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.potion.Potion;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
@@ -18,8 +17,6 @@ import net.killarexe.negativen.NegativeNModElements;
 public class AntiBrakingPotion extends NegativeNModElements.ModElement {
 	@ObjectHolder("negative_n:anti_braking")
 	public static final Effect potion = null;
-	@ObjectHolder("negative_n:anti_braking")
-	public static final Potion potionType = null;
 	public AntiBrakingPotion(NegativeNModElements instance) {
 		super(instance, 1005);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
@@ -29,18 +26,6 @@ public class AntiBrakingPotion extends NegativeNModElements.ModElement {
 	public void registerEffect(RegistryEvent.Register<Effect> event) {
 		event.getRegistry().register(new EffectCustom());
 	}
-
-	@SubscribeEvent
-	public void registerPotion(RegistryEvent.Register<Potion> event) {
-		event.getRegistry().register(new PotionCustom());
-	}
-	public static class PotionCustom extends Potion {
-		public PotionCustom() {
-			super(new EffectInstance(potion, 3600));
-			setRegistryName("anti_braking");
-		}
-	}
-
 	public static class EffectCustom extends Effect {
 		private final ResourceLocation potionIcon;
 		public EffectCustom() {

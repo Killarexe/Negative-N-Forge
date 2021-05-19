@@ -59,7 +59,9 @@ import java.util.HashMap;
 
 @NegativeNModElements.ModElement.Tag
 public class CowNEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.9f, 1.4f)).build("cown").setRegistryName("cown");
 	public CowNEntity(NegativeNModElements instance) {
 		super(instance, 86);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new CowNRenderer.ModelRegisterHandler());
@@ -69,9 +71,6 @@ public class CowNEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.9f, 1.4f)).build("cown")
-						.setRegistryName("cown");
 		elements.entities.add(() -> entity);
 		elements.items.add(
 				() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab)).setRegistryName("cown_spawn_egg"));

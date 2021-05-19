@@ -38,7 +38,7 @@ public class Iron_NSwordItem extends NegativeNModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 8f;
+				return 10f;
 			}
 
 			public int getHarvestLevel() {
@@ -52,7 +52,7 @@ public class Iron_NSwordItem extends NegativeNModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(Iron_NIngotItem.block, (int) (1)));
 			}
-		}, 3, -3f, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
+		}, 3, -0.8f, new Item.Properties().group(NegativeNCombatItemGroup.tab)) {
 			@Override
 			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 				boolean retval = super.hitEntity(itemstack, entity, sourceentity);

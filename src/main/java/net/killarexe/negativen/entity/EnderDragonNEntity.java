@@ -1,7 +1,6 @@
 
 package net.killarexe.negativen.entity;
 
-import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.network.FMLPlayMessages;
@@ -49,9 +48,12 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class EnderDragonNEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
-	@ObjectHolder("negative_n:entitybulletender_dragon_n")
-	public static final EntityType arrow = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
+			.size(1f, 2.8000000000000003f)).build("ender_dragon_n").setRegistryName("ender_dragon_n");
+	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
+			.size(0.5f, 0.5f)).build("entitybulletender_dragon_n").setRegistryName("entitybulletender_dragon_n");
 	public EnderDragonNEntity(NegativeNModElements instance) {
 		super(instance, 695);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EnderDragonNRenderer.ModelRegisterHandler());
@@ -60,13 +62,8 @@ public class EnderDragonNEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(1f, 2.8000000000000003f))
-						.build("ender_dragon_n").setRegistryName("ender_dragon_n");
 		elements.entities.add(() -> entity);
-		elements.entities.add(() -> (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
-				.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-				.size(0.5f, 0.5f)).build("entitybulletender_dragon_n").setRegistryName("entitybulletender_dragon_n"));
+		elements.entities.add(() -> arrow);
 	}
 
 	@Override

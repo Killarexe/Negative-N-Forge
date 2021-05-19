@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "negative_n:block/warped_n_slab"
+    },
+    "type=top": {
+      "model": "negative_n:block/warped_n_slab_top"
+    },
+    "type=double": {
+      "model": "negative_n:block/warped_n_slab_full"
+    }
+  }
+}

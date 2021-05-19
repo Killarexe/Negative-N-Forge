@@ -81,7 +81,6 @@
     "spawnShipwreck": false,
     "oceanRuinType": "NONE",
     "defaultFeatures": [
-      "Caves",
       "Ores",
       "FrozenTopLayer"
     ],

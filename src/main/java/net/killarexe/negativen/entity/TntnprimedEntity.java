@@ -36,7 +36,9 @@ import java.util.HashMap;
 
 @NegativeNModElements.ModElement.Tag
 public class TntnprimedEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
+			.size(0f, 0f)).build("tntnprimed").setRegistryName("tntnprimed");
 	public TntnprimedEntity(NegativeNModElements instance) {
 		super(instance, 482);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TntnprimedRenderer.ModelRegisterHandler());
@@ -45,9 +47,6 @@ public class TntnprimedEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0f, 0f)).build("tntnprimed")
-						.setRegistryName("tntnprimed");
 		elements.entities.add(() -> entity);
 	}
 

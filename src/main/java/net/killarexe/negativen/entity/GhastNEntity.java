@@ -47,7 +47,9 @@ import java.util.EnumSet;
 
 @NegativeNModElements.ModElement.Tag
 public class GhastNEntity extends NegativeNModElements.ModElement {
-	public static EntityType entity = null;
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
+			.size(1f, 1f)).build("ghast_n").setRegistryName("ghast_n");
 	public GhastNEntity(NegativeNModElements instance) {
 		super(instance, 88);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new GhastNRenderer.ModelRegisterHandler());
@@ -57,9 +59,6 @@ public class GhastNEntity extends NegativeNModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(1f, 1f)).build("ghast_n")
-						.setRegistryName("ghast_n");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -16777216, -1, new Item.Properties().group(NegativeNMobsItemGroup.tab))
 				.setRegistryName("ghast_n_spawn_egg"));

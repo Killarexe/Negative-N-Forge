@@ -14,20 +14,20 @@
     "ammoItem": {
       "value": ""
     },
-    "shootConstantly": false,
+    "shootConstantly": true,
     "usageCount": 1,
     "actionSound": {
       "value": "entity.arrow.shoot"
     },
     "hasGlow": false,
-    "animation": "block",
+    "animation": "none",
     "enableMeleeDamage": true,
     "damageVsEntity": 0.1,
     "bulletPower": 1.0,
     "bulletDamage": 2.0,
     "bulletKnockback": 7,
     "bulletParticles": true,
-    "bulletIgnitesFire": true,
+    "bulletIgnitesFire": false,
     "bulletItemTexture": {
       "value": "CUSTOM:SnowballN"
     },

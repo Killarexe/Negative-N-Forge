@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "music_disc_9",
+    "name": "Random Music (Game)",
+    "description": "Original Music",
+    "creativeTab": {
+      "value": "CUSTOM:NegativeNRessoures"
+    },
+    "music": {
+      "value": "music.game"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}
