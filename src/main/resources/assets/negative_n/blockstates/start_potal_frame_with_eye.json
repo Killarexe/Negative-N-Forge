@@ -1,7 +1,28 @@
 {
   "variants": {
-    "": {
+    "facing=south": {
       "model": "negative_n:block/start_potal_frame_with_eye"
+    },
+    "facing=north": {
+      "model": "negative_n:block/start_potal_frame_with_eye"
+    },
+    "facing=east": {
+      "model": "negative_n:block/start_potal_frame_with_eye",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "negative_n:block/start_potal_frame_with_eye",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "negative_n:block/start_potal_frame_with_eye",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "negative_n:block/start_potal_frame_with_eye",
+      "x": 90,
+      "y": 90
     }
   }
 }

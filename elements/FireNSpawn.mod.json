@@ -8,7 +8,7 @@
     "spawnProbability": 100000,
     "minCountPerChunk": 5,
     "maxCountPerChunk": 10,
-    "spawnLocation": "Ground",
+    "spawnLocation": "Underground",
     "spawnHeightOffset": 0,
     "spawnXOffset": 0,
     "spawnZOffset": 0,

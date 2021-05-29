@@ -62,7 +62,7 @@ public class ForteressNStructure extends NegativeNModElements.ModElement {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
 							int j = world.getHeight(Heightmap.Type.OCEAN_FLOOR_WG, i, k);
-							j -= 1;
+							j = Math.abs(random.nextInt(Math.max(1, j)) - 24);
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
 							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
@@ -88,6 +88,6 @@ public class ForteressNStructure extends NegativeNModElements.ModElement {
 	}
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> configuredFeature);
+		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_STRUCTURES).add(() -> configuredFeature);
 	}
 }

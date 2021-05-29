@@ -57,7 +57,7 @@
     "doesWaterVaporize": false,
     "sleepResult": "ALLOW",
     "hasSkyLight": true,
-    "imitateOverworldBehaviour": false,
+    "imitateOverworldBehaviour": true,
     "portalFrame": {
       "value": "CUSTOM:Portalblock"
     },
