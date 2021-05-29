@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Combine Them all!",
-    "achievementDescription": "Make the Fusionator",
+    "achievementDescription": "Make A Merger!",
     "achievementIcon": {
       "value": "CUSTOM:Fusonator"
     },

@@ -12,12 +12,12 @@
       "value": "CUSTOM:WaterNBottleN"
     },
     "brewingIngredientStack": {
-      "value": "Items.ENDER_PEARL"
+      "value": "CUSTOM:WeatheredCopperNBlock"
     },
     "brewingReturnStack": {
-      "value": "CUSTOM:RemoteBottleN"
+      "value": "CUSTOM:OxidationBottleN"
     },
-    "name": "remote",
+    "name": "oxidation_brew",
     "namespace": "mod"
   }
 }

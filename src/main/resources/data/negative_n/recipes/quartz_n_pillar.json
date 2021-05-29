@@ -1,0 +1,9 @@
+{
+  "group": "negative_n",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "negative_n:quartz_n_block"
+  },
+  "result": "negative_n:quartz_n_pillar"
+}

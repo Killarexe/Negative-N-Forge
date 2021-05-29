@@ -23,7 +23,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "negative_n:gold_n_ore_block",
+          "name": "negative_n:gold_n_block",
           "weight": 15,
           "functions": [
             {

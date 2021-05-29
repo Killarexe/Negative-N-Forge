@@ -9,15 +9,15 @@
     "group": "",
     "recipeShapeless": false,
     "brewingInputStack": {
-      "value": "CUSTOM:RawGoldN"
+      "value": "CUSTOM:LavaNBottleN"
     },
     "brewingIngredientStack": {
-      "value": "Blocks.CHEST"
+      "value": "CUSTOM:LeatherN"
     },
     "brewingReturnStack": {
-      "value": "Items.POTIONITEM"
+      "value": "CUSTOM:FrozenBottleN"
     },
-    "name": "storage",
+    "name": "frozen_brew",
     "namespace": "mod"
   }
 }

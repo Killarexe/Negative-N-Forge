@@ -24,7 +24,7 @@ import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
 public class GoldNOreBlockBlock extends NegativeNModElements.ModElement {
-	@ObjectHolder("negative_n:gold_n_ore_block")
+	@ObjectHolder("negative_n:gold_n_block")
 	public static final Block block = null;
 	public GoldNOreBlockBlock(NegativeNModElements instance) {
 		super(instance, 244);
@@ -40,7 +40,7 @@ public class GoldNOreBlockBlock extends NegativeNModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 10f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("gold_n_ore_block");
+			setRegistryName("gold_n_block");
 		}
 
 		@Override

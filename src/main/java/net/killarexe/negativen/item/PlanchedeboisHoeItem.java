@@ -30,7 +30,7 @@ import java.util.HashMap;
 
 @NegativeNModElements.ModElement.Tag
 public class PlanchedeboisHoeItem extends NegativeNModElements.ModElement {
-	@ObjectHolder("negative_n:wood_n_hoe")
+	@ObjectHolder("negative_n:wooden_n_hoe")
 	public static final Item block = null;
 	public PlanchedeboisHoeItem(NegativeNModElements instance) {
 		super(instance, 373);
@@ -87,6 +87,6 @@ public class PlanchedeboisHoeItem extends NegativeNModElements.ModElement {
 				}
 				return retval;
 			}
-		}.setRegistryName("wood_n_hoe"));
+		}.setRegistryName("wooden_n_hoe"));
 	}
 }

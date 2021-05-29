@@ -48,7 +48,7 @@ import java.util.Collections;
 
 @NegativeNModElements.ModElement.Tag
 public class NetherGoldNOreBlock extends NegativeNModElements.ModElement {
-	@ObjectHolder("negative_n:nether_gold_n_ore")
+	@ObjectHolder("negative_n:nether_n_gold_n_ore")
 	public static final Block block = null;
 	public NetherGoldNOreBlock(NegativeNModElements instance) {
 		super(instance, 266);
@@ -66,7 +66,7 @@ public class NetherGoldNOreBlock extends NegativeNModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("nether_gold_n_ore");
+			setRegistryName("nether_n_gold_n_ore");
 		}
 
 		@Override
@@ -116,7 +116,7 @@ public class NetherGoldNOreBlock extends NegativeNModElements.ModElement {
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
-			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("negative_n:nether_gold_n_ore_match"),
+			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("negative_n:nether_n_gold_n_ore_match"),
 					() -> CustomRuleTest.codec);
 			feature = new OreFeature(OreFeatureConfig.CODEC) {
 				@Override
@@ -132,8 +132,8 @@ public class NetherGoldNOreBlock extends NegativeNModElements.ModElement {
 			};
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 9)).range(64)
 					.square().func_242731_b(10);
-			event.getRegistry().register(feature.setRegistryName("nether_gold_n_ore"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("negative_n:nether_gold_n_ore"), configuredFeature);
+			event.getRegistry().register(feature.setRegistryName("nether_n_gold_n_ore"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("negative_n:nether_n_gold_n_ore"), configuredFeature);
 		}
 	}
 	@SubscribeEvent

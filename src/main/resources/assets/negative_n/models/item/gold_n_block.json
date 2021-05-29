@@ -1,5 +1,5 @@
 {
-  "parent": "negative_n:block/nether_gold_n_ore",
+  "parent": "negative_n:block/gold_n_block",
   "display": {
     "thirdperson": {
       "rotation": [

@@ -44,7 +44,7 @@ public class ObserverNBlock extends NegativeNModElements.ModElement {
 		public static final DirectionProperty FACING = DirectionalBlock.FACING;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1.2f, 10f).setLightLevel(s -> 0).harvestLevel(2)
-					.harvestTool(ToolType.PICKAXE).setRequiresTool());
+					.harvestTool(ToolType.PICKAXE).setRequiresTool().tickRandomly());
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("observer_n");
 		}

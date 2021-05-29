@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "negative_n:gold_n_ore_block"
+      "item": "negative_n:gold_n_block"
     }
   ],
   "result": {

@@ -26,7 +26,7 @@ import java.util.HashMap;
 
 @NegativeNModElements.ModElement.Tag
 public class PlanchedeboisAxeItem extends NegativeNModElements.ModElement {
-	@ObjectHolder("negative_n:wood_n_axe")
+	@ObjectHolder("negative_n:wooden_n_axe")
 	public static final Item block = null;
 	public PlanchedeboisAxeItem(NegativeNModElements instance) {
 		super(instance, 371);
@@ -76,6 +76,6 @@ public class PlanchedeboisAxeItem extends NegativeNModElements.ModElement {
 				}
 				return retval;
 			}
-		}.setRegistryName("wood_n_axe"));
+		}.setRegistryName("wooden_n_axe"));
 	}
 }

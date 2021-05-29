@@ -23,8 +23,6 @@ public class NegativeNVersionOverlayDisplayOverlayIngameProcedure extends Negati
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((world.getWorldInfo().getGameRulesInstance().getBoolean(ShowVersionGameRule.gamerule)) == (true))) {
 			return (true);
-		} else {
-			return (false);
 		}
 		return (false);
 	}

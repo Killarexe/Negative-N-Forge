@@ -20,7 +20,7 @@ import net.killarexe.negativen.NegativeNModElements;
 
 @NegativeNModElements.ModElement.Tag
 public class PlanchedeboisPickaxeItem extends NegativeNModElements.ModElement {
-	@ObjectHolder("negative_n:wood_n_pickaxe")
+	@ObjectHolder("negative_n:wooden_n_pickaxe")
 	public static final Item block = null;
 	public PlanchedeboisPickaxeItem(NegativeNModElements instance) {
 		super(instance, 370);
@@ -55,6 +55,6 @@ public class PlanchedeboisPickaxeItem extends NegativeNModElements.ModElement {
 						new ItemStack(JunglePlanksNBlock.block, (int) (1)), new ItemStack(SprucePlanksNBlock.block, (int) (1)));
 			}
 		}, 1, -3f, new Item.Properties().group(NeagtiveNOuilsItemGroup.tab)) {
-		}.setRegistryName("wood_n_pickaxe"));
+		}.setRegistryName("wooden_n_pickaxe"));
 	}
 }
