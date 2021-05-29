@@ -1,6 +1,6 @@
 Negative-N [![Curseforge](http://cf.way2muchnoise.eu/full_negative-n_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/negative-n)
 [![Curseforge](http://cf.way2muchnoise.eu/versions/negative-n.svg)](https://www.curseforge.com/minecraft/mc-mods/negative-n)
-[![](https://img.shields.io/github/license/Killarexe/Negative-N-Forge-Version.svg)]
+[![Github License](https://img.shields.io/github/license/Killarexe/Negative-N-Forge-Version.svg)]()
 ===========
 
 ## Fabric Version:
