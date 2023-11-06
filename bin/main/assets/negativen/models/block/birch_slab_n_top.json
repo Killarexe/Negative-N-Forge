@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "negativen:blocks/birch_planksn",
-    "top": "negativen:blocks/birch_planksn",
-    "side": "negativen:blocks/birch_planksn"
-  }
-}
